@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "首页",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "u-sticky": "/node-modules/uview-ui/components/u-sticky/u-sticky",
+    "u-tabs": "/node-modules/uview-ui/components/u-tabs/u-tabs",
+    "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card"
+  }
+}

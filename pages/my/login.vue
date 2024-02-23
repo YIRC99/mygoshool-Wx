@@ -1,7 +1,6 @@
 <template>
   <view class="page">
 
-
     <view v-show="!isLogin" style="height: calc(100vh - 140rpx) ;background: #fff;">
       <view class="img-a">
         <view class="t-b">
@@ -151,7 +150,9 @@
 </script>
 
 <style lang="scss">
-
+.page{
+  padding-bottom: 80rpx;
+}
 </style>
 <style>
   /deep/ .uni-easyinput__content-input {
@@ -282,7 +283,7 @@
 
   .t-login .t-f {
     text-align: center;
-    margin: 150rpx 0 0 0;
+    margin: 90rpx 0 0 0;
     color: #666;
   }
 

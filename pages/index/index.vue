@@ -38,15 +38,15 @@
 				items:[
 					{
 						icon:{src:require("@/static/home.png"),width:30,height:30},
-						text:'首页',
+						text:'拼车广场',
 					},
 					{
-						icon:{src:require("@/static/cart.png"),width:30,height:30},
-						text:'购物车',
+						icon:{src:require("@/static/cart (3).png"),width:30,height:30},
+						text:'我的订单',
 					},
 					{
-						icon:{src:require("@/static/notice.png"),width:30,height:30},
-						text:'通知',
+						icon:{src:require("@/static/notice (3).png"),width:30,height:30},
+						text:'个人中心',
 					},
 				]
 			}
