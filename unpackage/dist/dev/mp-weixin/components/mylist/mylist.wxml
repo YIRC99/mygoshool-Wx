@@ -1,0 +1,1 @@
+<view class="middle-box-list"><view class="left"><image class="left-img" src="{{iconImg}}"></image></view><view class="middle"><view style="font-size:38rpx;">{{text}}</view></view><view class="right"><image class="right-img" src="/static/rihgt_black.png" mode></image></view></view>

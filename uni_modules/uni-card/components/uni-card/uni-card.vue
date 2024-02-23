@@ -181,8 +181,8 @@
 			}
 
 			.uni-card__header-avatar {
-				width: 40px;
-				height: 40px;
+        width: 78rpx;
+        height: 78rpx;
 				overflow: hidden;
 				border-radius: 5px;
 				margin-right: $uni-card-spacing;

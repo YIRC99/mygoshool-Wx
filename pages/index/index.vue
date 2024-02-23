@@ -11,7 +11,7 @@
         <home v-show="tabIndex == 0"></home>
       </view>
       
-			<MagicNavigationBar :items="items" :height="80" :indicatorSize="60"
+			<MagicNavigationBar :items="items" :height="60" :indicatorSize="50"
 			@onTabSelect="onTab" indicatorBackgroundColor="#99f2ff">
 				<template v-slot:text="{text}">
 					{{text}}
@@ -34,7 +34,7 @@
 		},
 		data() {
 			return {
-        tabIndex: 0,
+        tabIndex: 2,
 				items:[
 					{
 						icon:{src:require("@/static/home.png"),width:30,height:30},
@@ -65,7 +65,10 @@
         }
 				console.log('tabIndex',index)
 			}
-		}
+		},
+    onLoad() {
+      this.onTab(0,{})
+    }
 	}
 </script>
 

@@ -27,6 +27,9 @@
 .page {
   padding-bottom: 190rpx;
 }
+ .u-tabs__wrapper__nav {
+  background-color: #fff !important;
+}
 .car-line {
   display: flex;
   align-items: center;

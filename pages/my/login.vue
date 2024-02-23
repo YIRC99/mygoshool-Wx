@@ -1,15 +1,15 @@
 <template>
   <view class="page">
-
     <view v-show="!isLogin" style="height: calc(100vh - 140rpx) ;background: #fff;">
-      <view class="img-a">
-        <view class="t-b">
+      <view class="">
+          <image src="/static/back.png" style="width: 100%; height: 450rpx; background-size: 100%;position: relative; z-index: 10;" mode=""></image>
+        <view class="t-b" style="color: white; z-index: 9999; position: absolute; top: 0;">
           您好,
           <br />
           欢迎使用, 职大拼车
         </view>
       </view>
-      <view class="login-view" style="">
+      <view class="login-view" style="z-index: 11;">
         <view class="t-login">
           <form class="cl">
             <view class="t-a">
@@ -37,66 +37,77 @@
     </view>
 
     <view v-show="isLogin">
-          
-          <view class="" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            
-            <image src="/static/logo.png" style="width: 150rpx; height: 150rpx; border-radius: 50%;" mode=""></image>
-            <text style="margin-top: 30rpx;">{{info.nickName}}</text>
-    
-          </view>
-          
-          <uni-list >
-            <uni-list-item title="个人信息" showArrow clickable to="settings" note=""></uni-list-item>
-            <uni-list-item title="我的订单" showArrow clickable to="order" note=""></uni-list-item>
-            <uni-list-item title="修改密码" showArrow clickable to="orpass" note=""></uni-list-item>
-            <uni-list-item title="意见反馈" showArrow clickable to="feedback" note=""></uni-list-item>
-          </uni-list>
-          
-          
-          <view class="" style="margin-top: 30rpx;">
-            <button type="default" style="background-color: #1890FF; color: #fff; border-radius: 30rpx; width: 40%; " @click="loginout">退出登录</button>
-          </view>
-        
-    	</view>
-    
+
+      <view class="">
+        <image src="/static/back.png" style="width: 100%; height: 450rpx; background-size: 100%;position: absolute; z-index: -1;" mode=""></image>
+      </view>
+      
+      <view class="top-box">
+        <view class="left">
+          <image class="left-img" src="../../static/logo.png"></image>
+        </view>
+        <view class="middle">
+          <view class="" style="font-size: 38rpx;">一见如初</view>
+          <view class="" style="margin: 15rpx 0; font-size: 28rpx;">手机号 1777777777</view>
+        </view>
+        <view class="right">
+          <image class="right-img" src="../../static/right.png" mode=""></image>
+        </view>
+      </view>
+      
+      <view class="middle-box">
+
+        <mylist text="历史订单"></mylist>
+
+        <mylist iconImg="/static/yijian2.png" text="意见反馈"></mylist>
+
+        <view class="" @click="loginout">
+          <mylist iconImg="/static/tuichu.png" text="退出账号"></mylist>
+        </view>
 
 
+
+      </view>
+    </view>
+    
+
+    
+    
   </view>
-  
-
-
 </template>
 
 <script>
   import myindex from '@/pages/my/index.vue'
+  import mylist from '@/components/mylist/mylist.vue'
   export default {
     components: {
-      myindex
+      myindex,
+      mylist
     },
     data() {
       return {
         phone: '', //手机号码
         pwd: '', //密码
         isLogin: false,
-        info:{}
+        info: {}
       };
     },
     methods: {
-      myonshow(){
+      myonshow() {
         let key = uni.getStorageSync('token')
-        if (key == undefined || key == null || key == ''){
+        if (key == undefined || key == null || key == '') {
           this.isLogin = false
-        }else
+        } else
           this.isLogin = true
-        console.log('this.isLogin',this.isLogin);
-        console.log('uni.getStorageSync()',uni.getStorageSync('token'));
+        console.log('this.isLogin', this.isLogin);
+        console.log('uni.getStorageSync()', uni.getStorageSync('token'));
       },
-      loginout(){
+      loginout() {
         console.log('aaaaaa');
         this.isLogin = !this.isLogin
         uni.clearStorageSync()
       },
-     
+
       //当前登录按钮操作
       login() {
         var that = this;
@@ -126,9 +137,9 @@
           icon: 'none'
         });
         this.isLogin = !this.isLogin
-        uni.setStorageSync('token','login')
+        uni.setStorageSync('token', 'login')
       },
-      
+
       //注册按钮点击
       reg() {
         uni.showToast({
@@ -136,7 +147,7 @@
           icon: 'none'
         });
       },
-      
+
       //等三方微信登录
       wxLogin() {
         uni.showToast({
@@ -150,10 +161,73 @@
 </script>
 
 <style lang="scss">
-.page{
-  padding-bottom: 80rpx;
-}
+  .page {
+    padding-bottom: 80rpx;
+  }
+
+  .middle-box {
+    width: 100%;
+    background-color: white;
+    z-index: 99;
+    border-radius: 70rpx 70rpx 0 0;
+    padding: 50rpx 0;
+    margin-top: 70rpx;
+  }
+
+  .top-box {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 200rpx;
+    padding-top: 80rpx;
+    color: white;
+
+    .left {
+      margin-left: 30rpx;
+
+      .left-img {
+        width: 150rpx;
+        height: 150rpx;
+        border-radius: 50%;
+        border: 2px solid white;
+        overflow: hidden;
+      }
+    }
+
+    .middle {
+      margin-left: 30rpx;
+      z-index: 99;
+    }
+
+    .right {
+      flex: 1;
+      text-align: right;
+
+      .right-img {
+        margin-right: 20rpx;
+        width: 50rpx;
+        height: 50rpx;
+      }
+    }
+  }
+
+  .login-img-a {
+    position: absolute;
+    width: 100%;
+    height: 450rpx;
+    background-size: 100%;
+    z-index: -1;
+  }
 </style>
+
+
+
+
+
+
+
+
+
 <style>
   /deep/ .uni-easyinput__content-input {
     padding-left: 0 !important;
@@ -165,12 +239,7 @@
     color: #333333;
   }
 
-  .img-a {
-    width: 100%;
-    height: 450rpx;
-    background-image: url(https://zhoukaiwen.com/img/loginImg/head.png);
-    background-size: 100%;
-  }
+
 
   .reg {
     font-size: 28rpx;

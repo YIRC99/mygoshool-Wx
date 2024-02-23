@@ -19264,7 +19264,11 @@ uni.addInterceptor({
 /* 184 */,
 /* 185 */,
 /* 186 */,
-/* 187 */
+/* 187 */,
+/* 188 */,
+/* 189 */,
+/* 190 */,
+/* 191 */
 /*!*******************************************!*\
   !*** F:/CodeFile/pingCar/static/home.png ***!
   \*******************************************/
@@ -19274,7 +19278,7 @@ uni.addInterceptor({
 module.exports = "data:image/png;base64,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"
 
 /***/ }),
-/* 188 */
+/* 192 */
 /*!***********************************************!*\
   !*** F:/CodeFile/pingCar/static/cart (3).png ***!
   \***********************************************/
@@ -19284,7 +19288,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACt
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAABUhJREFUeF7tnWty1DAQhJ2bwEmAkwROApwEcpJwE7gJbFdZVUuSXY2ktqyZaVelsj9keab789jyQ37YtKRW4CF19kp+EwDJIRAAAiC5AsnTVwUQAMkVSJ6+KoAASK5A8vRVAQTAKQq827eK/+X3KYE42+ifbdt+MWOeWQFg9OO2bZ9l+pCFgODTRUf8H15mAADjf1zI/TgcrTooCsD89ww5jgbg6yXIb4xA1ccrBaDr91FdjgJAe/2oM/X1f27b9qXe7H6LowB4Vskftaa6/rIVQOZXvaM0wIng8IiAXQFwho8TPi3HKoDSj0PA8MIG4HfDEK8MY4YpHlbBTwfQ7Ik1BETaTACsez+SAMEyfgHwmABY9n7KicsCuoUJgQnA34oq2ONx4qJlIQVYAFjKP65cUS5fLqSf+1BYANSu+FEuWrhXe8EEWABg6IcqcGvRsX9B85mjgBoAtHHrojq6DWtWBRAAiyIiABY1ZlZYAmCW0v3bwXMUOMnGf4yicEI9fBu4hCMA+o2ZsSZMx821lwvtmooAmGFj/zbuXVxb6m6gRgH9Jt9as3ZxjTK0VgXgG8fqsQYA5eKaAGDZxe9HAPA1ddWjAHBlFz9YAcDX1FWPAsCVXfxgBQBfU1c9CgBXdvGDFQB8TV31KABc2cUPVgDwNXXVowBwZRc/WAHA19RVjwLAlV38YAXAlaZlLiEv8wnhyZ3y14uGANiVq71z0CvwjPVG7tkLgP1V83vvG8wwcXQbvfftBcDlYcja+4aj5sxav+e1uPQA3HogcpZpzO30PL+XHgCc8OGV8wiLKkDHlCZRZhrrfYQ7fQXAng8I8Fy8l+Hfy2o1MhuKANjVhPk4H/jg7FgA80fe4BEAzgxnhysA2Io6608AODOMHa4AYCvqrD8B4MwwdrgCgK2os/4EgDPD2OEKALaizvoTAM4MY4crANiKOutPADgzjB2uAGAr6qw/AeDMMHa4AmBX9HqePLbIt/ors5qf+WELAbDfBn5rnrxZIGA7Z01zKwAWeSiU9pXORmrTA1AToFHPoeY9D3UObXCffv/eF9h6Hzf/L66Vp4lb6angnoc6BcCVAj3H0ZWeCmbtKC1Q1Cpg+AoAsWoitAja2/aM8m/JPQUAEOKMx8M1DGzcXTRZdKNghua16pemAhi0CtlEAIS01Z6UALBrFbKlAAhpqz0pAWDXKmRLARDSVntSAsCuVciWAiCkrfakBIBdq5AtBUBIW+1JCQC7ViFbCoCQttqTEgB2rUK2FAAhbbUnJQDsWoVsKQBC2mpPSgDYtQrZUgCEtNWelACwaxWypQAIaas9KQFg1ypkSwEQ0lZ7UgLArlXIlgIgpK32pASAXauQLQVASFvtSYUCYOT7eXbJYrWsfS9xqVfDasH2fjcnlqVt2dTet6TsVKz33muTOeBtW7xmXd66bZMiX2vL3Ag9cy68UpIFgCVgVQE7yJgYCzvVvYUyawkLAARqCZpStuw6umxZK/1IinL8R0dMAGpnrcWNkU+puXTUGHTLRBiU8s8GoPUbf4xPrBu1XbpZ+SyeNUjqtHXMCoAErFXAmqzavVaAtvezK0AJtTYklKn9CtBPpNkVAKm1HMv6pci3Jt38oypAgQCVAIcELeMKHGL+kQAUCB4vPzD009KvAG3I91YIRxwCXm5Hh4Q+86cMl2cAUNIHCKgIuMJVu8rVJ5n/tWA69vinWZfNZwJwbQ9gKIeJ8tu/fX0ZlPsjOM5PX84CYHqi2uDbCgiA5GQIAAGQXIHk6asCCIDkCiRPXxVAACRXIHn6qgACILkCydP/Bz+frZATHpGMAAAAAElFTkSuQmCC"
 
 /***/ }),
-/* 189 */
+/* 193 */
 /*!*************************************************!*\
   !*** F:/CodeFile/pingCar/static/notice (3).png ***!
   \*************************************************/
@@ -19294,10 +19298,6 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADD
 module.exports = "data:image/png;base64,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"
 
 /***/ }),
-/* 190 */,
-/* 191 */,
-/* 192 */,
-/* 193 */,
 /* 194 */,
 /* 195 */,
 /* 196 */,
@@ -19323,7 +19323,58 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADD
 /* 216 */,
 /* 217 */,
 /* 218 */,
-/* 219 */,
+/* 219 */
+/*!******************************************************************************!*\
+  !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-sticky/props.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 吸顶容器到顶部某个距离的时候，进行吸顶，在H5平台，NavigationBar为44px
+    offsetTop: {
+      type: [String, Number],
+      default: uni.$u.props.sticky.offsetTop
+    },
+    // 自定义导航栏的高度
+    customNavHeight: {
+      type: [String, Number],
+      default: uni.$u.props.sticky.customNavHeight
+    },
+    // 是否开启吸顶功能
+    disabled: {
+      type: Boolean,
+      default: uni.$u.props.sticky.disabled
+    },
+    // 吸顶区域的背景颜色
+    bgColor: {
+      type: String,
+      default: uni.$u.props.sticky.bgColor
+    },
+    // z-index值
+    zIndex: {
+      type: [String, Number],
+      default: uni.$u.props.sticky.zIndex
+    },
+    // 列表中的索引值
+    index: {
+      type: [String, Number],
+      default: uni.$u.props.sticky.index
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
 /* 220 */,
 /* 221 */,
 /* 222 */,
@@ -19331,9 +19382,103 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADD
 /* 224 */,
 /* 225 */,
 /* 226 */,
-/* 227 */,
+/* 227 */
+/*!****************************************************************************!*\
+  !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-tabs/props.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 滑块的移动过渡时间，单位ms
+    duration: {
+      type: Number,
+      default: uni.$u.props.tabs.duration
+    },
+    // tabs标签数组
+    list: {
+      type: Array,
+      default: uni.$u.props.tabs.list
+    },
+    // 滑块颜色
+    lineColor: {
+      type: String,
+      default: uni.$u.props.tabs.lineColor
+    },
+    // 菜单选择中时的样式
+    activeStyle: {
+      type: [String, Object],
+      default: uni.$u.props.tabs.activeStyle
+    },
+    // 菜单非选中时的样式
+    inactiveStyle: {
+      type: [String, Object],
+      default: uni.$u.props.tabs.inactiveStyle
+    },
+    // 滑块长度
+    lineWidth: {
+      type: [String, Number],
+      default: uni.$u.props.tabs.lineWidth
+    },
+    // 滑块高度
+    lineHeight: {
+      type: [String, Number],
+      default: uni.$u.props.tabs.lineHeight
+    },
+    // 滑块背景显示大小，当滑块背景设置为图片时使用
+    lineBgSize: {
+      type: String,
+      default: uni.$u.props.tabs.lineBgSize
+    },
+    // 菜单item的样式
+    itemStyle: {
+      type: [String, Object],
+      default: uni.$u.props.tabs.itemStyle
+    },
+    // 菜单是否可滚动
+    scrollable: {
+      type: Boolean,
+      default: uni.$u.props.tabs.scrollable
+    },
+    // 当前选中标签的索引
+    current: {
+      type: [Number, String],
+      default: uni.$u.props.tabs.current
+    },
+    // 默认读取的键名
+    keyName: {
+      type: String,
+      default: uni.$u.props.tabs.keyName
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
 /* 228 */,
-/* 229 */
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */,
+/* 233 */,
+/* 234 */,
+/* 235 */,
+/* 236 */,
+/* 237 */,
+/* 238 */,
+/* 239 */,
+/* 240 */,
+/* 241 */,
+/* 242 */
 /*!*******************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uni-icons/components/uni-icons/uniicons_file_vue.js ***!
   \*******************************************************************************************/
@@ -19836,19 +19981,6 @@ var fontData = [{
 exports.fontData = fontData;
 
 /***/ }),
-/* 230 */,
-/* 231 */,
-/* 232 */,
-/* 233 */,
-/* 234 */,
-/* 235 */,
-/* 236 */,
-/* 237 */,
-/* 238 */,
-/* 239 */,
-/* 240 */,
-/* 241 */,
-/* 242 */,
 /* 243 */,
 /* 244 */,
 /* 245 */,
@@ -19856,105 +19988,7 @@ exports.fontData = fontData;
 /* 247 */,
 /* 248 */,
 /* 249 */,
-/* 250 */,
-/* 251 */,
-/* 252 */,
-/* 253 */,
-/* 254 */,
-/* 255 */,
-/* 256 */,
-/* 257 */,
-/* 258 */,
-/* 259 */
-/*!****************************************************************************!*\
-  !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-tabs/props.js ***!
-  \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  props: {
-    // 滑块的移动过渡时间，单位ms
-    duration: {
-      type: Number,
-      default: uni.$u.props.tabs.duration
-    },
-    // tabs标签数组
-    list: {
-      type: Array,
-      default: uni.$u.props.tabs.list
-    },
-    // 滑块颜色
-    lineColor: {
-      type: String,
-      default: uni.$u.props.tabs.lineColor
-    },
-    // 菜单选择中时的样式
-    activeStyle: {
-      type: [String, Object],
-      default: uni.$u.props.tabs.activeStyle
-    },
-    // 菜单非选中时的样式
-    inactiveStyle: {
-      type: [String, Object],
-      default: uni.$u.props.tabs.inactiveStyle
-    },
-    // 滑块长度
-    lineWidth: {
-      type: [String, Number],
-      default: uni.$u.props.tabs.lineWidth
-    },
-    // 滑块高度
-    lineHeight: {
-      type: [String, Number],
-      default: uni.$u.props.tabs.lineHeight
-    },
-    // 滑块背景显示大小，当滑块背景设置为图片时使用
-    lineBgSize: {
-      type: String,
-      default: uni.$u.props.tabs.lineBgSize
-    },
-    // 菜单item的样式
-    itemStyle: {
-      type: [String, Object],
-      default: uni.$u.props.tabs.itemStyle
-    },
-    // 菜单是否可滚动
-    scrollable: {
-      type: Boolean,
-      default: uni.$u.props.tabs.scrollable
-    },
-    // 当前选中标签的索引
-    current: {
-      type: [Number, String],
-      default: uni.$u.props.tabs.current
-    },
-    // 默认读取的键名
-    keyName: {
-      type: String,
-      default: uni.$u.props.tabs.keyName
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 260 */,
-/* 261 */,
-/* 262 */,
-/* 263 */,
-/* 264 */,
-/* 265 */,
-/* 266 */,
-/* 267 */
+/* 250 */
 /*!*****************************************************************************!*\
   !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-badge/props.js ***!
   \*****************************************************************************/
@@ -20037,75 +20071,6 @@ var _default = {
     absolute: {
       type: Boolean,
       default: uni.$u.props.badge.absolute
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 268 */,
-/* 269 */,
-/* 270 */,
-/* 271 */,
-/* 272 */,
-/* 273 */,
-/* 274 */,
-/* 275 */,
-/* 276 */,
-/* 277 */,
-/* 278 */,
-/* 279 */,
-/* 280 */,
-/* 281 */,
-/* 282 */,
-/* 283 */,
-/* 284 */,
-/* 285 */
-/*!******************************************************************************!*\
-  !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-sticky/props.js ***!
-  \******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  props: {
-    // 吸顶容器到顶部某个距离的时候，进行吸顶，在H5平台，NavigationBar为44px
-    offsetTop: {
-      type: [String, Number],
-      default: uni.$u.props.sticky.offsetTop
-    },
-    // 自定义导航栏的高度
-    customNavHeight: {
-      type: [String, Number],
-      default: uni.$u.props.sticky.customNavHeight
-    },
-    // 是否开启吸顶功能
-    disabled: {
-      type: Boolean,
-      default: uni.$u.props.sticky.disabled
-    },
-    // 吸顶区域的背景颜色
-    bgColor: {
-      type: String,
-      default: uni.$u.props.sticky.bgColor
-    },
-    // z-index值
-    zIndex: {
-      type: [String, Number],
-      default: uni.$u.props.sticky.zIndex
-    },
-    // 列表中的索引值
-    index: {
-      type: [String, Number],
-      default: uni.$u.props.sticky.index
     }
   }
 };

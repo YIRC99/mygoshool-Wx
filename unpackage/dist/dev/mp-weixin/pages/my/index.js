@@ -142,7 +142,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 195:
+/***/ 199:
 /*!*****************************************************************!*\
   !*** F:/CodeFile/pingCar/main.js?{"page":"pages%2Fmy%2Findex"} ***!
   \*****************************************************************/
@@ -163,5 +163,5 @@ createPage(_index.default);
 
 /***/ })
 
-},[[195,"common/runtime","common/vendor"]]]);
+},[[199,"common/runtime","common/vendor"]]]);
 //# sourceMappingURL=../../../.sourcemap/mp-weixin/pages/my/index.js.map
