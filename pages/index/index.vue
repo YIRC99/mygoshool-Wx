@@ -17,6 +17,8 @@
 					{{text}}
 				</template>				
 			</MagicNavigationBar>
+      
+      
 		</view>		
 </template>
 

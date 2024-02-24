@@ -13,7 +13,7 @@
 		},
 		methods: {
 			lgin(){
-        uni.$emit('loginuot')
+       
       }
 		},
     onShow() {

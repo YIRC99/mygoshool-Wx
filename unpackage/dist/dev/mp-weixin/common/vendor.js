@@ -19263,12 +19263,7 @@ uni.addInterceptor({
 /* 183 */,
 /* 184 */,
 /* 185 */,
-/* 186 */,
-/* 187 */,
-/* 188 */,
-/* 189 */,
-/* 190 */,
-/* 191 */
+/* 186 */
 /*!*******************************************!*\
   !*** F:/CodeFile/pingCar/static/home.png ***!
   \*******************************************/
@@ -19278,7 +19273,7 @@ uni.addInterceptor({
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAAAXNSR0IArs4c6QAADwtJREFUeF7tnXnwftUcx1+NqbGEQSQZExGKKVkiZV+KdhU1JDWVoiJLCBXZWoQWSitTWlAq2WkRoqamESLbUKlsIzFoMB+/5+rbr+/3uZ/Pec699zznvs/M96/f52yvz3n97vPc595zVkBFBERgSQIriI0IiMDSBCSIVocITCEgQbQ8RECCaA2IQBoBXUHSuKnWSAhIkDIS/RzgQcAqk7/bgVuAW4GvlTHEcY5CggyX9/WBLYAdgLWmDOM24BTgS5O/4UY8wp4lSP9JXwPYe/K3YrD7M4GjgMuC9RSeSECCJIJLrGZiHACsmli/qXYE8DbgjhnbUfUWAhKkvyVyGrBjxu4umkhyecY21dRyBCRIP0viW4B9Ec9d7PvJrsDZuRtWe8sISJDuV0JXciwc+faSpJtESpBuuDat9iFH05ck6SCXEqQDqJMm+5RDknSURwnSDdgUOW4EbpoMZzXgYYlD05UkEdxi1SRIRpiJV45rgLcAX11uKPal/sDEL/eSJFNeJUgmkIly2N0n+23k5inDOGgiSnSkkiRKbJF4CZIBYqIcnwW2c3Z/MPBuZ6zubiWAWqqKBMkDM/qdIyJHM8L3AO9KGK6uJAnQmioSZAZ4iVeOzwHbJnb7XuCdCXUlSQI0qyJBEsENIEcz0kMmz3NFRy5JosQkSAKxO6tEP1Z9HnjZTD3eWfl9wDsS2pIkQWi6ggSBJV45csrRjPj9wNsThi9JAtAkSABWohznANvEu3HV+MDkiV5X8IIgSeIkJkGcoBLlOBfYOtZFOPqDwP7hWiBJHNAkiANSwXI0oz908mu8fzbLIiVJCzEJ4ltS0S/kXwC28jWdLeow4M0JrUmSKdAkSPuKmgc5mlkcDrypfUp3i5AkS0CTINNXU1SO84AtExZozir2vvp+CQ1KkkWgSZClV9I8ytHM5sPAGyVJAoHlqkiQxRlG5Th/ssfV7BnJ18KRwBsSmtOVZAE0CXL3FVSDHM2sPgLsK0kSCEyqSJC7sovKcQGweTr+Xmp+FNgnoSddSfQs1l2WTVSOLwKbJSy8IarYboyvT+h49JLoCrJs1dQsR+PF0cDrJEmMgASJy3Eh8NIY5mKijwH2ShjNaK8kYxckeuWYZzkaL44F9kyQxF7yspe9RlXGLEhUDjt+4CWVrI6PA69NmIs9lWxPJ4+mjFWQMcvRLO5PAHskrHR7OtmeUh5FGaMgUTm+DGxa6Wo4Dtg9YW72OI09VlN9GZsgUTm+AmxS+So4HtgtYY72+4/9DlR1GZMgkmPppXzC5BiF6GK3u3l246LaMhZBonLYNqAvrjbri0/sRGCXhDnbjQu7gVFlGYMgksO/dE8CXuMP/3+kfQy1j6PVldoFicphRy6/qLosxyZ0MrBzrMr/oo1bdUdW1yyI5EhY5ZMqduz0qxOqvxD4ekK9YqvUKkhUDkuqJVflTgKnAjslAHk+8M2EekVWqVEQyZFvqX0KeFVCc88F7BTeuS+1CRKV4xvAC+Y+i91O4NPAKxO6sAOALk6oV1SVmgSJymEfA+zjgEo7gdQz3p8FXNrefLkRtQgiObpfY6cDOyR0sxFwWUK9IqrUIEhUDot/XhH0528QnwFekTDsZwLfSag3eJV5F0Ry9L+EzgBentDtM4DvJdQbtMo8CxKVw+6q2N0VldkJnDnZ1zfa0gbA96OVhoyfV0Ekx5CrZlnfZwUOIV042qcBPxh++L4RzKMgUTnsVqPdclTJT8COsU45b/EpwJX5h5O/xXkTJCrHJcCz82NTiwsI2Im9KUfLrQ9cVTrJeRJEcpS7muyIuZSDgp4EXF3utObnlNuoHPbjlP1IpdIfAdvMIeVMlHWBa/obZqynebiCSI5YToeMts0cUo5/eCLwwyEHvlTfpQsSlePbwMYlgh7RmOx0rS0S5rsO8KOEep1WKVkQydFp6jtt3HY8SdnUe23gx52OLNh4qYJE5bBnfeyZH5VyCNiZKSmbez8OuK6UaZQoiOQoZXXMPg7bFihlH+O1gJ/N3v3sLZQmSFQOewDOHoRTKZeAHRORsmXrY4Drh55WSYJE5fgusOHQANW/i4BtC5SyAd+awC9cPXQUVIogkqOjBBfUrG3hmrLX2COBXw01jxIEicphj0zbo9Mq80fA9s5K2VZpDeDXQ0x3aEEkxxBZH7ZP27UyZQeZRwC/6XvoQwoSleNy4Ol9A1J/nRCwDeZSNst4OHBDJyNaotGhBJEcfWa5zL5sL7KUTTNWB27sa0pDCBKVw95AszfRVOojYNsupewPsBrwuz5w9C2I5Ogjq/PVh22/lPIq9KrALV1PtU9BonLYa5n2eqZK/QSia6Mh8hDg1i7x9CVIFMAVwFO7nLjaLo5AdI00E1gF+ENXs+lDkOjEJUdX2S6/3ehaaWb0QOBPXUyva0GiE7YX+e2FfpXxEoiumYbUA4A/58bWpSDRiUqO3Nmd3/aia6eZ6f2Bv+ScdleCRCeoj1U5s1pHW9E11Mz6vsBfcyHoQpDoxHS3Klc262snupYaAisDt+fAkVuQ6IT0I2COLNbdRnRNNTTuDfx9VjQ5BYlORM9WzZq98dSPrq2GzD2Bf8yCKZcg0QnokfVZsjbOutE11lBaCfhXKrIcgkQHLjlSs6V60bXWEFsRuCMF36yCRAes12RTsqQ6CwlE11xT9x7Av6MoZxEkOlBtsBDNjuKXIhBde0074fUerjDp6URgl0D+tG9VAJZCXQRSJLkZeKir9UlQiiC7AccHOtF2oAFYCg0RSJHkY8C+3l6igth2kratpLdol3UvKcWlEkiR5GDgIE+HUUEi7xLr8BpPBhSTg0BUkj9O3lJt3ZguIsjOwMnO2UgOJyiFZSMQleQoYJ+23iOC2GMhnpeYdCZgG3X9e1cEopK0HrngFcQOwbTO24qOWm4jpH/vmkDkfJLW7yJeQY4B9mqZmZ01Zy/fZ39ppWuiar86AqcBOzpmdS3whGlxXkHswcK2DRSOBvZ2DEohItA1gR2A052d3Af421KxXkF+DjyqpUM7CthOO1URgaEJ2Dvq3o0cpm5p6hXEPjbZ64zTin28su8gKiJQAoH/OAcx9bx2ryD/BOyJSAnipK6wwQl4BbEDmOw5wUWLV5DfArYn6rSyR/ARlMEJagDVErCzEe2MRE+ZetybV5CrgPVaejsFONUzopYYe5fYzoLofFvJDGNVE/kI2H/Atnv7vTI0uV/glN2p2wV5BbE7AnZnoM9yNnAkYO+QqNRL4LGTJzSGOBTJdomf+snIK8imwIUD5ejxwE8G6lvddkvA7iANcnLUZFrZfii09uxY3kd3y2vR1s8BthmgX3XZPYHUY6JzjcwOZLLf+JYs3iuINXAAcEiukQXasZ3y2m4xB5pTaCEE7PtG70eqLZi7/WZnv91NLRFB7gfYhgv2kafvYvv12takKvUQsO8cS95e7WGart/tIoLYmPcEju1h8Mt34ZrMAONSl+kEvA/ApvewdM0TAHsztrVEBbEGzwK2a205b4AEycuzhNaGEuSngPV9kwdCiiB2Ppy9G2KfIfsqEqQv0v31M5Qg9tq43RxwlRRBrGH7pfJwwO5h91EkSB+U++2jb0Hsid3DvO+iNyhSBbH6dvTVtoA9yzLL1cRAtRUJ0kZo/v49IsisD8HaW672IpU9ERIqswgS6mhKsOehMgmSi3Y57UQEaf1Br6tpSZCuyKrdNgISpI3Q5N91BXGCqixMgjgTKkGcoCoLkyDOhEoQJ6jKwiSIM6ESxAmqsjAJ4kyoBHGCqixMgjgTKkGcoCoLkyDOhEoQJ6jKwiSIM6ESxAmqsjAJ4kyoBHGCqixMgjgTKkGcoCoLkyDOhEoQJ6jKwiSIM6ESxAmqsjAJ4kyoBHGCqixMgjgTKkGcoCoLkyDOhEoQJ6jKwiSIM6ESxAmqsjAJ4kyoBHGCqixMgjgTKkGcoCoLkyDOhEoQJ6jKwiSIM6ESxAmqsjAJ4kyoBHGCqixMgjgTKkGcoCoLkyDOhEoQJ6jKwiSIM6ESxAmqsjAJ4kyoBHGCqixMgjgTKkGcoCoLkyDOhEoQJ6jKwiSIM6ESxAmqsjAJ4kyoBHGCqixMgjgTKkGcoCoLkyDOhEoQJ6jKwiSIM6ESxAmqsjAJ4kyoBHGCqixMgjgTKkGcoCoLkyDOhEoQJ6jKwiSIM6ESxAmqsjAJ4kyoBHGCqixMgjgTKkGcoCoLkyDOhEoQJ6jKwiSIM6ESxAmqsjAJ4kyoBHGCqixMgjgTKkGcoCoLkyDOhEoQJ6jKwiSIM6ESxAmqsjAJ4kyoBHGCqixMgjgTKkGcoCoLkyDOhEoQJ6jKwiSIM6ESxAmqsjAJ4kyoBHGCqixMgjgTKkGcoCoLkyDOhEoQJ6jKwiSIM6ESxAmqsjAJ4kyoBHGCqixMgjgTKkGcoCoLkyDOhEoQJ6jKwiSIM6ESxAmqsjAJ4kyoBHGCqixMgjgTKkGcoCoLkyDOhEoQJ6jKwiSIM6ESxAmqsjAJ4kyoBHGCqixMgjgTKkGcoCoLkyDOhEoQJ6jKwiSIM6ESxAmqsjAJ4kyoBHGCqixMgjgTKkGcoCoLkyDOhEoQJ6jKwiSIM6G3ASu3xG4NnOtsT2HzQWAr4BznUPcAjnfGZg1bIWtraY1dD6zZUnV/4NC05lWrUAJvBT7kHNtGwGXO2KxhJQhiE9+wZVY3AE8Gbs46ezU2FIFVgSuB1Z0DeDDwe2ds1rASBDkIONAxq/Mnl9kLHLEKKZfAZsDuwObOIZ4NbO+MzR5WgiAbA5cEZnYtcDFwa6COQssgsCWwXnAoJodJMkgpQRCb+BWTj1CDQFCnxRKwj9/2/WOwUoogdsk9bjAK6rhUAnbFOW/IwZUiiK4iQ66CMvs+Cdh16KGVJEjkh6Ohuan/bglcA6zbbRe+1ksSxEYsSXx5qz2qmHVZzEAWZHxt4FLggbWvAs3vbgTs13L71byYUqIgBsckOQLYpBhSGkiXBG4EPgnYb2JFlVIFaSDtBOwFbFAUNQ0mF4HrgDMmdzBvytVoznZKF6SZ6xqT7yfrAPaYgv2tlBOE2uqFgD0qZH+/BC4Cru6l1xk6mRdBZpiiqopAOgEJks5ONUdAQIKMIMmaYjoBCZLOTjVHQECCjCDJmmI6AQmSzk41R0DgvyL/5+fHakHsAAAAAElFTkSuQmCC"
 
 /***/ }),
-/* 192 */
+/* 187 */
 /*!***********************************************!*\
   !*** F:/CodeFile/pingCar/static/cart (3).png ***!
   \***********************************************/
@@ -19288,7 +19283,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACt
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAABUhJREFUeF7tnWty1DAQhJ2bwEmAkwROApwEcpJwE7gJbFdZVUuSXY2ktqyZaVelsj9keab789jyQ37YtKRW4CF19kp+EwDJIRAAAiC5AsnTVwUQAMkVSJ6+KoAASK5A8vRVAQTAKQq827eK/+X3KYE42+ifbdt+MWOeWQFg9OO2bZ9l+pCFgODTRUf8H15mAADjf1zI/TgcrTooCsD89ww5jgbg6yXIb4xA1ccrBaDr91FdjgJAe/2oM/X1f27b9qXe7H6LowB4Vskftaa6/rIVQOZXvaM0wIng8IiAXQFwho8TPi3HKoDSj0PA8MIG4HfDEK8MY4YpHlbBTwfQ7Ik1BETaTACsez+SAMEyfgHwmABY9n7KicsCuoUJgQnA34oq2ONx4qJlIQVYAFjKP65cUS5fLqSf+1BYANSu+FEuWrhXe8EEWABg6IcqcGvRsX9B85mjgBoAtHHrojq6DWtWBRAAiyIiABY1ZlZYAmCW0v3bwXMUOMnGf4yicEI9fBu4hCMA+o2ZsSZMx821lwvtmooAmGFj/zbuXVxb6m6gRgH9Jt9as3ZxjTK0VgXgG8fqsQYA5eKaAGDZxe9HAPA1ddWjAHBlFz9YAcDX1FWPAsCVXfxgBQBfU1c9CgBXdvGDFQB8TV31KABc2cUPVgDwNXXVowBwZRc/WAHA19RVjwLAlV38YAXAlaZlLiEv8wnhyZ3y14uGANiVq71z0CvwjPVG7tkLgP1V83vvG8wwcXQbvfftBcDlYcja+4aj5sxav+e1uPQA3HogcpZpzO30PL+XHgCc8OGV8wiLKkDHlCZRZhrrfYQ7fQXAng8I8Fy8l+Hfy2o1MhuKANjVhPk4H/jg7FgA80fe4BEAzgxnhysA2Io6608AODOMHa4AYCvqrD8B4MwwdrgCgK2os/4EgDPD2OEKALaizvoTAM4MY4crANiKOutPADgzjB2uAGAr6qw/AeDMMHa4AmBX9HqePLbIt/ors5qf+WELAbDfBn5rnrxZIGA7Z01zKwAWeSiU9pXORmrTA1AToFHPoeY9D3UObXCffv/eF9h6Hzf/L66Vp4lb6angnoc6BcCVAj3H0ZWeCmbtKC1Q1Cpg+AoAsWoitAja2/aM8m/JPQUAEOKMx8M1DGzcXTRZdKNghua16pemAhi0CtlEAIS01Z6UALBrFbKlAAhpqz0pAWDXKmRLARDSVntSAsCuVciWAiCkrfakBIBdq5AtBUBIW+1JCQC7ViFbCoCQttqTEgB2rUK2FAAhbbUnJQDsWoVsKQBC2mpPSgDYtQrZUgCEtNWelACwaxWypQAIaas9KQFg1ypkSwEQ0lZ7UgLArlXIlgIgpK32pASAXauQLQVASFvtSYUCYOT7eXbJYrWsfS9xqVfDasH2fjcnlqVt2dTet6TsVKz33muTOeBtW7xmXd66bZMiX2vL3Ag9cy68UpIFgCVgVQE7yJgYCzvVvYUyawkLAARqCZpStuw6umxZK/1IinL8R0dMAGpnrcWNkU+puXTUGHTLRBiU8s8GoPUbf4xPrBu1XbpZ+SyeNUjqtHXMCoAErFXAmqzavVaAtvezK0AJtTYklKn9CtBPpNkVAKm1HMv6pci3Jt38oypAgQCVAIcELeMKHGL+kQAUCB4vPzD009KvAG3I91YIRxwCXm5Hh4Q+86cMl2cAUNIHCKgIuMJVu8rVJ5n/tWA69vinWZfNZwJwbQ9gKIeJ8tu/fX0ZlPsjOM5PX84CYHqi2uDbCgiA5GQIAAGQXIHk6asCCIDkCiRPXxVAACRXIHn6qgACILkCydP/Bz+frZATHpGMAAAAAElFTkSuQmCC"
 
 /***/ }),
-/* 193 */
+/* 188 */
 /*!*************************************************!*\
   !*** F:/CodeFile/pingCar/static/notice (3).png ***!
   \*************************************************/
@@ -19298,6 +19293,11 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADD
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAACT9JREFUeF7tnV1S3DgQgEeGeyzcgMK8B06ScBLCSRZOsvCOqdwgwz3waOlZmzUTW90tS+qWRlNFZVIj21L3p/6RZMls6ueoJWBKb/3FxcVZ0zTfoZ3GmLPNZjP9G5u/Hb7Av/vv1trnpmm2Ly8vTyXLqEgARqUbY34MCl+jQwDiyRjzWCIMxQAwUfrPNdpGri0OhuwBSKT4OS4eSrAK2QIgqPgpDHuL0Pf9/a9fv8Y4IqIBCn/rLAG4vLy8M8bENPVcSW+ttQ+vr6/33Auly2cHQNu2/3z0umtpwS08f9v3/U1O1iAbAMDkn5yc/L1S+V/SPWvtdkgNQZ+QHsJnLVxZQZAFAFdXV9fWWuj5Ph+2eR7ii2tjzLePcQFIJbkf9jO5DwhVXj0Al5eXP4wx0PM5n2AKWAODtfan9rhANQAePR8Uf//6+vrAoYVa1scNaYdALQBM5Qfr8RQYBqt0RxxlhDjjVusookoAhp4GPn8MzFx6eeq67oaiuJBlmOMQagNDlQAwUr2HrutuQyqWey/GmMS267pz7v1jl1cHAFX5mnwrI1AVsVYuiFQBQPX7xpgbbT51cFu/sR5rrb2NFaRiz577XRUAlN6vqecfCpRoCVS5AjUAEIWnzoTOQIDOU2iyAmoAaNsWzKcr6levfICBOFagxgqoAIDS+zX6/SWfS4wHxDMYqL8KAAi9X4WwOEEWIT1UYQXEAaD0/r7vz3OaYp24AudglgarJg5A27Yw0eOaccuu94+WggC3eFyjAQBn8Nd1nXgdOaZ/WpYwpC3uBkSFSxj4ybb3jyBgFk7aDYgCgAlHU77sawW0Qy4NgNP85xj8HYJCSAlF3YA0ANbRs7I3/xM34FzIKgm6WgA0j/lz3QGWDUjGAWIAYKaxBP8/goLFAUcJANYrjgkAybaKWQAMAEm/yDXxWHmCtRNbPSwJgHPatCQAAJC2bVUGvGIAYGMAOY8AzlkEZMJLLOMRAwCbLasWAHMsYX6XBMD5xo9kZBxGtF/v4nIBkimvGACaU6PQAGBtPcosgBAZq1o9uwYKLOOpAMxIV9IsrlH23LUYAJLxjpgLIKRG4oslQoGAZTzHDIBrkkR0liyU8gfQ1S56EbUAWCpYQiaAmf+PpfBiYwDiq4Kx6Bh24JJ48zdw73eueZQMAMUBIJjH7N0AtuRdesRT1AUMABzzqmBR86/CAhDcgNrNFTBXgfV+afOvAgBsQGgQsnhPwZR9+DsW4EJ5yfRvrK+4C4CKECJl1fvsLMz+uaZ/4RIVUKsAgPACBQgsm4CQss+Bht6vwgWMvYdgBdT0Gpc7oJh+TcPcKiwACJT4Xj2c5CG2fAqLAwgB7f4W0qnftB1qAIBKEQWoMh4g1h0AVjXLqQoA4rjAPh7QtD07VfkaRzbVAUB1BUCBBndAjF3UBrHqAJjEA9SdQsXSKWya94uvVbi1naos4DDAIg4QjZdF3SR6oW7ksws0z2qqtADM1HCqn6gBIsc9jZXS4KZc2YtqAIZRQnTfvZkGBj3Ri7kx9LQ6Yu4JS1nH39UDMEDgc2jEPvCCyBtOAeVuzwqR/W63++Z7OJW2dG8JiCwA8AgM59o7ezzsZrP5ax8MLR8rS+1Mn/GI5vMBDhuTDQCBIOAqk1s+u6nrrAAYIYDDoH1NM1ej1PLag73sXcBcKqYEBDg59Da3jSyzCgJdvdAnNaP2aqRc1JQzUB3R22TnApZaNIzHf/c85w8V1KRA0kEnTsV8yhYDwNj4Nef8LQgQsgdQ+pP2MwArAAcSABhOT0/Pdrvd2XAKqOt42D+OlW2a5lnb0TQ+SnZdU5wFoAoI4BjL5hrAUdtaAQghqULvcbQWoFB9sptVAWCLrKwLKgBl6ZPdmgoAW2RlXVA0AGOkD6kgqA3SwXH2D/4/zADuNWqthTTwDb43TTOmhJv39/dtyVlCEQCMgz+gXGPM9ccaAPgL/dkPCA2DQs8ASQljBNkBkEjZVHiyhyILACZLsuB0MdfpolTFxSy3X4VkjHnMwUKoBSAzpS8BpR4GVQAUovSsYFABwDCnf5dgKjem6efcW81aAlEAjlDxh5CIgyACQIJVPONy8DGff3Pl9tOZwYMxA1AYpJYQeMJfjPQSniG2yCQpABEU/7lYYxjAiTp/P4LSNM31ZH1BSCiSg5AMAMrOGUQnun81fLfbPWoZoZusQoIlaSGASLbQNDoAw1o9eJFyTf6uaj8AF6gBYUjS5qgArOz1SQRAtDpexULAEPt9gygAEHf9WsyXrbX33Hf5vDSU8KKVGU+0zhAcgBW9PpnfS6j3Px614k3jKDuiBAWAsj/eoUTAxGkK6FLBsQKEoPslBgPAQ/nigyCplI0FjScnJ+TdRoZ7BXsJNQgAXOXHDmw0KJZbBw/XGQSCVQB4DOwEqTRXuLmU93ALq+XpDQBX+bXX0zEctp6DyTHK2MkqCLwAYKZ51dfTdf9Zkivjvu9vfEZGvQBg+PygEauHHLO+hGllvWTNBoARrGR/4JMGephxAXtXMhYAOe+Jq0GZvnXgQMCNtcgADOYIDkDEPmwKsRvW3/+TANH6smIuMgBEv1/NfmRaqRB0XXdOqQoJgNAPpVSslpmXACMwJFliFACq39e8IXJpMFFTRIpOUAAoW6JTHlSaEqTbQ+yYqEt2AkAM/NCHSAur1OdTXDPWOZ0AEHq/1+BDqQqRaBchOHd20EUAKL0/lx2xJRST6pkUV+CyAosA1N6fSoXrn7PGCrgAcB59ivmW9c2qd6BKgGKtl/Q1CwCh99fAj6qdROV8rcASAHBi1+ILDrX3J9Iq4zEEKzAbsHsBoOnoU4aMii+KWIFgANTUTylKFQCliklVrQpAKkkrfU4FQKliUlWrApBK0kqfUwFQqphU1WrbFlZsLS0lnx27mU0DsVmmOg6QSqW857Rt6xq9nV0gMgsAYYJh1csIvGbV0pgEKKuElibuZgEgjCpBnQ43YsLqWX+PJAFjDLqDat/353Mvjrgmg5zDwZHaUm8bRwKLg3er1gPEqWu9a2gJeK0HgEpgwWDoitb7RZGAc3UwZU0gd/OCKK2oN/WSADpvg64K5ryW5FXFelEsCZDWbKAAjLULtN9frMbW+/4vgTivhsH9x33vIh/NUpXJk8B0u9w37vZ6ZAvAq1MtnYsE/gVwRejM2cI5YgAAAABJRU5ErkJggg=="
 
 /***/ }),
+/* 189 */,
+/* 190 */,
+/* 191 */,
+/* 192 */,
+/* 193 */,
 /* 194 */,
 /* 195 */,
 /* 196 */,
@@ -19323,7 +19323,13 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADD
 /* 216 */,
 /* 217 */,
 /* 218 */,
-/* 219 */
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */
 /*!******************************************************************************!*\
   !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-sticky/props.js ***!
   \******************************************************************************/
@@ -19375,14 +19381,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 220 */,
-/* 221 */,
-/* 222 */,
-/* 223 */,
-/* 224 */,
-/* 225 */,
 /* 226 */,
-/* 227 */
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */,
+/* 233 */
 /*!****************************************************************************!*\
   !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-tabs/props.js ***!
   \****************************************************************************/
@@ -19464,12 +19470,6 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 228 */,
-/* 229 */,
-/* 230 */,
-/* 231 */,
-/* 232 */,
-/* 233 */,
 /* 234 */,
 /* 235 */,
 /* 236 */,
@@ -19478,7 +19478,1839 @@ exports.default = _default;
 /* 239 */,
 /* 240 */,
 /* 241 */,
-/* 242 */
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */,
+/* 248 */
+/*!*************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/mixin/mpMixin.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  // 将自定义节点设置成虚拟的（去掉自定义组件包裹层），更加接近Vue组件的表现，能更好的使用flex属性
+  options: {
+    virtualHost: true
+  }
+};
+exports.default = _default;
+
+/***/ }),
+/* 249 */
+/*!***********************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/mixin/mixin.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var index = _interopRequireWildcard(__webpack_require__(/*! ../function/index.js */ 250));
+var test = _interopRequireWildcard(__webpack_require__(/*! ../function/test.js */ 251));
+var _route = _interopRequireDefault(__webpack_require__(/*! ../util/route.js */ 253));
+var _debounce = _interopRequireDefault(__webpack_require__(/*! ../function/debounce.js */ 254));
+var _throttle = _interopRequireDefault(__webpack_require__(/*! ../function/throttle.js */ 255));
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default2 = {
+  // 定义每个组件都可能需要用到的外部样式以及类名
+  props: {
+    // 每个组件都有的父组件传递的样式，可以为字符串或者对象形式
+    customStyle: {
+      type: [Object, String],
+      default: function _default() {
+        return {};
+      }
+    },
+    customClass: {
+      type: String,
+      default: ''
+    },
+    // 跳转的页面路径
+    url: {
+      type: String,
+      default: ''
+    },
+    // 页面跳转的类型
+    linkType: {
+      type: String,
+      default: 'navigateTo'
+    }
+  },
+  data: function data() {
+    return {};
+  },
+  onLoad: function onLoad() {
+    // getRect挂载到$uv上，因为这方法需要使用in(this)，所以无法把它独立成一个单独的文件导出
+    this.$uv.getRect = this.$uvGetRect;
+  },
+  created: function created() {
+    // 组件当中，只有created声明周期，为了能在组件使用，故也在created中将方法挂载到$uv
+    this.$uv.getRect = this.$uvGetRect;
+  },
+  computed: {
+    $uv: function $uv() {
+      var _uni, _uni$$uv, _uni$$uv$config;
+      return _objectSpread(_objectSpread({}, index), {}, {
+        test: test,
+        route: _route.default,
+        debounce: _debounce.default,
+        throttle: _throttle.default,
+        unit: (_uni = uni) === null || _uni === void 0 ? void 0 : (_uni$$uv = _uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$config = _uni$$uv.config) === null || _uni$$uv$config === void 0 ? void 0 : _uni$$uv$config.unit
+      });
+    },
+    /**
+     * 生成bem规则类名
+     * 由于微信小程序，H5，nvue之间绑定class的差异，无法通过:class="[bem()]"的形式进行同用
+     * 故采用如下折中做法，最后返回的是数组（一般平台）或字符串（支付宝和字节跳动平台），类似['a', 'b', 'c']或'a b c'的形式
+     * @param {String} name 组件名称
+     * @param {Array} fixed 一直会存在的类名
+     * @param {Array} change 会根据变量值为true或者false而出现或者隐藏的类名
+     * @returns {Array|string}
+     */
+    bem: function bem() {
+      return function (name, fixed, change) {
+        var _this = this;
+        // 类名前缀
+        var prefix = "uv-".concat(name, "--");
+        var classes = {};
+        if (fixed) {
+          fixed.map(function (item) {
+            // 这里的类名，会一直存在
+            classes[prefix + _this[item]] = true;
+          });
+        }
+        if (change) {
+          change.map(function (item) {
+            // 这里的类名，会根据this[item]的值为true或者false，而进行添加或者移除某一个类
+            _this[item] ? classes[prefix + item] = _this[item] : delete classes[prefix + item];
+          });
+        }
+        return Object.keys(classes);
+        // 支付宝，头条小程序无法动态绑定一个数组类名，否则解析出来的结果会带有","，而导致失效
+      };
+    }
+  },
+
+  methods: {
+    // 跳转某一个页面
+    openPage: function openPage() {
+      var urlKey = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'url';
+      var url = this[urlKey];
+      if (url) {
+        // 执行类似uni.navigateTo的方法
+        uni[this.linkType]({
+          url: url
+        });
+      }
+    },
+    // 查询节点信息
+    // 目前此方法在支付宝小程序中无法获取组件跟接点的尺寸，为支付宝的bug(2020-07-21)
+    // 解决办法为在组件根部再套一个没有任何作用的view元素
+    $uvGetRect: function $uvGetRect(selector, all) {
+      var _this2 = this;
+      return new Promise(function (resolve) {
+        uni.createSelectorQuery().in(_this2)[all ? 'selectAll' : 'select'](selector).boundingClientRect(function (rect) {
+          if (all && Array.isArray(rect) && rect.length) {
+            resolve(rect);
+          }
+          if (!all && rect) {
+            resolve(rect);
+          }
+        }).exec();
+      });
+    },
+    getParentData: function getParentData() {
+      var _this3 = this;
+      var parentName = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+      // 避免在created中去定义parent变量
+      if (!this.parent) this.parent = {};
+      // 这里的本质原理是，通过获取父组件实例(也即类似uv-radio的父组件uv-radio-group的this)
+      // 将父组件this中对应的参数，赋值给本组件(uv-radio的this)的parentData对象中对应的属性
+      // 之所以需要这么做，是因为所有端中，头条小程序不支持通过this.parent.xxx去监听父组件参数的变化
+      // 此处并不会自动更新子组件的数据，而是依赖父组件uv-radio-group去监听data的变化，手动调用更新子组件的方法去重新获取
+      this.parent = this.$uv.$parent.call(this, parentName);
+      if (this.parent.children) {
+        // 如果父组件的children不存在本组件的实例，才将本实例添加到父组件的children中
+        this.parent.children.indexOf(this) === -1 && this.parent.children.push(this);
+      }
+      if (this.parent && this.parentData) {
+        // 历遍parentData中的属性，将parent中的同名属性赋值给parentData
+        Object.keys(this.parentData).map(function (key) {
+          _this3.parentData[key] = _this3.parent[key];
+        });
+      }
+    },
+    // 阻止事件冒泡
+    preventEvent: function preventEvent(e) {
+      e && typeof e.stopPropagation === 'function' && e.stopPropagation();
+    },
+    // 空操作
+    noop: function noop(e) {
+      this.preventEvent(e);
+    }
+  },
+  onReachBottom: function onReachBottom() {
+    uni.$emit('uvOnReachBottom');
+  },
+  beforeDestroy: function beforeDestroy() {
+    var _this4 = this;
+    // 判断当前页面是否存在parent和chldren，一般在checkbox和checkbox-group父子联动的场景会有此情况
+    // 组件销毁时，移除子组件在父组件children数组中的实例，释放资源，避免数据混乱
+    if (this.parent && test.array(this.parent.children)) {
+      // 组件销毁时，移除父组件中的children数组中对应的实例
+      var childrenList = this.parent.children;
+      childrenList.map(function (child, index) {
+        // 如果相等，则移除
+        if (child === _this4) {
+          childrenList.splice(index, 1);
+        }
+      });
+    }
+  },
+  // 兼容vue3
+  unmounted: function unmounted() {
+    var _this5 = this;
+    if (this.parent && test.array(this.parent.children)) {
+      // 组件销毁时，移除父组件中的children数组中对应的实例
+      var childrenList = this.parent.children;
+      childrenList.map(function (child, index) {
+        // 如果相等，则移除
+        if (child === _this5) {
+          childrenList.splice(index, 1);
+        }
+      });
+    }
+  }
+};
+exports.default = _default2;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 250 */
+/*!**************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/index.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.$parent = $parent;
+exports.addStyle = addStyle;
+exports.addUnit = addUnit;
+exports.deepClone = deepClone;
+exports.deepMerge = deepMerge;
+exports.error = error;
+exports.formValidate = formValidate;
+exports.getDuration = getDuration;
+exports.getHistoryPage = getHistoryPage;
+exports.getProperty = getProperty;
+exports.getPx = getPx;
+exports.guid = guid;
+exports.os = os;
+exports.padZero = padZero;
+exports.page = page;
+exports.pages = pages;
+exports.priceFormat = priceFormat;
+exports.queryParams = queryParams;
+exports.random = random;
+exports.randomArray = randomArray;
+exports.range = range;
+exports.setConfig = setConfig;
+exports.setProperty = setProperty;
+exports.sleep = sleep;
+exports.sys = sys;
+exports.timeFormat = timeFormat;
+exports.timeFrom = timeFrom;
+exports.toast = toast;
+exports.trim = trim;
+exports.type2icon = type2icon;
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
+var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
+var _test = __webpack_require__(/*! ./test.js */ 251);
+var _digit = __webpack_require__(/*! ./digit.js */ 252);
+/**
+ * @description 如果value小于min，取min；如果value大于max，取max
+ * @param {number} min
+ * @param {number} max
+ * @param {number} value
+ */
+function range() {
+  var min = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+  var max = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+  var value = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+  return Math.max(min, Math.min(max, Number(value)));
+}
+
+/**
+ * @description 用于获取用户传递值的px值  如果用户传递了"xxpx"或者"xxrpx"，取出其数值部分，如果是"xxxrpx"还需要用过uni.upx2px进行转换
+ * @param {number|string} value 用户传递值的px值
+ * @param {boolean} unit
+ * @returns {number|string}
+ */
+function getPx(value) {
+  var unit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  if ((0, _test.number)(value)) {
+    return unit ? "".concat(value, "px") : Number(value);
+  }
+  // 如果带有rpx，先取出其数值部分，再转为px值
+  if (/(rpx|upx)$/.test(value)) {
+    return unit ? "".concat(uni.upx2px(parseInt(value)), "px") : Number(uni.upx2px(parseInt(value)));
+  }
+  return unit ? "".concat(parseInt(value), "px") : parseInt(value);
+}
+
+/**
+ * @description 进行延时，以达到可以简写代码的目的 比如: await uni.$uv.sleep(20)将会阻塞20ms
+ * @param {number} value 堵塞时间 单位ms 毫秒
+ * @returns {Promise} 返回promise
+ */
+function sleep() {
+  var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 30;
+  return new Promise(function (resolve) {
+    setTimeout(function () {
+      resolve();
+    }, value);
+  });
+}
+/**
+ * @description 运行期判断平台
+ * @returns {string} 返回所在平台(小写)
+ * @link 运行期判断平台 https://uniapp.dcloud.io/frame?id=判断平台
+ */
+function os() {
+  return uni.getSystemInfoSync().platform.toLowerCase();
+}
+/**
+ * @description 获取系统信息同步接口
+ * @link 获取系统信息同步接口 https://uniapp.dcloud.io/api/system/info?id=getsysteminfosync
+ */
+function sys() {
+  return uni.getSystemInfoSync();
+}
+
+/**
+ * @description 取一个区间数
+ * @param {Number} min 最小值
+ * @param {Number} max 最大值
+ */
+function random(min, max) {
+  if (min >= 0 && max > 0 && max >= min) {
+    var gab = max - min + 1;
+    return Math.floor(Math.random() * gab + min);
+  }
+  return 0;
+}
+
+/**
+ * @param {Number} len uuid的长度
+ * @param {Boolean} firstU 将返回的首字母置为"u"
+ * @param {Nubmer} radix 生成uuid的基数(意味着返回的字符串都是这个基数),2-二进制,8-八进制,10-十进制,16-十六进制
+ */
+function guid() {
+  var len = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 32;
+  var firstU = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+  var radix = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+  var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
+  var uuid = [];
+  radix = radix || chars.length;
+  if (len) {
+    // 如果指定uuid长度,只是取随机的字符,0|x为位运算,能去掉x的小数位,返回整数位
+    for (var i = 0; i < len; i++) {
+      uuid[i] = chars[0 | Math.random() * radix];
+    }
+  } else {
+    var r;
+    // rfc4122标准要求返回的uuid中,某些位为固定的字符
+    uuid[8] = uuid[13] = uuid[18] = uuid[23] = '-';
+    uuid[14] = '4';
+    for (var _i = 0; _i < 36; _i++) {
+      if (!uuid[_i]) {
+        r = 0 | Math.random() * 16;
+        uuid[_i] = chars[_i == 19 ? r & 0x3 | 0x8 : r];
+      }
+    }
+  }
+  // 移除第一个字符,并用u替代,因为第一个字符为数值时,该guuid不能用作id或者class
+  if (firstU) {
+    uuid.shift();
+    return "u".concat(uuid.join(''));
+  }
+  return uuid.join('');
+}
+
+/**
+* @description 获取父组件的参数，因为支付宝小程序不支持provide/inject的写法
+   this.$parent在非H5中，可以准确获取到父组件，但是在H5中，需要多次this.$parent.$parent.xxx
+   这里默认值等于undefined有它的含义，因为最顶层元素(组件)的$parent就是undefined，意味着不传name
+   值(默认为undefined)，就是查找最顶层的$parent
+*  @param {string|undefined} name 父组件的参数名
+*/
+function $parent() {
+  var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : undefined;
+  var parent = this.$parent;
+  // 通过while历遍，这里主要是为了H5需要多层解析的问题
+  while (parent) {
+    // 父组件
+    if (parent.$options && parent.$options.name !== name) {
+      // 如果组件的name不相等，继续上一级寻找
+      parent = parent.$parent;
+    } else {
+      return parent;
+    }
+  }
+  return false;
+}
+
+/**
+ * @description 样式转换
+ * 对象转字符串，或者字符串转对象
+ * @param {object | string} customStyle 需要转换的目标
+ * @param {String} target 转换的目的，object-转为对象，string-转为字符串
+ * @returns {object|string}
+ */
+function addStyle(customStyle) {
+  var target = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'object';
+  // 字符串转字符串，对象转对象情形，直接返回
+  if ((0, _test.empty)(customStyle) || (0, _typeof2.default)(customStyle) === 'object' && target === 'object' || target === 'string' && typeof customStyle === 'string') {
+    return customStyle;
+  }
+  // 字符串转对象
+  if (target === 'object') {
+    // 去除字符串样式中的两端空格(中间的空格不能去掉，比如padding: 20px 0如果去掉了就错了)，空格是无用的
+    customStyle = trim(customStyle);
+    // 根据";"将字符串转为数组形式
+    var styleArray = customStyle.split(';');
+    var style = {};
+    // 历遍数组，拼接成对象
+    for (var i = 0; i < styleArray.length; i++) {
+      // 'font-size:20px;color:red;'，如此最后字符串有";"的话，会导致styleArray最后一个元素为空字符串，这里需要过滤
+      if (styleArray[i]) {
+        var item = styleArray[i].split(':');
+        style[trim(item[0])] = trim(item[1]);
+      }
+    }
+    return style;
+  }
+  // 这里为对象转字符串形式
+  var string = '';
+  for (var _i2 in customStyle) {
+    // 驼峰转为中划线的形式，否则css内联样式，无法识别驼峰样式属性名
+    var key = _i2.replace(/([A-Z])/g, '-$1').toLowerCase();
+    string += "".concat(key, ":").concat(customStyle[_i2], ";");
+  }
+  // 去除两端空格
+  return trim(string);
+}
+
+/**
+ * @description 添加单位，如果有rpx，upx，%，px等单位结尾或者值为auto，直接返回，否则加上px单位结尾
+ * @param {string|number} value 需要添加单位的值
+ * @param {string} unit 添加的单位名 比如px
+ */
+function addUnit() {
+  var _uni, _uni$$uv, _uni$$uv$config, _uni2, _uni2$$uv, _uni2$$uv$config;
+  var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'auto';
+  var unit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (_uni = uni) !== null && _uni !== void 0 && (_uni$$uv = _uni.$uv) !== null && _uni$$uv !== void 0 && (_uni$$uv$config = _uni$$uv.config) !== null && _uni$$uv$config !== void 0 && _uni$$uv$config.unit ? (_uni2 = uni) === null || _uni2 === void 0 ? void 0 : (_uni2$$uv = _uni2.$uv) === null || _uni2$$uv === void 0 ? void 0 : (_uni2$$uv$config = _uni2$$uv.config) === null || _uni2$$uv$config === void 0 ? void 0 : _uni2$$uv$config.unit : 'px';
+  value = String(value);
+  // 用uvui内置验证规则中的number判断是否为数值
+  return (0, _test.number)(value) ? "".concat(value).concat(unit) : value;
+}
+
+/**
+ * @description 深度克隆
+ * @param {object} obj 需要深度克隆的对象
+ * @param cache 缓存
+ * @returns {*} 克隆后的对象或者原值（不是对象）
+ */
+function deepClone(obj) {
+  var cache = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new WeakMap();
+  if (obj === null || (0, _typeof2.default)(obj) !== 'object') return obj;
+  if (cache.has(obj)) return cache.get(obj);
+  var clone;
+  if (obj instanceof Date) {
+    clone = new Date(obj.getTime());
+  } else if (obj instanceof RegExp) {
+    clone = new RegExp(obj);
+  } else if (obj instanceof Map) {
+    clone = new Map(Array.from(obj, function (_ref) {
+      var _ref2 = (0, _slicedToArray2.default)(_ref, 2),
+        key = _ref2[0],
+        value = _ref2[1];
+      return [key, deepClone(value, cache)];
+    }));
+  } else if (obj instanceof Set) {
+    clone = new Set(Array.from(obj, function (value) {
+      return deepClone(value, cache);
+    }));
+  } else if (Array.isArray(obj)) {
+    clone = obj.map(function (value) {
+      return deepClone(value, cache);
+    });
+  } else if (Object.prototype.toString.call(obj) === '[object Object]') {
+    clone = Object.create(Object.getPrototypeOf(obj));
+    cache.set(obj, clone);
+    for (var _i3 = 0, _Object$entries = Object.entries(obj); _i3 < _Object$entries.length; _i3++) {
+      var _Object$entries$_i = (0, _slicedToArray2.default)(_Object$entries[_i3], 2),
+        key = _Object$entries$_i[0],
+        value = _Object$entries$_i[1];
+      clone[key] = deepClone(value, cache);
+    }
+  } else {
+    clone = Object.assign({}, obj);
+  }
+  cache.set(obj, clone);
+  return clone;
+}
+
+/**
+ * @description JS对象深度合并
+ * @param {object} target 需要拷贝的对象
+ * @param {object} source 拷贝的来源对象
+ * @returns {object|boolean} 深度合并后的对象或者false（入参有不是对象）
+ */
+function deepMerge() {
+  var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var source = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  target = deepClone(target);
+  if ((0, _typeof2.default)(target) !== 'object' || target === null || (0, _typeof2.default)(source) !== 'object' || source === null) return target;
+  var merged = Array.isArray(target) ? target.slice() : Object.assign({}, target);
+  for (var prop in source) {
+    if (!source.hasOwnProperty(prop)) continue;
+    var sourceValue = source[prop];
+    var targetValue = merged[prop];
+    if (sourceValue instanceof Date) {
+      merged[prop] = new Date(sourceValue);
+    } else if (sourceValue instanceof RegExp) {
+      merged[prop] = new RegExp(sourceValue);
+    } else if (sourceValue instanceof Map) {
+      merged[prop] = new Map(sourceValue);
+    } else if (sourceValue instanceof Set) {
+      merged[prop] = new Set(sourceValue);
+    } else if ((0, _typeof2.default)(sourceValue) === 'object' && sourceValue !== null) {
+      merged[prop] = deepMerge(targetValue, sourceValue);
+    } else {
+      merged[prop] = sourceValue;
+    }
+  }
+  return merged;
+}
+
+/**
+ * @description error提示
+ * @param {*} err 错误内容
+ */
+function error(err) {
+  // 开发环境才提示，生产环境不会提示
+  if (true) {
+    console.error("uvui\u63D0\u793A\uFF1A".concat(err));
+  }
+}
+
+/**
+ * @description 打乱数组
+ * @param {array} array 需要打乱的数组
+ * @returns {array} 打乱后的数组
+ */
+function randomArray() {
+  var array = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  // 原理是sort排序,Math.random()产生0<= x < 1之间的数,会导致x-0.05大于或者小于0
+  return array.sort(function () {
+    return Math.random() - 0.5;
+  });
+}
+
+// padStart 的 polyfill，因为某些机型或情况，还无法支持es7的padStart，比如电脑版的微信小程序
+// 所以这里做一个兼容polyfill的兼容处理
+if (!String.prototype.padStart) {
+  // 为了方便表示这里 fillString 用了ES6 的默认参数，不影响理解
+  String.prototype.padStart = function (maxLength) {
+    var fillString = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : ' ';
+    if (Object.prototype.toString.call(fillString) !== '[object String]') {
+      throw new TypeError('fillString must be String');
+    }
+    var str = this;
+    // 返回 String(str) 这里是为了使返回的值是字符串字面量，在控制台中更符合直觉
+    if (str.length >= maxLength) return String(str);
+    var fillLength = maxLength - str.length;
+    var times = Math.ceil(fillLength / fillString.length);
+    while (times >>= 1) {
+      fillString += fillString;
+      if (times === 1) {
+        fillString += fillString;
+      }
+    }
+    return fillString.slice(0, fillLength) + str;
+  };
+}
+
+/**
+ * @description 格式化时间
+ * @param {String|Number} dateTime 需要格式化的时间戳
+ * @param {String} fmt 格式化规则 yyyy:mm:dd|yyyy:mm|yyyy年mm月dd日|yyyy年mm月dd日 hh时MM分等,可自定义组合 默认yyyy-mm-dd
+ * @returns {string} 返回格式化后的字符串
+ */
+function timeFormat() {
+  var dateTime = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+  var formatStr = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'yyyy-mm-dd';
+  var date;
+  // 若传入时间为假值，则取当前时间
+  if (!dateTime) {
+    date = new Date();
+  }
+  // 若为unix秒时间戳，则转为毫秒时间戳（逻辑有点奇怪，但不敢改，以保证历史兼容）
+  else if (/^\d{10}$/.test(dateTime === null || dateTime === void 0 ? void 0 : dateTime.toString().trim())) {
+    date = new Date(dateTime * 1000);
+  }
+  // 若用户传入字符串格式时间戳，new Date无法解析，需做兼容
+  else if (typeof dateTime === 'string' && /^\d+$/.test(dateTime.trim())) {
+    date = new Date(Number(dateTime));
+  }
+  // 处理平台性差异，在Safari/Webkit中，new Date仅支持/作为分割符的字符串时间
+  // 处理 '2022-07-10 01:02:03'，跳过 '2022-07-10T01:02:03'
+  else if (typeof dateTime === 'string' && dateTime.includes('-') && !dateTime.includes('T')) {
+    date = new Date(dateTime.replace(/-/g, '/'));
+  }
+  // 其他都认为符合 RFC 2822 规范
+  else {
+    date = new Date(dateTime);
+  }
+  var timeSource = {
+    'y': date.getFullYear().toString(),
+    // 年
+    'm': (date.getMonth() + 1).toString().padStart(2, '0'),
+    // 月
+    'd': date.getDate().toString().padStart(2, '0'),
+    // 日
+    'h': date.getHours().toString().padStart(2, '0'),
+    // 时
+    'M': date.getMinutes().toString().padStart(2, '0'),
+    // 分
+    's': date.getSeconds().toString().padStart(2, '0') // 秒
+    // 有其他格式化字符需求可以继续添加，必须转化成字符串
+  };
+
+  for (var key in timeSource) {
+    var _ref3 = new RegExp("".concat(key, "+")).exec(formatStr) || [],
+      _ref4 = (0, _slicedToArray2.default)(_ref3, 1),
+      ret = _ref4[0];
+    if (ret) {
+      // 年可能只需展示两位
+      var beginIndex = key === 'y' && ret.length === 2 ? 2 : 0;
+      formatStr = formatStr.replace(ret, timeSource[key].slice(beginIndex));
+    }
+  }
+  return formatStr;
+}
+
+/**
+ * @description 时间戳转为多久之前
+ * @param {String|Number} timestamp 时间戳
+ * @param {String|Boolean} format
+ * 格式化规则如果为时间格式字符串，超出一定时间范围，返回固定的时间格式；
+ * 如果为布尔值false，无论什么时间，都返回多久以前的格式
+ * @returns {string} 转化后的内容
+ */
+function timeFrom() {
+  var timestamp = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+  var format = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'yyyy-mm-dd';
+  if (timestamp == null) timestamp = Number(new Date());
+  timestamp = parseInt(timestamp);
+  // 判断用户输入的时间戳是秒还是毫秒,一般前端js获取的时间戳是毫秒(13位),后端传过来的为秒(10位)
+  if (timestamp.toString().length == 10) timestamp *= 1000;
+  var timer = new Date().getTime() - timestamp;
+  timer = parseInt(timer / 1000);
+  // 如果小于5分钟,则返回"刚刚",其他以此类推
+  var tips = '';
+  switch (true) {
+    case timer < 300:
+      tips = '刚刚';
+      break;
+    case timer >= 300 && timer < 3600:
+      tips = "".concat(parseInt(timer / 60), "\u5206\u949F\u524D");
+      break;
+    case timer >= 3600 && timer < 86400:
+      tips = "".concat(parseInt(timer / 3600), "\u5C0F\u65F6\u524D");
+      break;
+    case timer >= 86400 && timer < 2592000:
+      tips = "".concat(parseInt(timer / 86400), "\u5929\u524D");
+      break;
+    default:
+      // 如果format为false，则无论什么时间戳，都显示xx之前
+      if (format === false) {
+        if (timer >= 2592000 && timer < 365 * 86400) {
+          tips = "".concat(parseInt(timer / (86400 * 30)), "\u4E2A\u6708\u524D");
+        } else {
+          tips = "".concat(parseInt(timer / (86400 * 365)), "\u5E74\u524D");
+        }
+      } else {
+        tips = timeFormat(timestamp, format);
+      }
+  }
+  return tips;
+}
+
+/**
+ * @description 去除空格
+ * @param String str 需要去除空格的字符串
+ * @param String pos both(左右)|left|right|all 默认both
+ */
+function trim(str) {
+  var pos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'both';
+  str = String(str);
+  if (pos == 'both') {
+    return str.replace(/^\s+|\s+$/g, '');
+  }
+  if (pos == 'left') {
+    return str.replace(/^\s*/, '');
+  }
+  if (pos == 'right') {
+    return str.replace(/(\s*$)/g, '');
+  }
+  if (pos == 'all') {
+    return str.replace(/\s+/g, '');
+  }
+  return str;
+}
+
+/**
+ * @description 对象转url参数
+ * @param {object} data,对象
+ * @param {Boolean} isPrefix,是否自动加上"?"
+ * @param {string} arrayFormat 规则 indices|brackets|repeat|comma
+ */
+function queryParams() {
+  var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var isPrefix = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+  var arrayFormat = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'brackets';
+  var prefix = isPrefix ? '?' : '';
+  var _result = [];
+  if (['indices', 'brackets', 'repeat', 'comma'].indexOf(arrayFormat) == -1) arrayFormat = 'brackets';
+  var _loop = function _loop(key) {
+    var value = data[key];
+    // 去掉为空的参数
+    if (['', undefined, null].indexOf(value) >= 0) {
+      return "continue";
+    }
+    // 如果值为数组，另行处理
+    if (value.constructor === Array) {
+      // e.g. {ids: [1, 2, 3]}
+      switch (arrayFormat) {
+        case 'indices':
+          // 结果: ids[0]=1&ids[1]=2&ids[2]=3
+          for (var i = 0; i < value.length; i++) {
+            _result.push("".concat(key, "[").concat(i, "]=").concat(value[i]));
+          }
+          break;
+        case 'brackets':
+          // 结果: ids[]=1&ids[]=2&ids[]=3
+          value.forEach(function (_value) {
+            _result.push("".concat(key, "[]=").concat(_value));
+          });
+          break;
+        case 'repeat':
+          // 结果: ids=1&ids=2&ids=3
+          value.forEach(function (_value) {
+            _result.push("".concat(key, "=").concat(_value));
+          });
+          break;
+        case 'comma':
+          // 结果: ids=1,2,3
+          var commaStr = '';
+          value.forEach(function (_value) {
+            commaStr += (commaStr ? ',' : '') + _value;
+          });
+          _result.push("".concat(key, "=").concat(commaStr));
+          break;
+        default:
+          value.forEach(function (_value) {
+            _result.push("".concat(key, "[]=").concat(_value));
+          });
+      }
+    } else {
+      _result.push("".concat(key, "=").concat(value));
+    }
+  };
+  for (var key in data) {
+    var _ret = _loop(key);
+    if (_ret === "continue") continue;
+  }
+  return _result.length ? prefix + _result.join('&') : '';
+}
+
+/**
+ * 显示消息提示框
+ * @param {String} title 提示的内容，长度与 icon 取值有关。
+ * @param {Number} duration 提示的延迟时间，单位毫秒，默认：2000
+ */
+function toast(title) {
+  var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2000;
+  uni.showToast({
+    title: String(title),
+    icon: 'none',
+    duration: duration
+  });
+}
+
+/**
+ * @description 根据主题type值,获取对应的图标
+ * @param {String} type 主题名称,primary|info|error|warning|success
+ * @param {boolean} fill 是否使用fill填充实体的图标
+ */
+function type2icon() {
+  var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'success';
+  var fill = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  // 如果非预置值,默认为success
+  if (['primary', 'info', 'error', 'warning', 'success'].indexOf(type) == -1) type = 'success';
+  var iconName = '';
+  // 目前(2019-12-12),info和primary使用同一个图标
+  switch (type) {
+    case 'primary':
+      iconName = 'info-circle';
+      break;
+    case 'info':
+      iconName = 'info-circle';
+      break;
+    case 'error':
+      iconName = 'close-circle';
+      break;
+    case 'warning':
+      iconName = 'error-circle';
+      break;
+    case 'success':
+      iconName = 'checkmark-circle';
+      break;
+    default:
+      iconName = 'checkmark-circle';
+  }
+  // 是否是实体类型,加上-fill,在icon组件库中,实体的类名是后面加-fill的
+  if (fill) iconName += '-fill';
+  return iconName;
+}
+
+/**
+ * @description 数字格式化
+ * @param {number|string} number 要格式化的数字
+ * @param {number} decimals 保留几位小数
+ * @param {string} decimalPoint 小数点符号
+ * @param {string} thousandsSeparator 千分位符号
+ * @returns {string} 格式化后的数字
+ */
+function priceFormat(number) {
+  var decimals = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+  var decimalPoint = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '.';
+  var thousandsSeparator = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : ',';
+  number = "".concat(number).replace(/[^0-9+-Ee.]/g, '');
+  var n = !isFinite(+number) ? 0 : +number;
+  var prec = !isFinite(+decimals) ? 0 : Math.abs(decimals);
+  var sep = typeof thousandsSeparator === 'undefined' ? ',' : thousandsSeparator;
+  var dec = typeof decimalPoint === 'undefined' ? '.' : decimalPoint;
+  var s = '';
+  s = (prec ? (0, _digit.round)(n, prec) + '' : "".concat(Math.round(n))).split('.');
+  var re = /(-?\d+)(\d{3})/;
+  while (re.test(s[0])) {
+    s[0] = s[0].replace(re, "$1".concat(sep, "$2"));
+  }
+  if ((s[1] || '').length < prec) {
+    s[1] = s[1] || '';
+    s[1] += new Array(prec - s[1].length + 1).join('0');
+  }
+  return s.join(dec);
+}
+
+/**
+ * @description 获取duration值
+ * 如果带有ms或者s直接返回，如果大于一定值，认为是ms单位，小于一定值，认为是s单位
+ * 比如以30位阈值，那么300大于30，可以理解为用户想要的是300ms，而不是想花300s去执行一个动画
+ * @param {String|number} value 比如: "1s"|"100ms"|1|100
+ * @param {boolean} unit  提示: 如果是false 默认返回number
+ * @return {string|number}
+ */
+function getDuration(value) {
+  var unit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+  var valueNum = parseInt(value);
+  if (unit) {
+    if (/s$/.test(value)) return value;
+    return value > 30 ? "".concat(value, "ms") : "".concat(value, "s");
+  }
+  if (/ms$/.test(value)) return valueNum;
+  if (/s$/.test(value)) return valueNum > 30 ? valueNum : valueNum * 1000;
+  return valueNum;
+}
+
+/**
+ * @description 日期的月或日补零操作
+ * @param {String} value 需要补零的值
+ */
+function padZero(value) {
+  return "00".concat(value).slice(-2);
+}
+
+/**
+ * @description 在uv-form的子组件内容发生变化，或者失去焦点时，尝试通知uv-form执行校验方法
+ * @param {*} instance
+ * @param {*} event
+ */
+function formValidate(instance, event) {
+  var formItem = $parent.call(instance, 'uv-form-item');
+  var form = $parent.call(instance, 'uv-form');
+  // 如果发生变化的input或者textarea等，其父组件中有uv-form-item或者uv-form等，就执行form的validate方法
+  // 同时将form-item的pros传递给form，让其进行精确对象验证
+  if (formItem && form) {
+    form.validateField(formItem.prop, function () {}, event);
+  }
+}
+
+/**
+ * @description 获取某个对象下的属性，用于通过类似'a.b.c'的形式去获取一个对象的的属性的形式
+ * @param {object} obj 对象
+ * @param {string} key 需要获取的属性字段
+ * @returns {*}
+ */
+function getProperty(obj, key) {
+  if (!obj) {
+    return;
+  }
+  if (typeof key !== 'string' || key === '') {
+    return '';
+  }
+  if (key.indexOf('.') !== -1) {
+    var keys = key.split('.');
+    var firstObj = obj[keys[0]] || {};
+    for (var i = 1; i < keys.length; i++) {
+      if (firstObj) {
+        firstObj = firstObj[keys[i]];
+      }
+    }
+    return firstObj;
+  }
+  return obj[key];
+}
+
+/**
+ * @description 设置对象的属性值，如果'a.b.c'的形式进行设置
+ * @param {object} obj 对象
+ * @param {string} key 需要设置的属性
+ * @param {string} value 设置的值
+ */
+function setProperty(obj, key, value) {
+  if (!obj) {
+    return;
+  }
+  // 递归赋值
+  var inFn = function inFn(_obj, keys, v) {
+    // 最后一个属性key
+    if (keys.length === 1) {
+      _obj[keys[0]] = v;
+      return;
+    }
+    // 0~length-1个key
+    while (keys.length > 1) {
+      var k = keys[0];
+      if (!_obj[k] || (0, _typeof2.default)(_obj[k]) !== 'object') {
+        _obj[k] = {};
+      }
+      var _key = keys.shift();
+      // 自调用判断是否存在属性，不存在则自动创建对象
+      inFn(_obj[k], keys, v);
+    }
+  };
+  if (typeof key !== 'string' || key === '') {} else if (key.indexOf('.') !== -1) {
+    // 支持多层级赋值操作
+    var keys = key.split('.');
+    inFn(obj, keys, value);
+  } else {
+    obj[key] = value;
+  }
+}
+
+/**
+ * @description 获取当前页面路径
+ */
+function page() {
+  var _pages;
+  var pages = getCurrentPages();
+  var route = (_pages = pages[pages.length - 1]) === null || _pages === void 0 ? void 0 : _pages.route;
+  // 某些特殊情况下(比如页面进行redirectTo时的一些时机)，pages可能为空数组
+  return "/".concat(route ? route : '');
+}
+
+/**
+ * @description 获取当前路由栈实例数组
+ */
+function pages() {
+  var pages = getCurrentPages();
+  return pages;
+}
+
+/**
+ * 获取页面历史栈指定层实例
+ * @param back {number} [0] - 0或者负数，表示获取历史栈的哪一层，0表示获取当前页面实例，-1 表示获取上一个页面实例。默认0。
+ */
+function getHistoryPage() {
+  var back = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+  var pages = getCurrentPages();
+  var len = pages.length;
+  return pages[len - 1 + back];
+}
+
+/**
+ * @description 修改uvui内置属性值
+ * @param {object} props 修改内置props属性
+ * @param {object} config 修改内置config属性
+ * @param {object} color 修改内置color属性
+ * @param {object} zIndex 修改内置zIndex属性
+ */
+function setConfig(_ref5) {
+  var _ref5$props = _ref5.props,
+    props = _ref5$props === void 0 ? {} : _ref5$props,
+    _ref5$config = _ref5.config,
+    config = _ref5$config === void 0 ? {} : _ref5$config,
+    _ref5$color = _ref5.color,
+    color = _ref5$color === void 0 ? {} : _ref5$color,
+    _ref5$zIndex = _ref5.zIndex,
+    zIndex = _ref5$zIndex === void 0 ? {} : _ref5$zIndex;
+  var deepMerge = uni.$uv.deepMerge;
+  uni.$uv.config = deepMerge(uni.$uv.config, config);
+  uni.$uv.props = deepMerge(uni.$uv.props, props);
+  uni.$uv.color = deepMerge(uni.$uv.color, color);
+  uni.$uv.zIndex = deepMerge(uni.$uv.zIndex, zIndex);
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 251 */
+/*!*************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/test.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.amount = amount;
+exports.array = array;
+exports.carNo = carNo;
+exports.chinese = chinese;
+exports.code = code;
+exports.contains = contains;
+exports.date = date;
+exports.dateISO = dateISO;
+exports.digits = digits;
+exports.email = email;
+exports.empty = empty;
+exports.enOrNum = enOrNum;
+exports.func = func;
+exports.idCard = idCard;
+exports.image = image;
+exports.jsonString = jsonString;
+exports.landline = landline;
+exports.letter = letter;
+exports.mobile = mobile;
+exports.number = number;
+exports.object = object;
+exports.promise = promise;
+exports.range = range;
+exports.rangeLength = rangeLength;
+exports.regExp = regExp;
+exports.string = string;
+exports.url = url;
+exports.video = video;
+var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
+/**
+ * 验证电子邮箱格式
+ */
+function email(value) {
+  return /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/.test(value);
+}
+
+/**
+ * 验证手机格式
+ */
+function mobile(value) {
+  return /^1([3589]\d|4[5-9]|6[1-2,4-7]|7[0-8])\d{8}$/.test(value);
+}
+
+/**
+ * 验证URL格式
+ */
+function url(value) {
+  return /^((https|http|ftp|rtsp|mms):\/\/)(([0-9a-zA-Z_!~*'().&=+$%-]+: )?[0-9a-zA-Z_!~*'().&=+$%-]+@)?(([0-9]{1,3}.){3}[0-9]{1,3}|([0-9a-zA-Z_!~*'()-]+.)*([0-9a-zA-Z][0-9a-zA-Z-]{0,61})?[0-9a-zA-Z].[a-zA-Z]{2,6})(:[0-9]{1,4})?((\/?)|(\/[0-9a-zA-Z_!~*'().;?:@&=+$,%#-]+)+\/?)$/.test(value);
+}
+
+/**
+ * 验证日期格式
+ */
+function date(value) {
+  if (!value) return false;
+  // 判断是否数值或者字符串数值(意味着为时间戳)，转为数值，否则new Date无法识别字符串时间戳
+  if (number(value)) value = +value;
+  return !/Invalid|NaN/.test(new Date(value).toString());
+}
+
+/**
+ * 验证ISO类型的日期格式
+ */
+function dateISO(value) {
+  return /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/.test(value);
+}
+
+/**
+ * 验证十进制数字
+ */
+function number(value) {
+  return /^[\+-]?(\d+\.?\d*|\.\d+|\d\.\d+e\+\d+)$/.test(value);
+}
+
+/**
+ * 验证字符串
+ */
+function string(value) {
+  return typeof value === 'string';
+}
+
+/**
+ * 验证整数
+ */
+function digits(value) {
+  return /^\d+$/.test(value);
+}
+
+/**
+ * 验证身份证号码
+ */
+function idCard(value) {
+  return /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/.test(value);
+}
+
+/**
+ * 是否车牌号
+ */
+function carNo(value) {
+  // 新能源车牌
+  var xreg = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}(([0-9]{5}[DF]$)|([DF][A-HJ-NP-Z0-9][0-9]{4}$))/;
+  // 旧车牌
+  var creg = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-HJ-NP-Z0-9]{4}[A-HJ-NP-Z0-9挂学警港澳]{1}$/;
+  if (value.length === 7) {
+    return creg.test(value);
+  }
+  if (value.length === 8) {
+    return xreg.test(value);
+  }
+  return false;
+}
+
+/**
+ * 金额,只允许2位小数
+ */
+function amount(value) {
+  // 金额，只允许保留两位小数
+  return /^[1-9]\d*(,\d{3})*(\.\d{1,2})?$|^0\.\d{1,2}$/.test(value);
+}
+
+/**
+ * 中文
+ */
+function chinese(value) {
+  var reg = /^[\u4e00-\u9fa5]+$/gi;
+  return reg.test(value);
+}
+
+/**
+ * 只能输入字母
+ */
+function letter(value) {
+  return /^[a-zA-Z]*$/.test(value);
+}
+
+/**
+ * 只能是字母或者数字
+ */
+function enOrNum(value) {
+  // 英文或者数字
+  var reg = /^[0-9a-zA-Z]*$/g;
+  return reg.test(value);
+}
+
+/**
+ * 验证是否包含某个值
+ */
+function contains(value, param) {
+  return value.indexOf(param) >= 0;
+}
+
+/**
+ * 验证一个值范围[min, max]
+ */
+function range(value, param) {
+  return value >= param[0] && value <= param[1];
+}
+
+/**
+ * 验证一个长度范围[min, max]
+ */
+function rangeLength(value, param) {
+  return value.length >= param[0] && value.length <= param[1];
+}
+
+/**
+ * 是否固定电话
+ */
+function landline(value) {
+  var reg = /^\d{3,4}-\d{7,8}(-\d{3,4})?$/;
+  return reg.test(value);
+}
+
+/**
+ * 判断是否为空
+ */
+function empty(value) {
+  switch ((0, _typeof2.default)(value)) {
+    case 'undefined':
+      return true;
+    case 'string':
+      if (value.replace(/(^[ \t\n\r]*)|([ \t\n\r]*$)/g, '').length == 0) return true;
+      break;
+    case 'boolean':
+      if (!value) return true;
+      break;
+    case 'number':
+      if (value === 0 || isNaN(value)) return true;
+      break;
+    case 'object':
+      if (value === null || value.length === 0) return true;
+      for (var i in value) {
+        return false;
+      }
+      return true;
+  }
+  return false;
+}
+
+/**
+ * 是否json字符串
+ */
+function jsonString(value) {
+  if (typeof value === 'string') {
+    try {
+      var obj = JSON.parse(value);
+      if ((0, _typeof2.default)(obj) === 'object' && obj) {
+        return true;
+      }
+      return false;
+    } catch (e) {
+      return false;
+    }
+  }
+  return false;
+}
+
+/**
+ * 是否数组
+ */
+function array(value) {
+  if (typeof Array.isArray === 'function') {
+    return Array.isArray(value);
+  }
+  return Object.prototype.toString.call(value) === '[object Array]';
+}
+
+/**
+ * 是否对象
+ */
+function object(value) {
+  return Object.prototype.toString.call(value) === '[object Object]';
+}
+
+/**
+ * 是否短信验证码
+ */
+function code(value) {
+  var len = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
+  return new RegExp("^\\d{".concat(len, "}$")).test(value);
+}
+
+/**
+ * 是否函数方法
+ * @param {Object} value
+ */
+function func(value) {
+  return typeof value === 'function';
+}
+
+/**
+ * 是否promise对象
+ * @param {Object} value
+ */
+function promise(value) {
+  return object(value) && func(value.then) && func(value.catch);
+}
+
+/** 是否图片格式
+ * @param {Object} value
+ */
+function image(value) {
+  var newValue = value.split('?')[0];
+  var IMAGE_REGEXP = /\.(jpeg|jpg|gif|png|svg|webp|jfif|bmp|dpg)/i;
+  return IMAGE_REGEXP.test(newValue);
+}
+
+/**
+ * 是否视频格式
+ * @param {Object} value
+ */
+function video(value) {
+  var VIDEO_REGEXP = /\.(mp4|mpg|mpeg|dat|asf|avi|rm|rmvb|mov|wmv|flv|mkv|m3u8)/i;
+  return VIDEO_REGEXP.test(value);
+}
+
+/**
+ * 是否为正则对象
+ * @param {Object}
+ * @return {Boolean}
+ */
+function regExp(o) {
+  return o && Object.prototype.toString.call(o) === '[object RegExp]';
+}
+
+/***/ }),
+/* 252 */
+/*!**************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/digit.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+exports.divide = divide;
+exports.enableBoundaryChecking = enableBoundaryChecking;
+exports.minus = minus;
+exports.plus = plus;
+exports.round = round;
+exports.times = times;
+var _toArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toArray */ 64));
+var _boundaryCheckingState = true; // 是否进行越界检查的全局开关
+
+/**
+ * 把错误的数据转正
+ * @private
+ * @example strip(0.09999999999999998)=0.1
+ */
+function strip(num) {
+  var precision = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 15;
+  return +parseFloat(Number(num).toPrecision(precision));
+}
+
+/**
+ * Return digits length of a number
+ * @private
+ * @param {*number} num Input number
+ */
+function digitLength(num) {
+  // Get digit length of e
+  var eSplit = num.toString().split(/[eE]/);
+  var len = (eSplit[0].split('.')[1] || '').length - +(eSplit[1] || 0);
+  return len > 0 ? len : 0;
+}
+
+/**
+ * 把小数转成整数,如果是小数则放大成整数
+ * @private
+ * @param {*number} num 输入数
+ */
+function float2Fixed(num) {
+  if (num.toString().indexOf('e') === -1) {
+    return Number(num.toString().replace('.', ''));
+  }
+  var dLen = digitLength(num);
+  return dLen > 0 ? strip(Number(num) * Math.pow(10, dLen)) : Number(num);
+}
+
+/**
+ * 检测数字是否越界，如果越界给出提示
+ * @private
+ * @param {*number} num 输入数
+ */
+function checkBoundary(num) {
+  if (_boundaryCheckingState) {
+    if (num > Number.MAX_SAFE_INTEGER || num < Number.MIN_SAFE_INTEGER) {
+      console.warn("".concat(num, " \u8D85\u51FA\u4E86\u7CBE\u5EA6\u9650\u5236\uFF0C\u7ED3\u679C\u53EF\u80FD\u4E0D\u6B63\u786E"));
+    }
+  }
+}
+
+/**
+ * 把递归操作扁平迭代化
+ * @param {number[]} arr 要操作的数字数组
+ * @param {function} operation 迭代操作
+ * @private
+ */
+function iteratorOperation(arr, operation) {
+  var _arr = (0, _toArray2.default)(arr),
+    num1 = _arr[0],
+    num2 = _arr[1],
+    others = _arr.slice(2);
+  var res = operation(num1, num2);
+  others.forEach(function (num) {
+    res = operation(res, num);
+  });
+  return res;
+}
+
+/**
+ * 高精度乘法
+ * @export
+ */
+function times() {
+  for (var _len = arguments.length, nums = new Array(_len), _key = 0; _key < _len; _key++) {
+    nums[_key] = arguments[_key];
+  }
+  if (nums.length > 2) {
+    return iteratorOperation(nums, times);
+  }
+  var num1 = nums[0],
+    num2 = nums[1];
+  var num1Changed = float2Fixed(num1);
+  var num2Changed = float2Fixed(num2);
+  var baseNum = digitLength(num1) + digitLength(num2);
+  var leftValue = num1Changed * num2Changed;
+  checkBoundary(leftValue);
+  return leftValue / Math.pow(10, baseNum);
+}
+
+/**
+ * 高精度加法
+ * @export
+ */
+function plus() {
+  for (var _len2 = arguments.length, nums = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+    nums[_key2] = arguments[_key2];
+  }
+  if (nums.length > 2) {
+    return iteratorOperation(nums, plus);
+  }
+  var num1 = nums[0],
+    num2 = nums[1];
+  // 取最大的小数位
+  var baseNum = Math.pow(10, Math.max(digitLength(num1), digitLength(num2)));
+  // 把小数都转为整数然后再计算
+  return (times(num1, baseNum) + times(num2, baseNum)) / baseNum;
+}
+
+/**
+ * 高精度减法
+ * @export
+ */
+function minus() {
+  for (var _len3 = arguments.length, nums = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+    nums[_key3] = arguments[_key3];
+  }
+  if (nums.length > 2) {
+    return iteratorOperation(nums, minus);
+  }
+  var num1 = nums[0],
+    num2 = nums[1];
+  var baseNum = Math.pow(10, Math.max(digitLength(num1), digitLength(num2)));
+  return (times(num1, baseNum) - times(num2, baseNum)) / baseNum;
+}
+
+/**
+ * 高精度除法
+ * @export
+ */
+function divide() {
+  for (var _len4 = arguments.length, nums = new Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {
+    nums[_key4] = arguments[_key4];
+  }
+  if (nums.length > 2) {
+    return iteratorOperation(nums, divide);
+  }
+  var num1 = nums[0],
+    num2 = nums[1];
+  var num1Changed = float2Fixed(num1);
+  var num2Changed = float2Fixed(num2);
+  checkBoundary(num1Changed);
+  checkBoundary(num2Changed);
+  // 重要，这里必须用strip进行修正
+  return times(num1Changed / num2Changed, strip(Math.pow(10, digitLength(num2) - digitLength(num1))));
+}
+
+/**
+ * 四舍五入
+ * @export
+ */
+function round(num, ratio) {
+  var base = Math.pow(10, ratio);
+  var result = divide(Math.round(Math.abs(times(num, base))), base);
+  if (num < 0 && result !== 0) {
+    result = times(result, -1);
+  }
+  // 位数不足则补0
+  return result;
+}
+
+/**
+ * 是否进行边界检查，默认开启
+ * @param flag 标记开关，true 为开启，false 为关闭，默认为 true
+ * @export
+ */
+function enableBoundaryChecking() {
+  var flag = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+  _boundaryCheckingState = flag;
+}
+var _default = {
+  times: times,
+  plus: plus,
+  minus: minus,
+  divide: divide,
+  round: round,
+  enableBoundaryChecking: enableBoundaryChecking
+};
+exports.default = _default;
+
+/***/ }),
+/* 253 */
+/*!**********************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/util/route.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 55));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 57));
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23));
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ 24));
+var _index = __webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/function/index.js */ 250);
+/**
+ * 路由跳转方法，该方法相对于直接使用uni.xxx的好处是使用更加简单快捷
+ * 并且带有路由拦截功能
+ */
+var Router = /*#__PURE__*/function () {
+  function Router() {
+    (0, _classCallCheck2.default)(this, Router);
+    // 原始属性定义
+    this.config = {
+      type: 'navigateTo',
+      url: '',
+      delta: 1,
+      // navigateBack页面后退时,回退的层数
+      params: {},
+      // 传递的参数
+      animationType: 'pop-in',
+      // 窗口动画,只在APP有效
+      animationDuration: 300,
+      // 窗口动画持续时间,单位毫秒,只在APP有效
+      intercept: false,
+      // 是否需要拦截
+      events: {} // 页面间通信接口，用于监听被打开页面发送到当前页面的数据。hbuilderx 2.8.9+ 开始支持。
+    };
+    // 因为route方法是需要对外赋值给另外的对象使用，同时route内部有使用this，会导致route失去上下文
+    // 这里在构造函数中进行this绑定
+    this.route = this.route.bind(this);
+  }
+
+  // 判断url前面是否有"/"，如果没有则加上，否则无法跳转
+  (0, _createClass2.default)(Router, [{
+    key: "addRootPath",
+    value: function addRootPath(url) {
+      return url[0] === '/' ? url : "/".concat(url);
+    }
+
+    // 整合路由参数
+  }, {
+    key: "mixinParam",
+    value: function mixinParam(url, params) {
+      url = url && this.addRootPath(url);
+
+      // 使用正则匹配，主要依据是判断是否有"/","?","="等，如“/page/index/index?name=mary"
+      // 如果有url中有get参数，转换后无需带上"?"
+      var query = '';
+      if (/.*\/.*\?.*=.*/.test(url)) {
+        // object对象转为get类型的参数
+        query = (0, _index.queryParams)(params, false);
+        // 因为已有get参数,所以后面拼接的参数需要带上"&"隔开
+        return url += "&".concat(query);
+      }
+      // 直接拼接参数，因为此处url中没有后面的query参数，也就没有"?/&"之类的符号
+      query = (0, _index.queryParams)(params);
+      return url += query;
+    }
+
+    // 对外的方法名称
+  }, {
+    key: "route",
+    value: function () {
+      var _route = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+        var options,
+          params,
+          mergeConfig,
+          isNext,
+          _args = arguments;
+        return _regenerator.default.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                options = _args.length > 0 && _args[0] !== undefined ? _args[0] : {};
+                params = _args.length > 1 && _args[1] !== undefined ? _args[1] : {};
+                // 合并用户的配置和内部的默认配置
+                mergeConfig = {};
+                if (typeof options === 'string') {
+                  // 如果options为字符串，则为route(url, params)的形式
+                  mergeConfig.url = this.mixinParam(options, params);
+                  mergeConfig.type = 'navigateTo';
+                } else {
+                  mergeConfig = (0, _index.deepMerge)(this.config, options);
+                  // 否则正常使用mergeConfig中的url和params进行拼接
+                  mergeConfig.url = this.mixinParam(options.url, options.params);
+                }
+                // 如果本次跳转的路径和本页面路径一致，不执行跳转，防止用户快速点击跳转按钮，造成多次跳转同一个页面的问题
+                if (!(mergeConfig.url === (0, _index.page)())) {
+                  _context.next = 6;
+                  break;
+                }
+                return _context.abrupt("return");
+              case 6:
+                if (params.intercept) {
+                  mergeConfig.intercept = params.intercept;
+                }
+                // params参数也带给拦截器
+                mergeConfig.params = params;
+                // 合并内外部参数
+                mergeConfig = (0, _index.deepMerge)(this.config, mergeConfig);
+                // 判断用户是否定义了拦截器
+                if (!(typeof mergeConfig.intercept === 'function')) {
+                  _context.next = 16;
+                  break;
+                }
+                _context.next = 12;
+                return new Promise(function (resolve, reject) {
+                  mergeConfig.intercept(mergeConfig, resolve);
+                });
+              case 12:
+                isNext = _context.sent;
+                // 如果isNext为true，则执行路由跳转
+                isNext && this.openPage(mergeConfig);
+                _context.next = 17;
+                break;
+              case 16:
+                this.openPage(mergeConfig);
+              case 17:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+      function route() {
+        return _route.apply(this, arguments);
+      }
+      return route;
+    }() // 执行路由跳转
+  }, {
+    key: "openPage",
+    value: function openPage(config) {
+      // 解构参数
+      var url = config.url,
+        type = config.type,
+        delta = config.delta,
+        animationType = config.animationType,
+        animationDuration = config.animationDuration,
+        events = config.events;
+      if (config.type == 'navigateTo' || config.type == 'to') {
+        uni.navigateTo({
+          url: url,
+          animationType: animationType,
+          animationDuration: animationDuration,
+          events: events
+        });
+      }
+      if (config.type == 'redirectTo' || config.type == 'redirect') {
+        uni.redirectTo({
+          url: url
+        });
+      }
+      if (config.type == 'switchTab' || config.type == 'tab') {
+        uni.switchTab({
+          url: url
+        });
+      }
+      if (config.type == 'reLaunch' || config.type == 'launch') {
+        uni.reLaunch({
+          url: url
+        });
+      }
+      if (config.type == 'navigateBack' || config.type == 'back') {
+        uni.navigateBack({
+          delta: delta
+        });
+      }
+    }
+  }]);
+  return Router;
+}();
+var _default = new Router().route;
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 254 */
+/*!*****************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/debounce.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var timeout = null;
+
+/**
+ * 防抖原理：一定时间内，只有最后一次操作，再过wait毫秒后才执行函数
+ *
+ * @param {Function} func 要执行的回调函数
+ * @param {Number} wait 延时的时间
+ * @param {Boolean} immediate 是否立即执行
+ * @return null
+ */
+function debounce(func) {
+  var wait = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;
+  var immediate = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+  // 清除定时器
+  if (timeout !== null) clearTimeout(timeout);
+  // 立即执行，此类情况一般用不到
+  if (immediate) {
+    var callNow = !timeout;
+    timeout = setTimeout(function () {
+      timeout = null;
+    }, wait);
+    if (callNow) typeof func === 'function' && func();
+  } else {
+    // 设置定时器，当最后一次操作后，timeout不会再被清除，所以在延时wait毫秒后执行func回调方法
+    timeout = setTimeout(function () {
+      typeof func === 'function' && func();
+    }, wait);
+  }
+}
+var _default = debounce;
+exports.default = _default;
+
+/***/ }),
+/* 255 */
+/*!*****************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/throttle.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var timer;
+var flag;
+/**
+ * 节流原理：在一定时间内，只能触发一次
+ *
+ * @param {Function} func 要执行的回调函数
+ * @param {Number} wait 延时的时间
+ * @param {Boolean} immediate 是否立即执行
+ * @return null
+ */
+function throttle(func) {
+  var wait = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;
+  var immediate = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+  if (immediate) {
+    if (!flag) {
+      flag = true;
+      // 如果是立即执行，则在wait毫秒内开始时执行
+      typeof func === 'function' && func();
+      timer = setTimeout(function () {
+        flag = false;
+      }, wait);
+    }
+  } else if (!flag) {
+    flag = true;
+    // 如果是非立即执行，则在wait毫秒内的结束处执行
+    timer = setTimeout(function () {
+      flag = false;
+      typeof func === 'function' && func();
+    }, wait);
+  }
+}
+var _default = throttle;
+exports.default = _default;
+
+/***/ }),
+/* 256 */,
+/* 257 */,
+/* 258 */,
+/* 259 */,
+/* 260 */,
+/* 261 */,
+/* 262 */,
+/* 263 */,
+/* 264 */,
+/* 265 */,
+/* 266 */,
+/* 267 */,
+/* 268 */,
+/* 269 */,
+/* 270 */
 /*!*******************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uni-icons/components/uni-icons/uniicons_file_vue.js ***!
   \*******************************************************************************************/
@@ -19981,14 +21813,14 @@ var fontData = [{
 exports.fontData = fontData;
 
 /***/ }),
-/* 243 */,
-/* 244 */,
-/* 245 */,
-/* 246 */,
-/* 247 */,
-/* 248 */,
-/* 249 */,
-/* 250 */
+/* 271 */,
+/* 272 */,
+/* 273 */,
+/* 274 */,
+/* 275 */,
+/* 276 */,
+/* 277 */,
+/* 278 */
 /*!*****************************************************************************!*\
   !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-badge/props.js ***!
   \*****************************************************************************/
@@ -20073,6 +21905,534 @@ var _default = {
       default: uni.$u.props.badge.absolute
     }
   }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 279 */,
+/* 280 */,
+/* 281 */,
+/* 282 */,
+/* 283 */,
+/* 284 */,
+/* 285 */,
+/* 286 */
+/*!*********************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-overlay/components/uv-overlay/props.js ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _uni$$uv, _uni$$uv$props;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default = {
+  props: _objectSpread({
+    // 是否显示遮罩
+    show: {
+      type: Boolean,
+      default: false
+    },
+    // 层级z-index
+    zIndex: {
+      type: [String, Number],
+      default: 10070
+    },
+    // 遮罩的过渡时间，单位为ms
+    duration: {
+      type: [String, Number],
+      default: 300
+    },
+    // 不透明度值，当做rgba的第四个参数
+    opacity: {
+      type: [String, Number],
+      default: 0.5
+    }
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.overlay)
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 287 */,
+/* 288 */,
+/* 289 */,
+/* 290 */,
+/* 291 */,
+/* 292 */,
+/* 293 */,
+/* 294 */
+/*!*************************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-transition/components/uv-transition/createAnimation.js ***!
+  \*************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.createAnimation = createAnimation;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23));
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ 24));
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+// const defaultOption = {
+// 	duration: 300,
+// 	timingFunction: 'linear',
+// 	delay: 0,
+// 	transformOrigin: '50% 50% 0'
+// }
+var MPAnimation = /*#__PURE__*/function () {
+  function MPAnimation(options, _this) {
+    (0, _classCallCheck2.default)(this, MPAnimation);
+    this.options = options;
+    // 在iOS10+QQ小程序平台下，传给原生的对象一定是个普通对象而不是Proxy对象，否则会报parameter should be Object instead of ProxyObject的错误
+    this.animation = uni.createAnimation(_objectSpread({}, options));
+    this.currentStepAnimates = {};
+    this.next = 0;
+    this.$ = _this;
+  }
+  (0, _createClass2.default)(MPAnimation, [{
+    key: "_nvuePushAnimates",
+    value: function _nvuePushAnimates(type, args) {
+      var aniObj = this.currentStepAnimates[this.next];
+      var styles = {};
+      if (!aniObj) {
+        styles = {
+          styles: {},
+          config: {}
+        };
+      } else {
+        styles = aniObj;
+      }
+      if (animateTypes1.includes(type)) {
+        if (!styles.styles.transform) {
+          styles.styles.transform = '';
+        }
+        var unit = '';
+        if (type === 'rotate') {
+          unit = 'deg';
+        }
+        styles.styles.transform += "".concat(type, "(").concat(args + unit, ") ");
+      } else {
+        styles.styles[type] = "".concat(args);
+      }
+      this.currentStepAnimates[this.next] = styles;
+    }
+  }, {
+    key: "_animateRun",
+    value: function _animateRun() {
+      var styles = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      var ref = this.$.$refs['ani'].ref;
+      if (!ref) return;
+      return new Promise(function (resolve, reject) {
+        nvueAnimation.transition(ref, _objectSpread({
+          styles: styles
+        }, config), function (res) {
+          resolve();
+        });
+      });
+    }
+  }, {
+    key: "_nvueNextAnimate",
+    value: function _nvueNextAnimate(animates) {
+      var _this2 = this;
+      var step = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+      var fn = arguments.length > 2 ? arguments[2] : undefined;
+      var obj = animates[step];
+      if (obj) {
+        var styles = obj.styles,
+          config = obj.config;
+        this._animateRun(styles, config).then(function () {
+          step += 1;
+          _this2._nvueNextAnimate(animates, step, fn);
+        });
+      } else {
+        this.currentStepAnimates = {};
+        typeof fn === 'function' && fn();
+        this.isEnd = true;
+      }
+    }
+  }, {
+    key: "step",
+    value: function step() {
+      var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      this.animation.step(config);
+      return this;
+    }
+  }, {
+    key: "run",
+    value: function run(fn) {
+      this.$.animationData = this.animation.export();
+      this.$.timer = setTimeout(function () {
+        typeof fn === 'function' && fn();
+      }, this.$.durationTime);
+    }
+  }]);
+  return MPAnimation;
+}();
+var animateTypes1 = ['matrix', 'matrix3d', 'rotate', 'rotate3d', 'rotateX', 'rotateY', 'rotateZ', 'scale', 'scale3d', 'scaleX', 'scaleY', 'scaleZ', 'skew', 'skewX', 'skewY', 'translate', 'translate3d', 'translateX', 'translateY', 'translateZ'];
+var animateTypes2 = ['opacity', 'backgroundColor'];
+var animateTypes3 = ['width', 'height', 'left', 'right', 'top', 'bottom'];
+animateTypes1.concat(animateTypes2, animateTypes3).forEach(function (type) {
+  MPAnimation.prototype[type] = function () {
+    var _this$animation;
+    (_this$animation = this.animation)[type].apply(_this$animation, arguments);
+    return this;
+  };
+});
+function createAnimation(option, _this) {
+  if (!_this) return;
+  clearTimeout(_this.timer);
+  return new MPAnimation(option, _this);
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 295 */,
+/* 296 */,
+/* 297 */,
+/* 298 */,
+/* 299 */,
+/* 300 */
+/*!***************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-status-bar/components/uv-status-bar/props.js ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    bgColor: {
+      type: String,
+      default: 'transparent'
+    }
+  }
+};
+exports.default = _default;
+
+/***/ }),
+/* 301 */,
+/* 302 */,
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */,
+/* 309 */,
+/* 310 */,
+/* 311 */,
+/* 312 */,
+/* 313 */,
+/* 314 */,
+/* 315 */
+/*!***************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-icon/components/uv-icon/icons.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  'uvicon-level': 'e68f',
+  'uvicon-checkbox-mark': 'e659',
+  'uvicon-folder': 'e694',
+  'uvicon-movie': 'e67c',
+  'uvicon-star-fill': 'e61e',
+  'uvicon-star': 'e618',
+  'uvicon-phone-fill': 'e6ac',
+  'uvicon-phone': 'e6ba',
+  'uvicon-apple-fill': 'e635',
+  'uvicon-backspace': 'e64d',
+  'uvicon-attach': 'e640',
+  'uvicon-empty-data': 'e671',
+  'uvicon-empty-address': 'e68a',
+  'uvicon-empty-favor': 'e662',
+  'uvicon-empty-car': 'e657',
+  'uvicon-empty-order': 'e66b',
+  'uvicon-empty-list': 'e672',
+  'uvicon-empty-search': 'e677',
+  'uvicon-empty-permission': 'e67d',
+  'uvicon-empty-news': 'e67e',
+  'uvicon-empty-history': 'e685',
+  'uvicon-empty-coupon': 'e69b',
+  'uvicon-empty-page': 'e60e',
+  'uvicon-empty-wifi-off': 'e6cc',
+  'uvicon-reload': 'e627',
+  'uvicon-order': 'e695',
+  'uvicon-server-man': 'e601',
+  'uvicon-search': 'e632',
+  'uvicon-more-dot-fill': 'e66f',
+  'uvicon-scan': 'e631',
+  'uvicon-map': 'e665',
+  'uvicon-map-fill': 'e6a8',
+  'uvicon-tags': 'e621',
+  'uvicon-tags-fill': 'e613',
+  'uvicon-eye': 'e664',
+  'uvicon-eye-fill': 'e697',
+  'uvicon-eye-off': 'e69c',
+  'uvicon-eye-off-outline': 'e688',
+  'uvicon-mic': 'e66d',
+  'uvicon-mic-off': 'e691',
+  'uvicon-calendar': 'e65c',
+  'uvicon-trash': 'e623',
+  'uvicon-trash-fill': 'e6ce',
+  'uvicon-play-left': 'e6bf',
+  'uvicon-play-right': 'e6b3',
+  'uvicon-minus': 'e614',
+  'uvicon-plus': 'e625',
+  'uvicon-info-circle': 'e69f',
+  'uvicon-info-circle-fill': 'e6a7',
+  'uvicon-question-circle': 'e622',
+  'uvicon-question-circle-fill': 'e6bc',
+  'uvicon-close': 'e65a',
+  'uvicon-checkmark': 'e64a',
+  'uvicon-checkmark-circle': 'e643',
+  'uvicon-checkmark-circle-fill': 'e668',
+  'uvicon-setting': 'e602',
+  'uvicon-setting-fill': 'e6d0',
+  'uvicon-heart': 'e6a2',
+  'uvicon-heart-fill': 'e68b',
+  'uvicon-camera': 'e642',
+  'uvicon-camera-fill': 'e650',
+  'uvicon-more-circle': 'e69e',
+  'uvicon-more-circle-fill': 'e684',
+  'uvicon-chat': 'e656',
+  'uvicon-chat-fill': 'e63f',
+  'uvicon-bag': 'e647',
+  'uvicon-error-circle': 'e66e',
+  'uvicon-error-circle-fill': 'e655',
+  'uvicon-close-circle': 'e64e',
+  'uvicon-close-circle-fill': 'e666',
+  'uvicon-share': 'e629',
+  'uvicon-share-fill': 'e6bb',
+  'uvicon-share-square': 'e6c4',
+  'uvicon-shopping-cart': 'e6cb',
+  'uvicon-shopping-cart-fill': 'e630',
+  'uvicon-bell': 'e651',
+  'uvicon-bell-fill': 'e604',
+  'uvicon-list': 'e690',
+  'uvicon-list-dot': 'e6a9',
+  'uvicon-zhifubao-circle-fill': 'e617',
+  'uvicon-weixin-circle-fill': 'e6cd',
+  'uvicon-weixin-fill': 'e620',
+  'uvicon-qq-fill': 'e608',
+  'uvicon-qq-circle-fill': 'e6b9',
+  'uvicon-moments-circel-fill': 'e6c2',
+  'uvicon-moments': 'e6a0',
+  'uvicon-car': 'e64f',
+  'uvicon-car-fill': 'e648',
+  'uvicon-warning-fill': 'e6c7',
+  'uvicon-warning': 'e6c1',
+  'uvicon-clock-fill': 'e64b',
+  'uvicon-clock': 'e66c',
+  'uvicon-edit-pen': 'e65d',
+  'uvicon-edit-pen-fill': 'e679',
+  'uvicon-email': 'e673',
+  'uvicon-email-fill': 'e683',
+  'uvicon-minus-circle': 'e6a5',
+  'uvicon-plus-circle': 'e603',
+  'uvicon-plus-circle-fill': 'e611',
+  'uvicon-file-text': 'e687',
+  'uvicon-file-text-fill': 'e67f',
+  'uvicon-pushpin': 'e6d1',
+  'uvicon-pushpin-fill': 'e6b6',
+  'uvicon-grid': 'e68c',
+  'uvicon-grid-fill': 'e698',
+  'uvicon-play-circle': 'e6af',
+  'uvicon-play-circle-fill': 'e62a',
+  'uvicon-pause-circle-fill': 'e60c',
+  'uvicon-pause': 'e61c',
+  'uvicon-pause-circle': 'e696',
+  'uvicon-gift-fill': 'e6b0',
+  'uvicon-gift': 'e680',
+  'uvicon-kefu-ermai': 'e660',
+  'uvicon-server-fill': 'e610',
+  'uvicon-coupon-fill': 'e64c',
+  'uvicon-coupon': 'e65f',
+  'uvicon-integral': 'e693',
+  'uvicon-integral-fill': 'e6b1',
+  'uvicon-home-fill': 'e68e',
+  'uvicon-home': 'e67b',
+  'uvicon-account': 'e63a',
+  'uvicon-account-fill': 'e653',
+  'uvicon-thumb-down-fill': 'e628',
+  'uvicon-thumb-down': 'e60a',
+  'uvicon-thumb-up': 'e612',
+  'uvicon-thumb-up-fill': 'e62c',
+  'uvicon-lock-fill': 'e6a6',
+  'uvicon-lock-open': 'e68d',
+  'uvicon-lock-opened-fill': 'e6a1',
+  'uvicon-lock': 'e69d',
+  'uvicon-red-packet': 'e6c3',
+  'uvicon-photo-fill': 'e6b4',
+  'uvicon-photo': 'e60d',
+  'uvicon-volume-off-fill': 'e6c8',
+  'uvicon-volume-off': 'e6bd',
+  'uvicon-volume-fill': 'e624',
+  'uvicon-volume': 'e605',
+  'uvicon-download': 'e670',
+  'uvicon-arrow-up-fill': 'e636',
+  'uvicon-arrow-down-fill': 'e638',
+  'uvicon-play-left-fill': 'e6ae',
+  'uvicon-play-right-fill': 'e6ad',
+  'uvicon-arrow-downward': 'e634',
+  'uvicon-arrow-leftward': 'e63b',
+  'uvicon-arrow-rightward': 'e644',
+  'uvicon-arrow-upward': 'e641',
+  'uvicon-arrow-down': 'e63e',
+  'uvicon-arrow-right': 'e63c',
+  'uvicon-arrow-left': 'e646',
+  'uvicon-arrow-up': 'e633',
+  'uvicon-skip-back-left': 'e6c5',
+  'uvicon-skip-forward-right': 'e61f',
+  'uvicon-arrow-left-double': 'e637',
+  'uvicon-man': 'e675',
+  'uvicon-woman': 'e626',
+  'uvicon-en': 'e6b8',
+  'uvicon-twitte': 'e607',
+  'uvicon-twitter-circle-fill': 'e6cf'
+};
+exports.default = _default;
+
+/***/ }),
+/* 316 */
+/*!***************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-icon/components/uv-icon/props.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _uni$$uv, _uni$$uv$props;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default = {
+  props: _objectSpread({
+    // 图标类名
+    name: {
+      type: String,
+      default: ''
+    },
+    // 图标颜色，可接受主题色
+    color: {
+      type: String,
+      default: '#606266'
+    },
+    // 字体大小，单位px
+    size: {
+      type: [String, Number],
+      default: '16px'
+    },
+    // 是否显示粗体
+    bold: {
+      type: Boolean,
+      default: false
+    },
+    // 点击图标的时候传递事件出去的index（用于区分点击了哪一个）
+    index: {
+      type: [String, Number],
+      default: null
+    },
+    // 触摸图标时的类名
+    hoverClass: {
+      type: String,
+      default: ''
+    },
+    // 自定义扩展前缀，方便用户扩展自己的图标库
+    customPrefix: {
+      type: String,
+      default: 'uvicon'
+    },
+    // 图标右边或者下面的文字
+    label: {
+      type: [String, Number],
+      default: ''
+    },
+    // label的位置，只能右边或者下边
+    labelPos: {
+      type: String,
+      default: 'right'
+    },
+    // label的大小
+    labelSize: {
+      type: [String, Number],
+      default: '15px'
+    },
+    // label的颜色
+    labelColor: {
+      type: String,
+      default: '#606266'
+    },
+    // label与图标的距离
+    space: {
+      type: [String, Number],
+      default: '3px'
+    },
+    // 图片的mode
+    imgMode: {
+      type: String,
+      default: 'aspectFit'
+    },
+    // 用于显示图片小图标时，图片的宽度
+    width: {
+      type: [String, Number],
+      default: ''
+    },
+    // 用于显示图片小图标时，图片的高度
+    height: {
+      type: [String, Number],
+      default: ''
+    },
+    // 用于解决某些情况下，让图标垂直居中的用途
+    top: {
+      type: [String, Number],
+      default: 0
+    },
+    // 是否阻止事件传播
+    stop: {
+      type: Boolean,
+      default: false
+    }
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.icon)
 };
 exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))

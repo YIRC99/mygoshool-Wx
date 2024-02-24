@@ -99,11 +99,8 @@
           this.isLogin = false
         } else
           this.isLogin = true
-        console.log('this.isLogin', this.isLogin);
-        console.log('uni.getStorageSync()', uni.getStorageSync('token'));
       },
       loginout() {
-        console.log('aaaaaa');
         this.isLogin = !this.isLogin
         uni.clearStorageSync()
       },

@@ -13,6 +13,13 @@
       return {
         
       };
+    },
+    created() {
+      console.log('order create');
+    },
+    onShow() {
+      console.log('order onshow');
+      console.log('order onshow');
     }
   }
 </script>

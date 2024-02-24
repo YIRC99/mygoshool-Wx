@@ -3,8 +3,7 @@
     "pages/index/index",
     "pages/my/login",
     "pages/order/order",
-    "pages/home/home",
-    "pages/my/index"
+    "pages/home/home"
   ],
   "subPackages": [],
   "window": {

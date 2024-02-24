@@ -32,14 +32,6 @@
 		    "navigationBarTitleText" : "首页",
 		    "enablePullDownRefresh" : false
 		  }
-		},
-		{
-		  "path" : "pages/my/index",
-		  "style" : 
-		  {
-		    "navigationBarTitleText" : "我的",
-		    "enablePullDownRefresh" : false
-		  }
 		}
 	],
 	"globalStyle": {

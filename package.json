@@ -1,9 +1,13 @@
 {
-  "dependencies": {
-    "uview-ui": "^2.0.36"
-  },
-  "devDependencies": {
-    "node-sass": "^9.0.0",
-    "sass-loader": "^14.1.1"
-  }
+    "id": "wzj-area_scroll",
+    "name": "area_scroll 自适应高度的区域滚动组件",
+    "version": "1.0.1",
+    "description": "为了解决移动端原生组件scroll-view必须设定高度才可以局部滚动；现支持flex、百分比等布局",
+    "keywords": [
+        "区域滚动",
+        "滚动",
+        "scroll",
+        "多区域滚动",
+        "自适应"
+    ]
 }
