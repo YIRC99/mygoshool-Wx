@@ -40,5 +40,20 @@
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
+  "subPackages": [
+    {
+      "root": "subpkg",
+      "pages": [
+        {
+          "path" : "addCarorder",
+          "style" : 
+          {
+            "navigationBarTitleText" : "发起拼车",
+            "enablePullDownRefresh" : false
+          }
+        }
+      ]
+    }
+  ],
 	"uniIdRouter": {}
 }

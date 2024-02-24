@@ -229,7 +229,24 @@
 /* 透明度 */
 /* 文章场景相关 */
 .page {
-  padding-bottom: 190rpx;
+  padding-bottom: 130rpx;
+}
+.addicon {
+  position: fixed;
+  top: 1000rpx;
+  right: 50rpx;
+  z-index: 999;
+  background-color: #CCCCCC;
+  border-radius: 50%;
+  width: 100rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addicon image {
+  width: 60rpx;
+  height: 60rpx;
 }
 .popup-box {
   height: 62vh;
@@ -320,7 +337,7 @@
   margin-top: 10rpx;
 }
  .u-tabs__wrapper__nav {
-  background-color: #fff !important;
+  background-color: #ffffff !important;
 }
 .my-car-box {
   display: flex;

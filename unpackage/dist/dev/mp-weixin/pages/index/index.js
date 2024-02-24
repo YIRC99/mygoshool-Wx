@@ -799,12 +799,24 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(uni) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -994,6 +1006,11 @@ var _default = {
     };
   },
   methods: {
+    toAddOrder: function toAddOrder() {
+      uni.navigateTo({
+        url: '/subpkg/addCarorder'
+      });
+    },
     clickCard: function clickCard(orderId) {
       console.log('点击了卡片');
       this.$refs.popup.open();
@@ -1007,6 +1024,7 @@ var _default = {
   }
 };
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

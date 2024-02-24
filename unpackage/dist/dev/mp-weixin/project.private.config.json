@@ -3,5 +3,18 @@
   "projectname": "pingCar",
   "setting": {
     "compileHotReLoad": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "subpkg/addCarorder",
+          "pathName": "subpkg/addCarorder",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
   }
 }
