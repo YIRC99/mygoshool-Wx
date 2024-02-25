@@ -927,9 +927,13 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
 var _default = {
   data: function data() {
     return {
+      isRefresh: true,
       popupShow: false,
       noticeText: '编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。',
       list: [{
@@ -1006,6 +1010,18 @@ var _default = {
     };
   },
   methods: {
+    scrollPullDown: function scrollPullDown() {
+      var _this = this;
+      console.log('下拉刷新了');
+      this.isRefresh = true;
+      setTimeout(function () {
+        _this.isRefresh = false;
+        console.log('下拉刷新结束了');
+      }, 1000);
+    },
+    scrollDown: function scrollDown() {
+      console.log('滚动条到了 底部');
+    },
     toAddOrder: function toAddOrder() {
       uni.navigateTo({
         url: '/subpkg/addCarorder'

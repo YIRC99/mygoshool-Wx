@@ -26,10 +26,10 @@
             <button @tap="login()">登 录</button>
             <view class="reg" @tap="reg()">注 册</view>
           </form>
-          <view class="t-f"><text>—————— 第三方账号登录 ——————</text></view>
+          <view class="t-f"><text>—————— 微信一键登录 ——————</text></view>
           <view class="t-e cl">
             <view class="t-g" @tap="wxLogin()">
-              <image src="https://zhoukaiwen.com/img/loginImg/wx.png"></image>
+              <image src="https://zhoukaiwen.com/img/loginImg/wx.png" style="width: 70rpx;height: 70rpx;"></image>
             </view>
           </view>
         </view>
@@ -231,7 +231,7 @@
   }
 
   .txt {
-    font-size: 32rpx;
+    font-size: 34rpx;
     font-weight: bold;
     color: #333333;
   }
@@ -334,11 +334,10 @@
   .t-login .t-e {
     text-align: center;
     width: 250rpx;
-    margin: 80rpx auto 0;
+    margin: 40rpx auto 0;
   }
 
   .t-login .t-g {
-    float: left;
     width: 100%;
   }
 
@@ -349,7 +348,7 @@
 
   .t-login .t-f {
     text-align: center;
-    margin: 90rpx 0 0 0;
+    margin: 70rpx 0 0 0;
     color: #666;
   }
 

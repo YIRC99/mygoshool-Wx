@@ -14,6 +14,9 @@
     </u-sticky>
 
 
+    <scroll-view scroll-y="true" style="height: 75vh; " :refresher-triggered="isRefresh"
+      @scrolltolower="scrollDown" @refresherrefresh="scrollPullDown" refresher-enabled>
+
       <view class="" v-show="current == 0">
         <uni-card v-for="item in orderList" :key="item.orderId" :title="item.startTime + ' 出发'"
           thumbnail='/static/logo.png' @click="clickCard(item.orderId)">
@@ -47,21 +50,23 @@
 
       <view class="" v-show="current == 1">11</view>
 
+    </scroll-view>
 
-      <uv-popup ref="popup" mode="bottom" round="50rpx">
-        <view class="popup-box">
-          <scroll-view scroll-y="true" style="height: 62vh; background-color: #ffffff; padding-bottom: 50rpx;"
-            show-scrollbar="true">
-            <view class="top-box">
-              <view class="left">
-                <image src="../../static/logo.png" mode=""></image>
-              </view>
-              <view class="middle">
-                <view class="" style="line-height: 50rpx;">用户名称</view>
-                <view class="" style="line-height: 50rpx;">拼车次数</view>
-              </view>
-              <view class="right">
-                <!--    <view class="">
+
+    <uv-popup ref="popup" mode="bottom" round="50rpx">
+      <view class="popup-box">
+        <scroll-view scroll-y="true" style="height: 62vh; background-color: #ffffff; padding-bottom: 50rpx;"
+          show-scrollbar="true">
+          <view class="top-box">
+            <view class="left">
+              <image src="../../static/logo.png" mode=""></image>
+            </view>
+            <view class="middle">
+              <view class="" style="line-height: 50rpx;">用户名称</view>
+              <view class="" style="line-height: 50rpx;">拼车次数</view>
+            </view>
+            <view class="right">
+              <!--    <view class="">
                 <text>提前</text>
                 <image src="../../static/true.png" mode=""></image>
               </view>
@@ -69,52 +74,50 @@
                 <text>延后</text>
                 <image src="../../static/false.png" mode=""></image>
               </view> -->
+            </view>
+          </view>
+          <view class="my-middle-box">
+            <uni-section title="出发地点" type="line" titleFontSize="36rpx">
+              <template v-slot:right>
+                出发时间 2024-02-25 11:05
+              </template>
+            </uni-section>
+            <view class="my-text-box">
+              江西省九江江职业大学 濂溪区88号江西省九江市九江职业大学 濂溪区88号江西省 地址最高80个字
+            </view>
+            <uni-section title="目标地点" type="line" titleFontSize="36rpx">
+            </uni-section>
+            <view class="my-text-box">
+              江西省九江市九江职业大学 濂8号江西省九江市九江职业大学 濂溪区88号江西省 地址最高80个字
+            </view>
+            <view class="my-text-box2">
+              <view class="left">
+                <view class="">目前人数:<text class="my-text-box2-t"> 1 </text>人</view>
+                <view class="">最多接受人数:<text class="my-text-box2-t"> 1 </text>人</view>
+              </view>
+              <view class="right">
+
+                <view class="">最大提前时间:<text class="my-text-box2-t">30</text>分钟</view>
+                <view class="">最大延后时间:<text class="my-text-box2-t">30</text>分钟</view>
               </view>
             </view>
-            <view class="my-middle-box">
-              <uni-section title="出发地点" type="line" titleFontSize="36rpx">
-                <template v-slot:right>
-                  出发时间 2024-02-25 11:05
-                </template>
-              </uni-section>
-              <view class="my-text-box">
-                江西省九江江职业大学 濂溪区88号江西省九江市九江职业大学 濂溪区88号江西省 地址最高80个字
-              </view>
-              <uni-section title="目标地点" type="line" titleFontSize="36rpx">
-              </uni-section>
-              <view class="my-text-box">
-                江西省九江市九江职业大学 濂8号江西省九江市九江职业大学 濂溪区88号江西省 地址最高80个字
-              </view>
-              <view class="my-text-box2">
-                <view class="left">
-                  <view class="">目前人数:<text class="my-text-box2-t"> 1 </text>人</view>
-                  <view class="">最多接受人数:<text class="my-text-box2-t"> 1 </text>人</view>
-                </view>
-                <view class="right">
-
-                  <view class="">最大提前时间:<text class="my-text-box2-t">30</text>分钟</view>
-                  <view class="">最大延后时间:<text class="my-text-box2-t">30</text>分钟</view>
-                </view>
-              </view>
-              <uni-section title="备注" type="line" titleFontSize="36rpx">
-              </uni-section>
-              <view class="my-text-box">
-                守时,以免耽误大家的时间 后备箱空间少 有行李箱请提前沟通 守时,以免耽误大家的时间 后备箱空间少 有行李箱请提前沟通守时,以免耽误大家的时间 后备箱空间少 有行李箱请提前沟通守时,以免耽误大家的时间
-                后备箱空间少 有行李箱请提前沟通最高80个字
-              </view>
+            <uni-section title="备注" type="line" titleFontSize="36rpx">
+            </uni-section>
+            <view class="my-text-box">
+              守时,以免耽误大家的时间 后备箱空间少 有行李箱请提前沟通 守时,以免耽误大家的时间 后备箱空间少 有行李箱请提前沟通守时,以免耽误大家的时间 后备箱空间少 有行李箱请提前沟通守时,以免耽误大家的时间
+              后备箱空间少 有行李箱请提前沟通最高80个字
             </view>
-            <view class="down-box">
-              <button class="btn-grad">接收邀请</button>
-            </view>
-          </scroll-view>
-        </view>
-      </uv-popup>
+          </view>
+          <view class="down-box">
+            <button class="btn-grad">接收邀请</button>
+          </view>
+        </scroll-view>
+      </view>
+    </uv-popup>
 
-
-
-        <view class="addicon" @click="toAddOrder">
-          <image src="/static/add.png" mode=""></image>
-        </view>
+    <view class="addicon" @click="toAddOrder">
+      <image src="/static/add.png" mode=""></image>
+    </view>
 
 
   </view>
@@ -124,7 +127,7 @@
   export default {
     data() {
       return {
-
+        isRefresh: true,
         popupShow: false,
         noticeText: '编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。',
         list: [{
@@ -209,7 +212,19 @@
       };
     },
     methods: {
-      toAddOrder(){
+      scrollPullDown() {
+        console.log('下拉刷新了');
+        this.isRefresh = true
+        setTimeout(() => {
+          this.isRefresh = false
+          console.log('下拉刷新结束了');
+        }, 1000)
+        
+      },
+      scrollDown() {
+        console.log('滚动条到了 底部');
+      },
+      toAddOrder() {
         uni.navigateTo({
           url: '/subpkg/addCarorder'
         });
@@ -245,6 +260,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     image {
       width: 60rpx;
       height: 60rpx;
