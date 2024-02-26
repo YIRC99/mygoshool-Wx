@@ -81,9 +81,6 @@ __webpack_require__.r(__webpack_exports__);
 var components
 try {
   components = {
-    uniEasyinput: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput */ "uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput.vue */ 214))
-    },
     mylist: function () {
       return __webpack_require__.e(/*! import() | components/mylist/mylist */ "components/mylist/mylist").then(__webpack_require__.bind(null, /*! @/components/mylist/mylist.vue */ 221))
     },
@@ -188,48 +185,6 @@ var _default = {
         this.isLogin = false;
       } else this.isLogin = true;
     },
-    loginout: function loginout() {
-      this.isLogin = !this.isLogin;
-      uni.clearStorageSync();
-    },
-    //当前登录按钮操作
-    login: function login() {
-      var that = this;
-      if (!that.phone) {
-        uni.showToast({
-          title: '请输入您的手机号',
-          icon: 'none'
-        });
-        return;
-      }
-      // if (!/^[1][3,4,5,7,8,9][0-9]{9}$/.test(that.phone)) {
-      //   uni.showToast({
-      //     title: '请输入正确手机号',
-      //     icon: 'none'
-      //   });
-      //   return;
-      // }
-      if (!that.pwd) {
-        uni.showToast({
-          title: '请输入您的密码',
-          icon: 'none'
-        });
-        return;
-      }
-      uni.showToast({
-        title: '登录成功！',
-        icon: 'none'
-      });
-      this.isLogin = !this.isLogin;
-      uni.setStorageSync('token', 'login');
-    },
-    //注册按钮点击
-    reg: function reg() {
-      uni.showToast({
-        title: '注册跳转',
-        icon: 'none'
-      });
-    },
     //等三方微信登录
     wxLogin: function wxLogin() {
       uni.showToast({
@@ -241,6 +196,12 @@ var _default = {
           console.log(res);
         }
       });
+      uni.showToast({
+        title: '登录成功！',
+        icon: 'none'
+      });
+      this.isLogin = !this.isLogin;
+      uni.setStorageSync('token', 'login');
     }
   }
 };

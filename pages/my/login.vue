@@ -1,52 +1,19 @@
 <template>
   <view class="page">
-    <view v-show="!isLogin" style="height: calc(100vh - 140rpx) ;background: #fff;">
-      <view class="">
-          <image src="/static/back.png" style="width: 100%; height: 450rpx; background-size: 100%;position: relative; z-index: 10;" mode=""></image>
-        <view class="t-b" style="color: white; z-index: 9999; position: absolute; top: 0;">
-          您好,
-          <br />
-          欢迎使用, 职大拼车
-        </view>
-      </view>
-      <view class="login-view" style="z-index: 11;">
-        <view class="t-login">
-          <form class="cl">
-            <view class="t-a">
-              <text class="txt">手机号</text>
-              <uni-easyinput class="my-uni-easyinput" placeholderStyle="font-size: 32rpx" :inputBorder="false"
-                type="number" name="phone" placeholder="请输入您的手机号" maxlength="11" v-model="phone" />
-            </view>
-            <view class="t-a">
-              <text class="txt">密码</text>
-              <uni-easyinput class="my-uni-easyinput" clearSize="26" :inputBorder="false"
-                placeholderStyle="font-size: 32rpx" type="password" name="code" maxlength="18" placeholder="请输入您的密码"
-                v-model="pwd" />
-            </view>
-            <button @tap="login()">登 录</button>
-            <view class="reg" @tap="reg()">注 册</view>
-          </form>
-          <view class="t-f"><text>—————— 微信一键登录 ——————</text></view>
-          <view class="t-e cl">
-            <view class="t-g" @tap="wxLogin()">
-              <image src="https://zhoukaiwen.com/img/loginImg/wx.png" style="width: 70rpx;height: 70rpx;"></image>
-            </view>
-          </view>
-        </view>
-      </view>
-    </view>
-
-    <view v-show="isLogin">
-
+    <view>
+      
       <view class="">
         <image src="/static/back.png" style="width: 100%; height: 450rpx; background-size: 100%;position: absolute; z-index: -1;" mode=""></image>
       </view>
       
       <view class="top-box">
-        <view class="left">
-          <image class="left-img" src="../../static/logo.png"></image>
+        <view class="left" >
+          <image class="left-img" src="https://zhoukaiwen.com/img/loginImg/wx.png"></image>
         </view>
-        <view class="middle">
+        <view class="middle" v-show="!isLogin" >
+          <view class="" style="font-size: 38rpx;" @click="wxLogin">点击微信一键登录</view>
+        </view>
+        <view class="middle" v-show="isLogin">
           <view class="" style="font-size: 38rpx;">一见如初</view>
           <view class="" style="margin: 15rpx 0; font-size: 28rpx;">手机号 1777777777</view>
         </view>
@@ -63,16 +30,8 @@
           <mylist iconImg="/static/yijian2.png" text="意见反馈"></mylist>
         </view>
 
-        <view class="" @click="loginout">
-          <mylist iconImg="/static/tuichu.png" text="退出账号"></mylist>
-        </view>
-
-
-
       </view>
     </view>
-    
-
     
     
   </view>
@@ -114,50 +73,6 @@
         } else
           this.isLogin = true
       },
-      loginout() {
-        this.isLogin = !this.isLogin
-        uni.clearStorageSync()
-      },
-
-      //当前登录按钮操作
-      login() {
-        var that = this;
-        if (!that.phone) {
-          uni.showToast({
-            title: '请输入您的手机号',
-            icon: 'none'
-          });
-          return;
-        }
-        // if (!/^[1][3,4,5,7,8,9][0-9]{9}$/.test(that.phone)) {
-        //   uni.showToast({
-        //     title: '请输入正确手机号',
-        //     icon: 'none'
-        //   });
-        //   return;
-        // }
-        if (!that.pwd) {
-          uni.showToast({
-            title: '请输入您的密码',
-            icon: 'none'
-          });
-          return;
-        }
-        uni.showToast({
-          title: '登录成功！',
-          icon: 'none'
-        });
-        this.isLogin = !this.isLogin
-        uni.setStorageSync('token', 'login')
-      },
-
-      //注册按钮点击
-      reg() {
-        uni.showToast({
-          title: '注册跳转',
-          icon: 'none'
-        });
-      },
 
       //等三方微信登录
       wxLogin() {
@@ -170,8 +85,12 @@
             console.log(res);
           }
         })
-        
-        
+        uni.showToast({
+          title: '登录成功！',
+          icon: 'none'
+        });
+        this.isLogin = !this.isLogin
+        uni.setStorageSync('token', 'login')
       },
     }
   }
@@ -201,13 +120,18 @@
 
     .left {
       margin-left: 30rpx;
-
+      background-color: #ffffff;
+      border-radius: 50%;
+      overflow: hidden;
+      width: 150rpx;
+      height: 150rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #a9a9a9;
       .left-img {
-        width: 150rpx;
-        height: 150rpx;
-        border-radius: 50%;
-        border: 2px solid white;
-        overflow: hidden;
+        width: 100rpx;
+        height: 100rpx;
       }
     }
 

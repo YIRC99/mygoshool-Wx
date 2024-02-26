@@ -45,13 +45,19 @@
 }
 .top-box .left {
   margin-left: 30rpx;
-}
-.top-box .left .left-img {
+  background-color: #ffffff;
+  border-radius: 50%;
+  overflow: hidden;
   width: 150rpx;
   height: 150rpx;
-  border-radius: 50%;
-  border: 2px solid white;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #a9a9a9;
+}
+.top-box .left .left-img {
+  width: 100rpx;
+  height: 100rpx;
 }
 .top-box .middle {
   margin-left: 30rpx;
