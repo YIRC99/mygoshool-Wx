@@ -775,7 +775,7 @@ function populateParameters(result) {
   // wx.getAccountInfoSync
 
   var parameters = {
-    appId: "",
+    appId: "__UNI__9F1C720",
     appName: "pingCar",
     appVersion: "1.0.0",
     appVersionCode: "100",
@@ -874,7 +874,7 @@ var getAppBaseInfo = {
     var _hostName = getHostName(result);
     var hostLanguage = language.replace('_', '-');
     result = sortObject(Object.assign(result, {
-      appId: "",
+      appId: "__UNI__9F1C720",
       appName: "pingCar",
       appVersion: "1.0.0",
       appVersionCode: "100",
@@ -19264,26 +19264,16 @@ uni.addInterceptor({
 /* 184 */,
 /* 185 */,
 /* 186 */
-/*!*******************************************!*\
-  !*** F:/CodeFile/pingCar/static/home.png ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,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"
-
-/***/ }),
-/* 187 */
 /*!***********************************************!*\
-  !*** F:/CodeFile/pingCar/static/cart (3).png ***!
+  !*** F:/CodeFile/pingCar/static/carIcon2.png ***!
   \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAABUhJREFUeF7tnWty1DAQhJ2bwEmAkwROApwEcpJwE7gJbFdZVUuSXY2ktqyZaVelsj9keab789jyQ37YtKRW4CF19kp+EwDJIRAAAiC5AsnTVwUQAMkVSJ6+KoAASK5A8vRVAQTAKQq827eK/+X3KYE42+ifbdt+MWOeWQFg9OO2bZ9l+pCFgODTRUf8H15mAADjf1zI/TgcrTooCsD89ww5jgbg6yXIb4xA1ccrBaDr91FdjgJAe/2oM/X1f27b9qXe7H6LowB4Vskftaa6/rIVQOZXvaM0wIng8IiAXQFwho8TPi3HKoDSj0PA8MIG4HfDEK8MY4YpHlbBTwfQ7Ik1BETaTACsez+SAMEyfgHwmABY9n7KicsCuoUJgQnA34oq2ONx4qJlIQVYAFjKP65cUS5fLqSf+1BYANSu+FEuWrhXe8EEWABg6IcqcGvRsX9B85mjgBoAtHHrojq6DWtWBRAAiyIiABY1ZlZYAmCW0v3bwXMUOMnGf4yicEI9fBu4hCMA+o2ZsSZMx821lwvtmooAmGFj/zbuXVxb6m6gRgH9Jt9as3ZxjTK0VgXgG8fqsQYA5eKaAGDZxe9HAPA1ddWjAHBlFz9YAcDX1FWPAsCVXfxgBQBfU1c9CgBXdvGDFQB8TV31KABc2cUPVgDwNXXVowBwZRc/WAHA19RVjwLAlV38YAXAlaZlLiEv8wnhyZ3y14uGANiVq71z0CvwjPVG7tkLgP1V83vvG8wwcXQbvfftBcDlYcja+4aj5sxav+e1uPQA3HogcpZpzO30PL+XHgCc8OGV8wiLKkDHlCZRZhrrfYQ7fQXAng8I8Fy8l+Hfy2o1MhuKANjVhPk4H/jg7FgA80fe4BEAzgxnhysA2Io6608AODOMHa4AYCvqrD8B4MwwdrgCgK2os/4EgDPD2OEKALaizvoTAM4MY4crANiKOutPADgzjB2uAGAr6qw/AeDMMHa4AmBX9HqePLbIt/ors5qf+WELAbDfBn5rnrxZIGA7Z01zKwAWeSiU9pXORmrTA1AToFHPoeY9D3UObXCffv/eF9h6Hzf/L66Vp4lb6angnoc6BcCVAj3H0ZWeCmbtKC1Q1Cpg+AoAsWoitAja2/aM8m/JPQUAEOKMx8M1DGzcXTRZdKNghua16pemAhi0CtlEAIS01Z6UALBrFbKlAAhpqz0pAWDXKmRLARDSVntSAsCuVciWAiCkrfakBIBdq5AtBUBIW+1JCQC7ViFbCoCQttqTEgB2rUK2FAAhbbUnJQDsWoVsKQBC2mpPSgDYtQrZUgCEtNWelACwaxWypQAIaas9KQFg1ypkSwEQ0lZ7UgLArlXIlgIgpK32pASAXauQLQVASFvtSYUCYOT7eXbJYrWsfS9xqVfDasH2fjcnlqVt2dTet6TsVKz33muTOeBtW7xmXd66bZMiX2vL3Ag9cy68UpIFgCVgVQE7yJgYCzvVvYUyawkLAARqCZpStuw6umxZK/1IinL8R0dMAGpnrcWNkU+puXTUGHTLRBiU8s8GoPUbf4xPrBu1XbpZ+SyeNUjqtHXMCoAErFXAmqzavVaAtvezK0AJtTYklKn9CtBPpNkVAKm1HMv6pci3Jt38oypAgQCVAIcELeMKHGL+kQAUCB4vPzD009KvAG3I91YIRxwCXm5Hh4Q+86cMl2cAUNIHCKgIuMJVu8rVJ5n/tWA69vinWZfNZwJwbQ9gKIeJ8tu/fX0ZlPsjOM5PX84CYHqi2uDbCgiA5GQIAAGQXIHk6asCCIDkCiRPXxVAACRXIHn6qgACILkCydP/Bz+frZATHpGMAAAAAElFTkSuQmCC"
+module.exports = "data:image/png;base64,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"
 
 /***/ }),
-/* 188 */
+/* 187 */
 /*!*************************************************!*\
   !*** F:/CodeFile/pingCar/static/notice (3).png ***!
   \*************************************************/
@@ -19293,6 +19283,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADD
 module.exports = "data:image/png;base64,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"
 
 /***/ }),
+/* 188 */,
 /* 189 */,
 /* 190 */,
 /* 191 */,
@@ -19329,10 +19320,18 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADD
 /* 222 */,
 /* 223 */,
 /* 224 */,
-/* 225 */
-/*!******************************************************************************!*\
-  !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-sticky/props.js ***!
-  \******************************************************************************/
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */,
+/* 233 */
+/*!*****************************************************************************!*\
+  !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-empty/props.js ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19345,35 +19344,60 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _default = {
   props: {
-    // 吸顶容器到顶部某个距离的时候，进行吸顶，在H5平台，NavigationBar为44px
-    offsetTop: {
-      type: [String, Number],
-      default: uni.$u.props.sticky.offsetTop
-    },
-    // 自定义导航栏的高度
-    customNavHeight: {
-      type: [String, Number],
-      default: uni.$u.props.sticky.customNavHeight
-    },
-    // 是否开启吸顶功能
-    disabled: {
-      type: Boolean,
-      default: uni.$u.props.sticky.disabled
-    },
-    // 吸顶区域的背景颜色
-    bgColor: {
+    // 内置图标名称，或图片路径，建议绝对路径
+    icon: {
       type: String,
-      default: uni.$u.props.sticky.bgColor
+      default: uni.$u.props.empty.icon
     },
-    // z-index值
-    zIndex: {
-      type: [String, Number],
-      default: uni.$u.props.sticky.zIndex
+    // 提示文字
+    text: {
+      type: String,
+      default: uni.$u.props.empty.text
     },
-    // 列表中的索引值
-    index: {
+    // 文字颜色
+    textColor: {
+      type: String,
+      default: uni.$u.props.empty.textColor
+    },
+    // 文字大小
+    textSize: {
       type: [String, Number],
-      default: uni.$u.props.sticky.index
+      default: uni.$u.props.empty.textSize
+    },
+    // 图标的颜色
+    iconColor: {
+      type: String,
+      default: uni.$u.props.empty.iconColor
+    },
+    // 图标的大小
+    iconSize: {
+      type: [String, Number],
+      default: uni.$u.props.empty.iconSize
+    },
+    // 选择预置的图标类型
+    mode: {
+      type: String,
+      default: uni.$u.props.empty.mode
+    },
+    //  图标宽度，单位px
+    width: {
+      type: [String, Number],
+      default: uni.$u.props.empty.width
+    },
+    // 图标高度，单位px
+    height: {
+      type: [String, Number],
+      default: uni.$u.props.empty.height
+    },
+    // 是否显示组件
+    show: {
+      type: Boolean,
+      default: uni.$u.props.empty.show
+    },
+    // 组件距离上一个元素之间的距离，默认px单位
+    marginTop: {
+      type: [String, Number],
+      default: uni.$u.props.empty.marginTop
     }
   }
 };
@@ -19381,14 +19405,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 226 */,
-/* 227 */,
-/* 228 */,
-/* 229 */,
-/* 230 */,
-/* 231 */,
-/* 232 */,
-/* 233 */
+/* 234 */,
+/* 235 */,
+/* 236 */,
+/* 237 */,
+/* 238 */,
+/* 239 */,
+/* 240 */,
+/* 241 */
 /*!****************************************************************************!*\
   !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-tabs/props.js ***!
   \****************************************************************************/
@@ -19470,21 +19494,21 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 234 */,
-/* 235 */,
-/* 236 */,
-/* 237 */,
-/* 238 */,
-/* 239 */,
-/* 240 */,
-/* 241 */,
 /* 242 */,
 /* 243 */,
 /* 244 */,
 /* 245 */,
 /* 246 */,
 /* 247 */,
-/* 248 */
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */,
+/* 253 */,
+/* 254 */,
+/* 255 */,
+/* 256 */
 /*!*************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/mixin/mpMixin.js ***!
   \*************************************************************************/
@@ -19507,7 +19531,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 249 */
+/* 257 */
 /*!***********************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/mixin/mixin.js ***!
   \***********************************************************************/
@@ -19524,11 +19548,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var index = _interopRequireWildcard(__webpack_require__(/*! ../function/index.js */ 250));
-var test = _interopRequireWildcard(__webpack_require__(/*! ../function/test.js */ 251));
-var _route = _interopRequireDefault(__webpack_require__(/*! ../util/route.js */ 253));
-var _debounce = _interopRequireDefault(__webpack_require__(/*! ../function/debounce.js */ 254));
-var _throttle = _interopRequireDefault(__webpack_require__(/*! ../function/throttle.js */ 255));
+var index = _interopRequireWildcard(__webpack_require__(/*! ../function/index.js */ 258));
+var test = _interopRequireWildcard(__webpack_require__(/*! ../function/test.js */ 259));
+var _route = _interopRequireDefault(__webpack_require__(/*! ../util/route.js */ 261));
+var _debounce = _interopRequireDefault(__webpack_require__(/*! ../function/debounce.js */ 262));
+var _throttle = _interopRequireDefault(__webpack_require__(/*! ../function/throttle.js */ 263));
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
@@ -19708,7 +19732,7 @@ exports.default = _default2;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 250 */
+/* 258 */
 /*!**************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/index.js ***!
   \**************************************************************************/
@@ -19754,8 +19778,8 @@ exports.trim = trim;
 exports.type2icon = type2icon;
 var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
 var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
-var _test = __webpack_require__(/*! ./test.js */ 251);
-var _digit = __webpack_require__(/*! ./digit.js */ 252);
+var _test = __webpack_require__(/*! ./test.js */ 259);
+var _digit = __webpack_require__(/*! ./digit.js */ 260);
 /**
  * @description 如果value小于min，取min；如果value大于max，取max
  * @param {number} min
@@ -20506,7 +20530,7 @@ function setConfig(_ref5) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 251 */
+/* 259 */
 /*!*************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/test.js ***!
   \*************************************************************************/
@@ -20806,7 +20830,7 @@ function regExp(o) {
 }
 
 /***/ }),
-/* 252 */
+/* 260 */
 /*!**************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/digit.js ***!
   \**************************************************************************/
@@ -21008,7 +21032,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 253 */
+/* 261 */
 /*!**********************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/util/route.js ***!
   \**********************************************************************/
@@ -21027,7 +21051,7 @@ var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 57));
 var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23));
 var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ 24));
-var _index = __webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/function/index.js */ 250);
+var _index = __webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/function/index.js */ 258);
 /**
  * 路由跳转方法，该方法相对于直接使用uni.xxx的好处是使用更加简单快捷
  * 并且带有路由拦截功能
@@ -21200,7 +21224,7 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 254 */
+/* 262 */
 /*!*****************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/debounce.js ***!
   \*****************************************************************************/
@@ -21247,7 +21271,7 @@ var _default = debounce;
 exports.default = _default;
 
 /***/ }),
-/* 255 */
+/* 263 */
 /*!*****************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/throttle.js ***!
   \*****************************************************************************/
@@ -21296,21 +21320,928 @@ var _default = throttle;
 exports.default = _default;
 
 /***/ }),
-/* 256 */,
-/* 257 */,
-/* 258 */,
-/* 259 */,
-/* 260 */,
-/* 261 */,
-/* 262 */,
-/* 263 */,
 /* 264 */,
 /* 265 */,
 /* 266 */,
 /* 267 */,
 /* 268 */,
 /* 269 */,
-/* 270 */
+/* 270 */,
+/* 271 */,
+/* 272 */,
+/* 273 */,
+/* 274 */,
+/* 275 */,
+/* 276 */,
+/* 277 */,
+/* 278 */
+/*!****************************************************************************!*\
+  !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-line/props.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    color: {
+      type: String,
+      default: uni.$u.props.line.color
+    },
+    // 长度，竖向时表现为高度，横向时表现为长度，可以为百分比，带px单位的值等
+    length: {
+      type: [String, Number],
+      default: uni.$u.props.line.length
+    },
+    // 线条方向，col-竖向，row-横向
+    direction: {
+      type: String,
+      default: uni.$u.props.line.direction
+    },
+    // 是否显示细边框
+    hairline: {
+      type: Boolean,
+      default: uni.$u.props.line.hairline
+    },
+    // 线条与上下左右元素的间距，字符串形式，如"30px"、"20px 30px"
+    margin: {
+      type: [String, Number],
+      default: uni.$u.props.line.margin
+    },
+    // 是否虚线，true-虚线，false-实线
+    dashed: {
+      type: Boolean,
+      default: uni.$u.props.line.dashed
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 279 */,
+/* 280 */,
+/* 281 */,
+/* 282 */,
+/* 283 */,
+/* 284 */,
+/* 285 */,
+/* 286 */
+/*!*************************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-datetime-picker/components/uv-datetime-picker/props.js ***!
+  \*************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _uni$$uv, _uni$$uv$props;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default = {
+  props: _objectSpread({
+    value: {
+      type: [String, Number],
+      default: ''
+    },
+    modelValue: {
+      type: [String, Number],
+      default: ''
+    },
+    // 是否打开组件
+    show: {
+      type: Boolean,
+      default: false
+    },
+    // 是否展示顶部的操作栏
+    showToolbar: {
+      type: Boolean,
+      default: true
+    },
+    // 顶部标题
+    title: {
+      type: String,
+      default: ''
+    },
+    // 展示格式，mode=date为日期选择，mode=time为时间选择，mode=year-month为年月选择，mode=datetime为日期时间选择
+    mode: {
+      type: String,
+      default: 'datetime'
+    },
+    // 可选的最大时间
+    maxDate: {
+      type: Number,
+      // 最大默认值为后10年
+      default: new Date(new Date().getFullYear() + 10, 0, 1).getTime()
+    },
+    // 可选的最小时间
+    minDate: {
+      type: Number,
+      // 最小默认值为前10年
+      default: new Date(new Date().getFullYear() - 10, 0, 1).getTime()
+    },
+    // 可选的最小小时，仅mode=time有效
+    minHour: {
+      type: Number,
+      default: 0
+    },
+    // 可选的最大小时，仅mode=time有效
+    maxHour: {
+      type: Number,
+      default: 23
+    },
+    // 可选的最小分钟，仅mode=time有效
+    minMinute: {
+      type: Number,
+      default: 0
+    },
+    // 可选的最大分钟，仅mode=time有效
+    maxMinute: {
+      type: Number,
+      default: 59
+    },
+    // 选项过滤函数
+    filter: {
+      type: [Function, null],
+      default: null
+    },
+    // 选项格式化函数
+    formatter: {
+      type: [Function, null],
+      default: null
+    },
+    // 是否显示加载中状态
+    loading: {
+      type: Boolean,
+      default: false
+    },
+    // 各列中，单个选项的高度
+    itemHeight: {
+      type: [String, Number],
+      default: 44
+    },
+    // 取消按钮的文字
+    cancelText: {
+      type: String,
+      default: '取消'
+    },
+    // 确认按钮的文字
+    confirmText: {
+      type: String,
+      default: '确认'
+    },
+    // 取消按钮的颜色
+    cancelColor: {
+      type: String,
+      default: '#909193'
+    },
+    // 确认按钮的颜色
+    confirmColor: {
+      type: String,
+      default: '#3c9cff'
+    },
+    // 每列中可见选项的数量
+    visibleItemCount: {
+      type: [String, Number],
+      default: 5
+    },
+    // 是否允许点击遮罩关闭选择器
+    closeOnClickOverlay: {
+      type: Boolean,
+      default: true
+    },
+    // 是否允许点击确认关闭选择器
+    closeOnClickConfirm: {
+      type: Boolean,
+      default: true
+    },
+    // 是否清空上次选择内容
+    clearDate: {
+      type: Boolean,
+      default: false
+    },
+    // 圆角
+    round: {
+      type: [String, Number],
+      default: 0
+    }
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.datetimePicker)
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 287 */
+/*!**********************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/util/dayjs.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __commonJS = function __commonJS(cb, mod) {
+  return function __require() {
+    return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = {
+      exports: {}
+    }).exports, mod), mod.exports;
+  };
+};
+var require_dayjs_min = __commonJS({
+  "uvuidayjs": function uvuidayjs(exports, module) {
+    !function (t, e) {
+      "object" == (0, _typeof2.default)(exports) && "undefined" != typeof module ? module.exports = e() :  true ? !(__WEBPACK_AMD_DEFINE_FACTORY__ = (e),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
+				__WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : undefined;
+    }(exports, function () {
+      "use strict";
+
+      var t = 1e3,
+        e = 6e4,
+        n = 36e5,
+        r = "millisecond",
+        i = "second",
+        s = "minute",
+        u = "hour",
+        a = "day",
+        o = "week",
+        f = "month",
+        h = "quarter",
+        c = "year",
+        d = "date",
+        l = "Invalid Date",
+        $ = /^(\d{4})[-/]?(\d{1,2})?[-/]?(\d{0,2})[Tt\s]*(\d{1,2})?:?(\d{1,2})?:?(\d{1,2})?[.:]?(\d+)?$/,
+        y = /\[([^\]]+)]|Y{1,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a|A|m{1,2}|s{1,2}|Z{1,2}|SSS/g,
+        M = {
+          name: "en",
+          weekdays: "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"),
+          months: "January_February_March_April_May_June_July_August_September_October_November_December".split("_"),
+          ordinal: function ordinal(t2) {
+            var e2 = ["th", "st", "nd", "rd"],
+              n2 = t2 % 100;
+            return "[" + t2 + (e2[(n2 - 20) % 10] || e2[n2] || e2[0]) + "]";
+          }
+        },
+        m = function m(t2, e2, n2) {
+          var r2 = String(t2);
+          return !r2 || r2.length >= e2 ? t2 : "" + Array(e2 + 1 - r2.length).join(n2) + t2;
+        },
+        v = {
+          s: m,
+          z: function z(t2) {
+            var e2 = -t2.utcOffset(),
+              n2 = Math.abs(e2),
+              r2 = Math.floor(n2 / 60),
+              i2 = n2 % 60;
+            return (e2 <= 0 ? "+" : "-") + m(r2, 2, "0") + ":" + m(i2, 2, "0");
+          },
+          m: function t2(e2, n2) {
+            if (e2.date() < n2.date()) return -t2(n2, e2);
+            var r2 = 12 * (n2.year() - e2.year()) + (n2.month() - e2.month()),
+              i2 = e2.clone().add(r2, f),
+              s2 = n2 - i2 < 0,
+              u2 = e2.clone().add(r2 + (s2 ? -1 : 1), f);
+            return +(-(r2 + (n2 - i2) / (s2 ? i2 - u2 : u2 - i2)) || 0);
+          },
+          a: function a(t2) {
+            return t2 < 0 ? Math.ceil(t2) || 0 : Math.floor(t2);
+          },
+          p: function p(t2) {
+            return {
+              M: f,
+              y: c,
+              w: o,
+              d: a,
+              D: d,
+              h: u,
+              m: s,
+              s: i,
+              ms: r,
+              Q: h
+            }[t2] || String(t2 || "").toLowerCase().replace(/s$/, "");
+          },
+          u: function u(t2) {
+            return void 0 === t2;
+          }
+        },
+        g = "en",
+        D = {};
+      D[g] = M;
+      var p = function p(t2) {
+          return t2 instanceof _;
+        },
+        S = function t2(e2, n2, r2) {
+          var i2;
+          if (!e2) return g;
+          if ("string" == typeof e2) {
+            var s2 = e2.toLowerCase();
+            D[s2] && (i2 = s2), n2 && (D[s2] = n2, i2 = s2);
+            var u2 = e2.split("-");
+            if (!i2 && u2.length > 1) return t2(u2[0]);
+          } else {
+            var a2 = e2.name;
+            D[a2] = e2, i2 = a2;
+          }
+          return !r2 && i2 && (g = i2), i2 || !r2 && g;
+        },
+        w = function w(t2, e2) {
+          if (p(t2)) return t2.clone();
+          var n2 = "object" == (0, _typeof2.default)(e2) ? e2 : {};
+          return n2.date = t2, n2.args = arguments, new _(n2);
+        },
+        O = v;
+      O.l = S, O.i = p, O.w = function (t2, e2) {
+        return w(t2, {
+          locale: e2.$L,
+          utc: e2.$u,
+          x: e2.$x,
+          $offset: e2.$offset
+        });
+      };
+      var _ = function () {
+          function M2(t2) {
+            this.$L = S(t2.locale, null, true), this.parse(t2);
+          }
+          var m2 = M2.prototype;
+          return m2.parse = function (t2) {
+            this.$d = function (t3) {
+              var e2 = t3.date,
+                n2 = t3.utc;
+              if (null === e2) return new Date(NaN);
+              if (O.u(e2)) return new Date();
+              if (e2 instanceof Date) return new Date(e2);
+              if ("string" == typeof e2 && !/Z$/i.test(e2)) {
+                var r2 = e2.match($);
+                if (r2) {
+                  var i2 = r2[2] - 1 || 0,
+                    s2 = (r2[7] || "0").substring(0, 3);
+                  return n2 ? new Date(Date.UTC(r2[1], i2, r2[3] || 1, r2[4] || 0, r2[5] || 0, r2[6] || 0, s2)) : new Date(r2[1], i2, r2[3] || 1, r2[4] || 0, r2[5] || 0, r2[6] || 0, s2);
+                }
+              }
+              return new Date(e2);
+            }(t2), this.$x = t2.x || {}, this.init();
+          }, m2.init = function () {
+            var t2 = this.$d;
+            this.$y = t2.getFullYear(), this.$M = t2.getMonth(), this.$D = t2.getDate(), this.$W = t2.getDay(), this.$H = t2.getHours(), this.$m = t2.getMinutes(), this.$s = t2.getSeconds(), this.$ms = t2.getMilliseconds();
+          }, m2.$utils = function () {
+            return O;
+          }, m2.isValid = function () {
+            return !(this.$d.toString() === l);
+          }, m2.isSame = function (t2, e2) {
+            var n2 = w(t2);
+            return this.startOf(e2) <= n2 && n2 <= this.endOf(e2);
+          }, m2.isAfter = function (t2, e2) {
+            return w(t2) < this.startOf(e2);
+          }, m2.isBefore = function (t2, e2) {
+            return this.endOf(e2) < w(t2);
+          }, m2.$g = function (t2, e2, n2) {
+            return O.u(t2) ? this[e2] : this.set(n2, t2);
+          }, m2.unix = function () {
+            return Math.floor(this.valueOf() / 1e3);
+          }, m2.valueOf = function () {
+            return this.$d.getTime();
+          }, m2.startOf = function (t2, e2) {
+            var n2 = this,
+              r2 = !!O.u(e2) || e2,
+              h2 = O.p(t2),
+              l2 = function l2(t3, e3) {
+                var i2 = O.w(n2.$u ? Date.UTC(n2.$y, e3, t3) : new Date(n2.$y, e3, t3), n2);
+                return r2 ? i2 : i2.endOf(a);
+              },
+              $2 = function $2(t3, e3) {
+                return O.w(n2.toDate()[t3].apply(n2.toDate("s"), (r2 ? [0, 0, 0, 0] : [23, 59, 59, 999]).slice(e3)), n2);
+              },
+              y2 = this.$W,
+              M3 = this.$M,
+              m3 = this.$D,
+              v2 = "set" + (this.$u ? "UTC" : "");
+            switch (h2) {
+              case c:
+                return r2 ? l2(1, 0) : l2(31, 11);
+              case f:
+                return r2 ? l2(1, M3) : l2(0, M3 + 1);
+              case o:
+                var g2 = this.$locale().weekStart || 0,
+                  D2 = (y2 < g2 ? y2 + 7 : y2) - g2;
+                return l2(r2 ? m3 - D2 : m3 + (6 - D2), M3);
+              case a:
+              case d:
+                return $2(v2 + "Hours", 0);
+              case u:
+                return $2(v2 + "Minutes", 1);
+              case s:
+                return $2(v2 + "Seconds", 2);
+              case i:
+                return $2(v2 + "Milliseconds", 3);
+              default:
+                return this.clone();
+            }
+          }, m2.endOf = function (t2) {
+            return this.startOf(t2, false);
+          }, m2.$set = function (t2, e2) {
+            var n2,
+              o2 = O.p(t2),
+              h2 = "set" + (this.$u ? "UTC" : ""),
+              l2 = (n2 = {}, n2[a] = h2 + "Date", n2[d] = h2 + "Date", n2[f] = h2 + "Month", n2[c] = h2 + "FullYear", n2[u] = h2 + "Hours", n2[s] = h2 + "Minutes", n2[i] = h2 + "Seconds", n2[r] = h2 + "Milliseconds", n2)[o2],
+              $2 = o2 === a ? this.$D + (e2 - this.$W) : e2;
+            if (o2 === f || o2 === c) {
+              var y2 = this.clone().set(d, 1);
+              y2.$d[l2]($2), y2.init(), this.$d = y2.set(d, Math.min(this.$D, y2.daysInMonth())).$d;
+            } else l2 && this.$d[l2]($2);
+            return this.init(), this;
+          }, m2.set = function (t2, e2) {
+            return this.clone().$set(t2, e2);
+          }, m2.get = function (t2) {
+            return this[O.p(t2)]();
+          }, m2.add = function (r2, h2) {
+            var d2,
+              l2 = this;
+            r2 = Number(r2);
+            var $2 = O.p(h2),
+              y2 = function y2(t2) {
+                var e2 = w(l2);
+                return O.w(e2.date(e2.date() + Math.round(t2 * r2)), l2);
+              };
+            if ($2 === f) return this.set(f, this.$M + r2);
+            if ($2 === c) return this.set(c, this.$y + r2);
+            if ($2 === a) return y2(1);
+            if ($2 === o) return y2(7);
+            var M3 = (d2 = {}, d2[s] = e, d2[u] = n, d2[i] = t, d2)[$2] || 1,
+              m3 = this.$d.getTime() + r2 * M3;
+            return O.w(m3, this);
+          }, m2.subtract = function (t2, e2) {
+            return this.add(-1 * t2, e2);
+          }, m2.format = function (t2) {
+            var e2 = this,
+              n2 = this.$locale();
+            if (!this.isValid()) return n2.invalidDate || l;
+            var r2 = t2 || "YYYY-MM-DDTHH:mm:ssZ",
+              i2 = O.z(this),
+              s2 = this.$H,
+              u2 = this.$m,
+              a2 = this.$M,
+              o2 = n2.weekdays,
+              f2 = n2.months,
+              h2 = function h2(t3, n3, i3, s3) {
+                return t3 && (t3[n3] || t3(e2, r2)) || i3[n3].slice(0, s3);
+              },
+              c2 = function c2(t3) {
+                return O.s(s2 % 12 || 12, t3, "0");
+              },
+              d2 = n2.meridiem || function (t3, e3, n3) {
+                var r3 = t3 < 12 ? "AM" : "PM";
+                return n3 ? r3.toLowerCase() : r3;
+              },
+              $2 = {
+                YY: String(this.$y).slice(-2),
+                YYYY: this.$y,
+                M: a2 + 1,
+                MM: O.s(a2 + 1, 2, "0"),
+                MMM: h2(n2.monthsShort, a2, f2, 3),
+                MMMM: h2(f2, a2),
+                D: this.$D,
+                DD: O.s(this.$D, 2, "0"),
+                d: String(this.$W),
+                dd: h2(n2.weekdaysMin, this.$W, o2, 2),
+                ddd: h2(n2.weekdaysShort, this.$W, o2, 3),
+                dddd: o2[this.$W],
+                H: String(s2),
+                HH: O.s(s2, 2, "0"),
+                h: c2(1),
+                hh: c2(2),
+                a: d2(s2, u2, true),
+                A: d2(s2, u2, false),
+                m: String(u2),
+                mm: O.s(u2, 2, "0"),
+                s: String(this.$s),
+                ss: O.s(this.$s, 2, "0"),
+                SSS: O.s(this.$ms, 3, "0"),
+                Z: i2
+              };
+            return r2.replace(y, function (t3, e3) {
+              return e3 || $2[t3] || i2.replace(":", "");
+            });
+          }, m2.utcOffset = function () {
+            return 15 * -Math.round(this.$d.getTimezoneOffset() / 15);
+          }, m2.diff = function (r2, d2, l2) {
+            var $2,
+              y2 = O.p(d2),
+              M3 = w(r2),
+              m3 = (M3.utcOffset() - this.utcOffset()) * e,
+              v2 = this - M3,
+              g2 = O.m(this, M3);
+            return g2 = ($2 = {}, $2[c] = g2 / 12, $2[f] = g2, $2[h] = g2 / 3, $2[o] = (v2 - m3) / 6048e5, $2[a] = (v2 - m3) / 864e5, $2[u] = v2 / n, $2[s] = v2 / e, $2[i] = v2 / t, $2)[y2] || v2, l2 ? g2 : O.a(g2);
+          }, m2.daysInMonth = function () {
+            return this.endOf(f).$D;
+          }, m2.$locale = function () {
+            return D[this.$L];
+          }, m2.locale = function (t2, e2) {
+            if (!t2) return this.$L;
+            var n2 = this.clone(),
+              r2 = S(t2, e2, true);
+            return r2 && (n2.$L = r2), n2;
+          }, m2.clone = function () {
+            return O.w(this.$d, this);
+          }, m2.toDate = function () {
+            return new Date(this.valueOf());
+          }, m2.toJSON = function () {
+            return this.isValid() ? this.toISOString() : null;
+          }, m2.toISOString = function () {
+            return this.$d.toISOString();
+          }, m2.toString = function () {
+            return this.$d.toUTCString();
+          }, M2;
+        }(),
+        T = _.prototype;
+      return w.prototype = T, [["$ms", r], ["$s", i], ["$m", s], ["$H", u], ["$W", a], ["$M", f], ["$y", c], ["$D", d]].forEach(function (t2) {
+        T[t2[1]] = function (e2) {
+          return this.$g(e2, t2[0], t2[1]);
+        };
+      }), w.extend = function (t2, e2) {
+        return t2.$i || (t2(e2, _, w), t2.$i = true), w;
+      }, w.locale = S, w.isDayjs = p, w.unix = function (t2) {
+        return w(1e3 * t2);
+      }, w.en = D[g], w.Ls = D, w.p = {}, w;
+    });
+  }
+});
+var _default = require_dayjs_min();
+exports.default = _default;
+
+/***/ }),
+/* 288 */,
+/* 289 */,
+/* 290 */,
+/* 291 */,
+/* 292 */,
+/* 293 */
+/*!*******************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-picker/components/uv-picker/props.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _uni$$uv, _uni$$uv$props;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default2 = {
+  props: _objectSpread({
+    // 是否展示顶部的操作栏
+    showToolbar: {
+      type: Boolean,
+      default: true
+    },
+    // 顶部标题
+    title: {
+      type: String,
+      default: ''
+    },
+    // 弹窗圆角
+    round: {
+      type: [String, Number],
+      default: 0
+    },
+    // 对象数组，设置每一列的数据
+    columns: {
+      type: Array,
+      default: function _default() {
+        return [];
+      }
+    },
+    // 是否显示加载中状态
+    loading: {
+      type: Boolean,
+      default: false
+    },
+    // 各列中，单个选项的高度
+    itemHeight: {
+      type: [String, Number],
+      default: 44
+    },
+    // 取消按钮的文字
+    cancelText: {
+      type: String,
+      default: '取消'
+    },
+    // 确认按钮的文字
+    confirmText: {
+      type: String,
+      default: '确定'
+    },
+    // 取消按钮的颜色
+    cancelColor: {
+      type: String,
+      default: '#909193'
+    },
+    // 确认按钮的颜色
+    confirmColor: {
+      type: String,
+      default: '#3c9cff'
+    },
+    // 文字颜色
+    color: {
+      type: String,
+      default: ''
+    },
+    // 选中文字的颜色
+    activeColor: {
+      type: String,
+      default: ''
+    },
+    // 每列中可见选项的数量
+    visibleItemCount: {
+      type: [String, Number],
+      default: 5
+    },
+    // 选项对象中，需要展示的属性键名
+    keyName: {
+      type: String,
+      default: 'text'
+    },
+    // 是否允许点击遮罩关闭选择器
+    closeOnClickOverlay: {
+      type: Boolean,
+      default: true
+    },
+    // 是否允许点击确认关闭选择器
+    closeOnClickConfirm: {
+      type: Boolean,
+      default: true
+    },
+    // 各列的默认索引
+    defaultIndex: {
+      type: Array,
+      default: function _default() {
+        return [];
+      }
+    },
+    // 是否在手指松开时立即触发 change 事件。若不开启则会在滚动动画结束后触发 change 事件，只在微信2.21.1及以上有效
+    immediateChange: {
+      type: Boolean,
+      default: true
+    }
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.picker)
+};
+exports.default = _default2;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 294 */,
+/* 295 */,
+/* 296 */,
+/* 297 */,
+/* 298 */,
+/* 299 */,
+/* 300 */,
+/* 301 */
+/*!*****************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-checkbox/components/uv-checkbox-group/props.js ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _uni$$uv, _uni$$uv$props;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default2 = {
+  props: _objectSpread({
+    // 绑定的值
+    value: {
+      type: Array,
+      default: function _default() {
+        return [];
+      }
+    },
+    modelValue: {
+      type: Array,
+      default: function _default() {
+        return [];
+      }
+    },
+    // 标识符
+    name: {
+      type: String,
+      default: ''
+    },
+    // 形状，circle-圆形，square-方形
+    shape: {
+      type: String,
+      default: 'square'
+    },
+    // 是否禁用全部checkbox
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    // 选中状态下的颜色，如设置此值，将会覆盖parent的activeColor值
+    activeColor: {
+      type: String,
+      default: '#2979ff'
+    },
+    // 未选中的颜色
+    inactiveColor: {
+      type: String,
+      default: '#c8c9cc'
+    },
+    // 整个组件的尺寸，默认px
+    size: {
+      type: [String, Number],
+      default: 18
+    },
+    // 布局方式，row-横向，column-纵向
+    placement: {
+      type: String,
+      default: 'row'
+    },
+    // label的字体大小，px单位
+    labelSize: {
+      type: [String, Number],
+      default: 14
+    },
+    // label的字体颜色
+    labelColor: {
+      type: [String],
+      default: '#303133'
+    },
+    // 是否禁止点击文本操作
+    labelDisabled: {
+      type: Boolean,
+      default: false
+    },
+    // 图标颜色
+    iconColor: {
+      type: String,
+      default: '#fff'
+    },
+    // 图标的大小，单位px
+    iconSize: {
+      type: [String, Number],
+      default: 12
+    },
+    // 勾选图标的对齐方式，left-左边，right-右边
+    iconPlacement: {
+      type: String,
+      default: 'left'
+    },
+    // 竖向配列时，是否显示下划线
+    borderBottom: {
+      type: Boolean,
+      default: false
+    }
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.checkboxGroup)
+};
+exports.default = _default2;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 302 */,
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */,
+/* 309 */
+/*!***********************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-checkbox/components/uv-checkbox/props.js ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _uni$$uv, _uni$$uv$props;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default = {
+  props: _objectSpread({
+    // checkbox的名称
+    name: {
+      type: [String, Number, Boolean],
+      default: ''
+    },
+    // 形状，square为方形，circle为圆型
+    shape: {
+      type: String,
+      default: ''
+    },
+    // 整体的大小
+    size: {
+      type: [String, Number],
+      default: ''
+    },
+    // 是否默认选中
+    checked: {
+      type: Boolean,
+      default: false
+    },
+    // 是否禁用
+    disabled: {
+      type: [String, Boolean],
+      default: ''
+    },
+    // 选中状态下的颜色，如设置此值，将会覆盖parent的activeColor值
+    activeColor: {
+      type: String,
+      default: ''
+    },
+    // 未选中的颜色
+    inactiveColor: {
+      type: String,
+      default: ''
+    },
+    // 图标的大小，单位px
+    iconSize: {
+      type: [String, Number],
+      default: ''
+    },
+    // 图标颜色
+    iconColor: {
+      type: String,
+      default: ''
+    },
+    // label提示文字，因为nvue下，直接slot进来的文字，由于特殊的结构，无法修改样式
+    label: {
+      type: [String, Number, Boolean],
+      default: ''
+    },
+    // label的字体大小，px单位
+    labelSize: {
+      type: [String, Number],
+      default: ''
+    },
+    // label的颜色
+    labelColor: {
+      type: String,
+      default: ''
+    },
+    // 是否禁止点击提示语选中复选框
+    labelDisabled: {
+      type: [String, Boolean],
+      default: ''
+    }
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.checkbox)
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 310 */,
+/* 311 */,
+/* 312 */,
+/* 313 */,
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */
 /*!*******************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uni-icons/components/uni-icons/uniicons_file_vue.js ***!
   \*******************************************************************************************/
@@ -21813,14 +22744,14 @@ var fontData = [{
 exports.fontData = fontData;
 
 /***/ }),
-/* 271 */,
-/* 272 */,
-/* 273 */,
-/* 274 */,
-/* 275 */,
-/* 276 */,
-/* 277 */,
-/* 278 */
+/* 318 */,
+/* 319 */,
+/* 320 */,
+/* 321 */,
+/* 322 */,
+/* 323 */,
+/* 324 */,
+/* 325 */
 /*!*****************************************************************************!*\
   !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-badge/props.js ***!
   \*****************************************************************************/
@@ -21910,14 +22841,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 279 */,
-/* 280 */,
-/* 281 */,
-/* 282 */,
-/* 283 */,
-/* 284 */,
-/* 285 */,
-/* 286 */
+/* 326 */,
+/* 327 */,
+/* 328 */,
+/* 329 */,
+/* 330 */,
+/* 331 */,
+/* 332 */,
+/* 333 */
 /*!*********************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-overlay/components/uv-overlay/props.js ***!
   \*********************************************************************************/
@@ -21964,14 +22895,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 287 */,
-/* 288 */,
-/* 289 */,
-/* 290 */,
-/* 291 */,
-/* 292 */,
-/* 293 */,
-/* 294 */
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */
 /*!*************************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-transition/components/uv-transition/createAnimation.js ***!
   \*************************************************************************************************/
@@ -22105,12 +23036,12 @@ function createAnimation(option, _this) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 295 */,
-/* 296 */,
-/* 297 */,
-/* 298 */,
-/* 299 */,
-/* 300 */
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */
 /*!***************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-status-bar/components/uv-status-bar/props.js ***!
   \***************************************************************************************/
@@ -22135,21 +23066,21 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 301 */,
-/* 302 */,
-/* 303 */,
-/* 304 */,
-/* 305 */,
-/* 306 */,
-/* 307 */,
-/* 308 */,
-/* 309 */,
-/* 310 */,
-/* 311 */,
-/* 312 */,
-/* 313 */,
-/* 314 */,
-/* 315 */
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */,
+/* 354 */,
+/* 355 */,
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */,
+/* 362 */
 /*!***************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-icon/components/uv-icon/icons.js ***!
   \***************************************************************************/
@@ -22326,7 +23257,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 316 */
+/* 363 */
 /*!***************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-icon/components/uv-icon/props.js ***!
   \***************************************************************************/
@@ -22438,952 +23369,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 317 */,
-/* 318 */,
-/* 319 */,
-/* 320 */,
-/* 321 */,
-/* 322 */,
-/* 323 */,
-/* 324 */,
-/* 325 */,
-/* 326 */,
-/* 327 */,
-/* 328 */,
-/* 329 */,
-/* 330 */,
-/* 331 */,
-/* 332 */,
-/* 333 */,
-/* 334 */,
-/* 335 */,
-/* 336 */,
-/* 337 */,
-/* 338 */,
-/* 339 */,
-/* 340 */,
-/* 341 */,
-/* 342 */,
-/* 343 */,
-/* 344 */,
-/* 345 */,
-/* 346 */,
-/* 347 */,
-/* 348 */,
-/* 349 */,
-/* 350 */,
-/* 351 */,
-/* 352 */
-/*!****************************************************************************!*\
-  !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-line/props.js ***!
-  \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  props: {
-    color: {
-      type: String,
-      default: uni.$u.props.line.color
-    },
-    // 长度，竖向时表现为高度，横向时表现为长度，可以为百分比，带px单位的值等
-    length: {
-      type: [String, Number],
-      default: uni.$u.props.line.length
-    },
-    // 线条方向，col-竖向，row-横向
-    direction: {
-      type: String,
-      default: uni.$u.props.line.direction
-    },
-    // 是否显示细边框
-    hairline: {
-      type: Boolean,
-      default: uni.$u.props.line.hairline
-    },
-    // 线条与上下左右元素的间距，字符串形式，如"30px"、"20px 30px"
-    margin: {
-      type: [String, Number],
-      default: uni.$u.props.line.margin
-    },
-    // 是否虚线，true-虚线，false-实线
-    dashed: {
-      type: Boolean,
-      default: uni.$u.props.line.dashed
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 353 */,
-/* 354 */,
-/* 355 */,
-/* 356 */,
-/* 357 */,
-/* 358 */,
-/* 359 */,
-/* 360 */,
-/* 361 */
-/*!*****************************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-checkbox/components/uv-checkbox-group/props.js ***!
-  \*****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _uni$$uv, _uni$$uv$props;
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var _default2 = {
-  props: _objectSpread({
-    // 绑定的值
-    value: {
-      type: Array,
-      default: function _default() {
-        return [];
-      }
-    },
-    modelValue: {
-      type: Array,
-      default: function _default() {
-        return [];
-      }
-    },
-    // 标识符
-    name: {
-      type: String,
-      default: ''
-    },
-    // 形状，circle-圆形，square-方形
-    shape: {
-      type: String,
-      default: 'square'
-    },
-    // 是否禁用全部checkbox
-    disabled: {
-      type: Boolean,
-      default: false
-    },
-    // 选中状态下的颜色，如设置此值，将会覆盖parent的activeColor值
-    activeColor: {
-      type: String,
-      default: '#2979ff'
-    },
-    // 未选中的颜色
-    inactiveColor: {
-      type: String,
-      default: '#c8c9cc'
-    },
-    // 整个组件的尺寸，默认px
-    size: {
-      type: [String, Number],
-      default: 18
-    },
-    // 布局方式，row-横向，column-纵向
-    placement: {
-      type: String,
-      default: 'row'
-    },
-    // label的字体大小，px单位
-    labelSize: {
-      type: [String, Number],
-      default: 14
-    },
-    // label的字体颜色
-    labelColor: {
-      type: [String],
-      default: '#303133'
-    },
-    // 是否禁止点击文本操作
-    labelDisabled: {
-      type: Boolean,
-      default: false
-    },
-    // 图标颜色
-    iconColor: {
-      type: String,
-      default: '#fff'
-    },
-    // 图标的大小，单位px
-    iconSize: {
-      type: [String, Number],
-      default: 12
-    },
-    // 勾选图标的对齐方式，left-左边，right-右边
-    iconPlacement: {
-      type: String,
-      default: 'left'
-    },
-    // 竖向配列时，是否显示下划线
-    borderBottom: {
-      type: Boolean,
-      default: false
-    }
-  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.checkboxGroup)
-};
-exports.default = _default2;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 362 */,
-/* 363 */,
 /* 364 */,
 /* 365 */,
 /* 366 */,
 /* 367 */,
 /* 368 */,
-/* 369 */
-/*!***********************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-checkbox/components/uv-checkbox/props.js ***!
-  \***********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _uni$$uv, _uni$$uv$props;
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var _default = {
-  props: _objectSpread({
-    // checkbox的名称
-    name: {
-      type: [String, Number, Boolean],
-      default: ''
-    },
-    // 形状，square为方形，circle为圆型
-    shape: {
-      type: String,
-      default: ''
-    },
-    // 整体的大小
-    size: {
-      type: [String, Number],
-      default: ''
-    },
-    // 是否默认选中
-    checked: {
-      type: Boolean,
-      default: false
-    },
-    // 是否禁用
-    disabled: {
-      type: [String, Boolean],
-      default: ''
-    },
-    // 选中状态下的颜色，如设置此值，将会覆盖parent的activeColor值
-    activeColor: {
-      type: String,
-      default: ''
-    },
-    // 未选中的颜色
-    inactiveColor: {
-      type: String,
-      default: ''
-    },
-    // 图标的大小，单位px
-    iconSize: {
-      type: [String, Number],
-      default: ''
-    },
-    // 图标颜色
-    iconColor: {
-      type: String,
-      default: ''
-    },
-    // label提示文字，因为nvue下，直接slot进来的文字，由于特殊的结构，无法修改样式
-    label: {
-      type: [String, Number, Boolean],
-      default: ''
-    },
-    // label的字体大小，px单位
-    labelSize: {
-      type: [String, Number],
-      default: ''
-    },
-    // label的颜色
-    labelColor: {
-      type: String,
-      default: ''
-    },
-    // 是否禁止点击提示语选中复选框
-    labelDisabled: {
-      type: [String, Boolean],
-      default: ''
-    }
-  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.checkbox)
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
+/* 369 */,
 /* 370 */,
-/* 371 */,
-/* 372 */,
-/* 373 */,
-/* 374 */,
-/* 375 */,
-/* 376 */,
-/* 377 */,
-/* 378 */,
-/* 379 */
-/*!*************************************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-datetime-picker/components/uv-datetime-picker/props.js ***!
-  \*************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _uni$$uv, _uni$$uv$props;
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var _default = {
-  props: _objectSpread({
-    value: {
-      type: [String, Number],
-      default: ''
-    },
-    modelValue: {
-      type: [String, Number],
-      default: ''
-    },
-    // 是否打开组件
-    show: {
-      type: Boolean,
-      default: false
-    },
-    // 是否展示顶部的操作栏
-    showToolbar: {
-      type: Boolean,
-      default: true
-    },
-    // 顶部标题
-    title: {
-      type: String,
-      default: ''
-    },
-    // 展示格式，mode=date为日期选择，mode=time为时间选择，mode=year-month为年月选择，mode=datetime为日期时间选择
-    mode: {
-      type: String,
-      default: 'datetime'
-    },
-    // 可选的最大时间
-    maxDate: {
-      type: Number,
-      // 最大默认值为后10年
-      default: new Date(new Date().getFullYear() + 10, 0, 1).getTime()
-    },
-    // 可选的最小时间
-    minDate: {
-      type: Number,
-      // 最小默认值为前10年
-      default: new Date(new Date().getFullYear() - 10, 0, 1).getTime()
-    },
-    // 可选的最小小时，仅mode=time有效
-    minHour: {
-      type: Number,
-      default: 0
-    },
-    // 可选的最大小时，仅mode=time有效
-    maxHour: {
-      type: Number,
-      default: 23
-    },
-    // 可选的最小分钟，仅mode=time有效
-    minMinute: {
-      type: Number,
-      default: 0
-    },
-    // 可选的最大分钟，仅mode=time有效
-    maxMinute: {
-      type: Number,
-      default: 59
-    },
-    // 选项过滤函数
-    filter: {
-      type: [Function, null],
-      default: null
-    },
-    // 选项格式化函数
-    formatter: {
-      type: [Function, null],
-      default: null
-    },
-    // 是否显示加载中状态
-    loading: {
-      type: Boolean,
-      default: false
-    },
-    // 各列中，单个选项的高度
-    itemHeight: {
-      type: [String, Number],
-      default: 44
-    },
-    // 取消按钮的文字
-    cancelText: {
-      type: String,
-      default: '取消'
-    },
-    // 确认按钮的文字
-    confirmText: {
-      type: String,
-      default: '确认'
-    },
-    // 取消按钮的颜色
-    cancelColor: {
-      type: String,
-      default: '#909193'
-    },
-    // 确认按钮的颜色
-    confirmColor: {
-      type: String,
-      default: '#3c9cff'
-    },
-    // 每列中可见选项的数量
-    visibleItemCount: {
-      type: [String, Number],
-      default: 5
-    },
-    // 是否允许点击遮罩关闭选择器
-    closeOnClickOverlay: {
-      type: Boolean,
-      default: true
-    },
-    // 是否允许点击确认关闭选择器
-    closeOnClickConfirm: {
-      type: Boolean,
-      default: true
-    },
-    // 是否清空上次选择内容
-    clearDate: {
-      type: Boolean,
-      default: false
-    },
-    // 圆角
-    round: {
-      type: [String, Number],
-      default: 0
-    }
-  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.datetimePicker)
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 380 */
-/*!**********************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/util/dayjs.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
-var __getOwnPropNames = Object.getOwnPropertyNames;
-var __commonJS = function __commonJS(cb, mod) {
-  return function __require() {
-    return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = {
-      exports: {}
-    }).exports, mod), mod.exports;
-  };
-};
-var require_dayjs_min = __commonJS({
-  "uvuidayjs": function uvuidayjs(exports, module) {
-    !function (t, e) {
-      "object" == (0, _typeof2.default)(exports) && "undefined" != typeof module ? module.exports = e() :  true ? !(__WEBPACK_AMD_DEFINE_FACTORY__ = (e),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
-				__WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : undefined;
-    }(exports, function () {
-      "use strict";
-
-      var t = 1e3,
-        e = 6e4,
-        n = 36e5,
-        r = "millisecond",
-        i = "second",
-        s = "minute",
-        u = "hour",
-        a = "day",
-        o = "week",
-        f = "month",
-        h = "quarter",
-        c = "year",
-        d = "date",
-        l = "Invalid Date",
-        $ = /^(\d{4})[-/]?(\d{1,2})?[-/]?(\d{0,2})[Tt\s]*(\d{1,2})?:?(\d{1,2})?:?(\d{1,2})?[.:]?(\d+)?$/,
-        y = /\[([^\]]+)]|Y{1,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a|A|m{1,2}|s{1,2}|Z{1,2}|SSS/g,
-        M = {
-          name: "en",
-          weekdays: "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"),
-          months: "January_February_March_April_May_June_July_August_September_October_November_December".split("_"),
-          ordinal: function ordinal(t2) {
-            var e2 = ["th", "st", "nd", "rd"],
-              n2 = t2 % 100;
-            return "[" + t2 + (e2[(n2 - 20) % 10] || e2[n2] || e2[0]) + "]";
-          }
-        },
-        m = function m(t2, e2, n2) {
-          var r2 = String(t2);
-          return !r2 || r2.length >= e2 ? t2 : "" + Array(e2 + 1 - r2.length).join(n2) + t2;
-        },
-        v = {
-          s: m,
-          z: function z(t2) {
-            var e2 = -t2.utcOffset(),
-              n2 = Math.abs(e2),
-              r2 = Math.floor(n2 / 60),
-              i2 = n2 % 60;
-            return (e2 <= 0 ? "+" : "-") + m(r2, 2, "0") + ":" + m(i2, 2, "0");
-          },
-          m: function t2(e2, n2) {
-            if (e2.date() < n2.date()) return -t2(n2, e2);
-            var r2 = 12 * (n2.year() - e2.year()) + (n2.month() - e2.month()),
-              i2 = e2.clone().add(r2, f),
-              s2 = n2 - i2 < 0,
-              u2 = e2.clone().add(r2 + (s2 ? -1 : 1), f);
-            return +(-(r2 + (n2 - i2) / (s2 ? i2 - u2 : u2 - i2)) || 0);
-          },
-          a: function a(t2) {
-            return t2 < 0 ? Math.ceil(t2) || 0 : Math.floor(t2);
-          },
-          p: function p(t2) {
-            return {
-              M: f,
-              y: c,
-              w: o,
-              d: a,
-              D: d,
-              h: u,
-              m: s,
-              s: i,
-              ms: r,
-              Q: h
-            }[t2] || String(t2 || "").toLowerCase().replace(/s$/, "");
-          },
-          u: function u(t2) {
-            return void 0 === t2;
-          }
-        },
-        g = "en",
-        D = {};
-      D[g] = M;
-      var p = function p(t2) {
-          return t2 instanceof _;
-        },
-        S = function t2(e2, n2, r2) {
-          var i2;
-          if (!e2) return g;
-          if ("string" == typeof e2) {
-            var s2 = e2.toLowerCase();
-            D[s2] && (i2 = s2), n2 && (D[s2] = n2, i2 = s2);
-            var u2 = e2.split("-");
-            if (!i2 && u2.length > 1) return t2(u2[0]);
-          } else {
-            var a2 = e2.name;
-            D[a2] = e2, i2 = a2;
-          }
-          return !r2 && i2 && (g = i2), i2 || !r2 && g;
-        },
-        w = function w(t2, e2) {
-          if (p(t2)) return t2.clone();
-          var n2 = "object" == (0, _typeof2.default)(e2) ? e2 : {};
-          return n2.date = t2, n2.args = arguments, new _(n2);
-        },
-        O = v;
-      O.l = S, O.i = p, O.w = function (t2, e2) {
-        return w(t2, {
-          locale: e2.$L,
-          utc: e2.$u,
-          x: e2.$x,
-          $offset: e2.$offset
-        });
-      };
-      var _ = function () {
-          function M2(t2) {
-            this.$L = S(t2.locale, null, true), this.parse(t2);
-          }
-          var m2 = M2.prototype;
-          return m2.parse = function (t2) {
-            this.$d = function (t3) {
-              var e2 = t3.date,
-                n2 = t3.utc;
-              if (null === e2) return new Date(NaN);
-              if (O.u(e2)) return new Date();
-              if (e2 instanceof Date) return new Date(e2);
-              if ("string" == typeof e2 && !/Z$/i.test(e2)) {
-                var r2 = e2.match($);
-                if (r2) {
-                  var i2 = r2[2] - 1 || 0,
-                    s2 = (r2[7] || "0").substring(0, 3);
-                  return n2 ? new Date(Date.UTC(r2[1], i2, r2[3] || 1, r2[4] || 0, r2[5] || 0, r2[6] || 0, s2)) : new Date(r2[1], i2, r2[3] || 1, r2[4] || 0, r2[5] || 0, r2[6] || 0, s2);
-                }
-              }
-              return new Date(e2);
-            }(t2), this.$x = t2.x || {}, this.init();
-          }, m2.init = function () {
-            var t2 = this.$d;
-            this.$y = t2.getFullYear(), this.$M = t2.getMonth(), this.$D = t2.getDate(), this.$W = t2.getDay(), this.$H = t2.getHours(), this.$m = t2.getMinutes(), this.$s = t2.getSeconds(), this.$ms = t2.getMilliseconds();
-          }, m2.$utils = function () {
-            return O;
-          }, m2.isValid = function () {
-            return !(this.$d.toString() === l);
-          }, m2.isSame = function (t2, e2) {
-            var n2 = w(t2);
-            return this.startOf(e2) <= n2 && n2 <= this.endOf(e2);
-          }, m2.isAfter = function (t2, e2) {
-            return w(t2) < this.startOf(e2);
-          }, m2.isBefore = function (t2, e2) {
-            return this.endOf(e2) < w(t2);
-          }, m2.$g = function (t2, e2, n2) {
-            return O.u(t2) ? this[e2] : this.set(n2, t2);
-          }, m2.unix = function () {
-            return Math.floor(this.valueOf() / 1e3);
-          }, m2.valueOf = function () {
-            return this.$d.getTime();
-          }, m2.startOf = function (t2, e2) {
-            var n2 = this,
-              r2 = !!O.u(e2) || e2,
-              h2 = O.p(t2),
-              l2 = function l2(t3, e3) {
-                var i2 = O.w(n2.$u ? Date.UTC(n2.$y, e3, t3) : new Date(n2.$y, e3, t3), n2);
-                return r2 ? i2 : i2.endOf(a);
-              },
-              $2 = function $2(t3, e3) {
-                return O.w(n2.toDate()[t3].apply(n2.toDate("s"), (r2 ? [0, 0, 0, 0] : [23, 59, 59, 999]).slice(e3)), n2);
-              },
-              y2 = this.$W,
-              M3 = this.$M,
-              m3 = this.$D,
-              v2 = "set" + (this.$u ? "UTC" : "");
-            switch (h2) {
-              case c:
-                return r2 ? l2(1, 0) : l2(31, 11);
-              case f:
-                return r2 ? l2(1, M3) : l2(0, M3 + 1);
-              case o:
-                var g2 = this.$locale().weekStart || 0,
-                  D2 = (y2 < g2 ? y2 + 7 : y2) - g2;
-                return l2(r2 ? m3 - D2 : m3 + (6 - D2), M3);
-              case a:
-              case d:
-                return $2(v2 + "Hours", 0);
-              case u:
-                return $2(v2 + "Minutes", 1);
-              case s:
-                return $2(v2 + "Seconds", 2);
-              case i:
-                return $2(v2 + "Milliseconds", 3);
-              default:
-                return this.clone();
-            }
-          }, m2.endOf = function (t2) {
-            return this.startOf(t2, false);
-          }, m2.$set = function (t2, e2) {
-            var n2,
-              o2 = O.p(t2),
-              h2 = "set" + (this.$u ? "UTC" : ""),
-              l2 = (n2 = {}, n2[a] = h2 + "Date", n2[d] = h2 + "Date", n2[f] = h2 + "Month", n2[c] = h2 + "FullYear", n2[u] = h2 + "Hours", n2[s] = h2 + "Minutes", n2[i] = h2 + "Seconds", n2[r] = h2 + "Milliseconds", n2)[o2],
-              $2 = o2 === a ? this.$D + (e2 - this.$W) : e2;
-            if (o2 === f || o2 === c) {
-              var y2 = this.clone().set(d, 1);
-              y2.$d[l2]($2), y2.init(), this.$d = y2.set(d, Math.min(this.$D, y2.daysInMonth())).$d;
-            } else l2 && this.$d[l2]($2);
-            return this.init(), this;
-          }, m2.set = function (t2, e2) {
-            return this.clone().$set(t2, e2);
-          }, m2.get = function (t2) {
-            return this[O.p(t2)]();
-          }, m2.add = function (r2, h2) {
-            var d2,
-              l2 = this;
-            r2 = Number(r2);
-            var $2 = O.p(h2),
-              y2 = function y2(t2) {
-                var e2 = w(l2);
-                return O.w(e2.date(e2.date() + Math.round(t2 * r2)), l2);
-              };
-            if ($2 === f) return this.set(f, this.$M + r2);
-            if ($2 === c) return this.set(c, this.$y + r2);
-            if ($2 === a) return y2(1);
-            if ($2 === o) return y2(7);
-            var M3 = (d2 = {}, d2[s] = e, d2[u] = n, d2[i] = t, d2)[$2] || 1,
-              m3 = this.$d.getTime() + r2 * M3;
-            return O.w(m3, this);
-          }, m2.subtract = function (t2, e2) {
-            return this.add(-1 * t2, e2);
-          }, m2.format = function (t2) {
-            var e2 = this,
-              n2 = this.$locale();
-            if (!this.isValid()) return n2.invalidDate || l;
-            var r2 = t2 || "YYYY-MM-DDTHH:mm:ssZ",
-              i2 = O.z(this),
-              s2 = this.$H,
-              u2 = this.$m,
-              a2 = this.$M,
-              o2 = n2.weekdays,
-              f2 = n2.months,
-              h2 = function h2(t3, n3, i3, s3) {
-                return t3 && (t3[n3] || t3(e2, r2)) || i3[n3].slice(0, s3);
-              },
-              c2 = function c2(t3) {
-                return O.s(s2 % 12 || 12, t3, "0");
-              },
-              d2 = n2.meridiem || function (t3, e3, n3) {
-                var r3 = t3 < 12 ? "AM" : "PM";
-                return n3 ? r3.toLowerCase() : r3;
-              },
-              $2 = {
-                YY: String(this.$y).slice(-2),
-                YYYY: this.$y,
-                M: a2 + 1,
-                MM: O.s(a2 + 1, 2, "0"),
-                MMM: h2(n2.monthsShort, a2, f2, 3),
-                MMMM: h2(f2, a2),
-                D: this.$D,
-                DD: O.s(this.$D, 2, "0"),
-                d: String(this.$W),
-                dd: h2(n2.weekdaysMin, this.$W, o2, 2),
-                ddd: h2(n2.weekdaysShort, this.$W, o2, 3),
-                dddd: o2[this.$W],
-                H: String(s2),
-                HH: O.s(s2, 2, "0"),
-                h: c2(1),
-                hh: c2(2),
-                a: d2(s2, u2, true),
-                A: d2(s2, u2, false),
-                m: String(u2),
-                mm: O.s(u2, 2, "0"),
-                s: String(this.$s),
-                ss: O.s(this.$s, 2, "0"),
-                SSS: O.s(this.$ms, 3, "0"),
-                Z: i2
-              };
-            return r2.replace(y, function (t3, e3) {
-              return e3 || $2[t3] || i2.replace(":", "");
-            });
-          }, m2.utcOffset = function () {
-            return 15 * -Math.round(this.$d.getTimezoneOffset() / 15);
-          }, m2.diff = function (r2, d2, l2) {
-            var $2,
-              y2 = O.p(d2),
-              M3 = w(r2),
-              m3 = (M3.utcOffset() - this.utcOffset()) * e,
-              v2 = this - M3,
-              g2 = O.m(this, M3);
-            return g2 = ($2 = {}, $2[c] = g2 / 12, $2[f] = g2, $2[h] = g2 / 3, $2[o] = (v2 - m3) / 6048e5, $2[a] = (v2 - m3) / 864e5, $2[u] = v2 / n, $2[s] = v2 / e, $2[i] = v2 / t, $2)[y2] || v2, l2 ? g2 : O.a(g2);
-          }, m2.daysInMonth = function () {
-            return this.endOf(f).$D;
-          }, m2.$locale = function () {
-            return D[this.$L];
-          }, m2.locale = function (t2, e2) {
-            if (!t2) return this.$L;
-            var n2 = this.clone(),
-              r2 = S(t2, e2, true);
-            return r2 && (n2.$L = r2), n2;
-          }, m2.clone = function () {
-            return O.w(this.$d, this);
-          }, m2.toDate = function () {
-            return new Date(this.valueOf());
-          }, m2.toJSON = function () {
-            return this.isValid() ? this.toISOString() : null;
-          }, m2.toISOString = function () {
-            return this.$d.toISOString();
-          }, m2.toString = function () {
-            return this.$d.toUTCString();
-          }, M2;
-        }(),
-        T = _.prototype;
-      return w.prototype = T, [["$ms", r], ["$s", i], ["$m", s], ["$H", u], ["$W", a], ["$M", f], ["$y", c], ["$D", d]].forEach(function (t2) {
-        T[t2[1]] = function (e2) {
-          return this.$g(e2, t2[0], t2[1]);
-        };
-      }), w.extend = function (t2, e2) {
-        return t2.$i || (t2(e2, _, w), t2.$i = true), w;
-      }, w.locale = S, w.isDayjs = p, w.unix = function (t2) {
-        return w(1e3 * t2);
-      }, w.en = D[g], w.Ls = D, w.p = {}, w;
-    });
-  }
-});
-var _default = require_dayjs_min();
-exports.default = _default;
-
-/***/ }),
-/* 381 */,
-/* 382 */,
-/* 383 */,
-/* 384 */,
-/* 385 */,
-/* 386 */
-/*!*******************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-picker/components/uv-picker/props.js ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _uni$$uv, _uni$$uv$props;
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var _default2 = {
-  props: _objectSpread({
-    // 是否展示顶部的操作栏
-    showToolbar: {
-      type: Boolean,
-      default: true
-    },
-    // 顶部标题
-    title: {
-      type: String,
-      default: ''
-    },
-    // 弹窗圆角
-    round: {
-      type: [String, Number],
-      default: 0
-    },
-    // 对象数组，设置每一列的数据
-    columns: {
-      type: Array,
-      default: function _default() {
-        return [];
-      }
-    },
-    // 是否显示加载中状态
-    loading: {
-      type: Boolean,
-      default: false
-    },
-    // 各列中，单个选项的高度
-    itemHeight: {
-      type: [String, Number],
-      default: 44
-    },
-    // 取消按钮的文字
-    cancelText: {
-      type: String,
-      default: '取消'
-    },
-    // 确认按钮的文字
-    confirmText: {
-      type: String,
-      default: '确定'
-    },
-    // 取消按钮的颜色
-    cancelColor: {
-      type: String,
-      default: '#909193'
-    },
-    // 确认按钮的颜色
-    confirmColor: {
-      type: String,
-      default: '#3c9cff'
-    },
-    // 文字颜色
-    color: {
-      type: String,
-      default: ''
-    },
-    // 选中文字的颜色
-    activeColor: {
-      type: String,
-      default: ''
-    },
-    // 每列中可见选项的数量
-    visibleItemCount: {
-      type: [String, Number],
-      default: 5
-    },
-    // 选项对象中，需要展示的属性键名
-    keyName: {
-      type: String,
-      default: 'text'
-    },
-    // 是否允许点击遮罩关闭选择器
-    closeOnClickOverlay: {
-      type: Boolean,
-      default: true
-    },
-    // 是否允许点击确认关闭选择器
-    closeOnClickConfirm: {
-      type: Boolean,
-      default: true
-    },
-    // 各列的默认索引
-    defaultIndex: {
-      type: Array,
-      default: function _default() {
-        return [];
-      }
-    },
-    // 是否在手指松开时立即触发 change 事件。若不开启则会在滚动动画结束后触发 change 事件，只在微信2.21.1及以上有效
-    immediateChange: {
-      type: Boolean,
-      default: true
-    }
-  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.picker)
-};
-exports.default = _default2;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 387 */,
-/* 388 */,
-/* 389 */,
-/* 390 */,
-/* 391 */,
-/* 392 */,
-/* 393 */,
-/* 394 */
+/* 371 */
 /*!*********************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-toolbar/components/uv-toolbar/props.js ***!
   \*********************************************************************************/
@@ -23445,14 +23438,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 395 */,
-/* 396 */,
-/* 397 */,
-/* 398 */,
-/* 399 */,
-/* 400 */,
-/* 401 */,
-/* 402 */
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */,
+/* 376 */,
+/* 377 */,
+/* 378 */,
+/* 379 */
 /*!**********************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/colorGradient.js ***!
   \**********************************************************************************/
@@ -23603,7 +23596,7 @@ function colorToRgba(color, alpha) {
 }
 
 /***/ }),
-/* 403 */
+/* 380 */
 /*!*******************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-loading-icon/components/uv-loading-icon/props.js ***!
   \*******************************************************************************************/
@@ -23689,6 +23682,376 @@ var _default2 = {
   }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.loadingIcon)
 };
 exports.default = _default2;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 381 */,
+/* 382 */,
+/* 383 */,
+/* 384 */,
+/* 385 */,
+/* 386 */,
+/* 387 */,
+/* 388 */,
+/* 389 */,
+/* 390 */,
+/* 391 */,
+/* 392 */,
+/* 393 */,
+/* 394 */,
+/* 395 */,
+/* 396 */,
+/* 397 */,
+/* 398 */,
+/* 399 */,
+/* 400 */,
+/* 401 */,
+/* 402 */,
+/* 403 */,
+/* 404 */,
+/* 405 */,
+/* 406 */,
+/* 407 */,
+/* 408 */,
+/* 409 */,
+/* 410 */,
+/* 411 */,
+/* 412 */,
+/* 413 */
+/*!****************************************************************************!*\
+  !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-icon/icons.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  'uicon-level': "\uE693",
+  'uicon-column-line': "\uE68E",
+  'uicon-checkbox-mark': "\uE807",
+  'uicon-folder': "\uE7F5",
+  'uicon-movie': "\uE7F6",
+  'uicon-star-fill': "\uE669",
+  'uicon-star': "\uE65F",
+  'uicon-phone-fill': "\uE64F",
+  'uicon-phone': "\uE622",
+  'uicon-apple-fill': "\uE881",
+  'uicon-chrome-circle-fill': "\uE885",
+  'uicon-backspace': "\uE67B",
+  'uicon-attach': "\uE632",
+  'uicon-cut': "\uE948",
+  'uicon-empty-car': "\uE602",
+  'uicon-empty-coupon': "\uE682",
+  'uicon-empty-address': "\uE646",
+  'uicon-empty-favor': "\uE67C",
+  'uicon-empty-permission': "\uE686",
+  'uicon-empty-news': "\uE687",
+  'uicon-empty-search': "\uE664",
+  'uicon-github-circle-fill': "\uE887",
+  'uicon-rmb': "\uE608",
+  'uicon-person-delete-fill': "\uE66A",
+  'uicon-reload': "\uE788",
+  'uicon-order': "\uE68F",
+  'uicon-server-man': "\uE6BC",
+  'uicon-search': "\uE62A",
+  'uicon-fingerprint': "\uE955",
+  'uicon-more-dot-fill': "\uE630",
+  'uicon-scan': "\uE662",
+  'uicon-share-square': "\uE60B",
+  'uicon-map': "\uE61D",
+  'uicon-map-fill': "\uE64E",
+  'uicon-tags': "\uE629",
+  'uicon-tags-fill': "\uE651",
+  'uicon-bookmark-fill': "\uE63B",
+  'uicon-bookmark': "\uE60A",
+  'uicon-eye': "\uE613",
+  'uicon-eye-fill': "\uE641",
+  'uicon-mic': "\uE64A",
+  'uicon-mic-off': "\uE649",
+  'uicon-calendar': "\uE66E",
+  'uicon-calendar-fill': "\uE634",
+  'uicon-trash': "\uE623",
+  'uicon-trash-fill': "\uE658",
+  'uicon-play-left': "\uE66D",
+  'uicon-play-right': "\uE610",
+  'uicon-minus': "\uE618",
+  'uicon-plus': "\uE62D",
+  'uicon-info': "\uE653",
+  'uicon-info-circle': "\uE7D2",
+  'uicon-info-circle-fill': "\uE64B",
+  'uicon-question': "\uE715",
+  'uicon-error': "\uE6D3",
+  'uicon-close': "\uE685",
+  'uicon-checkmark': "\uE6A8",
+  'uicon-android-circle-fill': "\uE67E",
+  'uicon-android-fill': "\uE67D",
+  'uicon-ie': "\uE87B",
+  'uicon-IE-circle-fill': "\uE889",
+  'uicon-google': "\uE87A",
+  'uicon-google-circle-fill': "\uE88A",
+  'uicon-setting-fill': "\uE872",
+  'uicon-setting': "\uE61F",
+  'uicon-minus-square-fill': "\uE855",
+  'uicon-plus-square-fill': "\uE856",
+  'uicon-heart': "\uE7DF",
+  'uicon-heart-fill': "\uE851",
+  'uicon-camera': "\uE7D7",
+  'uicon-camera-fill': "\uE870",
+  'uicon-more-circle': "\uE63E",
+  'uicon-more-circle-fill': "\uE645",
+  'uicon-chat': "\uE620",
+  'uicon-chat-fill': "\uE61E",
+  'uicon-bag-fill': "\uE617",
+  'uicon-bag': "\uE619",
+  'uicon-error-circle-fill': "\uE62C",
+  'uicon-error-circle': "\uE624",
+  'uicon-close-circle': "\uE63F",
+  'uicon-close-circle-fill': "\uE637",
+  'uicon-checkmark-circle': "\uE63D",
+  'uicon-checkmark-circle-fill': "\uE635",
+  'uicon-question-circle-fill': "\uE666",
+  'uicon-question-circle': "\uE625",
+  'uicon-share': "\uE631",
+  'uicon-share-fill': "\uE65E",
+  'uicon-shopping-cart': "\uE621",
+  'uicon-shopping-cart-fill': "\uE65D",
+  'uicon-bell': "\uE609",
+  'uicon-bell-fill': "\uE640",
+  'uicon-list': "\uE650",
+  'uicon-list-dot': "\uE616",
+  'uicon-zhihu': "\uE6BA",
+  'uicon-zhihu-circle-fill': "\uE709",
+  'uicon-zhifubao': "\uE6B9",
+  'uicon-zhifubao-circle-fill': "\uE6B8",
+  'uicon-weixin-circle-fill': "\uE6B1",
+  'uicon-weixin-fill': "\uE6B2",
+  'uicon-twitter-circle-fill': "\uE6AB",
+  'uicon-twitter': "\uE6AA",
+  'uicon-taobao-circle-fill': "\uE6A7",
+  'uicon-taobao': "\uE6A6",
+  'uicon-weibo-circle-fill': "\uE6A5",
+  'uicon-weibo': "\uE6A4",
+  'uicon-qq-fill': "\uE6A1",
+  'uicon-qq-circle-fill': "\uE6A0",
+  'uicon-moments-circel-fill': "\uE69A",
+  'uicon-moments': "\uE69B",
+  'uicon-qzone': "\uE695",
+  'uicon-qzone-circle-fill': "\uE696",
+  'uicon-baidu-circle-fill': "\uE680",
+  'uicon-baidu': "\uE681",
+  'uicon-facebook-circle-fill': "\uE68A",
+  'uicon-facebook': "\uE689",
+  'uicon-car': "\uE60C",
+  'uicon-car-fill': "\uE636",
+  'uicon-warning-fill': "\uE64D",
+  'uicon-warning': "\uE694",
+  'uicon-clock-fill': "\uE638",
+  'uicon-clock': "\uE60F",
+  'uicon-edit-pen': "\uE612",
+  'uicon-edit-pen-fill': "\uE66B",
+  'uicon-email': "\uE611",
+  'uicon-email-fill': "\uE642",
+  'uicon-minus-circle': "\uE61B",
+  'uicon-minus-circle-fill': "\uE652",
+  'uicon-plus-circle': "\uE62E",
+  'uicon-plus-circle-fill': "\uE661",
+  'uicon-file-text': "\uE663",
+  'uicon-file-text-fill': "\uE665",
+  'uicon-pushpin': "\uE7E3",
+  'uicon-pushpin-fill': "\uE86E",
+  'uicon-grid': "\uE673",
+  'uicon-grid-fill': "\uE678",
+  'uicon-play-circle': "\uE647",
+  'uicon-play-circle-fill': "\uE655",
+  'uicon-pause-circle-fill': "\uE654",
+  'uicon-pause': "\uE8FA",
+  'uicon-pause-circle': "\uE643",
+  'uicon-eye-off': "\uE648",
+  'uicon-eye-off-outline': "\uE62B",
+  'uicon-gift-fill': "\uE65C",
+  'uicon-gift': "\uE65B",
+  'uicon-rmb-circle-fill': "\uE657",
+  'uicon-rmb-circle': "\uE677",
+  'uicon-kefu-ermai': "\uE656",
+  'uicon-server-fill': "\uE751",
+  'uicon-coupon-fill': "\uE8C4",
+  'uicon-coupon': "\uE8AE",
+  'uicon-integral': "\uE704",
+  'uicon-integral-fill': "\uE703",
+  'uicon-home-fill': "\uE964",
+  'uicon-home': "\uE965",
+  'uicon-hourglass-half-fill': "\uE966",
+  'uicon-hourglass': "\uE967",
+  'uicon-account': "\uE628",
+  'uicon-plus-people-fill': "\uE626",
+  'uicon-minus-people-fill': "\uE615",
+  'uicon-account-fill': "\uE614",
+  'uicon-thumb-down-fill': "\uE726",
+  'uicon-thumb-down': "\uE727",
+  'uicon-thumb-up': "\uE733",
+  'uicon-thumb-up-fill': "\uE72F",
+  'uicon-lock-fill': "\uE979",
+  'uicon-lock-open': "\uE973",
+  'uicon-lock-opened-fill': "\uE974",
+  'uicon-lock': "\uE97A",
+  'uicon-red-packet-fill': "\uE690",
+  'uicon-photo-fill': "\uE98B",
+  'uicon-photo': "\uE98D",
+  'uicon-volume-off-fill': "\uE659",
+  'uicon-volume-off': "\uE644",
+  'uicon-volume-fill': "\uE670",
+  'uicon-volume': "\uE633",
+  'uicon-red-packet': "\uE691",
+  'uicon-download': "\uE63C",
+  'uicon-arrow-up-fill': "\uE6B0",
+  'uicon-arrow-down-fill': "\uE600",
+  'uicon-play-left-fill': "\uE675",
+  'uicon-play-right-fill': "\uE676",
+  'uicon-rewind-left-fill': "\uE679",
+  'uicon-rewind-right-fill': "\uE67A",
+  'uicon-arrow-downward': "\uE604",
+  'uicon-arrow-leftward': "\uE601",
+  'uicon-arrow-rightward': "\uE603",
+  'uicon-arrow-upward': "\uE607",
+  'uicon-arrow-down': "\uE60D",
+  'uicon-arrow-right': "\uE605",
+  'uicon-arrow-left': "\uE60E",
+  'uicon-arrow-up': "\uE606",
+  'uicon-skip-back-left': "\uE674",
+  'uicon-skip-forward-right': "\uE672",
+  'uicon-rewind-right': "\uE66F",
+  'uicon-rewind-left': "\uE671",
+  'uicon-arrow-right-double': "\uE68D",
+  'uicon-arrow-left-double': "\uE68C",
+  'uicon-wifi-off': "\uE668",
+  'uicon-wifi': "\uE667",
+  'uicon-empty-data': "\uE62F",
+  'uicon-empty-history': "\uE684",
+  'uicon-empty-list': "\uE68B",
+  'uicon-empty-page': "\uE627",
+  'uicon-empty-order': "\uE639",
+  'uicon-man': "\uE697",
+  'uicon-woman': "\uE69C",
+  'uicon-man-add': "\uE61C",
+  'uicon-man-add-fill': "\uE64C",
+  'uicon-man-delete': "\uE61A",
+  'uicon-man-delete-fill': "\uE66A",
+  'uicon-zh': "\uE70A",
+  'uicon-en': "\uE692"
+};
+exports.default = _default;
+
+/***/ }),
+/* 414 */
+/*!****************************************************************************!*\
+  !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-icon/props.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 图标类名
+    name: {
+      type: String,
+      default: uni.$u.props.icon.name
+    },
+    // 图标颜色，可接受主题色
+    color: {
+      type: String,
+      default: uni.$u.props.icon.color
+    },
+    // 字体大小，单位px
+    size: {
+      type: [String, Number],
+      default: uni.$u.props.icon.size
+    },
+    // 是否显示粗体
+    bold: {
+      type: Boolean,
+      default: uni.$u.props.icon.bold
+    },
+    // 点击图标的时候传递事件出去的index（用于区分点击了哪一个）
+    index: {
+      type: [String, Number],
+      default: uni.$u.props.icon.index
+    },
+    // 触摸图标时的类名
+    hoverClass: {
+      type: String,
+      default: uni.$u.props.icon.hoverClass
+    },
+    // 自定义扩展前缀，方便用户扩展自己的图标库
+    customPrefix: {
+      type: String,
+      default: uni.$u.props.icon.customPrefix
+    },
+    // 图标右边或者下面的文字
+    label: {
+      type: [String, Number],
+      default: uni.$u.props.icon.label
+    },
+    // label的位置，只能右边或者下边
+    labelPos: {
+      type: String,
+      default: uni.$u.props.icon.labelPos
+    },
+    // label的大小
+    labelSize: {
+      type: [String, Number],
+      default: uni.$u.props.icon.labelSize
+    },
+    // label的颜色
+    labelColor: {
+      type: String,
+      default: uni.$u.props.icon.labelColor
+    },
+    // label与图标的距离
+    space: {
+      type: [String, Number],
+      default: uni.$u.props.icon.space
+    },
+    // 图片的mode
+    imgMode: {
+      type: String,
+      default: uni.$u.props.icon.imgMode
+    },
+    // 用于显示图片小图标时，图片的宽度
+    width: {
+      type: [String, Number],
+      default: uni.$u.props.icon.width
+    },
+    // 用于显示图片小图标时，图片的高度
+    height: {
+      type: [String, Number],
+      default: uni.$u.props.icon.height
+    },
+    // 用于解决某些情况下，让图标垂直居中的用途
+    top: {
+      type: [String, Number],
+      default: uni.$u.props.icon.top
+    },
+    // 是否阻止事件传播
+    stop: {
+      type: Boolean,
+      default: uni.$u.props.icon.stop
+    }
+  }
+};
+exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ })

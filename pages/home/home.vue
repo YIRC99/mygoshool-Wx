@@ -1,5 +1,6 @@
 <template>
   <view class="page">
+
     <view class="" style="background-color: #fff; padding-bottom: 5rpx;">
       <view class="" class="u-line-2 mynative">
         <text>社区公告</text>
@@ -8,17 +9,16 @@
     </view>
 
 
-    <u-sticky>
-      <u-tabs :list="list" style="background-color: #F6F5F6;" :height="160" :font-size="40" :is-scroll="false"
-        bar-height="60" bar-width="400" :current="current" @change="change"></u-tabs>
-    </u-sticky>
+    <u-tabs :list="list" style="background-color: #F6F5F6;" :height="160" :font-size="40" :is-scroll="false"
+      bar-height="60" bar-width="400" :current="current" @change="change"></u-tabs>
 
 
-    <scroll-view scroll-y="true" style="height: 75vh; " :refresher-triggered="isRefresh"
-      @scrolltolower="scrollDown" @refresherrefresh="scrollPullDown" refresher-enabled>
+    <scroll-view scroll-y="true" style="height: 75vh; " :refresher-triggered="isRefresh" @scrolltolower="scrollDown"
+      @refresherrefresh="scrollPullDown" refresher-enabled>
 
       <view class="" v-show="current == 0">
-        <uni-card v-for="item in orderList" :key="item.orderId" :title="item.startTime + ' 出发'"
+        <u-empty text="暂时没有拼车订单 快快发布一个吧 (๑>؂<๑）" v-if="orderList.length == 0" mode="order"></u-empty>
+        <uni-card v-for="(item,index) in orderList" :key="index" :title="item.startTime + ' 出发'"
           thumbnail='/static/logo.png' @click="clickCard(item.orderId)">
           <view class="my-car-box">
             <view class="">
@@ -53,7 +53,9 @@
     </scroll-view>
 
 
-    <uv-popup ref="popup" mode="bottom" round="50rpx">
+
+
+    <uv-popup ref="popup" mode="bottom" round="50rpx" @maskClick="closePopup">
       <view class="popup-box">
         <scroll-view scroll-y="true" style="height: 62vh; background-color: #ffffff; padding-bottom: 50rpx;"
           show-scrollbar="true">
@@ -115,9 +117,11 @@
       </view>
     </uv-popup>
 
-    <view class="addicon" @click="toAddOrder">
+    <view class="addicon" v-show="!popupShow" @click="toAddOrder">
       <image src="/static/add.png" mode=""></image>
     </view>
+
+
 
 
   </view>
@@ -127,7 +131,8 @@
   export default {
     data() {
       return {
-        isRefresh: true,
+        oneRefresh: false, // 页面是否有过第一次刷新
+        isRefresh: false,
         popupShow: false,
         noticeText: '编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。',
         list: [{
@@ -136,7 +141,17 @@
           name: '濂溪校区'
         }],
         current: 0,
-        orderList: [{
+        orderList: []
+      };
+    },
+    methods: {
+      scrollPullDown() {
+        console.log('下拉刷新了');
+        if (this.isRefresh == true) return
+
+        this.isRefresh = true
+        setTimeout(() => {
+          this.orderList.push({
             orderId: 10086,
             avatar: '/static/logo.png',
             startDate: '2024-02-25',
@@ -144,82 +159,11 @@
             startAddress: '九江职业大学北门',
             endAddress: '九江站',
             remark: '我是备注,我是备注,我是备注,我是备注,我是备注'
-          },
-          {
-            orderId: 10087,
-            avatar: '/static/logo.png',
-            startDate: '2024-02-25',
-            startTime: '19:45',
-            startAddress: '九江职业大学北门',
-            endAddress: '九江站',
-            remark: '我是备注,我是备注,我是备注,我是备注,我是备注'
-          },
-          {
-            orderId: 10088,
-            avatar: '/static/logo.png',
-            startDate: '2024-02-25',
-            startTime: '19:45',
-            startAddress: '九江职业大学北门',
-            endAddress: '九江站',
-            remark: '我是备注,我是备注,我是备注,我是备注,我是备注'
-          },
-          {
-            orderId: 10089,
-            avatar: '/static/logo.png',
-            startDate: '2024-02-25',
-            startTime: '19:45',
-            startAddress: '九江职业大学北门',
-            endAddress: '九江站',
-            remark: '我是备注,我是备注,我是备注,我是备注,我是备注'
-          },
-          {
-            orderId: 10080,
-            avatar: '/static/logo.png',
-            startDate: '2024-02-25',
-            startTime: '19:45',
-            startAddress: '九江职业大学北门',
-            endAddress: '九江站',
-            remark: '我是备注,我是备注,我是备注,我是备注,我是备注'
-          },
-          {
-            orderId: 10081,
-            avatar: '/static/logo.png',
-            startDate: '2024-02-25',
-            startTime: '19:45',
-            startAddress: '九江职业大学北门',
-            endAddress: '九江站',
-            remark: '我是备注,我是备注,我是备注,我是备注,我是备注'
-          },
-          {
-            orderId: 10082,
-            avatar: '/static/logo.png',
-            startDate: '2024-02-25',
-            startTime: '19:45',
-            startAddress: '九江职业大学北门',
-            endAddress: '九江站',
-            remark: '我是备注,我是备注,我是备注,我是备注,我是备注'
-          },
-          {
-            orderId: 10083,
-            avatar: '/static/logo.png',
-            startDate: '2024-02-25',
-            startTime: '19:45',
-            startAddress: '九江职业大学北门',
-            endAddress: '九江站',
-            remark: '我是备注,我是备注,我是备注,我是备注,我是备注'
-          }
-        ]
-      };
-    },
-    methods: {
-      scrollPullDown() {
-        console.log('下拉刷新了');
-        this.isRefresh = true
-        setTimeout(() => {
+          })
+
           this.isRefresh = false
           console.log('下拉刷新结束了');
         }, 1000)
-        
       },
       scrollDown() {
         console.log('滚动条到了 底部');
@@ -232,13 +176,26 @@
       clickCard(orderId) {
         console.log('点击了卡片');
         this.$refs.popup.open()
+        this.popupShow = true
+      },
+      closePopup() {
+        this.popupShow = false
       },
       change(e) {
         this.current = e.index
+      },
+      myonshow() {
+        console.log('myonshow');
+        this.simulateSwipeDown()
+      },
+      simulateSwipeDown() {
+        console.log('首次进入页面 自动下拉刷新');
+        if (!this.oneRefresh) {
+          console.log('this.oneRefresh', this.oneRefresh);
+          this.oneRefresh = true
+          this.scrollPullDown()
+        }
       }
-    },
-    created() {
-      console.log('creaad');
     }
   }
 </script>

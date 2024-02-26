@@ -82,10 +82,10 @@ var components
 try {
   components = {
     uniEasyinput: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput */ "uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput.vue */ 201))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput */ "uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput.vue */ 214))
     },
     mylist: function () {
-      return __webpack_require__.e(/*! import() | components/mylist/mylist */ "components/mylist/mylist").then(__webpack_require__.bind(null, /*! @/components/mylist/mylist.vue */ 208))
+      return __webpack_require__.e(/*! import() | components/mylist/mylist */ "components/mylist/mylist").then(__webpack_require__.bind(null, /*! @/components/mylist/mylist.vue */ 221))
     },
   }
 } catch (e) {
@@ -142,25 +142,19 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
+/* WEBPACK VAR INJECTION */(function(uni, wx) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var myindex = function myindex() {
-  __webpack_require__.e(/*! require.ensure | pages/my/index */ "pages/my/index").then((function () {
-    return resolve(__webpack_require__(/*! @/pages/my/index.vue */ 215));
-  }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
-};
 var mylist = function mylist() {
   __webpack_require__.e(/*! require.ensure | components/mylist/mylist */ "components/mylist/mylist").then((function () {
-    return resolve(__webpack_require__(/*! @/components/mylist/mylist.vue */ 208));
+    return resolve(__webpack_require__(/*! @/components/mylist/mylist.vue */ 221));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {
   components: {
-    myindex: myindex,
     mylist: mylist
   },
   data: function data() {
@@ -174,6 +168,15 @@ var _default = {
     };
   },
   methods: {
+    toOrder: function toOrder() {
+      console.log('1111');
+      uni.navigateTo({
+        url: '/pages/my/order',
+        success: function success(res) {},
+        fail: function fail() {},
+        complete: function complete() {}
+      });
+    },
     myonshow: function myonshow() {
       var key = uni.getStorageSync('token');
       if (key == undefined || key == null || key == '') {
@@ -228,11 +231,16 @@ var _default = {
         title: '微信登录',
         icon: 'none'
       });
-    } //第三方支付宝登录
+      wx.login({
+        success: function success(res) {
+          console.log(res);
+        }
+      });
+    }
   }
 };
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"]))
 
 /***/ }),
 
@@ -294,7 +302,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 191:
+/***/ 190:
 /*!*****************************************************************!*\
   !*** F:/CodeFile/pingCar/main.js?{"page":"pages%2Fmy%2Flogin"} ***!
   \*****************************************************************/
@@ -315,5 +323,5 @@ createPage(_login.default);
 
 /***/ })
 
-},[[191,"common/runtime","common/vendor"]]]);
+},[[190,"common/runtime","common/vendor"]]]);
 //# sourceMappingURL=../../../.sourcemap/mp-weixin/pages/my/login.js.map

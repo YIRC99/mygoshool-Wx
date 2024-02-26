@@ -56,9 +56,10 @@
       </view>
       
       <view class="middle-box">
-
-        <mylist text="历史订单"></mylist>
-
+        <view class="" @click="toOrder">
+          <mylist text="历史订单"></mylist>
+        </view>
+        
         <mylist iconImg="/static/yijian2.png" text="意见反馈"></mylist>
 
         <view class="" @click="loginout">
@@ -77,11 +78,9 @@
 </template>
 
 <script>
-  import myindex from '@/pages/my/index.vue'
   import mylist from '@/components/mylist/mylist.vue'
   export default {
     components: {
-      myindex,
       mylist
     },
     data() {
@@ -93,6 +92,15 @@
       };
     },
     methods: {
+      toOrder(){
+        console.log('1111');
+        uni.navigateTo({
+          url: '/pages/my/order',
+          success: res => {},
+          fail: () => {},
+          complete: () => {}
+        });
+      },
       myonshow() {
         let key = uni.getStorageSync('token')
         if (key == undefined || key == null || key == '') {
@@ -151,8 +159,14 @@
           title: '微信登录',
           icon: 'none'
         });
+        wx.login({
+          success: (res)=>{
+            console.log(res);
+          }
+        })
+        
+        
       },
-      //第三方支付宝登录
     }
   }
 </script>

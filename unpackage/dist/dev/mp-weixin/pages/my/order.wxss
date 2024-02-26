@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.popup-box {
+  height: 62vh;
+  width: 100%;
+  padding: 50rpx 0;
+  display: flex;
+  flex-direction: column;
+}
+.popup-box .my-middle-box {
+  width: 100%;
+  border-radius: 0;
+}
+.popup-box .my-middle-box .my-text-box {
+  background-color: #ffffff;
+  font-size: 30rpx;
+  padding: 20rpx 30rpx;
+  line-height: 42rpx;
+  color: #3d3d3d;
+}
+.popup-box .my-middle-box .my-text-box2 {
+  display: flex;
+  align-items: center;
+  margin-left: 30rpx;
+  justify-content: space-between;
+  margin-top: 20rpx;
+  line-height: 50rpx;
+}
+.popup-box .my-middle-box .my-text-box2 .my-text-box2-t {
+  font-weight: bold;
+  margin: 0 10rpx;
+}
+.popup-box .my-middle-box .my-text-box2 .right {
+  margin-right: 30rpx;
+}
+.popup-box .top-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+  padding: 30rpx;
+  padding-bottom: 40rpx;
+  color: black;
+}
+.popup-box .top-box .left image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.popup-box .top-box .middle {
+  font-size: 36rpx;
+  margin-left: 40rpx;
+}
+.popup-box .top-box .right {
+  position: absolute;
+  right: 40rpx;
+}
+.popup-box .top-box .right image {
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+.myrelation {
+  font-size: 32rpx;
+  margin: 10rpx 0;
+}
+.my-car-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.my-car-box .car-left {
+  display: flex;
+  align-items: center;
+  margin: 15rpx 0;
+  font-size: 32rpx;
+}
+.my-car-box .car-left .my-icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 15rpx;
+}
+.my-car-box .car-right {
+  margin-right: 50rpx;
+}
+.my-car-box .car-right image {
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+ .u-tabs__wrapper__nav {
+  background-color: #ffffff !important;
+}
+ .u-tabs__wrapper__nav__item__text {
+  font-size: 40rpx !important;
+}
+

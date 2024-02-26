@@ -6,9 +6,9 @@
       
       
       <view class="pagebox">
-        <my ref="mypage" v-show="tabIndex == 2"></my>
-        <order v-show="tabIndex == 1"></order>
-        <home v-show="tabIndex == 0"></home>
+        <my ref="mypage" v-show="tabIndex == 1"></my>
+        <!-- <order v-show="tabIndex == 1"></order> -->
+        <home ref="homepage" v-show="tabIndex == 0"></home>
       </view>
       
 			<MagicNavigationBar :items="items" :height="60" :indicatorSize="50"
@@ -39,13 +39,13 @@
         tabIndex: 2,
 				items:[
 					{
-						icon:{src:require("@/static/home.png"),width:30,height:30},
+						icon:{src:require("@/static/carIcon2.png"),width:30,height:30},
 						text:'拼车广场',
 					},
-					{
-						icon:{src:require("@/static/cart (3).png"),width:30,height:30},
-						text:'我的订单',
-					},
+					// {
+					// 	icon:{src:require("@/static/cart (3).png"),width:30,height:30},
+					// 	text:'我的订单',
+					// },
 					{
 						icon:{src:require("@/static/notice (3).png"),width:30,height:30},
 						text:'个人中心',
@@ -57,19 +57,24 @@
 		methods: {
 			onTab(index,item){
         this.tabIndex = index
-        if(index == 2 && this.$refs.mypage){
+        if(index == 1 ){
           uni.setNavigationBarTitle({title: '我的'})
           this.$refs.mypage.myonshow()
         }else if( index == 0){
-          uni.setNavigationBarTitle({title: '首页'})
-        }else if( index == 1){
-          uni.setNavigationBarTitle({title: '订单'})
+          uni.setNavigationBarTitle({title: '拼车广场'})
+          console.log('调用 myonshow 方法');
+           this.$refs.homepage.myonshow()
         }
+        // else if( index == 1){
+        //   uni.setNavigationBarTitle({title: '订单'})
+        // }
 				console.log('tabIndex',index)
 			}
 		},
-    onLoad() {
+    mounted() {
+      console.log('页面初始化onload');
       this.onTab(0,{})
+      console.log('页面初始化onload 完毕');
     }
 	}
 </script>

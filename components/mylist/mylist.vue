@@ -34,6 +34,8 @@
 </script>
 
 <style lang="scss">
+    $rightImgSize: 40rpx;
+    $leftImgSize: 50rpx;
     .middle-box-list {
       display: flex;
       align-items: center;
@@ -45,8 +47,8 @@
         margin-left: 30rpx;
 
         .left-img {
-          width: 70rpx;
-          height: 70rpx;
+          width: $leftImgSize;
+          height: $leftImgSize;
           border-radius: 50%;
         }
       }
@@ -62,8 +64,8 @@
 
         .right-img {
           margin-right: 20rpx;
-          width: 50rpx;
-          height: 50rpx;
+          width: $rightImgSize;
+          height: $rightImgSize;
         }
       }
     }

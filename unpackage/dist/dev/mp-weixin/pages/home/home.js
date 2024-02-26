@@ -79,20 +79,20 @@ __webpack_require__.r(__webpack_exports__);
 var components
 try {
   components = {
-    uSticky: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-sticky/u-sticky */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-sticky/u-sticky")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-sticky/u-sticky.vue */ 220))
-    },
     uTabs: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-tabs/u-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-tabs/u-tabs")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-tabs/u-tabs.vue */ 228))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-tabs/u-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-tabs/u-tabs")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-tabs/u-tabs.vue */ 236))
+    },
+    uEmpty: function () {
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-empty/u-empty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-empty/u-empty")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-empty/u-empty.vue */ 228))
     },
     uniCard: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 236))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 244))
     },
     uvPopup: function () {
-      return Promise.all(/*! import() | uni_modules/uv-popup/components/uv-popup/uv-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-popup/components/uv-popup/uv-popup")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-popup/components/uv-popup/uv-popup.vue */ 243))
+      return Promise.all(/*! import() | uni_modules/uv-popup/components/uv-popup/uv-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-popup/components/uv-popup/uv-popup")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-popup/components/uv-popup/uv-popup.vue */ 251))
     },
     uniSection: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 258))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 266))
     },
   }
 } catch (e) {
@@ -116,6 +116,15 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var g0 = _vm.orderList.length
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        g0: g0,
+      },
+    }
+  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -280,10 +289,16 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
-      isRefresh: true,
+      oneRefresh: false,
+      // 页面是否有过第一次刷新
+      isRefresh: false,
       popupShow: false,
       noticeText: '编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。',
       list: [{
@@ -292,79 +307,25 @@ var _default = {
         name: '濂溪校区'
       }],
       current: 0,
-      orderList: [{
-        orderId: 10086,
-        avatar: '/static/logo.png',
-        startDate: '2024-02-25',
-        startTime: '19:45',
-        startAddress: '九江职业大学北门',
-        endAddress: '九江站',
-        remark: '我是备注,我是备注,我是备注,我是备注,我是备注'
-      }, {
-        orderId: 10087,
-        avatar: '/static/logo.png',
-        startDate: '2024-02-25',
-        startTime: '19:45',
-        startAddress: '九江职业大学北门',
-        endAddress: '九江站',
-        remark: '我是备注,我是备注,我是备注,我是备注,我是备注'
-      }, {
-        orderId: 10088,
-        avatar: '/static/logo.png',
-        startDate: '2024-02-25',
-        startTime: '19:45',
-        startAddress: '九江职业大学北门',
-        endAddress: '九江站',
-        remark: '我是备注,我是备注,我是备注,我是备注,我是备注'
-      }, {
-        orderId: 10089,
-        avatar: '/static/logo.png',
-        startDate: '2024-02-25',
-        startTime: '19:45',
-        startAddress: '九江职业大学北门',
-        endAddress: '九江站',
-        remark: '我是备注,我是备注,我是备注,我是备注,我是备注'
-      }, {
-        orderId: 10080,
-        avatar: '/static/logo.png',
-        startDate: '2024-02-25',
-        startTime: '19:45',
-        startAddress: '九江职业大学北门',
-        endAddress: '九江站',
-        remark: '我是备注,我是备注,我是备注,我是备注,我是备注'
-      }, {
-        orderId: 10081,
-        avatar: '/static/logo.png',
-        startDate: '2024-02-25',
-        startTime: '19:45',
-        startAddress: '九江职业大学北门',
-        endAddress: '九江站',
-        remark: '我是备注,我是备注,我是备注,我是备注,我是备注'
-      }, {
-        orderId: 10082,
-        avatar: '/static/logo.png',
-        startDate: '2024-02-25',
-        startTime: '19:45',
-        startAddress: '九江职业大学北门',
-        endAddress: '九江站',
-        remark: '我是备注,我是备注,我是备注,我是备注,我是备注'
-      }, {
-        orderId: 10083,
-        avatar: '/static/logo.png',
-        startDate: '2024-02-25',
-        startTime: '19:45',
-        startAddress: '九江职业大学北门',
-        endAddress: '九江站',
-        remark: '我是备注,我是备注,我是备注,我是备注,我是备注'
-      }]
+      orderList: []
     };
   },
   methods: {
     scrollPullDown: function scrollPullDown() {
       var _this = this;
       console.log('下拉刷新了');
+      if (this.isRefresh == true) return;
       this.isRefresh = true;
       setTimeout(function () {
+        _this.orderList.push({
+          orderId: 10086,
+          avatar: '/static/logo.png',
+          startDate: '2024-02-25',
+          startTime: '19:45',
+          startAddress: '九江职业大学北门',
+          endAddress: '九江站',
+          remark: '我是备注,我是备注,我是备注,我是备注,我是备注'
+        });
         _this.isRefresh = false;
         console.log('下拉刷新结束了');
       }, 1000);
@@ -380,13 +341,26 @@ var _default = {
     clickCard: function clickCard(orderId) {
       console.log('点击了卡片');
       this.$refs.popup.open();
+      this.popupShow = true;
+    },
+    closePopup: function closePopup() {
+      this.popupShow = false;
     },
     change: function change(e) {
       this.current = e.index;
+    },
+    myonshow: function myonshow() {
+      console.log('myonshow');
+      this.simulateSwipeDown();
+    },
+    simulateSwipeDown: function simulateSwipeDown() {
+      console.log('首次进入页面 自动下拉刷新');
+      if (!this.oneRefresh) {
+        console.log('this.oneRefresh', this.oneRefresh);
+        this.oneRefresh = true;
+        this.scrollPullDown();
+      }
     }
-  },
-  created: function created() {
-    console.log('creaad');
   }
 };
 exports.default = _default;
@@ -423,7 +397,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 193:
+/***/ 192:
 /*!******************************************************************!*\
   !*** F:/CodeFile/pingCar/main.js?{"page":"pages%2Fhome%2Fhome"} ***!
   \******************************************************************/
@@ -444,5 +418,5 @@ createPage(_home.default);
 
 /***/ })
 
-},[[193,"common/runtime","common/vendor"]]]);
+},[[192,"common/runtime","common/vendor"]]]);
 //# sourceMappingURL=../../../.sourcemap/mp-weixin/pages/home/home.js.map
