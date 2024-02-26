@@ -819,10 +819,26 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {
 
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -955,6 +971,7 @@ exports.default = void 0;
 var _default = {
   data: function data() {
     return {
+      orderWx: 'YIRC99',
       oneRefresh: false,
       // 页面是否有过第一次刷新
       isRefresh: false,
@@ -965,27 +982,48 @@ var _default = {
       }, {
         name: '濂溪校区'
       }],
-      current: 0,
-      orderList: []
+      currentIndex: 0,
+      orderList: [],
+      currentOrder: {}
     };
   },
   methods: {
-    scrollPullDown: function scrollPullDown() {
+    copyWx: function copyWx() {
       var _this = this;
+      uni.setClipboardData({
+        data: this.orderWx,
+        complete: function complete(res) {
+          console.log('点击复制的结果', res);
+          _this.$refs.receivePopup.close();
+        }
+      });
+    },
+    closeReceivePopup: function closeReceivePopup() {
+      this.popupShow = false;
+    },
+    receiveOrder: function receiveOrder() {
+      this.$refs.popup.close();
+      this.$refs.receivePopup.open();
+    },
+    scrollPullDown: function scrollPullDown() {
+      var _this2 = this;
       console.log('下拉刷新了');
       if (this.isRefresh == true) return;
       this.isRefresh = true;
       setTimeout(function () {
-        _this.orderList.push({
+        var _this2$orderList$push;
+        _this2.orderList.push((_this2$orderList$push = {
           orderId: 10086,
+          userName: '一见如初',
+          userWx: 'YIRC99',
           avatar: '/static/logo.png',
           startDate: '2024-02-25',
           startTime: '19:45',
           startAddress: '九江职业大学北门',
-          endAddress: '九江站',
-          remark: '我是备注,我是备注,我是备注,我是备注,我是备注'
-        });
-        _this.isRefresh = false;
+          startAddressAll: '江西省九江市九江职业大学濂溪校区88号北门',
+          endAddress: '九江站'
+        }, (0, _defineProperty2.default)(_this2$orderList$push, "endAddress", '江西省九江市九江火车站'), (0, _defineProperty2.default)(_this2$orderList$push, "currentPersonNum", 1), (0, _defineProperty2.default)(_this2$orderList$push, "lackPersonNum", 1), (0, _defineProperty2.default)(_this2$orderList$push, "isBefor", false), (0, _defineProperty2.default)(_this2$orderList$push, "beforTime", 30), (0, _defineProperty2.default)(_this2$orderList$push, "isAfter", true), (0, _defineProperty2.default)(_this2$orderList$push, "afterTime", 0), (0, _defineProperty2.default)(_this2$orderList$push, "remark", '守时,以免耽误大家的时间 后备箱空间少 有行李箱请提前沟通 最高80个字'), _this2$orderList$push));
+        _this2.isRefresh = false;
         console.log('下拉刷新结束了');
       }, 1000);
     },
@@ -997,8 +1035,10 @@ var _default = {
         url: '/subpkg/addCarorder'
       });
     },
-    clickCard: function clickCard(orderId) {
+    clickCard: function clickCard(order) {
       console.log('点击了卡片');
+      this.currentOrder = order;
+      console.log(this.currentOrder);
       this.$refs.popup.open();
       this.popupShow = true;
     },
@@ -1006,7 +1046,7 @@ var _default = {
       this.popupShow = false;
     },
     change: function change(e) {
-      this.current = e.index;
+      this.currentIndex = e.index;
     },
     myonshow: function myonshow() {
       console.log('myonshow');
