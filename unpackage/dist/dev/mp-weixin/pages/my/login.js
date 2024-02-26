@@ -168,6 +168,11 @@ var _default = {
     };
   },
   methods: {
+    toFeedback: function toFeedback() {
+      uni.navigateTo({
+        url: '/subpkg/feedback'
+      });
+    },
     toOrder: function toOrder() {
       console.log('1111');
       uni.navigateTo({

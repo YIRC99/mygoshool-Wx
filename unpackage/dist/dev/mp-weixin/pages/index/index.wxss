@@ -293,7 +293,7 @@
 .popup-box {
   height: 62vh;
   width: 100%;
-  padding: 50rpx 0;
+  padding-top: 50rpx;
   display: flex;
   flex-direction: column;
 }
@@ -322,6 +322,9 @@
 }
 .popup-box .my-middle-box .my-text-box2 .right {
   margin-right: 30rpx;
+}
+.popup-box .down-box {
+  height: 130rpx;
 }
 .popup-box .down-box .btn-grad {
   background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);

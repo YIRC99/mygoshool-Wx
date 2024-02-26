@@ -18,7 +18,7 @@
 
       <view class="" v-show="currentIndex == 0">
         <u-empty text="暂时没有拼车订单 快快发布一个吧 (๑>؂<๑）" v-if="orderList.length == 0" mode="order"></u-empty>
-        <uni-card v-for="(item,index) in orderList" :key="index" :title="item.startTime + ' 出发'"
+        <uni-card v-for="(item,index) in orderList" :key="index" :title="subYear(item.startDate) + ' '+item.startTime + ' 出发'"
           thumbnail='/static/logo.png' @click="clickCard(item)">
           <view class="my-car-box">
             <view class="">
@@ -59,7 +59,7 @@
 
     <uv-popup ref="popup" mode="bottom" round="50rpx" @maskClick="closePopup">
       <view class="popup-box">
-        <scroll-view scroll-y="true" style="height: 62vh; background-color: #ffffff; padding-bottom: 50rpx;"
+        <scroll-view scroll-y="true" style="height: 62vh; background-color: #ffffff;"
           show-scrollbar="true">
           <view class="top-box">
             <view class="left">
@@ -123,7 +123,7 @@
           <image class="titleImg" src="../../static/succes1.png" mode="widthFix"></image>
         </view>
         <view>友好交流互帮互助</view>
-        <view>对方微信: {{orderWx}}</view>
+        <view>对方微信: {{currentOrder.userWx}}</view>
         <view>关闭后可在历史拼车中继续查看</view>
         <view class="down-box">
           <button class="btn-grad" @click="copyWx">确定(自动复制联系方式)</button>
@@ -145,7 +145,6 @@
   export default {
     data() {
       return {
-        orderWx: 'YIRC99',
         oneRefresh: false, // 页面是否有过第一次刷新
         isRefresh: false,
         popupShow: false,
@@ -163,7 +162,7 @@
     methods: {
       copyWx(){
         uni.setClipboardData({
-          data: this.orderWx,
+          data: this.currentOrder.userWx,
           complete: (res) => {
             console.log('点击复制的结果',res);
             this.$refs.receivePopup.close()
@@ -318,7 +317,7 @@
   .popup-box {
     height: 62vh;
     width: 100%;
-    padding: 50rpx 0;
+    padding-top: 50rpx;
     display: flex;
     flex-direction: column;
 
@@ -356,6 +355,7 @@
     }
 
     .down-box {
+      height: 130rpx;
       .btn-grad {
         background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
         margin: 10px;

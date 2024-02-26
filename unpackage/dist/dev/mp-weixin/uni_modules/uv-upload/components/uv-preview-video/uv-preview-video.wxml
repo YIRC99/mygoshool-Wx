@@ -1,0 +1,1 @@
+<uv-popup bind:change="__e" vue-id="8e00faee-1" data-ref="popup" data-event-opts="{{[['^change',[['change']]]]}}" class="data-v-67ad7bc6 vue-ref" bind:__l="__l" vue-slots="{{['default']}}"><block wx:if="{{show}}"><view class="video-view data-v-67ad7bc6"><video class="video data-v-67ad7bc6" src="{{getSec}}" autoplay="{{autoplay}}"></video></view></block></uv-popup>

@@ -10,7 +10,8 @@
     {
       "root": "subpkg",
       "pages": [
-        "addCarorder"
+        "addCarorder",
+        "feedback"
       ]
     }
   ],

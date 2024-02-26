@@ -22,6 +22,10 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 // @ts-ignore
 wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 _vue.default.use(_uviewUi.default);
+_vue.default.prototype.subYear = function (str) {
+  if (str == undefined) return "";
+  return str.slice(5);
+};
 _vue.default.config.productionTip = false;
 _App.default.mpType = 'app';
 var app = new _vue.default(_objectSpread({}, _App.default));

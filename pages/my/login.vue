@@ -59,8 +59,9 @@
         <view class="" @click="toOrder">
           <mylist text="历史订单"></mylist>
         </view>
-        
-        <mylist iconImg="/static/yijian2.png" text="意见反馈"></mylist>
+        <view class="" @click="toFeedback">
+          <mylist iconImg="/static/yijian2.png" text="意见反馈"></mylist>
+        </view>
 
         <view class="" @click="loginout">
           <mylist iconImg="/static/tuichu.png" text="退出账号"></mylist>
@@ -92,6 +93,11 @@
       };
     },
     methods: {
+      toFeedback(){
+        uni.navigateTo({
+          url: '/subpkg/feedback'
+        });
+      },
       toOrder(){
         console.log('1111');
         uni.navigateTo({

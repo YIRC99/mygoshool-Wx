@@ -5,7 +5,11 @@ import uView from "uview-ui";
 Vue.use(uView);
 
 
-
+Vue.prototype.subYear =(str) =>{
+	if(str ==undefined)
+		return ""
+	return str.slice(5)
+}
 
 
 

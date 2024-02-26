@@ -59,6 +59,14 @@
             "navigationBarTitleText" : "发起拼车",
             "enablePullDownRefresh" : false
           }
+        },
+        {
+          "path" : "feedback",
+          "style" : 
+          {
+            "navigationBarTitleText" : "建议与反馈",
+            "enablePullDownRefresh" : false
+          }
         }
       ]
     }

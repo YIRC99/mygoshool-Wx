@@ -24054,6 +24054,357 @@ var _default = {
 exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
+/***/ }),
+/* 415 */,
+/* 416 */,
+/* 417 */,
+/* 418 */,
+/* 419 */,
+/* 420 */,
+/* 421 */,
+/* 422 */,
+/* 423 */,
+/* 424 */,
+/* 425 */,
+/* 426 */,
+/* 427 */,
+/* 428 */,
+/* 429 */,
+/* 430 */,
+/* 431 */,
+/* 432 */,
+/* 433 */,
+/* 434 */,
+/* 435 */,
+/* 436 */
+/*!*******************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-upload/components/uv-upload/utils.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni, wx) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.chooseFile = chooseFile;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function pickExclude(obj, keys) {
+  // 某些情况下，type可能会为
+  if (!['[object Object]', '[object File]'].includes(Object.prototype.toString.call(obj))) {
+    return {};
+  }
+  return Object.keys(obj).reduce(function (prev, key) {
+    if (!keys.includes(key)) {
+      prev[key] = obj[key];
+    }
+    return prev;
+  }, {});
+}
+function formatImage(res) {
+  return res.tempFiles.map(function (item) {
+    return _objectSpread(_objectSpread({}, pickExclude(item, ['path'])), {}, {
+      type: 'image',
+      url: item.path,
+      thumb: item.path,
+      size: item.size
+    });
+  });
+}
+function formatVideo(res) {
+  return [_objectSpread(_objectSpread({}, pickExclude(res, ['tempFilePath', 'thumbTempFilePath', 'errMsg'])), {}, {
+    type: 'video',
+    url: res.tempFilePath,
+    thumb: res.thumbTempFilePath,
+    size: res.size
+  })];
+}
+function formatMedia(res) {
+  return res.tempFiles.map(function (item) {
+    return _objectSpread(_objectSpread({}, pickExclude(item, ['fileType', 'thumbTempFilePath', 'tempFilePath'])), {}, {
+      type: res.type,
+      url: item.tempFilePath,
+      thumb: res.type === 'video' ? item.thumbTempFilePath : item.tempFilePath,
+      size: item.size
+    });
+  });
+}
+function formatFile(res) {
+  return res.tempFiles.map(function (item) {
+    return _objectSpread(_objectSpread({}, pickExclude(item, ['path'])), {}, {
+      url: item.path,
+      size: item.size
+    });
+  });
+}
+function chooseFile(_ref) {
+  var accept = _ref.accept,
+    multiple = _ref.multiple,
+    capture = _ref.capture,
+    compressed = _ref.compressed,
+    maxDuration = _ref.maxDuration,
+    sizeType = _ref.sizeType,
+    camera = _ref.camera,
+    maxCount = _ref.maxCount;
+  return new Promise(function (resolve, reject) {
+    switch (accept) {
+      case 'image':
+        uni.chooseImage({
+          count: multiple ? Math.min(maxCount, 9) : 1,
+          sourceType: capture,
+          sizeType: sizeType,
+          success: function success(res) {
+            return resolve(formatImage(res));
+          },
+          fail: reject
+        });
+        break;
+
+      // 只有微信小程序才支持chooseMedia接口
+      case 'media':
+        wx.chooseMedia({
+          count: multiple ? Math.min(maxCount, 9) : 1,
+          sourceType: capture,
+          maxDuration: maxDuration,
+          sizeType: sizeType,
+          camera: camera,
+          success: function success(res) {
+            return resolve(formatMedia(res));
+          },
+          fail: reject
+        });
+        break;
+      case 'video':
+        uni.chooseVideo({
+          sourceType: capture,
+          compressed: compressed,
+          maxDuration: maxDuration,
+          camera: camera,
+          success: function success(res) {
+            return resolve(formatVideo(res));
+          },
+          fail: reject
+        });
+        break;
+
+      // 只有微信小程序才支持chooseMessageFile接口
+      case 'file':
+        wx.chooseMessageFile({
+          count: multiple ? maxCount : 1,
+          type: accept,
+          success: function success(res) {
+            return resolve(formatFile(res));
+          },
+          fail: reject
+        });
+        break;
+      default:
+        // 此为保底选项，在accept不为上面任意一项的时候选取全部文件
+
+        wx.chooseMessageFile({
+          count: multiple ? maxCount : 1,
+          type: 'all',
+          success: function success(res) {
+            return resolve(formatFile(res));
+          },
+          fail: reject
+        });
+    }
+  });
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"]))
+
+/***/ }),
+/* 437 */
+/*!*******************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-upload/components/uv-upload/mixin.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _index = __webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/function/index.js */ 258);
+var _default = {
+  watch: {
+    // 监听accept的变化，判断是否符合个平台要求
+    // 只有微信小程序才支持选择媒体，文件类型，所以这里做一个判断提示
+    accept: {
+      immediate: true,
+      handler: function handler(val) {}
+    }
+  }
+};
+exports.default = _default;
+
+/***/ }),
+/* 438 */
+/*!*******************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-upload/components/uv-upload/props.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _uni$$uv, _uni$$uv$props;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default2 = {
+  props: _objectSpread({
+    // 接受的文件类型, 可选值为all media image file video
+    accept: {
+      type: String,
+      default: 'image'
+    },
+    // 	图片或视频拾取模式，当accept为image类型时设置capture可选额外camera可以直接调起摄像头
+    capture: {
+      type: [String, Array],
+      default: function _default() {
+        return ['album', 'camera'];
+      }
+    },
+    // 当accept为video时生效，是否压缩视频，默认为true
+    compressed: {
+      type: Boolean,
+      default: true
+    },
+    // 当accept为video时生效，可选值为back或front
+    camera: {
+      type: String,
+      default: 'back'
+    },
+    // 当accept为video时生效，拍摄视频最长拍摄时间，单位秒
+    maxDuration: {
+      type: Number,
+      default: 60
+    },
+    // 上传区域的图标，只能内置图标
+    uploadIcon: {
+      type: String,
+      default: 'camera-fill'
+    },
+    // 上传区域的图标的颜色，默认
+    uploadIconColor: {
+      type: String,
+      default: '#D3D4D6'
+    },
+    // 是否开启文件读取前事件
+    useBeforeRead: {
+      type: Boolean,
+      default: false
+    },
+    // 读取后的处理函数
+    afterRead: {
+      type: Function,
+      default: null
+    },
+    // 读取前的处理函数
+    beforeRead: {
+      type: Function,
+      default: null
+    },
+    // 是否开启图片预览功能
+    previewFullImage: {
+      type: Boolean,
+      default: true
+    },
+    // 是否开启视频预览功能
+    previewFullVideo: {
+      type: Boolean,
+      default: true
+    },
+    // 最大上传数量
+    maxCount: {
+      type: [String, Number],
+      default: 52
+    },
+    // 是否禁用
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    // 预览上传的图片时的裁剪模式，和image组件mode属性一致
+    imageMode: {
+      type: String,
+      default: 'aspectFill'
+    },
+    // 标识符，可以在回调函数的第二项参数中获取
+    name: {
+      type: String,
+      default: ''
+    },
+    // 所选的图片的尺寸, 可选值为original compressed
+    sizeType: {
+      type: Array,
+      default: function _default() {
+        return ['original', 'compressed'];
+      }
+    },
+    // 是否开启图片多选，部分安卓机型不支持
+    multiple: {
+      type: Boolean,
+      default: false
+    },
+    // 是否展示删除按钮
+    deletable: {
+      type: Boolean,
+      default: true
+    },
+    // 文件大小限制，单位为byte
+    maxSize: {
+      type: [String, Number],
+      default: Number.MAX_VALUE
+    },
+    // 显示已上传的文件列表
+    fileList: {
+      type: Array,
+      default: function _default() {
+        return [];
+      }
+    },
+    // 上传区域的提示文字
+    uploadText: {
+      type: String,
+      default: ''
+    },
+    // 内部预览图片区域和选择图片按钮的区域宽度
+    width: {
+      type: [String, Number],
+      default: 80
+    },
+    // 内部预览图片区域和选择图片按钮的区域高度
+    height: {
+      type: [String, Number],
+      default: 80
+    },
+    // 是否在上传完成后展示预览图
+    previewImage: {
+      type: Boolean,
+      default: true
+    }
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.upload)
+};
+exports.default = _default2;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
 /***/ })
 ]]);
 //# sourceMappingURL=../../.sourcemap/mp-weixin/common/vendor.js.map

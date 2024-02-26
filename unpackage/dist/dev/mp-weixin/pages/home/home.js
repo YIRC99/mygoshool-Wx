@@ -117,11 +117,20 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   var g0 = _vm.orderList.length
+  var l0 = _vm.__map(_vm.orderList, function (item, index) {
+    var $orig = _vm.__get_orig(item)
+    var m0 = _vm.subYear(item.startDate)
+    return {
+      $orig: $orig,
+      m0: m0,
+    }
+  })
   _vm.$mp.data = Object.assign(
     {},
     {
       $root: {
         g0: g0,
+        l0: l0,
       },
     }
   )
@@ -312,7 +321,6 @@ var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/run
 var _default = {
   data: function data() {
     return {
-      orderWx: 'YIRC99',
       oneRefresh: false,
       // 页面是否有过第一次刷新
       isRefresh: false,
@@ -332,7 +340,7 @@ var _default = {
     copyWx: function copyWx() {
       var _this = this;
       uni.setClipboardData({
-        data: this.orderWx,
+        data: this.currentOrder.userWx,
         complete: function complete(res) {
           console.log('点击复制的结果', res);
           _this.$refs.receivePopup.close();
