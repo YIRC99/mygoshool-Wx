@@ -8,7 +8,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(wx, createApp) {
+/* WEBPACK VAR INJECTION */(function(wx, uni, createApp) {
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
@@ -22,15 +22,70 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 // @ts-ignore
 wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 _vue.default.use(_uviewUi.default);
+// const http = 'http://192.168.1.13:33088/'
+var http = 'http://127.0.0.1:33088/';
+_vue.default.prototype.avahttp = http + 'avatar/download/';
+_vue.default.prototype.http = http;
 _vue.default.prototype.subYear = function (str) {
   if (str == undefined) return "";
   return str.slice(5);
+};
+_vue.default.prototype.get = function (opt) {
+  return new Promise(function (a, b) {
+    uni.request({
+      url: http + opt.url,
+      method: 'GET',
+      header: {
+        authorization: uni.getStorageSync("token")
+      },
+      data: opt.data,
+      success: function success(res) {
+        a(res.data);
+      },
+      fail: function fail() {},
+      complete: function complete() {}
+    });
+  });
+};
+_vue.default.prototype.put = function (opt) {
+  return new Promise(function (a, b) {
+    uni.request({
+      url: http + opt.url,
+      method: 'PUT',
+      header: {
+        authorization: uni.getStorageSync("token")
+      },
+      data: opt.data,
+      success: function success(res) {
+        a(res.data);
+      },
+      fail: function fail() {},
+      complete: function complete() {}
+    });
+  });
+};
+_vue.default.prototype.post = function (opt) {
+  return new Promise(function (a, b) {
+    uni.request({
+      url: http + opt.url,
+      method: 'POST',
+      header: {
+        authorization: uni.getStorageSync("token")
+      },
+      data: opt.data,
+      success: function success(res) {
+        a(res.data);
+      },
+      fail: function fail() {},
+      complete: function complete() {}
+    });
+  });
 };
 _vue.default.config.productionTip = false;
 _App.default.mpType = 'app';
 var app = new _vue.default(_objectSpread({}, _App.default));
 createApp(app).$mount();
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["createApp"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["createApp"]))
 
 /***/ }),
 

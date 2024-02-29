@@ -3,12 +3,67 @@ import App from './App'
 
 import uView from "uview-ui";
 Vue.use(uView);
-
-
+// const http = 'http://192.168.1.13:33088/'
+const http = 'http://127.0.0.1:33088/'
+Vue.prototype.avahttp = http + 'avatar/download/'
+Vue.prototype.http = http
 Vue.prototype.subYear =(str) =>{
 	if(str ==undefined)
 		return ""
 	return str.slice(5)
+}
+Vue.prototype.get =(opt) =>{
+	 return new Promise((a,b)=>{
+		uni.request({
+			url: http + opt.url,
+			method: 'GET',
+			header:{
+				authorization :uni.getStorageSync("token")
+			},
+			data: opt.data,
+			success: res => {
+				a(res.data)
+			},
+			fail: () => {},
+			complete: () => {}
+		});
+	})
+}
+
+Vue.prototype.put =(opt) =>{
+	 return new Promise((a,b)=>{
+		uni.request({
+			url: http + opt.url,
+			method: 'PUT',
+			header:{
+				authorization :uni.getStorageSync("token")
+			},
+			data: opt.data,
+			success: res => {
+				a(res.data)
+			},
+			fail: () => {},
+			complete: () => {}
+		});
+	})
+}
+
+Vue.prototype.post =(opt) =>{
+	 return new Promise((a,b)=>{
+		uni.request({
+			url: http + opt.url,
+			method: 'POST',
+			header:{
+				authorization :uni.getStorageSync("token")
+			},
+			data: opt.data,
+			success: res => {
+				a(res.data)
+			},
+			fail: () => {},
+			complete: () => {}
+		});
+	})
 }
 
 

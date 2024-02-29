@@ -1,27 +1,29 @@
 <template>
   <view class="page">
     <view>
-      
       <view class="">
-        <image src="/static/back.png" style="width: 100%; height: 450rpx; background-size: 100%;position: absolute; z-index: -1;" mode=""></image>
+        <image src="/static/back.png"
+          style="width: 100%; height: 450rpx; background-size: 100%;position: absolute; z-index: -1;" mode=""></image>
       </view>
-      
+
       <view class="top-box">
-        <view class="left" >
-          <image class="left-img" src="https://zhoukaiwen.com/img/loginImg/wx.png"></image>
+        <view class="left">
+          <image class="left-img" v-if="isLogin" :src="avahttp + info.avatar" style="width: 100%; height: 100%;">
+          </image>
+          <image class="left-img" v-if="!isLogin" src="https://zhoukaiwen.com/img/loginImg/wx.png"></image>
         </view>
-        <view class="middle" v-show="!isLogin" >
-          <view class="" style="font-size: 38rpx;" @click="wxLogin">点击微信一键登录</view>
+        <view class="middle" v-if="!isLogin">
+          <view class="" style="font-size: 38rpx;" @click="wxLogin">点击一键登录</view>
         </view>
-        <view class="middle" v-show="isLogin">
+        <view class="middle" v-if="isLogin">
           <view class="" style="font-size: 38rpx;">一见如初</view>
-          <view class="" style="margin: 15rpx 0; font-size: 28rpx;">手机号 1777777777</view>
+          <view class="" style="margin: 15rpx 0; font-size: 28rpx;">ID: 1777777777</view>
         </view>
-        <view class="right">
+        <view class="right" v-if="isLogin">
           <image class="right-img" src="../../static/right.png" mode=""></image>
         </view>
       </view>
-      
+
       <view class="middle-box">
         <view class="" @click="toOrder">
           <mylist text="历史订单"></mylist>
@@ -32,8 +34,13 @@
 
       </view>
     </view>
-    
-    
+
+    <zero-loading v-if="isLoading" type="circle" :mask="true" maskOpacity="0.1"></zero-loading>
+
+    <uv-toast ref="toast"></uv-toast>
+
+
+
   </view>
 </template>
 
@@ -45,19 +52,25 @@
     },
     data() {
       return {
-        phone: '', //手机号码
-        pwd: '', //密码
         isLogin: false,
-        info: {}
+        info: {},
+        isLoading: false,
+        avahttp: this.avahttp
       };
     },
     methods: {
-      toFeedback(){
+      mychooseavatar(e) {
+        console.log(e);
+      },
+      getuserphone(e) {
+        console.log(e);
+      },
+      toFeedback() {
         uni.navigateTo({
           url: '/subpkg/feedback'
         });
       },
-      toOrder(){
+      toOrder() {
         console.log('1111');
         uni.navigateTo({
           url: '/pages/my/order',
@@ -73,25 +86,52 @@
         } else
           this.isLogin = true
       },
+      WxLoginSuccess() {
+        this.isLoading = false
+        this.isLogin = true
+        this.$refs.toast.show({
+            type: 'success',
+            message: "登录成功",
+            duration: 1500
+        })
+      },
+      WxLoginFail() {
+        this.isLoading = false
+        this.$refs.toast.show({
+            type: 'error',
+            message: "登录失败,请稍重试",
+            duration: 1500
+        })
+      },
 
       //等三方微信登录
       wxLogin() {
-        uni.showToast({
-          title: '微信登录',
-          icon: 'none'
-        });
+        this.isLoading = true
+        console.log('调用了微信登录');
+        console.log(this.avahttp + '1.jpg');
         wx.login({
-          success: (res)=>{
-            console.log(res);
+          success: (res) => {
+            this.post({
+              url: `user/login?code=${res.code}`
+            }).then(res2 => {
+              console.log(res2);
+              if (res2.code == 200) {
+                this.info = res2.data
+                console.log(this.info);
+                this.WxLoginSuccess()
+              } else {
+                this.WxLoginFail()
+              }
+            })
+          },
+          fail(err) {
+            console.log('调用微信登录失败', err);
           }
         })
-        uni.showToast({
-          title: '登录成功！',
-          icon: 'none'
-        });
-        this.isLogin = !this.isLogin
-        uni.setStorageSync('token', 'login')
       },
+    },
+    mounted() {
+
     }
   }
 </script>
@@ -129,6 +169,7 @@
       justify-content: center;
       align-items: center;
       border: 2px solid #a9a9a9;
+
       .left-img {
         width: 100rpx;
         height: 100rpx;

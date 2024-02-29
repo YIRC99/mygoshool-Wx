@@ -2,6 +2,8 @@
   "navigationBarTitleText": "登录",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "mylist": "/components/mylist/mylist"
+    "mylist": "/components/mylist/mylist",
+    "zero-loading": "/uni_modules/zero-loading/components/zero-loading/zero-loading",
+    "uv-toast": "/uni_modules/uv-toast/components/uv-toast/uv-toast"
   }
 }

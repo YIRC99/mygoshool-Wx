@@ -18,8 +18,9 @@
 
       <view class="" v-show="currentIndex == 0">
         <u-empty text="暂时没有拼车订单 快快发布一个吧 (๑>؂<๑）" v-if="orderList.length == 0" mode="order"></u-empty>
-        <uni-card v-for="(item,index) in orderList" :key="index" :title="subYear(item.startDate) + ' '+item.startTime + ' 出发'"
-          thumbnail='/static/logo.png' @click="clickCard(item)">
+        <uni-card v-for="(item,index) in orderList" :key="index"
+          :title="subYear(item.startDate) + ' '+item.startTime + ' 出发'" thumbnail='/static/logo.png'
+          @click="clickCard(item)">
           <view class="my-car-box">
             <view class="">
               <view class="car-left">
@@ -59,8 +60,7 @@
 
     <uv-popup ref="popup" mode="bottom" round="50rpx" @maskClick="closePopup">
       <view class="popup-box">
-        <scroll-view scroll-y="true" style="height: 62vh; background-color: #ffffff;"
-          show-scrollbar="true">
+        <scroll-view scroll-y="true" style="height: 62vh; background-color: #ffffff;" show-scrollbar="true">
           <view class="top-box">
             <view class="left">
               <image src="../../static/logo.png" mode=""></image>
@@ -117,7 +117,8 @@
       </view>
     </uv-popup>
 
-    <uv-popup ref="receivePopup" mode="center" @maskClick="closeReceivePopup" custom-style="height: 200rpx;border-radius: 30rpx; width: 80vw; height: 40vh;">
+    <uv-popup ref="receivePopup" mode="center" @maskClick="closeReceivePopup"
+      custom-style="height: 200rpx;border-radius: 30rpx; width: 80vw; height: 40vh;">
       <view class="receivePopup-box">
         <view class="" style="display: flex;justify-content: center;align-items: center;">
           <image class="titleImg" src="../../static/succes1.png" mode="widthFix"></image>
@@ -134,7 +135,6 @@
     <view class="addicon" v-show="!popupShow" @click="toAddOrder">
       <image src="/static/add.png" mode=""></image>
     </view>
-
 
 
 
@@ -156,30 +156,31 @@
         }],
         currentIndex: 0,
         orderList: [],
-        currentOrder:{}
+        currentOrder: {}
       };
     },
     methods: {
-      copyWx(){
+      copyWx() {
         uni.setClipboardData({
           data: this.currentOrder.userWx,
           complete: (res) => {
-            console.log('点击复制的结果',res);
+            // console.log('点击复制的结果',res);
             this.$refs.receivePopup.close()
+            this.closeReceivePopup()
           }
         })
       },
-      closeReceivePopup(){
-         this.popupShow = false
+      closeReceivePopup() {
+        this.popupShow = false
+        console.log(this.popupShow);
       },
       receiveOrder() {
         this.$refs.popup.close()
         this.$refs.receivePopup.open()
       },
       scrollPullDown() {
-        console.log('下拉刷新了');
+        // console.log('下拉刷新了');
         if (this.isRefresh == true) return
-
         this.isRefresh = true
         setTimeout(() => {
           this.orderList.push({
@@ -215,7 +216,7 @@
         });
       },
       clickCard(order) {
-        console.log('点击了卡片');
+        // console.log('点击了卡片');
         this.currentOrder = order
         console.log(this.currentOrder);
         this.$refs.popup.open()
@@ -232,9 +233,9 @@
         this.simulateSwipeDown()
       },
       simulateSwipeDown() {
-        console.log('首次进入页面 自动下拉刷新');
+        // console.log('首次进入页面 自动下拉刷新');
         if (!this.oneRefresh) {
-          console.log('this.oneRefresh', this.oneRefresh);
+          // console.log('this.oneRefresh', this.oneRefresh);
           this.oneRefresh = true
           this.scrollPullDown()
         }
@@ -247,7 +248,8 @@
   .page {
     padding-bottom: 130rpx;
   }
-  .receivePopup-box{
+
+  .receivePopup-box {
     background-color: red;
     width: 100%;
     height: 100%;
@@ -256,6 +258,7 @@
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: nowrap;
+
     .down-box {
       display: flex;
       justify-content: center;
@@ -264,6 +267,7 @@
       left: 0;
       right: 0;
       margin: 0 auto;
+
       .btn-grad {
         background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
         margin: 10px;
@@ -280,7 +284,7 @@
         height: 80rpx;
         line-height: 80rpx;
       }
-    
+
       .btn-grad:hover {
         background-position: right center;
         /* change the direction of the change here */
@@ -288,9 +292,9 @@
         text-decoration: none;
       }
     }
-    
-    .titleImg{
-      
+
+    .titleImg {
+
       width: 300rpx;
     }
   }
@@ -356,6 +360,7 @@
 
     .down-box {
       height: 130rpx;
+
       .btn-grad {
         background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
         margin: 10px;
@@ -457,13 +462,14 @@
       margin-top: 10rpx;
       display: flex;
       align-items: center;
+
       image {
         width: 30rpx;
         height: 30rpx;
         border-radius: 50%;
         overflow: hidden;
         margin-left: 10rpx;
-        
+
       }
     }
   }

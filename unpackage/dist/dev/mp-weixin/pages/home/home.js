@@ -80,19 +80,19 @@ var components
 try {
   components = {
     uTabs: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-tabs/u-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-tabs/u-tabs")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-tabs/u-tabs.vue */ 236))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-tabs/u-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-tabs/u-tabs")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-tabs/u-tabs.vue */ 238))
     },
     uEmpty: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-empty/u-empty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-empty/u-empty")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-empty/u-empty.vue */ 228))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-empty/u-empty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-empty/u-empty")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-empty/u-empty.vue */ 246))
     },
     uniCard: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 244))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 254))
     },
     uvPopup: function () {
-      return Promise.all(/*! import() | uni_modules/uv-popup/components/uv-popup/uv-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-popup/components/uv-popup/uv-popup")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-popup/components/uv-popup/uv-popup.vue */ 251))
+      return Promise.all(/*! import() | uni_modules/uv-popup/components/uv-popup/uv-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-popup/components/uv-popup/uv-popup")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-popup/components/uv-popup/uv-popup.vue */ 261))
     },
     uniSection: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 266))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 276))
     },
   }
 } catch (e) {
@@ -342,13 +342,15 @@ var _default = {
       uni.setClipboardData({
         data: this.currentOrder.userWx,
         complete: function complete(res) {
-          console.log('点击复制的结果', res);
+          // console.log('点击复制的结果',res);
           _this.$refs.receivePopup.close();
+          _this.closeReceivePopup();
         }
       });
     },
     closeReceivePopup: function closeReceivePopup() {
       this.popupShow = false;
+      console.log(this.popupShow);
     },
     receiveOrder: function receiveOrder() {
       this.$refs.popup.close();
@@ -356,7 +358,7 @@ var _default = {
     },
     scrollPullDown: function scrollPullDown() {
       var _this2 = this;
-      console.log('下拉刷新了');
+      // console.log('下拉刷新了');
       if (this.isRefresh == true) return;
       this.isRefresh = true;
       setTimeout(function () {
@@ -385,7 +387,7 @@ var _default = {
       });
     },
     clickCard: function clickCard(order) {
-      console.log('点击了卡片');
+      // console.log('点击了卡片');
       this.currentOrder = order;
       console.log(this.currentOrder);
       this.$refs.popup.open();
@@ -402,9 +404,9 @@ var _default = {
       this.simulateSwipeDown();
     },
     simulateSwipeDown: function simulateSwipeDown() {
-      console.log('首次进入页面 自动下拉刷新');
+      // console.log('首次进入页面 自动下拉刷新');
       if (!this.oneRefresh) {
-        console.log('this.oneRefresh', this.oneRefresh);
+        // console.log('this.oneRefresh', this.oneRefresh);
         this.oneRefresh = true;
         this.scrollPullDown();
       }
