@@ -24,6 +24,34 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+ .uni-easyinput__content-input {
+  padding-left: 0 !important;
+}
+.myicon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 30rpx;
+}
+.error-message {
+  color: red;
+}
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 15rpx 0;
+}
+.input-container .input-container-right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+}
+.error {
+  border-color: red;
+}
+.down-box {
+  height: 200rpx;
+}
 .down-box .btn-grad {
   background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
   margin: 10px;
@@ -55,14 +83,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 25rpx 0;
+  padding: 15rpx 0;
 }
-.choseTimeDifference .choseTimeDifference-item .truebefortime {
+.choseTimeDifference .choseTimeDifference-item .truebeforeTime {
   font-size: 34rpx;
   margin-right: 10rpx;
   font-weight: bold;
 }
-.choseTimeDifference .choseTimeDifference-item .flasebefortime {
+.choseTimeDifference .choseTimeDifference-item .flasebeforeTime {
   font-size: 34rpx;
   margin-right: 10rpx;
   font-weight: bold;
@@ -74,7 +102,7 @@
   margin: 0 10rpx;
 }
 .chosePerson {
-  padding: 30rpx 0;
+  padding: 15rpx 0;
   font-size: 32rpx;
   display: flex;
   justify-content: space-between;
@@ -88,6 +116,7 @@
   font-size: 40rpx;
   display: flex;
   align-items: center;
+  padding: 15rpx 0;
 }
 .addChose-box-line {
   line-height: 100rpx;

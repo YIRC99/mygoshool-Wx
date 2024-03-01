@@ -24,13 +24,50 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-view.data-v-f69acc36, scroll-view.data-v-f69acc36, swiper-item.data-v-f69acc36 {
+.down-box {
   display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  flex-grow: 0;
-  flex-basis: auto;
-  align-items: stretch;
-  align-content: flex-start;
+  justify-content: center;
+  margin: 0 auto;
+}
+.down-box .btn-grad {
+  background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
+  margin: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  width: 450rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.down-box .btn-grad:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+.avaBut::after {
+  border: none;
+}
+ .avaBut {
+  width: 100%;
+  background-color: white;
+  border: none;
+  padding: 0;
+  outline: none;
+  color: #6a6a6a;
+}
+.item {
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 34rpx;
+  padding: 30rpx 0;
+  border-bottom: 1px solid #e8e8e8;
 }
 

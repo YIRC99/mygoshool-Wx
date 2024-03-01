@@ -13,6 +13,20 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "subpkg/myinfo",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "添加",
+          "pathName": "subpkg/addCarorder",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

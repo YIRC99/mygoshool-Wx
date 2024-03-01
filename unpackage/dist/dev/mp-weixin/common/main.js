@@ -24,6 +24,7 @@ wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 _vue.default.use(_uviewUi.default);
 // const http = 'http://192.168.1.13:33088/'
 var http = 'http://127.0.0.1:33088/';
+// const http = 'http://192.168.151.210:33088/'
 _vue.default.prototype.avahttp = http + 'avatar/download/';
 _vue.default.prototype.http = http;
 _vue.default.prototype.subYear = function (str) {
@@ -81,6 +82,12 @@ _vue.default.prototype.post = function (opt) {
     });
   });
 };
+var message = function message() {
+  Promise.all(/*! require.ensure | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then((function () {
+    return resolve(__webpack_require__(/*! @/components/quick-message/quick-message.vue */ 225));
+  }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+};
+_vue.default.component('quick-message', message);
 _vue.default.config.productionTip = false;
 _App.default.mpType = 'app';
 var app = new _vue.default(_objectSpread({}, _App.default));

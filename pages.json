@@ -67,6 +67,14 @@
             "navigationBarTitleText" : "建议与反馈",
             "enablePullDownRefresh" : false
           }
+        },
+        {
+          "path" : "myinfo",
+          "style" : 
+          {
+            "navigationBarTitleText" : "个人信息",
+            "enablePullDownRefresh" : false
+          }
         }
       ]
     }

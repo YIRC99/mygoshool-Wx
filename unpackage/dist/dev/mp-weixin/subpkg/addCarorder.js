@@ -101,25 +101,34 @@ var components
 try {
   components = {
     uniCard: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 254))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 285))
     },
     uLine: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-line/u-line */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-line/u-line")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-line/u-line.vue */ 283))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-line/u-line */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-line/u-line")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-line/u-line.vue */ 306))
     },
     uvDatetimePicker: function () {
-      return Promise.all(/*! import() | uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker.vue */ 291))
+      return Promise.all(/*! import() | uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker.vue */ 314))
     },
     uvPicker: function () {
-      return Promise.all(/*! import() | uni_modules/uv-picker/components/uv-picker/uv-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-picker/components/uv-picker/uv-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-picker/components/uv-picker/uv-picker.vue */ 298))
+      return Promise.all(/*! import() | uni_modules/uv-picker/components/uv-picker/uv-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-picker/components/uv-picker/uv-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-picker/components/uv-picker/uv-picker.vue */ 321))
+    },
+    uniEasyinput: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput */ "uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput.vue */ 329))
     },
     uvCheckboxGroup: function () {
-      return Promise.all(/*! import() | uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group.vue */ 306))
+      return Promise.all(/*! import() | uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group.vue */ 336))
     },
     uvCheckbox: function () {
-      return Promise.all(/*! import() | uni_modules/uv-checkbox/components/uv-checkbox/uv-checkbox */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-checkbox/components/uv-checkbox/uv-checkbox")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-checkbox/components/uv-checkbox/uv-checkbox.vue */ 314))
+      return Promise.all(/*! import() | uni_modules/uv-checkbox/components/uv-checkbox/uv-checkbox */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-checkbox/components/uv-checkbox/uv-checkbox")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-checkbox/components/uv-checkbox/uv-checkbox.vue */ 344))
     },
     uniSection: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 276))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 299))
+    },
+    quickMessage: function () {
+      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 225))
+    },
+    zeroLoading: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/zero-loading/components/zero-loading/zero-loading */ "uni_modules/zero-loading/components/zero-loading/zero-loading").then(__webpack_require__.bind(null, /*! @/uni_modules/zero-loading/components/zero-loading/zero-loading.vue */ 246))
     },
   }
 } catch (e) {
@@ -273,34 +282,271 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
-      beforTime: '00:00',
-      istiqian: false,
+      isLoading: false,
+      beforeTime: '00:00',
+      isBefore: false,
       afterTime: '00:00',
-      isyanho: false,
+      isAfter: false,
       ideaText: '',
       columns: [['1', '2', '3']],
       currentPerson: '1',
       lackPerson: '1',
-      startDateTime: '点击选择出发时间',
+      startDateTime: '点击选择出发时间1',
       StartTimeValue: Number(new Date()),
-      startAddress: '点击选择出发地点',
+      startAddress: '点击选择出发地点1',
       //这里是地址名称 
       startAddressAll: '',
       //这是地址全称
-      endAddress: '点击选择目的地',
-      endAddressAll: ''
+      endAddress: '点击选择目的地1',
+      endAddressAll: '',
+      wechatAccount: '',
+      phoneNumber: '',
+      wechatError: false,
+      phoneError: false,
+      phoneErrorMessage: '手机号不能为空或格式不正确'
     };
   },
+  computed: {
+    isValid: function isValid() {
+      return this.wechatAccount !== '' || this.isValidPhoneNumber;
+    },
+    isTips: function isTips() {
+      return this.wechatAccount.trim() == '' && this.phoneNumber.trim() == '';
+    }
+  },
   methods: {
-    choseEndAddress: function choseEndAddress() {
+    addOrder: function addOrder() {
       var _this = this;
+      var isWriteResult = this.isWrite();
+      console.log('isWriteResult', isWriteResult);
+      if (!isWriteResult) return;
+      var curUser = uni.getStorageSync('user');
+      this.isLoading = true;
+      this.post({
+        url: 'carshareorder/add',
+        data: {
+          createuserid: curUser.openid,
+          startaddressall: this.startAddressAll,
+          startaddress: this.startAddress,
+          endaddressall: this.endAddressAll,
+          endaddress: this.endAddress,
+          startdatetime: this.startDateTime.split(' ')[0] + 'T' + this.startDateTime.split(' ')[1],
+          currentperson: this.currentPerson,
+          lackperson: this.lackPerson,
+          phonenumber: this.phoneNumber,
+          wechataccount: this.wechatAccount,
+          isbefore: this.isBefore == true ? 1 : 0,
+          beforetime: this.beforeTime,
+          isafter: this.isAfter == true ? 1 : 0,
+          aftertime: this.afterTime,
+          remark: this.ideaText
+        }
+      }).then(function (res) {
+        _this.isLoading = false;
+        if (res.code !== 200) {
+          _this.$refs.message.show({
+            type: 'error',
+            msg: '发布拼车失败 请稍候重试吧'
+          });
+          return;
+        }
+        _this.$refs.message.show({
+          type: 'success',
+          msg: '发布成功!'
+        });
+        setTimeout(function () {
+          uni.navigateBack();
+        }, 1000);
+      });
+    },
+    isWrite: function isWrite() {
+      if (this.isAfter == true && this.afterTime == '00:00') {
+        this.$refs.message.show({
+          type: 'warning',
+          //String 默认default
+          msg: '请选择能接受的延后时间范围',
+          //String 显示内容 *
+          customStyle: {
+            //自定义样式
+            color: '#E6A23C',
+            //字体图标色
+            backgroundColor: 'rgba(253,246,236)' //背景色
+          },
+
+          iconSize: 16 //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
+        });
+
+        return false;
+      }
+      if (this.isBefore == true && this.beforeTime == '00:00') {
+        this.$refs.message.show({
+          type: 'warning',
+          //String 默认default
+          msg: '请选择能接受的提前时间范围',
+          //String 显示内容 *
+          customStyle: {
+            //自定义样式
+            color: '#E6A23C',
+            //字体图标色
+            backgroundColor: 'rgba(253,246,236)' //背景色
+          },
+
+          iconSize: 16 //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
+        });
+
+        return false;
+      }
+      if (this.wechatAccount.trim() == '' && this.phoneNumber.trim() == '') {
+        this.$refs.message.show({
+          type: 'warning',
+          //String 默认default
+          msg: '请填写联系方式',
+          //String 显示内容 *
+          customStyle: {
+            //自定义样式
+            color: '#E6A23C',
+            //字体图标色
+            backgroundColor: 'rgba(253,246,236)' //背景色
+          },
+
+          iconSize: 16 //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
+        });
+
+        return false;
+      }
+      if (this.startDateTime == '点击选择出发时间') {
+        this.$refs.message.show({
+          type: 'warning',
+          //String 默认default
+          msg: '请选择出发时间',
+          //String 显示内容 *
+          customStyle: {
+            //自定义样式
+            color: '#E6A23C',
+            //字体图标色
+            backgroundColor: 'rgba(253,246,236)' //背景色
+          },
+
+          iconSize: 16 //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
+        });
+
+        return false;
+      }
+      if (this.endAddress == '点击选择目的地') {
+        this.$refs.message.show({
+          type: 'warning',
+          //String 默认default
+          msg: '请选择目的地',
+          //String 显示内容 *
+          customStyle: {
+            //自定义样式
+            color: '#E6A23C',
+            //字体图标色
+            backgroundColor: 'rgba(253,246,236)' //背景色
+          },
+
+          iconSize: 16 //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
+        });
+
+        return false;
+      }
+      if (this.startAddress == '点击选择出发地点') {
+        this.$refs.message.show({
+          type: 'warning',
+          //String 默认default
+          msg: '请选择出发地点',
+          //String 显示内容 *
+          // icon: true, //Boolean|String 显示icon(false/true/string 默认显示icon)
+          // mask: true, //Boolean 遮罩（默认false没有遮罩）
+          customStyle: {
+            //自定义样式
+            color: '#E6A23C',
+            //字体图标色
+            backgroundColor: 'rgba(253,246,236)' //背景色
+          },
+
+          iconSize: 16,
+          //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
+          iconColor: '' //String icon颜色(默认主题颜色 设置后会覆盖自定义样式里的设置优先级最高)
+        });
+
+        return false;
+      }
+      return true;
+    },
+    formatter: function formatter(type, value) {
+      if (type === 'year') {
+        return "".concat(value, "\u5E74");
+      }
+      if (type === 'month') {
+        return "".concat(value, "\u6708");
+      }
+      if (type === 'day') {
+        return "".concat(value, "\u65E5");
+      }
+      if (type === 'hour') return "".concat(value, "\u65F6");
+      if (type === 'minute') return "".concat(value, "\u5206");
+      return value;
+    },
+    validateWechatAccount: function validateWechatAccount() {
+      if (this.phoneNumber.trim() !== '') return;
+      if (this.wechatAccount.trim() == '') {
+        this.wechatError = true;
+      } else {
+        this.wechatError = false;
+      }
+    },
+    validatePhoneNumber: function validatePhoneNumber() {
+      // 手机号验证规则，中国手机号一般遵循11位数字格式
+      var regex = /^1[3-9]\d{9}$/;
+      // if(this.wechatError)return
+      if (!this.wechatError && !this.phoneNumber) {
+        this.phoneError = false;
+      } else if (!regex.test(this.phoneNumber)) {
+        this.phoneError = true;
+      } else {
+        this.phoneError = false;
+      }
+    },
+    choseEndAddress: function choseEndAddress() {
+      var _this2 = this;
       uni.chooseLocation({
         success: function success(res) {
-          _this.endAddress = res.name;
-          _this.endAddressAll = res.address + res.name;
+          _this2.endAddress = res.name;
+          _this2.endAddressAll = res.address + res.name;
         },
         fail: function fail() {
           // 如果用uni.chooseLocation没有获取到地理位置，则需要获取当前的授权信息，判断是否有地理授权信息
@@ -358,11 +604,11 @@ var _default = {
       });
     },
     choseStartAddress: function choseStartAddress() {
-      var _this2 = this;
+      var _this3 = this;
       uni.chooseLocation({
         success: function success(res) {
-          _this2.startAddress = res.name;
-          _this2.startAddressAll = res.address + res.name;
+          _this3.startAddress = res.name;
+          _this3.startAddressAll = res.address + res.name;
         },
         fail: function fail() {
           // 如果用uni.chooseLocation没有获取到地理位置，则需要获取当前的授权信息，判断是否有地理授权信息
@@ -447,21 +693,21 @@ var _default = {
     },
     beforConfirm: function beforConfirm(e) {
       console.log(e);
-      this.beforTime = e.value;
+      this.beforeTime = e.value;
     },
     openBeforDatetimePicker: function openBeforDatetimePicker() {
-      if (this.istiqian) this.$refs.beforDatetimePicker.open();
+      if (this.isBefore) this.$refs.beforDatetimePicker.open();
     },
     openAfterDatetimePicker: function openAfterDatetimePicker() {
-      if (this.isyanho) this.$refs.afterDatetimePicker.open();
+      if (this.isAfter) this.$refs.afterDatetimePicker.open();
     },
     tiqianChange: function tiqianChange(e) {
       console.log("能否接受提前出发：", e);
-      this.istiqian = e;
+      this.isBefore = e;
     },
     yanhoChange: function yanhoChange(e) {
       console.log("能否接受延后出发：", e);
-      this.isyanho = e;
+      this.isAfter = e;
     }
   }
 };

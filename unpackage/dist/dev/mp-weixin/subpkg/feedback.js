@@ -101,10 +101,10 @@ var components
 try {
   components = {
     uniSection: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 276))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 299))
     },
     uvUpload: function () {
-      return Promise.all(/*! import() | uni_modules/uv-upload/components/uv-upload/uv-upload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-upload/components/uv-upload/uv-upload")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-upload/components/uv-upload/uv-upload.vue */ 322))
+      return Promise.all(/*! import() | uni_modules/uv-upload/components/uv-upload/uv-upload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-upload/components/uv-upload/uv-upload")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-upload/components/uv-upload/uv-upload.vue */ 352))
     },
   }
 } catch (e) {

@@ -5,6 +5,7 @@ import uView from "uview-ui";
 Vue.use(uView);
 // const http = 'http://192.168.1.13:33088/'
 const http = 'http://127.0.0.1:33088/'
+// const http = 'http://192.168.151.210:33088/'
 Vue.prototype.avahttp = http + 'avatar/download/'
 Vue.prototype.http = http
 Vue.prototype.subYear =(str) =>{
@@ -67,7 +68,8 @@ Vue.prototype.post =(opt) =>{
 }
 
 
-
+import message from '@/components/quick-message/quick-message.vue'
+Vue.component('quick-message',message);
 // #ifndef VUE3
 import Vue from 'vue'
 import './uni.promisify.adaptor'

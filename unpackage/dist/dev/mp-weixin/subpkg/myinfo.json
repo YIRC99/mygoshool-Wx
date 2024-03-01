@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "个人信息",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
+    "zero-loading": "/uni_modules/zero-loading/components/zero-loading/zero-loading"
+  }
+}

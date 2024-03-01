@@ -19338,88 +19338,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADD
 /* 240 */,
 /* 241 */,
 /* 242 */,
-/* 243 */
-/*!****************************************************************************!*\
-  !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-tabs/props.js ***!
-  \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  props: {
-    // 滑块的移动过渡时间，单位ms
-    duration: {
-      type: Number,
-      default: uni.$u.props.tabs.duration
-    },
-    // tabs标签数组
-    list: {
-      type: Array,
-      default: uni.$u.props.tabs.list
-    },
-    // 滑块颜色
-    lineColor: {
-      type: String,
-      default: uni.$u.props.tabs.lineColor
-    },
-    // 菜单选择中时的样式
-    activeStyle: {
-      type: [String, Object],
-      default: uni.$u.props.tabs.activeStyle
-    },
-    // 菜单非选中时的样式
-    inactiveStyle: {
-      type: [String, Object],
-      default: uni.$u.props.tabs.inactiveStyle
-    },
-    // 滑块长度
-    lineWidth: {
-      type: [String, Number],
-      default: uni.$u.props.tabs.lineWidth
-    },
-    // 滑块高度
-    lineHeight: {
-      type: [String, Number],
-      default: uni.$u.props.tabs.lineHeight
-    },
-    // 滑块背景显示大小，当滑块背景设置为图片时使用
-    lineBgSize: {
-      type: String,
-      default: uni.$u.props.tabs.lineBgSize
-    },
-    // 菜单item的样式
-    itemStyle: {
-      type: [String, Object],
-      default: uni.$u.props.tabs.itemStyle
-    },
-    // 菜单是否可滚动
-    scrollable: {
-      type: Boolean,
-      default: uni.$u.props.tabs.scrollable
-    },
-    // 当前选中标签的索引
-    current: {
-      type: [Number, String],
-      default: uni.$u.props.tabs.current
-    },
-    // 默认读取的键名
-    keyName: {
-      type: String,
-      default: uni.$u.props.tabs.keyName
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
+/* 243 */,
 /* 244 */,
 /* 245 */,
 /* 246 */,
@@ -19427,98 +19346,165 @@ exports.default = _default;
 /* 248 */,
 /* 249 */,
 /* 250 */,
-/* 251 */
-/*!*****************************************************************************!*\
-  !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-empty/props.js ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  props: {
-    // 内置图标名称，或图片路径，建议绝对路径
-    icon: {
-      type: String,
-      default: uni.$u.props.empty.icon
-    },
-    // 提示文字
-    text: {
-      type: String,
-      default: uni.$u.props.empty.text
-    },
-    // 文字颜色
-    textColor: {
-      type: String,
-      default: uni.$u.props.empty.textColor
-    },
-    // 文字大小
-    textSize: {
-      type: [String, Number],
-      default: uni.$u.props.empty.textSize
-    },
-    // 图标的颜色
-    iconColor: {
-      type: String,
-      default: uni.$u.props.empty.iconColor
-    },
-    // 图标的大小
-    iconSize: {
-      type: [String, Number],
-      default: uni.$u.props.empty.iconSize
-    },
-    // 选择预置的图标类型
-    mode: {
-      type: String,
-      default: uni.$u.props.empty.mode
-    },
-    //  图标宽度，单位px
-    width: {
-      type: [String, Number],
-      default: uni.$u.props.empty.width
-    },
-    // 图标高度，单位px
-    height: {
-      type: [String, Number],
-      default: uni.$u.props.empty.height
-    },
-    // 是否显示组件
-    show: {
-      type: Boolean,
-      default: uni.$u.props.empty.show
-    },
-    // 组件距离上一个元素之间的距离，默认px单位
-    marginTop: {
-      type: [String, Number],
-      default: uni.$u.props.empty.marginTop
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
+/* 251 */,
 /* 252 */,
 /* 253 */,
 /* 254 */,
 /* 255 */,
 /* 256 */,
 /* 257 */,
-/* 258 */,
-/* 259 */,
-/* 260 */,
-/* 261 */,
-/* 262 */,
-/* 263 */,
-/* 264 */,
-/* 265 */,
-/* 266 */
+/* 258 */
+/*!**********************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/colorGradient.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.colorGradient = colorGradient;
+exports.colorToRgba = colorToRgba;
+exports.hexToRgb = hexToRgb;
+exports.rgbToHex = rgbToHex;
+/**
+ * 求两个颜色之间的渐变值
+ * @param {string} startColor 开始的颜色
+ * @param {string} endColor 结束的颜色
+ * @param {number} step 颜色等分的份额
+ * */
+function colorGradient() {
+  var startColor = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'rgb(0, 0, 0)';
+  var endColor = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'rgb(255, 255, 255)';
+  var step = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 10;
+  var startRGB = hexToRgb(startColor, false); // 转换为rgb数组模式
+  var startR = startRGB[0];
+  var startG = startRGB[1];
+  var startB = startRGB[2];
+  var endRGB = hexToRgb(endColor, false);
+  var endR = endRGB[0];
+  var endG = endRGB[1];
+  var endB = endRGB[2];
+  var sR = (endR - startR) / step; // 总差值
+  var sG = (endG - startG) / step;
+  var sB = (endB - startB) / step;
+  var colorArr = [];
+  for (var i = 0; i < step; i++) {
+    // 计算每一步的hex值
+    var hex = rgbToHex("rgb(".concat(Math.round(sR * i + startR), ",").concat(Math.round(sG * i + startG), ",").concat(Math.round(sB * i + startB), ")"));
+    // 确保第一个颜色值为startColor的值
+    if (i === 0) hex = rgbToHex(startColor);
+    // 确保最后一个颜色值为endColor的值
+    if (i === step - 1) hex = rgbToHex(endColor);
+    colorArr.push(hex);
+  }
+  return colorArr;
+}
+
+// 将hex表示方式转换为rgb表示方式(这里返回rgb数组模式)
+function hexToRgb(sColor) {
+  var str = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+  var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
+  sColor = String(sColor).toLowerCase();
+  if (sColor && reg.test(sColor)) {
+    if (sColor.length === 4) {
+      var sColorNew = '#';
+      for (var i = 1; i < 4; i += 1) {
+        sColorNew += sColor.slice(i, i + 1).concat(sColor.slice(i, i + 1));
+      }
+      sColor = sColorNew;
+    }
+    // 处理六位的颜色值
+    var sColorChange = [];
+    for (var _i = 1; _i < 7; _i += 2) {
+      sColorChange.push(parseInt("0x".concat(sColor.slice(_i, _i + 2))));
+    }
+    if (!str) {
+      return sColorChange;
+    }
+    return "rgb(".concat(sColorChange[0], ",").concat(sColorChange[1], ",").concat(sColorChange[2], ")");
+  }
+  if (/^(rgb|RGB)/.test(sColor)) {
+    var arr = sColor.replace(/(?:\(|\)|rgb|RGB)*/g, '').split(',');
+    return arr.map(function (val) {
+      return Number(val);
+    });
+  }
+  return sColor;
+}
+
+// 将rgb表示方式转换为hex表示方式
+function rgbToHex(rgb) {
+  var _this = rgb;
+  var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
+  if (/^(rgb|RGB)/.test(_this)) {
+    var aColor = _this.replace(/(?:\(|\)|rgb|RGB)*/g, '').split(',');
+    var strHex = '#';
+    for (var i = 0; i < aColor.length; i++) {
+      var hex = Number(aColor[i]).toString(16);
+      hex = String(hex).length == 1 ? "".concat(0, hex) : hex; // 保证每个rgb的值为2位
+      if (hex === '0') {
+        hex += hex;
+      }
+      strHex += hex;
+    }
+    if (strHex.length !== 7) {
+      strHex = _this;
+    }
+    return strHex;
+  }
+  if (reg.test(_this)) {
+    var aNum = _this.replace(/#/, '').split('');
+    if (aNum.length === 6) {
+      return _this;
+    }
+    if (aNum.length === 3) {
+      var numHex = '#';
+      for (var _i2 = 0; _i2 < aNum.length; _i2 += 1) {
+        numHex += aNum[_i2] + aNum[_i2];
+      }
+      return numHex;
+    }
+  } else {
+    return _this;
+  }
+}
+
+/**
+* JS颜色十六进制转换为rgb或rgba,返回的格式为 rgba（255，255，255，0.5）字符串
+* sHex为传入的十六进制的色值
+* alpha为rgba的透明度
+*/
+function colorToRgba(color, alpha) {
+  color = rgbToHex(color);
+  // 十六进制颜色值的正则表达式
+  var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
+  /* 16进制颜色转为RGB格式 */
+  var sColor = String(color).toLowerCase();
+  if (sColor && reg.test(sColor)) {
+    if (sColor.length === 4) {
+      var sColorNew = '#';
+      for (var i = 1; i < 4; i += 1) {
+        sColorNew += sColor.slice(i, i + 1).concat(sColor.slice(i, i + 1));
+      }
+      sColor = sColorNew;
+    }
+    // 处理六位的颜色值
+    var sColorChange = [];
+    for (var _i3 = 1; _i3 < 7; _i3 += 2) {
+      sColorChange.push(parseInt("0x".concat(sColor.slice(_i3, _i3 + 2))));
+    }
+    // return sColorChange.join(',')
+    return "rgba(".concat(sColorChange.join(','), ",").concat(alpha, ")");
+  }
+  return sColor;
+}
+
+/***/ }),
+/* 259 */
 /*!*************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/mixin/mpMixin.js ***!
   \*************************************************************************/
@@ -19541,7 +19527,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 267 */
+/* 260 */
 /*!***********************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/mixin/mixin.js ***!
   \***********************************************************************/
@@ -19558,11 +19544,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var index = _interopRequireWildcard(__webpack_require__(/*! ../function/index.js */ 268));
-var test = _interopRequireWildcard(__webpack_require__(/*! ../function/test.js */ 269));
-var _route = _interopRequireDefault(__webpack_require__(/*! ../util/route.js */ 271));
-var _debounce = _interopRequireDefault(__webpack_require__(/*! ../function/debounce.js */ 272));
-var _throttle = _interopRequireDefault(__webpack_require__(/*! ../function/throttle.js */ 273));
+var index = _interopRequireWildcard(__webpack_require__(/*! ../function/index.js */ 261));
+var test = _interopRequireWildcard(__webpack_require__(/*! ../function/test.js */ 262));
+var _route = _interopRequireDefault(__webpack_require__(/*! ../util/route.js */ 264));
+var _debounce = _interopRequireDefault(__webpack_require__(/*! ../function/debounce.js */ 265));
+var _throttle = _interopRequireDefault(__webpack_require__(/*! ../function/throttle.js */ 266));
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
@@ -19742,7 +19728,7 @@ exports.default = _default2;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 268 */
+/* 261 */
 /*!**************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/index.js ***!
   \**************************************************************************/
@@ -19788,8 +19774,8 @@ exports.trim = trim;
 exports.type2icon = type2icon;
 var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
 var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
-var _test = __webpack_require__(/*! ./test.js */ 269);
-var _digit = __webpack_require__(/*! ./digit.js */ 270);
+var _test = __webpack_require__(/*! ./test.js */ 262);
+var _digit = __webpack_require__(/*! ./digit.js */ 263);
 /**
  * @description 如果value小于min，取min；如果value大于max，取max
  * @param {number} min
@@ -20540,7 +20526,7 @@ function setConfig(_ref5) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 269 */
+/* 262 */
 /*!*************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/test.js ***!
   \*************************************************************************/
@@ -20840,7 +20826,7 @@ function regExp(o) {
 }
 
 /***/ }),
-/* 270 */
+/* 263 */
 /*!**************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/digit.js ***!
   \**************************************************************************/
@@ -21042,7 +21028,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 271 */
+/* 264 */
 /*!**********************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/util/route.js ***!
   \**********************************************************************/
@@ -21061,7 +21047,7 @@ var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 57));
 var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23));
 var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ 24));
-var _index = __webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/function/index.js */ 268);
+var _index = __webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/function/index.js */ 261);
 /**
  * 路由跳转方法，该方法相对于直接使用uni.xxx的好处是使用更加简单快捷
  * 并且带有路由拦截功能
@@ -21234,7 +21220,7 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 272 */
+/* 265 */
 /*!*****************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/debounce.js ***!
   \*****************************************************************************/
@@ -21281,7 +21267,7 @@ var _default = debounce;
 exports.default = _default;
 
 /***/ }),
-/* 273 */
+/* 266 */
 /*!*****************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/throttle.js ***!
   \*****************************************************************************/
@@ -21330,7 +21316,95 @@ var _default = throttle;
 exports.default = _default;
 
 /***/ }),
-/* 274 */,
+/* 267 */,
+/* 268 */,
+/* 269 */,
+/* 270 */,
+/* 271 */,
+/* 272 */,
+/* 273 */,
+/* 274 */
+/*!****************************************************************************!*\
+  !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-tabs/props.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 滑块的移动过渡时间，单位ms
+    duration: {
+      type: Number,
+      default: uni.$u.props.tabs.duration
+    },
+    // tabs标签数组
+    list: {
+      type: Array,
+      default: uni.$u.props.tabs.list
+    },
+    // 滑块颜色
+    lineColor: {
+      type: String,
+      default: uni.$u.props.tabs.lineColor
+    },
+    // 菜单选择中时的样式
+    activeStyle: {
+      type: [String, Object],
+      default: uni.$u.props.tabs.activeStyle
+    },
+    // 菜单非选中时的样式
+    inactiveStyle: {
+      type: [String, Object],
+      default: uni.$u.props.tabs.inactiveStyle
+    },
+    // 滑块长度
+    lineWidth: {
+      type: [String, Number],
+      default: uni.$u.props.tabs.lineWidth
+    },
+    // 滑块高度
+    lineHeight: {
+      type: [String, Number],
+      default: uni.$u.props.tabs.lineHeight
+    },
+    // 滑块背景显示大小，当滑块背景设置为图片时使用
+    lineBgSize: {
+      type: String,
+      default: uni.$u.props.tabs.lineBgSize
+    },
+    // 菜单item的样式
+    itemStyle: {
+      type: [String, Object],
+      default: uni.$u.props.tabs.itemStyle
+    },
+    // 菜单是否可滚动
+    scrollable: {
+      type: Boolean,
+      default: uni.$u.props.tabs.scrollable
+    },
+    // 当前选中标签的索引
+    current: {
+      type: [Number, String],
+      default: uni.$u.props.tabs.current
+    },
+    // 默认读取的键名
+    keyName: {
+      type: String,
+      default: uni.$u.props.tabs.keyName
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
 /* 275 */,
 /* 276 */,
 /* 277 */,
@@ -21338,13 +21412,112 @@ exports.default = _default;
 /* 279 */,
 /* 280 */,
 /* 281 */,
-/* 282 */,
+/* 282 */
+/*!*****************************************************************************!*\
+  !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-empty/props.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 内置图标名称，或图片路径，建议绝对路径
+    icon: {
+      type: String,
+      default: uni.$u.props.empty.icon
+    },
+    // 提示文字
+    text: {
+      type: String,
+      default: uni.$u.props.empty.text
+    },
+    // 文字颜色
+    textColor: {
+      type: String,
+      default: uni.$u.props.empty.textColor
+    },
+    // 文字大小
+    textSize: {
+      type: [String, Number],
+      default: uni.$u.props.empty.textSize
+    },
+    // 图标的颜色
+    iconColor: {
+      type: String,
+      default: uni.$u.props.empty.iconColor
+    },
+    // 图标的大小
+    iconSize: {
+      type: [String, Number],
+      default: uni.$u.props.empty.iconSize
+    },
+    // 选择预置的图标类型
+    mode: {
+      type: String,
+      default: uni.$u.props.empty.mode
+    },
+    //  图标宽度，单位px
+    width: {
+      type: [String, Number],
+      default: uni.$u.props.empty.width
+    },
+    // 图标高度，单位px
+    height: {
+      type: [String, Number],
+      default: uni.$u.props.empty.height
+    },
+    // 是否显示组件
+    show: {
+      type: Boolean,
+      default: uni.$u.props.empty.show
+    },
+    // 组件距离上一个元素之间的距离，默认px单位
+    marginTop: {
+      type: [String, Number],
+      default: uni.$u.props.empty.marginTop
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
 /* 283 */,
 /* 284 */,
 /* 285 */,
 /* 286 */,
 /* 287 */,
-/* 288 */
+/* 288 */,
+/* 289 */,
+/* 290 */,
+/* 291 */,
+/* 292 */,
+/* 293 */,
+/* 294 */,
+/* 295 */,
+/* 296 */,
+/* 297 */,
+/* 298 */,
+/* 299 */,
+/* 300 */,
+/* 301 */,
+/* 302 */,
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */,
+/* 309 */,
+/* 310 */,
+/* 311 */
 /*!****************************************************************************!*\
   !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-line/props.js ***!
   \****************************************************************************/
@@ -21395,14 +21568,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 289 */,
-/* 290 */,
-/* 291 */,
-/* 292 */,
-/* 293 */,
-/* 294 */,
-/* 295 */,
-/* 296 */
+/* 312 */,
+/* 313 */,
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */,
+/* 318 */,
+/* 319 */
 /*!*************************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-datetime-picker/components/uv-datetime-picker/props.js ***!
   \*************************************************************************************************/
@@ -21554,7 +21727,7 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 297 */
+/* 320 */
 /*!**********************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/util/dayjs.js ***!
   \**********************************************************************/
@@ -21902,12 +22075,12 @@ var _default = require_dayjs_min();
 exports.default = _default;
 
 /***/ }),
-/* 298 */,
-/* 299 */,
-/* 300 */,
-/* 301 */,
-/* 302 */,
-/* 303 */
+/* 321 */,
+/* 322 */,
+/* 323 */,
+/* 324 */,
+/* 325 */,
+/* 326 */
 /*!*******************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-picker/components/uv-picker/props.js ***!
   \*******************************************************************************/
@@ -22028,14 +22201,21 @@ exports.default = _default2;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 304 */,
-/* 305 */,
-/* 306 */,
-/* 307 */,
-/* 308 */,
-/* 309 */,
-/* 310 */,
-/* 311 */
+/* 327 */,
+/* 328 */,
+/* 329 */,
+/* 330 */,
+/* 331 */,
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */
 /*!*****************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-checkbox/components/uv-checkbox-group/props.js ***!
   \*****************************************************************************************/
@@ -22145,14 +22325,14 @@ exports.default = _default2;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 312 */,
-/* 313 */,
-/* 314 */,
-/* 315 */,
-/* 316 */,
-/* 317 */,
-/* 318 */,
-/* 319 */
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */,
+/* 348 */,
+/* 349 */
 /*!***********************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-checkbox/components/uv-checkbox/props.js ***!
   \***********************************************************************************/
@@ -22244,14 +22424,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 320 */,
-/* 321 */,
-/* 322 */,
-/* 323 */,
-/* 324 */,
-/* 325 */,
-/* 326 */,
-/* 327 */
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */,
+/* 354 */,
+/* 355 */,
+/* 356 */,
+/* 357 */
 /*!*******************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-upload/components/uv-upload/utils.js ***!
   \*******************************************************************************/
@@ -22395,7 +22575,7 @@ function chooseFile(_ref) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"]))
 
 /***/ }),
-/* 328 */
+/* 358 */
 /*!*******************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-upload/components/uv-upload/mixin.js ***!
   \*******************************************************************************/
@@ -22409,7 +22589,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _index = __webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/function/index.js */ 268);
+var _index = __webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/function/index.js */ 261);
 var _default = {
   watch: {
     // 监听accept的变化，判断是否符合个平台要求
@@ -22423,7 +22603,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 329 */
+/* 359 */
 /*!*******************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-upload/components/uv-upload/props.js ***!
   \*******************************************************************************/
@@ -22581,36 +22761,6 @@ exports.default = _default2;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 330 */,
-/* 331 */,
-/* 332 */,
-/* 333 */,
-/* 334 */,
-/* 335 */,
-/* 336 */,
-/* 337 */,
-/* 338 */,
-/* 339 */,
-/* 340 */,
-/* 341 */,
-/* 342 */,
-/* 343 */,
-/* 344 */,
-/* 345 */,
-/* 346 */,
-/* 347 */,
-/* 348 */,
-/* 349 */,
-/* 350 */,
-/* 351 */,
-/* 352 */,
-/* 353 */,
-/* 354 */,
-/* 355 */,
-/* 356 */,
-/* 357 */,
-/* 358 */,
-/* 359 */,
 /* 360 */,
 /* 361 */,
 /* 362 */,
@@ -22672,7 +22822,674 @@ exports.default = _default2;
 /* 418 */,
 /* 419 */,
 /* 420 */,
-/* 421 */
+/* 421 */,
+/* 422 */,
+/* 423 */,
+/* 424 */,
+/* 425 */,
+/* 426 */,
+/* 427 */,
+/* 428 */,
+/* 429 */,
+/* 430 */,
+/* 431 */,
+/* 432 */,
+/* 433 */,
+/* 434 */,
+/* 435 */,
+/* 436 */,
+/* 437 */,
+/* 438 */,
+/* 439 */,
+/* 440 */,
+/* 441 */,
+/* 442 */,
+/* 443 */,
+/* 444 */,
+/* 445 */,
+/* 446 */,
+/* 447 */,
+/* 448 */,
+/* 449 */,
+/* 450 */,
+/* 451 */
+/*!*********************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-overlay/components/uv-overlay/props.js ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _uni$$uv, _uni$$uv$props;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default = {
+  props: _objectSpread({
+    // 是否显示遮罩
+    show: {
+      type: Boolean,
+      default: false
+    },
+    // 层级z-index
+    zIndex: {
+      type: [String, Number],
+      default: 10070
+    },
+    // 遮罩的过渡时间，单位为ms
+    duration: {
+      type: [String, Number],
+      default: 300
+    },
+    // 不透明度值，当做rgba的第四个参数
+    opacity: {
+      type: [String, Number],
+      default: 0.5
+    }
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.overlay)
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 452 */,
+/* 453 */,
+/* 454 */,
+/* 455 */,
+/* 456 */,
+/* 457 */,
+/* 458 */,
+/* 459 */
+/*!*************************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-transition/components/uv-transition/createAnimation.js ***!
+  \*************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.createAnimation = createAnimation;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23));
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ 24));
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+// const defaultOption = {
+// 	duration: 300,
+// 	timingFunction: 'linear',
+// 	delay: 0,
+// 	transformOrigin: '50% 50% 0'
+// }
+var MPAnimation = /*#__PURE__*/function () {
+  function MPAnimation(options, _this) {
+    (0, _classCallCheck2.default)(this, MPAnimation);
+    this.options = options;
+    // 在iOS10+QQ小程序平台下，传给原生的对象一定是个普通对象而不是Proxy对象，否则会报parameter should be Object instead of ProxyObject的错误
+    this.animation = uni.createAnimation(_objectSpread({}, options));
+    this.currentStepAnimates = {};
+    this.next = 0;
+    this.$ = _this;
+  }
+  (0, _createClass2.default)(MPAnimation, [{
+    key: "_nvuePushAnimates",
+    value: function _nvuePushAnimates(type, args) {
+      var aniObj = this.currentStepAnimates[this.next];
+      var styles = {};
+      if (!aniObj) {
+        styles = {
+          styles: {},
+          config: {}
+        };
+      } else {
+        styles = aniObj;
+      }
+      if (animateTypes1.includes(type)) {
+        if (!styles.styles.transform) {
+          styles.styles.transform = '';
+        }
+        var unit = '';
+        if (type === 'rotate') {
+          unit = 'deg';
+        }
+        styles.styles.transform += "".concat(type, "(").concat(args + unit, ") ");
+      } else {
+        styles.styles[type] = "".concat(args);
+      }
+      this.currentStepAnimates[this.next] = styles;
+    }
+  }, {
+    key: "_animateRun",
+    value: function _animateRun() {
+      var styles = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      var ref = this.$.$refs['ani'].ref;
+      if (!ref) return;
+      return new Promise(function (resolve, reject) {
+        nvueAnimation.transition(ref, _objectSpread({
+          styles: styles
+        }, config), function (res) {
+          resolve();
+        });
+      });
+    }
+  }, {
+    key: "_nvueNextAnimate",
+    value: function _nvueNextAnimate(animates) {
+      var _this2 = this;
+      var step = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+      var fn = arguments.length > 2 ? arguments[2] : undefined;
+      var obj = animates[step];
+      if (obj) {
+        var styles = obj.styles,
+          config = obj.config;
+        this._animateRun(styles, config).then(function () {
+          step += 1;
+          _this2._nvueNextAnimate(animates, step, fn);
+        });
+      } else {
+        this.currentStepAnimates = {};
+        typeof fn === 'function' && fn();
+        this.isEnd = true;
+      }
+    }
+  }, {
+    key: "step",
+    value: function step() {
+      var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      this.animation.step(config);
+      return this;
+    }
+  }, {
+    key: "run",
+    value: function run(fn) {
+      this.$.animationData = this.animation.export();
+      this.$.timer = setTimeout(function () {
+        typeof fn === 'function' && fn();
+      }, this.$.durationTime);
+    }
+  }]);
+  return MPAnimation;
+}();
+var animateTypes1 = ['matrix', 'matrix3d', 'rotate', 'rotate3d', 'rotateX', 'rotateY', 'rotateZ', 'scale', 'scale3d', 'scaleX', 'scaleY', 'scaleZ', 'skew', 'skewX', 'skewY', 'translate', 'translate3d', 'translateX', 'translateY', 'translateZ'];
+var animateTypes2 = ['opacity', 'backgroundColor'];
+var animateTypes3 = ['width', 'height', 'left', 'right', 'top', 'bottom'];
+animateTypes1.concat(animateTypes2, animateTypes3).forEach(function (type) {
+  MPAnimation.prototype[type] = function () {
+    var _this$animation;
+    (_this$animation = this.animation)[type].apply(_this$animation, arguments);
+    return this;
+  };
+});
+function createAnimation(option, _this) {
+  if (!_this) return;
+  clearTimeout(_this.timer);
+  return new MPAnimation(option, _this);
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 460 */,
+/* 461 */,
+/* 462 */,
+/* 463 */,
+/* 464 */,
+/* 465 */
+/*!*******************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-loading-icon/components/uv-loading-icon/props.js ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _uni$$uv, _uni$$uv$props;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default2 = {
+  props: _objectSpread({
+    // 是否显示组件
+    show: {
+      type: Boolean,
+      default: true
+    },
+    // 颜色
+    color: {
+      type: String,
+      default: '#909193'
+    },
+    // 提示文字颜色
+    textColor: {
+      type: String,
+      default: '#909193'
+    },
+    // 文字和图标是否垂直排列
+    vertical: {
+      type: Boolean,
+      default: false
+    },
+    // 模式选择，circle-圆形，spinner-花朵形，semicircle-半圆形
+    mode: {
+      type: String,
+      default: 'spinner'
+    },
+    // 图标大小，单位默认px
+    size: {
+      type: [String, Number],
+      default: 24
+    },
+    // 文字大小
+    textSize: {
+      type: [String, Number],
+      default: 15
+    },
+    // 文字样式
+    textStyle: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
+    },
+    // 文字内容
+    text: {
+      type: [String, Number],
+      default: ''
+    },
+    // 动画模式 https://www.runoob.com/cssref/css3-pr-animation-timing-function.html
+    timingFunction: {
+      type: String,
+      default: 'linear'
+    },
+    // 动画执行周期时间
+    duration: {
+      type: [String, Number],
+      default: 1200
+    },
+    // mode=circle时的暗边颜色
+    inactiveColor: {
+      type: String,
+      default: ''
+    }
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.loadingIcon)
+};
+exports.default = _default2;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 466 */,
+/* 467 */,
+/* 468 */,
+/* 469 */,
+/* 470 */,
+/* 471 */,
+/* 472 */,
+/* 473 */
+/*!***************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-icon/components/uv-icon/icons.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  'uvicon-level': 'e68f',
+  'uvicon-checkbox-mark': 'e659',
+  'uvicon-folder': 'e694',
+  'uvicon-movie': 'e67c',
+  'uvicon-star-fill': 'e61e',
+  'uvicon-star': 'e618',
+  'uvicon-phone-fill': 'e6ac',
+  'uvicon-phone': 'e6ba',
+  'uvicon-apple-fill': 'e635',
+  'uvicon-backspace': 'e64d',
+  'uvicon-attach': 'e640',
+  'uvicon-empty-data': 'e671',
+  'uvicon-empty-address': 'e68a',
+  'uvicon-empty-favor': 'e662',
+  'uvicon-empty-car': 'e657',
+  'uvicon-empty-order': 'e66b',
+  'uvicon-empty-list': 'e672',
+  'uvicon-empty-search': 'e677',
+  'uvicon-empty-permission': 'e67d',
+  'uvicon-empty-news': 'e67e',
+  'uvicon-empty-history': 'e685',
+  'uvicon-empty-coupon': 'e69b',
+  'uvicon-empty-page': 'e60e',
+  'uvicon-empty-wifi-off': 'e6cc',
+  'uvicon-reload': 'e627',
+  'uvicon-order': 'e695',
+  'uvicon-server-man': 'e601',
+  'uvicon-search': 'e632',
+  'uvicon-more-dot-fill': 'e66f',
+  'uvicon-scan': 'e631',
+  'uvicon-map': 'e665',
+  'uvicon-map-fill': 'e6a8',
+  'uvicon-tags': 'e621',
+  'uvicon-tags-fill': 'e613',
+  'uvicon-eye': 'e664',
+  'uvicon-eye-fill': 'e697',
+  'uvicon-eye-off': 'e69c',
+  'uvicon-eye-off-outline': 'e688',
+  'uvicon-mic': 'e66d',
+  'uvicon-mic-off': 'e691',
+  'uvicon-calendar': 'e65c',
+  'uvicon-trash': 'e623',
+  'uvicon-trash-fill': 'e6ce',
+  'uvicon-play-left': 'e6bf',
+  'uvicon-play-right': 'e6b3',
+  'uvicon-minus': 'e614',
+  'uvicon-plus': 'e625',
+  'uvicon-info-circle': 'e69f',
+  'uvicon-info-circle-fill': 'e6a7',
+  'uvicon-question-circle': 'e622',
+  'uvicon-question-circle-fill': 'e6bc',
+  'uvicon-close': 'e65a',
+  'uvicon-checkmark': 'e64a',
+  'uvicon-checkmark-circle': 'e643',
+  'uvicon-checkmark-circle-fill': 'e668',
+  'uvicon-setting': 'e602',
+  'uvicon-setting-fill': 'e6d0',
+  'uvicon-heart': 'e6a2',
+  'uvicon-heart-fill': 'e68b',
+  'uvicon-camera': 'e642',
+  'uvicon-camera-fill': 'e650',
+  'uvicon-more-circle': 'e69e',
+  'uvicon-more-circle-fill': 'e684',
+  'uvicon-chat': 'e656',
+  'uvicon-chat-fill': 'e63f',
+  'uvicon-bag': 'e647',
+  'uvicon-error-circle': 'e66e',
+  'uvicon-error-circle-fill': 'e655',
+  'uvicon-close-circle': 'e64e',
+  'uvicon-close-circle-fill': 'e666',
+  'uvicon-share': 'e629',
+  'uvicon-share-fill': 'e6bb',
+  'uvicon-share-square': 'e6c4',
+  'uvicon-shopping-cart': 'e6cb',
+  'uvicon-shopping-cart-fill': 'e630',
+  'uvicon-bell': 'e651',
+  'uvicon-bell-fill': 'e604',
+  'uvicon-list': 'e690',
+  'uvicon-list-dot': 'e6a9',
+  'uvicon-zhifubao-circle-fill': 'e617',
+  'uvicon-weixin-circle-fill': 'e6cd',
+  'uvicon-weixin-fill': 'e620',
+  'uvicon-qq-fill': 'e608',
+  'uvicon-qq-circle-fill': 'e6b9',
+  'uvicon-moments-circel-fill': 'e6c2',
+  'uvicon-moments': 'e6a0',
+  'uvicon-car': 'e64f',
+  'uvicon-car-fill': 'e648',
+  'uvicon-warning-fill': 'e6c7',
+  'uvicon-warning': 'e6c1',
+  'uvicon-clock-fill': 'e64b',
+  'uvicon-clock': 'e66c',
+  'uvicon-edit-pen': 'e65d',
+  'uvicon-edit-pen-fill': 'e679',
+  'uvicon-email': 'e673',
+  'uvicon-email-fill': 'e683',
+  'uvicon-minus-circle': 'e6a5',
+  'uvicon-plus-circle': 'e603',
+  'uvicon-plus-circle-fill': 'e611',
+  'uvicon-file-text': 'e687',
+  'uvicon-file-text-fill': 'e67f',
+  'uvicon-pushpin': 'e6d1',
+  'uvicon-pushpin-fill': 'e6b6',
+  'uvicon-grid': 'e68c',
+  'uvicon-grid-fill': 'e698',
+  'uvicon-play-circle': 'e6af',
+  'uvicon-play-circle-fill': 'e62a',
+  'uvicon-pause-circle-fill': 'e60c',
+  'uvicon-pause': 'e61c',
+  'uvicon-pause-circle': 'e696',
+  'uvicon-gift-fill': 'e6b0',
+  'uvicon-gift': 'e680',
+  'uvicon-kefu-ermai': 'e660',
+  'uvicon-server-fill': 'e610',
+  'uvicon-coupon-fill': 'e64c',
+  'uvicon-coupon': 'e65f',
+  'uvicon-integral': 'e693',
+  'uvicon-integral-fill': 'e6b1',
+  'uvicon-home-fill': 'e68e',
+  'uvicon-home': 'e67b',
+  'uvicon-account': 'e63a',
+  'uvicon-account-fill': 'e653',
+  'uvicon-thumb-down-fill': 'e628',
+  'uvicon-thumb-down': 'e60a',
+  'uvicon-thumb-up': 'e612',
+  'uvicon-thumb-up-fill': 'e62c',
+  'uvicon-lock-fill': 'e6a6',
+  'uvicon-lock-open': 'e68d',
+  'uvicon-lock-opened-fill': 'e6a1',
+  'uvicon-lock': 'e69d',
+  'uvicon-red-packet': 'e6c3',
+  'uvicon-photo-fill': 'e6b4',
+  'uvicon-photo': 'e60d',
+  'uvicon-volume-off-fill': 'e6c8',
+  'uvicon-volume-off': 'e6bd',
+  'uvicon-volume-fill': 'e624',
+  'uvicon-volume': 'e605',
+  'uvicon-download': 'e670',
+  'uvicon-arrow-up-fill': 'e636',
+  'uvicon-arrow-down-fill': 'e638',
+  'uvicon-play-left-fill': 'e6ae',
+  'uvicon-play-right-fill': 'e6ad',
+  'uvicon-arrow-downward': 'e634',
+  'uvicon-arrow-leftward': 'e63b',
+  'uvicon-arrow-rightward': 'e644',
+  'uvicon-arrow-upward': 'e641',
+  'uvicon-arrow-down': 'e63e',
+  'uvicon-arrow-right': 'e63c',
+  'uvicon-arrow-left': 'e646',
+  'uvicon-arrow-up': 'e633',
+  'uvicon-skip-back-left': 'e6c5',
+  'uvicon-skip-forward-right': 'e61f',
+  'uvicon-arrow-left-double': 'e637',
+  'uvicon-man': 'e675',
+  'uvicon-woman': 'e626',
+  'uvicon-en': 'e6b8',
+  'uvicon-twitte': 'e607',
+  'uvicon-twitter-circle-fill': 'e6cf'
+};
+exports.default = _default;
+
+/***/ }),
+/* 474 */
+/*!***************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-icon/components/uv-icon/props.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _uni$$uv, _uni$$uv$props;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default = {
+  props: _objectSpread({
+    // 图标类名
+    name: {
+      type: String,
+      default: ''
+    },
+    // 图标颜色，可接受主题色
+    color: {
+      type: String,
+      default: '#606266'
+    },
+    // 字体大小，单位px
+    size: {
+      type: [String, Number],
+      default: '16px'
+    },
+    // 是否显示粗体
+    bold: {
+      type: Boolean,
+      default: false
+    },
+    // 点击图标的时候传递事件出去的index（用于区分点击了哪一个）
+    index: {
+      type: [String, Number],
+      default: null
+    },
+    // 触摸图标时的类名
+    hoverClass: {
+      type: String,
+      default: ''
+    },
+    // 自定义扩展前缀，方便用户扩展自己的图标库
+    customPrefix: {
+      type: String,
+      default: 'uvicon'
+    },
+    // 图标右边或者下面的文字
+    label: {
+      type: [String, Number],
+      default: ''
+    },
+    // label的位置，只能右边或者下边
+    labelPos: {
+      type: String,
+      default: 'right'
+    },
+    // label的大小
+    labelSize: {
+      type: [String, Number],
+      default: '15px'
+    },
+    // label的颜色
+    labelColor: {
+      type: String,
+      default: '#606266'
+    },
+    // label与图标的距离
+    space: {
+      type: [String, Number],
+      default: '3px'
+    },
+    // 图片的mode
+    imgMode: {
+      type: String,
+      default: 'aspectFit'
+    },
+    // 用于显示图片小图标时，图片的宽度
+    width: {
+      type: [String, Number],
+      default: ''
+    },
+    // 用于显示图片小图标时，图片的高度
+    height: {
+      type: [String, Number],
+      default: ''
+    },
+    // 用于解决某些情况下，让图标垂直居中的用途
+    top: {
+      type: [String, Number],
+      default: 0
+    },
+    // 是否阻止事件传播
+    stop: {
+      type: Boolean,
+      default: false
+    }
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.icon)
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 475 */,
+/* 476 */,
+/* 477 */,
+/* 478 */,
+/* 479 */,
+/* 480 */,
+/* 481 */,
+/* 482 */
+/*!*************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-gap/components/uv-gap/props.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _uni$$uv, _uni$$uv$props;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default = {
+  props: _objectSpread({
+    // 背景颜色（默认transparent）
+    bgColor: {
+      type: String,
+      default: 'transparent'
+    },
+    // 分割槽高度，单位px（默认20）
+    height: {
+      type: [String, Number],
+      default: 20
+    },
+    // 与上一个组件的距离
+    marginTop: {
+      type: [String, Number],
+      default: 0
+    },
+    // 与下一个组件的距离
+    marginBottom: {
+      type: [String, Number],
+      default: 0
+    }
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.gap)
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 483 */,
+/* 484 */,
+/* 485 */,
+/* 486 */,
+/* 487 */,
+/* 488 */
 /*!*****************************************************************************!*\
   !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-badge/props.js ***!
   \*****************************************************************************/
@@ -22762,14 +23579,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 422 */,
-/* 423 */,
-/* 424 */,
-/* 425 */,
-/* 426 */,
-/* 427 */,
-/* 428 */,
-/* 429 */
+/* 489 */,
+/* 490 */,
+/* 491 */,
+/* 492 */,
+/* 493 */,
+/* 494 */,
+/* 495 */,
+/* 496 */
 /*!****************************************************************************!*\
   !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-icon/icons.js ***!
   \****************************************************************************/
@@ -23000,7 +23817,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 430 */
+/* 497 */
 /*!****************************************************************************!*\
   !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-icon/props.js ***!
   \****************************************************************************/
@@ -23107,207 +23924,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 431 */,
-/* 432 */,
-/* 433 */,
-/* 434 */,
-/* 435 */,
-/* 436 */,
-/* 437 */,
-/* 438 */
-/*!*********************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-overlay/components/uv-overlay/props.js ***!
-  \*********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _uni$$uv, _uni$$uv$props;
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var _default = {
-  props: _objectSpread({
-    // 是否显示遮罩
-    show: {
-      type: Boolean,
-      default: false
-    },
-    // 层级z-index
-    zIndex: {
-      type: [String, Number],
-      default: 10070
-    },
-    // 遮罩的过渡时间，单位为ms
-    duration: {
-      type: [String, Number],
-      default: 300
-    },
-    // 不透明度值，当做rgba的第四个参数
-    opacity: {
-      type: [String, Number],
-      default: 0.5
-    }
-  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.overlay)
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 439 */,
-/* 440 */,
-/* 441 */,
-/* 442 */,
-/* 443 */,
-/* 444 */,
-/* 445 */,
-/* 446 */
-/*!*************************************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-transition/components/uv-transition/createAnimation.js ***!
-  \*************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.createAnimation = createAnimation;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23));
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ 24));
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-// const defaultOption = {
-// 	duration: 300,
-// 	timingFunction: 'linear',
-// 	delay: 0,
-// 	transformOrigin: '50% 50% 0'
-// }
-var MPAnimation = /*#__PURE__*/function () {
-  function MPAnimation(options, _this) {
-    (0, _classCallCheck2.default)(this, MPAnimation);
-    this.options = options;
-    // 在iOS10+QQ小程序平台下，传给原生的对象一定是个普通对象而不是Proxy对象，否则会报parameter should be Object instead of ProxyObject的错误
-    this.animation = uni.createAnimation(_objectSpread({}, options));
-    this.currentStepAnimates = {};
-    this.next = 0;
-    this.$ = _this;
-  }
-  (0, _createClass2.default)(MPAnimation, [{
-    key: "_nvuePushAnimates",
-    value: function _nvuePushAnimates(type, args) {
-      var aniObj = this.currentStepAnimates[this.next];
-      var styles = {};
-      if (!aniObj) {
-        styles = {
-          styles: {},
-          config: {}
-        };
-      } else {
-        styles = aniObj;
-      }
-      if (animateTypes1.includes(type)) {
-        if (!styles.styles.transform) {
-          styles.styles.transform = '';
-        }
-        var unit = '';
-        if (type === 'rotate') {
-          unit = 'deg';
-        }
-        styles.styles.transform += "".concat(type, "(").concat(args + unit, ") ");
-      } else {
-        styles.styles[type] = "".concat(args);
-      }
-      this.currentStepAnimates[this.next] = styles;
-    }
-  }, {
-    key: "_animateRun",
-    value: function _animateRun() {
-      var styles = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-      var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-      var ref = this.$.$refs['ani'].ref;
-      if (!ref) return;
-      return new Promise(function (resolve, reject) {
-        nvueAnimation.transition(ref, _objectSpread({
-          styles: styles
-        }, config), function (res) {
-          resolve();
-        });
-      });
-    }
-  }, {
-    key: "_nvueNextAnimate",
-    value: function _nvueNextAnimate(animates) {
-      var _this2 = this;
-      var step = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-      var fn = arguments.length > 2 ? arguments[2] : undefined;
-      var obj = animates[step];
-      if (obj) {
-        var styles = obj.styles,
-          config = obj.config;
-        this._animateRun(styles, config).then(function () {
-          step += 1;
-          _this2._nvueNextAnimate(animates, step, fn);
-        });
-      } else {
-        this.currentStepAnimates = {};
-        typeof fn === 'function' && fn();
-        this.isEnd = true;
-      }
-    }
-  }, {
-    key: "step",
-    value: function step() {
-      var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-      this.animation.step(config);
-      return this;
-    }
-  }, {
-    key: "run",
-    value: function run(fn) {
-      this.$.animationData = this.animation.export();
-      this.$.timer = setTimeout(function () {
-        typeof fn === 'function' && fn();
-      }, this.$.durationTime);
-    }
-  }]);
-  return MPAnimation;
-}();
-var animateTypes1 = ['matrix', 'matrix3d', 'rotate', 'rotate3d', 'rotateX', 'rotateY', 'rotateZ', 'scale', 'scale3d', 'scaleX', 'scaleY', 'scaleZ', 'skew', 'skewX', 'skewY', 'translate', 'translate3d', 'translateX', 'translateY', 'translateZ'];
-var animateTypes2 = ['opacity', 'backgroundColor'];
-var animateTypes3 = ['width', 'height', 'left', 'right', 'top', 'bottom'];
-animateTypes1.concat(animateTypes2, animateTypes3).forEach(function (type) {
-  MPAnimation.prototype[type] = function () {
-    var _this$animation;
-    (_this$animation = this.animation)[type].apply(_this$animation, arguments);
-    return this;
-  };
-});
-function createAnimation(option, _this) {
-  if (!_this) return;
-  clearTimeout(_this.timer);
-  return new MPAnimation(option, _this);
-}
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 447 */,
-/* 448 */,
-/* 449 */,
-/* 450 */,
-/* 451 */,
-/* 452 */
+/* 498 */,
+/* 499 */,
+/* 500 */,
+/* 501 */,
+/* 502 */,
+/* 503 */,
+/* 504 */,
+/* 505 */
 /*!***************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-status-bar/components/uv-status-bar/props.js ***!
   \***************************************************************************************/
@@ -23332,317 +23956,21 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 453 */,
-/* 454 */,
-/* 455 */,
-/* 456 */,
-/* 457 */,
-/* 458 */,
-/* 459 */,
-/* 460 */,
-/* 461 */,
-/* 462 */,
-/* 463 */,
-/* 464 */,
-/* 465 */,
-/* 466 */,
-/* 467 */
-/*!***************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-icon/components/uv-icon/icons.js ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  'uvicon-level': 'e68f',
-  'uvicon-checkbox-mark': 'e659',
-  'uvicon-folder': 'e694',
-  'uvicon-movie': 'e67c',
-  'uvicon-star-fill': 'e61e',
-  'uvicon-star': 'e618',
-  'uvicon-phone-fill': 'e6ac',
-  'uvicon-phone': 'e6ba',
-  'uvicon-apple-fill': 'e635',
-  'uvicon-backspace': 'e64d',
-  'uvicon-attach': 'e640',
-  'uvicon-empty-data': 'e671',
-  'uvicon-empty-address': 'e68a',
-  'uvicon-empty-favor': 'e662',
-  'uvicon-empty-car': 'e657',
-  'uvicon-empty-order': 'e66b',
-  'uvicon-empty-list': 'e672',
-  'uvicon-empty-search': 'e677',
-  'uvicon-empty-permission': 'e67d',
-  'uvicon-empty-news': 'e67e',
-  'uvicon-empty-history': 'e685',
-  'uvicon-empty-coupon': 'e69b',
-  'uvicon-empty-page': 'e60e',
-  'uvicon-empty-wifi-off': 'e6cc',
-  'uvicon-reload': 'e627',
-  'uvicon-order': 'e695',
-  'uvicon-server-man': 'e601',
-  'uvicon-search': 'e632',
-  'uvicon-more-dot-fill': 'e66f',
-  'uvicon-scan': 'e631',
-  'uvicon-map': 'e665',
-  'uvicon-map-fill': 'e6a8',
-  'uvicon-tags': 'e621',
-  'uvicon-tags-fill': 'e613',
-  'uvicon-eye': 'e664',
-  'uvicon-eye-fill': 'e697',
-  'uvicon-eye-off': 'e69c',
-  'uvicon-eye-off-outline': 'e688',
-  'uvicon-mic': 'e66d',
-  'uvicon-mic-off': 'e691',
-  'uvicon-calendar': 'e65c',
-  'uvicon-trash': 'e623',
-  'uvicon-trash-fill': 'e6ce',
-  'uvicon-play-left': 'e6bf',
-  'uvicon-play-right': 'e6b3',
-  'uvicon-minus': 'e614',
-  'uvicon-plus': 'e625',
-  'uvicon-info-circle': 'e69f',
-  'uvicon-info-circle-fill': 'e6a7',
-  'uvicon-question-circle': 'e622',
-  'uvicon-question-circle-fill': 'e6bc',
-  'uvicon-close': 'e65a',
-  'uvicon-checkmark': 'e64a',
-  'uvicon-checkmark-circle': 'e643',
-  'uvicon-checkmark-circle-fill': 'e668',
-  'uvicon-setting': 'e602',
-  'uvicon-setting-fill': 'e6d0',
-  'uvicon-heart': 'e6a2',
-  'uvicon-heart-fill': 'e68b',
-  'uvicon-camera': 'e642',
-  'uvicon-camera-fill': 'e650',
-  'uvicon-more-circle': 'e69e',
-  'uvicon-more-circle-fill': 'e684',
-  'uvicon-chat': 'e656',
-  'uvicon-chat-fill': 'e63f',
-  'uvicon-bag': 'e647',
-  'uvicon-error-circle': 'e66e',
-  'uvicon-error-circle-fill': 'e655',
-  'uvicon-close-circle': 'e64e',
-  'uvicon-close-circle-fill': 'e666',
-  'uvicon-share': 'e629',
-  'uvicon-share-fill': 'e6bb',
-  'uvicon-share-square': 'e6c4',
-  'uvicon-shopping-cart': 'e6cb',
-  'uvicon-shopping-cart-fill': 'e630',
-  'uvicon-bell': 'e651',
-  'uvicon-bell-fill': 'e604',
-  'uvicon-list': 'e690',
-  'uvicon-list-dot': 'e6a9',
-  'uvicon-zhifubao-circle-fill': 'e617',
-  'uvicon-weixin-circle-fill': 'e6cd',
-  'uvicon-weixin-fill': 'e620',
-  'uvicon-qq-fill': 'e608',
-  'uvicon-qq-circle-fill': 'e6b9',
-  'uvicon-moments-circel-fill': 'e6c2',
-  'uvicon-moments': 'e6a0',
-  'uvicon-car': 'e64f',
-  'uvicon-car-fill': 'e648',
-  'uvicon-warning-fill': 'e6c7',
-  'uvicon-warning': 'e6c1',
-  'uvicon-clock-fill': 'e64b',
-  'uvicon-clock': 'e66c',
-  'uvicon-edit-pen': 'e65d',
-  'uvicon-edit-pen-fill': 'e679',
-  'uvicon-email': 'e673',
-  'uvicon-email-fill': 'e683',
-  'uvicon-minus-circle': 'e6a5',
-  'uvicon-plus-circle': 'e603',
-  'uvicon-plus-circle-fill': 'e611',
-  'uvicon-file-text': 'e687',
-  'uvicon-file-text-fill': 'e67f',
-  'uvicon-pushpin': 'e6d1',
-  'uvicon-pushpin-fill': 'e6b6',
-  'uvicon-grid': 'e68c',
-  'uvicon-grid-fill': 'e698',
-  'uvicon-play-circle': 'e6af',
-  'uvicon-play-circle-fill': 'e62a',
-  'uvicon-pause-circle-fill': 'e60c',
-  'uvicon-pause': 'e61c',
-  'uvicon-pause-circle': 'e696',
-  'uvicon-gift-fill': 'e6b0',
-  'uvicon-gift': 'e680',
-  'uvicon-kefu-ermai': 'e660',
-  'uvicon-server-fill': 'e610',
-  'uvicon-coupon-fill': 'e64c',
-  'uvicon-coupon': 'e65f',
-  'uvicon-integral': 'e693',
-  'uvicon-integral-fill': 'e6b1',
-  'uvicon-home-fill': 'e68e',
-  'uvicon-home': 'e67b',
-  'uvicon-account': 'e63a',
-  'uvicon-account-fill': 'e653',
-  'uvicon-thumb-down-fill': 'e628',
-  'uvicon-thumb-down': 'e60a',
-  'uvicon-thumb-up': 'e612',
-  'uvicon-thumb-up-fill': 'e62c',
-  'uvicon-lock-fill': 'e6a6',
-  'uvicon-lock-open': 'e68d',
-  'uvicon-lock-opened-fill': 'e6a1',
-  'uvicon-lock': 'e69d',
-  'uvicon-red-packet': 'e6c3',
-  'uvicon-photo-fill': 'e6b4',
-  'uvicon-photo': 'e60d',
-  'uvicon-volume-off-fill': 'e6c8',
-  'uvicon-volume-off': 'e6bd',
-  'uvicon-volume-fill': 'e624',
-  'uvicon-volume': 'e605',
-  'uvicon-download': 'e670',
-  'uvicon-arrow-up-fill': 'e636',
-  'uvicon-arrow-down-fill': 'e638',
-  'uvicon-play-left-fill': 'e6ae',
-  'uvicon-play-right-fill': 'e6ad',
-  'uvicon-arrow-downward': 'e634',
-  'uvicon-arrow-leftward': 'e63b',
-  'uvicon-arrow-rightward': 'e644',
-  'uvicon-arrow-upward': 'e641',
-  'uvicon-arrow-down': 'e63e',
-  'uvicon-arrow-right': 'e63c',
-  'uvicon-arrow-left': 'e646',
-  'uvicon-arrow-up': 'e633',
-  'uvicon-skip-back-left': 'e6c5',
-  'uvicon-skip-forward-right': 'e61f',
-  'uvicon-arrow-left-double': 'e637',
-  'uvicon-man': 'e675',
-  'uvicon-woman': 'e626',
-  'uvicon-en': 'e6b8',
-  'uvicon-twitte': 'e607',
-  'uvicon-twitter-circle-fill': 'e6cf'
-};
-exports.default = _default;
-
-/***/ }),
-/* 468 */
-/*!***************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-icon/components/uv-icon/props.js ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _uni$$uv, _uni$$uv$props;
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var _default = {
-  props: _objectSpread({
-    // 图标类名
-    name: {
-      type: String,
-      default: ''
-    },
-    // 图标颜色，可接受主题色
-    color: {
-      type: String,
-      default: '#606266'
-    },
-    // 字体大小，单位px
-    size: {
-      type: [String, Number],
-      default: '16px'
-    },
-    // 是否显示粗体
-    bold: {
-      type: Boolean,
-      default: false
-    },
-    // 点击图标的时候传递事件出去的index（用于区分点击了哪一个）
-    index: {
-      type: [String, Number],
-      default: null
-    },
-    // 触摸图标时的类名
-    hoverClass: {
-      type: String,
-      default: ''
-    },
-    // 自定义扩展前缀，方便用户扩展自己的图标库
-    customPrefix: {
-      type: String,
-      default: 'uvicon'
-    },
-    // 图标右边或者下面的文字
-    label: {
-      type: [String, Number],
-      default: ''
-    },
-    // label的位置，只能右边或者下边
-    labelPos: {
-      type: String,
-      default: 'right'
-    },
-    // label的大小
-    labelSize: {
-      type: [String, Number],
-      default: '15px'
-    },
-    // label的颜色
-    labelColor: {
-      type: String,
-      default: '#606266'
-    },
-    // label与图标的距离
-    space: {
-      type: [String, Number],
-      default: '3px'
-    },
-    // 图片的mode
-    imgMode: {
-      type: String,
-      default: 'aspectFit'
-    },
-    // 用于显示图片小图标时，图片的宽度
-    width: {
-      type: [String, Number],
-      default: ''
-    },
-    // 用于显示图片小图标时，图片的高度
-    height: {
-      type: [String, Number],
-      default: ''
-    },
-    // 用于解决某些情况下，让图标垂直居中的用途
-    top: {
-      type: [String, Number],
-      default: 0
-    },
-    // 是否阻止事件传播
-    stop: {
-      type: Boolean,
-      default: false
-    }
-  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.icon)
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 469 */,
-/* 470 */,
-/* 471 */,
-/* 472 */,
-/* 473 */,
-/* 474 */,
-/* 475 */,
-/* 476 */
+/* 506 */,
+/* 507 */,
+/* 508 */,
+/* 509 */,
+/* 510 */,
+/* 511 */,
+/* 512 */,
+/* 513 */,
+/* 514 */,
+/* 515 */,
+/* 516 */,
+/* 517 */,
+/* 518 */,
+/* 519 */,
+/* 520 */
 /*!*********************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-toolbar/components/uv-toolbar/props.js ***!
   \*********************************************************************************/
@@ -23704,288 +24032,6 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 477 */,
-/* 478 */,
-/* 479 */,
-/* 480 */,
-/* 481 */,
-/* 482 */,
-/* 483 */,
-/* 484 */
-/*!**********************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/colorGradient.js ***!
-  \**********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.colorGradient = colorGradient;
-exports.colorToRgba = colorToRgba;
-exports.hexToRgb = hexToRgb;
-exports.rgbToHex = rgbToHex;
-/**
- * 求两个颜色之间的渐变值
- * @param {string} startColor 开始的颜色
- * @param {string} endColor 结束的颜色
- * @param {number} step 颜色等分的份额
- * */
-function colorGradient() {
-  var startColor = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'rgb(0, 0, 0)';
-  var endColor = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'rgb(255, 255, 255)';
-  var step = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 10;
-  var startRGB = hexToRgb(startColor, false); // 转换为rgb数组模式
-  var startR = startRGB[0];
-  var startG = startRGB[1];
-  var startB = startRGB[2];
-  var endRGB = hexToRgb(endColor, false);
-  var endR = endRGB[0];
-  var endG = endRGB[1];
-  var endB = endRGB[2];
-  var sR = (endR - startR) / step; // 总差值
-  var sG = (endG - startG) / step;
-  var sB = (endB - startB) / step;
-  var colorArr = [];
-  for (var i = 0; i < step; i++) {
-    // 计算每一步的hex值
-    var hex = rgbToHex("rgb(".concat(Math.round(sR * i + startR), ",").concat(Math.round(sG * i + startG), ",").concat(Math.round(sB * i + startB), ")"));
-    // 确保第一个颜色值为startColor的值
-    if (i === 0) hex = rgbToHex(startColor);
-    // 确保最后一个颜色值为endColor的值
-    if (i === step - 1) hex = rgbToHex(endColor);
-    colorArr.push(hex);
-  }
-  return colorArr;
-}
-
-// 将hex表示方式转换为rgb表示方式(这里返回rgb数组模式)
-function hexToRgb(sColor) {
-  var str = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-  var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
-  sColor = String(sColor).toLowerCase();
-  if (sColor && reg.test(sColor)) {
-    if (sColor.length === 4) {
-      var sColorNew = '#';
-      for (var i = 1; i < 4; i += 1) {
-        sColorNew += sColor.slice(i, i + 1).concat(sColor.slice(i, i + 1));
-      }
-      sColor = sColorNew;
-    }
-    // 处理六位的颜色值
-    var sColorChange = [];
-    for (var _i = 1; _i < 7; _i += 2) {
-      sColorChange.push(parseInt("0x".concat(sColor.slice(_i, _i + 2))));
-    }
-    if (!str) {
-      return sColorChange;
-    }
-    return "rgb(".concat(sColorChange[0], ",").concat(sColorChange[1], ",").concat(sColorChange[2], ")");
-  }
-  if (/^(rgb|RGB)/.test(sColor)) {
-    var arr = sColor.replace(/(?:\(|\)|rgb|RGB)*/g, '').split(',');
-    return arr.map(function (val) {
-      return Number(val);
-    });
-  }
-  return sColor;
-}
-
-// 将rgb表示方式转换为hex表示方式
-function rgbToHex(rgb) {
-  var _this = rgb;
-  var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
-  if (/^(rgb|RGB)/.test(_this)) {
-    var aColor = _this.replace(/(?:\(|\)|rgb|RGB)*/g, '').split(',');
-    var strHex = '#';
-    for (var i = 0; i < aColor.length; i++) {
-      var hex = Number(aColor[i]).toString(16);
-      hex = String(hex).length == 1 ? "".concat(0, hex) : hex; // 保证每个rgb的值为2位
-      if (hex === '0') {
-        hex += hex;
-      }
-      strHex += hex;
-    }
-    if (strHex.length !== 7) {
-      strHex = _this;
-    }
-    return strHex;
-  }
-  if (reg.test(_this)) {
-    var aNum = _this.replace(/#/, '').split('');
-    if (aNum.length === 6) {
-      return _this;
-    }
-    if (aNum.length === 3) {
-      var numHex = '#';
-      for (var _i2 = 0; _i2 < aNum.length; _i2 += 1) {
-        numHex += aNum[_i2] + aNum[_i2];
-      }
-      return numHex;
-    }
-  } else {
-    return _this;
-  }
-}
-
-/**
-* JS颜色十六进制转换为rgb或rgba,返回的格式为 rgba（255，255，255，0.5）字符串
-* sHex为传入的十六进制的色值
-* alpha为rgba的透明度
-*/
-function colorToRgba(color, alpha) {
-  color = rgbToHex(color);
-  // 十六进制颜色值的正则表达式
-  var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
-  /* 16进制颜色转为RGB格式 */
-  var sColor = String(color).toLowerCase();
-  if (sColor && reg.test(sColor)) {
-    if (sColor.length === 4) {
-      var sColorNew = '#';
-      for (var i = 1; i < 4; i += 1) {
-        sColorNew += sColor.slice(i, i + 1).concat(sColor.slice(i, i + 1));
-      }
-      sColor = sColorNew;
-    }
-    // 处理六位的颜色值
-    var sColorChange = [];
-    for (var _i3 = 1; _i3 < 7; _i3 += 2) {
-      sColorChange.push(parseInt("0x".concat(sColor.slice(_i3, _i3 + 2))));
-    }
-    // return sColorChange.join(',')
-    return "rgba(".concat(sColorChange.join(','), ",").concat(alpha, ")");
-  }
-  return sColor;
-}
-
-/***/ }),
-/* 485 */
-/*!*******************************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-loading-icon/components/uv-loading-icon/props.js ***!
-  \*******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _uni$$uv, _uni$$uv$props;
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var _default2 = {
-  props: _objectSpread({
-    // 是否显示组件
-    show: {
-      type: Boolean,
-      default: true
-    },
-    // 颜色
-    color: {
-      type: String,
-      default: '#909193'
-    },
-    // 提示文字颜色
-    textColor: {
-      type: String,
-      default: '#909193'
-    },
-    // 文字和图标是否垂直排列
-    vertical: {
-      type: Boolean,
-      default: false
-    },
-    // 模式选择，circle-圆形，spinner-花朵形，semicircle-半圆形
-    mode: {
-      type: String,
-      default: 'spinner'
-    },
-    // 图标大小，单位默认px
-    size: {
-      type: [String, Number],
-      default: 24
-    },
-    // 文字大小
-    textSize: {
-      type: [String, Number],
-      default: 15
-    },
-    // 文字样式
-    textStyle: {
-      type: Object,
-      default: function _default() {
-        return {};
-      }
-    },
-    // 文字内容
-    text: {
-      type: [String, Number],
-      default: ''
-    },
-    // 动画模式 https://www.runoob.com/cssref/css3-pr-animation-timing-function.html
-    timingFunction: {
-      type: String,
-      default: 'linear'
-    },
-    // 动画执行周期时间
-    duration: {
-      type: [String, Number],
-      default: 1200
-    },
-    // mode=circle时的暗边颜色
-    inactiveColor: {
-      type: String,
-      default: ''
-    }
-  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.loadingIcon)
-};
-exports.default = _default2;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 486 */,
-/* 487 */,
-/* 488 */,
-/* 489 */,
-/* 490 */,
-/* 491 */,
-/* 492 */,
-/* 493 */,
-/* 494 */,
-/* 495 */,
-/* 496 */,
-/* 497 */,
-/* 498 */,
-/* 499 */,
-/* 500 */,
-/* 501 */,
-/* 502 */,
-/* 503 */,
-/* 504 */,
-/* 505 */,
-/* 506 */,
-/* 507 */,
-/* 508 */,
-/* 509 */,
-/* 510 */,
-/* 511 */,
-/* 512 */,
-/* 513 */,
-/* 514 */,
-/* 515 */,
-/* 516 */,
-/* 517 */,
-/* 518 */,
-/* 519 */,
-/* 520 */,
 /* 521 */,
 /* 522 */,
 /* 523 */,
@@ -23993,72 +24039,507 @@ exports.default = _default2;
 /* 525 */,
 /* 526 */,
 /* 527 */,
-/* 528 */,
-/* 529 */,
-/* 530 */,
-/* 531 */,
-/* 532 */,
-/* 533 */,
-/* 534 */,
-/* 535 */,
-/* 536 */,
-/* 537 */,
-/* 538 */,
-/* 539 */,
-/* 540 */,
-/* 541 */,
-/* 542 */,
-/* 543 */,
-/* 544 */,
-/* 545 */,
-/* 546 */,
-/* 547 */,
-/* 548 */,
-/* 549 */
-/*!*************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-gap/components/uv-gap/props.js ***!
-  \*************************************************************************/
+/* 528 */
+/*!*******************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uni-icons/components/uni-icons/uniicons_file_vue.js ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _uni$$uv, _uni$$uv$props;
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var _default = {
-  props: _objectSpread({
-    // 背景颜色（默认transparent）
-    bgColor: {
-      type: String,
-      default: 'transparent'
-    },
-    // 分割槽高度，单位px（默认20）
-    height: {
-      type: [String, Number],
-      default: 20
-    },
-    // 与上一个组件的距离
-    marginTop: {
-      type: [String, Number],
-      default: 0
-    },
-    // 与下一个组件的距离
-    marginBottom: {
-      type: [String, Number],
-      default: 0
-    }
-  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.gap)
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+exports.fontData = void 0;
+var fontData = [{
+  "font_class": "arrow-down",
+  "unicode": "\uE6BE"
+}, {
+  "font_class": "arrow-left",
+  "unicode": "\uE6BC"
+}, {
+  "font_class": "arrow-right",
+  "unicode": "\uE6BB"
+}, {
+  "font_class": "arrow-up",
+  "unicode": "\uE6BD"
+}, {
+  "font_class": "auth",
+  "unicode": "\uE6AB"
+}, {
+  "font_class": "auth-filled",
+  "unicode": "\uE6CC"
+}, {
+  "font_class": "back",
+  "unicode": "\uE6B9"
+}, {
+  "font_class": "bars",
+  "unicode": "\uE627"
+}, {
+  "font_class": "calendar",
+  "unicode": "\uE6A0"
+}, {
+  "font_class": "calendar-filled",
+  "unicode": "\uE6C0"
+}, {
+  "font_class": "camera",
+  "unicode": "\uE65A"
+}, {
+  "font_class": "camera-filled",
+  "unicode": "\uE658"
+}, {
+  "font_class": "cart",
+  "unicode": "\uE631"
+}, {
+  "font_class": "cart-filled",
+  "unicode": "\uE6D0"
+}, {
+  "font_class": "chat",
+  "unicode": "\uE65D"
+}, {
+  "font_class": "chat-filled",
+  "unicode": "\uE659"
+}, {
+  "font_class": "chatboxes",
+  "unicode": "\uE696"
+}, {
+  "font_class": "chatboxes-filled",
+  "unicode": "\uE692"
+}, {
+  "font_class": "chatbubble",
+  "unicode": "\uE697"
+}, {
+  "font_class": "chatbubble-filled",
+  "unicode": "\uE694"
+}, {
+  "font_class": "checkbox",
+  "unicode": "\uE62B"
+}, {
+  "font_class": "checkbox-filled",
+  "unicode": "\uE62C"
+}, {
+  "font_class": "checkmarkempty",
+  "unicode": "\uE65C"
+}, {
+  "font_class": "circle",
+  "unicode": "\uE65B"
+}, {
+  "font_class": "circle-filled",
+  "unicode": "\uE65E"
+}, {
+  "font_class": "clear",
+  "unicode": "\uE66D"
+}, {
+  "font_class": "close",
+  "unicode": "\uE673"
+}, {
+  "font_class": "closeempty",
+  "unicode": "\uE66C"
+}, {
+  "font_class": "cloud-download",
+  "unicode": "\uE647"
+}, {
+  "font_class": "cloud-download-filled",
+  "unicode": "\uE646"
+}, {
+  "font_class": "cloud-upload",
+  "unicode": "\uE645"
+}, {
+  "font_class": "cloud-upload-filled",
+  "unicode": "\uE648"
+}, {
+  "font_class": "color",
+  "unicode": "\uE6CF"
+}, {
+  "font_class": "color-filled",
+  "unicode": "\uE6C9"
+}, {
+  "font_class": "compose",
+  "unicode": "\uE67F"
+}, {
+  "font_class": "contact",
+  "unicode": "\uE693"
+}, {
+  "font_class": "contact-filled",
+  "unicode": "\uE695"
+}, {
+  "font_class": "down",
+  "unicode": "\uE6B8"
+}, {
+  "font_class": "bottom",
+  "unicode": "\uE6B8"
+}, {
+  "font_class": "download",
+  "unicode": "\uE68D"
+}, {
+  "font_class": "download-filled",
+  "unicode": "\uE681"
+}, {
+  "font_class": "email",
+  "unicode": "\uE69E"
+}, {
+  "font_class": "email-filled",
+  "unicode": "\uE69A"
+}, {
+  "font_class": "eye",
+  "unicode": "\uE651"
+}, {
+  "font_class": "eye-filled",
+  "unicode": "\uE66A"
+}, {
+  "font_class": "eye-slash",
+  "unicode": "\uE6B3"
+}, {
+  "font_class": "eye-slash-filled",
+  "unicode": "\uE6B4"
+}, {
+  "font_class": "fire",
+  "unicode": "\uE6A1"
+}, {
+  "font_class": "fire-filled",
+  "unicode": "\uE6C5"
+}, {
+  "font_class": "flag",
+  "unicode": "\uE65F"
+}, {
+  "font_class": "flag-filled",
+  "unicode": "\uE660"
+}, {
+  "font_class": "folder-add",
+  "unicode": "\uE6A9"
+}, {
+  "font_class": "folder-add-filled",
+  "unicode": "\uE6C8"
+}, {
+  "font_class": "font",
+  "unicode": "\uE6A3"
+}, {
+  "font_class": "forward",
+  "unicode": "\uE6BA"
+}, {
+  "font_class": "gear",
+  "unicode": "\uE664"
+}, {
+  "font_class": "gear-filled",
+  "unicode": "\uE661"
+}, {
+  "font_class": "gift",
+  "unicode": "\uE6A4"
+}, {
+  "font_class": "gift-filled",
+  "unicode": "\uE6C4"
+}, {
+  "font_class": "hand-down",
+  "unicode": "\uE63D"
+}, {
+  "font_class": "hand-down-filled",
+  "unicode": "\uE63C"
+}, {
+  "font_class": "hand-up",
+  "unicode": "\uE63F"
+}, {
+  "font_class": "hand-up-filled",
+  "unicode": "\uE63E"
+}, {
+  "font_class": "headphones",
+  "unicode": "\uE630"
+}, {
+  "font_class": "heart",
+  "unicode": "\uE639"
+}, {
+  "font_class": "heart-filled",
+  "unicode": "\uE641"
+}, {
+  "font_class": "help",
+  "unicode": "\uE679"
+}, {
+  "font_class": "help-filled",
+  "unicode": "\uE674"
+}, {
+  "font_class": "home",
+  "unicode": "\uE662"
+}, {
+  "font_class": "home-filled",
+  "unicode": "\uE663"
+}, {
+  "font_class": "image",
+  "unicode": "\uE670"
+}, {
+  "font_class": "image-filled",
+  "unicode": "\uE678"
+}, {
+  "font_class": "images",
+  "unicode": "\uE650"
+}, {
+  "font_class": "images-filled",
+  "unicode": "\uE64B"
+}, {
+  "font_class": "info",
+  "unicode": "\uE669"
+}, {
+  "font_class": "info-filled",
+  "unicode": "\uE649"
+}, {
+  "font_class": "left",
+  "unicode": "\uE6B7"
+}, {
+  "font_class": "link",
+  "unicode": "\uE6A5"
+}, {
+  "font_class": "list",
+  "unicode": "\uE644"
+}, {
+  "font_class": "location",
+  "unicode": "\uE6AE"
+}, {
+  "font_class": "location-filled",
+  "unicode": "\uE6AF"
+}, {
+  "font_class": "locked",
+  "unicode": "\uE66B"
+}, {
+  "font_class": "locked-filled",
+  "unicode": "\uE668"
+}, {
+  "font_class": "loop",
+  "unicode": "\uE633"
+}, {
+  "font_class": "mail-open",
+  "unicode": "\uE643"
+}, {
+  "font_class": "mail-open-filled",
+  "unicode": "\uE63A"
+}, {
+  "font_class": "map",
+  "unicode": "\uE667"
+}, {
+  "font_class": "map-filled",
+  "unicode": "\uE666"
+}, {
+  "font_class": "map-pin",
+  "unicode": "\uE6AD"
+}, {
+  "font_class": "map-pin-ellipse",
+  "unicode": "\uE6AC"
+}, {
+  "font_class": "medal",
+  "unicode": "\uE6A2"
+}, {
+  "font_class": "medal-filled",
+  "unicode": "\uE6C3"
+}, {
+  "font_class": "mic",
+  "unicode": "\uE671"
+}, {
+  "font_class": "mic-filled",
+  "unicode": "\uE677"
+}, {
+  "font_class": "micoff",
+  "unicode": "\uE67E"
+}, {
+  "font_class": "micoff-filled",
+  "unicode": "\uE6B0"
+}, {
+  "font_class": "minus",
+  "unicode": "\uE66F"
+}, {
+  "font_class": "minus-filled",
+  "unicode": "\uE67D"
+}, {
+  "font_class": "more",
+  "unicode": "\uE64D"
+}, {
+  "font_class": "more-filled",
+  "unicode": "\uE64E"
+}, {
+  "font_class": "navigate",
+  "unicode": "\uE66E"
+}, {
+  "font_class": "navigate-filled",
+  "unicode": "\uE67A"
+}, {
+  "font_class": "notification",
+  "unicode": "\uE6A6"
+}, {
+  "font_class": "notification-filled",
+  "unicode": "\uE6C1"
+}, {
+  "font_class": "paperclip",
+  "unicode": "\uE652"
+}, {
+  "font_class": "paperplane",
+  "unicode": "\uE672"
+}, {
+  "font_class": "paperplane-filled",
+  "unicode": "\uE675"
+}, {
+  "font_class": "person",
+  "unicode": "\uE699"
+}, {
+  "font_class": "person-filled",
+  "unicode": "\uE69D"
+}, {
+  "font_class": "personadd",
+  "unicode": "\uE69F"
+}, {
+  "font_class": "personadd-filled",
+  "unicode": "\uE698"
+}, {
+  "font_class": "personadd-filled-copy",
+  "unicode": "\uE6D1"
+}, {
+  "font_class": "phone",
+  "unicode": "\uE69C"
+}, {
+  "font_class": "phone-filled",
+  "unicode": "\uE69B"
+}, {
+  "font_class": "plus",
+  "unicode": "\uE676"
+}, {
+  "font_class": "plus-filled",
+  "unicode": "\uE6C7"
+}, {
+  "font_class": "plusempty",
+  "unicode": "\uE67B"
+}, {
+  "font_class": "pulldown",
+  "unicode": "\uE632"
+}, {
+  "font_class": "pyq",
+  "unicode": "\uE682"
+}, {
+  "font_class": "qq",
+  "unicode": "\uE680"
+}, {
+  "font_class": "redo",
+  "unicode": "\uE64A"
+}, {
+  "font_class": "redo-filled",
+  "unicode": "\uE655"
+}, {
+  "font_class": "refresh",
+  "unicode": "\uE657"
+}, {
+  "font_class": "refresh-filled",
+  "unicode": "\uE656"
+}, {
+  "font_class": "refreshempty",
+  "unicode": "\uE6BF"
+}, {
+  "font_class": "reload",
+  "unicode": "\uE6B2"
+}, {
+  "font_class": "right",
+  "unicode": "\uE6B5"
+}, {
+  "font_class": "scan",
+  "unicode": "\uE62A"
+}, {
+  "font_class": "search",
+  "unicode": "\uE654"
+}, {
+  "font_class": "settings",
+  "unicode": "\uE653"
+}, {
+  "font_class": "settings-filled",
+  "unicode": "\uE6CE"
+}, {
+  "font_class": "shop",
+  "unicode": "\uE62F"
+}, {
+  "font_class": "shop-filled",
+  "unicode": "\uE6CD"
+}, {
+  "font_class": "smallcircle",
+  "unicode": "\uE67C"
+}, {
+  "font_class": "smallcircle-filled",
+  "unicode": "\uE665"
+}, {
+  "font_class": "sound",
+  "unicode": "\uE684"
+}, {
+  "font_class": "sound-filled",
+  "unicode": "\uE686"
+}, {
+  "font_class": "spinner-cycle",
+  "unicode": "\uE68A"
+}, {
+  "font_class": "staff",
+  "unicode": "\uE6A7"
+}, {
+  "font_class": "staff-filled",
+  "unicode": "\uE6CB"
+}, {
+  "font_class": "star",
+  "unicode": "\uE688"
+}, {
+  "font_class": "star-filled",
+  "unicode": "\uE68F"
+}, {
+  "font_class": "starhalf",
+  "unicode": "\uE683"
+}, {
+  "font_class": "trash",
+  "unicode": "\uE687"
+}, {
+  "font_class": "trash-filled",
+  "unicode": "\uE685"
+}, {
+  "font_class": "tune",
+  "unicode": "\uE6AA"
+}, {
+  "font_class": "tune-filled",
+  "unicode": "\uE6CA"
+}, {
+  "font_class": "undo",
+  "unicode": "\uE64F"
+}, {
+  "font_class": "undo-filled",
+  "unicode": "\uE64C"
+}, {
+  "font_class": "up",
+  "unicode": "\uE6B6"
+}, {
+  "font_class": "top",
+  "unicode": "\uE6B6"
+}, {
+  "font_class": "upload",
+  "unicode": "\uE690"
+}, {
+  "font_class": "upload-filled",
+  "unicode": "\uE68E"
+}, {
+  "font_class": "videocam",
+  "unicode": "\uE68C"
+}, {
+  "font_class": "videocam-filled",
+  "unicode": "\uE689"
+}, {
+  "font_class": "vip",
+  "unicode": "\uE6A8"
+}, {
+  "font_class": "vip-filled",
+  "unicode": "\uE6C6"
+}, {
+  "font_class": "wallet",
+  "unicode": "\uE6B1"
+}, {
+  "font_class": "wallet-filled",
+  "unicode": "\uE6C2"
+}, {
+  "font_class": "weibo",
+  "unicode": "\uE68B"
+}, {
+  "font_class": "weixin",
+  "unicode": "\uE691"
+}];
+
+// export const fontData = JSON.parse<IconsDataItem>(fontDataJson)
+exports.fontData = fontData;
 
 /***/ })
 ]]);

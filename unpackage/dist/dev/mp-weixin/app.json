@@ -11,7 +11,8 @@
       "root": "subpkg",
       "pages": [
         "addCarorder",
-        "feedback"
+        "feedback",
+        "myinfo"
       ]
     }
   ],
@@ -26,5 +27,7 @@
       "desc": "您的位置将用于选择上下车地址"
     }
   },
-  "usingComponents": {}
+  "usingComponents": {
+    "quick-message": "/components/quick-message/quick-message"
+  }
 }

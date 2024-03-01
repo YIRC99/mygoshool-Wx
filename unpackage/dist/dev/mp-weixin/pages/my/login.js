@@ -82,13 +82,13 @@ var components
 try {
   components = {
     mylist: function () {
-      return __webpack_require__.e(/*! import() | components/mylist/mylist */ "components/mylist/mylist").then(__webpack_require__.bind(null, /*! @/components/mylist/mylist.vue */ 224))
+      return __webpack_require__.e(/*! import() | components/mylist/mylist */ "components/mylist/mylist").then(__webpack_require__.bind(null, /*! @/components/mylist/mylist.vue */ 239))
     },
     zeroLoading: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/zero-loading/components/zero-loading/zero-loading */ "uni_modules/zero-loading/components/zero-loading/zero-loading").then(__webpack_require__.bind(null, /*! @/uni_modules/zero-loading/components/zero-loading/zero-loading.vue */ 231))
+      return __webpack_require__.e(/*! import() | uni_modules/zero-loading/components/zero-loading/zero-loading */ "uni_modules/zero-loading/components/zero-loading/zero-loading").then(__webpack_require__.bind(null, /*! @/uni_modules/zero-loading/components/zero-loading/zero-loading.vue */ 246))
     },
     uvToast: function () {
-      return Promise.all(/*! import() | uni_modules/uv-toast/components/uv-toast/uv-toast */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-toast/components/uv-toast/uv-toast")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-toast/components/uv-toast/uv-toast.vue */ 537))
+      return Promise.all(/*! import() | uni_modules/uv-toast/components/uv-toast/uv-toast */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-toast/components/uv-toast/uv-toast")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-toast/components/uv-toast/uv-toast.vue */ 253))
     },
   }
 } catch (e) {
@@ -153,7 +153,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var mylist = function mylist() {
   __webpack_require__.e(/*! require.ensure | components/mylist/mylist */ "components/mylist/mylist").then((function () {
-    return resolve(__webpack_require__(/*! @/components/mylist/mylist.vue */ 224));
+    return resolve(__webpack_require__(/*! @/components/mylist/mylist.vue */ 239));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {
@@ -165,10 +165,17 @@ var _default = {
       isLogin: false,
       info: {},
       isLoading: false,
+      // avahttp: 'http://127.0.0.1:33088/avatar/download/', //this.avahttp 
       avahttp: this.avahttp
     };
   },
   methods: {
+    toInfo: function toInfo() {
+      if (!this.isLogin) return;
+      uni.navigateTo({
+        url: '/subpkg/myinfo'
+      });
+    },
     mychooseavatar: function mychooseavatar(e) {
       console.log(e);
     },
@@ -191,13 +198,14 @@ var _default = {
     },
     myonshow: function myonshow() {
       var key = uni.getStorageSync('token');
-      if (key == undefined || key == null || key == '') {
-        this.isLogin = false;
-      } else this.isLogin = true;
+      if (key == undefined || key == null || key == '') this.isLogin = false;else this.isLogin = true;
+      this.info = uni.getStorageSync('user');
     },
     WxLoginSuccess: function WxLoginSuccess() {
       this.isLoading = false;
       this.isLogin = true;
+      uni.setStorageSync('token', this.info.openid);
+      uni.setStorageSync('user', this.info);
       this.$refs.toast.show({
         type: 'success',
         message: "登录成功",
@@ -226,7 +234,6 @@ var _default = {
             console.log(res2);
             if (res2.code == 200) {
               _this.info = res2.data;
-              console.log(_this.info);
               _this.WxLoginSuccess();
             } else {
               _this.WxLoginFail();

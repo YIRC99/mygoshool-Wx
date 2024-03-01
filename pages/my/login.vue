@@ -6,7 +6,7 @@
           style="width: 100%; height: 450rpx; background-size: 100%;position: absolute; z-index: -1;" mode=""></image>
       </view>
 
-      <view class="top-box">
+      <view class="top-box" @click="toInfo">
         <view class="left">
           <image class="left-img" v-if="isLogin" :src="avahttp + info.avatar" style="width: 100%; height: 100%;">
           </image>
@@ -16,8 +16,8 @@
           <view class="" style="font-size: 38rpx;" @click="wxLogin">点击一键登录</view>
         </view>
         <view class="middle" v-if="isLogin">
-          <view class="" style="font-size: 38rpx;">一见如初</view>
-          <view class="" style="margin: 15rpx 0; font-size: 28rpx;">ID: 1777777777</view>
+          <view class="" style="font-size: 38rpx;">{{info.username}}</view>
+          <!-- <view class="" style="margin: 15rpx 0; font-size: 28rpx;">ID: 1777777777</view> -->
         </view>
         <view class="right" v-if="isLogin">
           <image class="right-img" src="../../static/right.png" mode=""></image>
@@ -55,10 +55,17 @@
         isLogin: false,
         info: {},
         isLoading: false,
-        avahttp: this.avahttp
+        // avahttp: 'http://127.0.0.1:33088/avatar/download/', //this.avahttp 
+        avahttp: this.avahttp ,
       };
     },
     methods: {
+      toInfo() {
+        if (!this.isLogin) return
+        uni.navigateTo({
+          url: '/subpkg/myinfo'
+        })
+      },
       mychooseavatar(e) {
         console.log(e);
       },
@@ -81,26 +88,30 @@
       },
       myonshow() {
         let key = uni.getStorageSync('token')
-        if (key == undefined || key == null || key == '') {
+        if (key == undefined || key == null || key == '')
           this.isLogin = false
-        } else
+        else
           this.isLogin = true
+        this.info = uni.getStorageSync('user')
+        
       },
       WxLoginSuccess() {
         this.isLoading = false
         this.isLogin = true
+        uni.setStorageSync('token', this.info.openid)
+        uni.setStorageSync('user', this.info)
         this.$refs.toast.show({
-            type: 'success',
-            message: "登录成功",
-            duration: 1500
+          type: 'success',
+          message: "登录成功",
+          duration: 1500
         })
       },
       WxLoginFail() {
         this.isLoading = false
         this.$refs.toast.show({
-            type: 'error',
-            message: "登录失败,请稍重试",
-            duration: 1500
+          type: 'error',
+          message: "登录失败,请稍重试",
+          duration: 1500
         })
       },
 
@@ -117,7 +128,6 @@
               console.log(res2);
               if (res2.code == 200) {
                 this.info = res2.data
-                console.log(this.info);
                 this.WxLoginSuccess()
               } else {
                 this.WxLoginFail()
