@@ -8,39 +8,46 @@
       </view>
     </view>
 
-
-    <u-tabs :list="list" style="background-color: #F6F5F6;" :height="160" :font-size="40" :is-scroll="false"
-      bar-height="60" bar-width="400" :current="currentIndex" @change="change"></u-tabs>
-
+    <view class="mytable">
+      <u-tabs :list="list" style="background-color: #F6F5F6;" :height="160" :font-size="40" :is-scroll="false"
+        bar-height="60" bar-width="400" :current="currentIndex" @change="change">
+      </u-tabs>
+      <view class="mytable-rili" @click="openCalendars">
+        <image class="mytable-rili-img" src="../../static/rili.png" mode=""></image>
+        <view class="mytable-rili-text" v-show="currentDate != ''">{{currentDate}}</view>
+      </view>
+    </view>
+   
+    <uv-calendars title="选择日期" ref="calendars" @close="cancelCalendars" @confirm="chooseDateConfirm" />
 
     <scroll-view scroll-y="true" style="height: 75vh; " :refresher-triggered="isRefresh" @scrolltolower="scrollDown"
       @refresherrefresh="scrollPullDown" refresher-enabled>
 
       <view class="" v-show="currentIndex == 0">
-        <u-empty text="暂时没有拼车订单 快快发布一个吧 (๑>؂<๑）" v-if="orderList.length == 0" mode="order"></u-empty>
-        <uni-card v-for="(item,index) in orderList" :key="index"
-          :title="subYear(item.startDate) + ' '+item.startTime + ' 出发'" thumbnail='/static/logo.png'
+        <u-empty text="暂时没有拼车订单 快快发布一个吧 (๑>؂<๑）" v-if="newSchoolList.length == 0" mode="order"></u-empty>
+        <uni-card v-for="(item,index) in newSchoolList" :key="index"
+          :title="subYear(item.startdatetime) + ' 出发'" thumbnail='/static/logo.png'
           @click="clickCard(item)">
           <view class="my-car-box">
-            <view class="">
+            <view class="" style="width: 80%;" >
               <view class="car-left">
                 <img class="my-icon" src="/static/upCar.png" />
-                <text class="u-line-1">{{item.startAddress}}</text>
+                <text class="u-line-1">{{item.startaddress}}</text>
               </view>
               <view class="car-left">
                 <img class="my-icon" src="/static/downCar.png" />
-                <text class="u-line-1">{{item.endAddress}}</text>
+                <text class="u-line-1">{{item.endaddress}}</text>
               </view>
             </view>
             <view class="">
               <view class="car-right">
-                <text>提前</text>
-                <image v-if="item.isBefor" src="../../static/true.png" mode=""></image>
+                <text >提前</text>
+                <image v-if="item.isbefore == 1" src="../../static/true.png" mode=""></image>
                 <image v-else src="../../static/false.png" mode=""></image>
               </view>
               <view class="car-right">
                 <text>延后</text>
-                <image v-if="item.isAfter" src="../../static/true.png" mode=""></image>
+                <image v-if="item.isafter == 1" src="../../static/true.png" mode=""></image>
                 <image v-else src="../../static/false.png" mode=""></image>
               </view>
             </view>
@@ -51,12 +58,75 @@
 
       </view>
 
-      <view class="" v-show="currentIndex == 1">11</view>
+      <view class="" v-show="currentIndex == 1">
+        <u-empty text="暂时没有拼车订单 快快发布一个吧 (๑>؂<๑）" v-if="oldSchoolList.length == 0" mode="order"></u-empty>
+        <uni-card v-for="(item,index) in oldSchoolList" :key="index"
+          :title="subYear(item.startdatetime) + ' 出发'" thumbnail='/static/logo.png'
+          @click="clickCard(item)">
+          <view class="my-car-box">
+            <view class="" style="width: 80%;">
+              <view class="car-left">
+                <img class="my-icon"src="/static/upCar.png"/>
+                <text class="u-line-1">{{item.startaddress}}</text>
+              </view>
+              <view class="car-left">
+                <img class="my-icon" src="/static/downCar.png"/>
+                <text class="u-line-1">{{item.endaddress}}</text>
+              </view>
+            </view>
+            <view class="">
+              <view class="car-right">
+                <text >提前</text>
+                <image v-if="item.isbefore == 1" src="../../static/true.png" mode=""></image>
+                <image v-else src="../../static/false.png" mode=""></image>
+              </view>
+              <view class="car-right">
+                <text>延后</text>
+                <image v-if="item.isafter == 1" src="../../static/true.png" mode=""></image>
+                <image v-else src="../../static/false.png" mode=""></image>
+              </view>
+            </view>
+          </view>
+        
+          <text class="u-line-1 myremark" style="color: #a9a9a9;">备注: {{item.remark}}</text>
+        </uni-card>
+      </view>
+      
+      <view class="" v-show="currentIndex == 2">
+        <u-empty text="暂时没有拼车订单 快快发布一个吧 (๑>؂<๑）" v-if="otherAddressList.length == 0" mode="order"></u-empty>
+        <uni-card v-for="(item,index) in otherAddressList" :key="index"
+          :title="subYear(item.startdatetime) + ' 出发'" thumbnail='/static/logo.png'
+          @click="clickCard(item)">
+          <view class="my-car-box">
+            <view class="" style="width: 80%;">
+              <view class="car-left">
+                <img class="my-icon"src="/static/upCar.png"/>
+                <text class="u-line-1">{{item.startaddress}}</text>
+              </view>
+              <view class="car-left">
+                <img class="my-icon" src="/static/downCar.png"/>
+                <text class="u-line-1">{{item.endaddress}}</text>
+              </view>
+            </view>
+            <view class="">
+              <view class="car-right">
+                <text >提前</text>
+                <image v-if="item.isbefore == 1" src="../../static/true.png" mode=""></image>
+                <image v-else src="../../static/false.png" mode=""></image>
+              </view>
+              <view class="car-right">
+                <text>延后</text>
+                <image v-if="item.isafter == 1" src="../../static/true.png" mode=""></image>
+                <image v-else src="../../static/false.png" mode=""></image>
+              </view>
+            </view>
+          </view>
+        
+          <text class="u-line-1 myremark" style="color: #a9a9a9;">备注: {{item.remark}}</text>
+        </uni-card>
+      </view>
 
     </scroll-view>
-
-
-
 
     <uv-popup ref="popup" mode="bottom" round="50rpx" @maskClick="closePopup">
       <view class="popup-box">
@@ -66,42 +136,36 @@
               <image src="../../static/logo.png" mode=""></image>
             </view>
             <view class="middle">
-              <view class="" style="line-height: 50rpx;">用户名称: {{currentOrder.userName}}</view>
+              <view class="" style="line-height: 50rpx;">用户名称: {{currentOrder.createUserInfo.username}}</view>
               <view class="" style="line-height: 50rpx;">拼车次数</view>
             </view>
             <view class="right">
-              <!--    <view class="">
-                <text>提前</text>
-                <image src="../../static/true.png" mode=""></image>
-              </view>
-              <view class="">
-                <text>延后</text>
-                <image src="../../static/false.png" mode=""></image>
-              </view> -->
             </view>
           </view>
           <view class="my-middle-box">
             <uni-section title="出发地点" type="line" titleFontSize="36rpx">
               <template v-slot:right>
-                出发时间 {{currentOrder.startDate}} {{currentOrder.startTime}}
+                出发时间 {{currentOrder.startdatetime}}
               </template>
             </uni-section>
             <view class="my-text-box">
-              {{currentOrder.startAddressAll}}
+              {{currentOrder.startaddressall}}
             </view>
             <uni-section title="目标地点" type="line" titleFontSize="36rpx">
             </uni-section>
             <view class="my-text-box">
-              {{currentOrder.endAddress}}
+              {{currentOrder.endaddressall}}
             </view>
             <view class="my-text-box2">
               <view class="left">
-                <view class="">当前人数:<text class="my-text-box2-t"> {{currentOrder.currentPersonNum}} </text>人</view>
-                <view class="">缺少人数:<text class="my-text-box2-t"> {{currentOrder.lackPersonNum}} </text>人</view>
+                <view class="">当前人数:<text class="my-text-box2-t"> {{currentOrder.currentperson}} </text>人</view>
+                <view class="">缺少人数:<text class="my-text-box2-t"> {{currentOrder.lackperson}} </text>人</view>
               </view>
               <view class="right">
-                <view class="">最大提前时间:<text class="my-text-box2-t">{{currentOrder.beforTime}}</text>分钟</view>
-                <view class="">最大延后时间:<text class="my-text-box2-t">{{currentOrder.afterTime}}</text>分钟</view>
+                <view class="" v-if="currentOrder.isbefore == 1">最大提前时间:<text class="my-text-box2-t">{{hoursTominute(currentOrder.beforetime) }}</text>分钟</view>
+                <view class="" v-if="currentOrder.isbefore != 1">最大提前时间:<text class="my-text-box2-t">0</text>分钟</view>
+                <view class="" v-if="currentOrder.isafter == 1">最大延后时间:<text class="my-text-box2-t">{{hoursTominute(currentOrder.aftertime)}}</text>分钟</view>
+                <view class="" v-if="currentOrder.isafter != 1">最大延后时间:<text class="my-text-box2-t">0</text>分钟</view>
               </view>
             </view>
             <uni-section title="备注" type="line" titleFontSize="36rpx">
@@ -136,7 +200,7 @@
       <image src="/static/add.png" mode=""></image>
     </view>
 
-
+<quick-message ref="message"></quick-message>
 
   </view>
 </template>
@@ -150,16 +214,41 @@
         popupShow: false,
         noticeText: '编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。',
         list: [{
-          name: '十里校区'
-        }, {
           name: '濂溪校区'
+        }, {
+          name: '鹤问湖校区'
+        },{
+          name: '其他'
         }],
         currentIndex: 0,
         orderList: [],
-        currentOrder: {}
+        newSchoolList: [],
+        oldSchoolList: [],
+        otherAddressList:[],
+        currentOrder: {
+          createUserInfo:{
+            username: ''
+          }
+        },
+        pageNum: 1,
+        pageSize: 10,
+        pagetotal: 0,
+        currentDate: ''
       };
     },
     methods: {
+      chooseDateConfirm(e){
+        console.log(e.fulldate);
+        this.currentDate = e.fulldate
+        this.scrollPullDown()
+      },
+      cancelCalendars(){
+        this.currentDate = ''
+        this.scrollPullDown()
+      },
+      openCalendars(){
+        this.$refs.calendars.open();
+      },
       copyWx() {
         uni.setClipboardData({
           data: this.currentOrder.userWx,
@@ -178,37 +267,60 @@
         this.$refs.popup.close()
         this.$refs.receivePopup.open()
       },
-      scrollPullDown() {
-        // console.log('下拉刷新了');
-        if (this.isRefresh == true) return
-        this.isRefresh = true
-        setTimeout(() => {
-          this.orderList.push({
-            orderId: 10086,
-            userName: '一见如初',
-            userWx: 'YIRC99',
-            avatar: '/static/logo.png',
-            startDate: '2024-02-25',
-            startTime: '19:45',
-            startAddress: '九江职业大学北门',
-            startAddressAll: '江西省九江市九江职业大学濂溪校区88号北门',
-            endAddress: '九江站',
-            endAddress: '江西省九江市九江火车站',
-            currentPersonNum: 1,
-            lackPersonNum: 1,
-            isBefor: false,
-            beforTime: 30,
-            isAfter: true,
-            afterTime: 0,
-            remark: '守时,以免耽误大家的时间 后备箱空间少 有行李箱请提前沟通 最高80个字'
+      
+      getOrderList(){
+        this.post({
+          url: 'carshareorder/page',
+          data: {
+            pageNum: this.pageNum,
+            pageSize: this.pageSize,
+            pageDate: this.currentDate,
+            startAddName: this.list[this.currentIndex].name
+          }
+        }).then(res => {
+          console.log(res);
+          if(res.code != 200){
+            this.$refs.message.show({
+              type: 'error', //String 默认default
+              msg: '网络开了点小差,请稍候重试吧', //String 显示内容 *
+              iconSize: 16, //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
+            })
+            return
+          }
+          res.data.records.forEach(item => {
+            if(item.startaddressall.indexOf('濂溪校区') != -1){
+              item.startaddress = '九职大' + item.startaddress.slice(6,9999)
+            }else if(item.startaddressall.indexOf('鹤问湖校区') != -1){
+              item.startaddress = '九职大' + item.startaddress.slice(6,9999)
+            }
           })
-
+          
+          if(this.currentIndex == 0){
+            this.newSchoolList = []
+            this.newSchoolList = res.data.records
+          }else if(this.currentIndex == 1){
+            this.oldSchoolList = []
+            this.oldSchoolList = res.data.records
+          }else if(this.currentIndex == 2){
+            this.otherAddressList = []
+            this.otherAddressList = res.data.records
+          }
+            
+          
           this.isRefresh = false
           console.log('下拉刷新结束了');
-        }, 1000)
+        })
+        
+      },
+      scrollPullDown() {
+        console.log('下拉刷新了');
+        if (this.isRefresh == true) return
+        this.isRefresh = true
+        // 下拉刷新的时候调用获取数据的方法 根据index带上不同的参数
+        this.getOrderList()
       },
       scrollDown() {
-        console.log('滚动条到了 底部');
+        console.log('滚动条到了底部 当前的indedx为',this.currentIndex);
       },
       toAddOrder() {
         uni.navigateTo({
@@ -216,7 +328,6 @@
         });
       },
       clickCard(order) {
-        // console.log('点击了卡片');
         this.currentOrder = order
         console.log(this.currentOrder);
         this.$refs.popup.open()
@@ -227,17 +338,27 @@
       },
       change(e) {
         this.currentIndex = e.index
+        console.log('首次进入页面 自动下拉刷新,change',e,this.newSchoolList.length);
+        if(this.currentIndex == 0){
+          if(this.newSchoolList.length !== 0) return 
+          this.scrollPullDown()
+        }else if(this.currentIndex == 1){
+          if(this.oldSchoolList.length !== 0) return 
+          this.scrollPullDown()
+        }else if(this.currentIndex == 2){
+          if(this.otherAddressList.length !== 0) return 
+          this.scrollPullDown()
+        }
       },
       myonshow() {
         console.log('myonshow');
         this.simulateSwipeDown()
       },
       simulateSwipeDown() {
-        // console.log('首次进入页面 自动下拉刷新');
+        console.log('首次进入页面 自动下拉刷新');
         if (!this.oneRefresh) {
-          // console.log('this.oneRefresh', this.oneRefresh);
           this.oneRefresh = true
-          this.scrollPullDown()
+          this.change({index: 0,name: '濂溪校区'})
         }
       }
     }
@@ -248,6 +369,40 @@
   .page {
     padding-bottom: 130rpx;
   }
+
+  .mytable {
+    position: relative;
+    height: 90rpx;
+
+    .mytable-rili {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      right: 50rpx;
+      top: 20rpx;
+      height: 100rpx;
+      width: 100rpx;
+      
+      .mytable-rili-text{
+        background-color: #81d9d8;
+        height: 30rpx;
+        width: 120rpx;
+        font-size: 22rpx;
+        padding: 5rpx;
+        border-radius: 10rpx;
+        margin-top: 5rpx;
+        
+      }
+
+      .mytable-rili-img {
+        width: 40rpx;
+        height: 40rpx;
+      }
+    }
+  }
+
 
   .receivePopup-box {
     background-color: red;
@@ -449,17 +604,19 @@
       align-items: center;
       margin: 15rpx 0;
       font-size: 32rpx;
-
+      text{
+        width: 75%;
+      }
       .my-icon {
         width: 50rpx;
-        height: 50rpx;
-        margin-right: 15rpx;
+         height: 50rpx;
+        // padding-right: 15rpx;
       }
     }
 
     .car-right {
-      margin-right: 50rpx;
-      margin-top: 10rpx;
+      margin-right: 20rpx;
+       margin: 15rpx 0;
       display: flex;
       align-items: center;
 

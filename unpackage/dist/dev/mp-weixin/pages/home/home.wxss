@@ -27,6 +27,34 @@
 .page {
   padding-bottom: 130rpx;
 }
+.mytable {
+  position: relative;
+  height: 90rpx;
+}
+.mytable .mytable-rili {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  right: 50rpx;
+  top: 20rpx;
+  height: 100rpx;
+  width: 100rpx;
+}
+.mytable .mytable-rili .mytable-rili-text {
+  background-color: #81d9d8;
+  height: 30rpx;
+  width: 120rpx;
+  font-size: 22rpx;
+  padding: 5rpx;
+  border-radius: 10rpx;
+  margin-top: 5rpx;
+}
+.mytable .mytable-rili .mytable-rili-img {
+  width: 40rpx;
+  height: 40rpx;
+}
 .receivePopup-box {
   background-color: red;
   width: 100%;
@@ -192,14 +220,16 @@
   margin: 15rpx 0;
   font-size: 32rpx;
 }
+.my-car-box .car-left text {
+  width: 75%;
+}
 .my-car-box .car-left .my-icon {
   width: 50rpx;
   height: 50rpx;
-  margin-right: 15rpx;
 }
 .my-car-box .car-right {
-  margin-right: 50rpx;
-  margin-top: 10rpx;
+  margin-right: 20rpx;
+  margin: 15rpx 0;
   display: flex;
   align-items: center;
 }

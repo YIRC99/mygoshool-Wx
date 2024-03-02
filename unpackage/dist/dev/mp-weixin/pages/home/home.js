@@ -82,17 +82,23 @@ try {
     uTabs: function () {
       return Promise.all(/*! import() | node-modules/uview-ui/components/u-tabs/u-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-tabs/u-tabs")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-tabs/u-tabs.vue */ 269))
     },
+    uvCalendars: function () {
+      return Promise.all(/*! import() | uni_modules/uv-calendars/components/uv-calendars/uv-calendars */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-calendars/components/uv-calendars/uv-calendars")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-calendars/components/uv-calendars/uv-calendars.vue */ 585))
+    },
     uEmpty: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-empty/u-empty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-empty/u-empty")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-empty/u-empty.vue */ 277))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-empty/u-empty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-empty/u-empty")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-empty/u-empty.vue */ 285))
     },
     uniCard: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 285))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 293))
     },
     uvPopup: function () {
-      return Promise.all(/*! import() | uni_modules/uv-popup/components/uv-popup/uv-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-popup/components/uv-popup/uv-popup")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-popup/components/uv-popup/uv-popup.vue */ 292))
+      return Promise.all(/*! import() | uni_modules/uv-popup/components/uv-popup/uv-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-popup/components/uv-popup/uv-popup")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-popup/components/uv-popup/uv-popup.vue */ 300))
     },
     uniSection: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 299))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 307))
+    },
+    quickMessage: function () {
+      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 225))
     },
   }
 } catch (e) {
@@ -116,21 +122,53 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  var g0 = _vm.orderList.length
-  var l0 = _vm.__map(_vm.orderList, function (item, index) {
+  var g0 = _vm.newSchoolList.length
+  var l0 = _vm.__map(_vm.newSchoolList, function (item, index) {
     var $orig = _vm.__get_orig(item)
-    var m0 = _vm.subYear(item.startDate)
+    var m0 = _vm.subYear(item.startdatetime)
     return {
       $orig: $orig,
       m0: m0,
     }
   })
+  var g1 = _vm.oldSchoolList.length
+  var l1 = _vm.__map(_vm.oldSchoolList, function (item, index) {
+    var $orig = _vm.__get_orig(item)
+    var m1 = _vm.subYear(item.startdatetime)
+    return {
+      $orig: $orig,
+      m1: m1,
+    }
+  })
+  var g2 = _vm.otherAddressList.length
+  var l2 = _vm.__map(_vm.otherAddressList, function (item, index) {
+    var $orig = _vm.__get_orig(item)
+    var m2 = _vm.subYear(item.startdatetime)
+    return {
+      $orig: $orig,
+      m2: m2,
+    }
+  })
+  var m3 =
+    _vm.currentOrder.isbefore == 1
+      ? _vm.hoursTominute(_vm.currentOrder.beforetime)
+      : null
+  var m4 =
+    _vm.currentOrder.isafter == 1
+      ? _vm.hoursTominute(_vm.currentOrder.aftertime)
+      : null
   _vm.$mp.data = Object.assign(
     {},
     {
       $root: {
         g0: g0,
         l0: l0,
+        g1: g1,
+        l1: l1,
+        g2: g2,
+        l2: l2,
+        m3: m3,
+        m4: m4,
       },
     }
   )
@@ -169,12 +207,74 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -327,16 +427,41 @@ var _default = {
       popupShow: false,
       noticeText: '编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。',
       list: [{
-        name: '十里校区'
-      }, {
         name: '濂溪校区'
+      }, {
+        name: '鹤问湖校区'
+      }, {
+        name: '其他'
       }],
       currentIndex: 0,
       orderList: [],
-      currentOrder: {}
+      newSchoolList: [],
+      oldSchoolList: [],
+      otherAddressList: [],
+      currentOrder: {
+        createUserInfo: {
+          username: ''
+        }
+      },
+      pageNum: 1,
+      pageSize: 10,
+      pagetotal: 0,
+      currentDate: ''
     };
   },
   methods: {
+    chooseDateConfirm: function chooseDateConfirm(e) {
+      console.log(e.fulldate);
+      this.currentDate = e.fulldate;
+      this.scrollPullDown();
+    },
+    cancelCalendars: function cancelCalendars() {
+      this.currentDate = '';
+      this.scrollPullDown();
+    },
+    openCalendars: function openCalendars() {
+      this.$refs.calendars.open();
+    },
     copyWx: function copyWx() {
       var _this = this;
       uni.setClipboardData({
@@ -356,30 +481,59 @@ var _default = {
       this.$refs.popup.close();
       this.$refs.receivePopup.open();
     },
-    scrollPullDown: function scrollPullDown() {
+    getOrderList: function getOrderList() {
       var _this2 = this;
-      // console.log('下拉刷新了');
-      if (this.isRefresh == true) return;
-      this.isRefresh = true;
-      setTimeout(function () {
-        var _this2$orderList$push;
-        _this2.orderList.push((_this2$orderList$push = {
-          orderId: 10086,
-          userName: '一见如初',
-          userWx: 'YIRC99',
-          avatar: '/static/logo.png',
-          startDate: '2024-02-25',
-          startTime: '19:45',
-          startAddress: '九江职业大学北门',
-          startAddressAll: '江西省九江市九江职业大学濂溪校区88号北门',
-          endAddress: '九江站'
-        }, (0, _defineProperty2.default)(_this2$orderList$push, "endAddress", '江西省九江市九江火车站'), (0, _defineProperty2.default)(_this2$orderList$push, "currentPersonNum", 1), (0, _defineProperty2.default)(_this2$orderList$push, "lackPersonNum", 1), (0, _defineProperty2.default)(_this2$orderList$push, "isBefor", false), (0, _defineProperty2.default)(_this2$orderList$push, "beforTime", 30), (0, _defineProperty2.default)(_this2$orderList$push, "isAfter", true), (0, _defineProperty2.default)(_this2$orderList$push, "afterTime", 0), (0, _defineProperty2.default)(_this2$orderList$push, "remark", '守时,以免耽误大家的时间 后备箱空间少 有行李箱请提前沟通 最高80个字'), _this2$orderList$push));
+      this.post({
+        url: 'carshareorder/page',
+        data: {
+          pageNum: this.pageNum,
+          pageSize: this.pageSize,
+          pageDate: this.currentDate,
+          startAddName: this.list[this.currentIndex].name
+        }
+      }).then(function (res) {
+        console.log(res);
+        if (res.code != 200) {
+          _this2.$refs.message.show({
+            type: 'error',
+            //String 默认default
+            msg: '网络开了点小差,请稍候重试吧',
+            //String 显示内容 *
+            iconSize: 16 //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
+          });
+
+          return;
+        }
+        res.data.records.forEach(function (item) {
+          if (item.startaddressall.indexOf('濂溪校区') != -1) {
+            item.startaddress = '九职大' + item.startaddress.slice(6, 9999);
+          } else if (item.startaddressall.indexOf('鹤问湖校区') != -1) {
+            item.startaddress = '九职大' + item.startaddress.slice(6, 9999);
+          }
+        });
+        if (_this2.currentIndex == 0) {
+          _this2.newSchoolList = [];
+          _this2.newSchoolList = res.data.records;
+        } else if (_this2.currentIndex == 1) {
+          _this2.oldSchoolList = [];
+          _this2.oldSchoolList = res.data.records;
+        } else if (_this2.currentIndex == 2) {
+          _this2.otherAddressList = [];
+          _this2.otherAddressList = res.data.records;
+        }
         _this2.isRefresh = false;
         console.log('下拉刷新结束了');
-      }, 1000);
+      });
+    },
+    scrollPullDown: function scrollPullDown() {
+      console.log('下拉刷新了');
+      if (this.isRefresh == true) return;
+      this.isRefresh = true;
+      // 下拉刷新的时候调用获取数据的方法 根据index带上不同的参数
+      this.getOrderList();
     },
     scrollDown: function scrollDown() {
-      console.log('滚动条到了 底部');
+      console.log('滚动条到了底部 当前的indedx为', this.currentIndex);
     },
     toAddOrder: function toAddOrder() {
       uni.navigateTo({
@@ -387,7 +541,6 @@ var _default = {
       });
     },
     clickCard: function clickCard(order) {
-      // console.log('点击了卡片');
       this.currentOrder = order;
       console.log(this.currentOrder);
       this.$refs.popup.open();
@@ -398,17 +551,30 @@ var _default = {
     },
     change: function change(e) {
       this.currentIndex = e.index;
+      console.log('首次进入页面 自动下拉刷新,change', e, this.newSchoolList.length);
+      if (this.currentIndex == 0) {
+        if (this.newSchoolList.length !== 0) return;
+        this.scrollPullDown();
+      } else if (this.currentIndex == 1) {
+        if (this.oldSchoolList.length !== 0) return;
+        this.scrollPullDown();
+      } else if (this.currentIndex == 2) {
+        if (this.otherAddressList.length !== 0) return;
+        this.scrollPullDown();
+      }
     },
     myonshow: function myonshow() {
       console.log('myonshow');
       this.simulateSwipeDown();
     },
     simulateSwipeDown: function simulateSwipeDown() {
-      // console.log('首次进入页面 自动下拉刷新');
+      console.log('首次进入页面 自动下拉刷新');
       if (!this.oneRefresh) {
-        // console.log('this.oneRefresh', this.oneRefresh);
         this.oneRefresh = true;
-        this.scrollPullDown();
+        this.change({
+          index: 0,
+          name: '濂溪校区'
+        });
       }
     }
   }

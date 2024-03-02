@@ -4,15 +4,31 @@ import App from './App'
 import uView from "uview-ui";
 Vue.use(uView);
 // const http = 'http://192.168.1.13:33088/'
-const http = 'http://127.0.0.1:33088/'
-// const http = 'http://192.168.151.210:33088/'
+// const http = 'http://127.0.0.1:33088/'
+const http = 'http://192.168.151.210:33088/'
 Vue.prototype.avahttp = http + 'avatar/download/'
 Vue.prototype.http = http
-Vue.prototype.subYear =(str) =>{
-	if(str ==undefined)
-		return ""
-	return str.slice(5)
+Vue.prototype.hoursTominute = (str) =>{
+  const hour = str.split(':')[0]
+  const minute = str.split(':')[1]
+  return Number(hour) * 60 + Number(minute)
 }
+Vue.prototype.subYear = (str) => {
+    if (!str || typeof str !== 'string') {
+        return "";
+    }
+    const regex = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})$/;
+    const match = str.match(regex);
+    if (!match) {
+        return "";
+    }
+    const year = match[1];
+    const month = match[2].padStart(2, '0');
+    const day = match[3].padStart(2, '0');
+    const hour = match[4].padStart(2, '0');
+    const minute = match[5].padStart(2, '0');
+    return `${month}-${day} ${hour}:${minute}`;
+};
 Vue.prototype.get =(opt) =>{
 	 return new Promise((a,b)=>{
 		uni.request({
@@ -83,6 +99,7 @@ app.$mount()
 
 // #ifdef VUE3
 import { createSSRApp } from 'vue'
+import { number } from './uni_modules/uv-ui-tools/libs/function/test';
 export function createApp() {
   const app = createSSRApp(App)
   return {

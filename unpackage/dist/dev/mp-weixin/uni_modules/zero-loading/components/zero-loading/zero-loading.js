@@ -122,62 +122,62 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var loading0 = function loading0() {
   __webpack_require__.e(/*! require.ensure | uni_modules/zero-loading/components/zero-loading/static/loading-circle */ "uni_modules/zero-loading/components/zero-loading/static/loading-circle").then((function () {
-    return resolve(__webpack_require__(/*! ./static/loading-circle.vue */ 362));
+    return resolve(__webpack_require__(/*! ./static/loading-circle.vue */ 370));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var loading1 = function loading1() {
   __webpack_require__.e(/*! require.ensure | uni_modules/zero-loading/components/zero-loading/static/loading-pulse */ "uni_modules/zero-loading/components/zero-loading/static/loading-pulse").then((function () {
-    return resolve(__webpack_require__(/*! ./static/loading-pulse.vue */ 369));
+    return resolve(__webpack_require__(/*! ./static/loading-pulse.vue */ 377));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var loading2 = function loading2() {
   __webpack_require__.e(/*! require.ensure | uni_modules/zero-loading/components/zero-loading/static/loading-bounce */ "uni_modules/zero-loading/components/zero-loading/static/loading-bounce").then((function () {
-    return resolve(__webpack_require__(/*! ./static/loading-bounce.vue */ 376));
+    return resolve(__webpack_require__(/*! ./static/loading-bounce.vue */ 384));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var loading3 = function loading3() {
   __webpack_require__.e(/*! require.ensure | uni_modules/zero-loading/components/zero-loading/static/loading-eyes */ "uni_modules/zero-loading/components/zero-loading/static/loading-eyes").then((function () {
-    return resolve(__webpack_require__(/*! ./static/loading-eyes.vue */ 383));
+    return resolve(__webpack_require__(/*! ./static/loading-eyes.vue */ 391));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var loading4 = function loading4() {
   __webpack_require__.e(/*! require.ensure | uni_modules/zero-loading/components/zero-loading/static/loading-triangle */ "uni_modules/zero-loading/components/zero-loading/static/loading-triangle").then((function () {
-    return resolve(__webpack_require__(/*! ./static/loading-triangle.vue */ 390));
+    return resolve(__webpack_require__(/*! ./static/loading-triangle.vue */ 398));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var loading5 = function loading5() {
   __webpack_require__.e(/*! require.ensure | uni_modules/zero-loading/components/zero-loading/static/loading-sun */ "uni_modules/zero-loading/components/zero-loading/static/loading-sun").then((function () {
-    return resolve(__webpack_require__(/*! ./static/loading-sun.vue */ 397));
+    return resolve(__webpack_require__(/*! ./static/loading-sun.vue */ 405));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var loading6 = function loading6() {
   __webpack_require__.e(/*! require.ensure | uni_modules/zero-loading/components/zero-loading/static/loading-love */ "uni_modules/zero-loading/components/zero-loading/static/loading-love").then((function () {
-    return resolve(__webpack_require__(/*! ./static/loading-love.vue */ 404));
+    return resolve(__webpack_require__(/*! ./static/loading-love.vue */ 412));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var loading7 = function loading7() {
   __webpack_require__.e(/*! require.ensure | uni_modules/zero-loading/components/zero-loading/static/loading-sword */ "uni_modules/zero-loading/components/zero-loading/static/loading-sword").then((function () {
-    return resolve(__webpack_require__(/*! ./static/loading-sword.vue */ 411));
+    return resolve(__webpack_require__(/*! ./static/loading-sword.vue */ 419));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var loading8 = function loading8() {
   __webpack_require__.e(/*! require.ensure | uni_modules/zero-loading/components/zero-loading/static/loading-atom */ "uni_modules/zero-loading/components/zero-loading/static/loading-atom").then((function () {
-    return resolve(__webpack_require__(/*! ./static/loading-atom.vue */ 418));
+    return resolve(__webpack_require__(/*! ./static/loading-atom.vue */ 426));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var loading9 = function loading9() {
   __webpack_require__.e(/*! require.ensure | uni_modules/zero-loading/components/zero-loading/static/loading-gear */ "uni_modules/zero-loading/components/zero-loading/static/loading-gear").then((function () {
-    return resolve(__webpack_require__(/*! ./static/loading-gear.vue */ 425));
+    return resolve(__webpack_require__(/*! ./static/loading-gear.vue */ 433));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var loading10 = function loading10() {
   __webpack_require__.e(/*! require.ensure | uni_modules/zero-loading/components/zero-loading/static/loading-radar */ "uni_modules/zero-loading/components/zero-loading/static/loading-radar").then((function () {
-    return resolve(__webpack_require__(/*! ./static/loading-radar.vue */ 432));
+    return resolve(__webpack_require__(/*! ./static/loading-radar.vue */ 440));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var loading11 = function loading11() {
   __webpack_require__.e(/*! require.ensure | uni_modules/zero-loading/components/zero-loading/static/loading-annulus */ "uni_modules/zero-loading/components/zero-loading/static/loading-annulus").then((function () {
-    return resolve(__webpack_require__(/*! ./static/loading-annulus.vue */ 439));
+    return resolve(__webpack_require__(/*! ./static/loading-annulus.vue */ 447));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {

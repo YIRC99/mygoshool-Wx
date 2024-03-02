@@ -23,13 +23,30 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 _vue.default.use(_uviewUi.default);
 // const http = 'http://192.168.1.13:33088/'
-var http = 'http://127.0.0.1:33088/';
-// const http = 'http://192.168.151.210:33088/'
+// const http = 'http://127.0.0.1:33088/'
+var http = 'http://192.168.151.210:33088/';
 _vue.default.prototype.avahttp = http + 'avatar/download/';
 _vue.default.prototype.http = http;
+_vue.default.prototype.hoursTominute = function (str) {
+  var hour = str.split(':')[0];
+  var minute = str.split(':')[1];
+  return Number(hour) * 60 + Number(minute);
+};
 _vue.default.prototype.subYear = function (str) {
-  if (str == undefined) return "";
-  return str.slice(5);
+  if (!str || typeof str !== 'string') {
+    return "";
+  }
+  var regex = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})$/;
+  var match = str.match(regex);
+  if (!match) {
+    return "";
+  }
+  var year = match[1];
+  var month = match[2].padStart(2, '0');
+  var day = match[3].padStart(2, '0');
+  var hour = match[4].padStart(2, '0');
+  var minute = match[5].padStart(2, '0');
+  return "".concat(month, "-").concat(day, " ").concat(hour, ":").concat(minute);
 };
 _vue.default.prototype.get = function (opt) {
   return new Promise(function (a, b) {

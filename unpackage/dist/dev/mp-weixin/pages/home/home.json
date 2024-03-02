@@ -3,9 +3,11 @@
   "enablePullDownRefresh": false,
   "usingComponents": {
     "u-tabs": "/node-modules/uview-ui/components/u-tabs/u-tabs",
+    "uv-calendars": "/uni_modules/uv-calendars/components/uv-calendars/uv-calendars",
     "u-empty": "/node-modules/uview-ui/components/u-empty/u-empty",
     "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
     "uv-popup": "/uni_modules/uv-popup/components/uv-popup/uv-popup",
-    "uni-section": "/uni_modules/uni-section/components/uni-section/uni-section"
+    "uni-section": "/uni_modules/uni-section/components/uni-section/uni-section",
+    "quick-message": "/components/quick-message/quick-message"
   }
 }
