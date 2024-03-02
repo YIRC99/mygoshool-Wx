@@ -47,7 +47,7 @@
         <image src="../static/phone.png" class="myicon" mode=""></image>
         <view class="input-container-right">
           <uni-easyinput :inputBorder="false" type="tel" placeholder="请输入手机号" placeholderStyle="font-size: 34rpx; "
-            @blur="validatePhoneNumber" :class="{ 'error': phoneError }" style="padding-left: 0;"
+            :class="{ 'error': phoneError }" style="padding-left: 0;"
             v-model="phoneNumber" />
           <text v-if="phoneError" class="error-message">{{ phoneErrorMessage }}</text>
         </view>
@@ -57,8 +57,8 @@
         <image src="../static/weixin.png" class="myicon" mode=""></image>
         <view class="input-container-right">
           <uni-easyinput v-model="wechatAccount" :inputBorder="false" placeholder="请输入微信号" type="text"
-            placeholderStyle="font-size: 34rpx;" @blur="validateWechatAccount" :class="{'error': wechatError}" />
-          <text v-if="wechatError" class="error-message">微信号不能为空</text>
+            placeholderStyle="font-size: 34rpx;"  :class="{'error': wechatError}" />
+          <text v-if="wechatError" class="error-message">{{wechatErrorMsg}}</text>
         </view>
       </view>
 
@@ -125,17 +125,18 @@
         ],
         currentPerson: '1',
         lackPerson: '1',
-        startDateTime: '点击选择出发时间1',
+        startDateTime: '点击选择出发时间',
         StartTimeValue: Number(new Date()),
-        startAddress: '点击选择出发地点1', //这里是地址名称 
+        startAddress: '点击选择出发地点', //这里是地址名称 
         startAddressAll: '', //这是地址全称
-        endAddress: '点击选择目的地1',
+        endAddress: '点击选择目的地',
         endAddressAll: '',
         wechatAccount: '',
         phoneNumber: '',
         wechatError: false,
         phoneError: false,
-        phoneErrorMessage: '手机号不能为空或格式不正确'
+        phoneErrorMessage: '手机号不能为空或格式不正确',
+        wechatErrorMsg: ''
       };
     },
     computed: {
@@ -144,6 +145,31 @@
       },
       isTips() {
         return this.wechatAccount.trim() == '' && this.phoneNumber.trim() == '';
+      }
+    },
+    
+    watch:{
+      phoneNumber(newval,oldval){
+        const regex = /^1[3-9]\d{9}$/;
+        if (!this.wechatError && !newval) {
+          this.phoneError = false;
+        } else if (!regex.test(newval)) {
+          this.phoneError = true;
+        } else {
+          this.phoneError = false;
+        }
+      },
+      wechatAccount(newval,oldval){
+        if (this.phoneNumber.trim() !== '') return
+        // 添加对wechatAccount中是否包含中文字符的判断
+          const hasChineseChar = /[\u4e00-\u9fa5]/i.test(newval);
+          if (hasChineseChar) {
+            this.wechatError = true;
+            this.wechatErrorMsg = '微信号不能包含中文字符';
+          }else {
+            this.wechatError = false;
+            this.wechatErrorMsg = '';
+          }
       }
     },
     methods: {
@@ -286,28 +312,6 @@
           return `${value}分`
 
         return value
-      },
-
-      validateWechatAccount() {
-        if (this.phoneNumber.trim() !== '') return
-        if (this.wechatAccount.trim() == '') {
-          this.wechatError = true;
-        } else {
-          this.wechatError = false;
-        }
-      },
-      validatePhoneNumber() {
-        // 手机号验证规则，中国手机号一般遵循11位数字格式
-        const regex = /^1[3-9]\d{9}$/;
-        // if(this.wechatError)return
-        if (!this.wechatError && !this.phoneNumber) {
-          this.phoneError = false;
-        } else if (!regex.test(this.phoneNumber)) {
-          this.phoneError = true;
-        } else {
-          this.phoneError = false;
-        }
-
       },
       choseEndAddress() {
         uni.chooseLocation({

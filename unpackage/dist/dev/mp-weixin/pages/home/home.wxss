@@ -43,7 +43,7 @@
   width: 100rpx;
 }
 .mytable .mytable-rili .mytable-rili-text {
-  background-color: #81d9d8;
+  background-color: #CCCCCC;
   height: 30rpx;
   width: 120rpx;
   font-size: 22rpx;

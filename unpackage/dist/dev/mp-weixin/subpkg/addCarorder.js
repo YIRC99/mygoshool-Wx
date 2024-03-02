@@ -324,19 +324,20 @@ var _default = {
       columns: [['1', '2', '3']],
       currentPerson: '1',
       lackPerson: '1',
-      startDateTime: '点击选择出发时间1',
+      startDateTime: '点击选择出发时间',
       StartTimeValue: Number(new Date()),
-      startAddress: '点击选择出发地点1',
+      startAddress: '点击选择出发地点',
       //这里是地址名称 
       startAddressAll: '',
       //这是地址全称
-      endAddress: '点击选择目的地1',
+      endAddress: '点击选择目的地',
       endAddressAll: '',
       wechatAccount: '',
       phoneNumber: '',
       wechatError: false,
       phoneError: false,
-      phoneErrorMessage: '手机号不能为空或格式不正确'
+      phoneErrorMessage: '手机号不能为空或格式不正确',
+      wechatErrorMsg: ''
     };
   },
   computed: {
@@ -345,6 +346,30 @@ var _default = {
     },
     isTips: function isTips() {
       return this.wechatAccount.trim() == '' && this.phoneNumber.trim() == '';
+    }
+  },
+  watch: {
+    phoneNumber: function phoneNumber(newval, oldval) {
+      var regex = /^1[3-9]\d{9}$/;
+      if (!this.wechatError && !newval) {
+        this.phoneError = false;
+      } else if (!regex.test(newval)) {
+        this.phoneError = true;
+      } else {
+        this.phoneError = false;
+      }
+    },
+    wechatAccount: function wechatAccount(newval, oldval) {
+      if (this.phoneNumber.trim() !== '') return;
+      // 添加对wechatAccount中是否包含中文字符的判断
+      var hasChineseChar = /[\u4e00-\u9fa5]/i.test(newval);
+      if (hasChineseChar) {
+        this.wechatError = true;
+        this.wechatErrorMsg = '微信号不能包含中文字符';
+      } else {
+        this.wechatError = false;
+        this.wechatErrorMsg = '';
+      }
     }
   },
   methods: {
@@ -520,26 +545,6 @@ var _default = {
       if (type === 'hour') return "".concat(value, "\u65F6");
       if (type === 'minute') return "".concat(value, "\u5206");
       return value;
-    },
-    validateWechatAccount: function validateWechatAccount() {
-      if (this.phoneNumber.trim() !== '') return;
-      if (this.wechatAccount.trim() == '') {
-        this.wechatError = true;
-      } else {
-        this.wechatError = false;
-      }
-    },
-    validatePhoneNumber: function validatePhoneNumber() {
-      // 手机号验证规则，中国手机号一般遵循11位数字格式
-      var regex = /^1[3-9]\d{9}$/;
-      // if(this.wechatError)return
-      if (!this.wechatError && !this.phoneNumber) {
-        this.phoneError = false;
-      } else if (!regex.test(this.phoneNumber)) {
-        this.phoneError = true;
-      } else {
-        this.phoneError = false;
-      }
     },
     choseEndAddress: function choseEndAddress() {
       var _this2 = this;

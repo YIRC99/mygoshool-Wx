@@ -65,9 +65,6 @@
           console.log('调用 myonshow 方法');
            this.$refs.homepage.myonshow()
         }
-        // else if( index == 1){
-        //   uni.setNavigationBarTitle({title: '订单'})
-        // }
 				console.log('tabIndex',index)
 			}
 		},

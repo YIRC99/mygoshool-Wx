@@ -240,6 +240,10 @@ var _default = {
      */
     show: function show(options) {
       var _this = this;
+      if (this.msgList.length >= 3) {
+        this.msgList.shift(); // 移除第一条消息
+      }
+
       options.id = this.createId(); //创建id
       this.direction = options.direction || 'top'; //默认顶部显示
       options.customStyle = options.customStyle || {}; //默认自定义样式

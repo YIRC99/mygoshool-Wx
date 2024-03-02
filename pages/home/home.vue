@@ -14,7 +14,7 @@
       </u-tabs>
       <view class="mytable-rili" @click="openCalendars">
         <image class="mytable-rili-img" src="../../static/rili.png" mode=""></image>
-        <view class="mytable-rili-text" v-show="currentDate != ''">{{currentDate}}</view>
+        <view class="mytable-rili-text" v-show="list[currentIndex].time != ''">{{list[currentIndex].time}}</view>
       </view>
     </view>
    
@@ -214,11 +214,20 @@
         popupShow: false,
         noticeText: '编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。',
         list: [{
-          name: '濂溪校区'
+          name: '濂溪校区',
+          time: '',
+          pageNum: 1,
+          pagetotal: 0
         }, {
-          name: '鹤问湖校区'
+          name: '鹤问湖校区',
+          time: '',
+          pageNum: 1,
+          pagetotal: 0
         },{
-          name: '其他'
+          name: '其他',
+          time: '',
+          pageNum: 1,
+          pagetotal: 0
         }],
         currentIndex: 0,
         orderList: [],
@@ -231,19 +240,18 @@
           }
         },
         pageNum: 1,
-        pageSize: 10,
+        pageSize: 5,
         pagetotal: 0,
-        currentDate: ''
       };
     },
     methods: {
       chooseDateConfirm(e){
         console.log(e.fulldate);
-        this.currentDate = e.fulldate
+        this.list[this.currentIndex].time = e.fulldate
         this.scrollPullDown()
       },
       cancelCalendars(){
-        this.currentDate = ''
+        this.list[this.currentIndex].time = ''
         this.scrollPullDown()
       },
       openCalendars(){
@@ -267,18 +275,19 @@
         this.$refs.popup.close()
         this.$refs.receivePopup.open()
       },
-      
-      getOrderList(){
+      getOrderList(isPullDown = true){
+        if(isPullDown)this.list[this.currentIndex].pageNum = 1
+        
         this.post({
           url: 'carshareorder/page',
           data: {
-            pageNum: this.pageNum,
+            pageNum: this.list[this.currentIndex].pageNum,
             pageSize: this.pageSize,
-            pageDate: this.currentDate,
+            pageDate: this.list[this.currentIndex].time,
             startAddName: this.list[this.currentIndex].name
           }
         }).then(res => {
-          console.log(res);
+          console.log(res.data);
           if(res.code != 200){
             this.$refs.message.show({
               type: 'error', //String 默认default
@@ -287,6 +296,8 @@
             })
             return
           }
+          this.list[this.currentIndex].pagetotal = res.data.total
+          
           res.data.records.forEach(item => {
             if(item.startaddressall.indexOf('濂溪校区') != -1){
               item.startaddress = '九职大' + item.startaddress.slice(6,9999)
@@ -294,18 +305,29 @@
               item.startaddress = '九职大' + item.startaddress.slice(6,9999)
             }
           })
-          
-          if(this.currentIndex == 0){
-            this.newSchoolList = []
-            this.newSchoolList = res.data.records
-          }else if(this.currentIndex == 1){
-            this.oldSchoolList = []
-            this.oldSchoolList = res.data.records
-          }else if(this.currentIndex == 2){
-            this.otherAddressList = []
-            this.otherAddressList = res.data.records
+          // 下拉刷新 跟 触底分页加载时不同的
+          if(isPullDown){
+            if(this.currentIndex == 0){
+              this.newSchoolList = []
+              this.newSchoolList = res.data.records
+            }else if(this.currentIndex == 1){
+              this.oldSchoolList = []
+              this.oldSchoolList = res.data.records
+            }else if(this.currentIndex == 2){
+              this.otherAddressList = []
+              this.otherAddressList = res.data.records
+            }
+          }else{
+            console.log('获取信息是的方式是触底分页加载');
+            if(this.currentIndex == 0){
+              this.newSchoolList = [...this.newSchoolList,...res.data.records]
+            }else if(this.currentIndex == 1){
+              this.oldSchoolList = [...this.oldSchoolList,...res.data.records]
+            }else if(this.currentIndex == 2){
+              this.otherAddressList = [...this.otherAddressList,...res.data.records]
+            }
           }
-            
+    
           
           this.isRefresh = false
           console.log('下拉刷新结束了');
@@ -321,6 +343,30 @@
       },
       scrollDown() {
         console.log('滚动条到了底部 当前的indedx为',this.currentIndex);
+        if(this.currentIndex == 0 && this.newSchoolList.length >= this.list[this.currentIndex].pagetotal){
+          this.$refs.message.show({
+            type: 'default', 
+            msg: '已经到底了, 没有更多数据啦', 
+            iconSize: 16, 
+          })
+          return
+        }else if(this.currentIndex == 1 && this.oldSchoolList.length >= this.list[this.currentIndex].pagetotal){
+          this.$refs.message.show({
+            type: 'success', 
+            msg: '已经到底了, 没有更多数据啦', 
+            iconSize: 16, 
+          })
+          return
+        }else if(this.currentIndex == 2 && this.otherAddressList.length >= this.list[this.currentIndex].pagetotal){
+          this.$refs.message.show({
+            type: 'success', 
+            msg: '已经到底了, 没有更多数据啦', 
+            iconSize: 16, 
+          })
+          return
+        }
+        this.list[this.currentIndex].pageNum++
+        this.getOrderList(false)
       },
       toAddOrder() {
         uni.navigateTo({
@@ -338,7 +384,7 @@
       },
       change(e) {
         this.currentIndex = e.index
-        console.log('首次进入页面 自动下拉刷新,change',e,this.newSchoolList.length);
+
         if(this.currentIndex == 0){
           if(this.newSchoolList.length !== 0) return 
           this.scrollPullDown()
@@ -355,7 +401,7 @@
         this.simulateSwipeDown()
       },
       simulateSwipeDown() {
-        console.log('首次进入页面 自动下拉刷新');
+        console.log('首次进入页面 index 0 页面 自动下拉刷新');
         if (!this.oneRefresh) {
           this.oneRefresh = true
           this.change({index: 0,name: '濂溪校区'})
@@ -386,7 +432,7 @@
       width: 100rpx;
       
       .mytable-rili-text{
-        background-color: #81d9d8;
+        background-color: #CCCCCC;
         height: 30rpx;
         width: 120rpx;
         font-size: 22rpx;

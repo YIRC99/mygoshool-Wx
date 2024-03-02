@@ -197,9 +197,6 @@ var _default = {
         console.log('调用 myonshow 方法');
         this.$refs.homepage.myonshow();
       }
-      // else if( index == 1){
-      //   uni.setNavigationBarTitle({title: '订单'})
-      // }
       console.log('tabIndex', index);
     }
   },
@@ -875,10 +872,12 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {
 
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ 18));
 //
 //
 //
@@ -1095,11 +1094,20 @@ var _default = {
       popupShow: false,
       noticeText: '编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。',
       list: [{
-        name: '濂溪校区'
+        name: '濂溪校区',
+        time: '',
+        pageNum: 1,
+        pagetotal: 0
       }, {
-        name: '鹤问湖校区'
+        name: '鹤问湖校区',
+        time: '',
+        pageNum: 1,
+        pagetotal: 0
       }, {
-        name: '其他'
+        name: '其他',
+        time: '',
+        pageNum: 1,
+        pagetotal: 0
       }],
       currentIndex: 0,
       orderList: [],
@@ -1112,19 +1120,18 @@ var _default = {
         }
       },
       pageNum: 1,
-      pageSize: 10,
-      pagetotal: 0,
-      currentDate: ''
+      pageSize: 5,
+      pagetotal: 0
     };
   },
   methods: {
     chooseDateConfirm: function chooseDateConfirm(e) {
       console.log(e.fulldate);
-      this.currentDate = e.fulldate;
+      this.list[this.currentIndex].time = e.fulldate;
       this.scrollPullDown();
     },
     cancelCalendars: function cancelCalendars() {
-      this.currentDate = '';
+      this.list[this.currentIndex].time = '';
       this.scrollPullDown();
     },
     openCalendars: function openCalendars() {
@@ -1151,16 +1158,18 @@ var _default = {
     },
     getOrderList: function getOrderList() {
       var _this2 = this;
+      var isPullDown = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+      if (isPullDown) this.list[this.currentIndex].pageNum = 1;
       this.post({
         url: 'carshareorder/page',
         data: {
-          pageNum: this.pageNum,
+          pageNum: this.list[this.currentIndex].pageNum,
           pageSize: this.pageSize,
-          pageDate: this.currentDate,
+          pageDate: this.list[this.currentIndex].time,
           startAddName: this.list[this.currentIndex].name
         }
       }).then(function (res) {
-        console.log(res);
+        console.log(res.data);
         if (res.code != 200) {
           _this2.$refs.message.show({
             type: 'error',
@@ -1172,6 +1181,7 @@ var _default = {
 
           return;
         }
+        _this2.list[_this2.currentIndex].pagetotal = res.data.total;
         res.data.records.forEach(function (item) {
           if (item.startaddressall.indexOf('濂溪校区') != -1) {
             item.startaddress = '九职大' + item.startaddress.slice(6, 9999);
@@ -1179,15 +1189,27 @@ var _default = {
             item.startaddress = '九职大' + item.startaddress.slice(6, 9999);
           }
         });
-        if (_this2.currentIndex == 0) {
-          _this2.newSchoolList = [];
-          _this2.newSchoolList = res.data.records;
-        } else if (_this2.currentIndex == 1) {
-          _this2.oldSchoolList = [];
-          _this2.oldSchoolList = res.data.records;
-        } else if (_this2.currentIndex == 2) {
-          _this2.otherAddressList = [];
-          _this2.otherAddressList = res.data.records;
+        // 下拉刷新 跟 触底分页加载时不同的
+        if (isPullDown) {
+          if (_this2.currentIndex == 0) {
+            _this2.newSchoolList = [];
+            _this2.newSchoolList = res.data.records;
+          } else if (_this2.currentIndex == 1) {
+            _this2.oldSchoolList = [];
+            _this2.oldSchoolList = res.data.records;
+          } else if (_this2.currentIndex == 2) {
+            _this2.otherAddressList = [];
+            _this2.otherAddressList = res.data.records;
+          }
+        } else {
+          console.log('获取信息是的方式是触底分页加载');
+          if (_this2.currentIndex == 0) {
+            _this2.newSchoolList = [].concat((0, _toConsumableArray2.default)(_this2.newSchoolList), (0, _toConsumableArray2.default)(res.data.records));
+          } else if (_this2.currentIndex == 1) {
+            _this2.oldSchoolList = [].concat((0, _toConsumableArray2.default)(_this2.oldSchoolList), (0, _toConsumableArray2.default)(res.data.records));
+          } else if (_this2.currentIndex == 2) {
+            _this2.otherAddressList = [].concat((0, _toConsumableArray2.default)(_this2.otherAddressList), (0, _toConsumableArray2.default)(res.data.records));
+          }
         }
         _this2.isRefresh = false;
         console.log('下拉刷新结束了');
@@ -1202,6 +1224,30 @@ var _default = {
     },
     scrollDown: function scrollDown() {
       console.log('滚动条到了底部 当前的indedx为', this.currentIndex);
+      if (this.currentIndex == 0 && this.newSchoolList.length >= this.list[this.currentIndex].pagetotal) {
+        this.$refs.message.show({
+          type: 'default',
+          msg: '已经到底了, 没有更多数据啦',
+          iconSize: 16
+        });
+        return;
+      } else if (this.currentIndex == 1 && this.oldSchoolList.length >= this.list[this.currentIndex].pagetotal) {
+        this.$refs.message.show({
+          type: 'success',
+          msg: '已经到底了, 没有更多数据啦',
+          iconSize: 16
+        });
+        return;
+      } else if (this.currentIndex == 2 && this.otherAddressList.length >= this.list[this.currentIndex].pagetotal) {
+        this.$refs.message.show({
+          type: 'success',
+          msg: '已经到底了, 没有更多数据啦',
+          iconSize: 16
+        });
+        return;
+      }
+      this.list[this.currentIndex].pageNum++;
+      this.getOrderList(false);
     },
     toAddOrder: function toAddOrder() {
       uni.navigateTo({
@@ -1219,7 +1265,6 @@ var _default = {
     },
     change: function change(e) {
       this.currentIndex = e.index;
-      console.log('首次进入页面 自动下拉刷新,change', e, this.newSchoolList.length);
       if (this.currentIndex == 0) {
         if (this.newSchoolList.length !== 0) return;
         this.scrollPullDown();
@@ -1236,7 +1281,7 @@ var _default = {
       this.simulateSwipeDown();
     },
     simulateSwipeDown: function simulateSwipeDown() {
-      console.log('首次进入页面 自动下拉刷新');
+      console.log('首次进入页面 index 0 页面 自动下拉刷新');
       if (!this.oneRefresh) {
         this.oneRefresh = true;
         this.change({
