@@ -2,7 +2,6 @@
   "pages": [
     "pages/index/index",
     "pages/my/login",
-    "pages/order/order",
     "pages/home/home",
     "pages/my/order"
   ],
@@ -27,6 +26,7 @@
       "desc": "您的位置将用于选择上下车地址"
     }
   },
+  "lazyCodeLoading": "requiredComponents",
   "usingComponents": {
     "quick-message": "/components/quick-message/quick-message"
   }

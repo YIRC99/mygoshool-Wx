@@ -25,13 +25,11 @@
 <script>
 	import MagicNavigationBar from "@/uni_modules/jorbin-MagicNavigationBar/components/jorbin-MagicNavigationBar/jorbin-MagicNavigationBar.vue"
   import my from '@/pages/my/login.vue'
-  import order from '@/pages/order/order.vue'
   import home from '@/pages/home/home.vue'
 	export default {
 		components:{
 			MagicNavigationBar,
       my,
-      order,
       home
 		},
 		data() {

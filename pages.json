@@ -17,14 +17,7 @@
 		    "enablePullDownRefresh" : false
 		  }
 		},
-		{
-		  "path" : "pages/order/order",
-		  "style" : 
-		  {
-		    "navigationBarTitleText" : "订单",
-		    "enablePullDownRefresh" : false
-		  }
-		},
+	
 		{
 		  "path" : "pages/home/home",
 		  "style" : 

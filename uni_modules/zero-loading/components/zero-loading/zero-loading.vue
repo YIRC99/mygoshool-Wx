@@ -5,17 +5,7 @@
 		<view>
 			<view class="main">
 				<loading0 v-if="type=='circle'"></loading0>
-				<loading1 v-if="type=='pulse'"></loading1>
-				<loading2 v-if="type=='bounce'"></loading2>
-				<loading3 v-if="type=='eyes'"></loading3>
-				<loading4 v-if="type=='triangle'"></loading4>
-				<loading5 v-if="type=='sun'"></loading5>
-				<loading6 v-if="type=='love'"></loading6>
-				<loading7 v-if="type=='sword'" :color='color'></loading7>
-				<loading8 v-if="type=='atom'" :color='color'></loading8>
-				<loading9 v-if="type=='gear'"></loading9>
-				<loading10 v-if="type=='radar'"></loading10>
-				<loading11 v-if="type=='annulus'" :color='color'></loading11>
+				
 			</view>
 		</view>
 	</view>
@@ -23,33 +13,13 @@
 
 <script>
 	import loading0 from "./static/loading-circle.vue"
-	import loading1 from "./static/loading-pulse.vue"
-	import loading2 from "./static/loading-bounce.vue"
-	import loading3 from "./static/loading-eyes.vue"
-	import loading4 from "./static/loading-triangle.vue"
-	import loading5 from "./static/loading-sun.vue"
-	import loading6 from "./static/loading-love.vue"
-	import loading7 from "./static/loading-sword.vue"
-	import loading8 from "./static/loading-atom.vue"
-	import loading9 from "./static/loading-gear.vue"
-	import loading10 from "./static/loading-radar.vue"
-	import loading11 from "./static/loading-annulus.vue"
+	
 
 	export default {
 		name: "zero-loading",
 		components: {
 			loading0,
-			loading1,
-			loading2,
-			loading3,
-			loading4,
-			loading5,
-			loading6,
-			loading7,
-			loading8,
-			loading9,
-			loading10,
-			loading11
+			
 		},
 		props: {
 			type: {

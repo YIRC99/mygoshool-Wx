@@ -59,7 +59,8 @@
           "scope.userLocation": {
             "desc": "您的位置将用于选择上下车地址"
           }
-        }
+        },
+        "lazyCodeLoading": "requiredComponents"
     },
     "mp-alipay" : {
         "usingComponents" : true
