@@ -3,6 +3,7 @@
   "enablePullDownRefresh": false,
   "usingComponents": {
     "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
-    "zero-loading": "/uni_modules/zero-loading/components/zero-loading/zero-loading"
+    "zero-loading": "/uni_modules/zero-loading/components/zero-loading/zero-loading",
+    "quick-message": "/components/quick-message/quick-message"
   }
 }

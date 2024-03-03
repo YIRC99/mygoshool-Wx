@@ -5,7 +5,8 @@ import uView from "uview-ui";
 Vue.use(uView);
 // const http = 'http://192.168.1.13:33088/'
 // const http = 'http://127.0.0.1:33088/'
-const http = 'http://192.168.151.210:33088/'
+const http = 'http://192.168.192.210:33088/'
+const myOutTime = 5000
 Vue.prototype.avahttp = http + 'avatar/download/'
 Vue.prototype.http = http
 Vue.prototype.hoursTominute = (str) =>{
@@ -37,16 +38,19 @@ Vue.prototype.get =(opt) =>{
 			header:{
 				authorization :uni.getStorageSync("token")
 			},
+          timeout:myOutTime,
 			data: opt.data,
 			success: res => {
 				a(res.data)
 			},
-			fail: () => {},
+			fail: (err) => {
+			  b(err.errMsg)
+			  console.log('get 请求失败了',err);
+			},
 			complete: () => {}
 		});
 	})
 }
-
 Vue.prototype.put =(opt) =>{
 	 return new Promise((a,b)=>{
 		uni.request({
@@ -55,11 +59,15 @@ Vue.prototype.put =(opt) =>{
 			header:{
 				authorization :uni.getStorageSync("token")
 			},
+      timeout:myOutTime,
 			data: opt.data,
 			success: res => {
 				a(res.data)
 			},
-			fail: () => {},
+			fail: (err) => {
+			  b(err.errMsg)
+			  console.log('put 请求失败了',err);
+			},
 			complete: () => {}
 		});
 	})
@@ -73,11 +81,15 @@ Vue.prototype.post =(opt) =>{
 			header:{
 				authorization :uni.getStorageSync("token")
 			},
+      timeout: myOutTime,
 			data: opt.data,
 			success: res => {
 				a(res.data)
 			},
-			fail: () => {},
+			fail: (err) => {
+        b(err.errMsg)
+        console.log('post 请求失败了',err);
+      },
 			complete: () => {}
 		});
 	})

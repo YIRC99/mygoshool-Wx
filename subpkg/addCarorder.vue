@@ -46,7 +46,7 @@
       <view class="input-container">
         <image src="../static/phone.png" class="myicon" mode=""></image>
         <view class="input-container-right">
-          <uni-easyinput :inputBorder="false" type="tel" placeholder="请输入手机号" placeholderStyle="font-size: 34rpx; "
+          <uni-easyinput :inputBorder="false" type="tel" maxlength="15" placeholder="请输入手机号" placeholderStyle="font-size: 34rpx; "
             :class="{ 'error': phoneError }" style="padding-left: 0;"
             v-model="phoneNumber" />
           <text v-if="phoneError" class="error-message">{{ phoneErrorMessage }}</text>
@@ -56,7 +56,7 @@
       <view class="input-container">
         <image src="../static/weixin.png" class="myicon" mode=""></image>
         <view class="input-container-right">
-          <uni-easyinput v-model="wechatAccount" :inputBorder="false" placeholder="请输入微信号" type="text"
+          <uni-easyinput v-model="wechatAccount" maxlength="30" :inputBorder="false" placeholder="请输入微信号" type="text"
             placeholderStyle="font-size: 34rpx;"  :class="{'error': wechatError}" />
           <text v-if="wechatError" class="error-message">{{wechatErrorMsg}}</text>
         </view>

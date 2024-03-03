@@ -26,7 +26,7 @@
       <view class="" v-show="currentIndex == 0">
         <u-empty text="暂时没有拼车订单 快快发布一个吧 (๑>؂<๑）" v-if="newSchoolList.length == 0" mode="order"></u-empty>
         <uni-card v-for="(item,index) in newSchoolList" :key="index"
-          :title="subYear(item.startdatetime) + ' 出发'" thumbnail='/static/logo.png'
+          :title="subYear(item.startdatetime) + ' 出发'" :thumbnail='avahttp + item.createUserInfo.avatar'
           @click="clickCard(item)">
           <view class="my-car-box">
             <view class="" style="width: 80%;" >
@@ -61,7 +61,7 @@
       <view class="" v-show="currentIndex == 1">
         <u-empty text="暂时没有拼车订单 快快发布一个吧 (๑>؂<๑）" v-if="oldSchoolList.length == 0" mode="order"></u-empty>
         <uni-card v-for="(item,index) in oldSchoolList" :key="index"
-          :title="subYear(item.startdatetime) + ' 出发'" thumbnail='/static/logo.png'
+          :title="subYear(item.startdatetime) + ' 出发'" :thumbnail='avahttp + item.createUserInfo.avatar'
           @click="clickCard(item)">
           <view class="my-car-box">
             <view class="" style="width: 80%;">
@@ -95,7 +95,7 @@
       <view class="" v-show="currentIndex == 2">
         <u-empty text="暂时没有拼车订单 快快发布一个吧 (๑>؂<๑）" v-if="otherAddressList.length == 0" mode="order"></u-empty>
         <uni-card v-for="(item,index) in otherAddressList" :key="index"
-          :title="subYear(item.startdatetime) + ' 出发'" thumbnail='/static/logo.png'
+          :title="subYear(item.startdatetime) + ' 出发'" :thumbnail='avahttp + item.createUserInfo.avatar'
           @click="clickCard(item)">
           <view class="my-car-box">
             <view class="" style="width: 80%;">
@@ -133,7 +133,7 @@
         <scroll-view scroll-y="true" style="height: 62vh; background-color: #ffffff;" show-scrollbar="true">
           <view class="top-box">
             <view class="left">
-              <image src="../../static/logo.png" mode=""></image>
+              <image :src="avahttp + currentOrder.createUserInfo.avatar" mode=""></image>
             </view>
             <view class="middle">
               <view class="" style="line-height: 50rpx;">用户名称: {{currentOrder.createUserInfo.username}}</view>
@@ -209,6 +209,7 @@
   export default {
     data() {
       return {
+        avahttp: this.avahttp,
         oneRefresh: false, // 页面是否有过第一次刷新
         isRefresh: false,
         popupShow: false,
@@ -289,6 +290,7 @@
         }).then(res => {
           console.log(res.data);
           if(res.code != 200){
+            this.isRefresh = false
             this.$refs.message.show({
               type: 'error', //String 默认default
               msg: '网络开了点小差,请稍候重试吧', //String 显示内容 *
@@ -331,6 +333,15 @@
           
           this.isRefresh = false
           console.log('下拉刷新结束了');
+        }).catch(err => {
+          console.log('home page is',err);
+          this.isRefresh = false
+          this.$refs.message.show({
+            type: 'error', 
+            msg: '网络开了点小差,请稍候重试吧', 
+            iconSize: 16, 
+          })
+          return
         })
         
       },
@@ -397,13 +408,14 @@
         }
       },
       myonshow() {
-        console.log('myonshow');
+        console.log('拼车页面的myonshow方法触发了');
         this.simulateSwipeDown()
       },
       simulateSwipeDown() {
-        console.log('首次进入页面 index 0 页面 自动下拉刷新');
+        
         if (!this.oneRefresh) {
           this.oneRefresh = true
+          console.log('首次进入页面 index 0 页面 自动下拉刷新');
           this.change({index: 0,name: '濂溪校区'})
         }
       }

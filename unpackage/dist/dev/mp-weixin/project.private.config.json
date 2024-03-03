@@ -27,6 +27,20 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "subpkg/myinfo",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "subpkg/feedback",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

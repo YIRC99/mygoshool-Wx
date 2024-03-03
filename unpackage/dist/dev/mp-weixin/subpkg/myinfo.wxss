@@ -68,6 +68,7 @@
   justify-content: space-between;
   font-size: 34rpx;
   padding: 30rpx 0;
+  margin-bottom: 20rpx;
   border-bottom: 1px solid #e8e8e8;
 }
 

@@ -7,7 +7,6 @@
       
       <view class="pagebox">
         <my ref="mypage" v-show="tabIndex == 1"></my>
-        <!-- <order v-show="tabIndex == 1"></order> -->
         <home ref="homepage" v-show="tabIndex == 0"></home>
       </view>
       
@@ -34,7 +33,7 @@
 		},
 		data() {
 			return {
-        tabIndex: 2,
+        tabIndex: 0,
 				items:[
 					{
 						icon:{src:require("@/static/carIcon2.png"),width:30,height:30},
@@ -60,16 +59,19 @@
           this.$refs.mypage.myonshow()
         }else if( index == 0){
           uni.setNavigationBarTitle({title: '拼车广场'})
-          console.log('调用 myonshow 方法');
            this.$refs.homepage.myonshow()
         }
 				console.log('tabIndex',index)
 			}
 		},
     mounted() {
-      console.log('页面初始化onload');
-      this.onTab(0,{})
-      console.log('页面初始化onload 完毕');
+      // console.log('页面初始化onload');
+      // this.onTab(0,{})
+      // console.log('页面初始化onload 完毕');
+    },
+    onShow() {
+      console.log('index页面触发了onshow 当前的页面下标是',this.tabIndex);
+      this.onTab(this.tabIndex,{})
     }
 	}
 </script>

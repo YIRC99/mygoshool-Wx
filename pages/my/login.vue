@@ -87,6 +87,7 @@
         });
       },
       myonshow() {
+        console.log('my login 页面的show 触发了');
         let key = uni.getStorageSync('token')
         if (key == undefined || key == null || key == '')
           this.isLogin = false
