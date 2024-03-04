@@ -265,7 +265,6 @@
   height: 40rpx;
 }
 .receivePopup-box {
-  background-color: red;
   width: 100%;
   height: 100%;
   border-radius: 30rpx;
@@ -273,6 +272,7 @@
   flex-direction: column;
   justify-content: flex-start;
   flex-wrap: nowrap;
+  align-items: center;
 }
 .receivePopup-box .down-box {
   display: flex;

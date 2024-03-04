@@ -120,7 +120,6 @@
       wxLogin() {
         this.isLoading = true
         console.log('调用了微信登录');
-        console.log(this.avahttp + '1.jpg');
         wx.login({
           success: (res) => {
             this.post({
@@ -142,7 +141,18 @@
       },
     },
     mounted() {
-
+      
+    },
+    created() {
+      uni.checkSession({
+        success: (res) => {
+          console.log('验证session success',res);
+        },
+        fail: (err) => {
+          console.log('验证session fail 自动登录微信',err);
+          this.wxLogin()
+        }
+      })
     }
   }
 </script>

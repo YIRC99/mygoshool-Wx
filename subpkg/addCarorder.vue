@@ -127,9 +127,9 @@
         lackPerson: '1',
         startDateTime: '点击选择出发时间',
         StartTimeValue: Number(new Date()),
-        startAddress: '点击选择出发地点', //这里是地址名称 
+        startAddress: '点击选择出发地点1', //这里是地址名称 
         startAddressAll: '', //这是地址全称
-        endAddress: '点击选择目的地',
+        endAddress: '点击选择目的地1',
         endAddressAll: '',
         wechatAccount: '',
         phoneNumber: '',
@@ -214,6 +214,7 @@
           })
           
           setTimeout(()=>{
+            uni.$emit('addUpdate')
             uni.navigateBack()
           },1000)
         })

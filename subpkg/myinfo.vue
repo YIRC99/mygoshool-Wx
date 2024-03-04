@@ -55,8 +55,8 @@
           username: '',
         },
         isloding: false,
-        // avahttp: this.avahttp,
-        avahttp: 'http://127.0.0.1:33088/avatar/download/',
+        avahttp: this.avahttp,
+        // avahttp: 'http://127.0.0.1:33088/avatar/download/',
       };
     },
     methods: {

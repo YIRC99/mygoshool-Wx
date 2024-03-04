@@ -182,16 +182,17 @@
     </uv-popup>
 
     <uv-popup ref="receivePopup" mode="center" @maskClick="closeReceivePopup"
-      custom-style="height: 200rpx;border-radius: 30rpx; width: 80vw; height: 40vh;">
+      custom-style="height: 200rpx;border-radius: 30rpx; width: 80vw; height: 40vh;" :close-on-click-overlay="false">
       <view class="receivePopup-box">
         <view class="" style="display: flex;justify-content: center;align-items: center;">
           <image class="titleImg" src="../../static/succes1.png" mode="widthFix"></image>
         </view>
         <view>友好交流互帮互助</view>
-        <view>对方微信: {{currentOrder.userWx}}</view>
+        <view v-if="currentOrder.wechataccount != ''">对方微信: {{currentOrder.wechataccount}}</view>
+        <view v-if="currentOrder.phonenumber != ''">对方手机号: {{currentOrder.phonenumber}}</view>
         <view>关闭后可在历史拼车中继续查看</view>
         <view class="down-box">
-          <button class="btn-grad" @click="copyWx">确定(自动复制联系方式)</button>
+          <button class="btn-grad" @click="copyWx">自动复制(优先微信)</button>
         </view>
       </view>
     </uv-popup>
@@ -209,7 +210,7 @@
   export default {
     data() {
       return {
-        avahttp: this.avahttp,
+        avahttp: 'http://192.168.192.210:33088/avatar/download/',
         oneRefresh: false, // 页面是否有过第一次刷新
         isRefresh: false,
         popupShow: false,
@@ -237,8 +238,12 @@
         otherAddressList:[],
         currentOrder: {
           createUserInfo:{
-            username: ''
-          }
+            username: '',
+            userphone: '',
+            userwx: ''
+          },
+          phonenumber: '',
+          wechataccount: ''
         },
         pageNum: 1,
         pageSize: 5,
@@ -260,9 +265,9 @@
       },
       copyWx() {
         uni.setClipboardData({
-          data: this.currentOrder.userWx,
+          data: this.currentOrder.wechataccount || this.currentOrder.phonenumber,
           complete: (res) => {
-            // console.log('点击复制的结果',res);
+            console.log('点击复制的结果',res);
             this.$refs.receivePopup.close()
             this.closeReceivePopup()
           }
@@ -270,9 +275,10 @@
       },
       closeReceivePopup() {
         this.popupShow = false
-        console.log(this.popupShow);
       },
       receiveOrder() {
+        
+        
         this.$refs.popup.close()
         this.$refs.receivePopup.open()
       },
@@ -408,6 +414,10 @@
         }
       },
       myonshow() {
+        uni.$once('addUpdate',()=>{
+          console.log('监听到了 添加之后 返回页面');
+          this.scrollPullDown()
+        })
         console.log('拼车页面的myonshow方法触发了');
         this.simulateSwipeDown()
       },
@@ -463,7 +473,7 @@
 
 
   .receivePopup-box {
-    background-color: red;
+    // background-color: red;
     width: 100%;
     height: 100%;
     border-radius: 30rpx;
@@ -471,6 +481,7 @@
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: nowrap;
+    align-items: center;
 
     .down-box {
       display: flex;

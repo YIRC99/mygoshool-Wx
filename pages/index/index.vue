@@ -1,8 +1,8 @@
 <template>	
 		<view class="page">
-      <page-meta>
+    <!--  <page-meta>
         <navigation-bar background-color="#fff  " title="首页" front-color="#000000"></navigation-bar>
-      </page-meta>
+      </page-meta> -->
       
       
       <view class="pagebox">
@@ -72,6 +72,7 @@
     onShow() {
       console.log('index页面触发了onshow 当前的页面下标是',this.tabIndex);
       this.onTab(this.tabIndex,{})
+      
     }
 	}
 </script>
