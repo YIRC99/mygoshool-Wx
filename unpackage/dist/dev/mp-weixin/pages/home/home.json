@@ -8,6 +8,7 @@
     "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
     "uv-popup": "/uni_modules/uv-popup/components/uv-popup/uv-popup",
     "uni-section": "/uni_modules/uni-section/components/uni-section/uni-section",
-    "quick-message": "/components/quick-message/quick-message"
+    "quick-message": "/components/quick-message/quick-message",
+    "zero-loading": "/uni_modules/zero-loading/components/zero-loading/zero-loading"
   }
 }
