@@ -243,6 +243,7 @@ var _default = {
           timeout: 5000,
           success: function success(res) {
             console.log('上传成功', res.statusCode);
+            console.log('res.data.data', res.data.data);
             var img = JSON.parse(res.data).data;
             if (_this.imgString == '') _this.imgString = img;else _this.imgString = _this.imgString + ',' + img;
             resolve(200);
@@ -276,7 +277,7 @@ var _default = {
                 i = 0;
               case 5:
                 if (!(i < lists.length)) {
-                  _context.next = 19;
+                  _context.next = 18;
                   break;
                 }
                 _context.next = 8;
@@ -287,7 +288,6 @@ var _default = {
                 console.log('result', result);
                 console.log('item', item);
                 console.log('this[1]', _this2[1]);
-                debugger;
                 if (result == 400) {
                   _this2["fileList".concat(event.name)].splice(fileListLen, 1, Object.assign(item, {
                     status: 'failed',
@@ -302,11 +302,11 @@ var _default = {
                   }));
                 }
                 fileListLen++;
-              case 16:
+              case 15:
                 i++;
                 _context.next = 5;
                 break;
-              case 19:
+              case 18:
               case "end":
                 return _context.stop();
             }
@@ -320,6 +320,8 @@ var _default = {
     },
     lgin: function lgin() {
       var _this3 = this;
+      console.log(this.$uv.toast);
+      return;
       if (this.mt.length == 0) {
         uni.showToast({
           title: '请输入意见',

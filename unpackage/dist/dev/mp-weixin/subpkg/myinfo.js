@@ -248,7 +248,6 @@ var _default = {
       var _this3 = this;
       this.isloading = true;
       console.log('saveInfo', this.info.username);
-      // if (this.info.username != '一见如初') return
       this.post({
         url: 'user/update',
         data: this.info

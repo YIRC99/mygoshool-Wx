@@ -459,9 +459,9 @@ var _default = {
       uni.previewImage({
         // 先filter找出为图片的item，再返回filter结果中的图片url
         urls: this.lists.filter(function (item) {
-          return _this5.accept === 'image' || (0, _test.image)(item.url || item.thumb);
+          return _this5.accept === 'image' || (0, _test.image)(item.thumb || item.url);
         }).map(function (item) {
-          return item.url || item.thumb;
+          return item.thumb || item.url;
         }),
         current: findIndex,
         fail: function fail() {

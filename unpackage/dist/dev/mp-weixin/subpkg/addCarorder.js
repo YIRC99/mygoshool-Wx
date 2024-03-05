@@ -321,6 +321,10 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
@@ -382,60 +386,66 @@ var _default = {
     }
   },
   methods: {
-    addOrder: function addOrder() {
+    postOrder: function postOrder() {
       var _this = this;
+      var curUser = uni.getStorageSync('user');
+      this.isLoading = true;
+      this.post({
+        url: 'carshareorder/add',
+        data: {
+          createuserid: curUser.openid,
+          startaddressall: this.startAddressAll,
+          startaddress: this.startAddress,
+          endaddressall: this.endAddressAll,
+          endaddress: this.endAddress,
+          startdatetime: this.startDateTime.split(' ')[0] + 'T' + this.startDateTime.split(' ')[1],
+          currentperson: this.currentPerson,
+          lackperson: this.lackPerson,
+          phonenumber: this.phoneNumber,
+          wechataccount: this.wechatAccount,
+          isbefore: this.isBefore == true ? 1 : 0,
+          beforetime: this.beforeTime,
+          isafter: this.isAfter == true ? 1 : 0,
+          aftertime: this.afterTime,
+          remark: this.ideaText
+        }
+      }).then(function (res) {
+        _this.isLoading = false;
+        if (res.code !== 200) {
+          _this.$refs.message.show({
+            type: 'error',
+            msg: '发布拼车失败 请稍候重试吧'
+          });
+          return;
+        }
+        _this.$refs.message.show({
+          type: 'success',
+          msg: '发布成功!'
+        });
+        setTimeout(function () {
+          uni.$emit('addUpdate');
+          uni.navigateBack();
+        }, 1000);
+      });
+    },
+    addOrder: function addOrder() {
+      var _this2 = this;
       var isWriteResult = this.isWrite();
       console.log('isWriteResult', isWriteResult);
       if (!isWriteResult) return;
       uni.requestSubscribeMessage({
         tmplIds: ['R0HVPNJRywpmvaA5xO6YWFfjLdGqcjWPB0-rqRkmkbk'],
         success: function success(res) {
-          var curUser = uni.getStorageSync('user');
-          _this.isLoading = true;
-          _this.post({
-            url: 'carshareorder/add',
-            data: {
-              createuserid: curUser.openid,
-              startaddressall: _this.startAddressAll,
-              startaddress: _this.startAddress,
-              endaddressall: _this.endAddressAll,
-              endaddress: _this.endAddress,
-              startdatetime: _this.startDateTime.split(' ')[0] + 'T' + _this.startDateTime.split(' ')[1],
-              currentperson: _this.currentPerson,
-              lackperson: _this.lackPerson,
-              phonenumber: _this.phoneNumber,
-              wechataccount: _this.wechatAccount,
-              isbefore: _this.isBefore == true ? 1 : 0,
-              beforetime: _this.beforeTime,
-              isafter: _this.isAfter == true ? 1 : 0,
-              aftertime: _this.afterTime,
-              remark: _this.ideaText
-            }
-          }).then(function (res) {
-            _this.isLoading = false;
-            if (res.code !== 200) {
-              _this.$refs.message.show({
-                type: 'error',
-                msg: '发布拼车失败 请稍候重试吧'
-              });
-              return;
-            }
-            _this.$refs.message.show({
-              type: 'success',
-              msg: '发布成功!'
-            });
-            setTimeout(function () {
-              uni.$emit('addUpdate');
-              uni.navigateBack();
-            }, 1000);
-          });
+          console.log('用户消息同意情况', res);
+          _this2.postOrder();
         },
         fail: function fail(err) {
           console.log(err);
-          _this.$refs.message.show({
-            type: 'error',
+          _this2.$refs.message.show({
+            type: 'warning',
             msg: '同意请求才可以及时收到拼车消息哦'
           });
+          _this2.postOrder();
         }
       });
     },
@@ -569,11 +579,11 @@ var _default = {
       return value;
     },
     choseEndAddress: function choseEndAddress() {
-      var _this2 = this;
+      var _this3 = this;
       uni.chooseLocation({
         success: function success(res) {
-          _this2.endAddress = res.name;
-          _this2.endAddressAll = res.address + res.name;
+          _this3.endAddress = res.name;
+          _this3.endAddressAll = res.address + res.name;
         },
         fail: function fail() {
           // 如果用uni.chooseLocation没有获取到地理位置，则需要获取当前的授权信息，判断是否有地理授权信息
@@ -631,11 +641,11 @@ var _default = {
       });
     },
     choseStartAddress: function choseStartAddress() {
-      var _this3 = this;
+      var _this4 = this;
       uni.chooseLocation({
         success: function success(res) {
-          _this3.startAddress = res.name;
-          _this3.startAddressAll = res.address + res.name;
+          _this4.startAddress = res.name;
+          _this4.startAddressAll = res.address + res.name;
         },
         fail: function fail() {
           // 如果用uni.chooseLocation没有获取到地理位置，则需要获取当前的授权信息，判断是否有地理授权信息

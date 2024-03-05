@@ -19,9 +19,9 @@
 
         <uni-card is-shadow style="margin-bottom: 0;">
             <view class="">时间以及其他</view>
-            <view class="choseTime">
+            <view class="choseTime" @click="choseStartDateTime">
                 <image src="../static/lishi1.png" class="myicon" mode=""></image>
-                <view class="" @click="choseStartDateTime">{{startDateTime}}</view>
+                <view class="" >{{startDateTime}}</view>
                 <image src="/static/rihgt_black.png"
                     style="width: 30rpx; height: 30rpx; position: absolute; right: 40rpx;" mode=""></image>
                 <uv-datetime-picker ref="startDatetimePicker" :minDate="StartTimeValue" :formatter="formatter"
@@ -29,18 +29,18 @@
                 </uv-datetime-picker>
             </view>
             <view class="chosePerson">
-                <view class="chosePerson-item">
+                <view class="chosePerson-item" @click="choseCurrentPerson">
                     <image src="../static/person.png" class="myicon" mode=""></image>
-                    <view class="" @click="choseCurrentPerson">当前 <text class="my-text-box2-t"> {{currentPerson}}
+                    <view class="" >当前 <text class="my-text-box2-t"> {{currentPerson}}
                         </text> 人</view>
                     <image src="/static/rihgt_black.png" style="width: 30rpx; height: 30rpx; margin-left: 10rpx;"
                         mode=""></image>
                 </view>
                 <uv-picker ref="CurrentPicker" :columns="columns" @confirm="CurrentConfirm"></uv-picker>
-                <view class="chosePerson-item">
+                <view class="chosePerson-item" @click="choseLaskPerson">
                     <image src="../static/person_red.png" class="myicon" mode="">
                     </image>
-                    <view class="" @click="choseLaskPerson">还缺 <text class="my-text-box2-t"> {{lackPerson}} </text> 人
+                    <view class="" >还缺 <text class="my-text-box2-t"> {{lackPerson}} </text> 人
                     </view>
                     <image src="/static/rihgt_black.png" style="width: 30rpx; height: 30rpx; margin-left: 10rpx;"
                         mode=""></image>
@@ -68,7 +68,11 @@
                 </view>
             </view>
 
-            <view class="" style="padding-left: 70rpx; color: #a9a9a9;" v-if="isTips">*手机号微信最少输入一个即可</view>
+            <view class="">
+                
+            </view>
+
+            <view class="" style="padding-left: 70rpx; color: #F4AB12;" v-if="isTips">*手机号微信只需输入一个即可</view>
 
             <view class="choseTimeDifference">
                 <view class="choseTimeDifference-item">
@@ -182,7 +186,51 @@
             }
         },
         methods: {
-
+            postOrder(){
+                let curUser = uni.getStorageSync('user')
+                this.isLoading = true
+                this.post({
+                    url: 'carshareorder/add',
+                    data: {
+                        createuserid: curUser.openid,
+                        startaddressall: this.startAddressAll,
+                        startaddress: this.startAddress,
+                        endaddressall: this.endAddressAll,
+                        endaddress: this.endAddress,
+                        startdatetime: this.startDateTime.split(' ')[0] + 'T' + this
+                            .startDateTime.split(' ')[
+                                1],
+                        currentperson: this.currentPerson,
+                        lackperson: this.lackPerson,
+                        phonenumber: this.phoneNumber,
+                        wechataccount: this.wechatAccount,
+                        isbefore: this.isBefore == true ? 1 : 0,
+                        beforetime: this.beforeTime,
+                        isafter: this.isAfter == true ? 1 : 0,
+                        aftertime: this.afterTime,
+                        remark: this.ideaText
+                    }
+                }).then(res => {
+                    this.isLoading = false
+                    if (res.code !== 200) {
+                        this.$refs.message.show({
+                            type: 'error',
+                            msg: '发布拼车失败 请稍候重试吧',
+                        })
+                        return
+                    }
+                    this.$refs.message.show({
+                        type: 'success',
+                        msg: '发布成功!',
+                    })
+                
+                    setTimeout(() => {
+                        uni.$emit('addUpdate')
+                        uni.navigateBack()
+                    }, 1000)
+                })
+                
+            },
             addOrder() {
                 const isWriteResult = this.isWrite()
                 console.log('isWriteResult', isWriteResult);
@@ -190,63 +238,26 @@
                 uni.requestSubscribeMessage({
                     tmplIds: ['R0HVPNJRywpmvaA5xO6YWFfjLdGqcjWPB0-rqRkmkbk'],
                     success: (res) => {
-                      let curUser = uni.getStorageSync('user')
-                      this.isLoading = true
-                        this.post({
-                            url: 'carshareorder/add',
-                            data: {
-                                createuserid: curUser.openid,
-                                startaddressall: this.startAddressAll,
-                                startaddress: this.startAddress,
-                                endaddressall: this.endAddressAll,
-                                endaddress: this.endAddress,
-                                startdatetime: this.startDateTime.split(' ')[0] + 'T' + this.startDateTime.split(' ')[
-                                    1],
-                                currentperson: this.currentPerson,
-                                lackperson: this.lackPerson,
-                                phonenumber: this.phoneNumber,
-                                wechataccount: this.wechatAccount,
-                                isbefore: this.isBefore == true ? 1 : 0,
-                                beforetime: this.beforeTime,
-                                isafter: this.isAfter == true ? 1 : 0,
-                                aftertime: this.afterTime,
-                                remark: this.ideaText
-                            }
-                        }).then(res => {
-                            this.isLoading = false
-                            if (res.code !== 200) {
-                                this.$refs.message.show({
-                                    type: 'error',
-                                    msg: '发布拼车失败 请稍候重试吧',
-                                })
-                                return
-                            }
-                            this.$refs.message.show({
-                                type: 'success',
-                                msg: '发布成功!',
-                            })
-                        
-                            setTimeout(() => {
-                                uni.$emit('addUpdate')
-                                uni.navigateBack()
-                            }, 1000)
-                        })
-                                    
+                        console.log('用户消息同意情况',res);
+                        this.postOrder()
                     },
                     fail: (err) => {
                         console.log(err);
                         this.$refs.message.show({
-                            type: 'error',
+                            type: 'warning',
                             msg: '同意请求才可以及时收到拼车消息哦',
                         })
+                        this.postOrder()
                     }
                 })
                 
-                
-              
+  
 
-            
-            
+
+
+
+
+
             },
             isWrite() {
                 if (this.isAfter == true && this.afterTime == '00:00') {
@@ -369,7 +380,7 @@
                                                         if (data
                                                             .authSetting[
                                                                 'scope.userLocation'
-                                                                ] ===
+                                                            ] ===
                                                             true) {
                                                             uni.showToast({
                                                                 title: "授权成功",
@@ -380,12 +391,12 @@
                                                             uni.chooseLocation({
                                                                 success: (
                                                                     res
-                                                                    ) => {
+                                                                ) => {
                                                                     console
                                                                         .log(
                                                                             "详细地址",
                                                                             res
-                                                                            );
+                                                                        );
                                                                     // this.getRegionFn(res);
                                                                 }
                                                             })
@@ -440,7 +451,7 @@
                                                         if (data
                                                             .authSetting[
                                                                 'scope.userLocation'
-                                                                ] ===
+                                                            ] ===
                                                             true) {
                                                             uni.showToast({
                                                                 title: "授权成功",
@@ -451,12 +462,12 @@
                                                             uni.chooseLocation({
                                                                 success: (
                                                                     res
-                                                                    ) => {
+                                                                ) => {
                                                                     console
                                                                         .log(
                                                                             "详细地址",
                                                                             res
-                                                                            );
+                                                                        );
                                                                     // this.getRegionFn(res);
                                                                 }
                                                             })

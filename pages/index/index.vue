@@ -1,8 +1,5 @@
 <template>
     <view class="page">
-        <!--  <page-meta>
-        <navigation-bar background-color="#fff  " title="首页" front-color="#000000"></navigation-bar>
-      </page-meta> -->
 
 
         <view class="pagebox">

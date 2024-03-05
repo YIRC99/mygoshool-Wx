@@ -15,6 +15,7 @@ var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/run
 __webpack_require__(/*! uni-pages */ 26);
 var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ 27));
 var _uviewUi = _interopRequireDefault(__webpack_require__(/*! uview-ui */ 33));
+var _uvUiTools = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/uv-ui-tools */ 521));
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 25));
 __webpack_require__(/*! ./uni.promisify.adaptor */ 158);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
@@ -112,6 +113,10 @@ _vue.default.prototype.post = function (opt) {
     });
   });
 };
+
+// main.js
+
+_vue.default.use(_uvUiTools.default);
 var message = function message() {
   Promise.all(/*! require.ensure | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then((function () {
     return resolve(__webpack_require__(/*! @/components/quick-message/quick-message.vue */ 219));

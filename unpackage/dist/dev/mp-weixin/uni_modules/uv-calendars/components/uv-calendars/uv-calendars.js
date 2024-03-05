@@ -376,8 +376,7 @@ var _default2 = {
         return;
       }
       this.setEmit('confirm');
-      this.$refs.popup.close();
-      // this.close() //修改组件源码 将点击确定和点击取消触发事件分开 
+      this.close();
     },
     maskClick: function maskClick() {
       if (this.closeOnClickOverlay) {

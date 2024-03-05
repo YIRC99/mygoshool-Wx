@@ -6,6 +6,8 @@ Vue.use(uView);
 // const http = 'http://192.168.1.13:33088/'
 // const http = 'http://127.0.0.1:33088/'
 const http = 'http://192.168.192.210:33088/'
+
+
 const myOutTime = 5000
 Vue.prototype.avahttp = http + 'avatar/download/'
 Vue.prototype.http = http
@@ -95,6 +97,15 @@ Vue.prototype.post =(opt) =>{
 	})
 }
 
+
+// main.js
+import uvUI from '@/uni_modules/uv-ui-tools'
+// #ifndef VUE3
+Vue.use(uvUI);
+// #endif
+// #ifdef VUE3
+app.use(uvUI);
+// #endif
 
 import message from '@/components/quick-message/quick-message.vue'
 Vue.component('quick-message',message);

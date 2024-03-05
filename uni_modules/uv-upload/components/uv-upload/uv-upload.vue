@@ -278,7 +278,7 @@
 				if (!item.isImage || !this.previewFullImage) return
 				uni.previewImage({
 					// 先filter找出为图片的item，再返回filter结果中的图片url
-					urls: this.lists.filter((item) => this.accept === 'image' || image(item.url || item.thumb)).map((item) => item.url || item.thumb),
+					urls: this.lists.filter((item) => this.accept === 'image' || image(item.thumb || item.url)).map((item) => item.thumb || item.url),
 					current: findIndex,
 					fail() {
 						this.$uv.toast('预览图片失败')

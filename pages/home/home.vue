@@ -316,7 +316,7 @@
                 this.popupShow = false
             },
             receiveOrder() {
-                
+
                 let user = uni.getStorageSync('user')
                 this.isLoading = true
                 this.post({
@@ -334,9 +334,12 @@
                             msg: '订单已被接受或失效',
                             iconSize: 16,
                         })
+                        this.isLoading = false
+                        this.$refs.popup.close()
                         this.scrollPullDown()
                         return
                     }
+
                     this.isLoading = false
                     this.scrollPullDown()
                     this.$refs.popup.close()
@@ -459,9 +462,19 @@
                 this.getOrderList(false)
             },
             toAddOrder() {
-                uni.navigateTo({
-                    url: '/subpkg/addCarorder'
-                });
+                let user = uni.getStorageSync('user')
+                if (user != null && user != '' && user != undefined) {
+                    uni.navigateTo({
+                        url: '/subpkg/addCarorder'
+                    });
+                } else {
+                    this.$refs.message.show({
+                        type: 'error',
+                        msg: '请登录后再发布拼车吧',
+                        iconSize: 16, 
+                    })
+                }
+
             },
             clickCard(order) {
                 this.currentOrder = order

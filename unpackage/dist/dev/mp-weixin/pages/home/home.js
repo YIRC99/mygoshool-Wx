@@ -553,6 +553,8 @@ var _default = {
             msg: '订单已被接受或失效',
             iconSize: 16
           });
+          _this2.isLoading = false;
+          _this2.$refs.popup.close();
           _this2.scrollPullDown();
           return;
         }
@@ -675,9 +677,18 @@ var _default = {
       this.getOrderList(false);
     },
     toAddOrder: function toAddOrder() {
-      uni.navigateTo({
-        url: '/subpkg/addCarorder'
-      });
+      var user = uni.getStorageSync('user');
+      if (user != null && user != '' && user != undefined) {
+        uni.navigateTo({
+          url: '/subpkg/addCarorder'
+        });
+      } else {
+        this.$refs.message.show({
+          type: 'error',
+          msg: '请登录后再发布拼车吧',
+          iconSize: 16
+        });
+      }
     },
     clickCard: function clickCard(order) {
       this.currentOrder = order;

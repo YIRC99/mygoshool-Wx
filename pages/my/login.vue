@@ -231,7 +231,7 @@
 
 
 
-<style>
+<style lang="scss">
   /deep/ .uni-easyinput__content-input {
     padding-left: 0 !important;
   }
