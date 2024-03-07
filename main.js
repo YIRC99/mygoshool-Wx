@@ -9,7 +9,8 @@ const http = 'http://192.168.192.210:33088/'
 
 
 const myOutTime = 5000
-Vue.prototype.avahttp = http + 'avatar/download/'
+Vue.prototype.avahttp = http + 'common/download?path=avatar&name='
+Vue.prototype.QRttp = http + 'common/download?path=QRcode&name='
 Vue.prototype.http = http
 Vue.prototype.hoursTominute = (str) =>{
   const hour = str.split(':')[0]

@@ -24,6 +24,13 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.uploadWxImg {
+  display: flex;
+  align-items: center;
+  padding: 15rpx 0;
+  justify-content: space-between;
+  font-size: 32rpx;
+}
  .uni-easyinput__content-input {
   padding-left: 0 !important;
 }

@@ -15,9 +15,9 @@ var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/run
 __webpack_require__(/*! uni-pages */ 26);
 var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ 27));
 var _uviewUi = _interopRequireDefault(__webpack_require__(/*! uview-ui */ 33));
-var _uvUiTools = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/uv-ui-tools */ 521));
+var _uvUiTools = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/uv-ui-tools */ 158));
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 25));
-__webpack_require__(/*! ./uni.promisify.adaptor */ 158);
+__webpack_require__(/*! ./uni.promisify.adaptor */ 185);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 // @ts-ignore
@@ -27,7 +27,8 @@ _vue.default.use(_uviewUi.default);
 // const http = 'http://127.0.0.1:33088/'
 var http = 'http://192.168.192.210:33088/';
 var myOutTime = 5000;
-_vue.default.prototype.avahttp = http + 'avatar/download/';
+_vue.default.prototype.avahttp = http + 'common/download?path=avatar&name=';
+_vue.default.prototype.QRttp = http + 'common/download?path=QRcode&name=';
 _vue.default.prototype.http = http;
 _vue.default.prototype.hoursTominute = function (str) {
   var hour = str.split(':')[0];
@@ -119,7 +120,7 @@ _vue.default.prototype.post = function (opt) {
 _vue.default.use(_uvUiTools.default);
 var message = function message() {
   Promise.all(/*! require.ensure | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then((function () {
-    return resolve(__webpack_require__(/*! @/components/quick-message/quick-message.vue */ 219));
+    return resolve(__webpack_require__(/*! @/components/quick-message/quick-message.vue */ 252));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 _vue.default.component('quick-message', message);

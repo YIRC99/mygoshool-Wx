@@ -25,15 +25,8 @@
 		    "navigationBarTitleText" : "首页",
           "enablePullDownRefresh": false
 		  }
-		},
-    {
-      "path" : "pages/my/order",
-      "style" : 
-      {
-        "navigationBarTitleText" : "历史订单",
-        "enablePullDownRefresh" : false
-      }
-    }
+		}
+
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -68,6 +61,22 @@
             "navigationBarTitleText" : "个人信息",
             "enablePullDownRefresh" : false
           }
+        },
+        {
+          "path" : "sendorder",
+          "style" : 
+          {
+            "navigationBarTitleText" : "我接受的",
+            "enablePullDownRefresh" : false
+          }
+        },
+        {
+            "path" : "receiveorder",
+            "style" : 
+            {
+                "navigationBarTitleText" : "我接受的",
+                "enablePullDownRefresh" : false
+            }
         }
       ]
     }

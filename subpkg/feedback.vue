@@ -47,7 +47,7 @@
             uploadFilePromise(url) {
                 return new Promise((resolve, reject) => {
                     let a = uni.uploadFile({
-                        url: this.http + 'feedback/upload',
+                        url: this.http + 'common/upload?path=feedback',
                         filePath: url,
                         name: 'file',
                         formData: {
@@ -55,8 +55,7 @@
                         },
                         timeout: 5000,
                         success: (res) => {
-                            console.log('上传成功', res.statusCode);
-                            console.log('res.data.data',res.data.data);
+                            console.log('上传成功', JSON.parse(res.data));
                             let img = JSON.parse(res.data).data
                             if (this.imgString == '') this.imgString = img
                             else this.imgString = this.imgString + ',' + img
@@ -81,14 +80,10 @@
                         message: '上传中'
                     })
                 })
-                console.log(this.fileList1);
                 for (let i = 0; i < lists.length; i++) {
                     const result = await this.uploadFilePromise(lists[i].url)
                     let item = this[`fileList${event.name}`][fileListLen]
 
-                    console.log('result', result);
-                    console.log('item', item);
-                    console.log('this[1]', this[1]);
                     if (result == 400) {
                         this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
                             status: 'failed',
@@ -111,6 +106,7 @@
             deletePic(event) {
                 this[`fileList${event.name}`].splice(event.index, 1)
             },
+          
             lgin() {
                 console.log(this.$uv.toast);
                 return 

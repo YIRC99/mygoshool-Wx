@@ -261,6 +261,10 @@
 .page {
   padding-bottom: 130rpx;
 }
+.receivePopup-box-img {
+  border: 1px solid #ebebeb;
+  border-radius: 30rpx;
+}
 .mytable {
   position: relative;
   height: 90rpx;

@@ -3,7 +3,8 @@
     <view>
       <view class="">
         <image src="/static/back.png"
-          style="width: 100%; height: 450rpx; background-size: 100%;position: absolute; z-index: -1;" mode=""></image>
+          style="width: 100%; height: 450rpx; background-size: 100%;position: absolute; z-index: -1;" mode="">
+        </image>
       </view>
 
       <view class="top-box" @click="toInfo">
@@ -25,9 +26,15 @@
       </view>
 
       <view class="middle-box">
-        <view class="" @click="toOrder">
-          <mylist text="历史订单"></mylist>
+        <view class="" @click="toReceiveOrder">
+          <mylist text="我接受的" iconImg="/static/jieshou.png"></mylist>
         </view>
+
+        <view class="" @click="toSendOrder">
+          <mylist text="我发布的" iconImg="/static/fabu.png"></mylist>
+        </view>
+
+
         <view class="" @click="toFeedback">
           <mylist iconImg="/static/yijian2.png" text="意见反馈"></mylist>
         </view>
@@ -37,9 +44,8 @@
 
     <zero-loading v-if="isLoading" type="circle" :mask="true" maskOpacity="0.1"></zero-loading>
 
-    <uv-toast ref="toast"></uv-toast>
 
-
+    <quick-message ref="message"></quick-message>
 
   </view>
 </template>
@@ -55,13 +61,30 @@
         isLogin: false,
         info: {},
         isLoading: false,
-        // avahttp: 'http://127.0.0.1:33088/avatar/download/', //this.avahttp 
-        avahttp: this.avahttp ,
+        avahttp: 'http://192.168.192.210:33088/common/download?path=avatar&name=', 
       };
     },
     methods: {
+      toReceiveOrder() {
+        if(!this.isLogin){
+          this.$refs.message.show({
+              type: 'error', 
+              msg: '请登录后重试吧',
+          })
+          return
+        }
+        uni.navigateTo({
+          url: '/subpkg/receiveorder'
+        })
+      },
       toInfo() {
-        if (!this.isLogin) return
+        if(!this.isLogin){
+          this.$refs.message.show({
+              type: 'error', 
+              msg: '请登录后重试吧',
+          })
+          return
+        }
         uni.navigateTo({
           url: '/subpkg/myinfo'
         })
@@ -73,14 +96,27 @@
         console.log(e);
       },
       toFeedback() {
+        if(!this.isLogin){
+          this.$refs.message.show({
+              type: 'error', 
+              msg: '请登录后重试吧',
+          })
+          return
+        }
         uni.navigateTo({
           url: '/subpkg/feedback'
         });
       },
-      toOrder() {
-        console.log('1111');
+      toSendOrder() {
+        if(!this.isLogin){
+          this.$refs.message.show({
+              type: 'error', 
+              msg: '请登录后重试吧',
+          })
+          return
+        }
         uni.navigateTo({
-          url: '/pages/my/order',
+          url: '/subpkg/sendorder',
           success: res => {},
           fail: () => {},
           complete: () => {}
@@ -94,17 +130,17 @@
         else
           this.isLogin = true
         this.info = uni.getStorageSync('user')
-        
+
       },
       WxLoginSuccess() {
         this.isLoading = false
         this.isLogin = true
         uni.setStorageSync('token', this.info.openid)
         uni.setStorageSync('user', this.info)
-        this.$refs.toast.show({
-          type: 'success',
-          message: "登录成功",
-          duration: 1500
+        this.$refs.message.show({
+            type: 'success', //String 默认default
+            msg: '登录成功', //String 显示内容 *
+            iconSize: 16, //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
         })
       },
       WxLoginFail() {
@@ -141,15 +177,15 @@
       },
     },
     mounted() {
-      
+
     },
     created() {
       uni.checkSession({
         success: (res) => {
-          console.log('验证session success',res);
+          console.log('验证session success', res);
         },
         fail: (err) => {
-          console.log('验证session fail 自动登录微信',err);
+          console.log('验证session fail 自动登录微信', err);
           this.wxLogin()
         }
       })

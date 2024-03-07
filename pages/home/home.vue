@@ -197,7 +197,10 @@
                 <view class="" style="display: flex;justify-content: center;align-items: center;">
                     <image class="titleImg" src="../../static/succes1.png" mode="widthFix"></image>
                 </view>
-                <view>友好交流互帮互助</view>
+                <view>长按识别二维码快速加好友</view>
+                <view class="receivePopup-box-img" @click="viewWxImg">
+                    <image :src="QRttp+ currentOrder.wechatImg" :show-menu-by-longpress="true" style="width: 200rpx; height: 200rpx;" mode=""></image>
+                </view>
                 <view v-if="currentOrder.wechataccount != ''">对方微信: {{currentOrder.wechataccount}}</view>
                 <view v-if="currentOrder.phonenumber != ''">对方手机号: {{currentOrder.phonenumber}}</view>
                 <view>关闭后可在历史拼车中继续查看</view>
@@ -222,6 +225,7 @@
     export default {
         data() {
             return {
+                QRttp: 'http://192.168.192.210:33088/common/download?path=QRcode&name=',
                 isLoading: false,
                 avahttp: this.avahttp,
                 // avahttp: 'http://192.168.192.210:33088/avatar/download/',
@@ -266,6 +270,12 @@
             };
         },
         methods: {
+            viewWxImg(){
+                let img = this.QRttp + this.currentOrder.wechatImg
+                uni.previewImage({
+                    urls: [img]
+                })
+            },
             deleteArrById(id) {
                 if (this.currentIndex == 0) {
                     for (var i = 0; i < this.newSchoolList.length; i++) {
@@ -525,6 +535,11 @@
 <style lang="scss">
     .page {
         padding-bottom: 130rpx;
+    }
+    
+    .receivePopup-box-img{
+        border: 1px solid #ebebeb;
+        border-radius: 30rpx;
     }
 
     .mytable {

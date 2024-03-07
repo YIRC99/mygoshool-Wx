@@ -2,8 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/my/login",
-    "pages/home/home",
-    "pages/my/order"
+    "pages/home/home"
   ],
   "subPackages": [
     {
@@ -11,7 +10,9 @@
       "pages": [
         "addCarorder",
         "feedback",
-        "myinfo"
+        "myinfo",
+        "sendorder",
+        "receiveorder"
       ]
     }
   ],

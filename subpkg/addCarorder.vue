@@ -49,7 +49,7 @@
             </view>
 
 
-            <view class="input-container">
+  <!--          <view class="input-container">
                 <image src="../static/phone.png" class="myicon" mode=""></image>
                 <view class="input-container-right">
                     <uni-easyinput :inputBorder="false" type="tel" maxlength="15" placeholder="请输入手机号"
@@ -57,22 +57,33 @@
                         v-model="phoneNumber" />
                     <text v-if="phoneError" class="error-message">{{ phoneErrorMessage }}</text>
                 </view>
-            </view>
+            </view> -->
 
             <view class="input-container">
                 <image src="../static/weixin.png" class="myicon" mode=""></image>
                 <view class="input-container-right">
-                    <uni-easyinput v-model="wechatAccount" maxlength="30" :inputBorder="false" placeholder="请输入微信号"
+                    <uni-easyinput v-model="wechatAccount" maxlength="30" :inputBorder="false" placeholder="输入微信号"
                         type="text" placeholderStyle="font-size: 34rpx;" :class="{'error': wechatError}" />
                     <text v-if="wechatError" class="error-message">{{wechatErrorMsg}}</text>
                 </view>
             </view>
+            
 
-            <view class="">
-                
-            </view>
+            <view class="uploadWxImg" @click="clickUploadImgM">
+                <view class="" style="display: flex; align-items: center;">
+                    <image src="../static/weixin.png" class="myicon" mode=""></image>
+                    <view class="">点击上传微信二维码图片</view>
+                </view>
+                <view class="">
+                    <uv-upload ref="uploadWxImgRef" :fileList="fileList1" name="1" multiple :maxCount="1" @afterRead="afterRead" @delete="deletePic"
+                                width="100rpx" height="100rpx" :previewFullImage="true" ></uv-upload>
+                    
+                </view>
+        
+          </view>
 
-            <view class="" style="padding-left: 70rpx; color: #F4AB12;" v-if="isTips">*手机号微信只需输入一个即可</view>
+            <view class="" style="padding-left: 70rpx; color: #F4AB12;" v-if="isTips">
+                *微信号和图片只需一个即可</view>
 
             <view class="choseTimeDifference">
                 <view class="choseTimeDifference-item">
@@ -114,7 +125,7 @@
         </uni-card>
 
         <view class="down-box">
-            <button class="btn-grad" form-type="submit" @click="addOrder">发布拼车</button>
+            <button class="btn-grad" form-type="submit" @click="clickAddOrder">发布拼车</button>
         </view>
 
         <quick-message ref="message"></quick-message>
@@ -127,6 +138,9 @@
     export default {
         data() {
             return {
+                resWximg: '',
+                isUploadWximg: false,
+                fileList1: [],
                 isLoading: false,
                 beforeTime: '00:00',
                 isBefore: false,
@@ -157,7 +171,8 @@
                 return this.wechatAccount !== '' || this.isValidPhoneNumber
             },
             isTips() {
-                return this.wechatAccount.trim() == '' && this.phoneNumber.trim() == '';
+                // return this.wechatAccount.trim() == '' && this.phoneNumber.trim() == '';
+                return this.wechatAccount.trim() == '' && !this.isUploadWximg;
             }
         },
 
@@ -186,7 +201,80 @@
             }
         },
         methods: {
-            postOrder(){
+            clickUploadImgM(){
+              if(this.fileList1.length >= 1) return 
+              this.$refs.uploadWxImgRef.chooseFile()
+            },
+            uploadFilePromise(url) {
+                return new Promise((resolve, reject) => {
+                    let a = uni.uploadFile({
+                        url: this.http + 'common/upload?path=QRcode',
+                        filePath: url,
+                        name: 'file',
+                        formData: {
+                            user: 'test'
+                        },
+                        timeout: 5000,
+                        success: (res) => {
+                            console.log('上传成功', res.statusCode);
+                            this.isUploadWximg = true
+                            let img = JSON.parse(res.data).data
+                            this.resWximg = img
+                            resolve(200)
+                        },
+                        fail: (err) => {
+                            console.log('上传失败', err);
+                            resolve(400)
+                        }
+                    });
+                })
+            },
+            // 新增图片
+            async afterRead(event) {
+                // 当设置 multiple 为 true 时, file 为数组格式，否则为对象格式
+                let lists = [].concat(event.file)
+                let fileListLen = this[`fileList${event.name}`].length
+                lists.map((item) => {
+                    this[`fileList${event.name}`].push({
+                        ...item,
+                        status: 'uploading',
+                        message: '上传中'
+                    })
+                })
+                console.log(this.fileList1);
+                for (let i = 0; i < lists.length; i++) {
+                    const result = await this.uploadFilePromise(lists[i].url)
+                    let item = this[`fileList${event.name}`][fileListLen]
+            
+                    console.log('result', result);
+                    console.log('item', item);
+                    console.log('this[1]', this[1]);
+                    if (result == 400) {
+                        this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
+                            status: 'failed',
+                            message: '请重新上传',
+                            url: result
+                        }))
+                    } else {
+                        this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
+                            status: 'success',
+                            message: '',
+                            url: result
+                        }))
+                    }
+                    fileListLen++
+                }
+            
+            
+            },
+            // 删除图片
+            deletePic(event) {
+                this[`fileList${event.name}`].splice(event.index, 1)
+                this.isUploadWximg = false
+            },
+                      
+            
+            postOrderData(){
                 let curUser = uni.getStorageSync('user')
                 this.isLoading = true
                 this.post({
@@ -208,7 +296,8 @@
                         beforetime: this.beforeTime,
                         isafter: this.isAfter == true ? 1 : 0,
                         aftertime: this.afterTime,
-                        remark: this.ideaText
+                        remark: this.ideaText,
+                        wechatImg: this.resWximg,
                     }
                 }).then(res => {
                     this.isLoading = false
@@ -231,7 +320,7 @@
                 })
                 
             },
-            addOrder() {
+            clickAddOrder() {
                 const isWriteResult = this.isWrite()
                 console.log('isWriteResult', isWriteResult);
                 if (!isWriteResult) return
@@ -239,7 +328,7 @@
                     tmplIds: ['R0HVPNJRywpmvaA5xO6YWFfjLdGqcjWPB0-rqRkmkbk'],
                     success: (res) => {
                         console.log('用户消息同意情况',res);
-                        this.postOrder()
+                        this.postOrderData()
                     },
                     fail: (err) => {
                         console.log(err);
@@ -247,7 +336,7 @@
                             type: 'warning',
                             msg: '同意请求才可以及时收到拼车消息哦',
                         })
-                        this.postOrder()
+                        this.postOrderData()
                     }
                 })
                 
@@ -284,10 +373,10 @@
                     })
                     return false
                 }
-                if (this.wechatAccount.trim() == '' && this.phoneNumber.trim() == '') {
+                if (this.wechatAccount.trim() == '' && !this.isUploadWximg) {
                     this.$refs.message.show({
                         type: 'warning', //String 默认default
-                        msg: '请填写联系方式', //String 显示内容 *
+                        msg: '请输入联系方式', //String 显示内容 *
                         customStyle: { //自定义样式
                             color: '#E6A23C', //字体图标色
                             backgroundColor: 'rgba(253,246,236)' //背景色
@@ -548,6 +637,15 @@
 
 
 <style lang="scss">
+    .uploadWxImg{
+        display: flex;
+        align-items: center;
+        padding: 15rpx 0;
+        justify-content: space-between;
+        font-size: 32rpx;
+    }
+    
+    
     /deep/.uni-easyinput__content-input {
         padding-left: 0 !important;
     }

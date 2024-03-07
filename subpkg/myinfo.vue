@@ -108,7 +108,7 @@
         console.log(e.detail.avatarUrl);
         console.log('this.http + avatar/upload', this.http + 'avatar/upload');
         uni.uploadFile({
-          url: this.http + 'avatar/upload',
+          url: this.http + 'common/upload?path=avatar',
           filePath: e.detail.avatarUrl,
           name: 'file',
           header: {
