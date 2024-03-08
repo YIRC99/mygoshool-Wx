@@ -24,6 +24,67 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.appraisePopup-box {
+  width: 70vw;
+  height: 300rpx;
+  background-color: #ffffff;
+  padding: 20rpx;
+}
+.appraisePopup-box .btn-grad {
+  background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
+  margin: 10px auto;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  width: 450rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.appraisePopup-box .btn-grad:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+.myicon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 30rpx;
+}
+.mycard .my-uv-tags {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70rpx;
+}
+.mycard .mycard-titile {
+  font-size: 38rpx;
+  color: #3a3a3a;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+  font-weight: 600;
+}
+.my-tag {
+  border-radius: 10rpx 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500rpx;
+  height: 50rpx;
+  z-index: 99;
+  background: #86faf2;
+  background: linear-gradient(90deg, #86faf2 8%, #89ffd8 49%, rgba(0, 212, 255, 0) 100%);
+  display: flex;
+  align-items: center;
+}
+.my-tag text {
+  margin-left: 20rpx;
+  color: #3a3a3a;
+}
 .popup-box {
   height: 62vh;
   width: 100%;
@@ -59,11 +120,9 @@
 }
 .popup-box .top-box {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
-  height: 100rpx;
-  padding: 30rpx;
-  padding-bottom: 40rpx;
+  height: 170rpx;
   color: black;
 }
 .popup-box .top-box .left image {
@@ -81,9 +140,8 @@
   right: 40rpx;
 }
 .popup-box .top-box .right image {
-  width: 30rpx;
-  height: 30rpx;
-  border-radius: 50%;
+  width: 120rpx;
+  height: 120rpx;
   overflow: hidden;
   margin-left: 10rpx;
   margin-top: 10rpx;
@@ -94,8 +152,28 @@
 }
 .my-car-box {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
+}
+.my-car-box .btn-grad {
+  background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
+  margin-left: 10rpx;
+  margin-bottom: 10rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20rpx #eee;
+  border-radius: 10rpx;
+  display: block;
+}
+.my-car-box .btn-grad:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
 }
 .my-car-box .car-left {
   display: flex;

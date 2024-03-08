@@ -41,6 +41,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "我接受的",
+          "pathName": "subpkg/sendorder",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

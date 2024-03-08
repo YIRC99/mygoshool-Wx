@@ -83,7 +83,7 @@ try {
       return Promise.all(/*! import() | uni_modules/uv-popup/components/uv-popup/uv-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-popup/components/uv-popup/uv-popup")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-popup/components/uv-popup/uv-popup.vue */ 316))
     },
     uvToolbar: function () {
-      return Promise.all(/*! import() | uni_modules/uv-toolbar/components/uv-toolbar/uv-toolbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-toolbar/components/uv-toolbar/uv-toolbar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-toolbar/components/uv-toolbar/uv-toolbar.vue */ 401))
+      return Promise.all(/*! import() | uni_modules/uv-toolbar/components/uv-toolbar/uv-toolbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-toolbar/components/uv-toolbar/uv-toolbar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-toolbar/components/uv-toolbar/uv-toolbar.vue */ 425))
     },
   }
 } catch (e) {
@@ -160,7 +160,7 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 var calendarBody = function calendarBody() {
   __webpack_require__.e(/*! require.ensure | uni_modules/uv-calendars/components/uv-calendars/calendar-body */ "uni_modules/uv-calendars/components/uv-calendars/calendar-body").then((function () {
-    return resolve(__webpack_require__(/*! ./calendar-body.vue */ 409));
+    return resolve(__webpack_require__(/*! ./calendar-body.vue */ 433));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _initVueI18n = (0, _uniI18n.initVueI18n)(_index.default),

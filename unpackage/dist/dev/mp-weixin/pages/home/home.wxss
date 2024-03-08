@@ -27,6 +27,18 @@
 .page {
   padding-bottom: 130rpx;
 }
+.myicon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 30rpx;
+}
+.uploadWxImg {
+  display: flex;
+  align-items: center;
+  padding: 15rpx 0;
+  justify-content: space-between;
+  font-size: 32rpx;
+}
 .receivePopup-box-img {
   border: 1px solid #ebebeb;
   border-radius: 30rpx;

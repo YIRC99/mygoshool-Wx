@@ -109,11 +109,20 @@ try {
     uniCard: function () {
       return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 309))
     },
+    uvTags: function () {
+      return Promise.all(/*! import() | uni_modules/uv-tags/components/uv-tags/uv-tags */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-tags/components/uv-tags/uv-tags")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-tags/components/uv-tags/uv-tags.vue */ 394))
+    },
     uvPopup: function () {
       return Promise.all(/*! import() | uni_modules/uv-popup/components/uv-popup/uv-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-popup/components/uv-popup/uv-popup")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-popup/components/uv-popup/uv-popup.vue */ 316))
     },
     uniSection: function () {
       return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 323))
+    },
+    uvTextarea: function () {
+      return Promise.all(/*! import() | uni_modules/uv-textarea/components/uv-textarea/uv-textarea */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-textarea/components/uv-textarea/uv-textarea")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-textarea/components/uv-textarea/uv-textarea.vue */ 402))
+    },
+    quickMessage: function () {
+      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 252))
     },
   }
 } catch (e) {
@@ -138,11 +147,30 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   var g0 = _vm.orderList.length
+  var l0 = _vm.__map(_vm.orderList, function (item, index) {
+    var $orig = _vm.__get_orig(item)
+    var m0 = _vm.subYear(item.startdatetime)
+    return {
+      $orig: $orig,
+      m0: m0,
+    }
+  })
+  var m1 =
+    _vm.currentOrder.isbefore == 1
+      ? _vm.hoursTominute(_vm.currentOrder.beforetime)
+      : null
+  var m2 =
+    _vm.currentOrder.isafter == 1
+      ? _vm.hoursTominute(_vm.currentOrder.aftertime)
+      : null
   _vm.$mp.data = Object.assign(
     {},
     {
       $root: {
         g0: g0,
+        l0: l0,
+        m1: m1,
+        m2: m2,
       },
     }
   )
@@ -179,7 +207,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(uni) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -308,22 +336,141 @@ exports.default = void 0;
 //
 //
 //
+//
 var _default = {
   data: function data() {
     return {
+      appriseText: '',
+      avahttp: 'http://192.168.192.210:33088/common/download?path=avatar&name=',
+      QRttp: 'http://192.168.192.210:33088/common/download?path=QRcode&name=',
       list: [{
-        name: '拼车历史'
+        name: '拼车'
       }, {
         name: '待开发'
       }],
       current: 0,
       orderList: [],
-      popupShow: false
+      popupShow: false,
+      userinfo: {},
+      currentOrder: {
+        createUserInfo: {
+          username: '',
+          userphone: '',
+          userwx: ''
+        },
+        status: 0,
+        phonenumber: '',
+        wechataccount: '',
+        orderid: '',
+        receiveUserWechatImg: ''
+      },
+      clickAppriseReceiveUserId: '',
+      clickCurrentListIndex: ''
     };
   },
   methods: {
-    clickCard: function clickCard(orderId) {
+    upApprise: function upApprise() {
+      var _this = this;
+      if (this.appriseText == '') {
+        this.$refs.message.show({
+          type: 'warning',
+          msg: '请输入评价后再提交吧'
+        });
+        return;
+      }
+      var user = uni.getStorageSync('user');
+      this.post({
+        url: 'apprise/add',
+        data: {
+          createuserid: user.openid,
+          receiveuserid: this.orderList[this.clickCurrentListIndex].receiveuserid,
+          apprisedata: this.appriseText,
+          type: 1,
+          postId: this.orderList[this.clickCurrentListIndex].orderid
+        }
+      }).then(function (res) {
+        console.log(res);
+        if (res.code != 200) {
+          _this.$refs.message.show({
+            type: 'error',
+            msg: '评价失败, 请稍候再试吧',
+            iconSize: 16
+          });
+          return;
+        }
+        _this.$refs.message.show({
+          type: 'success',
+          msg: '评价成功',
+          iconSize: 16
+        });
+        setTimeout(function () {
+          _this.orderList[_this.clickCurrentListIndex].status = 2;
+          _this.orderList[_this.clickCurrentListIndex].statusText = '已完成';
+          _this.orderList[_this.clickCurrentListIndex].statusTag = 'success';
+          _this.$refs.appraisePopup.close();
+        }, 500);
+      });
+    },
+    emptyApprise: function emptyApprise() {
+      this.appriseText = '';
+    },
+    openAppraise: function openAppraise(receiveuserid) {
+      this.clickCurrentListIndex = receiveuserid;
+      this.$refs.appraisePopup.open();
+    },
+    clickReceiveCard: function clickReceiveCard() {
+      console.log(11111);
+    },
+    clickReceiveImg: function clickReceiveImg() {
+      var img = this.QRttp + this.currentOrder.receiveUserWechatImg;
+      uni.previewImage({
+        urls: [img]
+      });
+    },
+    getUserOrder: function getUserOrder() {
+      var _this2 = this;
+      this.post({
+        url: 'carshareorder/getbyid',
+        data: {
+          openid: this.userinfo.openid
+        }
+      }).then(function (res) {
+        console.log(res);
+        if (res.code != 200) {
+          _this2.$refs.message.show({
+            type: 'error',
+            msg: '请求错误 请稍候重试吧'
+          });
+          return;
+        }
+        _this2.orderList = res.data;
+        _this2.orderList.forEach(function (item) {
+          //订单状态 0已发布  1已接收  2已完成 3已过期
+          if (item.status == 0) {
+            item.statusText = '已发布';
+            item.statusTag = 'primary';
+          } else if (item.status == 1) {
+            item.statusText = '已接收';
+            item.statusTag = 'warning';
+          } else if (item.status == 2) {
+            item.statusText = '已完成';
+            item.statusTag = 'success';
+          } else if (item.status == 3) {
+            item.statusText = '已过期';
+            item.statusTag = 'info';
+          }
+        });
+      }).catch(function (err) {
+        _this2.$refs.message.show({
+          type: 'error',
+          msg: '网络开了点小差,请稍候重试吧'
+        });
+      });
+    },
+    clickCard: function clickCard(order) {
       console.log('点击了卡片');
+      this.currentOrder = order;
+      console.log(this.currentOrder);
       this.$refs.popup.open();
       this.popupShow = true;
     },
@@ -334,19 +481,14 @@ var _default = {
       this.popupShow = false;
     }
   },
-  onShow: function onShow() {
-    this.orderList.push({
-      orderId: 10086,
-      avatar: '/static/logo.png',
-      startDate: '2024-02-25',
-      startTime: '19:45',
-      startAddress: '九江职业大学北门',
-      endAddress: '九江站',
-      remark: '我是备注,我是备注,我是备注,我是备注,我是备注'
-    });
+  onLoad: function onLoad() {
+    this.userinfo = uni.getStorageSync('user');
+    console.log(this.userinfo);
+    this.getUserOrder();
   }
 };
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

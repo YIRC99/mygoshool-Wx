@@ -5,7 +5,10 @@
     "u-tabs": "/node-modules/uview-ui/components/u-tabs/u-tabs",
     "u-empty": "/node-modules/uview-ui/components/u-empty/u-empty",
     "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
+    "uv-tags": "/uni_modules/uv-tags/components/uv-tags/uv-tags",
     "uv-popup": "/uni_modules/uv-popup/components/uv-popup/uv-popup",
-    "uni-section": "/uni_modules/uni-section/components/uni-section/uni-section"
+    "uni-section": "/uni_modules/uni-section/components/uni-section/uni-section",
+    "uv-textarea": "/uni_modules/uv-textarea/components/uv-textarea/uv-textarea",
+    "quick-message": "/components/quick-message/quick-message"
   }
 }
