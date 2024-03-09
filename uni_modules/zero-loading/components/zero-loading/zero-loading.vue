@@ -32,7 +32,7 @@
 			},
 			zIndex: {
 				type: Number,
-				default: 999999,
+				default: 9999999,
 			},
 			mask: {
 				type: Boolean,

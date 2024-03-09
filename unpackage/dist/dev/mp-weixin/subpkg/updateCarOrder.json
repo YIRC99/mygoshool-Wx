@@ -1,0 +1,18 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "uv-loading-page": "/uni_modules/uv-loading-page/components/uv-loading-page/uv-loading-page",
+    "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
+    "u-line": "/node-modules/uview-ui/components/u-line/u-line",
+    "uv-datetime-picker": "/uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker",
+    "uv-picker": "/uni_modules/uv-picker/components/uv-picker/uv-picker",
+    "uni-easyinput": "/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput",
+    "uv-upload": "/uni_modules/uv-upload/components/uv-upload/uv-upload",
+    "uv-checkbox-group": "/uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group",
+    "uv-checkbox": "/uni_modules/uv-checkbox/components/uv-checkbox/uv-checkbox",
+    "uni-section": "/uni_modules/uni-section/components/uni-section/uni-section",
+    "quick-message": "/components/quick-message/quick-message",
+    "zero-loading": "/uni_modules/zero-loading/components/zero-loading/zero-loading"
+  }
+}

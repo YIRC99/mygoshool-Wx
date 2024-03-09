@@ -66,7 +66,7 @@
           "path" : "sendorder",
           "style" : 
           {
-            "navigationBarTitleText" : "我接受的",
+            "navigationBarTitleText" : "我发布的",
             "enablePullDownRefresh" : false
           }
         },
@@ -77,6 +77,14 @@
                 "navigationBarTitleText" : "我接受的",
                 "enablePullDownRefresh" : false
             }
+        },
+        {
+          "path" : "updateCarOrder",
+          "style" : 
+          {
+            "navigationBarTitleText" : "",
+            "enablePullDownRefresh" : false
+          }
         }
       ]
     }

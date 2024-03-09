@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.uploadWxImg {
+  display: flex;
+  align-items: center;
+  padding: 15rpx 0;
+  justify-content: space-between;
+  font-size: 32rpx;
+}
+ .uni-easyinput__content-input {
+  padding-left: 0 !important;
+}
+.myicon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 30rpx;
+}
+.error-message {
+  color: red;
+}
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 15rpx 0;
+}
+.input-container .input-container-right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+}
+.error {
+  border-color: red;
+}
+.down-box {
+  height: 200rpx;
+}
+.down-box .btn-grad {
+  background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
+  margin: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  width: 350rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: absolute;
+  right: 30rpx;
+  margin-bottom: 50rpx;
+}
+.down-box .btn-grad:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+.choseTimeDifference {
+  margin-top: 10rpx;
+}
+.choseTimeDifference .choseTimeDifference-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15rpx 0;
+}
+.choseTimeDifference .choseTimeDifference-item .truebeforeTime {
+  font-size: 34rpx;
+  margin-right: 10rpx;
+  font-weight: bold;
+}
+.choseTimeDifference .choseTimeDifference-item .flasebeforeTime {
+  font-size: 34rpx;
+  margin-right: 10rpx;
+  font-weight: bold;
+  color: #a9a9a9;
+  text-decoration: line-through;
+}
+.my-text-box2-t {
+  font-weight: bold;
+  margin: 0 10rpx;
+}
+.chosePerson {
+  padding: 15rpx 0;
+  font-size: 32rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.chosePerson .chosePerson-item {
+  display: flex;
+  align-items: center;
+}
+.choseTime {
+  line-height: 80rpx;
+  font-size: 40rpx;
+  display: flex;
+  align-items: center;
+  padding: 15rpx 0;
+}
+.addChose-box-line {
+  line-height: 100rpx;
+  font-size: 40rpx;
+  display: flex;
+  align-items: center;
+}
+.addChose-box-line view {
+  margin-right: 30rpx;
+}
+.addChose-box-line image {
+  position: absolute;
+  right: 40rpx;
+}
+

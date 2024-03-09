@@ -193,7 +193,7 @@
         </view>
         <view>长按识别二维码快速加好友</view>
         <view class="receivePopup-box-img" @click="viewWxImg">
-          <image :src="QRttp+ currentOrder.wechatImg" :show-menu-by-longpress="true"
+          <image v-if="currentOrder.wechatImg != ''" :src="QRttp+ currentOrder.wechatImg" :show-menu-by-longpress="true"
             style="width: 200rpx; height: 200rpx;" mode=""></image>
         </view>
         <view v-if="currentOrder.wechataccount != ''">对方微信: {{currentOrder.wechataccount}}</view>
@@ -213,7 +213,8 @@
 
     <zero-loading v-if="isLoading" type="circle" :mask="true" maskOpacity="0.1"></zero-loading>
 
-    <uv-modal ref="modal" title="添加联系方式让对方也可以联系你吧" showCancelButton :closeOnClickOverlay="false" 
+    <uv-modal ref="modal" title="添加联系方式让对方也可以联系你吧" 
+    showCancelButton :closeOnClickOverlay="false" 
      @confirm="confirmWxImg" @cancel="cancelWxImg">
 
       <view class="uploadWxImg slot-content" @click="clickUploadImgM">
@@ -274,7 +275,8 @@
           },
           phonenumber: '',
           wechataccount: '',
-          orderid: ''
+          orderid: '',
+          wechatImg: ''
         },
         pageNum: 1,
         pageSize: 5,
@@ -283,7 +285,6 @@
     },
     methods: {
       confirmWxImg(){
-        
         if (this.fileList1.length == 0){
           this.$refs.message.show({
             type: 'error',
@@ -298,6 +299,7 @@
           })
           return
         }
+        this.fileList1 = []
         this.receiveOrder()
       },
       cancelWxImg(){
@@ -453,6 +455,7 @@
               msg: '订单已被接受或失效',
               iconSize: 16,
             })
+            this.popupShow = false
             this.isLoading = false
             this.$refs.popup.close()
             this.scrollPullDown()
@@ -597,7 +600,7 @@
       },
       clickCard(order) {
         this.currentOrder = order
-        console.log(this.currentOrder);
+        console.log('点击了卡片当前选中改变了',this.currentOrder);
         this.$refs.popup.open()
         this.popupShow = true
       },

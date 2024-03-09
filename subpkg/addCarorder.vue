@@ -195,6 +195,7 @@
     },
     methods: {
       clickUploadImgM() {
+        
         if (this.fileList1.length >= 1) return
         this.$refs.uploadWxImgRef.chooseFile()
       },
@@ -346,7 +347,6 @@
               color: '#E6A23C', //字体图标色
               backgroundColor: 'rgba(253,246,236)' //背景色
             },
-            iconSize: 16, //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
           })
           return false
         }
@@ -358,7 +358,6 @@
               color: '#E6A23C', //字体图标色
               backgroundColor: 'rgba(253,246,236)' //背景色
             },
-            iconSize: 16, //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
           })
           return false
         }
@@ -370,7 +369,6 @@
               color: '#E6A23C', //字体图标色
               backgroundColor: 'rgba(253,246,236)' //背景色
             },
-            iconSize: 16, //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
           })
           return false
         }
@@ -382,7 +380,6 @@
               color: '#E6A23C', //字体图标色
               backgroundColor: 'rgba(253,246,236)' //背景色
             },
-            iconSize: 16, //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
           })
           return false
         }
@@ -394,7 +391,6 @@
               color: '#E6A23C', //字体图标色
               backgroundColor: 'rgba(253,246,236)' //背景色
             },
-            iconSize: 16, //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
           })
           return false
         }

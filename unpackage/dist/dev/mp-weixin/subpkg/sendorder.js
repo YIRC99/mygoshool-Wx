@@ -101,28 +101,31 @@ var components
 try {
   components = {
     uTabs: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-tabs/u-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-tabs/u-tabs")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-tabs/u-tabs.vue */ 280))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-tabs/u-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-tabs/u-tabs")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-tabs/u-tabs.vue */ 288))
     },
     uEmpty: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-empty/u-empty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-empty/u-empty")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-empty/u-empty.vue */ 301))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-empty/u-empty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-empty/u-empty")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-empty/u-empty.vue */ 309))
     },
     uniCard: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 309))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 317))
     },
     uvTags: function () {
-      return Promise.all(/*! import() | uni_modules/uv-tags/components/uv-tags/uv-tags */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-tags/components/uv-tags/uv-tags")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-tags/components/uv-tags/uv-tags.vue */ 394))
+      return Promise.all(/*! import() | uni_modules/uv-tags/components/uv-tags/uv-tags */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-tags/components/uv-tags/uv-tags")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-tags/components/uv-tags/uv-tags.vue */ 402))
     },
     uvPopup: function () {
-      return Promise.all(/*! import() | uni_modules/uv-popup/components/uv-popup/uv-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-popup/components/uv-popup/uv-popup")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-popup/components/uv-popup/uv-popup.vue */ 316))
+      return Promise.all(/*! import() | uni_modules/uv-popup/components/uv-popup/uv-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-popup/components/uv-popup/uv-popup")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-popup/components/uv-popup/uv-popup.vue */ 324))
     },
     uniSection: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 323))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 331))
     },
     uvTextarea: function () {
-      return Promise.all(/*! import() | uni_modules/uv-textarea/components/uv-textarea/uv-textarea */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-textarea/components/uv-textarea/uv-textarea")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-textarea/components/uv-textarea/uv-textarea.vue */ 402))
+      return Promise.all(/*! import() | uni_modules/uv-textarea/components/uv-textarea/uv-textarea */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-textarea/components/uv-textarea/uv-textarea")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-textarea/components/uv-textarea/uv-textarea.vue */ 410))
     },
     quickMessage: function () {
-      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 252))
+      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 260))
+    },
+    zeroLoading: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/zero-loading/components/zero-loading/zero-loading */ "uni_modules/zero-loading/components/zero-loading/zero-loading").then(__webpack_require__.bind(null, /*! @/uni_modules/zero-loading/components/zero-loading/zero-loading.vue */ 281))
     },
   }
 } catch (e) {
@@ -337,9 +340,15 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
+      isLoading: false,
       appriseText: '',
       avahttp: 'http://192.168.192.210:33088/common/download?path=avatar&name=',
       QRttp: 'http://192.168.192.210:33088/common/download?path=QRcode&name=',
@@ -369,8 +378,53 @@ var _default = {
     };
   },
   methods: {
-    upApprise: function upApprise() {
+    ToUpdateCarOrder: function ToUpdateCarOrder() {
+      uni.setStorageSync('updateCarOrderId', this.currentOrder.orderid);
+      uni.navigateTo({
+        url: '/subpkg/updateCarOrder'
+      });
+    },
+    deleteOrder: function deleteOrder() {
       var _this = this;
+      this.isLoading = true;
+      uni.showLoading({});
+      this.post({
+        url: 'carshareorder/delete',
+        data: {
+          orderid: this.currentOrder.orderid
+        }
+      }).then(function (res) {
+        uni.hideLoading();
+        _this.isLoading = false;
+        console.log(res);
+        if (res.code != 200) {
+          _this.$refs.message.show({
+            type: 'error',
+            msg: '删除失败, 请稍候再试吧'
+          });
+          return;
+        }
+        _this.$refs.message.show({
+          type: 'success',
+          msg: '删除成功'
+        });
+        _this.$refs.popup.close();
+        setTimeout(function () {
+          _this.orderList = _this.orderList.filter(function (item) {
+            return item.orderid != _this.currentOrder.orderid;
+          });
+        }, 500);
+      }).catch(function (err) {
+        uni.hideLoading();
+        _this.isLoading = false;
+        _this.$refs.message.show({
+          type: 'error',
+          msg: '网络开了点小差,请稍候重试吧'
+        });
+      });
+    },
+    upApprise: function upApprise() {
+      var _this2 = this;
       if (this.appriseText == '') {
         this.$refs.message.show({
           type: 'warning',
@@ -378,6 +432,7 @@ var _default = {
         });
         return;
       }
+      this.isLoading = true;
       var user = uni.getStorageSync('user');
       this.post({
         url: 'apprise/add',
@@ -390,24 +445,25 @@ var _default = {
         }
       }).then(function (res) {
         console.log(res);
+        _this2.isLoading = false;
         if (res.code != 200) {
-          _this.$refs.message.show({
+          _this2.$refs.message.show({
             type: 'error',
             msg: '评价失败, 请稍候再试吧',
             iconSize: 16
           });
           return;
         }
-        _this.$refs.message.show({
+        _this2.$refs.message.show({
           type: 'success',
           msg: '评价成功',
           iconSize: 16
         });
         setTimeout(function () {
-          _this.orderList[_this.clickCurrentListIndex].status = 2;
-          _this.orderList[_this.clickCurrentListIndex].statusText = '已完成';
-          _this.orderList[_this.clickCurrentListIndex].statusTag = 'success';
-          _this.$refs.appraisePopup.close();
+          _this2.orderList[_this2.clickCurrentListIndex].status = 2;
+          _this2.orderList[_this2.clickCurrentListIndex].statusText = '已完成';
+          _this2.orderList[_this2.clickCurrentListIndex].statusTag = 'success';
+          _this2.$refs.appraisePopup.close();
         }, 500);
       });
     },
@@ -428,23 +484,23 @@ var _default = {
       });
     },
     getUserOrder: function getUserOrder() {
-      var _this2 = this;
+      var _this3 = this;
       this.post({
-        url: 'carshareorder/getbyid',
+        url: 'carshareorder/getbyuserid',
         data: {
           openid: this.userinfo.openid
         }
       }).then(function (res) {
         console.log(res);
         if (res.code != 200) {
-          _this2.$refs.message.show({
+          _this3.$refs.message.show({
             type: 'error',
             msg: '请求错误 请稍候重试吧'
           });
           return;
         }
-        _this2.orderList = res.data;
-        _this2.orderList.forEach(function (item) {
+        _this3.orderList = res.data;
+        _this3.orderList.forEach(function (item) {
           //订单状态 0已发布  1已接收  2已完成 3已过期
           if (item.status == 0) {
             item.statusText = '已发布';
@@ -461,16 +517,15 @@ var _default = {
           }
         });
       }).catch(function (err) {
-        _this2.$refs.message.show({
+        _this3.$refs.message.show({
           type: 'error',
           msg: '网络开了点小差,请稍候重试吧'
         });
       });
     },
     clickCard: function clickCard(order) {
-      console.log('点击了卡片');
       this.currentOrder = order;
-      console.log(this.currentOrder);
+      console.log('点击了卡片', this.currentOrder);
       this.$refs.popup.open();
       this.popupShow = true;
     },

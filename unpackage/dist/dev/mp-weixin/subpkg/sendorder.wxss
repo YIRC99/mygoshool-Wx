@@ -24,6 +24,56 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.page {
+  padding-bottom: 60rpx;
+}
+.updateAndDelete {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.updateAndDelete .updateAndDelete-item {
+  width: 50%;
+}
+.updateAndDelete .updateAndDelete-item .btn-grad-delete {
+  background-image: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #FF512F 100%);
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 300rpx;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20rpx #eee;
+  border-radius: 20rpx;
+  display: block;
+}
+.updateAndDelete .updateAndDelete-item .btn-grad-delete:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+.updateAndDelete .updateAndDelete-item .btn-grad-update {
+  background-image: linear-gradient(to right, #F09819 0%, #EDDE5D 51%, #F09819 100%);
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 300rpx;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20rpx #eee;
+  border-radius: 20rpx;
+  display: block;
+}
+.updateAndDelete .updateAndDelete-item .btn-grad-update:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
 .appraisePopup-box {
   width: 70vw;
   height: 300rpx;
@@ -169,6 +219,7 @@
   box-shadow: 0 0 20rpx #eee;
   border-radius: 10rpx;
   display: block;
+  font-size: 26rpx;
 }
 .my-car-box .btn-grad:hover {
   background-position: right center;

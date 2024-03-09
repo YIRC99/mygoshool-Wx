@@ -12,7 +12,8 @@
         "feedback",
         "myinfo",
         "sendorder",
-        "receiveorder"
+        "receiveorder",
+        "updateCarOrder"
       ]
     }
   ],

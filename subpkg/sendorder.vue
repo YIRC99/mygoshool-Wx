@@ -1,5 +1,5 @@
 <template>
-  <view class="">
+  <view class="page">
 
     <u-tabs :list="list" style="background-color: #F6F5F6;" :height="160" :font-size="40" :is-scroll="false"
       bar-height="60" bar-width="400" :current="current" @change="change"></u-tabs>
@@ -12,18 +12,17 @@
       <uni-card class="mycard" v-for="(item,index) in orderList" :key="index" @click="clickCard(item)">
         <view class="my-uv-tags">
           <view class="mycard-titile">{{subYear(item.startdatetime) + ' 出发'}}</view>
-          <uv-tags :text="item.statusText" plain
-            :type="item.statusTag"></uv-tags>
+          <uv-tags :text="item.statusText" plain :type="item.statusTag"></uv-tags>
         </view>
         <view class="my-car-box">
           <view class="aaa">
             <view class="car-left">
               <img class="my-icon" src="/static/upCar.png" />
-              <text class="u-line-1">{{item.startaddress}}</text>
+              <text class="u-line-1" style="width: 350rpx;">{{item.startaddress}}</text>
             </view>
             <view class="car-left">
               <img class="my-icon" src="/static/downCar.png" />
-              <text class="u-line-1">{{item.endaddress}}</text>
+              <text class="u-line-1" style="width: 350rpx;">{{item.endaddress}}</text>
             </view>
           </view>
           <view class="aaa" @click.stop="openAppraise(index)">
@@ -39,7 +38,7 @@
     <view class="" v-show="current == 1">11</view>
 
     <uv-popup ref="popup" mode="bottom" round="50rpx" @maskClick="closePopup">
-      <view class="popup-box">
+      <view class="popup-box" :style="(currentOrder.status == 0 || currentOrder.status == 3) == true ? 'height: 50vh' : ''">
         <scroll-view scroll-y="true" style="height: 62vh; background-color: #ffffff;" show-scrollbar="true">
           <uni-card isShadow v-if="currentOrder.status != 0 && currentOrder.status != 3" @click="clickReceiveCard">
             <view class="my-tag">
@@ -47,7 +46,7 @@
             </view>
             <view class="top-box">
               <view class="left">
-                <image  :src="avahttp + userinfo.avatar" mode=""></image>
+                <image :src="avahttp + userinfo.avatar" mode=""></image>
               </view>
               <view class="middle">
                 <view class="" style="line-height: 50rpx;">用户名称: {{userinfo.username}}</view>
@@ -56,13 +55,11 @@
                 </view>
               </view>
               <view class="right" @click.stop="clickReceiveImg">
-               <image  :src="QRttp + currentOrder.receiveUserWechatImg" :show-menu-by-longpress="true"
+                <image :src="QRttp + currentOrder.receiveUserWechatImg" :show-menu-by-longpress="true"
                   style="width: 100rpx; height: 100rpx; border: 1px solid #ebebeb;" mode=""></image>
               </view>
             </view>
           </uni-card>
-
-
 
           <view class="my-middle-box">
             <uni-section title="出发地点" type="line" titleFontSize="36rpx">
@@ -102,11 +99,21 @@
             </view>
           </view>
 
+          <view class="updateAndDelete">
+            <view class="updateAndDelete-item">
+              <button class="btn-grad-update" @click="ToUpdateCarOrder" v-show="currentOrder.status == 0">修改</button>
+            </view>
+            <view class="updateAndDelete-item">
+              <button class="btn-grad-delete" @click="deleteOrder">删除</button>
+            </view>
+          </view>
+
         </scroll-view>
       </view>
     </uv-popup>
 
-    <uv-popup ref="appraisePopup" mode="center" round="30rpx" closeable @change="emptyApprise" :close-on-click-overlay="false">
+    <uv-popup ref="appraisePopup" mode="center" round="30rpx" closeable @change="emptyApprise"
+      :close-on-click-overlay="false">
       <view class="appraisePopup-box">
         <uni-section title="输入评价" type="line" titleFontSize="36rpx">
         </uni-section>
@@ -115,10 +122,8 @@
       </view>
     </uv-popup>
 
-
-
-
     <quick-message ref="message"></quick-message>
+    <zero-loading v-if="isLoading" type="circle" :mask="true" maskOpacity="0.1"></zero-loading>
   </view>
 </template>
 
@@ -126,6 +131,7 @@
   export default {
     data() {
       return {
+        isLoading: false,
         appriseText: '',
         avahttp: 'http://192.168.192.210:33088/common/download?path=avatar&name=',
         QRttp: 'http://192.168.192.210:33088/common/download?path=QRcode&name=',
@@ -155,18 +161,64 @@
       }
     },
     methods: {
-      upApprise(){
-        if(this.appriseText == ''){
+      ToUpdateCarOrder(){
+        uni.setStorageSync('updateCarOrderId',this.currentOrder.orderid)
+        uni.navigateTo({
+          url: '/subpkg/updateCarOrder',
+        })
+      },
+      deleteOrder(){
+        this.isLoading = true
+        uni.showLoading({})
+        this.post({
+          url: 'carshareorder/delete',
+          data:{
+            orderid: this.currentOrder.orderid
+          }
+        }).then(res => {
+          uni.hideLoading()
+          this.isLoading = false
+          console.log(res);
+          if (res.code != 200) {
+            this.$refs.message.show({
+              type: 'error',
+              msg: '删除失败, 请稍候再试吧',
+            })
+            return
+          }
+          this.$refs.message.show({
+            type: 'success',
+            msg: '删除成功',
+          })
+          this.$refs.popup.close()
+          setTimeout(()=>{
+            this.orderList = this.orderList.filter(item => item.orderid != this.currentOrder.orderid)
+          },500)
+        }).catch(err => {
+           uni.hideLoading()
+          this.isLoading = false
+          this.$refs.message.show({
+            type: 'error',
+            msg: '网络开了点小差,请稍候重试吧',
+          })
+        })
+        
+        
+        
+      },
+      upApprise() {
+        if (this.appriseText == '') {
           this.$refs.message.show({
             type: 'warning',
             msg: '请输入评价后再提交吧',
           })
           return
         }
+        this.isLoading = true
         let user = uni.getStorageSync('user')
         this.post({
           url: 'apprise/add',
-          data:{
+          data: {
             createuserid: user.openid,
             receiveuserid: this.orderList[this.clickCurrentListIndex].receiveuserid,
             apprisedata: this.appriseText,
@@ -175,6 +227,7 @@
           }
         }).then(res => {
           console.log(res);
+          this.isLoading = false
           if (res.code != 200) {
             this.$refs.message.show({
               type: 'error',
@@ -188,20 +241,20 @@
             msg: '评价成功',
             iconSize: 16,
           })
-          
-          
-          setTimeout(()=>{
+
+
+          setTimeout(() => {
             this.orderList[this.clickCurrentListIndex].status = 2
             this.orderList[this.clickCurrentListIndex].statusText = '已完成'
             this.orderList[this.clickCurrentListIndex].statusTag = 'success'
             this.$refs.appraisePopup.close()
-          },500)
-          
-          
+          }, 500)
+
+
         })
-      
+
       },
-      emptyApprise(){
+      emptyApprise() {
         this.appriseText = ''
       },
       openAppraise(receiveuserid) {
@@ -219,12 +272,12 @@
       },
       getUserOrder() {
         this.post({
-          url: 'carshareorder/getbyid',
+          url: 'carshareorder/getbyuserid',
           data: {
             openid: this.userinfo.openid
           }
         }).then(res => {
-          
+
           console.log(res);
           if (res.code != 200) {
             this.$refs.message.show({
@@ -236,24 +289,24 @@
           this.orderList = res.data
           this.orderList.forEach(item => {
             //订单状态 0已发布  1已接收  2已完成 3已过期
-            if(item.status == 0){
+            if (item.status == 0) {
               item.statusText = '已发布'
               item.statusTag = 'primary'
-            }else if(item.status == 1){
+            } else if (item.status == 1) {
               item.statusText = '已接收'
               item.statusTag = 'warning'
-            }else if(item.status == 2){
+            } else if (item.status == 2) {
               item.statusText = '已完成'
               item.statusTag = 'success'
-            }else if(item.status == 3){
+            } else if (item.status == 3) {
               item.statusText = '已过期'
               item.statusTag = 'info'
             }
-            
-            
-            
+
+
+
           })
-          
+
         }).catch(err => {
           this.$refs.message.show({
             type: 'error',
@@ -265,9 +318,8 @@
 
       },
       clickCard(order) {
-        console.log('点击了卡片');
         this.currentOrder = order
-        console.log(this.currentOrder);
+        console.log('点击了卡片',this.currentOrder);
         this.$refs.popup.open()
         this.popupShow = true
       },
@@ -290,11 +342,77 @@
 </script>
 
 <style lang="scss">
+  .page {
+    padding-bottom: 60rpx;
+  }
+
+  .updateAndDelete {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .updateAndDelete-item {
+      width: 50%;
+      .btn-grad-delete {
+        background-image: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #FF512F 100%);
+        height: 80rpx;
+        line-height: 80rpx;
+        width: 300rpx;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;
+        box-shadow: 0 0 20rpx #eee;
+        border-radius: 20rpx;
+        display: block;
+      }
+
+      .btn-grad-delete:hover {
+        background-position: right center;
+        color: #fff;
+        text-decoration: none;
+      }
+
+
+      .btn-grad-update {
+        background-image: linear-gradient(to right, #F09819 0%, #EDDE5D 51%, #F09819 100%);
+        height: 80rpx;
+        line-height: 80rpx;
+        width: 300rpx;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;
+        box-shadow: 0 0 20rpx #eee;
+        border-radius: 20rpx;
+        display: block;
+      }
+
+      .btn-grad-update:hover {
+        background-position: right center;
+        /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+      }
+
+    }
+
+  }
+
+
+
+
+
+
+
+
   .appraisePopup-box {
     width: 70vw;
     height: 300rpx;
     background-color: #ffffff;
     padding: 20rpx;
+
     .btn-grad {
       background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
       margin: 10px auto;
@@ -469,6 +587,7 @@
       box-shadow: 0 0 20rpx #eee;
       border-radius: 10rpx;
       display: block;
+      font-size: 26rpx;
     }
 
     .btn-grad:hover {
