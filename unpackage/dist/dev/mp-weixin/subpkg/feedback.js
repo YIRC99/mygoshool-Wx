@@ -101,13 +101,13 @@ var components
 try {
   components = {
     uniSection: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 331))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 333))
     },
     uvUpload: function () {
-      return Promise.all(/*! import() | uni_modules/uv-upload/components/uv-upload/uv-upload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-upload/components/uv-upload/uv-upload")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-upload/components/uv-upload/uv-upload.vue */ 346))
+      return Promise.all(/*! import() | uni_modules/uv-upload/components/uv-upload/uv-upload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-upload/components/uv-upload/uv-upload")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-upload/components/uv-upload/uv-upload.vue */ 348))
     },
     quickMessage: function () {
-      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 260))
+      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 262))
     },
   }
 } catch (e) {
@@ -230,6 +230,13 @@ var _default = {
     };
   },
   methods: {
+    // 图片大小超出限制
+    overSize: function overSize() {
+      this.$refs.message.show({
+        type: 'error',
+        msg: '图片超过3MB大小'
+      });
+    },
     uploadFilePromise: function uploadFilePromise(url) {
       var _this = this;
       return new Promise(function (resolve, reject) {
@@ -257,11 +264,11 @@ var _default = {
     // 新增图片
     afterRead: function afterRead(event) {
       var _this2 = this;
-      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-        var lists, fileListLen, i, result, item;
-        return _regenerator.default.wrap(function _callee$(_context) {
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
+        var lists, fileListLen, _loop, i;
+        return _regenerator.default.wrap(function _callee2$(_context2) {
           while (1) {
-            switch (_context.prev = _context.next) {
+            switch (_context2.prev = _context2.next) {
               case 0:
                 // 当设置 multiple 为 true 时, file 为数组格式，否则为对象格式
                 lists = [].concat(event.file);
@@ -272,41 +279,64 @@ var _default = {
                     message: '上传中'
                   }));
                 });
-                i = 0;
-              case 4:
-                if (!(i < lists.length)) {
-                  _context.next = 14;
-                  break;
+                console.log(_this2.fileList1);
+                _loop = function _loop(i) {
+                  console.log('还没有调用上传方法', lists);
+                  uni.compressImage({
+                    src: lists[i].url,
+                    quality: 70,
+                    success: function () {
+                      var _success = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(res) {
+                        var result, item;
+                        return _regenerator.default.wrap(function _callee$(_context) {
+                          while (1) {
+                            switch (_context.prev = _context.next) {
+                              case 0:
+                                console.log(res.tempFilePath);
+                                console.log('压缩完成了');
+                                lists[i].url = res.tempFilePath;
+                                _context.next = 5;
+                                return _this2.uploadFilePromise(lists[i].url);
+                              case 5:
+                                result = _context.sent;
+                                item = _this2["fileList".concat(event.name)][fileListLen];
+                                if (result == 400) {
+                                  _this2["fileList".concat(event.name)].splice(fileListLen, 1, Object.assign(item, {
+                                    status: 'failed',
+                                    message: '请重新上传',
+                                    url: result
+                                  }));
+                                } else {
+                                  _this2["fileList".concat(event.name)].splice(fileListLen, 1, Object.assign(item, {
+                                    status: 'success',
+                                    message: '',
+                                    url: result
+                                  }));
+                                }
+                                fileListLen++;
+                              case 9:
+                              case "end":
+                                return _context.stop();
+                            }
+                          }
+                        }, _callee);
+                      }));
+                      function success(_x) {
+                        return _success.apply(this, arguments);
+                      }
+                      return success;
+                    }()
+                  });
+                };
+                for (i = 0; i < lists.length; i++) {
+                  _loop(i);
                 }
-                _context.next = 7;
-                return _this2.uploadFilePromise(lists[i].url);
-              case 7:
-                result = _context.sent;
-                item = _this2["fileList".concat(event.name)][fileListLen];
-                if (result == 400) {
-                  _this2["fileList".concat(event.name)].splice(fileListLen, 1, Object.assign(item, {
-                    status: 'failed',
-                    message: '请重新上传',
-                    url: result
-                  }));
-                } else {
-                  _this2["fileList".concat(event.name)].splice(fileListLen, 1, Object.assign(item, {
-                    status: 'success',
-                    message: '',
-                    url: result
-                  }));
-                }
-                fileListLen++;
-              case 11:
-                i++;
-                _context.next = 4;
-                break;
-              case 14:
+              case 6:
               case "end":
-                return _context.stop();
+                return _context2.stop();
             }
           }
-        }, _callee);
+        }, _callee2);
       }))();
     },
     // 删除图片

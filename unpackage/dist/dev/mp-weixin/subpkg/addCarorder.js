@@ -101,37 +101,34 @@ var components
 try {
   components = {
     uniCard: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 317))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 319))
     },
     uLine: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-line/u-line */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-line/u-line")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-line/u-line.vue */ 356))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-line/u-line */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-line/u-line")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-line/u-line.vue */ 358))
     },
     uvDatetimePicker: function () {
-      return Promise.all(/*! import() | uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker.vue */ 364))
+      return Promise.all(/*! import() | uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker.vue */ 366))
     },
     uvPicker: function () {
-      return Promise.all(/*! import() | uni_modules/uv-picker/components/uv-picker/uv-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-picker/components/uv-picker/uv-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-picker/components/uv-picker/uv-picker.vue */ 371))
-    },
-    uniEasyinput: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput */ "uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput.vue */ 379))
+      return Promise.all(/*! import() | uni_modules/uv-picker/components/uv-picker/uv-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-picker/components/uv-picker/uv-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-picker/components/uv-picker/uv-picker.vue */ 373))
     },
     uvUpload: function () {
-      return Promise.all(/*! import() | uni_modules/uv-upload/components/uv-upload/uv-upload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-upload/components/uv-upload/uv-upload")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-upload/components/uv-upload/uv-upload.vue */ 346))
+      return Promise.all(/*! import() | uni_modules/uv-upload/components/uv-upload/uv-upload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-upload/components/uv-upload/uv-upload")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-upload/components/uv-upload/uv-upload.vue */ 348))
     },
     uvCheckboxGroup: function () {
-      return Promise.all(/*! import() | uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group.vue */ 386))
+      return Promise.all(/*! import() | uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group.vue */ 388))
     },
     uvCheckbox: function () {
-      return Promise.all(/*! import() | uni_modules/uv-checkbox/components/uv-checkbox/uv-checkbox */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-checkbox/components/uv-checkbox/uv-checkbox")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-checkbox/components/uv-checkbox/uv-checkbox.vue */ 394))
+      return Promise.all(/*! import() | uni_modules/uv-checkbox/components/uv-checkbox/uv-checkbox */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-checkbox/components/uv-checkbox/uv-checkbox")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-checkbox/components/uv-checkbox/uv-checkbox.vue */ 396))
     },
     uniSection: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 331))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 333))
     },
     quickMessage: function () {
-      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 260))
+      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 262))
     },
     zeroLoading: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/zero-loading/components/zero-loading/zero-loading */ "uni_modules/zero-loading/components/zero-loading/zero-loading").then(__webpack_require__.bind(null, /*! @/uni_modules/zero-loading/components/zero-loading/zero-loading.vue */ 281))
+      return __webpack_require__.e(/*! import() | uni_modules/zero-loading/components/zero-loading/zero-loading */ "uni_modules/zero-loading/components/zero-loading/zero-loading").then(__webpack_require__.bind(null, /*! @/uni_modules/zero-loading/components/zero-loading/zero-loading.vue */ 283))
     },
   }
 } catch (e) {
@@ -338,9 +335,20 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 //
 //
 //
+//
+//
+
+function getYearLastMillisecondTimestamp() {
+  var now = new Date();
+  var year = now.getFullYear();
+  var lastSecond = new Date(year, 11, 31, 23, 59, 59, 999); // 设置时间为年末最后1秒
+  // 获取该时刻对应的毫秒级时间戳
+  return lastSecond.getTime();
+}
 var _default = {
   data: function data() {
     return {
+      endDate: getYearLastMillisecondTimestamp(),
       resWximg: '',
       isUploadWximg: false,
       fileList1: [],
@@ -366,9 +374,11 @@ var _default = {
       wechatError: false,
       phoneError: false,
       phoneErrorMessage: '手机号不能为空或格式不正确',
-      wechatErrorMsg: ''
+      wechatErrorMsg: '',
+      afterAdd: true //防止多次点击添加
     };
   },
+
   computed: {
     isValid: function isValid() {
       return this.wechatAccount !== '' || this.isValidPhoneNumber;
@@ -377,6 +387,9 @@ var _default = {
       // return this.wechatAccount.trim() == '' && this.phoneNumber.trim() == '';
       return this.wechatAccount.trim() == '' && !this.isUploadWximg;
     }
+  },
+  onLoad: function onLoad() {
+    console.log(this.endDate);
   },
   watch: {
     phoneNumber: function phoneNumber(newval, oldval) {
@@ -407,6 +420,7 @@ var _default = {
       if (this.fileList1.length >= 1) return;
       this.$refs.uploadWxImgRef.chooseFile();
     },
+    //上传方法
     uploadFilePromise: function uploadFilePromise(url) {
       var _this = this;
       return new Promise(function (resolve, reject) {
@@ -432,14 +446,21 @@ var _default = {
         });
       });
     },
+    // 图片大小超出限制
+    overSize: function overSize() {
+      this.$refs.message.show({
+        type: 'error',
+        msg: '图片超过3MB大小'
+      });
+    },
     // 新增图片
     afterRead: function afterRead(event) {
       var _this2 = this;
-      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-        var lists, fileListLen, i, result, item;
-        return _regenerator.default.wrap(function _callee$(_context) {
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
+        var lists, fileListLen, _loop, i;
+        return _regenerator.default.wrap(function _callee2$(_context2) {
           while (1) {
-            switch (_context.prev = _context.next) {
+            switch (_context2.prev = _context2.next) {
               case 0:
                 // 当设置 multiple 为 true 时, file 为数组格式，否则为对象格式
                 lists = [].concat(event.file);
@@ -451,41 +472,63 @@ var _default = {
                   }));
                 });
                 console.log(_this2.fileList1);
-                i = 0;
-              case 5:
-                if (!(i < lists.length)) {
-                  _context.next = 15;
-                  break;
+                _loop = function _loop(i) {
+                  console.log('还没有调用上传方法', lists);
+                  uni.compressImage({
+                    src: lists[i].url,
+                    quality: 70,
+                    success: function () {
+                      var _success = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(res) {
+                        var result, item;
+                        return _regenerator.default.wrap(function _callee$(_context) {
+                          while (1) {
+                            switch (_context.prev = _context.next) {
+                              case 0:
+                                console.log(res.tempFilePath);
+                                console.log('压缩完成了');
+                                lists[i].url = res.tempFilePath;
+                                _context.next = 5;
+                                return _this2.uploadFilePromise(lists[i].url);
+                              case 5:
+                                result = _context.sent;
+                                item = _this2["fileList".concat(event.name)][fileListLen];
+                                if (result == 400) {
+                                  _this2["fileList".concat(event.name)].splice(fileListLen, 1, Object.assign(item, {
+                                    status: 'failed',
+                                    message: '请重新上传',
+                                    url: result
+                                  }));
+                                } else {
+                                  _this2["fileList".concat(event.name)].splice(fileListLen, 1, Object.assign(item, {
+                                    status: 'success',
+                                    message: '',
+                                    url: result
+                                  }));
+                                }
+                                fileListLen++;
+                              case 9:
+                              case "end":
+                                return _context.stop();
+                            }
+                          }
+                        }, _callee);
+                      }));
+                      function success(_x) {
+                        return _success.apply(this, arguments);
+                      }
+                      return success;
+                    }()
+                  });
+                };
+                for (i = 0; i < lists.length; i++) {
+                  _loop(i);
                 }
-                _context.next = 8;
-                return _this2.uploadFilePromise(lists[i].url);
-              case 8:
-                result = _context.sent;
-                item = _this2["fileList".concat(event.name)][fileListLen];
-                if (result == 400) {
-                  _this2["fileList".concat(event.name)].splice(fileListLen, 1, Object.assign(item, {
-                    status: 'failed',
-                    message: '请重新上传',
-                    url: result
-                  }));
-                } else {
-                  _this2["fileList".concat(event.name)].splice(fileListLen, 1, Object.assign(item, {
-                    status: 'success',
-                    message: '',
-                    url: result
-                  }));
-                }
-                fileListLen++;
-              case 12:
-                i++;
-                _context.next = 5;
-                break;
-              case 15:
+              case 6:
               case "end":
-                return _context.stop();
+                return _context2.stop();
             }
           }
-        }, _callee);
+        }, _callee2);
       }))();
     },
     // 删除图片
@@ -520,6 +563,7 @@ var _default = {
       }).then(function (res) {
         _this3.isLoading = false;
         if (res.code !== 200) {
+          _this3.afterAdd = true;
           _this3.$refs.message.show({
             type: 'error',
             msg: '发布拼车失败 请稍候重试吧'
@@ -533,7 +577,14 @@ var _default = {
         setTimeout(function () {
           uni.$emit('addUpdate');
           uni.navigateBack();
-        }, 1000);
+        }, 500);
+      }).catch(function (err) {
+        _this3.afterAdd = true;
+        _this3.isLoading = false;
+        _this3.$refs.message.show({
+          type: 'error',
+          msg: '网络开了点小差,请稍候重试吧'
+        });
       });
     },
     clickAddOrder: function clickAddOrder() {
@@ -541,6 +592,8 @@ var _default = {
       var isWriteResult = this.isWrite();
       console.log('isWriteResult', isWriteResult);
       if (!isWriteResult) return;
+      if (!this.afterAdd) return;
+      this.afterAdd = false;
       uni.requestSubscribeMessage({
         tmplIds: ['R0HVPNJRywpmvaA5xO6YWFfjLdGqcjWPB0-rqRkmkbk'],
         success: function success(res) {

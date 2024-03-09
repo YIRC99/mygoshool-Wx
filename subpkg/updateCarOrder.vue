@@ -29,7 +29,7 @@
         <view class="" v-if="currentOrder.startdatetime != ''">{{currentOrder.startdatetime | fromStartDateTime}}</view>
         <image src="/static/rihgt_black.png" style="width: 30rpx; height: 30rpx; position: absolute; right: 40rpx;"
           mode=""></image>
-        <uv-datetime-picker ref="startDatetimePicker" :minDate="StartTimeValue" :formatter="formatter"
+        <uv-datetime-picker :maxDate="endDate" ref="startDatetimePicker" :minDate="StartTimeValue" :formatter="formatter"
           v-model="StartTimeValue" mode="datetime" @confirm="startConfirm">
         </uv-datetime-picker>
       </view>
@@ -51,14 +51,14 @@
         <uv-picker ref="lackPicker" :columns="columns" @confirm="lackConfirm"></uv-picker>
       </view>
 
-      <view class="input-container">
+  <!--    <view class="input-container">
         <image src="../static/weixin.png" class="myicon" mode=""></image>
         <view class="input-container-right">
           <uni-easyinput v-model="currentOrder.wechataccount" maxlength="30" :inputBorder="false" placeholder="输入微信号"
             type="text" placeholderStyle="font-size: 34rpx;" :class="{'error': wechatError}" />
           <text v-if="wechatError" class="error-message">{{wechatErrorMsg}}</text>
         </view>
-      </view>
+      </view> -->
 
       <view class="uploadWxImg" @click="clickUploadImgM">
         <view class="" style="display: flex; align-items: center;">
@@ -66,13 +66,15 @@
           <view class="">点击上传微信二维码图片</view>
         </view>
         <view class="">
-          <uv-upload ref="uploadWxImgRef" :fileList="fileList1" name="1" multiple :maxCount="1" @afterRead="afterRead"
+          <uv-upload ref="uploadWxImgRef" :fileList="fileList1"
+            @oversize="overSize" maxSize="4,493,897"
+           name="1" multiple :maxCount="1" @afterRead="afterRead"
             @delete="deletePic" width="100rpx" height="100rpx" :previewFullImage="true"></uv-upload>
         </view>
       </view>
 
-      <view class="" style="padding-left: 70rpx; color: #F4AB12;" v-if="isTips">
-        *微信号和图片只需一个即可</view>
+     <!-- <view class="" style="padding-left: 70rpx; color: #F4AB12;" v-if="isTips">
+        *微信号和图片只需一个即可</view> -->
 
       <view class="choseTimeDifference">
         <view class="choseTimeDifference-item">
@@ -125,9 +127,17 @@
 </template>
 
 <script>
+  function getYearLastMillisecondTimestamp() {
+    var now = new Date();
+    var year = now.getFullYear();
+    var lastSecond = new Date(year, 11, 31, 23, 59, 59, 999); // 设置时间为年末最后1秒
+    // 获取该时刻对应的毫秒级时间戳
+    return lastSecond.getTime();
+  }
   export default {
     data() {
       return {
+         endDate: getYearLastMillisecondTimestamp(),
         QRttp: 'http://192.168.192.210:33088/common/download?path=QRcode&name=',
         isUploadWximg: true,
         isLoading: false,
@@ -155,7 +165,8 @@
           beforetime: '',
           aftertime: '',
           remark: ''
-        }
+        },
+         afterAdd: true, //防止多次点击添加
       };
     },
     computed: {
@@ -167,14 +178,14 @@
       }
     },
     filters:{
-      fromStartDateTime(value){
-        const startDateTime = value;
-        const indexT = startDateTime.indexOf('T');
-        const indexColon = startDateTime.lastIndexOf(':');
-        const newDateTime = startDateTime.slice(0, indexT) + ' ' + startDateTime.slice(indexT + 1, indexColon);
-        console.log('filter ',newDateTime);
-        return newDateTime
-      }
+      // fromStartDateTime(value){
+      //   const startDateTime = value;
+      //   const indexT = startDateTime.indexOf('T');
+      //   const indexColon = startDateTime.lastIndexOf(':');
+      //   const newDateTime = startDateTime.slice(0, indexT) + ' ' + startDateTime.slice(indexT + 1, indexColon);
+      //   console.log('filter ',newDateTime);
+      //   return newDateTime
+      // }
     },
     watch: {
       'currentOrder.wechataccount': {
@@ -225,6 +236,8 @@
         const isWriteResult = this.isWrite()
         console.log('isWriteResult', isWriteResult);
         if (!isWriteResult) return
+        if(!this.afterAdd) return
+        this.afterAdd = false
         console.log(this.currentOrder);
         this.isLoading = true
         this.post({
@@ -233,6 +246,7 @@
         }).then(res => {
           this.isLoading = false
           if (res.code !== 200) {
+             this.afterAdd = true
             this.$refs.message.show({
               type: 'error',
               msg: '修改订单失败, 请稍候重试吧',
@@ -247,6 +261,7 @@
             uni.navigateBack()
           },1000)
         }).catch(err => {
+           this.afterAdd = true
           this.isLoading = false
           this.$refs.message.show({
             type: 'error',
@@ -284,6 +299,13 @@
           });
         })
       },
+      // 图片大小超出限制
+      overSize(){
+        this.$refs.message.show({
+          type: 'error', 
+          msg: '图片超过3MB大小', 
+        })
+      },
       // 新增图片
       async afterRead(event) {
         // 当设置 multiple 为 true 时, file 为数组格式，否则为对象格式
@@ -298,25 +320,38 @@
         })
         console.log(this.fileList1);
         for (let i = 0; i < lists.length; i++) {
-          const result = await this.uploadFilePromise(lists[i].url)
-          let item = this[`fileList${event.name}`][fileListLen]
-          if (result == 400) {
-            this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
-              status: 'failed',
-              message: '请重新上传',
-              url: result
-            }))
-          } else {
-            this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
-              status: 'success',
-              message: '',
-              url: result
-            }))
-          }
-          fileListLen++
+          console.log('还没有调用上传方法',lists);
+          uni.compressImage({
+            src: lists[i].url,
+            quality: 70,
+           success: async res => {
+              console.log(res.tempFilePath)
+              console.log('压缩完成了');
+              lists[i].url = res.tempFilePath
+              const result = await this.uploadFilePromise(lists[i].url)
+              let item = this[`fileList${event.name}`][fileListLen]
+              
+              if (result == 400) {
+                this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
+                  status: 'failed',
+                  message: '请重新上传',
+                  url: result
+                }))
+              } else {
+                this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
+                  status: 'success',
+                  message: '',
+                  url: result
+                }))
+              }
+              fileListLen++
+              
+            }
+          })
+          
         }
-
-
+      
+      
       },
       // 删除图片
       deletePic(event) {

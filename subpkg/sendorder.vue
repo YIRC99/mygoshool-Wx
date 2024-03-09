@@ -6,7 +6,7 @@
 
     <view class="" v-show="current == 0">
       <view class="" v-if="orderList.length == 0" style="padding-top: 200rpx;">
-        <u-empty text="暂时没有拼车订单 快快接受一个吧 (๑>؂<๑）" mode="order"></u-empty>
+        <u-empty text="暂时没有拼车订单 快快发布一个吧 (๑>؂<๑）" mode="order"></u-empty>
       </view>
 
       <uni-card class="mycard" v-for="(item,index) in orderList" :key="index" @click="clickCard(item)">
@@ -46,10 +46,10 @@
             </view>
             <view class="top-box">
               <view class="left">
-                <image :src="avahttp + userinfo.avatar" mode=""></image>
+                <image :src="avahttp + currentOrder.receiveUserInfo.avatar" mode=""></image>
               </view>
               <view class="middle">
-                <view class="" style="line-height: 50rpx;">用户名称: {{userinfo.username}}</view>
+                <view class="" style="line-height: 50rpx;">用户名称: {{currentOrder.receiveUserInfo.username}}</view>
                 <view class="" style="line-height: 50rpx; display: flex; align-items: center; ">
                   <view class="" style="margin-right: 20rpx;">微信二维码图片</view>
                 </view>
@@ -302,9 +302,6 @@
               item.statusText = '已过期'
               item.statusTag = 'info'
             }
-
-
-
           })
 
         }).catch(err => {

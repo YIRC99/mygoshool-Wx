@@ -98,6 +98,20 @@ Vue.prototype.post =(opt) =>{
 	})
 }
 
+Vue.filter('fromStartDateTime', (value) => {
+  const startDateTime = value;
+  const indexT = startDateTime.indexOf('T');
+  const indexColon = startDateTime.lastIndexOf(':');
+  const newDateTime = startDateTime.slice(0, indexT) + ' ' + startDateTime.slice(indexT + 1, indexColon);
+  console.log('filter ',newDateTime);
+  return newDateTime
+})
+
+
+
+
+
+
 
 // main.js
 import uvUI from '@/uni_modules/uv-ui-tools'

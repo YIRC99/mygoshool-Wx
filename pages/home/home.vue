@@ -127,7 +127,7 @@
     </scroll-view>
 
     <uv-popup ref="popup" mode="bottom" round="50rpx" @maskClick="closePopup">
-      <view class="popup-box">
+      <view class="popup-box" >
         <scroll-view scroll-y="true" style="height: 62vh; background-color: #ffffff;" show-scrollbar="true">
           <view class="top-box">
             <view class="left">
@@ -143,8 +143,8 @@
           </view>
           <view class="my-middle-box">
             <uni-section title="出发地点" type="line" titleFontSize="36rpx">
-              <template v-slot:right>
-                出发时间 {{currentOrder.startdatetime}}
+              <template v-slot:right v-if="currentOrder.startdatetime != ''">
+                出发时间 {{currentOrder.startdatetime | fromStartDateTime}}
               </template>
             </uni-section>
             <view class="my-text-box">
@@ -223,8 +223,10 @@
           <view class="" style="margin-right: 20rpx;">点击上传微信二维码图片</view>
         </view>
         <view class="">
-          <uv-upload ref="uploadWxImgRef" :fileList="fileList1" name="1" multiple :maxCount="1" @afterRead="afterRead"
-            @delete="deletePic" width="100rpx" height="100rpx" :previewFullImage="true"></uv-upload>
+          <uv-upload accept="image"  ref="uploadWxImgRef" :fileList="fileList1" 
+          name="1" multiple :maxCount="1" @afterRead="afterRead"
+            @delete="deletePic" @oversize="overSize" maxSize="4,493,897" :useBeforeRead="true" 
+            width="100rpx" height="100rpx" :previewFullImage="true"></uv-upload>
         </view>
       </view>
     </uv-modal>
@@ -276,7 +278,8 @@
           phonenumber: '',
           wechataccount: '',
           orderid: '',
-          wechatImg: ''
+          wechatImg: '',
+          startdatetime: ''
         },
         pageNum: 1,
         pageSize: 5,
@@ -308,6 +311,13 @@
       clickUploadImgM() {
         if (this.fileList1.length >= 1) return
         this.$refs.uploadWxImgRef.chooseFile()
+      },
+      // 图片大小超出限制
+      overSize(){
+        this.$refs.message.show({
+          type: 'error', 
+          msg: '图片超过3MB大小', 
+        })
       },
       //上传图片
       uploadFilePromise(url) {
@@ -348,26 +358,35 @@
         })
         console.log(this.fileList1);
         for (let i = 0; i < lists.length; i++) {
-          const result = await this.uploadFilePromise(lists[i].url)
-          let item = this[`fileList${event.name}`][fileListLen]
-
-          console.log('result', result);
-          console.log('item', item);
-          console.log('this[1]', this[1]);
-          if (result == 400) {
-            this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
-              status: 'failed',
-              message: '请重新上传',
-              url: result
-            }))
-          } else {
-            this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
-              status: 'success',
-              message: '',
-              url: result
-            }))
-          }
-          fileListLen++
+          console.log('还没有调用上传方法',lists);
+          uni.compressImage({
+            src: lists[i].url,
+            quality: 70,
+           success: async res => {
+              console.log(res.tempFilePath)
+              console.log('压缩完成了');
+              lists[i].url = res.tempFilePath
+              const result = await this.uploadFilePromise(lists[i].url)
+              let item = this[`fileList${event.name}`][fileListLen]
+              
+              if (result == 400) {
+                this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
+                  status: 'failed',
+                  message: '请重新上传',
+                  url: result
+                }))
+              } else {
+                this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
+                  status: 'success',
+                  message: '',
+                  url: result
+                }))
+              }
+              fileListLen++
+              
+            }
+          })
+          
         }
 
 
