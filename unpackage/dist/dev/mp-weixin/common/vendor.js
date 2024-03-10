@@ -25068,8 +25068,71 @@ exports.default = _default2;
 /***/ }),
 /* 379 */,
 /* 380 */,
-/* 381 */,
-/* 382 */,
+/* 381 */
+/*!********************************************!*\
+  !*** F:/CodeFile/pingCar/mixins/upload.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var mixin = {
+  data: function data() {
+    return {
+      name: '初始名字：张三',
+      mixinMsg: 'mixinMsg'
+    };
+  },
+  methods: {
+    // 获取mixin中的msg
+    getMixinMsg: function getMixinMsg() {
+      console.log('我是mixin.js中的getmsg方法，mixinmsg的数据是' + this.mixinMsg);
+    },
+    // 获取home中的homeMsg
+    getHomeMsg: function getHomeMsg() {
+      console.log('我是mixin.js中的getHomeMsg方法，HomeMsg的数据是' + this.homeMsg);
+    }
+  },
+  created: function created() {
+    console.log('在mixin中vue的data、生命周期、方法等都可以使用');
+  }
+};
+var _default = mixin;
+exports.default = _default;
+
+/***/ }),
+/* 382 */
+/*!*******************************************!*\
+  !*** F:/CodeFile/pingCar/mixins/mixin.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var mixin = {
+  data: function data() {
+    return {
+      avahttp: 'http://192.168.192.210:33088/common/download?path=avatar&name=',
+      QRttp: 'http://192.168.192.210:33088/common/download?path=QRcode&name='
+    };
+  }
+};
+var _default = mixin;
+exports.default = _default;
+
+/***/ }),
 /* 383 */,
 /* 384 */,
 /* 385 */,

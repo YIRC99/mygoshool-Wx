@@ -230,20 +230,18 @@
         </view>
       </view>
     </uv-modal>
-
   </view>
 </template>
 
 <script>
+  import upload from '@/mixins/upload.js'
+  import mixin from '@/mixins/mixin.js'
   export default {
     data() {
       return {
         resWximg: '',
         fileList1: [],
-        QRttp: 'http://192.168.192.210:33088/common/download?path=QRcode&name=',
         isLoading: false,
-        // avahttp: this.avahttp,
-        avahttp: 'http://192.168.192.210:33088/common/download?path=avatar&name=',
         oneRefresh: false, // 页面是否有过第一次刷新
         isRefresh: false,
         popupShow: false,
@@ -286,6 +284,7 @@
         pagetotal: 0,
       };
     },
+    mixins:[upload,mixin],
     methods: {
       confirmWxImg(){
         if (this.fileList1.length == 0){

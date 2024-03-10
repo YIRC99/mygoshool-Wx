@@ -52,16 +52,17 @@
 
 <script>
   import mylist from '@/components/mylist/mylist.vue'
+  import mixin from '@/mixins/mixin.js'
   export default {
     components: {
       mylist
     },
+    mixins:[mixin],
     data() {
       return {
         isLogin: false,
         info: {},
         isLoading: false,
-        avahttp: 'http://192.168.192.210:33088/common/download?path=avatar&name=', 
       };
     },
     methods: {

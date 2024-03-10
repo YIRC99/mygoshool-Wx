@@ -166,10 +166,12 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {
 
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var _mixin = _interopRequireDefault(__webpack_require__(/*! @/mixins/mixin.js */ 382));
 //
 //
 //
@@ -225,12 +227,10 @@ var _default = {
         avatar: '',
         username: ''
       },
-      isloding: false,
-      avahttp: this.avahttp
-      // avahttp: 'http://127.0.0.1:33088/avatar/download/',
+      isloding: false
     };
   },
-
+  mixins: [_mixin.default],
   methods: {
     myblur: function myblur(e) {
       var _this2 = this;

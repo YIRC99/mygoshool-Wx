@@ -127,6 +127,7 @@
 </template>
 
 <script>
+   import mixin from '@/mixins/mixin.js'
   function getYearLastMillisecondTimestamp() {
     var now = new Date();
     var year = now.getFullYear();
@@ -135,10 +136,10 @@
     return lastSecond.getTime();
   }
   export default {
+     mixins:[mixin],
     data() {
       return {
-         endDate: getYearLastMillisecondTimestamp(),
-        QRttp: 'http://192.168.192.210:33088/common/download?path=QRcode&name=',
+        endDate: getYearLastMillisecondTimestamp(),
         isUploadWximg: true,
         isLoading: false,
         isPageLoding: true,

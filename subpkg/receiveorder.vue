@@ -129,13 +129,12 @@
 </template>
 
 <script>
+  import mixin from '@/mixins/mixin.js'
   export default {
     data() {
       return {
         isLoading: false,
         appriseText: '',
-        avahttp: 'http://192.168.192.210:33088/common/download?path=avatar&name=',
-        QRttp: 'http://192.168.192.210:33088/common/download?path=QRcode&name=',
         list: [{
           name: '拼车'
         }, {
@@ -161,6 +160,7 @@
         clickCurrentListIndex: ''
       }
     },
+     mixins:[mixin],
     methods: {
       getUserReOrder() {
         this.post({

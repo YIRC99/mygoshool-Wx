@@ -47,6 +47,7 @@
 </template>
 
 <script>
+   import mixin from '@/mixins/mixin.js'
   export default {
     data() {
       return {
@@ -55,10 +56,9 @@
           username: '',
         },
         isloding: false,
-        avahttp: this.avahttp,
-        // avahttp: 'http://127.0.0.1:33088/avatar/download/',
       };
     },
+    mixins:[mixin],
     methods: {
       myblur(e) {
         let _this = this

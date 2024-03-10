@@ -212,10 +212,12 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {
 
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var _mixin = _interopRequireDefault(__webpack_require__(/*! @/mixins/mixin.js */ 382));
 //
 //
 //
@@ -351,8 +353,6 @@ var _default = {
     return {
       isLoading: false,
       appriseText: '',
-      avahttp: 'http://192.168.192.210:33088/common/download?path=avatar&name=',
-      QRttp: 'http://192.168.192.210:33088/common/download?path=QRcode&name=',
       list: [{
         name: '拼车'
       }, {
@@ -378,6 +378,7 @@ var _default = {
       clickCurrentListIndex: ''
     };
   },
+  mixins: [_mixin.default],
   methods: {
     getUserReOrder: function getUserReOrder() {
       var _this = this;

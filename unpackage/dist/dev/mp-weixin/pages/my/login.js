@@ -147,10 +147,12 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni, wx) {
 
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var _mixin = _interopRequireDefault(__webpack_require__(/*! @/mixins/mixin.js */ 382));
 var mylist = function mylist() {
   __webpack_require__.e(/*! require.ensure | components/mylist/mylist */ "components/mylist/mylist").then((function () {
     return resolve(__webpack_require__(/*! @/components/mylist/mylist.vue */ 276));
@@ -160,12 +162,12 @@ var _default = {
   components: {
     mylist: mylist
   },
+  mixins: [_mixin.default],
   data: function data() {
     return {
       isLogin: false,
       info: {},
-      isLoading: false,
-      avahttp: 'http://192.168.192.210:33088/common/download?path=avatar&name='
+      isLoading: false
     };
   },
   methods: {
