@@ -85,6 +85,14 @@
             "navigationBarTitleText" : "",
             "enablePullDownRefresh" : false
           }
+        },
+        {
+          "path" : "userinfo",
+          "style" : 
+          {
+            "navigationBarTitleText" : "用户信息",
+            "enablePullDownRefresh" : false
+          }
         }
       ]
     }

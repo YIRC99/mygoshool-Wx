@@ -365,7 +365,7 @@
 					}
 
 					&__text {
-						font-size: 15px;
+						font-size: 38rpx;
 						color: $uv-content-color;
 
 						&--disabled {

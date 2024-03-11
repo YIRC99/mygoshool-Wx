@@ -1,13 +1,6 @@
 <template>
   <view class="page">
 
-    <view class="" style="background-color: #fff; padding-bottom: 5rpx;">
-      <view class="" class="u-line-2 mynative">
-        <text>社区公告</text>
-        {{noticeText}}
-      </view>
-    </view>
-
     <view class="mytable">
       <u-tabs :list="list" style="background-color: #F6F5F6;" :height="160" :font-size="40" :is-scroll="false"
         bar-height="60" bar-width="400" :current="currentIndex" @change="change">
@@ -234,7 +227,6 @@
 </template>
 
 <script>
-  import upload from '@/mixins/upload.js'
   import mixin from '@/mixins/mixin.js'
   export default {
     data() {
@@ -245,7 +237,6 @@
         oneRefresh: false, // 页面是否有过第一次刷新
         isRefresh: false,
         popupShow: false,
-        noticeText: '编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。',
         list: [{
           name: '濂溪校区',
           time: '',
@@ -284,7 +275,7 @@
         pagetotal: 0,
       };
     },
-    mixins:[upload,mixin],
+    mixins:[mixin],
     methods: {
       confirmWxImg(){
         if (this.fileList1.length == 0){
@@ -684,6 +675,7 @@
   .receivePopup-box-img {
     border: 1px solid #ebebeb;
     border-radius: 30rpx;
+    overflow: hidden;
   }
 
   .mytable {
@@ -929,7 +921,6 @@
       .my-icon {
         width: 50rpx;
         height: 50rpx;
-        // padding-right: 15rpx;
       }
     }
 
@@ -955,19 +946,5 @@
     font-size: 40rpx !important;
   }
 
-  .mynative {
-    background-color: #FFF6D7;
-    border-radius: 10rpx;
-    margin: 20rpx;
-    padding: 5rpx 10rpx;
-    font-size: 30rpx;
 
-    text {
-      font-weight: bold;
-      color: #B07F29;
-      font-size: 33rpx;
-      padding: 0 10rpx;
-      font-style: italic;
-    }
-  }
 </style>

@@ -1,9 +1,15 @@
 <template>
-  <view>
-    <uv-upload accept="image"  ref="uploadWxImgRef" :fileList="fileList1"
-    name="1" multiple :maxCount="1" @afterRead="afterRead"
-      @delete="deletePic" @oversize="overSize" maxSize="4,493,897" :useBeforeRead="true" 
-      width="100rpx" height="100rpx" :previewFullImage="true"></uv-upload>
+  <view class="uploadWxImg" @click="clickUploadImgM">
+    <view class="" style="display: flex; align-items: center;">
+      <image src="@/static/weixin.png" class="myicon" mode=""></image>
+      <view class="" style="margin-right: 20rpx;">点击上传微信二维码图片</view>
+    </view>
+    <view class="">
+      <uv-upload accept="image"  ref="uploadWxImgRef" :fileList="fileList1" 
+      name="1" multiple :maxCount="1" @afterRead="afterRead"
+        @delete="deletePic" @oversize="overSize" maxSize="4,493,897" :useBeforeRead="true" 
+        width="100rpx" height="100rpx" :previewFullImage="true"></uv-upload>
+    </view>
   </view>
 </template>
 
@@ -16,6 +22,13 @@
       };
     },
     methods:{
+      fileList1Empty(){
+        this.fileList1 = []
+      },
+      clickUploadImgM() {
+        if (this.fileList1.length >= 1) return
+        this.$refs.uploadWxImgRef.chooseFile()
+      },
       // 图片大小超出限制
       overSize(){
         this.$refs.message.show({
@@ -105,5 +118,11 @@
 </script>
 
 <style lang="scss">
-
+.uploadWxImg {
+    display: flex;
+    align-items: center;
+    padding: 15rpx 0;
+    justify-content: space-between;
+    font-size: 32rpx;
+  }
 </style>

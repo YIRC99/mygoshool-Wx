@@ -29,7 +29,7 @@
         <view class="" v-if="currentOrder.startdatetime != ''">{{currentOrder.startdatetime | fromStartDateTime}}</view>
         <image src="/static/rihgt_black.png" style="width: 30rpx; height: 30rpx; position: absolute; right: 40rpx;"
           mode=""></image>
-        <uv-datetime-picker :maxDate="endDate" ref="startDatetimePicker" :minDate="StartTimeValue" :formatter="formatter"
+        <uv-datetime-picker :maxDate="endDate" ref="startDatetimePicker" :minDate="MinStartTimeValue" :formatter="formatter"
           v-model="StartTimeValue" mode="datetime" @confirm="startConfirm">
         </uv-datetime-picker>
       </view>
@@ -148,6 +148,7 @@
           ['1', '2', '3']
         ],
         StartTimeValue: Number(new Date()),
+        MinStartTimeValue: Number(new Date()),
         wechatError: false,
         phoneError: false,
         phoneErrorMessage: '手机号不能为空或格式不正确',

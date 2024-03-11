@@ -22526,7 +22526,32 @@ uni.addInterceptor({
 /* 194 */,
 /* 195 */,
 /* 196 */,
-/* 197 */,
+/* 197 */
+/*!*******************************************!*\
+  !*** F:/CodeFile/pingCar/mixins/mixin.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var mixin = {
+  data: function data() {
+    return {
+      avahttp: 'http://192.168.192.210:33088/common/download?path=avatar&name=',
+      QRttp: 'http://192.168.192.210:33088/common/download?path=QRcode&name='
+    };
+  }
+};
+var _default = mixin;
+exports.default = _default;
+
+/***/ }),
 /* 198 */,
 /* 199 */,
 /* 200 */,
@@ -22537,7 +22562,8 @@ uni.addInterceptor({
 /* 205 */,
 /* 206 */,
 /* 207 */,
-/* 208 */
+/* 208 */,
+/* 209 */
 /*!***********************************************!*\
   !*** F:/CodeFile/pingCar/static/carIcon2.png ***!
   \***********************************************/
@@ -22547,7 +22573,7 @@ uni.addInterceptor({
 module.exports = "data:image/png;base64,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"
 
 /***/ }),
-/* 209 */
+/* 210 */
 /*!*************************************************!*\
   !*** F:/CodeFile/pingCar/static/notice (3).png ***!
   \*************************************************/
@@ -22557,7 +22583,6 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADD
 module.exports = "data:image/png;base64,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"
 
 /***/ }),
-/* 210 */,
 /* 211 */,
 /* 212 */,
 /* 213 */,
@@ -22642,7 +22667,8 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADD
 /* 292 */,
 /* 293 */,
 /* 294 */,
-/* 295 */
+/* 295 */,
+/* 296 */
 /*!****************************************************************************!*\
   !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-tabs/props.js ***!
   \****************************************************************************/
@@ -22724,14 +22750,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 296 */,
 /* 297 */,
 /* 298 */,
 /* 299 */,
 /* 300 */,
 /* 301 */,
 /* 302 */,
-/* 303 */
+/* 303 */,
+/* 304 */
 /*!************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-calendars/components/uv-calendars/util.js ***!
   \************************************************************************************/
@@ -22749,7 +22775,7 @@ exports.default = void 0;
 var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
 var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23));
 var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ 24));
-var _calendar = _interopRequireDefault(__webpack_require__(/*! ./calendar.js */ 304));
+var _calendar = _interopRequireDefault(__webpack_require__(/*! ./calendar.js */ 305));
 var Calendar = /*#__PURE__*/function () {
   function Calendar() {
     var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
@@ -23241,7 +23267,7 @@ var _default = Calendar;
 exports.default = _default;
 
 /***/ }),
-/* 304 */
+/* 305 */
 /*!****************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-calendars/components/uv-calendars/calendar.js ***!
   \****************************************************************************************/
@@ -23758,7 +23784,7 @@ var _default = calendar;
 exports.default = _default;
 
 /***/ }),
-/* 305 */
+/* 306 */
 /*!******************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-calendars/components/uv-calendars/i18n/index.js ***!
   \******************************************************************************************/
@@ -23773,9 +23799,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 306));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 307));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 308));
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 307));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 308));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 309));
 var _default = {
   en: _en.default,
   'zh-Hans': _zhHans.default,
@@ -23784,7 +23810,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 306 */
+/* 307 */
 /*!*****************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-calendars/components/uv-calendars/i18n/en.json ***!
   \*****************************************************************************************/
@@ -23794,7 +23820,7 @@ exports.default = _default;
 module.exports = JSON.parse("{\"uv-calender.ok\":\"ok\",\"uv-calender.cancel\":\"cancel\",\"uv-calender.today\":\"today\",\"uv-calender.MON\":\"MON\",\"uv-calender.TUE\":\"TUE\",\"uv-calender.WED\":\"WED\",\"uv-calender.THU\":\"THU\",\"uv-calender.FRI\":\"FRI\",\"uv-calender.SAT\":\"SAT\",\"uv-calender.SUN\":\"SUN\"}");
 
 /***/ }),
-/* 307 */
+/* 308 */
 /*!**********************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-calendars/components/uv-calendars/i18n/zh-Hans.json ***!
   \**********************************************************************************************/
@@ -23804,7 +23830,7 @@ module.exports = JSON.parse("{\"uv-calender.ok\":\"ok\",\"uv-calender.cancel\":\
 module.exports = JSON.parse("{\"uv-calender.ok\":\"确定\",\"uv-calender.cancel\":\"取消\",\"uv-calender.today\":\"今日\",\"uv-calender.SUN\":\"日\",\"uv-calender.MON\":\"一\",\"uv-calender.TUE\":\"二\",\"uv-calender.WED\":\"三\",\"uv-calender.THU\":\"四\",\"uv-calender.FRI\":\"五\",\"uv-calender.SAT\":\"六\"}");
 
 /***/ }),
-/* 308 */
+/* 309 */
 /*!**********************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-calendars/components/uv-calendars/i18n/zh-Hant.json ***!
   \**********************************************************************************************/
@@ -23814,14 +23840,14 @@ module.exports = JSON.parse("{\"uv-calender.ok\":\"确定\",\"uv-calender.cancel
 module.exports = JSON.parse("{\"uv-calender.ok\":\"確定\",\"uv-calender.cancel\":\"取消\",\"uv-calender.today\":\"今日\",\"uv-calender.SUN\":\"日\",\"uv-calender.MON\":\"一\",\"uv-calender.TUE\":\"二\",\"uv-calender.WED\":\"三\",\"uv-calender.THU\":\"四\",\"uv-calender.FRI\":\"五\",\"uv-calender.SAT\":\"六\"}");
 
 /***/ }),
-/* 309 */,
 /* 310 */,
 /* 311 */,
 /* 312 */,
 /* 313 */,
 /* 314 */,
 /* 315 */,
-/* 316 */
+/* 316 */,
+/* 317 */
 /*!*****************************************************************************!*\
   !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-empty/props.js ***!
   \*****************************************************************************/
@@ -23898,7 +23924,6 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 317 */,
 /* 318 */,
 /* 319 */,
 /* 320 */,
@@ -23926,7 +23951,8 @@ exports.default = _default;
 /* 342 */,
 /* 343 */,
 /* 344 */,
-/* 345 */
+/* 345 */,
+/* 346 */
 /*!*****************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-modal/components/uv-modal/props.js ***!
   \*****************************************************************************/
@@ -24038,14 +24064,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 346 */,
 /* 347 */,
 /* 348 */,
 /* 349 */,
 /* 350 */,
 /* 351 */,
 /* 352 */,
-/* 353 */
+/* 353 */,
+/* 354 */
 /*!*******************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-upload/components/uv-upload/utils.js ***!
   \*******************************************************************************/
@@ -24189,7 +24215,7 @@ function chooseFile(_ref) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"]))
 
 /***/ }),
-/* 354 */
+/* 355 */
 /*!*******************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-upload/components/uv-upload/mixin.js ***!
   \*******************************************************************************/
@@ -24217,7 +24243,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 355 */
+/* 356 */
 /*!*******************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-upload/components/uv-upload/props.js ***!
   \*******************************************************************************/
@@ -24375,14 +24401,14 @@ exports.default = _default2;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 356 */,
 /* 357 */,
 /* 358 */,
 /* 359 */,
 /* 360 */,
 /* 361 */,
 /* 362 */,
-/* 363 */
+/* 363 */,
+/* 364 */
 /*!****************************************************************************!*\
   !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-line/props.js ***!
   \****************************************************************************/
@@ -24433,14 +24459,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 364 */,
 /* 365 */,
 /* 366 */,
 /* 367 */,
 /* 368 */,
 /* 369 */,
 /* 370 */,
-/* 371 */
+/* 371 */,
+/* 372 */
 /*!*************************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-datetime-picker/components/uv-datetime-picker/props.js ***!
   \*************************************************************************************************/
@@ -24592,7 +24618,7 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 372 */
+/* 373 */
 /*!**********************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/util/dayjs.js ***!
   \**********************************************************************/
@@ -24940,12 +24966,12 @@ var _default = require_dayjs_min();
 exports.default = _default;
 
 /***/ }),
-/* 373 */,
 /* 374 */,
 /* 375 */,
 /* 376 */,
 /* 377 */,
-/* 378 */
+/* 378 */,
+/* 379 */
 /*!*******************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-picker/components/uv-picker/props.js ***!
   \*******************************************************************************/
@@ -25066,84 +25092,14 @@ exports.default = _default2;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 379 */,
 /* 380 */,
-/* 381 */
-/*!********************************************!*\
-  !*** F:/CodeFile/pingCar/mixins/upload.js ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var mixin = {
-  data: function data() {
-    return {
-      name: '初始名字：张三',
-      mixinMsg: 'mixinMsg'
-    };
-  },
-  methods: {
-    // 获取mixin中的msg
-    getMixinMsg: function getMixinMsg() {
-      console.log('我是mixin.js中的getmsg方法，mixinmsg的数据是' + this.mixinMsg);
-    },
-    // 获取home中的homeMsg
-    getHomeMsg: function getHomeMsg() {
-      console.log('我是mixin.js中的getHomeMsg方法，HomeMsg的数据是' + this.homeMsg);
-    }
-  },
-  created: function created() {
-    console.log('在mixin中vue的data、生命周期、方法等都可以使用');
-  }
-};
-var _default = mixin;
-exports.default = _default;
-
-/***/ }),
-/* 382 */
-/*!*******************************************!*\
-  !*** F:/CodeFile/pingCar/mixins/mixin.js ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var mixin = {
-  data: function data() {
-    return {
-      avahttp: 'http://192.168.192.210:33088/common/download?path=avatar&name=',
-      QRttp: 'http://192.168.192.210:33088/common/download?path=QRcode&name='
-    };
-  }
-};
-var _default = mixin;
-exports.default = _default;
-
-/***/ }),
+/* 381 */,
+/* 382 */,
 /* 383 */,
 /* 384 */,
 /* 385 */,
 /* 386 */,
-/* 387 */,
-/* 388 */,
-/* 389 */,
-/* 390 */,
-/* 391 */,
-/* 392 */,
-/* 393 */
+/* 387 */
 /*!*****************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-checkbox/components/uv-checkbox-group/props.js ***!
   \*****************************************************************************************/
@@ -25253,14 +25209,14 @@ exports.default = _default2;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
+/* 388 */,
+/* 389 */,
+/* 390 */,
+/* 391 */,
+/* 392 */,
+/* 393 */,
 /* 394 */,
-/* 395 */,
-/* 396 */,
-/* 397 */,
-/* 398 */,
-/* 399 */,
-/* 400 */,
-/* 401 */
+/* 395 */
 /*!***********************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-checkbox/components/uv-checkbox/props.js ***!
   \***********************************************************************************/
@@ -25352,14 +25308,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
+/* 396 */,
+/* 397 */,
+/* 398 */,
+/* 399 */,
+/* 400 */,
+/* 401 */,
 /* 402 */,
-/* 403 */,
-/* 404 */,
-/* 405 */,
-/* 406 */,
-/* 407 */,
-/* 408 */,
-/* 409 */
+/* 403 */
 /*!***************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-tags/components/uv-tags/props.js ***!
   \***************************************************************************/
@@ -25476,14 +25432,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
+/* 404 */,
+/* 405 */,
+/* 406 */,
+/* 407 */,
+/* 408 */,
+/* 409 */,
 /* 410 */,
-/* 411 */,
-/* 412 */,
-/* 413 */,
-/* 414 */,
-/* 415 */,
-/* 416 */,
-/* 417 */
+/* 411 */
 /*!***********************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-textarea/components/uv-textarea/props.js ***!
   \***********************************************************************************/
@@ -25643,14 +25599,14 @@ exports.default = _default2;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
+/* 412 */,
+/* 413 */,
+/* 414 */,
+/* 415 */,
+/* 416 */,
+/* 417 */,
 /* 418 */,
-/* 419 */,
-/* 420 */,
-/* 421 */,
-/* 422 */,
-/* 423 */,
-/* 424 */,
-/* 425 */
+/* 419 */
 /*!*******************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-loading-page/components/uv-loading-page/props.js ***!
   \*******************************************************************************************/
@@ -25727,6 +25683,12 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
+/* 420 */,
+/* 421 */,
+/* 422 */,
+/* 423 */,
+/* 424 */,
+/* 425 */,
 /* 426 */,
 /* 427 */,
 /* 428 */,
@@ -25735,13 +25697,7 @@ exports.default = _default;
 /* 431 */,
 /* 432 */,
 /* 433 */,
-/* 434 */,
-/* 435 */,
-/* 436 */,
-/* 437 */,
-/* 438 */,
-/* 439 */,
-/* 440 */
+/* 434 */
 /*!*****************************************************************************!*\
   !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-badge/props.js ***!
   \*****************************************************************************/
@@ -25831,14 +25787,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
+/* 435 */,
+/* 436 */,
+/* 437 */,
+/* 438 */,
+/* 439 */,
+/* 440 */,
 /* 441 */,
-/* 442 */,
-/* 443 */,
-/* 444 */,
-/* 445 */,
-/* 446 */,
-/* 447 */,
-/* 448 */
+/* 442 */
 /*!*********************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-toolbar/components/uv-toolbar/props.js ***!
   \*********************************************************************************/
@@ -25900,6 +25856,12 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
+/* 443 */,
+/* 444 */,
+/* 445 */,
+/* 446 */,
+/* 447 */,
+/* 448 */,
 /* 449 */,
 /* 450 */,
 /* 451 */,
@@ -25908,13 +25870,7 @@ exports.default = _default;
 /* 454 */,
 /* 455 */,
 /* 456 */,
-/* 457 */,
-/* 458 */,
-/* 459 */,
-/* 460 */,
-/* 461 */,
-/* 462 */,
-/* 463 */
+/* 457 */
 /*!****************************************************************************!*\
   !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-icon/icons.js ***!
   \****************************************************************************/
@@ -26145,7 +26101,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 464 */
+/* 458 */
 /*!****************************************************************************!*\
   !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-icon/props.js ***!
   \****************************************************************************/
@@ -26252,14 +26208,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
+/* 459 */,
+/* 460 */,
+/* 461 */,
+/* 462 */,
+/* 463 */,
+/* 464 */,
 /* 465 */,
-/* 466 */,
-/* 467 */,
-/* 468 */,
-/* 469 */,
-/* 470 */,
-/* 471 */,
-/* 472 */
+/* 466 */
 /*!*********************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-overlay/components/uv-overlay/props.js ***!
   \*********************************************************************************/
@@ -26306,14 +26262,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
+/* 467 */,
+/* 468 */,
+/* 469 */,
+/* 470 */,
+/* 471 */,
+/* 472 */,
 /* 473 */,
-/* 474 */,
-/* 475 */,
-/* 476 */,
-/* 477 */,
-/* 478 */,
-/* 479 */,
-/* 480 */
+/* 474 */
 /*!*************************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-transition/components/uv-transition/createAnimation.js ***!
   \*************************************************************************************************/
@@ -26447,12 +26403,12 @@ function createAnimation(option, _this) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 481 */,
-/* 482 */,
-/* 483 */,
-/* 484 */,
-/* 485 */,
-/* 486 */
+/* 475 */,
+/* 476 */,
+/* 477 */,
+/* 478 */,
+/* 479 */,
+/* 480 */
 /*!***************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-status-bar/components/uv-status-bar/props.js ***!
   \***************************************************************************************/
@@ -26477,6 +26433,12 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
+/* 481 */,
+/* 482 */,
+/* 483 */,
+/* 484 */,
+/* 485 */,
+/* 486 */,
 /* 487 */,
 /* 488 */,
 /* 489 */,
@@ -26485,13 +26447,7 @@ exports.default = _default;
 /* 492 */,
 /* 493 */,
 /* 494 */,
-/* 495 */,
-/* 496 */,
-/* 497 */,
-/* 498 */,
-/* 499 */,
-/* 500 */,
-/* 501 */
+/* 495 */
 /*!***************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-icon/components/uv-icon/icons.js ***!
   \***************************************************************************/
@@ -26668,7 +26624,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 502 */
+/* 496 */
 /*!***************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-icon/components/uv-icon/props.js ***!
   \***************************************************************************/
@@ -26780,14 +26736,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
+/* 497 */,
+/* 498 */,
+/* 499 */,
+/* 500 */,
+/* 501 */,
+/* 502 */,
 /* 503 */,
-/* 504 */,
-/* 505 */,
-/* 506 */,
-/* 507 */,
-/* 508 */,
-/* 509 */,
-/* 510 */
+/* 504 */
 /*!***************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-line/components/uv-line/props.js ***!
   \***************************************************************************/
@@ -26843,14 +26799,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
+/* 505 */,
+/* 506 */,
+/* 507 */,
+/* 508 */,
+/* 509 */,
+/* 510 */,
 /* 511 */,
-/* 512 */,
-/* 513 */,
-/* 514 */,
-/* 515 */,
-/* 516 */,
-/* 517 */,
-/* 518 */
+/* 512 */
 /*!*******************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-loading-icon/components/uv-loading-icon/props.js ***!
   \*******************************************************************************************/
@@ -26936,6 +26892,582 @@ var _default2 = {
   }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.loadingIcon)
 };
 exports.default = _default2;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 513 */,
+/* 514 */,
+/* 515 */,
+/* 516 */,
+/* 517 */,
+/* 518 */,
+/* 519 */,
+/* 520 */,
+/* 521 */,
+/* 522 */,
+/* 523 */,
+/* 524 */,
+/* 525 */,
+/* 526 */,
+/* 527 */,
+/* 528 */,
+/* 529 */,
+/* 530 */,
+/* 531 */,
+/* 532 */,
+/* 533 */,
+/* 534 */,
+/* 535 */,
+/* 536 */,
+/* 537 */,
+/* 538 */,
+/* 539 */,
+/* 540 */,
+/* 541 */,
+/* 542 */,
+/* 543 */,
+/* 544 */,
+/* 545 */,
+/* 546 */,
+/* 547 */,
+/* 548 */,
+/* 549 */,
+/* 550 */,
+/* 551 */,
+/* 552 */,
+/* 553 */,
+/* 554 */,
+/* 555 */,
+/* 556 */,
+/* 557 */,
+/* 558 */,
+/* 559 */,
+/* 560 */,
+/* 561 */,
+/* 562 */,
+/* 563 */,
+/* 564 */,
+/* 565 */,
+/* 566 */,
+/* 567 */,
+/* 568 */,
+/* 569 */,
+/* 570 */,
+/* 571 */,
+/* 572 */,
+/* 573 */,
+/* 574 */,
+/* 575 */,
+/* 576 */,
+/* 577 */
+/*!**************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/ws-wx-privacy/components/ws-wx-privacy/util.js ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getComponent = getComponent;
+exports.getContext = getContext;
+/**
+ * 获取当前页面上下文
+ * @returns 页面对象
+ */
+function getContext() {
+  // eslint-disable-next-line no-undef
+  var pages = getCurrentPages();
+  return pages[pages.length - 1];
+}
+
+/**
+ * 获取上下文中指定节点组件
+ * @param context 选择器的选择范围，可以传入自定义组件的 this 作为上下文
+ * @param selector 自定义节点选择器
+ */
+function getComponent(context, selector) {
+  var component = null;
+  component = context.selectComponent && context.selectComponent(selector) && context.selectComponent(selector).$vm;
+  return component;
+}
+
+/***/ }),
+/* 578 */,
+/* 579 */,
+/* 580 */,
+/* 581 */,
+/* 582 */,
+/* 583 */,
+/* 584 */,
+/* 585 */,
+/* 586 */,
+/* 587 */,
+/* 588 */,
+/* 589 */,
+/* 590 */,
+/* 591 */,
+/* 592 */
+/*!***************************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uni-transition/components/uni-transition/createAnimation.js ***!
+  \***************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.createAnimation = createAnimation;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23));
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ 24));
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+// const defaultOption = {
+// 	duration: 300,
+// 	timingFunction: 'linear',
+// 	delay: 0,
+// 	transformOrigin: '50% 50% 0'
+// }
+var MPAnimation = /*#__PURE__*/function () {
+  function MPAnimation(options, _this) {
+    (0, _classCallCheck2.default)(this, MPAnimation);
+    this.options = options;
+    // 在iOS10+QQ小程序平台下，传给原生的对象一定是个普通对象而不是Proxy对象，否则会报parameter should be Object instead of ProxyObject的错误
+    this.animation = uni.createAnimation(_objectSpread({}, options));
+    this.currentStepAnimates = {};
+    this.next = 0;
+    this.$ = _this;
+  }
+  (0, _createClass2.default)(MPAnimation, [{
+    key: "_nvuePushAnimates",
+    value: function _nvuePushAnimates(type, args) {
+      var aniObj = this.currentStepAnimates[this.next];
+      var styles = {};
+      if (!aniObj) {
+        styles = {
+          styles: {},
+          config: {}
+        };
+      } else {
+        styles = aniObj;
+      }
+      if (animateTypes1.includes(type)) {
+        if (!styles.styles.transform) {
+          styles.styles.transform = '';
+        }
+        var unit = '';
+        if (type === 'rotate') {
+          unit = 'deg';
+        }
+        styles.styles.transform += "".concat(type, "(").concat(args + unit, ") ");
+      } else {
+        styles.styles[type] = "".concat(args);
+      }
+      this.currentStepAnimates[this.next] = styles;
+    }
+  }, {
+    key: "_animateRun",
+    value: function _animateRun() {
+      var styles = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      var ref = this.$.$refs['ani'].ref;
+      if (!ref) return;
+      return new Promise(function (resolve, reject) {
+        nvueAnimation.transition(ref, _objectSpread({
+          styles: styles
+        }, config), function (res) {
+          resolve();
+        });
+      });
+    }
+  }, {
+    key: "_nvueNextAnimate",
+    value: function _nvueNextAnimate(animates) {
+      var _this2 = this;
+      var step = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+      var fn = arguments.length > 2 ? arguments[2] : undefined;
+      var obj = animates[step];
+      if (obj) {
+        var styles = obj.styles,
+          config = obj.config;
+        this._animateRun(styles, config).then(function () {
+          step += 1;
+          _this2._nvueNextAnimate(animates, step, fn);
+        });
+      } else {
+        this.currentStepAnimates = {};
+        typeof fn === 'function' && fn();
+        this.isEnd = true;
+      }
+    }
+  }, {
+    key: "step",
+    value: function step() {
+      var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      this.animation.step(config);
+      return this;
+    }
+  }, {
+    key: "run",
+    value: function run(fn) {
+      this.$.animationData = this.animation.export();
+      this.$.timer = setTimeout(function () {
+        typeof fn === 'function' && fn();
+      }, this.$.durationTime);
+    }
+  }]);
+  return MPAnimation;
+}();
+var animateTypes1 = ['matrix', 'matrix3d', 'rotate', 'rotate3d', 'rotateX', 'rotateY', 'rotateZ', 'scale', 'scale3d', 'scaleX', 'scaleY', 'scaleZ', 'skew', 'skewX', 'skewY', 'translate', 'translate3d', 'translateX', 'translateY', 'translateZ'];
+var animateTypes2 = ['opacity', 'backgroundColor'];
+var animateTypes3 = ['width', 'height', 'left', 'right', 'top', 'bottom'];
+animateTypes1.concat(animateTypes2, animateTypes3).forEach(function (type) {
+  MPAnimation.prototype[type] = function () {
+    var _this$animation;
+    (_this$animation = this.animation)[type].apply(_this$animation, arguments);
+    return this;
+  };
+});
+function createAnimation(option, _this) {
+  if (!_this) return;
+  clearTimeout(_this.timer);
+  return new MPAnimation(option, _this);
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 593 */,
+/* 594 */,
+/* 595 */,
+/* 596 */,
+/* 597 */,
+/* 598 */,
+/* 599 */,
+/* 600 */,
+/* 601 */,
+/* 602 */,
+/* 603 */,
+/* 604 */,
+/* 605 */,
+/* 606 */,
+/* 607 */,
+/* 608 */,
+/* 609 */,
+/* 610 */,
+/* 611 */,
+/* 612 */
+/*!*****************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-badge/components/uv-badge/props.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _uni$$uv, _uni$$uv$props;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default2 = {
+  props: _objectSpread({
+    // 是否显示圆点
+    isDot: {
+      type: Boolean,
+      default: false
+    },
+    // 显示的内容
+    value: {
+      type: [Number, String],
+      default: ''
+    },
+    // 是否显示
+    show: {
+      type: Boolean,
+      default: true
+    },
+    // 最大值，超过最大值会显示 '{max}+'
+    max: {
+      type: [Number, String],
+      default: 999
+    },
+    // 主题类型，error|warning|success|primary
+    type: {
+      type: [String, undefined, null],
+      default: 'error'
+    },
+    // 当数值为 0 时，是否展示 Badge
+    showZero: {
+      type: Boolean,
+      default: false
+    },
+    // 背景颜色，优先级比type高，如设置，type参数会失效
+    bgColor: {
+      type: [String, null],
+      default: null
+    },
+    // 字体颜色
+    color: {
+      type: [String, null],
+      default: null
+    },
+    // 徽标形状，circle-四角均为圆角，horn-左下角为直角
+    shape: {
+      type: [String, undefined, null],
+      default: 'circle'
+    },
+    // 设置数字的显示方式，overflow|ellipsis|limit
+    // overflow会根据max字段判断，超出显示`${max}+`
+    // ellipsis会根据max判断，超出显示`${max}...`
+    // limit会依据1000作为判断条件，超出1000，显示`${value/1000}K`，比如2.2k、3.34w，最多保留2位小数
+    numberType: {
+      type: [String, undefined, null],
+      default: 'overflow'
+    },
+    // 设置badge的位置偏移，格式为 [x, y]，也即设置的为top和right的值，absolute为true时有效
+    offset: {
+      type: Array,
+      default: function _default() {
+        return [];
+      }
+    },
+    // 是否反转背景和字体颜色
+    inverted: {
+      type: Boolean,
+      default: false
+    },
+    // 是否绝对定位
+    absolute: {
+      type: Boolean,
+      default: false
+    }
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.badge)
+};
+exports.default = _default2;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 613 */
+/*!***************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-tabs/components/uv-tabs/props.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _uni$$uv, _uni$$uv$props;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default2 = {
+  props: _objectSpread({
+    // 滑块的移动过渡时间，单位ms
+    duration: {
+      type: Number,
+      default: 300
+    },
+    // tabs标签数组
+    list: {
+      type: Array,
+      default: function _default() {
+        return [];
+      }
+    },
+    // 滑块颜色
+    lineColor: {
+      type: String,
+      default: '#3c9cff'
+    },
+    // 菜单选择中时的样式
+    activeStyle: {
+      type: [String, Object],
+      default: function _default() {
+        return {
+          color: '#303133'
+        };
+      }
+    },
+    // 菜单非选中时的样式
+    inactiveStyle: {
+      type: [String, Object],
+      default: function _default() {
+        return {
+          color: '#606266'
+        };
+      }
+    },
+    // 滑块长度
+    lineWidth: {
+      type: [String, Number],
+      default: 20
+    },
+    // 滑块高度
+    lineHeight: {
+      type: [String, Number],
+      default: 3
+    },
+    // 滑块背景显示大小，当滑块背景设置为图片时使用
+    lineBgSize: {
+      type: String,
+      default: 'cover'
+    },
+    // 菜单item的样式
+    itemStyle: {
+      type: [String, Object],
+      default: function _default() {
+        return {
+          height: '44px'
+        };
+      }
+    },
+    // 菜单是否可滚动
+    scrollable: {
+      type: Boolean,
+      default: true
+    },
+    // 当前选中标签的索引
+    current: {
+      type: [Number, String],
+      default: 0
+    },
+    // 默认读取的键名
+    keyName: {
+      type: String,
+      default: 'name'
+    }
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.tabs)
+};
+exports.default = _default2;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 614 */,
+/* 615 */,
+/* 616 */,
+/* 617 */,
+/* 618 */,
+/* 619 */,
+/* 620 */,
+/* 621 */,
+/* 622 */,
+/* 623 */,
+/* 624 */,
+/* 625 */,
+/* 626 */,
+/* 627 */,
+/* 628 */,
+/* 629 */,
+/* 630 */,
+/* 631 */,
+/* 632 */,
+/* 633 */,
+/* 634 */,
+/* 635 */,
+/* 636 */,
+/* 637 */,
+/* 638 */,
+/* 639 */,
+/* 640 */,
+/* 641 */,
+/* 642 */,
+/* 643 */,
+/* 644 */
+/*!*******************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-switch/components/uv-switch/props.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _uni$$uv, _uni$$uv$props;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default = {
+  props: _objectSpread({
+    value: {
+      type: [Boolean, String, Number],
+      default: false
+    },
+    modelValue: {
+      type: [Boolean, String, Number],
+      default: false
+    },
+    // 是否为加载中状态
+    loading: {
+      type: Boolean,
+      default: false
+    },
+    // 是否为禁用装填
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    // 开关尺寸，单位px
+    size: {
+      type: [String, Number],
+      default: 25
+    },
+    // 打开时的背景颜色
+    activeColor: {
+      type: String,
+      default: '#2979ff'
+    },
+    // 关闭时的背景颜色
+    inactiveColor: {
+      type: String,
+      default: '#fff'
+    },
+    // switch打开时的值
+    activeValue: {
+      type: [String, Number, Boolean],
+      default: true
+    },
+    // switch关闭时的值
+    inactiveValue: {
+      type: [String, Number, Boolean],
+      default: false
+    },
+    // 是否开启异步变更，开启后需要手动控制输入值
+    asyncChange: {
+      type: Boolean,
+      default: false
+    },
+    // 圆点与外边框的距离
+    space: {
+      type: [String, Number],
+      default: 0
+    }
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.switch)
+};
+exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ })

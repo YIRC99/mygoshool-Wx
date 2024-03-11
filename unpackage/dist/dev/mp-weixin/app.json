@@ -13,7 +13,8 @@
         "myinfo",
         "sendorder",
         "receiveorder",
-        "updateCarOrder"
+        "updateCarOrder",
+        "userinfo"
       ]
     }
   ],

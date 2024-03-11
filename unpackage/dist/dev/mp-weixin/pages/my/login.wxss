@@ -60,12 +60,12 @@
   height: 100rpx;
 }
 .top-box .middle {
+  flex: 1;
   margin-left: 30rpx;
   z-index: 99;
 }
 .top-box .right {
-  flex: 1;
-  text-align: right;
+  padding: 0 30rpx;
 }
 .top-box .right .right-img {
   margin-right: 20rpx;

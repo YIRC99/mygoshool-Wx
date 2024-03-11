@@ -26,7 +26,7 @@
             </view>
           </view>
           <view class="aaa" @click.stop="openAppraise(index)">
-            <button class="btn-grad" v-if="item.status == 1">用户评价</button>
+            <button class="btn-grad" v-if="item.receiveUserAppriseId == null && item.status != 3">用户评价</button>
           </view>
         </view>
 
@@ -100,14 +100,14 @@
             </view>
           </view>
 
-          <view class="updateAndDelete">
+          <!--          <view class="updateAndDelete">
             <view class="updateAndDelete-item">
               <button class="btn-grad-update" @click="ToUpdateCarOrder" v-show="currentOrder.status == 0">修改</button>
             </view>
             <view class="updateAndDelete-item">
               <button class="btn-grad-delete" @click="deleteOrder">删除</button>
             </view>
-          </view>
+          </view> -->
 
         </scroll-view>
       </view>
@@ -157,10 +157,11 @@
           receiveUserWechatImg: '',
         },
         clickAppriseReceiveUserId: '',
-        clickCurrentListIndex: ''
+        clickCurrentListIndex: '',
+        clickUpApprise: false,
       }
     },
-     mixins:[mixin],
+    mixins: [mixin],
     methods: {
       getUserReOrder() {
         this.post({
@@ -180,13 +181,10 @@
           this.orderList = res.data
           this.orderList.forEach(item => {
             //订单状态 0已发布  1已接收  2已完成 3已过期
-            if (item.status == 0) {
-              item.statusText = '已发布'
-              item.statusTag = 'primary'
-            } else if (item.status == 1) {
+            if (item.receiveUserAppriseId == null) {
               item.statusText = '已接收'
               item.statusTag = 'warning'
-            } else if (item.status == 2) {
+            } else if (item.receiveUserAppriseId != null) {
               item.statusText = '已完成'
               item.statusTag = 'success'
             } else if (item.status == 3) {
@@ -247,6 +245,7 @@
 
       },
       upApprise() {
+        
         if (this.appriseText == '') {
           this.$refs.message.show({
             type: 'warning',
@@ -254,47 +253,56 @@
           })
           return
         }
+        if(this.clickUpApprise)return
+        this.clickUpApprise = true
         this.isLoading = true
         let user = uni.getStorageSync('user')
         this.post({
           url: 'apprise/add',
           data: {
             createuserid: user.openid,
-            receiveuserid: this.orderList[this.clickCurrentListIndex].receiveuserid,
+            receiveuserid: this.orderList[this.clickCurrentListIndex].createuserid,
             apprisedata: this.appriseText,
             type: 1,
-            postId: this.orderList[this.clickCurrentListIndex].orderid
+            postId: this.orderList[this.clickCurrentListIndex].orderid,
+            OrderCreateUserId: this.orderList[this.clickCurrentListIndex].createuserid,
           }
         }).then(res => {
           console.log(res);
           this.isLoading = false
           if (res.code != 200) {
+            this.clickUpApprise = false
             this.$refs.message.show({
               type: 'error',
               msg: '评价失败, 请稍候再试吧',
-              iconSize: 16,
             })
             return
           }
           this.$refs.message.show({
             type: 'success',
             msg: '评价成功',
-            iconSize: 16,
           })
-
-
           setTimeout(() => {
             this.orderList[this.clickCurrentListIndex].status = 2
             this.orderList[this.clickCurrentListIndex].statusText = '已完成'
             this.orderList[this.clickCurrentListIndex].statusTag = 'success'
+            this.orderList[this.clickCurrentListIndex].receiveUserAppriseId = 'defult' // 这个值是错误的 提前填充一下而已
             this.$refs.appraisePopup.close()
           }, 500)
-
-
+        }).catch(err => {
+          console.log('home page is', err);
+          this.clickUpApprise = false
+          this.isRefresh = false
+          this.$refs.message.show({
+            type: 'error',
+            msg: '网络开了点小差,请稍候重试吧',
+          })
+          return
         })
 
       },
       emptyApprise() {
+        this.clickUpApprise = false
         this.appriseText = ''
       },
       openAppraise(receiveuserid) {
@@ -395,16 +403,10 @@
 
   }
 
-
-
-
-
-
-
-
   .appraisePopup-box {
     width: 70vw;
-    height: 300rpx;
+    // height: 300rpx;
+    height: auto;
     background-color: #ffffff;
     padding: 20rpx;
 

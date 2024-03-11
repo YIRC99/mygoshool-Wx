@@ -2,26 +2,28 @@
   <view class="page">
     <view>
       <view class="">
-        <image src="/static/back.png"
+        <image :src="avahttp + 'back.png'"
           style="width: 100%; height: 450rpx; background-size: 100%;position: absolute; z-index: -1;" mode="">
         </image>
       </view>
 
-      <view class="top-box" @click="toInfo">
-        <view class="left">
+      <view class="top-box" >
+        
+        <view class="left" @click="toUserinfo">
           <image class="left-img" v-if="isLogin" :src="avahttp + info.avatar" style="width: 100%; height: 100%;">
           </image>
           <image class="left-img" v-if="!isLogin" src="https://zhoukaiwen.com/img/loginImg/wx.png"></image>
         </view>
+        
         <view class="middle" v-if="!isLogin">
           <view class="" style="font-size: 38rpx;" @click="wxLogin">点击一键登录</view>
         </view>
         <view class="middle" v-if="isLogin">
-          <view class="" style="font-size: 38rpx;">{{info.username}}</view>
-          <!-- <view class="" style="margin: 15rpx 0; font-size: 28rpx;">ID: 1777777777</view> -->
+          <view class="" style="font-size: 38rpx;" @click="toUserinfo">{{info.username}}</view>
         </view>
-        <view class="right" v-if="isLogin">
-          <image class="right-img" src="../../static/right.png" mode=""></image>
+        
+        <view class="right" v-if="isLogin" @click="toInfo">
+          <image class="right-img" src="@/static/shezhi.png" mode=""></image>
         </view>
       </view>
 
@@ -44,7 +46,6 @@
 
     <zero-loading v-if="isLoading" type="circle" :mask="true" maskOpacity="0.1"></zero-loading>
 
-
     <quick-message ref="message"></quick-message>
 
   </view>
@@ -66,6 +67,12 @@
       };
     },
     methods: {
+      toUserinfo(){
+         if(!this.isLogin) return 
+         uni.navigateTo({
+           url: '/subpkg/userinfo?userid=' + this.info.userid
+         })
+      },
       toReceiveOrder() {
         if(!this.isLogin){
           this.$refs.message.show({
@@ -141,7 +148,6 @@
         this.$refs.message.show({
             type: 'success', //String 默认default
             msg: '登录成功', //String 显示内容 *
-            iconSize: 16, //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
         })
       },
       WxLoginFail() {
@@ -155,6 +161,12 @@
 
       //等三方微信登录
       wxLogin() {
+        // #ifdef H5
+        this.info = JSON.parse(uni.getStorageSync('user'))
+         this.WxLoginSuccess()
+        return
+        // #endif
+        
         this.isLoading = true
         console.log('调用了微信登录');
         wx.login({
@@ -176,9 +188,6 @@
           }
         })
       },
-    },
-    mounted() {
-
     },
     created() {
       uni.checkSession({
@@ -235,14 +244,13 @@
     }
 
     .middle {
+      flex: 1;
       margin-left: 30rpx;
       z-index: 99;
     }
 
     .right {
-      flex: 1;
-      text-align: right;
-
+      padding: 0 30rpx;
       .right-img {
         margin-right: 20rpx;
         width: 50rpx;
@@ -259,14 +267,6 @@
     z-index: -1;
   }
 </style>
-
-
-
-
-
-
-
-
 
 <style lang="scss">
   /deep/ .uni-easyinput__content-input {

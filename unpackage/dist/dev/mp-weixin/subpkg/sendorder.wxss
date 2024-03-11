@@ -76,7 +76,7 @@
 }
 .appraisePopup-box {
   width: 70vw;
-  height: 300rpx;
+  height: auto;
   background-color: #ffffff;
   padding: 20rpx;
 }

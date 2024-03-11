@@ -24,7 +24,7 @@
         <view class="">{{startDateTime}}</view>
         <image src="/static/rihgt_black.png" style="width: 30rpx; height: 30rpx; position: absolute; right: 40rpx;"
           mode=""></image>
-        <uv-datetime-picker :maxDate="endDate" ref="startDatetimePicker" :minDate="StartTimeValue" :formatter="formatter"
+        <uv-datetime-picker :maxDate="endDate" ref="startDatetimePicker" :minDate="MinStartTimeValue" :formatter="formatter"
           v-model="StartTimeValue" mode="datetime" @confirm="startConfirm">
         </uv-datetime-picker>
       </view>
@@ -158,6 +158,7 @@
         lackPerson: '1',
         startDateTime: '点击选择出发时间',
         StartTimeValue: Number(new Date()),
+        MinStartTimeValue: Number(new Date()),
         startAddress: '点击选择出发地点1', //这里是地址名称 
         startAddressAll: '', //这是地址全称
         endAddress: '点击选择目的地1',
@@ -273,7 +274,7 @@
               if (result == 400) {
                 this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
                   status: 'failed',
-                  message: '请重新上传',
+                  message: '请重传',
                   url: result
                 }))
               } else {
@@ -298,9 +299,7 @@
         this.isUploadWximg = false
       },
 
-
       postOrderData() {
-        
         let curUser = uni.getStorageSync('user')
         this.isLoading = true
         this.post({
