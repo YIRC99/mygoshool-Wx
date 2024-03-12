@@ -22546,6 +22546,9 @@ var mixin = {
       avahttp: 'http://192.168.192.210:33088/common/download?path=avatar&name=',
       QRttp: 'http://192.168.192.210:33088/common/download?path=QRcode&name='
     };
+  },
+  onload: function onload() {
+    console.log('我是 mixin 住建的onload ', this.http);
   }
 };
 var _default = mixin;
@@ -22679,6 +22682,7 @@ exports.getContext = getContext;
 function getContext() {
   // eslint-disable-next-line no-undef
   var pages = getCurrentPages();
+  console.log('pages', pages);
   return pages[pages.length - 1];
 }
 

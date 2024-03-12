@@ -34,6 +34,8 @@
 	// 注册监听
 	if (uni.onNeedPrivacyAuthorization) {
 		uni.onNeedPrivacyAuthorization((resolve) => {
+      console.log('privacyHandler',privacyHandler);
+      console.log('resolve',resolve);
 			if (typeof privacyHandler === 'function') {
 				privacyHandler(resolve)
 			}
@@ -137,17 +139,22 @@
 		},
 		created() {
 			privacyHandler = (resolve) => {
+        // console.log('函数变量调用了 参数是',resolve);
 				const context = getContext()
+        // console.log('context',context);
 				const privacyPopup = getComponent(context, '#privacy-popup')
+        // console.log('privacyPopup',privacyPopup);
 				if (privacyPopup) {
 					const privacy = getComponent(privacyPopup, '#privacy')
+          // console.log('privacy',privacy);
 					if (privacy && privacy.open) {
 						privacy.open()
 					}
 				}
 				privacyResolves.add(resolve)
 			}
-			if (this.enableAutoProtocol && uni.getPrivacySetting) {
+      
+      if (this.enableAutoProtocol && uni.getPrivacySetting) {
 				uni.getPrivacySetting({
 					success: res => {
 						if (res.privacyContractName) {
@@ -160,13 +167,21 @@
 			}
 		},
 		methods: {
+      // 打开隐私弹窗
+      openyinshi(){
+        privacyHandler(() => {
+          console.log('我手动调用 隐私弹窗');
+        })
+      },
+      
+      
 			/**
 			 * 打开隐私协议
 			 */
 			openPrivacyContract() {
 				wx.openPrivacyContract({
 					success: (res) => {
-						console.log('openPrivacyContract success')
+						// console.log('openPrivacyContract success')
 					},
 					fail: (res) => {
 						console.error('openPrivacyContract fail', res)

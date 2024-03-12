@@ -389,7 +389,7 @@ var _default = {
         url: '/subpkg/updateCarOrder'
       });
     },
-    deleteOrder: function deleteOrder() {
+    deleteRequest: function deleteRequest() {
       var _this = this;
       this.isLoading = true;
       uni.showLoading({});
@@ -428,8 +428,24 @@ var _default = {
         });
       });
     },
-    upApprise: function upApprise() {
+    deleteOrder: function deleteOrder() {
       var _this2 = this;
+      var title = '提示';
+      var content;
+      if (this.currentOrder.statusText == '已接受') content = '删除之后,发布者和接受者方都无法查看到数据了,确定删除嘛';else content = '确定删除嘛';
+      uni.showModal({
+        title: title,
+        content: content,
+        success: function success(res) {
+          console.log(res);
+          if (res.confirm) {
+            _this2.deleteRequest();
+          }
+        }
+      });
+    },
+    upApprise: function upApprise() {
+      var _this3 = this;
       if (this.appriseText == '') {
         this.$refs.message.show({
           type: 'warning',
@@ -453,32 +469,32 @@ var _default = {
         }
       }).then(function (res) {
         console.log(res);
-        _this2.isLoading = false;
+        _this3.isLoading = false;
         if (res.code != 200) {
-          _this2.clickUpApprise = false;
-          _this2.$refs.message.show({
+          _this3.clickUpApprise = false;
+          _this3.$refs.message.show({
             type: 'error',
             msg: '评价失败, 请稍候再试吧'
           });
           return;
         }
-        _this2.$refs.message.show({
+        _this3.$refs.message.show({
           type: 'success',
           msg: '评价成功',
           iconSize: 16
         });
         setTimeout(function () {
-          _this2.orderList[_this2.clickCurrentListIndex].status = 2;
-          _this2.orderList[_this2.clickCurrentListIndex].statusText = '已完成';
-          _this2.orderList[_this2.clickCurrentListIndex].statusTag = 'success';
-          _this2.orderList[_this2.clickCurrentListIndex].createUserAppriseId = 'defult'; // 这个值是错误的 提前填充一下而已
-          _this2.$refs.appraisePopup.close();
+          _this3.orderList[_this3.clickCurrentListIndex].status = 2;
+          _this3.orderList[_this3.clickCurrentListIndex].statusText = '已完成';
+          _this3.orderList[_this3.clickCurrentListIndex].statusTag = 'success';
+          _this3.orderList[_this3.clickCurrentListIndex].createUserAppriseId = 'defult'; // 这个值是错误的 提前填充一下而已
+          _this3.$refs.appraisePopup.close();
         }, 500);
       }).catch(function (err) {
         console.log('home page is', err);
-        _this2.clickUpApprise = false;
-        _this2.isRefresh = false;
-        _this2.$refs.message.show({
+        _this3.clickUpApprise = false;
+        _this3.isRefresh = false;
+        _this3.$refs.message.show({
           type: 'error',
           msg: '网络开了点小差,请稍候重试吧'
         });
@@ -504,7 +520,7 @@ var _default = {
       });
     },
     getUserOrder: function getUserOrder() {
-      var _this3 = this;
+      var _this4 = this;
       this.post({
         url: 'carshareorder/getbyuserid',
         data: {
@@ -513,14 +529,14 @@ var _default = {
       }).then(function (res) {
         console.log(res);
         if (res.code != 200) {
-          _this3.$refs.message.show({
+          _this4.$refs.message.show({
             type: 'error',
             msg: '请求错误 请稍候重试吧'
           });
           return;
         }
-        _this3.orderList = res.data;
-        _this3.orderList.forEach(function (item) {
+        _this4.orderList = res.data;
+        _this4.orderList.forEach(function (item) {
           if (item.status == 3) {
             item.statusText = '已过期';
             item.statusTag = 'info';
@@ -530,7 +546,7 @@ var _default = {
             item.statusTag = 'primary';
           } else if (item.receiveuserid != null && item.createUserAppriseId == null) {
             // 已经有接受用户了
-            item.statusText = '已接收';
+            item.statusText = '已接受';
             item.statusTag = 'warning';
           } else if (item.createUserAppriseId != null && item.receiveuserid != null) {
             item.statusText = '已完成';
@@ -538,7 +554,7 @@ var _default = {
           }
         });
       }).catch(function (err) {
-        _this3.$refs.message.show({
+        _this4.$refs.message.show({
           type: 'error',
           msg: '网络开了点小差,请稍候重试吧'
         });

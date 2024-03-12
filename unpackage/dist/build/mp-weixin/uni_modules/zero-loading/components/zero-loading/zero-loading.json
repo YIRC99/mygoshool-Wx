@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "loading0": "/uni_modules/zero-loading/components/zero-loading/static/loading-circle"
+  }
+}

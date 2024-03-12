@@ -1,0 +1,10 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["uni_modules/zero-loading/components/zero-loading/zero-loading"],{"0573":function(e,n,t){"use strict";t.d(n,"b",(function(){return o})),t.d(n,"c",(function(){return a})),t.d(n,"a",(function(){}));var o=function(){var e=this.$createElement;this._self._c},a=[]},"0c51":function(e,n,t){},"0cb3":function(e,n,t){"use strict";t.r(n);var o=t("0573"),a=t("d04e");for(var i in a)["default"].indexOf(i)<0&&function(e){t.d(n,e,(function(){return a[e]}))}(i);t("6c36");var u=t("f0c5"),c=Object(u["a"])(a["default"],o["b"],o["c"],!1,null,"2dd68950",null,!1,o["a"],void 0);n["default"]=c.exports},"1fa2":function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n.default=void 0;var o={name:"zero-loading",components:{loading0:function(){t.e("uni_modules/zero-loading/components/zero-loading/static/loading-circle").then(function(){return resolve(t("96ce"))}.bind(null,t)).catch(t.oe)}},props:{type:{type:String,default:"atom"},position:{type:String,default:"fixed"},zIndex:{type:Number,default:9999999},mask:{type:Boolean,default:!1},maskOpacity:{type:Number,default:.4},maskMini:{type:Boolean,default:!1},maskDark:{type:Boolean,default:!0},color:{type:String,default:"#0396FF"}},data:function(){return{}},methods:{handleClick:function(){this.$emit("click")}}};n.default=o},"6c36":function(e,n,t){"use strict";var o=t("0c51"),a=t.n(o);a.a},d04e:function(e,n,t){"use strict";t.r(n);var o=t("1fa2"),a=t.n(o);for(var i in o)["default"].indexOf(i)<0&&function(e){t.d(n,e,(function(){return o[e]}))}(i);n["default"]=a.a}}]);
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'uni_modules/zero-loading/components/zero-loading/zero-loading-create-component',
+    {
+        'uni_modules/zero-loading/components/zero-loading/zero-loading-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("0cb3"))
+        })
+    },
+    [['uni_modules/zero-loading/components/zero-loading/zero-loading-create-component']]
+]);

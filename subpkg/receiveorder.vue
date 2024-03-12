@@ -6,7 +6,7 @@
 
     <view class="" v-show="current == 0">
       <myEmppty :isShow="orderList.length == 0"></myEmppty>
-      
+
       <uni-card class="mycard" v-for="(item,index) in orderList" :key="index" @click="clickCard(item)">
         <view class="my-uv-tags">
           <view class="mycard-titile">{{subYear(item.startdatetime) + ' 出发'}}</view>
@@ -101,7 +101,7 @@
           </view>
 
           <view class="updateAndDelete">
-               <view class="updateAndDelete-item">
+            <view class="updateAndDelete-item">
               <button class="btn-grad-update" @click="ToUpdateCarOrder" v-show="false">修改</button>
             </view>
             <view class="updateAndDelete-item">
@@ -205,7 +205,7 @@
           url: '/subpkg/updateCarOrder',
         })
       },
-      deleteOrder() {
+      deleteRequest() {
         this.isLoading = true
         uni.showLoading({})
         this.post({
@@ -239,6 +239,23 @@
             type: 'error',
             msg: '网络开了点小差,请稍候重试吧',
           })
+        })
+
+      },
+      deleteOrder() {
+        let title = '提示'
+        let content
+        if (this.currentOrder.statusText == '已接受') content = '删除之后,发布者和接受者方都无法查看到数据了,确定删除嘛'
+        else content = '确定删除嘛'
+        uni.showModal({
+          title,
+          content,
+          success: res => {
+            console.log(res);
+            if (res.confirm) {
+              this.deleteRequest()
+            }
+          }
         })
 
 

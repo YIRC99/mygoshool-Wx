@@ -5,6 +5,7 @@
 export function getContext() {
 	// eslint-disable-next-line no-undef
 	const pages = getCurrentPages()
+  console.log('pages',pages);
 	return pages[pages.length - 1]
 }
 

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "建议与反馈",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "uni-section": "/uni_modules/uni-section/components/uni-section/uni-section",
+    "uv-upload": "/uni_modules/uv-upload/components/uv-upload/uv-upload",
+    "quick-message": "/components/quick-message/quick-message"
+  }
+}

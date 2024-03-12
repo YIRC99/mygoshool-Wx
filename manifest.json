@@ -55,12 +55,13 @@
             "urlCheck" : false
         },
         "usingComponents" : true,
-        "permission": {
-          "scope.userLocation": {
-            "desc": "您的位置将用于选择上下车地址"
-          }
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "您的位置将用于选择上下车地址"
+            }
         },
-        "lazyCodeLoading": "requiredComponents"
+        "lazyCodeLoading" : "requiredComponents",
+        "__usePrivacyCheck__" : true
     },
     "mp-alipay" : {
         "usingComponents" : true

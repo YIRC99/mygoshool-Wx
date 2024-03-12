@@ -169,7 +169,7 @@
           url: '/subpkg/updateCarOrder',
         })
       },
-      deleteOrder() {
+      deleteRequest(){
         this.isLoading = true
         uni.showLoading({})
         this.post({
@@ -204,9 +204,25 @@
             msg: '网络开了点小差,请稍候重试吧',
           })
         })
-
-
-
+        
+      },
+      deleteOrder() {
+        let title = '提示'
+        let content
+        if(this.currentOrder.statusText == '已接受') content = '删除之后,发布者和接受者方都无法查看到数据了,确定删除嘛'
+        else content = '确定删除嘛'
+        
+        uni.showModal({
+         title,
+         content,
+         success: res => {
+           console.log(res);
+           if(res.confirm){
+             this.deleteRequest()
+           }
+         }
+        })
+        
       },
       upApprise() {
 
@@ -312,7 +328,7 @@
               item.statusTag = 'primary'
             } else if (item.receiveuserid != null && item.createUserAppriseId == null) {
               // 已经有接受用户了
-              item.statusText = '已接收'
+              item.statusText = '已接受'
               item.statusTag = 'warning'
             } else if (item.createUserAppriseId != null && item.receiveuserid != null) {
               item.statusText = '已完成'

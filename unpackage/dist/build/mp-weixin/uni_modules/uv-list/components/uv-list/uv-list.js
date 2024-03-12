@@ -1,0 +1,10 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["uni_modules/uv-list/components/uv-list/uv-list"],{"05fd":function(t,e,n){"use strict";n.r(e);var i=n("072a"),o=n.n(i);for(var r in i)["default"].indexOf(r)<0&&function(t){n.d(e,t,(function(){return i[t]}))}(r);e["default"]=o.a},"072a":function(t,e,n){"use strict";var i=n("4ea4");Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var o=i(n("32ef")),r=i(n("e629")),u={name:"uv-list",mixins:[o.default,r.default],"mp-weixin":{options:{multipleSlots:!1}},props:{border:{type:Boolean,default:!1},borderColor:{type:String,default:"#dadbde"},direction:{type:String,default:"row"},padding:{type:[String,Number],default:"20rpx 30rpx"}},created:function(){this.firstChildAppend=!1},computed:{parentData:function(){return[this.direction,this.padding]}},methods:{loadMore:function(t){this.$emit("scrolltolower")},scroll:function(t){this.$emit("scroll",t)}}};e.default=u},"21d2":function(t,e,n){"use strict";var i=n("8d20"),o=n.n(i);o.a},"6a0e":function(t,e,n){"use strict";n.r(e);var i=n("832f"),o=n("05fd");for(var r in o)["default"].indexOf(r)<0&&function(t){n.d(e,t,(function(){return o[t]}))}(r);n("21d2");var u=n("f0c5"),a=Object(u["a"])(o["default"],i["b"],i["c"],!1,null,"242cd3fa",null,!1,i["a"],void 0);e["default"]=a.exports},"832f":function(t,e,n){"use strict";n.d(e,"b",(function(){return i})),n.d(e,"c",(function(){return o})),n.d(e,"a",(function(){}));var i=function(){var t=this.$createElement,e=(this._self._c,this.__get_style([this.$uv.addStyle(this.customStyle)]));this.$mp.data=Object.assign({},{$root:{s0:e}})},o=[]},"8d20":function(t,e,n){}}]);
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'uni_modules/uv-list/components/uv-list/uv-list-create-component',
+    {
+        'uni_modules/uv-list/components/uv-list/uv-list-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("6a0e"))
+        })
+    },
+    [['uni_modules/uv-list/components/uv-list/uv-list-create-component']]
+]);

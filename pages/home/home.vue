@@ -129,7 +129,7 @@
             <view class="middle">
               <view class="" style="line-height: 50rpx;">用户名称: {{currentOrder.createUserInfo.username}}
               </view>
-              <view class="" style="line-height: 50rpx;">拼车次数</view>
+              <!-- <view class="" style="line-height: 50rpx;">拼车次数</view> -->
             </view>
             <view class="right">
             </view>
@@ -645,10 +645,10 @@
       },
       myonshow() {
         uni.$once('addUpdate', () => {
-          console.log('监听到了 添加之后 返回页面');
+          // console.log('监听到了 添加之后 返回页面');
           this.scrollPullDown()
         })
-        console.log('拼车页面的myonshow方法触发了');
+        // console.log('拼车页面的myonshow方法触发了');
         this.simulateSwipeDown()
       },
       simulateSwipeDown() {

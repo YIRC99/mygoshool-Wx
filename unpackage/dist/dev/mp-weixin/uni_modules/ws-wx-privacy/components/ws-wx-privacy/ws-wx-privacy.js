@@ -176,6 +176,8 @@ var privacyHandler = null;
 // 注册监听
 if (uni.onNeedPrivacyAuthorization) {
   uni.onNeedPrivacyAuthorization(function (resolve) {
+    console.log('privacyHandler', privacyHandler);
+    console.log('resolve', resolve);
     if (typeof privacyHandler === 'function') {
       privacyHandler(resolve);
     }
@@ -282,10 +284,14 @@ var _default = {
   created: function created() {
     var _this = this;
     privacyHandler = function privacyHandler(resolve) {
+      // console.log('函数变量调用了 参数是',resolve);
       var context = (0, _util.getContext)();
+      // console.log('context',context);
       var privacyPopup = (0, _util.getComponent)(context, '#privacy-popup');
+      // console.log('privacyPopup',privacyPopup);
       if (privacyPopup) {
         var privacy = (0, _util.getComponent)(privacyPopup, '#privacy');
+        // console.log('privacy',privacy);
         if (privacy && privacy.open) {
           privacy.open();
         }
@@ -305,13 +311,19 @@ var _default = {
     }
   },
   methods: {
+    // 打开隐私弹窗
+    openyinshi: function openyinshi() {
+      privacyHandler(function () {
+        console.log('我手动调用 隐私弹窗');
+      });
+    },
     /**
      * 打开隐私协议
      */
     openPrivacyContract: function openPrivacyContract() {
       wx.openPrivacyContract({
         success: function success(res) {
-          console.log('openPrivacyContract success');
+          // console.log('openPrivacyContract success')
         },
         fail: function fail(res) {
           console.error('openPrivacyContract fail', res);

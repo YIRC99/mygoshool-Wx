@@ -1,0 +1,1 @@
+<view class="uv-list data-v-242cd3fa" style="{{$root.s0}}"><block wx:if="{{border}}"><view class="uv-list--border-top data-v-242cd3fa" style="{{'background-color:'+(borderColor)+';'}}"></view></block><slot></slot><block wx:if="{{border}}"><view class="uv-list--border-bottom data-v-242cd3fa" style="{{'background-color:'+(borderColor)+';'}}"></view></block></view>

@@ -676,10 +676,10 @@ var _default = {
     myonshow: function myonshow() {
       var _this6 = this;
       uni.$once('addUpdate', function () {
-        console.log('监听到了 添加之后 返回页面');
+        // console.log('监听到了 添加之后 返回页面');
         _this6.scrollPullDown();
       });
-      console.log('拼车页面的myonshow方法触发了');
+      // console.log('拼车页面的myonshow方法触发了');
       this.simulateSwipeDown();
     },
     simulateSwipeDown: function simulateSwipeDown() {

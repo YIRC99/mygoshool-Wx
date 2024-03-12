@@ -3,7 +3,7 @@
     <view class="" style="background-color: #fff; padding-bottom: 5rpx;" v-if="tabIndex != 1">
       <view class="" class="u-line-2 mynative">
         <text>社区公告</text>
-        {{noticeText}}
+        {{afficheTitle}}
       </view>
     </view>
 
@@ -13,7 +13,7 @@
     </view>
 
 
-    <ws-wx-privacy id="privacy-popup"></ws-wx-privacy>
+    <ws-wx-privacy ref="yinshi" id="privacy-popup" @agree="handleAgree" @disagree="handleDisagree" :enableAutoProtocol="true"></ws-wx-privacy>
     
     <quick-message ref="message"></quick-message>
     
@@ -39,7 +39,8 @@
     },
     data() {
       return {
-        noticeText: '编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。',
+        afficheTitle: 'mygo公告',
+        afficheText: '',
         tabIndex: 0,
         items: [{
             icon: {
@@ -107,7 +108,6 @@
           }
         })
       },
-      
       handleDisagree() {
         // 处理用户不同意隐私协议的逻辑
         console.log('处理用户不同意隐私协议的逻辑');
@@ -129,14 +129,37 @@
           })
           this.$refs.homepage.myonshow()
         }
-        console.log('tabIndex', index)
+        // console.log('tabIndex', index)
       }
     },
     mounted() {
 
     },
+    onLoad() {
+      uni.getPrivacySetting({
+        success: res => {
+          // console.log('查询隐私授权情况',res);
+          if(res.needAuthorization){
+             this.$refs.yinshi.openyinshi()
+          }
+        }
+      })
+      
+      this.get({
+        url: 'affiche'
+      }).then(res => {
+        console.log('公告获取',res);
+        if(res.code == 200){
+          this.afficheTitle = res.data.title
+          this.afficheText = res.data.text
+        }
+      })
+      
+      
+     
+    },
     onShow() {
-      console.log('index页面触发了onshow 当前的页面下标是', this.tabIndex);
+      
       this.onTab(this.tabIndex, {})
     }
   }

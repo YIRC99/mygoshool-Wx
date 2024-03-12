@@ -426,7 +426,7 @@ var _default = {
         url: '/subpkg/updateCarOrder'
       });
     },
-    deleteOrder: function deleteOrder() {
+    deleteRequest: function deleteRequest() {
       var _this2 = this;
       this.isLoading = true;
       uni.showLoading({});
@@ -465,8 +465,24 @@ var _default = {
         });
       });
     },
-    upApprise: function upApprise() {
+    deleteOrder: function deleteOrder() {
       var _this3 = this;
+      var title = '提示';
+      var content;
+      if (this.currentOrder.statusText == '已接受') content = '删除之后,发布者和接受者方都无法查看到数据了,确定删除嘛';else content = '确定删除嘛';
+      uni.showModal({
+        title: title,
+        content: content,
+        success: function success(res) {
+          console.log(res);
+          if (res.confirm) {
+            _this3.deleteRequest();
+          }
+        }
+      });
+    },
+    upApprise: function upApprise() {
+      var _this4 = this;
       if (this.appriseText == '') {
         this.$refs.message.show({
           type: 'warning',
@@ -490,31 +506,31 @@ var _default = {
         }
       }).then(function (res) {
         console.log(res);
-        _this3.isLoading = false;
+        _this4.isLoading = false;
         if (res.code != 200) {
-          _this3.clickUpApprise = false;
-          _this3.$refs.message.show({
+          _this4.clickUpApprise = false;
+          _this4.$refs.message.show({
             type: 'error',
             msg: '评价失败, 请稍候再试吧'
           });
           return;
         }
-        _this3.$refs.message.show({
+        _this4.$refs.message.show({
           type: 'success',
           msg: '评价成功'
         });
         setTimeout(function () {
-          _this3.orderList[_this3.clickCurrentListIndex].status = 2;
-          _this3.orderList[_this3.clickCurrentListIndex].statusText = '已完成';
-          _this3.orderList[_this3.clickCurrentListIndex].statusTag = 'success';
-          _this3.orderList[_this3.clickCurrentListIndex].receiveUserAppriseId = 'defult'; // 这个值是错误的 提前填充一下而已
-          _this3.$refs.appraisePopup.close();
+          _this4.orderList[_this4.clickCurrentListIndex].status = 2;
+          _this4.orderList[_this4.clickCurrentListIndex].statusText = '已完成';
+          _this4.orderList[_this4.clickCurrentListIndex].statusTag = 'success';
+          _this4.orderList[_this4.clickCurrentListIndex].receiveUserAppriseId = 'defult'; // 这个值是错误的 提前填充一下而已
+          _this4.$refs.appraisePopup.close();
         }, 500);
       }).catch(function (err) {
         console.log('home page is', err);
-        _this3.clickUpApprise = false;
-        _this3.isRefresh = false;
-        _this3.$refs.message.show({
+        _this4.clickUpApprise = false;
+        _this4.isRefresh = false;
+        _this4.$refs.message.show({
           type: 'error',
           msg: '网络开了点小差,请稍候重试吧'
         });

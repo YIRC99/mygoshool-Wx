@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "登录",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "mylist": "/components/mylist/mylist",
+    "zero-loading": "/uni_modules/zero-loading/components/zero-loading/zero-loading",
+    "quick-message": "/components/quick-message/quick-message"
+  }
+}

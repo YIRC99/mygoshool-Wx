@@ -43,6 +43,7 @@
 
     <zero-loading v-if="!isloding" type="circle" :mask="true" maskOpacity="0.1"></zero-loading>
     <quick-message ref="message"></quick-message>
+    <ws-wx-privacy id="privacy-popup" :enableAutoProtocol="true"></ws-wx-privacy>
   </view>
 </template>
 

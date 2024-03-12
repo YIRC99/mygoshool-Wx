@@ -183,7 +183,8 @@ var _default = {
   },
   data: function data() {
     return {
-      noticeText: '编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。编译成功。前端运行日志，请另行在小程序开发工具的控制台查看。',
+      afficheTitle: 'mygo公告',
+      afficheText: '',
       tabIndex: 0,
       items: [{
         icon: {
@@ -273,12 +274,31 @@ var _default = {
         });
         this.$refs.homepage.myonshow();
       }
-      console.log('tabIndex', index);
+      // console.log('tabIndex', index)
     }
   },
   mounted: function mounted() {},
+  onLoad: function onLoad() {
+    var _this2 = this;
+    uni.getPrivacySetting({
+      success: function success(res) {
+        // console.log('查询隐私授权情况',res);
+        if (res.needAuthorization) {
+          _this2.$refs.yinshi.openyinshi();
+        }
+      }
+    });
+    this.get({
+      url: 'affiche'
+    }).then(function (res) {
+      console.log('公告获取', res);
+      if (res.code == 200) {
+        _this2.afficheTitle = res.data.title;
+        _this2.afficheText = res.data.text;
+      }
+    });
+  },
   onShow: function onShow() {
-    console.log('index页面触发了onshow 当前的页面下标是', this.tabIndex);
     this.onTab(this.tabIndex, {});
   }
 };
@@ -1323,10 +1343,10 @@ var _default = {
     myonshow: function myonshow() {
       var _this6 = this;
       uni.$once('addUpdate', function () {
-        console.log('监听到了 添加之后 返回页面');
+        // console.log('监听到了 添加之后 返回页面');
         _this6.scrollPullDown();
       });
-      console.log('拼车页面的myonshow方法触发了');
+      // console.log('拼车页面的myonshow方法触发了');
       this.simulateSwipeDown();
     },
     simulateSwipeDown: function simulateSwipeDown() {
