@@ -5,10 +5,8 @@
       bar-height="60" bar-width="400" :current="current" @change="change"></u-tabs>
 
     <view class="" v-show="current == 0">
-      <view class="" v-if="orderList.length == 0" style="padding-top: 200rpx;">
-        <u-empty text="暂时没有拼车订单 快快发布一个吧 (๑>؂<๑）" mode="order"></u-empty>
-      </view>
-
+      <myEmppty :isShow="orderList.length == 0"></myEmppty>
+      
       <uni-card class="mycard" v-for="(item,index) in orderList" :key="index" @click="clickCard(item)">
         <view class="my-uv-tags">
           <view class="mycard-titile">{{subYear(item.startdatetime) + ' 出发'}}</view>
@@ -35,7 +33,9 @@
 
     </view>
 
-    <view class="" v-show="current == 1">11</view>
+    <view class="" v-show="current == 1">
+      <myEmppty :isShow="true" Text="订单为空"></myEmppty>
+    </view>
 
     <uv-popup ref="popup" mode="bottom" round="50rpx" @maskClick="closePopup">
       <view class="popup-box"
@@ -64,8 +64,8 @@
 
           <view class="my-middle-box">
             <uni-section title="出发地点" type="line" titleFontSize="36rpx">
-              <template v-slot:right>
-                出发时间 {{currentOrder.startdatetime}}
+              <template v-slot:right v-if="currentOrder.startdatetime != ''">
+                出发时间 {{currentOrder.startdatetime | fromStartDateTime}}
               </template>
             </uni-section>
             <view class="my-text-box">
@@ -100,14 +100,14 @@
             </view>
           </view>
 
-          <!--          <view class="updateAndDelete">
-            <view class="updateAndDelete-item">
-              <button class="btn-grad-update" @click="ToUpdateCarOrder" v-show="currentOrder.status == 0">修改</button>
+          <view class="updateAndDelete">
+               <view class="updateAndDelete-item">
+              <button class="btn-grad-update" @click="ToUpdateCarOrder" v-show="false">修改</button>
             </view>
             <view class="updateAndDelete-item">
               <button class="btn-grad-delete" @click="deleteOrder">删除</button>
             </view>
-          </view> -->
+          </view>
 
         </scroll-view>
       </view>
@@ -211,7 +211,7 @@
         this.post({
           url: 'carshareorder/delete',
           data: {
-            orderid: this.currentOrder.orderid
+            orderid: this.currentOrder.orderid,
           }
         }).then(res => {
           uni.hideLoading()
@@ -245,7 +245,7 @@
 
       },
       upApprise() {
-        
+
         if (this.appriseText == '') {
           this.$refs.message.show({
             type: 'warning',
@@ -253,7 +253,7 @@
           })
           return
         }
-        if(this.clickUpApprise)return
+        if (this.clickUpApprise) return
         this.clickUpApprise = true
         this.isLoading = true
         let user = uni.getStorageSync('user')
@@ -310,7 +310,9 @@
         this.$refs.appraisePopup.open()
       },
       clickReceiveCard() {
-        console.log(11111);
+        uni.navigateTo({
+          url: '/subpkg/userinfo?userid=' + this.currentOrder.createUserInfo.userid
+        })
       },
       clickReceiveImg() {
         let img = this.QRttp + this.currentOrder.wechatImg

@@ -5,9 +5,7 @@
       bar-height="60" bar-width="400" :current="current" @change="change"></u-tabs>
 
     <view class="" v-show="current == 0">
-      <view class="" v-if="orderList.length == 0" style="padding-top: 200rpx;">
-        <u-empty text="暂时没有拼车订单 快快发布一个吧 (๑>؂<๑）" mode="order"></u-empty>
-      </view>
+      <myEmppty :isShow="orderList.length == 0"></myEmppty>
 
       <uni-card class="mycard" v-for="(item,index) in orderList" :key="index" @click="clickCard(item)">
         <view class="my-uv-tags">
@@ -35,10 +33,13 @@
 
     </view>
 
-    <view class="" v-show="current == 1">11</view>
+    <view class="" v-show="current == 1">
+      <myEmppty :isShow="true" Text="订单为空"></myEmppty>
+    </view>
 
     <uv-popup ref="popup" mode="bottom" round="50rpx" @maskClick="closePopup">
-      <view class="popup-box" :style="(currentOrder.status == 0 || currentOrder.status == 3) == true ? 'height: 50vh' : ''">
+      <view class="popup-box"
+        :style="(currentOrder.status == 0 || currentOrder.status == 3) == true ? 'height: 50vh' : ''">
         <scroll-view scroll-y="true" style="height: 62vh; background-color: #ffffff;" show-scrollbar="true">
           <uni-card isShadow v-if="currentOrder.status != 0 && currentOrder.status != 3" @click="clickReceiveCard">
             <view class="my-tag">
@@ -61,10 +62,10 @@
             </view>
           </uni-card>
 
-          <view class="my-middle-box">
+          <view class="my-middle-box" v-if="currentOrder != null">
             <uni-section title="出发地点" type="line" titleFontSize="36rpx">
-              <template v-slot:right>
-                出发时间 {{currentOrder.startdatetime}}
+              <template v-slot:right v-if="currentOrder.startdatetime != ''">
+                出发时间 {{currentOrder.startdatetime | fromStartDateTime}}
               </template>
             </uni-section>
             <view class="my-text-box">
@@ -130,7 +131,7 @@
 <script>
   import mixin from '@/mixins/mixin.js'
   export default {
-    mixins:[mixin],
+    mixins: [mixin],
     data() {
       return {
         isLoading: false,
@@ -158,22 +159,22 @@
         },
         clickAppriseReceiveUserId: '',
         clickCurrentListIndex: '',
-         clickUpApprise: false,
+        clickUpApprise: false,
       }
     },
     methods: {
-      ToUpdateCarOrder(){
-        uni.setStorageSync('updateCarOrderId',this.currentOrder.orderid)
+      ToUpdateCarOrder() {
+        uni.setStorageSync('updateCarOrderId', this.currentOrder.orderid)
         uni.navigateTo({
           url: '/subpkg/updateCarOrder',
         })
       },
-      deleteOrder(){
+      deleteOrder() {
         this.isLoading = true
         uni.showLoading({})
         this.post({
           url: 'carshareorder/delete',
-          data:{
+          data: {
             orderid: this.currentOrder.orderid
           }
         }).then(res => {
@@ -192,23 +193,23 @@
             msg: '删除成功',
           })
           this.$refs.popup.close()
-          setTimeout(()=>{
+          setTimeout(() => {
             this.orderList = this.orderList.filter(item => item.orderid != this.currentOrder.orderid)
-          },500)
+          }, 500)
         }).catch(err => {
-           uni.hideLoading()
+          uni.hideLoading()
           this.isLoading = false
           this.$refs.message.show({
             type: 'error',
             msg: '网络开了点小差,请稍候重试吧',
           })
         })
-        
-        
-        
+
+
+
       },
       upApprise() {
-        
+
         if (this.appriseText == '') {
           this.$refs.message.show({
             type: 'warning',
@@ -216,7 +217,7 @@
           })
           return
         }
-        if(this.clickUpApprise)return
+        if (this.clickUpApprise) return
         this.clickUpApprise = true
         this.isLoading = true
         let user = uni.getStorageSync('user')
@@ -274,7 +275,9 @@
         this.$refs.appraisePopup.open()
       },
       clickReceiveCard() {
-        console.log(11111);
+        uni.navigateTo({
+          url: '/subpkg/userinfo?userid=' + this.currentOrder.receiveUserInfo.userid
+        })
       },
       clickReceiveImg() {
         let img = this.QRttp + this.currentOrder.receiveUserWechatImg
@@ -300,8 +303,10 @@
           }
           this.orderList = res.data
           this.orderList.forEach(item => {
-            //订单状态 0已发布  1已接收  2已完成 3已过期
-            if (item.createUserAppriseId == null && item.receiveuserid == null) {
+            if (item.status == 3) {
+              item.statusText = '已过期'
+              item.statusTag = 'info'
+            } else if (item.createUserAppriseId == null && item.receiveuserid == null) {
               // 自己没有评价 但是没有接受用户id
               item.statusText = '已发布'
               item.statusTag = 'primary'
@@ -312,9 +317,6 @@
             } else if (item.createUserAppriseId != null && item.receiveuserid != null) {
               item.statusText = '已完成'
               item.statusTag = 'success'
-            } else if (item.status == 3) {
-              item.statusText = '已过期'
-              item.statusTag = 'info'
             }
           })
 
@@ -330,7 +332,7 @@
       },
       clickCard(order) {
         this.currentOrder = order
-        console.log('点击了卡片',this.currentOrder);
+        console.log('点击了卡片', this.currentOrder);
         this.$refs.popup.open()
         this.popupShow = true
       },
@@ -361,8 +363,10 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+
     .updateAndDelete-item {
       width: 50%;
+
       .btn-grad-delete {
         background-image: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #FF512F 100%);
         height: 80rpx;
@@ -410,6 +414,7 @@
     }
 
   }
+
   .appraisePopup-box {
     width: 70vw;
     // height: 400rpx;

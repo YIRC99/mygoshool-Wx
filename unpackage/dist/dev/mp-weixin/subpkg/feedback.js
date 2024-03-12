@@ -101,13 +101,13 @@ var components
 try {
   components = {
     uniSection: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 334))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 352))
     },
     uvUpload: function () {
-      return Promise.all(/*! import() | uni_modules/uv-upload/components/uv-upload/uv-upload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-upload/components/uv-upload/uv-upload")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-upload/components/uv-upload/uv-upload.vue */ 349))
+      return Promise.all(/*! import() | uni_modules/uv-upload/components/uv-upload/uv-upload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-upload/components/uv-upload/uv-upload")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-upload/components/uv-upload/uv-upload.vue */ 367))
     },
     quickMessage: function () {
-      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 263))
+      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 273))
     },
   }
 } catch (e) {

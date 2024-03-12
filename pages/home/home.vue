@@ -7,18 +7,18 @@
       </u-tabs>
       <view class="mytable-rili" @click="openCalendars">
         <image class="mytable-rili-img" src="../../static/rili.png" mode=""></image>
-        <view class="mytable-rili-text" v-show="list[currentIndex].time != ''">{{list[currentIndex].time}}
+        <view class="mytable-rili-text" v-show="list[currentIndex].time != ''" >{{list[currentIndex].time}}
         </view>
+        
       </view>
     </view>
-
     <uv-calendars title="选择日期" ref="calendars" @close="cancelCalendars" @confirm="chooseDateConfirm" />
 
     <scroll-view scroll-y="true" style="height: 75vh; " :refresher-triggered="isRefresh" @scrolltolower="scrollDown"
       @refresherrefresh="scrollPullDown" refresher-enabled>
 
       <view class="" v-show="currentIndex == 0">
-        <u-empty text="暂时没有拼车订单 快快发布一个吧 (๑>؂<๑）" v-if="newSchoolList.length == 0" mode="order"></u-empty>
+         <myEmppty :isShow="newSchoolList.length == 0" Text="暂时没有拼车订单 快快发布一个吧"></myEmppty>
         <uni-card v-for="(item,index) in newSchoolList" :key="index" :title="subYear(item.startdatetime) + ' 出发'"
           :thumbnail='avahttp + item.createUserInfo.avatar' @click="clickCard(item)">
           <view class="my-car-box">
@@ -52,7 +52,7 @@
       </view>
 
       <view class="" v-show="currentIndex == 1">
-        <u-empty text="暂时没有拼车订单 快快发布一个吧 (๑>؂<๑）" v-if="oldSchoolList.length == 0" mode="order"></u-empty>
+        <myEmppty :isShow="oldSchoolList.length == 0" Text="暂时没有拼车订单 快快发布一个吧"></myEmppty>
         <uni-card v-for="(item,index) in oldSchoolList" :key="index" :title="subYear(item.startdatetime) + ' 出发'"
           :thumbnail='avahttp + item.createUserInfo.avatar' @click="clickCard(item)">
           <view class="my-car-box">
@@ -85,7 +85,7 @@
       </view>
 
       <view class="" v-show="currentIndex == 2">
-        <u-empty text="暂时没有拼车订单 快快发布一个吧 (๑>؂<๑）" v-if="otherAddressList.length == 0" mode="order"></u-empty>
+        <myEmppty :isShow="otherAddressList.length == 0" Text="暂时没有拼车订单 快快发布一个吧"></myEmppty>
         <uni-card v-for="(item,index) in otherAddressList" :key="index" :title="subYear(item.startdatetime) + ' 出发'"
           :thumbnail='avahttp + item.createUserInfo.avatar' @click="clickCard(item)">
           <view class="my-car-box">
@@ -122,7 +122,7 @@
     <uv-popup ref="popup" mode="bottom" round="50rpx" @maskClick="closePopup">
       <view class="popup-box" >
         <scroll-view scroll-y="true" style="height: 62vh; background-color: #ffffff;" show-scrollbar="true">
-          <view class="top-box">
+          <view class="top-box" @click="ToUserInfo">
             <view class="left">
               <image :src="avahttp + currentOrder.createUserInfo.avatar" mode=""></image>
             </view>
@@ -172,7 +172,7 @@
             </view>
           </view>
           <view class="down-box">
-            <button class="btn-grad" @click="showUploadWxImg">接受拼车</button>
+            <button class="btn-grad" v-show="info.openid != currentOrder.createuserid" @click="showUploadWxImg">接受拼车</button>
           </view>
         </scroll-view>
       </view>
@@ -273,10 +273,20 @@
         pageNum: 1,
         pageSize: 5,
         pagetotal: 0,
+        info: {}
       };
+    },
+    created() {
+      this.info = uni.getStorageSync('user')
     },
     mixins:[mixin],
     methods: {
+      ToUserInfo(){
+        console.log('点击了 个人信息');
+        uni.navigateTo({
+          url: '/subpkg/userinfo?userid=' + this.currentOrder.createUserInfo.userid
+        })
+      },
       confirmWxImg(){
         if (this.fileList1.length == 0){
           this.$refs.message.show({
@@ -420,9 +430,12 @@
       chooseDateConfirm(e) {
         console.log(e.fulldate);
         this.list[this.currentIndex].time = e.fulldate
+        console.log('this.list[this.currentIndex].time',this.list[this.currentIndex].time);
+        console.log('点击确定 筛选日期');
         this.scrollPullDown()
       },
       cancelCalendars() {
+        console.log('点击取消 清空日期');
         this.list[this.currentIndex].time = ''
         this.scrollPullDown()
       },
@@ -557,7 +570,7 @@
 
       },
       scrollPullDown() {
-        console.log('下拉刷新了');
+        // console.log('下拉刷新了');
         if (this.isRefresh == true) return
         this.isRefresh = true
         // 下拉刷新的时候调用获取数据的方法 根据index带上不同的参数

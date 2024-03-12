@@ -294,7 +294,8 @@
 					return;
 				}
 				this.setEmit('confirm');
-				this.close()
+        this.$refs.popup.close();
+				// this.close()
 			},
 			maskClick() {
 				if(this.closeOnClickOverlay) {

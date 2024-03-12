@@ -99,11 +99,11 @@ Vue.prototype.post =(opt) =>{
 }
 
 Vue.filter('fromStartDateTime', (value) => {
+  if(value == undefined) return ''
   const startDateTime = value;
   const indexT = startDateTime.indexOf('T');
   const indexColon = startDateTime.lastIndexOf(':');
   const newDateTime = startDateTime.slice(0, indexT) + ' ' + startDateTime.slice(indexT + 1, indexColon);
-  console.log('filter ',newDateTime);
   return newDateTime
 })
 

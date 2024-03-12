@@ -94,7 +94,7 @@
           return
         }
         uni.navigateTo({
-          url: '/subpkg/myinfo'
+          url: '/subpkg/setting'
         })
       },
       mychooseavatar(e) {

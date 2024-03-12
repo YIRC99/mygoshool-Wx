@@ -20,6 +20,11 @@
       <view class="middle-box">
         <uv-tabs :list="list" :scrollable="false" @click="change"></uv-tabs>
         <view class="middle-list" v-show="currentIndex == 0">
+          <view class="" v-if="appriseList.length == 0" style="display: flex;flex-direction: column;
+          justify-content: center; width: 100vw; align-items: center;">
+            <image src="../static/appriseEmpty.png" mode="heightFix"></image>
+            <view class="" style="font-size: 40rpx; color: #A9a9a9;">暂时没有拼车订单 快快发布一个吧</view>
+          </view> 
           <uv-list >
               <uv-list-item direction="column"v-for="(item,index) in appriseList" :key="index">
                 <view class="u-line-3 item-title" slot="header">
@@ -31,8 +36,18 @@
                 </view>
               </uv-list-item>
           </uv-list>
+          
+          
         </view>
-
+        <view class="middle-list" v-show="currentIndex == 1">
+          <myEmppty :isShow="true" Text="订单为空"></myEmppty>
+        </view>
+        <view class="middle-list" v-show="currentIndex == 2">
+          <myEmppty :isShow="true" Text="订单为空"></myEmppty>
+        </view>
+        <view class="middle-list" v-show="currentIndex == 3">
+          <myEmppty :isShow="true" Text="订单为空"></myEmppty>
+        </view>
       </view>
     </view>
 

@@ -115,11 +115,11 @@ _vue.default.prototype.post = function (opt) {
   });
 };
 _vue.default.filter('fromStartDateTime', function (value) {
+  if (value == undefined) return '';
   var startDateTime = value;
   var indexT = startDateTime.indexOf('T');
   var indexColon = startDateTime.lastIndexOf(':');
   var newDateTime = startDateTime.slice(0, indexT) + ' ' + startDateTime.slice(indexT + 1, indexColon);
-  console.log('filter ', newDateTime);
   return newDateTime;
 });
 
@@ -128,7 +128,7 @@ _vue.default.filter('fromStartDateTime', function (value) {
 _vue.default.use(_uvUiTools.default);
 var message = function message() {
   Promise.all(/*! require.ensure | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then((function () {
-    return resolve(__webpack_require__(/*! @/components/quick-message/quick-message.vue */ 263));
+    return resolve(__webpack_require__(/*! @/components/quick-message/quick-message.vue */ 273));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 _vue.default.component('quick-message', message);

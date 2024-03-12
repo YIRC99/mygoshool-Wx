@@ -1,0 +1,1 @@
+<view><block wx:if="{{isShow}}"><view style="display:flex;flex-direction:column;justify-content:center;width:100vw;align-items:center;"><image src="{{imgPath}}" mode="heightFix"></image><view style="font-size:40rpx;color:#A9a9a9;">{{Text}}</view></view></block></view>

@@ -55,7 +55,7 @@
           }
         },
         {
-          "path" : "myinfo",
+          "path" : "setting",
           "style" : 
           {
             "navigationBarTitleText" : "个人信息",
