@@ -193,7 +193,7 @@
         <view v-if="currentOrder.phonenumber != ''">对方手机号: {{currentOrder.phonenumber}}</view>
         <view>关闭后可在历史拼车中继续查看</view>
         <view class="down-box">
-          <button class="btn-grad" @click="copyWx">自动复制(优先微信)</button>
+          <button class="btn-grad" @click="copyWx">确定</button>
         </view>
       </view>
     </uv-popup>
@@ -456,6 +456,14 @@
         this.popupShow = false
       },
       showUploadWxImg(){
+        let key = uni.getStorageSync('user')
+        if(key == null || key == ''){
+          this.$refs.message.show({
+            type: 'error', 
+            msg: '请登录后再接受吧', 
+          })
+          return 
+        }
         this.$refs.modal.open();
       },
       receiveOrder() {
@@ -686,9 +694,13 @@
   }
 
   .receivePopup-box-img {
-    border: 1px solid #ebebeb;
-    border-radius: 30rpx;
-    overflow: hidden;
+    
+    
+    image{
+      border: 1px solid #ebebeb;
+      border-radius: 30rpx;
+      overflow: hidden;
+    }
   }
 
   .mytable {

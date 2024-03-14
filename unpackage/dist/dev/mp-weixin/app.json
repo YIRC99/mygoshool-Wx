@@ -14,7 +14,8 @@
         "sendorder",
         "receiveorder",
         "updateCarOrder",
-        "userinfo"
+        "userinfo",
+        "affiche"
       ]
     }
   ],

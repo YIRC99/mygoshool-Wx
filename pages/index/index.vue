@@ -1,9 +1,9 @@
 <template>
   <view class="page">
     <view class="" style="background-color: #fff; padding-bottom: 5rpx;" v-if="tabIndex != 1">
-      <view class="" class="u-line-2 mynative">
+      <view class="" class="u-line-2 mynative" @click="ClickAff">
         <text>社区公告</text>
-        {{afficheTitle}}
+        {{affiche.text}}
       </view>
     </view>
 
@@ -39,8 +39,9 @@
     },
     data() {
       return {
-        afficheTitle: 'mygo公告',
-        afficheText: '',
+        affiche: {
+          text: 'my为共建尊重,互助的拼车社区氛围,请在发布拼车和接受时输入正确的个人信息,拼车过程中守时守约,行程有变及时告知↵'
+        },
         tabIndex: 0,
         items: [{
             icon: {
@@ -67,6 +68,14 @@
     },
 
     methods: {
+      ClickAff(){
+        console.log('click aff');
+        uni.setStorageSync('affiche',this.affiche)
+        if(this.affiche.id == null || this.affiche.id == '') return 
+        uni.navigateTo({
+          url: '/subpkg/affiche'
+        })
+      },
       WxLoginSuccess() {
         this.isLoading = false
         this.isLogin = true
@@ -150,8 +159,8 @@
       }).then(res => {
         console.log('公告获取',res);
         if(res.code == 200){
+          this.affiche = res.data
           this.afficheTitle = res.data.title
-          this.afficheText = res.data.text
         }
       })
       

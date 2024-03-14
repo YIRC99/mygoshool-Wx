@@ -93,6 +93,14 @@
             "navigationBarTitleText" : "用户信息",
             "enablePullDownRefresh" : false
           }
+        },
+        {
+          "path" : "affiche",
+          "style" : 
+          {
+            "navigationBarTitleText" : "公告",
+            "enablePullDownRefresh" : false
+          }
         }
       ]
     }

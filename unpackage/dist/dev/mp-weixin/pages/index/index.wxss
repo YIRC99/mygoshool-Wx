@@ -273,7 +273,7 @@
   justify-content: space-between;
   font-size: 32rpx;
 }
-.receivePopup-box-img {
+.receivePopup-box-img image {
   border: 1px solid #ebebeb;
   border-radius: 30rpx;
   overflow: hidden;

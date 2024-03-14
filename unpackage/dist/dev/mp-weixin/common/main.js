@@ -25,7 +25,9 @@ wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 _vue.default.use(_uviewUi.default);
 // const http = 'http://192.168.1.13:33088/'
 // const http = 'http://127.0.0.1:33088/'
-var http = 'http://192.168.192.210:33088/';
+// const http = 'http://192.168.192.210:33088/'
+// const http = 'http://116.62.146.1:33088/'
+var http = 'http://192.168.1.110:33088/';
 var myOutTime = 5000;
 _vue.default.prototype.avahttp = http + 'common/download?path=avatar&name=';
 _vue.default.prototype.QRttp = http + 'common/download?path=QRcode&name=';
