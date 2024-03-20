@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "闲置交易",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "my-affiche": "/components/myAffiche/myAffiche",
+    "uni-search-bar": "/uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar",
+    "uv-tags": "/uni_modules/uv-tags/components/uv-tags/uv-tags",
+    "my-emppty": "/components/myEmppty/myEmppty",
+    "uv-waterfall": "/uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall"
+  }
+}

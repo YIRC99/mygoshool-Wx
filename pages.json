@@ -25,6 +25,14 @@
 		    "navigationBarTitleText" : "首页",
           "enablePullDownRefresh": false
 		  }
+		},
+		{
+		  "path" : "pages/transaction/transaction",
+		  "style" : 
+		  {
+		    "navigationBarTitleText" : "闲置交易",
+		    "enablePullDownRefresh" : false
+		  }
 		}
 
 	],

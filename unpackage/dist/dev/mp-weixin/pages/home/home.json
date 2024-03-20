@@ -2,6 +2,7 @@
   "navigationBarTitleText": "首页",
   "enablePullDownRefresh": false,
   "usingComponents": {
+    "my-affiche": "/components/myAffiche/myAffiche",
     "u-tabs": "/node-modules/uview-ui/components/u-tabs/u-tabs",
     "uv-calendars": "/uni_modules/uv-calendars/components/uv-calendars/uv-calendars",
     "my-emppty": "/components/myEmppty/myEmppty",

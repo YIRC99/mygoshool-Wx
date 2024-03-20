@@ -1,22 +1,19 @@
 <template>
   <view class="page">
-    <view class="" style="background-color: #fff; padding-bottom: 5rpx;" v-if="tabIndex != 1">
-      <view class="" class="u-line-2 mynative" @click="ClickAff">
-        <text>社区公告</text>
-        {{affiche.text}}
-      </view>
-    </view>
+ 
 
     <view class="pagebox">
-      <my ref="mypage" v-show="tabIndex == 1"></my>
-      <home ref="homepage" v-show="tabIndex == 0"></home>
+      <my ref="mypage" v-show="tabIndex == 2"></my>
+      <home ref="homepage" v-show="tabIndex == 1"></home>
+      <transaction ref="transactionpage" v-show="tabIndex == 0"></transaction>
     </view>
 
 
-    <ws-wx-privacy ref="yinshi" id="privacy-popup" @agree="handleAgree" @disagree="handleDisagree" :enableAutoProtocol="true"></ws-wx-privacy>
-    
+    <ws-wx-privacy ref="yinshi" id="privacy-popup" @agree="handleAgree" @disagree="handleDisagree"
+      :enableAutoProtocol="true"></ws-wx-privacy>
+
     <quick-message ref="message"></quick-message>
-    
+
     <MagicNavigationBar :items="items" :height="60" :indicatorSize="50" @onTabSelect="onTab"
       indicatorBackgroundColor="#99f2ff">
       <template v-slot:text="{text}">
@@ -31,19 +28,28 @@
   import MagicNavigationBar from "@/uni_modules/jorbin-MagicNavigationBar/components/jorbin-MagicNavigationBar/jorbin-MagicNavigationBar.vue"
   import my from '@/pages/my/login.vue'
   import home from '@/pages/home/home.vue'
+  import transaction from '@/pages/transaction/transaction.vue'
+  import mixin from '@/mixins/mixin.js'
   export default {
     components: {
       MagicNavigationBar,
       my,
-      home
+      home,
+      transaction
     },
+    mixins: [mixin],
     data() {
       return {
-        affiche: {
-          text: 'my为共建尊重,互助的拼车社区氛围,请在发布拼车和接受时输入正确的个人信息,拼车过程中守时守约,行程有变及时告知↵'
-        },
         tabIndex: 0,
         items: [{
+            icon: {
+              src: require("@/static/chushou.png"),
+              width: 30,
+              height: 30
+            },
+            text: '二手交易',
+          },
+          {
             icon: {
               src: require("@/static/carIcon2.png"),
               width: 30,
@@ -51,10 +57,6 @@
             },
             text: '拼车广场',
           },
-          // {
-          // 	icon:{src:require("@/static/cart (3).png"),width:30,height:30},
-          // 	text:'我的订单',
-          // },
           {
             icon: {
               src: require("@/static/notice (3).png"),
@@ -68,23 +70,16 @@
     },
 
     methods: {
-      ClickAff(){
-        console.log('click aff');
-        uni.setStorageSync('affiche',this.affiche)
-        if(this.affiche.id == null || this.affiche.id == '') return 
-        uni.navigateTo({
-          url: '/subpkg/affiche'
-        })
-      },
+      
       WxLoginSuccess() {
         this.isLoading = false
         this.isLogin = true
         uni.setStorageSync('token', this.info.openid)
         uni.setStorageSync('user', this.info)
         this.$refs.message.show({
-            type: 'success', //String 默认default
-            msg: '登录成功', //String 显示内容 *
-            iconSize: 16, //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
+          type: 'success', //String 默认default
+          msg: '登录成功', //String 显示内容 *
+          iconSize: 16, //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
         })
       },
       WxLoginFail() {
@@ -127,48 +122,38 @@
       },
       onTab(index, item) {
         this.tabIndex = index
-        if (index == 1) {
+        if (index == 2) {
           uni.setNavigationBarTitle({
             title: '我的'
           })
           this.$refs.mypage.myonshow()
-        } else if (index == 0) {
+        } else if (index == 1) {
           uni.setNavigationBarTitle({
             title: '拼车广场'
           })
           this.$refs.homepage.myonshow()
         }
-        // console.log('tabIndex', index)
+
       }
     },
     mounted() {
-
+      if (this.tabIndex == 0) {
+        console.log('调用了index页面的onload');
+        this.$refs.transactionpage.myonload()
+      }
     },
     onLoad() {
       uni.getPrivacySetting({
         success: res => {
           // console.log('查询隐私授权情况',res);
-          if(res.needAuthorization){
-             this.$refs.yinshi.openyinshi()
+          if (res.needAuthorization) {
+            this.$refs.yinshi.openyinshi()
           }
         }
       })
-      
-      this.get({
-        url: 'affiche'
-      }).then(res => {
-        console.log('公告获取',res);
-        if(res.code == 200){
-          this.affiche = res.data
-          this.afficheTitle = res.data.title
-        }
-      })
-      
-      
-     
     },
     onShow() {
-      
+
       this.onTab(this.tabIndex, {})
     }
   }
@@ -180,21 +165,7 @@
     height: 500rpx;
   }
 
-  .mynative {
-    background-color: #FFF6D7;
-    border-radius: 10rpx;
-    margin: 20rpx;
-    padding: 5rpx 10rpx;
-    font-size: 30rpx;
 
-    text {
-      font-weight: bold;
-      color: #B07F29;
-      font-size: 33rpx;
-      padding: 0 10rpx;
-      font-style: italic;
-    }
-  }
 
   /* 	.page{
 		height: 100vh;

@@ -6,6 +6,7 @@
     "quick-message": "/components/quick-message/quick-message",
     "magic-navigation-bar": "/uni_modules/jorbin-MagicNavigationBar/components/jorbin-MagicNavigationBar/jorbin-MagicNavigationBar",
     "my": "/pages/my/login",
-    "home": "/pages/home/home"
+    "home": "/pages/home/home",
+    "transaction": "/pages/transaction/transaction"
   }
 }

@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/my/login",
-    "pages/home/home"
+    "pages/home/home",
+    "pages/transaction/transaction"
   ],
   "subPackages": [
     {

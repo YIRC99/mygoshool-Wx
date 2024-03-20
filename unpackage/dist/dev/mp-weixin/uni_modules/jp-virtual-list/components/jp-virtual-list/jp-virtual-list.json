@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "loading": "/uni_modules/jp-virtual-list/components/jp-virtual-list/loading"
+  },
+  "component": true,
+  "componentGenerics": {
+    "scoped-slots-default": true
+  }
+}

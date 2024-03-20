@@ -25,9 +25,10 @@ wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 _vue.default.use(_uviewUi.default);
 // const http = 'http://192.168.1.13:33088/'
 // const http = 'http://127.0.0.1:33088/'
-// const http = 'http://192.168.192.210:33088/'
+var http = 'http://192.168.192.210:33088/';
 // const http = 'http://116.62.146.1:33088/'
-var http = 'http://192.168.1.110:33088/';
+// const http = 'http://192.168.1.110:33088/'
+
 var myOutTime = 5000;
 _vue.default.prototype.avahttp = http + 'common/download?path=avatar&name=';
 _vue.default.prototype.QRttp = http + 'common/download?path=QRcode&name=';
@@ -130,7 +131,7 @@ _vue.default.filter('fromStartDateTime', function (value) {
 _vue.default.use(_uvUiTools.default);
 var message = function message() {
   Promise.all(/*! require.ensure | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then((function () {
-    return resolve(__webpack_require__(/*! @/components/quick-message/quick-message.vue */ 273));
+    return resolve(__webpack_require__(/*! @/components/quick-message/quick-message.vue */ 290));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 _vue.default.component('quick-message', message);

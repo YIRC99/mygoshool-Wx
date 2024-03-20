@@ -1,6 +1,7 @@
 <template>
   <view class="page">
-
+    
+    <myAffiche></myAffiche>
     <view class="mytable">
       <u-tabs :list="list" style="background-color: #F6F5F6;" :height="160" :font-size="40" :is-scroll="false"
         bar-height="60" bar-width="400" :current="currentIndex" @change="change">
@@ -658,6 +659,8 @@
         })
         // console.log('拼车页面的myonshow方法触发了');
         this.simulateSwipeDown()
+        this.getAffiche()
+        
       },
       simulateSwipeDown() {
 
@@ -675,6 +678,8 @@
 </script>
 
 <style lang="scss">
+  
+  
   .page {
     padding-bottom: 130rpx;
   }

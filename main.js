@@ -5,9 +5,9 @@ import uView from "uview-ui";
 Vue.use(uView);
 // const http = 'http://192.168.1.13:33088/'
 // const http = 'http://127.0.0.1:33088/'
-// const http = 'http://192.168.192.210:33088/'
+const http = 'http://192.168.192.210:33088/'
 // const http = 'http://116.62.146.1:33088/'
-const http = 'http://192.168.1.110:33088/'
+// const http = 'http://192.168.1.110:33088/'
 
 
 const myOutTime = 5000
