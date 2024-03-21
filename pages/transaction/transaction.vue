@@ -1,8 +1,9 @@
 <template>
   <view>
 
-    <scroll-view scroll-y="true" style="height: 95vh; background-color: #f7f7f7;" :refresher-triggered="isRefresh" @scrolltolower="scrollDown"
-      @refresherrefresh="scrollPullDown" refresher-enabled>
+    <scroll-view scroll-y="true" style="height: 95vh; background-color: #f7f7f7;" :refresher-triggered="isRefresh"
+      @scrolltolower="scrollDown" :scroll-top="myScrollPosition" scroll-with-animation
+      @refresherrefresh="scrollPullDown" @scroll="myScroll" refresher-enabled>
       <view class="">
 
         <myAffiche></myAffiche>
@@ -33,14 +34,12 @@
             <template v-slot:list1>
               <!-- 为了磨平部分平台的BUG，必须套一层view -->
               <view>
-                
+
                 <view v-for="(item, index) in list1" :key="item.id" class="waterfall-item">
-                  <view class="waterfall-item__image" >
-                    <image lazy-load :src="item.image" mode="widthFix"
-                    style="width: 100%;"
-                    ></image>
+                  <view class="waterfall-item__image">
+                    <image lazy-load :src="item.image" mode="widthFix" style="width: 100%;"></image>
                   </view>
-                  <view class="waterfall-item__ft" >
+                  <view class="waterfall-item__ft">
                     <view class="waterfall-item__ft__title">
                       <text class="value">{{item.title}}</text>
                     </view>
@@ -49,8 +48,8 @@
                     </view>
                   </view>
                 </view>
-                
-                
+
+
               </view>
             </template>
             <!-- 第二列数据 -->
@@ -58,10 +57,8 @@
               <!-- 为了磨平部分平台的BUG，必须套一层view -->
               <view>
                 <view v-for="(item, index) in list2" :key="item.id" class="waterfall-item">
-                  <view class="waterfall-item__image" >
-                    <image lazy-load :src="item.image" mode="widthFix"
-                    style="width: 100%;"
-                    ></image>
+                  <view class="waterfall-item__image">
+                    <image lazy-load :src="item.image" mode="widthFix" style="width: 100%;"></image>
                   </view>
                   <view class="waterfall-item__ft">
                     <view class="waterfall-item__ft__title">
@@ -78,12 +75,13 @@
 
         </view>
 
-
       </view>
     </scroll-view>
 
-    <view class="addicon"  @click="toAddShop">
-      <image src="/static/add.png" mode=""></image>
+    <myAdd toPagePath="/subpkg/addShop"></myAdd>
+
+    <view class="totopBut" v-show="isShowToTop" @click="toTop">
+      <image src="/static/toTop.png" mode=""></image>
     </view>
   </view>
 </template>
@@ -95,6 +93,9 @@
   export default {
     data() {
       return {
+       
+        myScrollPosition: 0,
+        myOldScrollPosition: 0,
         isRefresh: false,
         radios: [{
           checked: true,
@@ -114,38 +115,33 @@
         columnGap: 10
       };
     },
-    computed: {
-      imageStyle(item) {
-        return item => {
-          const v = uni.upx2px(750) - this.leftGap - this.rightGap - this.columnGap;
-          const w = v / 2;
-          const rate = w / item.w;
-          const h = rate * item.h;
-          return {
-            width: w + 'px',
-            height: h + 'px'
-          }
-        }
-      }
+    computed:{
+       isShowToTop(){
+         return this.myOldScrollPosition >= 150 
+       }
     },
     methods: {
-      setImageHeight(item) {
-            // 计算图片高度，假设图片的宽高比为 item.w / item.h
-            const v = uni.upx2px(750) - this.leftGap - this.rightGap - this.columnGap;
-            const w = v / 2;
-            const rate = w / item.w;
-            item.height = rate * item.h;
-          },
-      toAddShop(){
-        console.log('跳转发布商品页面');
+      myScroll(e) {
+        // console.log('old  ',this.myOldScrollPosition);
+        // console.log('new   ',this.myScrollPosition);
+        this.myOldScrollPosition = e.detail.scrollTop
+      },
+      toTop() {
+        this.myScrollPosition = this.myOldScrollPosition
+        this.$nextTick(()=> {
+          this.myScrollPosition = 0
+        });
+        setTimeout(() => this.scrollPullDown(),500)
+        console.log('old  ',this.myOldScrollPosition);
+        console.log('new   ',this.myScrollPosition);
       },
       scrollPullDown() {
         if (this.isRefresh == true) return
         this.isRefresh = true
-        setTimeout(()=>{
+        setTimeout(() => {
           console.log('下拉刷新结束了');
           this.isRefresh = false
-        },1000)
+        }, 1000)
       },
       scrollDown() {
         console.log('滑动到底部了');
@@ -162,10 +158,10 @@
       // 这点非常重要：e.name在这里返回是list1或list2，要手动将数据追加到相应列
       changeList(e) {
         console.log(e);
-        console.log('这点非常重要：e.name在这里返回是list1或list2，要手动将数据追加到相应列',e);
+        // console.log('这点非常重要：e.name在这里返回是list1或list2，要手动将数据追加到相应列', e);
         this[e.name].push(e.value);
-        console.log(this.list1);
-        console.log(this.list2);
+        // console.log(this.list1);
+        // console.log(this.list2);
       },
       checkboxClick(index) {
         this.radios[index].checked = !this.radios[index].checked
@@ -177,63 +173,69 @@
         return new Promise((resolve) => {
           const imgs = [{
               url: 'https://gw.alicdn.com/bao/uploaded/i3/6000000007600/O1CN012IkdIv260r2G6yNga_!!6000000007600-0-sm.jpg_220x10000Q75.jpg_.webp',
-              // width: 100,
-              // height: 110
             },
             {
               url: 'https://g-search3.alicdn.com/img/bao/uploaded/i4/i2/2207895128599/O1CN011GBUo52DOOdhfGVls_!!0-item_pic.jpg_460x460q90.jpg_.webp',
-              // width: 200,
-              // height: 220
             },
             {
               url: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/i4/52043928/O1CN01giln0z1et4b5hnR7F_!!52043928.jpg_460x460q90.jpg_.webp',
-              // width: 300,
-              // height: 340
             },
             {
               url: 'https://gw.alicdn.com/bao/uploaded/i4/6000000000782/O1CN01AtGt9i1HeCevakODA_!!6000000000782-0-sm.jpg_220x10000Q75.jpg_.webp',
-              // width: 400,
-              // height: 400
             },
             {
               url: 'https://i2.hdslb.com/bfs/archive/2b8cf3f8a20029ba2b109306b2829661e0e4e609.jpg@672w_378h_1c_!web-home-common-cover.avif',
-              // width: 500,
-              // height: 510
             },
             {
               url: 'https://gd-hbimg.huaban.com/cff481c8eb5f3d16be10971c043be6d2d18ee6cc201111-66eyS2_fw658webp',
-              // width: 600,
-              // height: 606
             },
             {
               url: 'https://gd-hbimg.huaban.com/f2d9983597243dca29eff15164ec48ffa9e5f26a1dbd8b-VIFIcg_fw658webp',
-              // width: 310,
-              // height: 422
             },
             {
               url: 'https://i2.hdslb.com/bfs/archive/231653e9ded606decab8b087636ed857ab0c0f5a.jpg@672w_378h_1c_!web-home-common-cover.avif',
-              // width: 320,
-              // height: 430
             },
             {
               url: 'https://i2.hdslb.com/bfs/archive/752ffd1d469e40f5b77e81c6e84f768730c0c75e.png@672w_378h_1c_!web-home-common-cover.avif',
-              // width: 330,
-              // height: 424
             },
             {
               url: 'https://i2.hdslb.com/bfs/archive/3d84f64ec03edaad186865c0f69d737657e5b292.jpg@672w_378h_1c_!web-home-common-cover.avif',
-              // width: 340,
-              // height: 435
             },
             {
               url: 'https://via.placeholder.com/350x440.png/f56c6c/fff',
-              // width: 350,
-              // height: 440
             },
             {
               url: 'https://via.placeholder.com/380x470.png/909399/fff',
-              // width: 380,
-              // height: 470
+            }, {
+              url: 'https://via.placeholder.com/380x470.png/909399/fff',
+            }, {
+              url: 'https://via.placeholder.com/380x470.png/909399/fff',
+            }, {
+              url: 'https://via.placeholder.com/380x470.png/909399/fff',
+            }, {
+              url: 'https://via.placeholder.com/380x470.png/909399/fff',
+            }, {
+              url: 'https://via.placeholder.com/380x470.png/909399/fff',
+            }, {
+              url: 'https://via.placeholder.com/380x470.png/909399/fff',
+            }, {
+              url: 'https://via.placeholder.com/380x470.png/909399/fff',
+            }, {
+              url: 'https://via.placeholder.com/380x470.png/909399/fff',
+            }, {
+              url: 'https://via.placeholder.com/380x470.png/909399/fff',
+            }, {
+              url: 'https://via.placeholder.com/380x470.png/909399/fff',
+            }, {
+              url: 'https://via.placeholder.com/380x470.png/909399/fff',
+            }, {
+              url: 'https://via.placeholder.com/380x470.png/909399/fff',
+            }, {
+              url: 'https://via.placeholder.com/380x470.png/909399/fff',
+            }, {
+              url: 'https://via.placeholder.com/380x470.png/909399/fff',
+            }, {
+              url: 'https://via.placeholder.com/380x470.png/909399/fff',
             }
           ];
           let list = [];
@@ -243,8 +245,6 @@
               id: guid(),
               allowEdit: i == 0,
               image: imgs[randomIndex].url,
-              w: imgs[randomIndex].width,
-              h: imgs[randomIndex].height,
               title: i % 2 == 0 ? `(${this.list.length + i + 1})体验uv-ui框架` :
                 `(${this.list.length + i +1})uv-ui支持多平台`,
               desc: i % 2 == 0 ? `(${this.list.length + i + 1})欢迎使用uv-ui，uni-app生态专用的UI框架` :
@@ -267,25 +267,26 @@
 </script>
 
 <style lang="scss">
-  .addicon {
+
+  .totopBut {
     position: fixed;
-    top: 1000rpx;
+    top: 1150rpx;
     right: 50rpx;
     z-index: 999;
-    background-color: #CCCCCC;
+    background-color: #fff;
     border-radius: 50%;
     width: 100rpx;
     height: 100rpx;
     display: flex;
     justify-content: center;
     align-items: center;
-  
+
     image {
-      width: 60rpx;
-      height: 60rpx;
+      width: 100rpx;
+      height: 100rpx;
     }
   }
-  
+
   .waterfall {
     margin: 30rpx 0;
     padding-bottom: 200rpx;
@@ -337,9 +338,9 @@
     background-color: white;
     // display: flex;
     // flex-direction: column;
-    
-    .waterfall-item__image{
-       margin-bottom: 10rpx;
+
+    .waterfall-item__image {
+      margin-bottom: 10rpx;
     }
   }
 

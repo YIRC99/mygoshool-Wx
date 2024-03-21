@@ -24,12 +24,12 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.addicon {
+.totopBut {
   position: fixed;
-  top: 1000rpx;
+  top: 1150rpx;
   right: 50rpx;
   z-index: 999;
-  background-color: #CCCCCC;
+  background-color: #fff;
   border-radius: 50%;
   width: 100rpx;
   height: 100rpx;
@@ -37,9 +37,9 @@
   justify-content: center;
   align-items: center;
 }
-.addicon image {
-  width: 60rpx;
-  height: 60rpx;
+.totopBut image {
+  width: 100rpx;
+  height: 100rpx;
 }
 .waterfall {
   margin: 30rpx 0;

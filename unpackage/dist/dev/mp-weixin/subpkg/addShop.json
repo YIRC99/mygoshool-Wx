@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "发布闲置",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
+    "uv-textarea": "/uni_modules/uv-textarea/components/uv-textarea/uv-textarea",
+    "uv-upload": "/uni_modules/uv-upload/components/uv-upload/uv-upload",
+    "uv-picker": "/uni_modules/uv-picker/components/uv-picker/uv-picker",
+    "quick-message": "/components/quick-message/quick-message"
+  }
+}

@@ -47,7 +47,7 @@
               width: 30,
               height: 30
             },
-            text: '二手交易',
+            text: '闲置交易',
           },
           {
             icon: {

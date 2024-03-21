@@ -16,7 +16,8 @@
         "receiveorder",
         "updateCarOrder",
         "userinfo",
-        "affiche"
+        "affiche",
+        "addShop"
       ]
     }
   ],

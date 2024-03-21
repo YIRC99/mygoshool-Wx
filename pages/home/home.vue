@@ -199,9 +199,7 @@
       </view>
     </uv-popup>
 
-    <view class="addicon" v-show="!popupShow" @click="toAddOrder">
-      <image src="/static/add.png" mode=""></image>
-    </view>
+    <myAdd v-show="!popupShow" toPagePath="/subpkg/addCarorder"></myAdd>
 
     <quick-message ref="message"></quick-message>
 
@@ -614,21 +612,6 @@
         this.list[this.currentIndex].pageNum++
         this.getOrderList(false)
       },
-      toAddOrder() {
-        let user = uni.getStorageSync('user')
-        if (user != null && user != '' && user != undefined) {
-          uni.navigateTo({
-            url: '/subpkg/addCarorder'
-          });
-        } else {
-          this.$refs.message.show({
-            type: 'error',
-            msg: '请登录后再发布拼车吧',
-            iconSize: 16,
-          })
-        }
-
-      },
       clickCard(order) {
         this.currentOrder = order
         console.log('点击了卡片当前选中改变了',this.currentOrder);
@@ -788,25 +771,6 @@
     .titleImg {
 
       width: 300rpx;
-    }
-  }
-
-  .addicon {
-    position: fixed;
-    top: 1000rpx;
-    right: 50rpx;
-    z-index: 999;
-    background-color: #CCCCCC;
-    border-radius: 50%;
-    width: 100rpx;
-    height: 100rpx;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    image {
-      width: 60rpx;
-      height: 60rpx;
     }
   }
 

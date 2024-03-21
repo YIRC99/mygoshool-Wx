@@ -70,6 +70,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "发布闲置",
+          "pathName": "subpkg/addShop",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

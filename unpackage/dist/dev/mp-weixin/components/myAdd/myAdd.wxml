@@ -1,0 +1,1 @@
+<view><view data-event-opts="{{[['tap',[['toAddPage',['$event']]]]]}}" class="addicon" bindtap="__e"><image src="/static/add.png" mode></image></view><quick-message class="vue-ref" vue-id="ea3d0b54-1" data-ref="message" bind:__l="__l"></quick-message></view>

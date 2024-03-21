@@ -109,6 +109,14 @@
             "navigationBarTitleText" : "公告",
             "enablePullDownRefresh" : false
           }
+        },
+        {
+          "path" : "addShop",
+          "style" : 
+          {
+            "navigationBarTitleText" : "发布闲置",
+            "enablePullDownRefresh" : false
+          }
         }
       ]
     }

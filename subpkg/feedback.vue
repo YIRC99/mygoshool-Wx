@@ -128,6 +128,8 @@
         this[`fileList${event.name}`].splice(event.index, 1)
       },
 
+
+
       lgin() {
         console.log(this.$uv.toast);
         return

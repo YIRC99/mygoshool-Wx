@@ -82,19 +82,22 @@ var components
 try {
   components = {
     myAffiche: function () {
-      return __webpack_require__.e(/*! import() | components/myAffiche/myAffiche */ "components/myAffiche/myAffiche").then(__webpack_require__.bind(null, /*! @/components/myAffiche/myAffiche.vue */ 329))
+      return __webpack_require__.e(/*! import() | components/myAffiche/myAffiche */ "components/myAffiche/myAffiche").then(__webpack_require__.bind(null, /*! @/components/myAffiche/myAffiche.vue */ 337))
     },
     uniSearchBar: function () {
-      return Promise.all(/*! import() | uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar.vue */ 402))
+      return Promise.all(/*! import() | uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar.vue */ 417))
     },
     uvTags: function () {
-      return Promise.all(/*! import() | uni_modules/uv-tags/components/uv-tags/uv-tags */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-tags/components/uv-tags/uv-tags")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-tags/components/uv-tags/uv-tags.vue */ 413))
+      return Promise.all(/*! import() | uni_modules/uv-tags/components/uv-tags/uv-tags */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-tags/components/uv-tags/uv-tags")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-tags/components/uv-tags/uv-tags.vue */ 428))
     },
     myEmppty: function () {
-      return Promise.all(/*! import() | components/myEmppty/myEmppty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myEmppty/myEmppty")]).then(__webpack_require__.bind(null, /*! @/components/myEmppty/myEmppty.vue */ 357))
+      return Promise.all(/*! import() | components/myEmppty/myEmppty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myEmppty/myEmppty")]).then(__webpack_require__.bind(null, /*! @/components/myEmppty/myEmppty.vue */ 365))
     },
     uvWaterfall: function () {
-      return Promise.all(/*! import() | uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall.vue */ 421))
+      return Promise.all(/*! import() | uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall.vue */ 436))
+    },
+    myAdd: function () {
+      return __webpack_require__.e(/*! import() | components/myAdd/myAdd */ "components/myAdd/myAdd").then(__webpack_require__.bind(null, /*! @/components/myAdd/myAdd.vue */ 392))
     },
   }
 } catch (e) {
@@ -162,7 +165,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
+
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
@@ -260,11 +263,11 @@ var _index = __webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/function/ind
 //
 //
 //
-//
-//
 var _default = {
   data: function data() {
     return {
+      myScrollPosition: 0,
+      myOldScrollPosition: 0,
       isRefresh: false,
       radios: [{
         checked: true,
@@ -288,30 +291,27 @@ var _default = {
     };
   },
   computed: {
-    imageStyle: function imageStyle(item) {
-      var _this = this;
-      return function (item) {
-        var v = uni.upx2px(750) - _this.leftGap - _this.rightGap - _this.columnGap;
-        var w = v / 2;
-        var rate = w / item.w;
-        var h = rate * item.h;
-        return {
-          width: w + 'px',
-          height: h + 'px'
-        };
-      };
+    isShowToTop: function isShowToTop() {
+      return this.myOldScrollPosition >= 150;
     }
   },
   methods: {
-    setImageHeight: function setImageHeight(item) {
-      // 计算图片高度，假设图片的宽高比为 item.w / item.h
-      var v = uni.upx2px(750) - this.leftGap - this.rightGap - this.columnGap;
-      var w = v / 2;
-      var rate = w / item.w;
-      item.height = rate * item.h;
+    myScroll: function myScroll(e) {
+      // console.log('old  ',this.myOldScrollPosition);
+      // console.log('new   ',this.myScrollPosition);
+      this.myOldScrollPosition = e.detail.scrollTop;
     },
-    toAddShop: function toAddShop() {
-      console.log('跳转发布商品页面');
+    toTop: function toTop() {
+      var _this = this;
+      this.myScrollPosition = this.myOldScrollPosition;
+      this.$nextTick(function () {
+        _this.myScrollPosition = 0;
+      });
+      setTimeout(function () {
+        return _this.scrollPullDown();
+      }, 500);
+      console.log('old  ', this.myOldScrollPosition);
+      console.log('new   ', this.myScrollPosition);
     },
     scrollPullDown: function scrollPullDown() {
       var _this2 = this;
@@ -351,10 +351,10 @@ var _default = {
     // 这点非常重要：e.name在这里返回是list1或list2，要手动将数据追加到相应列
     changeList: function changeList(e) {
       console.log(e);
-      console.log('这点非常重要：e.name在这里返回是list1或list2，要手动将数据追加到相应列', e);
+      // console.log('这点非常重要：e.name在这里返回是list1或list2，要手动将数据追加到相应列', e);
       this[e.name].push(e.value);
-      console.log(this.list1);
-      console.log(this.list2);
+      // console.log(this.list1);
+      // console.log(this.list2);
     },
     checkboxClick: function checkboxClick(index) {
       this.radios[index].checked = !this.radios[index].checked;
@@ -367,54 +367,59 @@ var _default = {
       return new Promise(function (resolve) {
         var imgs = [{
           url: 'https://gw.alicdn.com/bao/uploaded/i3/6000000007600/O1CN012IkdIv260r2G6yNga_!!6000000007600-0-sm.jpg_220x10000Q75.jpg_.webp'
-          // width: 100,
-          // height: 110
         }, {
           url: 'https://g-search3.alicdn.com/img/bao/uploaded/i4/i2/2207895128599/O1CN011GBUo52DOOdhfGVls_!!0-item_pic.jpg_460x460q90.jpg_.webp'
-          // width: 200,
-          // height: 220
         }, {
           url: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/i4/52043928/O1CN01giln0z1et4b5hnR7F_!!52043928.jpg_460x460q90.jpg_.webp'
-          // width: 300,
-          // height: 340
         }, {
           url: 'https://gw.alicdn.com/bao/uploaded/i4/6000000000782/O1CN01AtGt9i1HeCevakODA_!!6000000000782-0-sm.jpg_220x10000Q75.jpg_.webp'
-          // width: 400,
-          // height: 400
         }, {
           url: 'https://i2.hdslb.com/bfs/archive/2b8cf3f8a20029ba2b109306b2829661e0e4e609.jpg@672w_378h_1c_!web-home-common-cover.avif'
-          // width: 500,
-          // height: 510
         }, {
           url: 'https://gd-hbimg.huaban.com/cff481c8eb5f3d16be10971c043be6d2d18ee6cc201111-66eyS2_fw658webp'
-          // width: 600,
-          // height: 606
         }, {
           url: 'https://gd-hbimg.huaban.com/f2d9983597243dca29eff15164ec48ffa9e5f26a1dbd8b-VIFIcg_fw658webp'
-          // width: 310,
-          // height: 422
         }, {
           url: 'https://i2.hdslb.com/bfs/archive/231653e9ded606decab8b087636ed857ab0c0f5a.jpg@672w_378h_1c_!web-home-common-cover.avif'
-          // width: 320,
-          // height: 430
         }, {
           url: 'https://i2.hdslb.com/bfs/archive/752ffd1d469e40f5b77e81c6e84f768730c0c75e.png@672w_378h_1c_!web-home-common-cover.avif'
-          // width: 330,
-          // height: 424
         }, {
           url: 'https://i2.hdslb.com/bfs/archive/3d84f64ec03edaad186865c0f69d737657e5b292.jpg@672w_378h_1c_!web-home-common-cover.avif'
-          // width: 340,
-          // height: 435
         }, {
           url: 'https://via.placeholder.com/350x440.png/f56c6c/fff'
-          // width: 350,
-          // height: 440
         }, {
           url: 'https://via.placeholder.com/380x470.png/909399/fff'
-          // width: 380,
-          // height: 470
+        }, {
+          url: 'https://via.placeholder.com/380x470.png/909399/fff'
+        }, {
+          url: 'https://via.placeholder.com/380x470.png/909399/fff'
+        }, {
+          url: 'https://via.placeholder.com/380x470.png/909399/fff'
+        }, {
+          url: 'https://via.placeholder.com/380x470.png/909399/fff'
+        }, {
+          url: 'https://via.placeholder.com/380x470.png/909399/fff'
+        }, {
+          url: 'https://via.placeholder.com/380x470.png/909399/fff'
+        }, {
+          url: 'https://via.placeholder.com/380x470.png/909399/fff'
+        }, {
+          url: 'https://via.placeholder.com/380x470.png/909399/fff'
+        }, {
+          url: 'https://via.placeholder.com/380x470.png/909399/fff'
+        }, {
+          url: 'https://via.placeholder.com/380x470.png/909399/fff'
+        }, {
+          url: 'https://via.placeholder.com/380x470.png/909399/fff'
+        }, {
+          url: 'https://via.placeholder.com/380x470.png/909399/fff'
+        }, {
+          url: 'https://via.placeholder.com/380x470.png/909399/fff'
+        }, {
+          url: 'https://via.placeholder.com/380x470.png/909399/fff'
+        }, {
+          url: 'https://via.placeholder.com/380x470.png/909399/fff'
         }];
-
         var list = [];
         var doFn = function doFn(i) {
           var randomIndex = Math.floor(Math.random() * 10);
@@ -422,8 +427,6 @@ var _default = {
             id: (0, _index.guid)(),
             allowEdit: i == 0,
             image: imgs[randomIndex].url,
-            w: imgs[randomIndex].width,
-            h: imgs[randomIndex].height,
             title: i % 2 == 0 ? "(".concat(_this4.list.length + i + 1, ")\u4F53\u9A8Cuv-ui\u6846\u67B6") : "(".concat(_this4.list.length + i + 1, ")uv-ui\u652F\u6301\u591A\u5E73\u53F0"),
             desc: i % 2 == 0 ? "(".concat(_this4.list.length + i + 1, ")\u6B22\u8FCE\u4F7F\u7528uv-ui\uFF0Cuni-app\u751F\u6001\u4E13\u7528\u7684UI\u6846\u67B6") : "(".concat(_this4.list.length + i, ")\u5F00\u53D1\u8005\u7F16\u5199\u4E00\u5957\u4EE3\u7801\uFF0C \u53EF\u53D1\u5E03\u5230iOS\u3001Android\u3001H5\u3001\u4EE5\u53CA\u5404\u79CD\u5C0F\u7A0B\u5E8F")
           };
@@ -442,7 +445,6 @@ var _default = {
   }
 };
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

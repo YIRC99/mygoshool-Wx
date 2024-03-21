@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "quick-message": "/components/quick-message/quick-message"
+  }
+}
