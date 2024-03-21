@@ -659,8 +659,6 @@
         })
         // console.log('拼车页面的myonshow方法触发了');
         this.simulateSwipeDown()
-        this.getAffiche()
-        
       },
       simulateSwipeDown() {
 

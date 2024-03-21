@@ -1,8 +1,8 @@
 <template>
   <view>
 
-    <scroll-view scroll-y="true" style="height: 95vh;" :refresher-triggered="isRefresh"
-      @scrolltolower="scrollDown" @refresherrefresh="scrollPullDown" refresher-enabled>
+    <scroll-view scroll-y="true" style="height: 95vh; background-color: #f7f7f7;" :refresher-triggered="isRefresh" @scrolltolower="scrollDown"
+      @refresherrefresh="scrollPullDown" refresher-enabled>
       <view class="">
 
         <myAffiche></myAffiche>
@@ -16,7 +16,8 @@
             <view class="tag-box">
               <view class="uv-page__tag-item" v-for="(item,index) in radios" :key="index">
                 <uv-tags :text="item.name" :plain="!item.checked" :type="item.checked == true ? 'primary' : 'info'"
-                  :name="index" class="item" shape="circle" @click="checkboxClick" style="margin: 0 30rpx;">
+                  :name="index" class="item" :closable="item.checked" closePlace="right" @close="checkboxClick"
+                  shape="circle" @click="checkboxClick" style="margin: 0 30rpx;">
                 </uv-tags>
               </view>
             </view>
@@ -32,11 +33,14 @@
             <template v-slot:list1>
               <!-- 为了磨平部分平台的BUG，必须套一层view -->
               <view>
+                
                 <view v-for="(item, index) in list1" :key="item.id" class="waterfall-item">
-                  <view class="waterfall-item__image" :style="[imageStyle(item)]">
-                    <image :src="item.image" mode="widthFix" :style="{width:item.width+'px'}"></image>
+                  <view class="waterfall-item__image" >
+                    <image lazy-load :src="item.image" mode="widthFix"
+                    style="width: 100%;"
+                    ></image>
                   </view>
-                  <view class="waterfall-item__ft">
+                  <view class="waterfall-item__ft" >
                     <view class="waterfall-item__ft__title">
                       <text class="value">{{item.title}}</text>
                     </view>
@@ -45,6 +49,8 @@
                     </view>
                   </view>
                 </view>
+                
+                
               </view>
             </template>
             <!-- 第二列数据 -->
@@ -52,8 +58,10 @@
               <!-- 为了磨平部分平台的BUG，必须套一层view -->
               <view>
                 <view v-for="(item, index) in list2" :key="item.id" class="waterfall-item">
-                  <view class="waterfall-item__image" :style="[imageStyle(item)]">
-                    <image :src="item.image" mode="widthFix" :style="{width:item.width+'px'}"></image>
+                  <view class="waterfall-item__image" >
+                    <image lazy-load :src="item.image" mode="widthFix"
+                    style="width: 100%;"
+                    ></image>
                   </view>
                   <view class="waterfall-item__ft">
                     <view class="waterfall-item__ft__title">
@@ -68,15 +76,15 @@
             </template>
           </uv-waterfall>
 
-
-
         </view>
-      
-      
+
+
       </view>
     </scroll-view>
 
-
+    <view class="addicon"  @click="toAddShop">
+      <image src="/static/add.png" mode=""></image>
+    </view>
   </view>
 </template>
 
@@ -92,8 +100,11 @@
           checked: true,
           name: '濂溪校区'
         }, {
-          checked: false,
+          checked: true,
           name: '十里校区'
+        }, {
+          checked: true,
+          name: '其他'
         }],
         list: [], // 瀑布流全部数据
         list1: [], // 瀑布流第一列数据
@@ -118,11 +129,26 @@
       }
     },
     methods: {
+      setImageHeight(item) {
+            // 计算图片高度，假设图片的宽高比为 item.w / item.h
+            const v = uni.upx2px(750) - this.leftGap - this.rightGap - this.columnGap;
+            const w = v / 2;
+            const rate = w / item.w;
+            item.height = rate * item.h;
+          },
+      toAddShop(){
+        console.log('跳转发布商品页面');
+      },
       scrollPullDown() {
-
+        if (this.isRefresh == true) return
+        this.isRefresh = true
+        setTimeout(()=>{
+          console.log('下拉刷新结束了');
+          this.isRefresh = false
+        },1000)
       },
       scrollDown() {
-
+        console.log('滑动到底部了');
       },
       async myonload() {
 
@@ -135,7 +161,11 @@
 
       // 这点非常重要：e.name在这里返回是list1或list2，要手动将数据追加到相应列
       changeList(e) {
+        console.log(e);
+        console.log('这点非常重要：e.name在这里返回是list1或list2，要手动将数据追加到相应列',e);
         this[e.name].push(e.value);
+        console.log(this.list1);
+        console.log(this.list2);
       },
       checkboxClick(index) {
         this.radios[index].checked = !this.radios[index].checked
@@ -146,64 +176,64 @@
       getData() {
         return new Promise((resolve) => {
           const imgs = [{
-              url: 'https://via.placeholder.com/100x110.png/3c9cff/fff',
-              width: 100,
-              height: 110
+              url: 'https://gw.alicdn.com/bao/uploaded/i3/6000000007600/O1CN012IkdIv260r2G6yNga_!!6000000007600-0-sm.jpg_220x10000Q75.jpg_.webp',
+              // width: 100,
+              // height: 110
             },
             {
-              url: 'https://via.placeholder.com/200x220.png/f9ae3d/fff',
-              width: 200,
-              height: 220
+              url: 'https://g-search3.alicdn.com/img/bao/uploaded/i4/i2/2207895128599/O1CN011GBUo52DOOdhfGVls_!!0-item_pic.jpg_460x460q90.jpg_.webp',
+              // width: 200,
+              // height: 220
             },
             {
-              url: 'https://via.placeholder.com/300x340.png/5ac725/fff',
-              width: 300,
-              height: 340
+              url: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/i4/52043928/O1CN01giln0z1et4b5hnR7F_!!52043928.jpg_460x460q90.jpg_.webp',
+              // width: 300,
+              // height: 340
             },
             {
-              url: 'https://via.placeholder.com/400x400.png/f56c6c/fff',
-              width: 400,
-              height: 400
+              url: 'https://gw.alicdn.com/bao/uploaded/i4/6000000000782/O1CN01AtGt9i1HeCevakODA_!!6000000000782-0-sm.jpg_220x10000Q75.jpg_.webp',
+              // width: 400,
+              // height: 400
             },
             {
-              url: 'https://via.placeholder.com/500x510.png/909399/fff',
-              width: 500,
-              height: 510
+              url: 'https://i2.hdslb.com/bfs/archive/2b8cf3f8a20029ba2b109306b2829661e0e4e609.jpg@672w_378h_1c_!web-home-common-cover.avif',
+              // width: 500,
+              // height: 510
             },
             {
-              url: 'https://via.placeholder.com/600x606.png/3c9cff/fff',
-              width: 600,
-              height: 606
+              url: 'https://gd-hbimg.huaban.com/cff481c8eb5f3d16be10971c043be6d2d18ee6cc201111-66eyS2_fw658webp',
+              // width: 600,
+              // height: 606
             },
             {
-              url: 'https://via.placeholder.com/310x422.png/f1a532/fff',
-              width: 310,
-              height: 422
+              url: 'https://gd-hbimg.huaban.com/f2d9983597243dca29eff15164ec48ffa9e5f26a1dbd8b-VIFIcg_fw658webp',
+              // width: 310,
+              // height: 422
             },
             {
-              url: 'https://via.placeholder.com/320x430.png/3c9cff/fff',
-              width: 320,
-              height: 430
+              url: 'https://i2.hdslb.com/bfs/archive/231653e9ded606decab8b087636ed857ab0c0f5a.jpg@672w_378h_1c_!web-home-common-cover.avif',
+              // width: 320,
+              // height: 430
             },
             {
-              url: 'https://via.placeholder.com/330x424.png/f9ae3d/fff',
-              width: 330,
-              height: 424
+              url: 'https://i2.hdslb.com/bfs/archive/752ffd1d469e40f5b77e81c6e84f768730c0c75e.png@672w_378h_1c_!web-home-common-cover.avif',
+              // width: 330,
+              // height: 424
             },
             {
-              url: 'https://via.placeholder.com/340x435.png/5ac725/fff',
-              width: 340,
-              height: 435
+              url: 'https://i2.hdslb.com/bfs/archive/3d84f64ec03edaad186865c0f69d737657e5b292.jpg@672w_378h_1c_!web-home-common-cover.avif',
+              // width: 340,
+              // height: 435
             },
             {
               url: 'https://via.placeholder.com/350x440.png/f56c6c/fff',
-              width: 350,
-              height: 440
+              // width: 350,
+              // height: 440
             },
             {
               url: 'https://via.placeholder.com/380x470.png/909399/fff',
-              width: 380,
-              height: 470
+              // width: 380,
+              // height: 470
             }
           ];
           let list = [];
@@ -237,6 +267,25 @@
 </script>
 
 <style lang="scss">
+  .addicon {
+    position: fixed;
+    top: 1000rpx;
+    right: 50rpx;
+    z-index: 999;
+    background-color: #CCCCCC;
+    border-radius: 50%;
+    width: 100rpx;
+    height: 100rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    image {
+      width: 60rpx;
+      height: 60rpx;
+    }
+  }
+  
   .waterfall {
     margin: 30rpx 0;
     padding-bottom: 200rpx;
@@ -253,22 +302,22 @@
     }
 
     .uv-page__tag-item {
-      width: 150rpx;
+      width: 185rpx;
       display: flex;
     }
   }
 
 
-  /deep/.uv-tags-wrapper {
-    width: 100rpx !important;
-  }
-
   /deep/.uv-tags--info--plain {
-    width: 100rpx !important;
+    display: flex;
+    justify-content: center;
+    width: 150rpx !important;
   }
 
   /deep/.uv-tags--primary {
-    width: 100rpx !important;
+    display: flex;
+    justify-content: center;
+    width: 150rpx !important;
   }
 
   /deep/ .uni-searchbar__box {
@@ -283,12 +332,20 @@
 
   .waterfall-item {
     overflow: hidden;
-    margin-top: 10px;
-    border-radius: 6px;
+    margin-top: 20rpx;
+    border-radius: 20rpx;
+    background-color: white;
+    // display: flex;
+    // flex-direction: column;
+    
+    .waterfall-item__image{
+       margin-bottom: 10rpx;
+    }
   }
 
   .waterfall-item__ft {
     padding: 20rpx;
+    padding-top: 0;
     background: #fff;
 
     &__title {

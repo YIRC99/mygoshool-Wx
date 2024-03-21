@@ -24,6 +24,23 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.addicon {
+  position: fixed;
+  top: 1000rpx;
+  right: 50rpx;
+  z-index: 999;
+  background-color: #CCCCCC;
+  border-radius: 50%;
+  width: 100rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addicon image {
+  width: 60rpx;
+  height: 60rpx;
+}
 .waterfall {
   margin: 30rpx 0;
   padding-bottom: 200rpx;
@@ -38,17 +55,18 @@
   background: #f1f1f1;
 }
 .tag-box .uv-page__tag-item {
-  width: 150rpx;
+  width: 185rpx;
   display: flex;
 }
- .uv-tags-wrapper {
-  width: 100rpx !important;
-}
  .uv-tags--info--plain {
-  width: 100rpx !important;
+  display: flex;
+  justify-content: center;
+  width: 150rpx !important;
 }
  .uv-tags--primary {
-  width: 100rpx !important;
+  display: flex;
+  justify-content: center;
+  width: 150rpx !important;
 }
  .uni-searchbar__box {
   justify-content: center !important;
@@ -122,11 +140,16 @@
 }
 .waterfall-item.data-v-28de0044 {
   overflow: hidden;
-  margin-top: 10px;
-  border-radius: 6px;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  background-color: white;
+}
+.waterfall-item .waterfall-item__image.data-v-28de0044 {
+  margin-bottom: 10rpx;
 }
 .waterfall-item__ft.data-v-28de0044 {
   padding: 20rpx;
+  padding-top: 0;
   background: #fff;
 }
 .waterfall-item__ft__title.data-v-28de0044 {
