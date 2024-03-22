@@ -80,19 +80,19 @@ var components
 try {
   components = {
     uvOverlay: function () {
-      return Promise.all(/*! import() | uni_modules/uv-overlay/components/uv-overlay/uv-overlay */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-overlay/components/uv-overlay/uv-overlay")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-overlay/components/uv-overlay/uv-overlay.vue */ 559))
+      return Promise.all(/*! import() | uni_modules/uv-overlay/components/uv-overlay/uv-overlay */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-overlay/components/uv-overlay/uv-overlay")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-overlay/components/uv-overlay/uv-overlay.vue */ 566))
     },
     uvTransition: function () {
-      return Promise.all(/*! import() | uni_modules/uv-transition/components/uv-transition/uv-transition */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-transition/components/uv-transition/uv-transition")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-transition/components/uv-transition/uv-transition.vue */ 567))
+      return Promise.all(/*! import() | uni_modules/uv-transition/components/uv-transition/uv-transition */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-transition/components/uv-transition/uv-transition")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-transition/components/uv-transition/uv-transition.vue */ 574))
     },
     uvStatusBar: function () {
-      return Promise.all(/*! import() | uni_modules/uv-status-bar/components/uv-status-bar/uv-status-bar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-status-bar/components/uv-status-bar/uv-status-bar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-status-bar/components/uv-status-bar/uv-status-bar.vue */ 573))
+      return Promise.all(/*! import() | uni_modules/uv-status-bar/components/uv-status-bar/uv-status-bar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-status-bar/components/uv-status-bar/uv-status-bar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-status-bar/components/uv-status-bar/uv-status-bar.vue */ 580))
     },
     uvSafeBottom: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uv-safe-bottom/components/uv-safe-bottom/uv-safe-bottom */ "uni_modules/uv-safe-bottom/components/uv-safe-bottom/uv-safe-bottom").then(__webpack_require__.bind(null, /*! @/uni_modules/uv-safe-bottom/components/uv-safe-bottom/uv-safe-bottom.vue */ 581))
+      return __webpack_require__.e(/*! import() | uni_modules/uv-safe-bottom/components/uv-safe-bottom/uv-safe-bottom */ "uni_modules/uv-safe-bottom/components/uv-safe-bottom/uv-safe-bottom").then(__webpack_require__.bind(null, /*! @/uni_modules/uv-safe-bottom/components/uv-safe-bottom/uv-safe-bottom.vue */ 588))
     },
     uvIcon: function () {
-      return Promise.all(/*! import() | uni_modules/uv-icon/components/uv-icon/uv-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-icon/components/uv-icon/uv-icon")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-icon/components/uv-icon/uv-icon.vue */ 588))
+      return Promise.all(/*! import() | uni_modules/uv-icon/components/uv-icon/uv-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-icon/components/uv-icon/uv-icon")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-icon/components/uv-icon/uv-icon.vue */ 595))
     },
   }
 } catch (e) {

@@ -83,10 +83,10 @@ try {
       return Promise.all(/*! import() | uni_modules/uv-popup/components/uv-popup/uv-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-popup/components/uv-popup/uv-popup")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-popup/components/uv-popup/uv-popup.vue */ 378))
     },
     uvToolbar: function () {
-      return Promise.all(/*! import() | uni_modules/uv-toolbar/components/uv-toolbar/uv-toolbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-toolbar/components/uv-toolbar/uv-toolbar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-toolbar/components/uv-toolbar/uv-toolbar.vue */ 544))
+      return Promise.all(/*! import() | uni_modules/uv-toolbar/components/uv-toolbar/uv-toolbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-toolbar/components/uv-toolbar/uv-toolbar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-toolbar/components/uv-toolbar/uv-toolbar.vue */ 551))
     },
     uvLoadingIcon: function () {
-      return Promise.all(/*! import() | uni_modules/uv-loading-icon/components/uv-loading-icon/uv-loading-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-loading-icon/components/uv-loading-icon/uv-loading-icon")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-loading-icon/components/uv-loading-icon/uv-loading-icon.vue */ 605))
+      return Promise.all(/*! import() | uni_modules/uv-loading-icon/components/uv-loading-icon/uv-loading-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-loading-icon/components/uv-loading-icon/uv-loading-icon")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-loading-icon/components/uv-loading-icon/uv-loading-icon.vue */ 612))
     },
   }
 } catch (e) {

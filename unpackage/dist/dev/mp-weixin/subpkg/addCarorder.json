@@ -6,7 +6,7 @@
     "u-line": "/node-modules/uview-ui/components/u-line/u-line",
     "uv-datetime-picker": "/uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker",
     "uv-picker": "/uni_modules/uv-picker/components/uv-picker/uv-picker",
-    "uv-upload": "/uni_modules/uv-upload/components/uv-upload/uv-upload",
+    "myupload": "/components/myupload/myupload",
     "uv-checkbox-group": "/uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group",
     "uv-checkbox": "/uni_modules/uv-checkbox/components/uv-checkbox/uv-checkbox",
     "uni-section": "/uni_modules/uni-section/components/uni-section/uni-section",

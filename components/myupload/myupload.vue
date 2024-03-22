@@ -6,9 +6,9 @@
     </view>
     <view class="">
       <uv-upload accept="image"  ref="uploadWxImgRef" :fileList="fileList1" 
-      name="1" multiple :maxCount="1" @afterRead="afterRead"
-        @delete="deletePic" @oversize="overSize" maxSize="4,493,897" :useBeforeRead="true" 
-        width="100rpx" height="100rpx" :previewFullImage="true"></uv-upload>
+      name="1" multiple :maxCount="ImgMaxCount" @afterRead="afterRead"
+        @delete="deletePic" @oversize="overSize" :maxSize="ImgMaxSize" 
+        :width="ImageWidth" :height="ImageHeight" :previewFullImage="true"></uv-upload>
     </view>
   </view>
 </template>
@@ -20,6 +20,41 @@
       return {
          fileList1: [],
       };
+    },
+    props: {
+      ImageWidth: {
+        default: '100rpx',
+        type: String
+      },
+      ImageHeight: {
+        default: '100rpx',
+        type: String
+      },
+      ImgMaxSize: {
+        default: '4,493,897',
+        type: String
+      },
+      ImgMaxCount: {
+        default: 1,
+        type: Number
+      },
+      ImgRequestPath:{
+        default: 'QRcode',
+        type: String,
+      },
+      ImgUploadText:{
+        default: '',
+        type: String
+      },
+      TimeOut:{
+        default: 5000,
+        type: Number
+      }
+    },
+    watch:{
+      fileList1(val){
+        this.$emit("onChange", val);
+      }
     },
     methods:{
       fileList1Empty(){
@@ -40,18 +75,18 @@
       uploadFilePromise(url) {
         return new Promise((resolve, reject) => {
           let a = uni.uploadFile({
-            url: this.http + 'common/upload?path=QRcode',
+            url: this.http + 'common/upload?path=' + this.ImgRequestPath,
             filePath: url,
             name: 'file',
             formData: {
               user: 'test'
             },
-            timeout: 5000,
+            timeout: this.TimeOut,
             success: (res) => {
               console.log('上传成功', res.statusCode);
-              this.isUploadWximg = true
               let img = JSON.parse(res.data).data
-              this.resWximg = img
+              this.fileList1[0].resWximg = img
+
               resolve(200)
             },
             fail: (err) => {

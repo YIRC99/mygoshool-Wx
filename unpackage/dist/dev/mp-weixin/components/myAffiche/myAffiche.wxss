@@ -29,6 +29,7 @@
   border-radius: 10rpx;
   margin: 20rpx;
   padding: 5rpx 10rpx;
+  margin-top: 0;
   font-size: 30rpx;
 }
 .mynative text {

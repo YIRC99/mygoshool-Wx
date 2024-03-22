@@ -9,7 +9,6 @@ const http = 'http://192.168.192.210:33088/'
 // const http = 'http://116.62.146.1:33088/'
 // const http = 'http://192.168.1.110:33088/'
 
-
 const myOutTime = 5000
 Vue.prototype.avahttp = http + 'common/download?path=avatar&name='
 Vue.prototype.QRttp = http + 'common/download?path=QRcode&name='

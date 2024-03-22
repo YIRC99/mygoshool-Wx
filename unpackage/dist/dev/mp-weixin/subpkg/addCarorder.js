@@ -112,8 +112,8 @@ try {
     uvPicker: function () {
       return Promise.all(/*! import() | uni_modules/uv-picker/components/uv-picker/uv-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-picker/components/uv-picker/uv-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-picker/components/uv-picker/uv-picker.vue */ 459))
     },
-    uvUpload: function () {
-      return Promise.all(/*! import() | uni_modules/uv-upload/components/uv-upload/uv-upload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-upload/components/uv-upload/uv-upload")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-upload/components/uv-upload/uv-upload.vue */ 407))
+    myupload: function () {
+      return Promise.all(/*! import() | components/myupload/myupload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myupload/myupload")]).then(__webpack_require__.bind(null, /*! @/components/myupload/myupload.vue */ 723))
     },
     uvCheckboxGroup: function () {
       return Promise.all(/*! import() | uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group.vue */ 467))
@@ -199,45 +199,11 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 55));
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 57));
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+var _vue = __webpack_require__(/*! vue */ 25);
 //
 //
 //
@@ -367,11 +333,11 @@ var _default = {
       startDateTime: '点击选择出发时间',
       StartTimeValue: Number(new Date()),
       MinStartTimeValue: Number(new Date()),
-      startAddress: '点击选择出发地点',
+      startAddress: '点击选择出发地点1',
       //这里是地址名称 
       startAddressAll: '',
       //这是地址全称
-      endAddress: '点击选择目的地',
+      endAddress: '点击选择目的地1',
       endAddressAll: '',
       wechatAccount: '',
       phoneNumber: '',
@@ -392,9 +358,7 @@ var _default = {
       return this.wechatAccount.trim() == '' && !this.isUploadWximg;
     }
   },
-  onLoad: function onLoad() {
-    console.log(this.endDate);
-  },
+  onLoad: function onLoad() {},
   watch: {
     phoneNumber: function phoneNumber(newval, oldval) {
       var regex = /^1[3-9]\d{9}$/;
@@ -420,130 +384,21 @@ var _default = {
     }
   },
   methods: {
+    myonChange: function myonChange(e) {
+      console.log('子组件上传的回调', e);
+      this.fileList1 = e;
+    },
     clickUploadImgM: function clickUploadImgM() {
       if (this.fileList1.length >= 1) return;
       this.$refs.uploadWxImgRef.chooseFile();
     },
-    //上传方法
-    uploadFilePromise: function uploadFilePromise(url) {
-      var _this = this;
-      return new Promise(function (resolve, reject) {
-        var a = uni.uploadFile({
-          url: _this.http + 'common/upload?path=QRcode',
-          filePath: url,
-          name: 'file',
-          formData: {
-            user: 'test'
-          },
-          timeout: 5000,
-          success: function success(res) {
-            console.log('上传成功', res.statusCode);
-            _this.isUploadWximg = true;
-            var img = JSON.parse(res.data).data;
-            _this.resWximg = img;
-            resolve(200);
-          },
-          fail: function fail(err) {
-            console.log('上传失败', err);
-            resolve(400);
-          }
-        });
-      });
-    },
-    // 图片大小超出限制
-    overSize: function overSize() {
-      this.$refs.message.show({
-        type: 'error',
-        msg: '图片超过3MB大小'
-      });
-    },
-    // 新增图片
-    afterRead: function afterRead(event) {
-      var _this2 = this;
-      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
-        var lists, fileListLen, _loop, i;
-        return _regenerator.default.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                // 当设置 multiple 为 true 时, file 为数组格式，否则为对象格式
-                lists = [].concat(event.file);
-                fileListLen = _this2["fileList".concat(event.name)].length;
-                lists.map(function (item) {
-                  _this2["fileList".concat(event.name)].push(_objectSpread(_objectSpread({}, item), {}, {
-                    status: 'uploading',
-                    message: '上传中'
-                  }));
-                });
-                console.log(_this2.fileList1);
-                _loop = function _loop(i) {
-                  console.log('还没有调用上传方法', lists);
-                  uni.compressImage({
-                    src: lists[i].url,
-                    quality: 70,
-                    success: function () {
-                      var _success = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(res) {
-                        var result, item;
-                        return _regenerator.default.wrap(function _callee$(_context) {
-                          while (1) {
-                            switch (_context.prev = _context.next) {
-                              case 0:
-                                console.log(res.tempFilePath);
-                                console.log('压缩完成了');
-                                lists[i].url = res.tempFilePath;
-                                _context.next = 5;
-                                return _this2.uploadFilePromise(lists[i].url);
-                              case 5:
-                                result = _context.sent;
-                                item = _this2["fileList".concat(event.name)][fileListLen];
-                                if (result == 400) {
-                                  _this2["fileList".concat(event.name)].splice(fileListLen, 1, Object.assign(item, {
-                                    status: 'failed',
-                                    message: '请重传',
-                                    url: result
-                                  }));
-                                } else {
-                                  _this2["fileList".concat(event.name)].splice(fileListLen, 1, Object.assign(item, {
-                                    status: 'success',
-                                    message: '',
-                                    url: result
-                                  }));
-                                }
-                                fileListLen++;
-                              case 9:
-                              case "end":
-                                return _context.stop();
-                            }
-                          }
-                        }, _callee);
-                      }));
-                      function success(_x) {
-                        return _success.apply(this, arguments);
-                      }
-                      return success;
-                    }()
-                  });
-                };
-                for (i = 0; i < lists.length; i++) {
-                  _loop(i);
-                }
-              case 6:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2);
-      }))();
-    },
-    // 删除图片
-    deletePic: function deletePic(event) {
-      this["fileList".concat(event.name)].splice(event.index, 1);
-      this.isUploadWximg = false;
-    },
     postOrderData: function postOrderData() {
-      var _this3 = this;
+      var _this = this;
       var curUser = uni.getStorageSync('user');
       this.isLoading = true;
+      console.log(this.fileList1);
+      console.log('this.fileList1[0].resWximg', this.fileList1[0].resWximg);
+      debugger;
       this.post({
         url: 'carshareorder/add',
         data: {
@@ -562,19 +417,19 @@ var _default = {
           isafter: this.isAfter == true ? 1 : 0,
           aftertime: this.afterTime,
           remark: this.ideaText,
-          wechatImg: this.resWximg
+          wechatImg: this.fileList1[0].resWximg
         }
       }).then(function (res) {
-        _this3.isLoading = false;
+        _this.isLoading = false;
         if (res.code !== 200) {
-          _this3.afterAdd = true;
-          _this3.$refs.message.show({
+          _this.afterAdd = true;
+          _this.$refs.message.show({
             type: 'error',
             msg: '发布拼车失败 请稍候重试吧'
           });
           return;
         }
-        _this3.$refs.message.show({
+        _this.$refs.message.show({
           type: 'success',
           msg: '发布成功!'
         });
@@ -583,16 +438,16 @@ var _default = {
           uni.navigateBack();
         }, 500);
       }).catch(function (err) {
-        _this3.afterAdd = true;
-        _this3.isLoading = false;
-        _this3.$refs.message.show({
+        _this.afterAdd = true;
+        _this.isLoading = false;
+        _this.$refs.message.show({
           type: 'error',
           msg: '网络开了点小差,请稍候重试吧'
         });
       });
     },
     clickAddOrder: function clickAddOrder() {
-      var _this4 = this;
+      var _this2 = this;
       var isWriteResult = this.isWrite();
       console.log('isWriteResult', isWriteResult);
       if (!isWriteResult) return;
@@ -602,15 +457,15 @@ var _default = {
         tmplIds: ['R0HVPNJRywpmvaA5xO6YWFfjLdGqcjWPB0-rqRkmkbk'],
         success: function success(res) {
           console.log('用户消息同意情况', res);
-          _this4.postOrderData();
+          _this2.postOrderData();
         },
         fail: function fail(err) {
           console.log(err);
-          _this4.$refs.message.show({
+          _this2.$refs.message.show({
             type: 'warning',
             msg: '同意请求才可以及时收到拼车消息哦'
           });
-          _this4.postOrderData();
+          _this2.postOrderData();
         }
       });
     },
@@ -647,7 +502,7 @@ var _default = {
 
         return false;
       }
-      if (this.wechatAccount.trim() == '' && !this.isUploadWximg) {
+      if (this.wechatAccount.trim() == '' && this.fileList1.length == 0) {
         this.$refs.message.show({
           type: 'warning',
           //String 默认default
@@ -734,11 +589,11 @@ var _default = {
       return value;
     },
     choseEndAddress: function choseEndAddress() {
-      var _this5 = this;
+      var _this3 = this;
       uni.chooseLocation({
         success: function success(res) {
-          _this5.endAddress = res.name;
-          _this5.endAddressAll = res.address + res.name;
+          _this3.endAddress = res.name;
+          _this3.endAddressAll = res.address + res.name;
         },
         fail: function fail() {
           // 如果用uni.chooseLocation没有获取到地理位置，则需要获取当前的授权信息，判断是否有地理授权信息
@@ -796,11 +651,11 @@ var _default = {
       });
     },
     choseStartAddress: function choseStartAddress() {
-      var _this6 = this;
+      var _this4 = this;
       uni.chooseLocation({
         success: function success(res) {
-          _this6.startAddress = res.name;
-          _this6.startAddressAll = res.address + res.name;
+          _this4.startAddress = res.name;
+          _this4.startAddressAll = res.address + res.name;
         },
         fail: function fail() {
           // 如果用uni.chooseLocation没有获取到地理位置，则需要获取当前的授权信息，判断是否有地理授权信息

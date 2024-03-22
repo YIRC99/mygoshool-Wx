@@ -2,11 +2,12 @@
   <view style="padding: 20rpx;">
     <uni-section title="图片上传" type="line" titleFontSize="36rpx">
     </uni-section>
-    <view class="upload-box">
-      <uv-upload :fileList="fileList1" name="1" @oversize="overSize" maxSize="4,493,897" multiple :maxCount="9"
-        @afterRead="afterRead" @delete="deletePic" width="200rpx" height="200rpx" :previewFullImage="true"></uv-upload>
-    </view>
-
+    
+    
+    <myImgUpload @onChange="myonChange" ImgRequestPath="feedback"
+    ImageHeight="215rpx" ImageWidth="215rpx"
+    />
+    
     <uni-section title="意见填写" type="line" titleFontSize="36rpx">
     </uni-section>
     <view class="feed-box">
@@ -44,96 +45,12 @@
       }
     },
     methods: {
-      // 图片大小超出限制
-      overSize() {
-        this.$refs.message.show({
-          type: 'error',
-          msg: '图片超过3MB大小',
-        })
+      myonChange(e){
+        console.log('子组件上传的回调',e);
+        this.fileList1 = e
       },
-
-      uploadFilePromise(url) {
-        return new Promise((resolve, reject) => {
-          let a = uni.uploadFile({
-            url: this.http + 'common/upload?path=feedback',
-            filePath: url,
-            name: 'file',
-            formData: {
-              user: 'test'
-            },
-            timeout: 5000,
-            success: (res) => {
-              console.log('上传成功', JSON.parse(res.data));
-              let img = JSON.parse(res.data).data
-              if (this.imgString == '') this.imgString = img
-              else this.imgString = this.imgString + ',' + img
-              resolve(200)
-            },
-            fail: (err) => {
-              console.log('上传失败', err);
-              resolve(400)
-            }
-          });
-        })
-      },
-      // 新增图片
-      async afterRead(event) {
-        // 当设置 multiple 为 true 时, file 为数组格式，否则为对象格式
-        let lists = [].concat(event.file)
-        let fileListLen = this[`fileList${event.name}`].length
-        lists.map((item) => {
-          this[`fileList${event.name}`].push({
-            ...item,
-            status: 'uploading',
-            message: '上传中'
-          })
-        })
-        console.log(this.fileList1);
-        for (let i = 0; i < lists.length; i++) {
-          console.log('还没有调用上传方法', lists);
-          uni.compressImage({
-            src: lists[i].url,
-            quality: 70,
-            success: async res => {
-              console.log(res.tempFilePath)
-              console.log('压缩完成了');
-              lists[i].url = res.tempFilePath
-              const result = await this.uploadFilePromise(lists[i].url)
-              let item = this[`fileList${event.name}`][fileListLen]
-
-              if (result == 400) {
-                this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
-                  status: 'failed',
-                  message: '请重新上传',
-                  url: result
-                }))
-              } else {
-                this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
-                  status: 'success',
-                  message: '',
-                  url: result
-                }))
-              }
-              fileListLen++
-
-            }
-          })
-
-        }
-
-
-      },
-      // 删除图片
-      deletePic(event) {
-        this[`fileList${event.name}`].splice(event.index, 1)
-      },
-
-
 
       lgin() {
-        console.log(this.$uv.toast);
-        return
-
         if (this.mt.length == 0) {
           uni.showToast({
             title: '请输入意见',
@@ -207,10 +124,6 @@
     }
   }
 
-  .upload-box {
-    margin-top: 20rpx;
-    padding-left: calc((100vw - 660rpx) / 2);
-  }
 
   .down-box {
     display: flex;

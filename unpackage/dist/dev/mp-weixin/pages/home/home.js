@@ -112,8 +112,8 @@ try {
     uvModal: function () {
       return Promise.all(/*! import() | uni_modules/uv-modal/components/uv-modal/uv-modal */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-modal/components/uv-modal/uv-modal")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-modal/components/uv-modal/uv-modal.vue */ 399))
     },
-    uvUpload: function () {
-      return Promise.all(/*! import() | uni_modules/uv-upload/components/uv-upload/uv-upload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-upload/components/uv-upload/uv-upload")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-upload/components/uv-upload/uv-upload.vue */ 407))
+    myupload: function () {
+      return Promise.all(/*! import() | components/myupload/myupload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myupload/myupload")]).then(__webpack_require__.bind(null, /*! @/components/myupload/myupload.vue */ 723))
     },
   }
 } catch (e) {
@@ -229,17 +229,229 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 55));
 var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ 18));
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 57));
 var _mixin = _interopRequireDefault(__webpack_require__(/*! @/mixins/mixin.js */ 197));
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
-      resWximg: '',
       fileList1: [],
       isLoading: false,
       oneRefresh: false,
@@ -290,6 +502,10 @@ var _default = {
   },
   mixins: [_mixin.default],
   methods: {
+    myonChange: function myonChange(e) {
+      console.log('子组件上传的回调', e);
+      this.fileList1 = e;
+    },
     ToUserInfo: function ToUserInfo() {
       console.log('点击了 个人信息');
       uni.navigateTo({
@@ -311,131 +527,11 @@ var _default = {
         });
         return;
       }
-      this.fileList1 = [];
       this.receiveOrder();
     },
-    cancelWxImg: function cancelWxImg() {
+    clearWxImg: function clearWxImg() {
       this.fileList1 = [];
-    },
-    clickUploadImgM: function clickUploadImgM() {
-      if (this.fileList1.length >= 1) return;
-      this.$refs.uploadWxImgRef.chooseFile();
-    },
-    // 图片大小超出限制
-    overSize: function overSize() {
-      this.$refs.message.show({
-        type: 'error',
-        msg: '图片超过3MB大小'
-      });
-    },
-    //上传图片
-    uploadFilePromise: function uploadFilePromise(url) {
-      var _this = this;
-      return new Promise(function (resolve, reject) {
-        var a = uni.uploadFile({
-          url: _this.http + 'common/upload?path=QRcode',
-          filePath: url,
-          name: 'file',
-          formData: {
-            user: 'test'
-          },
-          timeout: 5000,
-          success: function success(res) {
-            console.log('上传成功', res.statusCode);
-            _this.isUploadWximg = true;
-            var img = JSON.parse(res.data).data;
-            _this.resWximg = img;
-            resolve(200);
-          },
-          fail: function fail(err) {
-            console.log('上传失败', err);
-            resolve(400);
-          }
-        });
-      });
-    },
-    // 新增图片
-    afterRead: function afterRead(event) {
-      var _this2 = this;
-      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
-        var lists, fileListLen, _loop, i;
-        return _regenerator.default.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                // 当设置 multiple 为 true 时, file 为数组格式，否则为对象格式
-                lists = [].concat(event.file);
-                fileListLen = _this2["fileList".concat(event.name)].length;
-                lists.map(function (item) {
-                  _this2["fileList".concat(event.name)].push(_objectSpread(_objectSpread({}, item), {}, {
-                    status: 'uploading',
-                    message: '上传中'
-                  }));
-                });
-                console.log(_this2.fileList1);
-                _loop = function _loop(i) {
-                  console.log('还没有调用上传方法', lists);
-                  uni.compressImage({
-                    src: lists[i].url,
-                    quality: 70,
-                    success: function () {
-                      var _success = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(res) {
-                        var result, item;
-                        return _regenerator.default.wrap(function _callee$(_context) {
-                          while (1) {
-                            switch (_context.prev = _context.next) {
-                              case 0:
-                                console.log(res.tempFilePath);
-                                console.log('压缩完成了');
-                                lists[i].url = res.tempFilePath;
-                                _context.next = 5;
-                                return _this2.uploadFilePromise(lists[i].url);
-                              case 5:
-                                result = _context.sent;
-                                item = _this2["fileList".concat(event.name)][fileListLen];
-                                if (result == 400) {
-                                  _this2["fileList".concat(event.name)].splice(fileListLen, 1, Object.assign(item, {
-                                    status: 'failed',
-                                    message: '请重新上传',
-                                    url: result
-                                  }));
-                                } else {
-                                  _this2["fileList".concat(event.name)].splice(fileListLen, 1, Object.assign(item, {
-                                    status: 'success',
-                                    message: '',
-                                    url: result
-                                  }));
-                                }
-                                fileListLen++;
-                              case 9:
-                              case "end":
-                                return _context.stop();
-                            }
-                          }
-                        }, _callee);
-                      }));
-                      function success(_x) {
-                        return _success.apply(this, arguments);
-                      }
-                      return success;
-                    }()
-                  });
-                };
-                for (i = 0; i < lists.length; i++) {
-                  _loop(i);
-                }
-              case 6:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2);
-      }))();
-    },
-    // 删除图片
-    deletePic: function deletePic(event) {
-      this["fileList".concat(event.name)].splice(event.index, 1);
-      this.isUploadWximg = false;
+      this.$refs.myWxUpload.fileList1Empty();
     },
     viewWxImg: function viewWxImg() {
       var img = this.QRttp + this.currentOrder.wechatImg;
@@ -483,13 +579,13 @@ var _default = {
       this.$refs.calendars.open();
     },
     copyWx: function copyWx() {
-      var _this3 = this;
+      var _this = this;
       uni.setClipboardData({
         data: this.currentOrder.wechataccount || this.currentOrder.phonenumber,
         complete: function complete(res) {
           console.log('点击复制的结果', res);
-          _this3.$refs.receivePopup.close();
-          _this3.closeReceivePopup();
+          _this.$refs.receivePopup.close();
+          _this.closeReceivePopup();
         }
       });
     },
@@ -508,39 +604,42 @@ var _default = {
       this.$refs.modal.open();
     },
     receiveOrder: function receiveOrder() {
-      var _this4 = this;
+      var _this2 = this;
       var user = uni.getStorageSync('user');
       this.isLoading = true;
+      console.log(this.fileList1);
+      debugger;
       this.post({
         url: 'carshareorder/receive',
         data: {
           orderid: this.currentOrder.orderid,
           receiveuserid: user.openid,
           createuserid: this.currentOrder.createuserid,
-          receiveUserWechatImg: this.resWximg
+          receiveUserWechatImg: this.fileList1[0].resWximg
         }
       }).then(function (res) {
         console.log(res);
+        _this2.clearWxImg();
         if (res.code != 200) {
-          _this4.$refs.message.show({
+          _this2.$refs.message.show({
             type: 'error',
             msg: '订单已被接受或失效',
             iconSize: 16
           });
-          _this4.popupShow = false;
-          _this4.isLoading = false;
-          _this4.$refs.popup.close();
-          _this4.scrollPullDown();
+          _this2.popupShow = false;
+          _this2.isLoading = false;
+          _this2.$refs.popup.close();
+          _this2.scrollPullDown();
           return;
         }
-        _this4.isLoading = false;
-        _this4.scrollPullDown();
-        _this4.$refs.popup.close();
-        _this4.$refs.receivePopup.open();
+        _this2.isLoading = false;
+        _this2.scrollPullDown();
+        _this2.$refs.popup.close();
+        _this2.$refs.receivePopup.open();
       }).catch(function (err) {
         console.log('home page is', err);
-        _this4.isRefresh = false;
-        _this4.$refs.message.show({
+        _this2.isRefresh = false;
+        _this2.$refs.message.show({
           type: 'error',
           msg: '网络开了点小差,请稍候重试吧',
           iconSize: 16
@@ -549,7 +648,7 @@ var _default = {
       });
     },
     getOrderList: function getOrderList() {
-      var _this5 = this;
+      var _this3 = this;
       var isPullDown = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
       if (isPullDown) this.list[this.currentIndex].pageNum = 1;
       this.post({
@@ -563,8 +662,8 @@ var _default = {
       }).then(function (res) {
         console.log(res.data);
         if (res.code != 200) {
-          _this5.isRefresh = false;
-          _this5.$refs.message.show({
+          _this3.isRefresh = false;
+          _this3.$refs.message.show({
             type: 'error',
             //String 默认default
             msg: '网络开了点小差,请稍候重试吧',
@@ -574,7 +673,7 @@ var _default = {
 
           return;
         }
-        _this5.list[_this5.currentIndex].pagetotal = res.data.total;
+        _this3.list[_this3.currentIndex].pagetotal = res.data.total;
         res.data.records.forEach(function (item) {
           if (item.startaddressall.indexOf('濂溪校区') != -1) {
             item.startaddress = '九职大' + item.startaddress.slice(6, 9999);
@@ -584,32 +683,32 @@ var _default = {
         });
         // 下拉刷新 跟 触底分页加载时不同的
         if (isPullDown) {
-          if (_this5.currentIndex == 0) {
-            _this5.newSchoolList = [];
-            _this5.newSchoolList = res.data.records;
-          } else if (_this5.currentIndex == 1) {
-            _this5.oldSchoolList = [];
-            _this5.oldSchoolList = res.data.records;
-          } else if (_this5.currentIndex == 2) {
-            _this5.otherAddressList = [];
-            _this5.otherAddressList = res.data.records;
+          if (_this3.currentIndex == 0) {
+            _this3.newSchoolList = [];
+            _this3.newSchoolList = res.data.records;
+          } else if (_this3.currentIndex == 1) {
+            _this3.oldSchoolList = [];
+            _this3.oldSchoolList = res.data.records;
+          } else if (_this3.currentIndex == 2) {
+            _this3.otherAddressList = [];
+            _this3.otherAddressList = res.data.records;
           }
         } else {
           console.log('获取信息是的方式是触底分页加载');
-          if (_this5.currentIndex == 0) {
-            _this5.newSchoolList = [].concat((0, _toConsumableArray2.default)(_this5.newSchoolList), (0, _toConsumableArray2.default)(res.data.records));
-          } else if (_this5.currentIndex == 1) {
-            _this5.oldSchoolList = [].concat((0, _toConsumableArray2.default)(_this5.oldSchoolList), (0, _toConsumableArray2.default)(res.data.records));
-          } else if (_this5.currentIndex == 2) {
-            _this5.otherAddressList = [].concat((0, _toConsumableArray2.default)(_this5.otherAddressList), (0, _toConsumableArray2.default)(res.data.records));
+          if (_this3.currentIndex == 0) {
+            _this3.newSchoolList = [].concat((0, _toConsumableArray2.default)(_this3.newSchoolList), (0, _toConsumableArray2.default)(res.data.records));
+          } else if (_this3.currentIndex == 1) {
+            _this3.oldSchoolList = [].concat((0, _toConsumableArray2.default)(_this3.oldSchoolList), (0, _toConsumableArray2.default)(res.data.records));
+          } else if (_this3.currentIndex == 2) {
+            _this3.otherAddressList = [].concat((0, _toConsumableArray2.default)(_this3.otherAddressList), (0, _toConsumableArray2.default)(res.data.records));
           }
         }
-        _this5.isRefresh = false;
+        _this3.isRefresh = false;
         console.log('下拉刷新结束了');
       }).catch(function (err) {
         console.log('home page is', err);
-        _this5.isRefresh = false;
-        _this5.$refs.message.show({
+        _this3.isRefresh = false;
+        _this3.$refs.message.show({
           type: 'error',
           msg: '网络开了点小差,请稍候重试吧',
           iconSize: 16
@@ -674,10 +773,10 @@ var _default = {
       }
     },
     myonshow: function myonshow() {
-      var _this6 = this;
+      var _this4 = this;
       uni.$once('addUpdate', function () {
         // console.log('监听到了 添加之后 返回页面');
-        _this6.scrollPullDown();
+        _this4.scrollPullDown();
       });
       // console.log('拼车页面的myonshow方法触发了');
       this.simulateSwipeDown();

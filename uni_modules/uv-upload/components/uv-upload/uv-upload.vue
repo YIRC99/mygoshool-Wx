@@ -360,6 +360,7 @@
   $uv-upload-disabled-opacity: .5 !default;
   
   /deep/.uv-upload__button__text{
+    text-align: center !important;
     display: flex !important;
     justify-content: center !important;
     width: 90% !important;

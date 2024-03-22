@@ -3,7 +3,7 @@
   "enablePullDownRefresh": false,
   "usingComponents": {
     "uni-section": "/uni_modules/uni-section/components/uni-section/uni-section",
-    "uv-upload": "/uni_modules/uv-upload/components/uv-upload/uv-upload",
+    "my-img-upload": "/components/myImgUpload/myImgUpload",
     "quick-message": "/components/quick-message/quick-message"
   }
 }

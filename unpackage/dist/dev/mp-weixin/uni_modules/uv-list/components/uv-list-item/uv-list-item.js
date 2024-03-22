@@ -80,13 +80,13 @@ var components
 try {
   components = {
     uvIcon: function () {
-      return Promise.all(/*! import() | uni_modules/uv-icon/components/uv-icon/uv-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-icon/components/uv-icon/uv-icon")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-icon/components/uv-icon/uv-icon.vue */ 588))
+      return Promise.all(/*! import() | uni_modules/uv-icon/components/uv-icon/uv-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-icon/components/uv-icon/uv-icon")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-icon/components/uv-icon/uv-icon.vue */ 595))
     },
     uvBadge: function () {
-      return Promise.all(/*! import() | uni_modules/uv-badge/components/uv-badge/uv-badge */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-badge/components/uv-badge/uv-badge")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-badge/components/uv-badge/uv-badge.vue */ 628))
+      return Promise.all(/*! import() | uni_modules/uv-badge/components/uv-badge/uv-badge */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-badge/components/uv-badge/uv-badge")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-badge/components/uv-badge/uv-badge.vue */ 635))
     },
     uvSwitch: function () {
-      return Promise.all(/*! import() | uni_modules/uv-switch/components/uv-switch/uv-switch */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-switch/components/uv-switch/uv-switch")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-switch/components/uv-switch/uv-switch.vue */ 635))
+      return Promise.all(/*! import() | uni_modules/uv-switch/components/uv-switch/uv-switch */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-switch/components/uv-switch/uv-switch")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-switch/components/uv-switch/uv-switch.vue */ 642))
     },
   }
 } catch (e) {

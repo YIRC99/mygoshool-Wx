@@ -32,10 +32,6 @@
   color: #F6A385;
   line-height: 40rpx;
 }
-.upload-box {
-  margin-top: 20rpx;
-  padding-left: calc((100vw - 660rpx) / 2);
-}
 .down-box {
   display: flex;
   justify-content: center;

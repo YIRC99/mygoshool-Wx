@@ -34,6 +34,7 @@ view.data-v-2e4c50f9, scroll-view.data-v-2e4c50f9, swiper-item.data-v-2e4c50f9 {
   align-content: flex-start;
 }
 .data-v-2e4c50f9 .uv-upload__button__text {
+  text-align: center !important;
   display: flex !important;
   justify-content: center !important;
   width: 90% !important;

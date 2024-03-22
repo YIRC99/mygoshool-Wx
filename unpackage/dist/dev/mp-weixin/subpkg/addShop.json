@@ -4,7 +4,10 @@
   "usingComponents": {
     "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
     "uv-textarea": "/uni_modules/uv-textarea/components/uv-textarea/uv-textarea",
-    "uv-upload": "/uni_modules/uv-upload/components/uv-upload/uv-upload",
+    "my-img-upload": "/components/myImgUpload/myImgUpload",
+    "uni-section": "/uni_modules/uni-section/components/uni-section/uni-section",
+    "uv-tags": "/uni_modules/uv-tags/components/uv-tags/uv-tags",
+    "myupload": "/components/myupload/myupload",
     "uv-picker": "/uni_modules/uv-picker/components/uv-picker/uv-picker",
     "quick-message": "/components/quick-message/quick-message"
   }

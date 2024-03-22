@@ -25,8 +25,15 @@
 /* 透明度 */
 /* 文章场景相关 */
 .page {
-  background-color: #F7F7F7;
   height: 100vh;
+}
+.mychooseTimeBox {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+.mychooseTimeBox .uv-page__tag-item {
+  margin: 0 10rpx;
 }
 .myitem {
   display: flex;
@@ -56,9 +63,5 @@
   line-height: 1.4;
   /* 或者设置为具体的较小值 */
   display: inline-block;
-}
-.upload-box {
-  margin-top: 30rpx;
-  padding-left: 15rpx;
 }
 

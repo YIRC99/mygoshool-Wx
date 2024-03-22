@@ -9,36 +9,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "subpkg/addCarorder",
+          "name": "发起拼车",
           "pathName": "subpkg/addCarorder",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "subpkg/myinfo",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "添加",
-          "pathName": "subpkg/addCarorder",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "subpkg/myinfo",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "subpkg/feedback",
           "query": "",
           "launchMode": "default",
           "scene": null
@@ -74,6 +46,13 @@
         {
           "name": "发布闲置",
           "pathName": "subpkg/addShop",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "意见反馈",
+          "pathName": "subpkg/feedback",
           "query": "",
           "launchMode": "default",
           "scene": null
