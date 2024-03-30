@@ -81,9 +81,13 @@
             formData: {
               user: 'test'
             },
+            header:{
+              'Authorization' : 'uni.uploadFile122123123',
+            },
             timeout: this.TimeOut,
             success: (res) => {
-              console.log('上传成功', res.statusCode);
+              console.log('测试 header ');
+              console.log('上传成功1111', res.statusCode);
               let img = JSON.parse(res.data).data
               this.fileList1[0].resWximg = img
 

@@ -25,7 +25,8 @@ wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 _vue.default.use(_uviewUi.default);
 // const http = 'http://192.168.1.13:33088/'
 // const http = 'http://127.0.0.1:33088/'
-var http = 'http://192.168.192.210:33088/';
+// const http = 'http://192.168.192.210:33088/'
+var http = 'http://192.168.1.114:33088/';
 // const http = 'http://116.62.146.1:33088/'
 // const http = 'http://192.168.1.110:33088/'
 
@@ -60,7 +61,8 @@ _vue.default.prototype.get = function (opt) {
       url: http + opt.url,
       method: 'GET',
       header: {
-        authorization: uni.getStorageSync("token")
+        // authorization : uni.getStorageSync("token")
+        authorization: 'mytoken'
       },
       timeout: myOutTime,
       data: opt.data,
@@ -81,7 +83,8 @@ _vue.default.prototype.put = function (opt) {
       url: http + opt.url,
       method: 'PUT',
       header: {
-        authorization: uni.getStorageSync("token")
+        // authorization: uni.getStorageSync("token")
+        authorization: 'mytoken'
       },
       timeout: myOutTime,
       data: opt.data,
@@ -102,7 +105,8 @@ _vue.default.prototype.post = function (opt) {
       url: http + opt.url,
       method: 'POST',
       header: {
-        authorization: uni.getStorageSync("token")
+        // authorization :uni.getStorageSync("token")
+        authorization: 'mytoken'
       },
       timeout: myOutTime,
       data: opt.data,

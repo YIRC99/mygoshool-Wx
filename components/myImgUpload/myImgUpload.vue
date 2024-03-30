@@ -74,6 +74,9 @@
             formData: {
               user: 'test'
             },
+            header:{
+              'Authorization' : uni.getStorageSync("token"),
+            },
             timeout: this.TimeOut,
             success: (res) => {
               console.log('上传成功', JSON.parse(res.data));

@@ -5,7 +5,8 @@ import uView from "uview-ui";
 Vue.use(uView);
 // const http = 'http://192.168.1.13:33088/'
 // const http = 'http://127.0.0.1:33088/'
-const http = 'http://192.168.192.210:33088/'
+// const http = 'http://192.168.192.210:33088/'
+const http = 'http://192.168.1.114:33088/'
 // const http = 'http://116.62.146.1:33088/'
 // const http = 'http://192.168.1.110:33088/'
 
@@ -40,9 +41,10 @@ Vue.prototype.get =(opt) =>{
 			url: http + opt.url,
 			method: 'GET',
 			header:{
-				authorization :uni.getStorageSync("token")
+				// authorization : uni.getStorageSync("token")
+				authorization : 'mytoken'
 			},
-          timeout:myOutTime,
+      timeout:myOutTime,
 			data: opt.data,
 			success: res => {
 				a(res.data)
@@ -61,7 +63,9 @@ Vue.prototype.put =(opt) =>{
 			url: http + opt.url,
 			method: 'PUT',
 			header:{
-				authorization :uni.getStorageSync("token")
+				// authorization: uni.getStorageSync("token")
+				authorization : 'mytoken'
+        
 			},
       timeout:myOutTime,
 			data: opt.data,
@@ -83,7 +87,8 @@ Vue.prototype.post =(opt) =>{
 			url: http + opt.url,
 			method: 'POST',
 			header:{
-				authorization :uni.getStorageSync("token")
+				// authorization :uni.getStorageSync("token")
+				authorization : 'mytoken'
 			},
       timeout: myOutTime,
 			data: opt.data,
