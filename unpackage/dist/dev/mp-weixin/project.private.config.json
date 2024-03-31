@@ -56,6 +56,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "闲置详情",
+          "pathName": "subpkg/shopDetail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

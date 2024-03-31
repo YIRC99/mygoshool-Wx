@@ -25,8 +25,8 @@ wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 _vue.default.use(_uviewUi.default);
 // const http = 'http://192.168.1.13:33088/'
 // const http = 'http://127.0.0.1:33088/'
-// const http = 'http://192.168.192.210:33088/'
-var http = 'http://192.168.1.114:33088/';
+// const http = 'http://192.168.192.210:33088/' //手机热点
+var http = 'http://192.168.1.104:33088/'; //305wifi
 // const http = 'http://116.62.146.1:33088/'
 // const http = 'http://192.168.1.110:33088/'
 

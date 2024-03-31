@@ -1,0 +1,1 @@
+<view class="page"><view style="background-color:#F7F7F7;width:100vw;height:1rpx;"></view><view class="mycard"><view class="myheaderbox"><view class="left"><image class="myavatar" src="../static/logo.png" mode></image></view><view class="right"><view class="name">一见如初</view><view class="sub">濂溪校区</view></view></view></view><view class="mycard"></view></view>

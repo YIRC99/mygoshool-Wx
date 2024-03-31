@@ -35,6 +35,33 @@
 .mychooseTimeBox .uv-page__tag-item {
   margin: 0 10rpx;
 }
+.down-box {
+  height: 200rpx;
+}
+.down-box .btn-grad {
+  background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
+  margin: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  width: 350rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: absolute;
+  right: 30rpx;
+  margin-bottom: 50rpx;
+}
+.down-box .btn-grad:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
 .myitem {
   display: flex;
   justify-content: space-between;

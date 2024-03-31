@@ -608,7 +608,6 @@ var _default = {
       var user = uni.getStorageSync('user');
       this.isLoading = true;
       console.log(this.fileList1);
-      debugger;
       this.post({
         url: 'carshareorder/receive',
         data: {

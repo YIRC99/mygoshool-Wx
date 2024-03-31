@@ -24,45 +24,36 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.myicon {
-  width: 40rpx;
-  height: 40rpx;
+.page {
+  background-color: #F7F7F7;
+  width: 100vw;
+  height: 100vh;
+}
+.mycard {
+  border-radius: 20rpx;
+  background: linear-gradient(315deg, #e6e6e6, #ffffff);
+  box-shadow: -21rpx -21rpx 42rpx #e6e6e6, 21rpx 21rpx 42rpx #ffffff;
+  padding: 20rpx;
+  margin: 30rpx 20rpx;
+}
+.myheaderbox {
+  display: flex;
+  align-items: center;
+}
+.myheaderbox .left {
   margin-right: 30rpx;
 }
-.beforeWxImgBox {
-  display: flex;
-  justify-content: space-between;
-  align-content: flex-end;
-  align-items: center;
-  position: relative;
-  height: 120rpx;
+.myheaderbox .left .myavatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
 }
-.beforeWxImgBox .beforclose {
-  width: 40rpx;
-  height: 40rpx;
-  position: absolute;
-  top: 0;
-  right: 10rpx;
+.myheaderbox .right .name {
+  font-size: 36rpx;
+  font-weight: bold;
 }
-.beforeWxImgBox .beforeText {
-  flex: 1;
-  font-size: 32rpx;
-}
-.beforeWxImgBox .beforeImg {
-  width: 95rpx;
-  height: 95rpx;
-  margin-right: 20rpx;
-}
-.uploadWxImgBox {
-  display: flex;
-  flex-direction: column;
-}
-.uploadWxImg {
-  display: flex;
-  align-items: center;
-  padding: 15rpx 0;
-  padding-top: 0;
-  justify-content: space-between;
-  font-size: 32rpx;
+.myheaderbox .right .sub {
+  font-size: 28rpx;
+  color: #5f6466;
 }
 

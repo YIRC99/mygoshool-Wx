@@ -162,8 +162,9 @@
   color: #303133;
 }
 .waterfall-item__ft__desc .value.data-v-28de0044 {
-  font-size: 28rpx;
-  color: #606266;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #F26666;
 }
 .waterfall-item__ft__btn.data-v-28de0044 {
   padding: 10px 0;

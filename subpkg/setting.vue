@@ -70,7 +70,7 @@
           })
           .exec((res) => {
             console.log('昵称 createSelectorQuery', res[0].value)
-            _this.info.useraname = res[0].value
+            _this.info.username = res[0].value
             console.log('_this.info.useraname res[0].value', this.info.username);
           })
       },

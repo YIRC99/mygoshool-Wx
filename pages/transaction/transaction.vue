@@ -35,16 +35,16 @@
               <!-- 为了磨平部分平台的BUG，必须套一层view -->
               <view>
 
-                <view v-for="(item, index) in list1" :key="item.id" class="waterfall-item">
+                <view v-for="(item, index) in list1" :key="item.id" @click="ToShopDetail" class="waterfall-item">
                   <view class="waterfall-item__image">
                     <image lazy-load :src="item.image" mode="widthFix" style="width: 100%;"></image>
                   </view>
                   <view class="waterfall-item__ft">
                     <view class="waterfall-item__ft__title">
-                      <text class="value">{{item.title}}</text>
+                      <text class="value uv-line-2">小米t302牙刷刷头全新没有用过小米t302牙刷刷头全新没有用过小米t302牙刷刷头全新没有用过</text>
                     </view>
                     <view class="waterfall-item__ft__desc uv-line-2">
-                      <text class="value">{{item.desc}}</text>
+                      <text class="value">￥15</text>
                     </view>
                   </view>
                 </view>
@@ -121,6 +121,11 @@
        }
     },
     methods: {
+      ToShopDetail(){
+        uni.navigateTo({
+          url: '/subpkg/shopDetail'
+        })
+      },
       myScroll(e) {
         // console.log('old  ',this.myOldScrollPosition);
         // console.log('new   ',this.myScrollPosition);
@@ -361,8 +366,9 @@
     }
 
     &__desc .value {
-      font-size: 28rpx;
-      color: #606266;
+      font-size: 32rpx;
+      font-weight: bold;
+      color: #F26666;
     }
 
     &__btn {

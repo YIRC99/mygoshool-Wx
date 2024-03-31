@@ -398,7 +398,6 @@ var _default = {
       this.isLoading = true;
       console.log(this.fileList1);
       console.log('this.fileList1[0].resWximg', this.fileList1[0].resWximg);
-      debugger;
       this.post({
         url: 'carshareorder/add',
         data: {

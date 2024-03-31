@@ -96,7 +96,7 @@
 
     <quick-message ref="message"></quick-message>
     <zero-loading v-if="isLoading" type="circle" :mask="true" maskOpacity="0.1"></zero-loading>
-<ws-wx-privacy id="privacy-popup" :enableAutoProtocol="true"></ws-wx-privacy>
+    <ws-wx-privacy id="privacy-popup" :enableAutoProtocol="true"></ws-wx-privacy>
   </view>
 </template>
 
@@ -195,7 +195,6 @@ import { callWithErrorHandling } from "vue";
         this.isLoading = true
         console.log(this.fileList1);
         console.log('this.fileList1[0].resWximg',this.fileList1[0].resWximg);
-        debugger
         this.post({
           url: 'carshareorder/add',
           data: {

@@ -117,6 +117,14 @@
             "navigationBarTitleText" : "发布闲置",
             "enablePullDownRefresh" : false
           }
+        },
+        {
+          "path" : "shopDetail",
+          "style" : 
+          {
+            "navigationBarTitleText" : "闲置详情",
+            "enablePullDownRefresh" : false
+          }
         }
       ]
     }

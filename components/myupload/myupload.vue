@@ -1,25 +1,48 @@
 <template>
-  <view class="uploadWxImg" @click="clickUploadImgM">
-    <view class="" style="display: flex; align-items: center;">
-      <image src="@/static/weixin.png" class="myicon" mode=""></image>
-      <view class="" style="margin-right: 20rpx;">点击上传微信二维码图片</view>
+  <view class="uploadWxImgBox">
+    <view class="beforeWxImgBox" v-if="showBefor">
+      <view class="" style="display: flex; flex: 1;" @click="chooseBeforImg">
+        <image src="@/static/huifu.png" class="myicon" mode=""></image>
+        <view class="beforeText">选择上次的图片</view>
+      </view>
+      <view class="" @click="closebeforImg">
+        <image class="beforclose" src="../../static/close.png" ></image>
+      </view>
+      <view class="" @click="shwoBeforImg">
+        <image class="beforeImg" :src="QRttp + beforeImg"></image>
+      </view>
     </view>
-    <view class="">
-      <uv-upload accept="image"  ref="uploadWxImgRef" :fileList="fileList1" 
-      name="1" multiple :maxCount="ImgMaxCount" @afterRead="afterRead"
-        @delete="deletePic" @oversize="overSize" :maxSize="ImgMaxSize" 
-        :width="ImageWidth" :height="ImageHeight" :previewFullImage="true"></uv-upload>
+    <view class="uploadWxImg" @click="clickUploadImgM">
+      <view class="" style="display: flex; align-items: center;">
+        <image src="@/static/weixin.png" class="myicon" mode=""></image>
+        <view class="" style="margin-right: 20rpx;">点击上传微信二维码图片</view>
+      </view>
+      <view class="">
+        <uv-upload accept="image"  ref="uploadWxImgRef" :fileList="fileList1" 
+        name="1" multiple :maxCount="ImgMaxCount" @afterRead="afterRead"
+          @delete="deletePic" @oversize="overSize" :maxSize="ImgMaxSize" 
+          :width="ImageWidth" :height="ImageHeight" :previewFullImage="true"></uv-upload>
+      </view>
     </view>
   </view>
+
 </template>
 
 <script>
+  import mixin from '@/mixins/mixin.js'
   export default {
+     mixins:[mixin],
     name:"myupload",
     data() {
       return {
-         fileList1: [],
+        showBefor: false,
+        beforeImg: '',
+        fileList1: [],
       };
+    },
+    created() {
+      console.log('我是组件生命周期');
+      this.initWxImg()
     },
     props: {
       ImageWidth: {
@@ -57,6 +80,43 @@
       }
     },
     methods:{
+      chooseBeforImg(){
+        this.fileList1.push({
+          resWximg: this.beforeImg,
+          size: 1,
+          thumb: this.QRttp + this.beforeImg,
+          status: "success",
+          type: 'image',
+          url: '200'
+        })
+        this.showBefor = false
+      },
+      shwoBeforImg(){
+        uni.previewImage({
+          urls: [this.QRttp + this.beforeImg]
+        })
+      },
+      closebeforImg(){
+        this.showBefor = false
+      },
+      async initWxImg(){
+        let user = uni.getStorageSync('user')
+        console.log('user.userWxImg',user.userWxImg);
+        if(user.userWxImg != null && user.userWxImg != ''){
+          // 直接设置图片地址
+          console.log('true');
+          this.beforeImg = user.userWxImg
+          this.showBefor = true
+        }else{
+          // 尝试请求一下图片地址
+          let res = await this.get({url: 'user/wxImg?userid='+ user.userid})
+          if(res.code == 200 && res.data != null){
+            this.beforeImg = res.data
+            this.showBefor = true
+          }
+          console.log(res);
+        }
+      },
       fileList1Empty(){
         this.fileList1 = []
       },
@@ -90,7 +150,7 @@
               console.log('上传成功1111', res.statusCode);
               let img = JSON.parse(res.data).data
               this.fileList1[0].resWximg = img
-
+              this.showBefor = false
               resolve(200)
             },
             fail: (err) => {
@@ -157,10 +217,48 @@
 </script>
 
 <style lang="scss">
+  .myicon {
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 30rpx;
+  }
+  
+  .beforeWxImgBox{
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
+    align-items: center;
+    position: relative;
+    height: 120rpx;
+    .beforclose{
+      width: 40rpx;
+      height: 40rpx;
+      position: absolute;
+      top: 0;
+      right: 10rpx;
+    }
+    .beforeText{
+      flex: 1;
+      font-size: 32rpx;
+    }
+    .beforeImg{
+      width: 95rpx;
+      height: 95rpx;
+      margin-right: 20rpx;
+    }
+  }
+  
+  
+  .uploadWxImgBox{
+    display: flex;
+    flex-direction: column;
+  }
+  
 .uploadWxImg {
     display: flex;
     align-items: center;
     padding: 15rpx 0;
+    padding-top: 0;
     justify-content: space-between;
     font-size: 32rpx;
   }

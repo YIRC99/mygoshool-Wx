@@ -8,7 +8,7 @@
       <myImgUpload @onChange="myonChange" ImgUploadText="清晰图片更容易出手哦~"
       ImageHeight="180rpx" ImageWidth="180rpx" ImgRequestPath="shop"/>
         
-      <uni-section title="未售出自动下架时间" type="line">
+      <uni-section title="自动下架时间" type="line">
       </uni-section>
       <view class="mychooseTimeBox">
         <view class="uv-page__tag-item" v-for="(item, index) in radios" :key="index">
@@ -38,8 +38,20 @@
           {{dealAdd}}
         </view>
       </view>
+      
+      <view class="myitem"  style="padding-top: 30rpx; border: none;">
+        <view class="left">
+          <text>联系方式</text>
+        </view>
+        
+      </view>
+      
       <myupload/>
     </uni-card>
+    
+    <view class="down-box">
+      <button class="btn-grad" form-type="submit" @click="clickAddOrder">发布闲置</button>
+    </view>
 
     <uv-picker ref="AddressPicker" :columns="columns" @confirm="confirm"></uv-picker>
     <quick-message ref="message"></quick-message>
@@ -103,6 +115,39 @@
       margin: 0 10rpx;
     }
   }
+  
+  .down-box {
+    height: 200rpx;
+  
+    .btn-grad {
+      background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
+      margin: 10px;
+      // padding: 15px 45px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: white;
+      box-shadow: 0 0 20px #eee;
+      border-radius: 10px;
+      display: block;
+      width: 350rpx;
+      height: 80rpx;
+      line-height: 80rpx;
+      position: absolute;
+      right: 30rpx;
+      margin-bottom: 50rpx;
+    }
+  
+    .btn-grad:hover {
+      background-position: right center;
+      /* change the direction of the change here */
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  
+  
 
   .myitem {
     display: flex;
