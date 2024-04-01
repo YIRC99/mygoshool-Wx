@@ -103,25 +103,25 @@ var components
 try {
   components = {
     uvTabs: function () {
-      return Promise.all(/*! import() | uni_modules/uv-tabs/components/uv-tabs/uv-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-tabs/components/uv-tabs/uv-tabs")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-tabs/components/uv-tabs/uv-tabs.vue */ 513))
+      return Promise.all(/*! import() | uni_modules/uv-tabs/components/uv-tabs/uv-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-tabs/components/uv-tabs/uv-tabs")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-tabs/components/uv-tabs/uv-tabs.vue */ 521))
     },
     uvList: function () {
-      return Promise.all(/*! import() | uni_modules/uv-list/components/uv-list/uv-list */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-list/components/uv-list/uv-list")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-list/components/uv-list/uv-list.vue */ 522))
+      return Promise.all(/*! import() | uni_modules/uv-list/components/uv-list/uv-list */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-list/components/uv-list/uv-list")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-list/components/uv-list/uv-list.vue */ 530))
     },
     uvListItem: function () {
-      return Promise.all(/*! import() | uni_modules/uv-list/components/uv-list-item/uv-list-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-list/components/uv-list-item/uv-list-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-list/components/uv-list-item/uv-list-item.vue */ 529))
+      return Promise.all(/*! import() | uni_modules/uv-list/components/uv-list-item/uv-list-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-list/components/uv-list-item/uv-list-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-list/components/uv-list-item/uv-list-item.vue */ 537))
     },
     uvTags: function () {
-      return Promise.all(/*! import() | uni_modules/uv-tags/components/uv-tags/uv-tags */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-tags/components/uv-tags/uv-tags")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-tags/components/uv-tags/uv-tags.vue */ 425))
+      return Promise.all(/*! import() | uni_modules/uv-tags/components/uv-tags/uv-tags */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-tags/components/uv-tags/uv-tags")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-tags/components/uv-tags/uv-tags.vue */ 433))
     },
     myEmppty: function () {
-      return Promise.all(/*! import() | components/myEmppty/myEmppty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myEmppty/myEmppty")]).then(__webpack_require__.bind(null, /*! @/components/myEmppty/myEmppty.vue */ 365))
+      return Promise.all(/*! import() | components/myEmppty/myEmppty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myEmppty/myEmppty")]).then(__webpack_require__.bind(null, /*! @/components/myEmppty/myEmppty.vue */ 373))
     },
     zeroLoading: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/zero-loading/components/zero-loading/zero-loading */ "uni_modules/zero-loading/components/zero-loading/zero-loading").then(__webpack_require__.bind(null, /*! @/uni_modules/zero-loading/components/zero-loading/zero-loading.vue */ 330))
+      return __webpack_require__.e(/*! import() | uni_modules/zero-loading/components/zero-loading/zero-loading */ "uni_modules/zero-loading/components/zero-loading/zero-loading").then(__webpack_require__.bind(null, /*! @/uni_modules/zero-loading/components/zero-loading/zero-loading.vue */ 338))
     },
     quickMessage: function () {
-      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 301))
+      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 309))
     },
   }
 } catch (e) {
@@ -197,7 +197,7 @@ exports.default = void 0;
 var _mixin = _interopRequireDefault(__webpack_require__(/*! @/mixins/mixin.js */ 197));
 var mylist = function mylist() {
   __webpack_require__.e(/*! require.ensure | components/mylist/mylist */ "components/mylist/mylist").then((function () {
-    return resolve(__webpack_require__(/*! @/components/mylist/mylist.vue */ 323));
+    return resolve(__webpack_require__(/*! @/components/mylist/mylist.vue */ 331));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {

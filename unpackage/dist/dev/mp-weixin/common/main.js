@@ -25,8 +25,8 @@ wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 _vue.default.use(_uviewUi.default);
 // const http = 'http://192.168.1.13:33088/'
 // const http = 'http://127.0.0.1:33088/'
-// const http = 'http://192.168.192.210:33088/' //手机热点
-var http = 'http://192.168.1.104:33088/'; //305wifi
+var http = 'http://192.168.192.210:33088/'; //手机热点
+// const http = 'http://192.168.1.104:33088/' //305wifi
 // const http = 'http://116.62.146.1:33088/'
 // const http = 'http://192.168.1.110:33088/'
 
@@ -135,7 +135,7 @@ _vue.default.filter('fromStartDateTime', function (value) {
 _vue.default.use(_uvUiTools.default);
 var message = function message() {
   Promise.all(/*! require.ensure | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then((function () {
-    return resolve(__webpack_require__(/*! @/components/quick-message/quick-message.vue */ 301));
+    return resolve(__webpack_require__(/*! @/components/quick-message/quick-message.vue */ 309));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 _vue.default.component('quick-message', message);

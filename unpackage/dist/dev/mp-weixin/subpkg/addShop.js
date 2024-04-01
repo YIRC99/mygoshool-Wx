@@ -101,28 +101,37 @@ var components
 try {
   components = {
     uniCard: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 371))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 379))
     },
     uvTextarea: function () {
-      return Promise.all(/*! import() | uni_modules/uv-textarea/components/uv-textarea/uv-textarea */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-textarea/components/uv-textarea/uv-textarea")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-textarea/components/uv-textarea/uv-textarea.vue */ 487))
+      return Promise.all(/*! import() | uni_modules/uv-textarea/components/uv-textarea/uv-textarea */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-textarea/components/uv-textarea/uv-textarea")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-textarea/components/uv-textarea/uv-textarea.vue */ 495))
     },
     myImgUpload: function () {
-      return Promise.all(/*! import() | components/myImgUpload/myImgUpload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myImgUpload/myImgUpload")]).then(__webpack_require__.bind(null, /*! @/components/myImgUpload/myImgUpload.vue */ 480))
+      return Promise.all(/*! import() | components/myImgUpload/myImgUpload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myImgUpload/myImgUpload")]).then(__webpack_require__.bind(null, /*! @/components/myImgUpload/myImgUpload.vue */ 488))
     },
     uniSection: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 385))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 393))
     },
     uvTags: function () {
-      return Promise.all(/*! import() | uni_modules/uv-tags/components/uv-tags/uv-tags */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-tags/components/uv-tags/uv-tags")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-tags/components/uv-tags/uv-tags.vue */ 425))
+      return Promise.all(/*! import() | uni_modules/uv-tags/components/uv-tags/uv-tags */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-tags/components/uv-tags/uv-tags")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-tags/components/uv-tags/uv-tags.vue */ 433))
     },
     myupload: function () {
-      return Promise.all(/*! import() | components/myupload/myupload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myupload/myupload")]).then(__webpack_require__.bind(null, /*! @/components/myupload/myupload.vue */ 407))
+      return Promise.all(/*! import() | components/myupload/myupload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myupload/myupload")]).then(__webpack_require__.bind(null, /*! @/components/myupload/myupload.vue */ 415))
+    },
+    uvModal: function () {
+      return Promise.all(/*! import() | uni_modules/uv-modal/components/uv-modal/uv-modal */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-modal/components/uv-modal/uv-modal")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-modal/components/uv-modal/uv-modal.vue */ 407))
     },
     uvPicker: function () {
-      return Promise.all(/*! import() | uni_modules/uv-picker/components/uv-picker/uv-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-picker/components/uv-picker/uv-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-picker/components/uv-picker/uv-picker.vue */ 456))
+      return Promise.all(/*! import() | uni_modules/uv-picker/components/uv-picker/uv-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-picker/components/uv-picker/uv-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-picker/components/uv-picker/uv-picker.vue */ 464))
+    },
+    uvToast: function () {
+      return Promise.all(/*! import() | uni_modules/uv-toast/components/uv-toast/uv-toast */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-toast/components/uv-toast/uv-toast")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-toast/components/uv-toast/uv-toast.vue */ 740))
     },
     quickMessage: function () {
-      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 301))
+      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 309))
+    },
+    zeroLoading: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/zero-loading/components/zero-loading/zero-loading */ "uni_modules/zero-loading/components/zero-loading/zero-loading").then(__webpack_require__.bind(null, /*! @/uni_modules/zero-loading/components/zero-loading/zero-loading.vue */ 338))
     },
   }
 } catch (e) {
@@ -179,12 +188,15 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(uni) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+//
+//
+//
 //
 //
 //
@@ -261,18 +273,124 @@ var _default = {
       dealAdd: '交易地点',
       shopDetailTest: '',
       fileList1: [],
-      columns: [['濂溪校区', '十里校区', '其他']]
+      wxFile: [],
+      columns: [['濂溪校区', '鹤问湖校区', '其他']],
+      shopPrice: '0',
+      modalText: '',
+      isFree: false,
+      chooseTimeIndex: 0,
+      isLoading: false,
+      chooseAddressIndex: 0
     };
   },
   methods: {
+    joinImgPath: function joinImgPath(arr) {
+      var resultPath = '';
+      arr.forEach(function (i) {
+        console.log(i.resWximg);
+      });
+    },
+    postShop: function postShop() {
+      var curUser = uni.getStorageSync('user');
+      this.isLoading = true;
+      this.post({
+        url: 'shop/add',
+        data: {
+          detail: this.shopDetailTest,
+          price: this.shopPrice,
+          address: this.chooseAddressIndex,
+          imgs: '',
+          createuserid: curUser.openid,
+          wechatimg: ''
+        }
+      });
+    },
+    wxUpload: function wxUpload(e) {
+      this.wxFile = e;
+      console.log('微信上传组件的回调this.wxFile', this.wxFile);
+    },
+    modalConfirm: function modalConfirm() {
+      this.isFree = true;
+      this.$refs.toast.show({
+        type: 'success',
+        icon: false,
+        duration: 4000,
+        position: 'top',
+        message: "感谢您的慷慨和善意，您的行为温暖了人心！"
+      });
+    },
+    isWrite: function isWrite() {
+      if (this.shopDetailTest.trim() == '') {
+        this.$refs.message.show({
+          type: 'warning',
+          msg: '请描述一下物品吧~'
+        });
+        return false;
+      }
+      if (this.fileList1.length == 0) {
+        this.$refs.message.show({
+          type: 'warning',
+          msg: '至少一张图片描述一下物品吧~'
+        });
+        return false;
+      }
+      if (this.dealAdd == '交易地点') {
+        this.$refs.message.show({
+          type: 'warning',
+          msg: '请选择交易地点吧'
+        });
+        return;
+      }
+      if (this.wxFile.length == 0) {
+        this.$refs.message.show({
+          type: 'warning',
+          msg: '请上传联系方式吧~'
+        });
+        return false;
+      }
+      for (var i = 0; i < this.fileList1.length; i++) {
+        console.log(this.fileList1[i].status);
+        if (this.fileList1[i].status != 'success') {
+          this.$refs.message.show({
+            type: 'error',
+            msg: '有未上传成功的图片,请删除或重试吧',
+            iconSize: 16
+          });
+          return;
+        }
+      }
+      var priceRegex = /^(0|[1-9]\d*)(\.\d{1,2})?$/;
+      if (!priceRegex.test(this.shopPrice)) {
+        this.$refs.message.show({
+          type: 'warning',
+          msg: '请输入正确的价格哦~'
+        });
+        return false;
+      }
+      if (this.shopPrice == 0 && this.isFree == false) {
+        this.modalText = '请问确定以0元的价格免费送吗';
+        this.$refs.modal.open();
+        return true;
+      }
+      return true;
+    },
+    clickAddShop: function clickAddShop() {
+      console.log(this.fileList1);
+      var isWriteResult = this.isWrite();
+      console.log('isWriteResult', isWriteResult);
+      if (!isWriteResult) return;
+      this.shopDetailTest = this.shopDetailTest.replace(/\n/g, '<br/>');
+      this.postShop();
+    },
     myonChange: function myonChange(e) {
-      console.log('子组件上传的回调', e);
       this.fileList1 = e;
+      console.log('子组件上传的回调', this.fileList1);
     },
     radioClick: function radioClick(name) {
       this.radios.map(function (item, index) {
         item.checked = index === name ? true : false;
       });
+      this.chooseTimeIndex = name;
     },
     showAPicker: function showAPicker() {
       this.$refs.AddressPicker.open();
@@ -280,10 +398,13 @@ var _default = {
     confirm: function confirm(e) {
       console.log(e);
       this.dealAdd = e.value[0];
+      this.chooseAddressIndex = e.indexs[0];
+      console.log('this.chooseAddressIndex', this.chooseAddressIndex);
     }
   }
 };
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

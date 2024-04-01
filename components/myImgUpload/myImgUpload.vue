@@ -83,6 +83,7 @@
               let img = JSON.parse(res.data).data
               if (this.imgString == '') this.imgString = img
               else this.imgString = this.imgString + ',' + img
+              this.fileList1[0].resWximg = img
               resolve(200)
             },
             fail: (err) => {

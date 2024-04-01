@@ -41,7 +41,8 @@
         fileList1: [],
         imgString: '',
         mt: '',
-        placeholderText: '请填写您遇到的问题或建议,配合图片我们可以更快处理~'
+        placeholderText: '请填写您遇到的问题或建议,配合图片我们可以更快处理~',
+        ispost: false
       }
     },
     methods: {
@@ -51,13 +52,19 @@
       },
 
       lgin() {
+        if(this.ispost)return 
+        this.ispost = true
+        
         if (this.mt.length == 0) {
           uni.showToast({
             title: '请输入意见',
             icon: 'none'
           })
+          this.ispost = false
           return
         }
+        
+        
         for (var i = 0; i < this.fileList1.length; i++) {
           console.log(this.fileList1[i].status);
           if (this.fileList1[i].status != 'success') {
@@ -66,9 +73,11 @@
               msg: '有未上传成功的图片,请删除或重试吧',
               iconSize: 16,
             })
+            this.ispost = false
             return
           }
         }
+        
 
         let openid = uni.getStorageSync('user').openid
         this.post({
@@ -86,6 +95,7 @@
               msg: '反馈失败,请稍候重试吧',
               iconSize: 16,
             })
+            this.ispost = false
             return
           }
           this.$refs.message.show({
@@ -104,6 +114,7 @@
             msg: '网络开了点小差,请稍候重试吧',
             iconSize: 16,
           })
+          this.ispost = false
           this.isloading = false
         })
 

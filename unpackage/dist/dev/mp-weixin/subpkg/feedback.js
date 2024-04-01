@@ -101,13 +101,13 @@ var components
 try {
   components = {
     uniSection: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 385))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 393))
     },
     myImgUpload: function () {
-      return Promise.all(/*! import() | components/myImgUpload/myImgUpload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myImgUpload/myImgUpload")]).then(__webpack_require__.bind(null, /*! @/components/myImgUpload/myImgUpload.vue */ 480))
+      return Promise.all(/*! import() | components/myImgUpload/myImgUpload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myImgUpload/myImgUpload")]).then(__webpack_require__.bind(null, /*! @/components/myImgUpload/myImgUpload.vue */ 488))
     },
     quickMessage: function () {
-      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 301))
+      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 309))
     },
   }
 } catch (e) {
@@ -221,7 +221,8 @@ var _default = {
       fileList1: [],
       imgString: '',
       mt: '',
-      placeholderText: '请填写您遇到的问题或建议,配合图片我们可以更快处理~'
+      placeholderText: '请填写您遇到的问题或建议,配合图片我们可以更快处理~',
+      ispost: false
     };
   },
   methods: {
@@ -231,11 +232,14 @@ var _default = {
     },
     lgin: function lgin() {
       var _this = this;
+      if (this.ispost) return;
+      this.ispost = true;
       if (this.mt.length == 0) {
         uni.showToast({
           title: '请输入意见',
           icon: 'none'
         });
+        this.ispost = false;
         return;
       }
       for (var i = 0; i < this.fileList1.length; i++) {
@@ -246,6 +250,7 @@ var _default = {
             msg: '有未上传成功的图片,请删除或重试吧',
             iconSize: 16
           });
+          this.ispost = false;
           return;
         }
       }
@@ -265,6 +270,7 @@ var _default = {
             msg: '反馈失败,请稍候重试吧',
             iconSize: 16
           });
+          _this.ispost = false;
           return;
         }
         _this.$refs.message.show({
@@ -282,6 +288,7 @@ var _default = {
           msg: '网络开了点小差,请稍候重试吧',
           iconSize: 16
         });
+        _this.ispost = false;
         _this.isloading = false;
       });
     }

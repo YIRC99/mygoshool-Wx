@@ -25,12 +25,12 @@
           <text>价格</text>
         </view>
         <view class="right">
-          <input type="number" maxlength="6" placeholder-class="myinputCss" placeholder="价格"
+          <input type="digit"  v-model="shopPrice" maxlength="6" placeholder-class="myinputCss" placeholder="价格"
             style="text-align: right; " />
           <p>￥</p>
         </view>
       </view>
-      <view class="myitem" @click="showAPicker" style="padding-top: 30rpx; border: none;">
+      <view class="myitem" @click="showAPicker" style="padding-top: 30rpx; ">
         <view class="left">
           <text>交易地点</text>
         </view>
@@ -43,18 +43,21 @@
         <view class="left">
           <text>联系方式</text>
         </view>
-        
       </view>
       
-      <myupload/>
+      <myupload @onChange="wxUpload"/>
     </uni-card>
     
     <view class="down-box">
-      <button class="btn-grad" form-type="submit" @click="clickAddOrder">发布闲置</button>
+      <button class="btn-grad" form-type="submit" @click="clickAddShop">发布闲置</button>
     </view>
-
+    
+    
+    <uv-modal ref="modal" width="500rpx" showCancelButton :content='modalText' @confirm="modalConfirm"></uv-modal>
     <uv-picker ref="AddressPicker" :columns="columns" @confirm="confirm"></uv-picker>
+    <uv-toast ref="toast"></uv-toast>
     <quick-message ref="message"></quick-message>
+    <zero-loading v-if="isLoading" type="circle" :mask="true" maskOpacity="0.1"></zero-loading>
   </view>
 </template>
 
@@ -75,20 +78,132 @@
         dealAdd: '交易地点',
         shopDetailTest: '',
         fileList1: [],
+        wxFile: [],
         columns: [
-          ['濂溪校区', '十里校区', '其他']
-        ]
+          ['濂溪校区', '鹤问湖校区', '其他']
+        ],
+        shopPrice: '0',
+        modalText: '',
+        isFree: false,
+        chooseTimeIndex: 0,
+        isLoading: false,
+        chooseAddressIndex: 0
       };
     },
     methods: {
+      joinImgPath(arr){
+        let resultPath = ''
+        arr.forEach(i => {
+          console.log(i.resWximg);
+        })
+      },
+      postShop(){
+        let curUser = uni.getStorageSync('user')
+        this.isLoading = true
+        this.post({
+          url: 'shop/add',
+          data:{
+            detail: this.shopDetailTest,
+            price: this.shopPrice,
+            address: this.chooseAddressIndex,
+            imgs: '',
+            createuserid: curUser.openid,
+            wechatimg: ''
+          }
+        })
+      },
+      wxUpload(e){
+        this.wxFile = e
+        console.log('微信上传组件的回调this.wxFile',this.wxFile);
+      },
+      modalConfirm(){
+        this.isFree = true
+        this.$refs.toast.show({
+          type: 'success',
+          icon: false,
+          duration: 4000,
+          position: 'top',
+          message: "感谢您的慷慨和善意，您的行为温暖了人心！"
+        })
+      },
+      isWrite(){
+        if (this.shopDetailTest.trim() == '') {
+          this.$refs.message.show({
+            type: 'warning', 
+            msg: '请描述一下物品吧~', 
+          })
+          return false
+        }
+        if (this.fileList1.length == 0) {
+          this.$refs.message.show({
+            type: 'warning', 
+            msg: '至少一张图片描述一下物品吧~', 
+          })
+          return false
+        }
+        if(this.dealAdd == '交易地点'){
+          this.$refs.message.show({
+            type: 'warning', 
+            msg: '请选择交易地点吧', 
+          })
+          return
+        }
+        if (this.wxFile.length == 0) {
+          this.$refs.message.show({
+            type: 'warning', 
+            msg: '请上传联系方式吧~', 
+          })
+          return false
+        }
+        
+        for (var i = 0; i < this.fileList1.length; i++) {
+          console.log(this.fileList1[i].status);
+          if (this.fileList1[i].status != 'success') {
+            this.$refs.message.show({
+              type: 'error',
+              msg: '有未上传成功的图片,请删除或重试吧',
+              iconSize: 16,
+            })
+            return
+          }
+        }
+        
+        
+        
+        const priceRegex = /^(0|[1-9]\d*)(\.\d{1,2})?$/;
+        if (!priceRegex.test(this.shopPrice)) {
+          this.$refs.message.show({
+            type: 'warning', 
+            msg: '请输入正确的价格哦~', 
+          })
+          return false
+        }
+        if(this.shopPrice == 0 && this.isFree == false){
+          this.modalText = '请问确定以0元的价格免费送吗'
+          this.$refs.modal.open()
+          return true
+        }
+        
+        
+        return true
+      },
+      clickAddShop(){
+        console.log(this.fileList1);
+        const isWriteResult = this.isWrite()
+        console.log('isWriteResult', isWriteResult);
+        if (!isWriteResult) return
+        this.shopDetailTest = this.shopDetailTest.replace(/\n/g,'<br/>');
+        this.postShop()
+      },
       myonChange(e){
-        console.log('子组件上传的回调',e);
         this.fileList1 = e
+        console.log('子组件上传的回调',this.fileList1);
       },
       radioClick(name) {
         this.radios.map((item, index) => {
           item.checked = index === name ? true : false
         })
+        this.chooseTimeIndex = name
       },
       showAPicker() {
         this.$refs.AddressPicker.open();
@@ -96,6 +211,8 @@
       confirm(e) {
         console.log(e);
         this.dealAdd = e.value[0]
+        this.chooseAddressIndex = e.indexs[0]
+        console.log('this.chooseAddressIndex',this.chooseAddressIndex);
       },
     }
   }
