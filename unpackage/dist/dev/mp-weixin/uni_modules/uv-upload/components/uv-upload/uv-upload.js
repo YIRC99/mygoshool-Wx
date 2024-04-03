@@ -80,13 +80,13 @@ var components
 try {
   components = {
     uvIcon: function () {
-      return Promise.all(/*! import() | uni_modules/uv-icon/components/uv-icon/uv-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-icon/components/uv-icon/uv-icon")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-icon/components/uv-icon/uv-icon.vue */ 610))
+      return Promise.all(/*! import() | uni_modules/uv-icon/components/uv-icon/uv-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-icon/components/uv-icon/uv-icon")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-icon/components/uv-icon/uv-icon.vue */ 617))
     },
     uvLoadingIcon: function () {
-      return Promise.all(/*! import() | uni_modules/uv-loading-icon/components/uv-loading-icon/uv-loading-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-loading-icon/components/uv-loading-icon/uv-loading-icon")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-loading-icon/components/uv-loading-icon/uv-loading-icon.vue */ 627))
+      return Promise.all(/*! import() | uni_modules/uv-loading-icon/components/uv-loading-icon/uv-loading-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-loading-icon/components/uv-loading-icon/uv-loading-icon")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-loading-icon/components/uv-loading-icon/uv-loading-icon.vue */ 634))
     },
     uvPreviewVideo: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uv-upload/components/uv-preview-video/uv-preview-video */ "uni_modules/uv-upload/components/uv-preview-video/uv-preview-video").then(__webpack_require__.bind(null, /*! @/uni_modules/uv-upload/components/uv-preview-video/uv-preview-video.vue */ 643))
+      return __webpack_require__.e(/*! import() | uni_modules/uv-upload/components/uv-preview-video/uv-preview-video */ "uni_modules/uv-upload/components/uv-preview-video/uv-preview-video").then(__webpack_require__.bind(null, /*! @/uni_modules/uv-upload/components/uv-preview-video/uv-preview-video.vue */ 650))
     },
   }
 } catch (e) {

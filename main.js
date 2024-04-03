@@ -3,12 +3,9 @@ import App from './App'
 
 import uView from "uview-ui";
 Vue.use(uView);
-// const http = 'http://192.168.1.13:33088/'
-// const http = 'http://127.0.0.1:33088/'
 const http = 'http://192.168.192.210:33088/' //手机热点
-// const http = 'http://192.168.1.104:33088/' //305wifi
-// const http = 'http://116.62.146.1:33088/'
-// const http = 'http://192.168.1.110:33088/'
+// const http = 'http://192.168.1.113:33088/' //305wifi
+// const http = 'http://172.20.10.196:33088/' //宿舍wifi
 
 const myOutTime = 5000
 Vue.prototype.avahttp = http + 'common/download?path=avatar&name='
@@ -35,6 +32,10 @@ Vue.prototype.subYear = (str) => {
     const minute = match[5].padStart(2, '0');
     return `${month}-${day} ${hour}:${minute}`;
 };
+
+
+
+
 Vue.prototype.get =(opt) =>{
 	 return new Promise((a,b)=>{
 		uni.request({
@@ -113,6 +114,11 @@ Vue.filter('fromStartDateTime', (value) => {
   return newDateTime
 })
 
+Vue.filter('formHtmlStr', (value) => {
+  if(value == undefined) return ''
+  // 使用正则表达式去除 HTML 标签
+  return value.replace(/<[^>]*>/g, '');
+})
 
 
 

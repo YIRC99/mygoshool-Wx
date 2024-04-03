@@ -125,7 +125,7 @@ try {
       return Promise.all(/*! import() | uni_modules/uv-picker/components/uv-picker/uv-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-picker/components/uv-picker/uv-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-picker/components/uv-picker/uv-picker.vue */ 464))
     },
     uvToast: function () {
-      return Promise.all(/*! import() | uni_modules/uv-toast/components/uv-toast/uv-toast */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-toast/components/uv-toast/uv-toast")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-toast/components/uv-toast/uv-toast.vue */ 740))
+      return Promise.all(/*! import() | uni_modules/uv-toast/components/uv-toast/uv-toast */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-toast/components/uv-toast/uv-toast")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-toast/components/uv-toast/uv-toast.vue */ 544))
     },
     quickMessage: function () {
       return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 309))
@@ -275,34 +275,92 @@ var _default = {
       fileList1: [],
       wxFile: [],
       columns: [['濂溪校区', '鹤问湖校区', '其他']],
-      shopPrice: '0',
+      shopPrice: '',
       modalText: '',
       isFree: false,
       chooseTimeIndex: 0,
       isLoading: false,
-      chooseAddressIndex: 0
+      chooseAddressIndex: 0,
+      ispost: false
     };
   },
   methods: {
+    chooseCancelTime: function chooseCancelTime(index) {
+      var currentDate = new Date();
+      // 根据index增加相应的时间
+      switch (index) {
+        case 0:
+          currentDate.setDate(currentDate.getDate() + 7); // 增加一天（即明天）
+          currentDate.setHours(0, 0, 0, 0); // 设置时间为0点（即凌晨）
+          break;
+        case 1:
+          currentDate.setDate(currentDate.getDate() + 30); // 增加30天
+          currentDate.setHours(0, 0, 0, 0); // 设置时间为0点（即凌晨）
+          break;
+        case 2:
+          currentDate.setFullYear(currentDate.getFullYear() + 100); // 增加100年
+          currentDate.setHours(0, 0, 0, 0); // 设置时间为0点（即凌晨）
+          break;
+        default:
+          currentDate.setDate(currentDate.getDate() + 7); // 增加一天（即明天）
+          currentDate.setHours(0, 0, 0, 0);
+        // 设置时间为0点（即凌晨）
+      }
+
+      currentDate = currentDate.toISOString().slice(0, 10).replace(/-/g, '-') + 'T' + currentDate.toTimeString().split(' ')[0];
+      return currentDate;
+    },
     joinImgPath: function joinImgPath(arr) {
       var resultPath = '';
+      console.log('for 循环之前', arr);
       arr.forEach(function (i) {
         console.log(i.resWximg);
+        if (resultPath != '') {
+          resultPath = resultPath + ',' + i.resWximg;
+        } else {
+          resultPath = i.resWximg;
+        }
       });
+      return resultPath;
     },
     postShop: function postShop() {
+      var _this = this;
       var curUser = uni.getStorageSync('user');
       this.isLoading = true;
+      var imgs = this.joinImgPath(this.fileList1);
+      var resultShopDetail = this.shopDetailTest.replace(/\n/g, '<br/>');
       this.post({
         url: 'shop/add',
         data: {
-          detail: this.shopDetailTest,
+          detail: resultShopDetail,
           price: this.shopPrice,
           address: this.chooseAddressIndex,
-          imgs: '',
+          imgs: imgs,
           createuserid: curUser.openid,
-          wechatimg: ''
+          wechatimg: this.wxFile[0].resWximg,
+          cancelTime: this.chooseCancelTime(this.chooseTimeIndex)
         }
+      }).then(function (res) {
+        console.log(res);
+        _this.isLoading = false;
+        if (res.code != 200) {
+          _this.ispost = false;
+          _this.$refs.message.show({
+            type: 'error',
+            msg: '网络开了点小差,请稍候重试吧'
+          });
+        }
+        _this.$refs.message.show({
+          type: 'success',
+          msg: '发布成功'
+        });
+      }).catch(function (err) {
+        _this.isLoading = false;
+        _this.ispost = false;
+        _this.$refs.message.show({
+          type: 'error',
+          msg: '网络开了点小差,请稍候重试吧'
+        });
       });
     },
     wxUpload: function wxUpload(e) {
@@ -311,10 +369,12 @@ var _default = {
     },
     modalConfirm: function modalConfirm() {
       this.isFree = true;
+      this.ispost = false;
       this.$refs.toast.show({
         type: 'success',
         icon: false,
         duration: 4000,
+        overlay: false,
         position: 'top',
         message: "感谢您的慷慨和善意，您的行为温暖了人心！"
       });
@@ -327,11 +387,16 @@ var _default = {
         });
         return false;
       }
-      if (this.fileList1.length == 0) {
-        this.$refs.message.show({
-          type: 'warning',
-          msg: '至少一张图片描述一下物品吧~'
-        });
+      //调用子组件判空方法
+      var isenpty = this.$refs.myimgupload.isEnpty();
+      console.log('调用子组件判空方法', isenpty);
+      if (!isenpty) {
+        return false;
+      }
+      // 调用组件内部的判断方法 检查是不是全部上传成功了
+      var isupdate = this.$refs.myimgupload.isAllupdate();
+      console.log('调用子组件判断上传状态', isupdate);
+      if (!isupdate) {
         return false;
       }
       if (this.dealAdd == '交易地点') {
@@ -348,17 +413,6 @@ var _default = {
         });
         return false;
       }
-      for (var i = 0; i < this.fileList1.length; i++) {
-        console.log(this.fileList1[i].status);
-        if (this.fileList1[i].status != 'success') {
-          this.$refs.message.show({
-            type: 'error',
-            msg: '有未上传成功的图片,请删除或重试吧',
-            iconSize: 16
-          });
-          return;
-        }
-      }
       var priceRegex = /^(0|[1-9]\d*)(\.\d{1,2})?$/;
       if (!priceRegex.test(this.shopPrice)) {
         this.$refs.message.show({
@@ -370,16 +424,19 @@ var _default = {
       if (this.shopPrice == 0 && this.isFree == false) {
         this.modalText = '请问确定以0元的价格免费送吗';
         this.$refs.modal.open();
-        return true;
+        return this.isFree;
       }
       return true;
     },
     clickAddShop: function clickAddShop() {
-      console.log(this.fileList1);
+      if (this.ispost) return;
+      this.ispost = true;
       var isWriteResult = this.isWrite();
       console.log('isWriteResult', isWriteResult);
-      if (!isWriteResult) return;
-      this.shopDetailTest = this.shopDetailTest.replace(/\n/g, '<br/>');
+      if (!isWriteResult) {
+        this.ispost = false;
+        return;
+      }
       this.postShop();
     },
     myonChange: function myonChange(e) {

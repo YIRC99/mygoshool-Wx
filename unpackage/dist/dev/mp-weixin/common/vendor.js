@@ -22544,7 +22544,8 @@ var mixin = {
   data: function data() {
     return {
       avahttp: this.http + 'common/download?path=avatar&name=',
-      QRttp: this.http + 'common/download?path=QRcode&name='
+      QRttp: this.http + 'common/download?path=QRcode&name=',
+      shophttp: this.http + 'common/download?path=shop&name='
     };
   },
   methods: {
@@ -26153,7 +26154,14 @@ exports.default = _default2;
 /* 560 */,
 /* 561 */,
 /* 562 */,
-/* 563 */
+/* 563 */,
+/* 564 */,
+/* 565 */,
+/* 566 */,
+/* 567 */,
+/* 568 */,
+/* 569 */,
+/* 570 */
 /*!*****************************************************************************!*\
   !*** F:/CodeFile/pingCar/node_modules/uview-ui/components/u-badge/props.js ***!
   \*****************************************************************************/
@@ -26243,14 +26251,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 564 */,
-/* 565 */,
-/* 566 */,
-/* 567 */,
-/* 568 */,
-/* 569 */,
-/* 570 */,
-/* 571 */
+/* 571 */,
+/* 572 */,
+/* 573 */,
+/* 574 */,
+/* 575 */,
+/* 576 */,
+/* 577 */,
+/* 578 */
 /*!*********************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-toolbar/components/uv-toolbar/props.js ***!
   \*********************************************************************************/
@@ -26312,13 +26320,6 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 572 */,
-/* 573 */,
-/* 574 */,
-/* 575 */,
-/* 576 */,
-/* 577 */,
-/* 578 */,
 /* 579 */,
 /* 580 */,
 /* 581 */,
@@ -26326,7 +26327,14 @@ exports.default = _default;
 /* 583 */,
 /* 584 */,
 /* 585 */,
-/* 586 */
+/* 586 */,
+/* 587 */,
+/* 588 */,
+/* 589 */,
+/* 590 */,
+/* 591 */,
+/* 592 */,
+/* 593 */
 /*!*********************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-overlay/components/uv-overlay/props.js ***!
   \*********************************************************************************/
@@ -26373,14 +26381,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 587 */,
-/* 588 */,
-/* 589 */,
-/* 590 */,
-/* 591 */,
-/* 592 */,
-/* 593 */,
-/* 594 */
+/* 594 */,
+/* 595 */,
+/* 596 */,
+/* 597 */,
+/* 598 */,
+/* 599 */,
+/* 600 */,
+/* 601 */
 /*!*************************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-transition/components/uv-transition/createAnimation.js ***!
   \*************************************************************************************************/
@@ -26514,12 +26522,12 @@ function createAnimation(option, _this) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 595 */,
-/* 596 */,
-/* 597 */,
-/* 598 */,
-/* 599 */,
-/* 600 */
+/* 602 */,
+/* 603 */,
+/* 604 */,
+/* 605 */,
+/* 606 */,
+/* 607 */
 /*!***************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-status-bar/components/uv-status-bar/props.js ***!
   \***************************************************************************************/
@@ -26544,13 +26552,6 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 601 */,
-/* 602 */,
-/* 603 */,
-/* 604 */,
-/* 605 */,
-/* 606 */,
-/* 607 */,
 /* 608 */,
 /* 609 */,
 /* 610 */,
@@ -26558,7 +26559,14 @@ exports.default = _default;
 /* 612 */,
 /* 613 */,
 /* 614 */,
-/* 615 */
+/* 615 */,
+/* 616 */,
+/* 617 */,
+/* 618 */,
+/* 619 */,
+/* 620 */,
+/* 621 */,
+/* 622 */
 /*!***************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-icon/components/uv-icon/icons.js ***!
   \***************************************************************************/
@@ -26735,7 +26743,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 616 */
+/* 623 */
 /*!***************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-icon/components/uv-icon/props.js ***!
   \***************************************************************************/
@@ -26847,14 +26855,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 617 */,
-/* 618 */,
-/* 619 */,
-/* 620 */,
-/* 621 */,
-/* 622 */,
-/* 623 */,
-/* 624 */
+/* 624 */,
+/* 625 */,
+/* 626 */,
+/* 627 */,
+/* 628 */,
+/* 629 */,
+/* 630 */,
+/* 631 */
 /*!***************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-line/components/uv-line/props.js ***!
   \***************************************************************************/
@@ -26910,14 +26918,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 625 */,
-/* 626 */,
-/* 627 */,
-/* 628 */,
-/* 629 */,
-/* 630 */,
-/* 631 */,
-/* 632 */
+/* 632 */,
+/* 633 */,
+/* 634 */,
+/* 635 */,
+/* 636 */,
+/* 637 */,
+/* 638 */,
+/* 639 */
 /*!*******************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-loading-icon/components/uv-loading-icon/props.js ***!
   \*******************************************************************************************/
@@ -27006,14 +27014,14 @@ exports.default = _default2;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 633 */,
-/* 634 */,
-/* 635 */,
-/* 636 */,
-/* 637 */,
-/* 638 */,
-/* 639 */,
-/* 640 */
+/* 640 */,
+/* 641 */,
+/* 642 */,
+/* 643 */,
+/* 644 */,
+/* 645 */,
+/* 646 */,
+/* 647 */
 /*!*******************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uni-icons/components/uni-icons/uniicons_file_vue.js ***!
   \*******************************************************************************************/
@@ -27516,13 +27524,6 @@ var fontData = [{
 exports.fontData = fontData;
 
 /***/ }),
-/* 641 */,
-/* 642 */,
-/* 643 */,
-/* 644 */,
-/* 645 */,
-/* 646 */,
-/* 647 */,
 /* 648 */,
 /* 649 */,
 /* 650 */,
@@ -27537,7 +27538,14 @@ exports.fontData = fontData;
 /* 659 */,
 /* 660 */,
 /* 661 */,
-/* 662 */
+/* 662 */,
+/* 663 */,
+/* 664 */,
+/* 665 */,
+/* 666 */,
+/* 667 */,
+/* 668 */,
+/* 669 */
 /*!*******************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-switch/components/uv-switch/props.js ***!
   \*******************************************************************************/
@@ -27617,14 +27625,66 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 663 */,
-/* 664 */,
-/* 665 */,
-/* 666 */,
-/* 667 */,
-/* 668 */,
-/* 669 */,
-/* 670 */
+/* 670 */,
+/* 671 */,
+/* 672 */,
+/* 673 */,
+/* 674 */,
+/* 675 */,
+/* 676 */,
+/* 677 */
+/*!*************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-gap/components/uv-gap/props.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _uni$$uv, _uni$$uv$props;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default = {
+  props: _objectSpread({
+    // 背景颜色（默认transparent）
+    bgColor: {
+      type: String,
+      default: 'transparent'
+    },
+    // 分割槽高度，单位px（默认20）
+    height: {
+      type: [String, Number],
+      default: 20
+    },
+    // 与上一个组件的距离
+    marginTop: {
+      type: [String, Number],
+      default: 0
+    },
+    // 与下一个组件的距离
+    marginBottom: {
+      type: [String, Number],
+      default: 0
+    }
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.gap)
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 678 */,
+/* 679 */,
+/* 680 */,
+/* 681 */,
+/* 682 */,
+/* 683 */
 /*!***************************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uni-transition/components/uni-transition/createAnimation.js ***!
   \***************************************************************************************************/
@@ -27758,19 +27818,6 @@ function createAnimation(option, _this) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 671 */,
-/* 672 */,
-/* 673 */,
-/* 674 */,
-/* 675 */,
-/* 676 */,
-/* 677 */,
-/* 678 */,
-/* 679 */,
-/* 680 */,
-/* 681 */,
-/* 682 */,
-/* 683 */,
 /* 684 */,
 /* 685 */,
 /* 686 */,
@@ -27839,10 +27886,17 @@ function createAnimation(option, _this) {
 /* 749 */,
 /* 750 */,
 /* 751 */,
-/* 752 */
-/*!*************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-gap/components/uv-gap/props.js ***!
-  \*************************************************************************/
+/* 752 */,
+/* 753 */,
+/* 754 */,
+/* 755 */,
+/* 756 */,
+/* 757 */,
+/* 758 */,
+/* 759 */
+/*!*************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-load-more/components/uv-load-more/props.js ***!
+  \*************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -27860,27 +27914,97 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 var _default = {
   props: _objectSpread({
-    // 背景颜色（默认transparent）
+    // 组件状态，loadmore-加载前的状态，loading-加载中的状态，nomore-没有更多的状态
+    status: {
+      type: String,
+      default: 'loadmore'
+    },
+    // 组件背景色
     bgColor: {
       type: String,
       default: 'transparent'
     },
-    // 分割槽高度，单位px（默认20）
-    height: {
-      type: [String, Number],
-      default: 20
+    // 是否显示加载中的图标
+    icon: {
+      type: Boolean,
+      default: true
     },
-    // 与上一个组件的距离
+    // 字体大小
+    fontSize: {
+      type: [String, Number],
+      default: 14
+    },
+    // 图标大小
+    iconSize: {
+      type: [String, Number],
+      default: 16
+    },
+    // 字体颜色
+    color: {
+      type: String,
+      default: '#606266'
+    },
+    // 加载中状态的图标，spinner-花朵状图标，circle-圆圈状，semicircle-半圆
+    loadingIcon: {
+      type: String,
+      default: 'spinner'
+    },
+    // 加载前的提示语
+    loadmoreText: {
+      type: String,
+      default: '加载更多'
+    },
+    // 加载中提示语
+    loadingText: {
+      type: String,
+      default: '正在加载...'
+    },
+    // 没有更多的提示语
+    nomoreText: {
+      type: String,
+      default: '没有更多了'
+    },
+    // 在“没有更多”状态下，是否显示粗点
+    isDot: {
+      type: Boolean,
+      default: false
+    },
+    // 加载中图标的颜色
+    iconColor: {
+      type: String,
+      default: '#b7b7b7'
+    },
+    // 上边距
     marginTop: {
       type: [String, Number],
-      default: 0
+      default: 10
     },
-    // 与下一个组件的距离
+    // 下边距
     marginBottom: {
       type: [String, Number],
-      default: 0
+      default: 10
+    },
+    // 高度，单位px
+    height: {
+      type: [String, Number],
+      default: 'auto'
+    },
+    // 是否显示左边分割线
+    line: {
+      type: Boolean,
+      default: false
+    },
+    // 线条颜色
+    lineColor: {
+      type: String,
+      default: '#E6E8EB'
+    },
+    // 是否虚线，true-虚线，false-实线
+    dashed: {
+      type: Boolean,
+      default: false
     }
-  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.gap)
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.loadmore)
 };
 exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))

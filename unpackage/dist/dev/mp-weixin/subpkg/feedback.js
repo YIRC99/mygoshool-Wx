@@ -235,24 +235,20 @@ var _default = {
       if (this.ispost) return;
       this.ispost = true;
       if (this.mt.length == 0) {
-        uni.showToast({
-          title: '请输入意见',
-          icon: 'none'
+        this.$refs.message.show({
+          type: 'warning',
+          msg: '请输入意见后重试吧'
         });
         this.ispost = false;
         return;
       }
-      for (var i = 0; i < this.fileList1.length; i++) {
-        console.log(this.fileList1[i].status);
-        if (this.fileList1[i].status != 'success') {
-          this.$refs.message.show({
-            type: 'error',
-            msg: '有未上传成功的图片,请删除或重试吧',
-            iconSize: 16
-          });
-          this.ispost = false;
-          return;
-        }
+
+      // 调用组件内部的判断方法 检查是不是全部上传成功了
+      var isupdate = this.$refs.myimgupload.isAllupdate();
+      console.log('this.$refs.myimgupload', isupdate);
+      if (!isupdate) {
+        this.ispost = false;
+        return;
       }
       var openid = uni.getStorageSync('user').openid;
       this.post({

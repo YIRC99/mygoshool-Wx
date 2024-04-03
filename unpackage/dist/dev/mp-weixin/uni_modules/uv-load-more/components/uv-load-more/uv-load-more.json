@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "uv-line": "/uni_modules/uv-line/components/uv-line/uv-line",
+    "uv-loading-icon": "/uni_modules/uv-loading-icon/components/uv-loading-icon/uv-loading-icon"
+  },
+  "component": true
+}

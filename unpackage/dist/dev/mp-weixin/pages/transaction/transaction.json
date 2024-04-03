@@ -7,6 +7,7 @@
     "uv-tags": "/uni_modules/uv-tags/components/uv-tags/uv-tags",
     "my-emppty": "/components/myEmppty/myEmppty",
     "uv-waterfall": "/uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall",
+    "uv-load-more": "/uni_modules/uv-load-more/components/uv-load-more/uv-load-more",
     "my-add": "/components/myAdd/myAdd"
   }
 }

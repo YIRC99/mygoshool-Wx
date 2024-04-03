@@ -2,18 +2,19 @@
   <view>
 
     <view class="upload-box">
-      <uv-upload :fileList="fileList1" name="1" @oversize="overSize" 
-      :maxSize="ImgMaxSize" multiple :maxCount="ImgMaxCount"
-        @afterRead="afterRead" @delete="deletePic" :width="ImageWidth" 
-        :height="ImageHeight" :uploadText="ImgUploadText"
-        :previewFullImage="true"></uv-upload>
+      <uv-upload :fileList="fileList1" name="1" @oversize="overSize" :maxSize="ImgMaxSize" multiple
+        :maxCount="ImgMaxCount" @afterRead="afterRead" @delete="deletePic" :width="ImageWidth" :height="ImageHeight"
+        :uploadText="ImgUploadText" :previewFullImage="true"></uv-upload>
     </view>
 
-<quick-message ref="message"></quick-message>
+    <quick-message ref="message"></quick-message>
   </view>
 </template>
 
 <script>
+  import {
+    promise
+  } from '../../uni_modules/uv-ui-tools/libs/function/test';
   export default {
     name: "myImgUpload",
     props: {
@@ -33,30 +34,55 @@
         default: 9,
         type: Number
       },
-      ImgRequestPath:{
+      ImgRequestPath: {
         default: 'feedback',
         type: String,
       },
-      ImgUploadText:{
+      ImgUploadText: {
         default: '',
         type: String
       },
-      TimeOut:{
+      TimeOut: {
         default: 5000,
         type: Number
       }
     },
     data() {
       return {
-        fileList1: []
+        fileList1: [],
+        fileIndex: 0
       };
     },
-    watch:{
-      fileList1(val){
+    watch: {
+      fileList1(val) {
         this.$emit("onChange", val);
       }
     },
     methods: {
+      isAllupdate() {
+        for (var i = 0; i < this.fileList1.length; i++) {
+          // console.log(this.fileList1[i].status);
+          if (this.fileList1[i].status != 'success') {
+            this.$refs.message.show({
+              type: 'error',
+              msg: '有未上传成功的图片,请删除或重试吧',
+              iconSize: 16,
+            })
+            return false
+          }
+        }
+        return true
+      },
+      isEnpty(){
+        if (this.fileList1.length == 0) {
+          this.$refs.message.show({
+            type: 'warning', 
+            msg: '至少一张图片描述一下吧~', 
+          })
+          return false
+        }
+        return true
+      },
       // 图片大小超出限制
       overSize() {
         this.$refs.message.show({
@@ -74,8 +100,8 @@
             formData: {
               user: 'test'
             },
-            header:{
-              'Authorization' : uni.getStorageSync("token"),
+            header: {
+              'Authorization': uni.getStorageSync("token"),
             },
             timeout: this.TimeOut,
             success: (res) => {
@@ -83,12 +109,13 @@
               let img = JSON.parse(res.data).data
               if (this.imgString == '') this.imgString = img
               else this.imgString = this.imgString + ',' + img
-              this.fileList1[0].resWximg = img
+              
+              this.fileList1[this.fileIndex++].resWximg = img
               resolve(200)
             },
             fail: (err) => {
               console.log('上传失败', err);
-              resolve(400)
+              reject(400)
             }
           });
         })
@@ -106,6 +133,32 @@
           })
         })
         console.log(this.fileList1);
+        for (let i = 0; i < lists.length; i++) {
+          const res = await uni.compressImage({src: lists[i].url,quality: 70,})
+          console.log(res.tempFilePath)
+          console.log('压缩完成了');
+          lists[i].url = res.tempFilePath
+          const result = await this.uploadFilePromise(lists[i].url)
+          let item = this[`fileList${event.name}`][fileListLen]
+
+          if (result == 400) {
+            this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
+              status: 'failed',
+              message: '请重新上传',
+              url: result
+            }))
+          } else {
+            this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
+              status: 'success',
+              message: '',
+              url: result
+            }))
+          }
+          fileListLen++
+        }
+
+
+        return
         for (let i = 0; i < lists.length; i++) {
           uni.compressImage({
             src: lists[i].url,
@@ -139,9 +192,50 @@
 
 
       },
+
+
+      async afterRead2(event) {
+        const files = [].concat(event.file);
+        files.forEach(file => {
+          this.fileList1.push({
+            ...file,
+            status: 'uploading',
+            message: '上传中'
+          });
+        });
+        await Promise.all(files.map(async file => {
+          try {
+            const res = await this.uploadFilePromise(file.url);
+            this.fileList1.splice(index, 1, {
+              ...file,
+              status: 'success',
+              message: '',
+              url: res
+            });
+          } catch (error) {
+            console.error('上传失败', error);
+            this.fileList1.splice(index, 1, {
+              ...file,
+              status: 'failed',
+              message: '请重新上传',
+              url: error
+            });
+          }
+        }));
+      },
+
+
+
+
+
+
+
+
+
       // 删除图片
       deletePic(event) {
         this[`fileList${event.name}`].splice(event.index, 1)
+        this.fileIndex--
       },
 
     }

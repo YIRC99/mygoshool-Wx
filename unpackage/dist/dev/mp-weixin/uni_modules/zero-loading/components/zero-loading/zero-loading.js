@@ -122,7 +122,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var loading0 = function loading0() {
   __webpack_require__.e(/*! require.ensure | uni_modules/zero-loading/components/zero-loading/static/loading-circle */ "uni_modules/zero-loading/components/zero-loading/static/loading-circle").then((function () {
-    return resolve(__webpack_require__(/*! ./static/loading-circle.vue */ 551));
+    return resolve(__webpack_require__(/*! ./static/loading-circle.vue */ 558));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {

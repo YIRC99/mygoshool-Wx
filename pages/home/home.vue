@@ -210,7 +210,7 @@
     showCancelButton :closeOnClickOverlay="false" 
      @confirm="confirmWxImg" @cancel="clearWxImg">
      
-     <myupload ref="myWxUpload" @onChange="myonChange" ></myupload>
+     <myupload  ref="myWxUpload" @onChange="myonChange" ></myupload>
 
     </uv-modal>
   </view>
@@ -435,7 +435,6 @@
             this.$refs.message.show({
               type: 'error', //String 默认default
               msg: '网络开了点小差,请稍候重试吧', //String 显示内容 *
-              iconSize: 16, //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
             })
             return
           }

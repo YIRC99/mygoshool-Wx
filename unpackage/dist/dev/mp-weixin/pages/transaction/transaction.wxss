@@ -43,7 +43,7 @@
 }
 .waterfall {
   margin: 30rpx 0;
-  padding-bottom: 200rpx;
+  padding-bottom: 120rpx;
 }
 .tag-box {
   margin-left: 30rpx;
@@ -143,9 +143,12 @@
   margin-top: 20rpx;
   border-radius: 20rpx;
   background-color: white;
+  background: #ebe6e6;
+  box-shadow: 5rpx 5rpx 10rpx #bab6b6, -5rpx -5rpx 10rpx #ffffff;
 }
 .waterfall-item .waterfall-item__image.data-v-28de0044 {
-  margin-bottom: 10rpx;
+  padding-bottom: 10rpx;
+  background-color: #fff;
 }
 .waterfall-item__ft.data-v-28de0044 {
   padding: 20rpx;

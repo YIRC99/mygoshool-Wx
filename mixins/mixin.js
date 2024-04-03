@@ -3,6 +3,7 @@ const mixin = {
     return {
       avahttp: this.http + 'common/download?path=avatar&name=',
       QRttp: this.http + 'common/download?path=QRcode&name=',
+      shophttp: this.http + 'common/download?path=shop&name=',
     };
   },
   methods:{

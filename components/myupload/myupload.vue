@@ -80,6 +80,20 @@
       }
     },
     methods:{
+      isAllupdate(){
+        for (var i = 0; i < this.fileList1.length; i++) {
+          console.log(this.fileList1[i].status);
+          if (this.fileList1[i].status != 'success') {
+            this.$refs.message.show({
+              type: 'error',
+              msg: '有未上传成功的图片,请删除或重试吧',
+              iconSize: 16,
+            })
+            return false
+          }
+        }
+        return true
+      },
       chooseBeforImg(){
         this.fileList1.push({
           resWximg: this.beforeImg,

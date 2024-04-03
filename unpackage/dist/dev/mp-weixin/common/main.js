@@ -23,12 +23,9 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 // @ts-ignore
 wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 _vue.default.use(_uviewUi.default);
-// const http = 'http://192.168.1.13:33088/'
-// const http = 'http://127.0.0.1:33088/'
 var http = 'http://192.168.192.210:33088/'; //手机热点
-// const http = 'http://192.168.1.104:33088/' //305wifi
-// const http = 'http://116.62.146.1:33088/'
-// const http = 'http://192.168.1.110:33088/'
+// const http = 'http://192.168.1.113:33088/' //305wifi
+// const http = 'http://172.20.10.196:33088/' //宿舍wifi
 
 var myOutTime = 5000;
 _vue.default.prototype.avahttp = http + 'common/download?path=avatar&name=';
@@ -128,6 +125,11 @@ _vue.default.filter('fromStartDateTime', function (value) {
   var indexColon = startDateTime.lastIndexOf(':');
   var newDateTime = startDateTime.slice(0, indexT) + ' ' + startDateTime.slice(indexT + 1, indexColon);
   return newDateTime;
+});
+_vue.default.filter('formHtmlStr', function (value) {
+  if (value == undefined) return '';
+  // 使用正则表达式去除 HTML 标签
+  return value.replace(/<[^>]*>/g, '');
 });
 
 // main.js
