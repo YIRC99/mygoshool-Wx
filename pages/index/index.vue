@@ -132,6 +132,11 @@
             title: '拼车广场'
           })
           this.$refs.homepage.myonshow()
+        }else if (index == 0) {
+          uni.setNavigationBarTitle({
+            title: '闲置交易'
+          })
+          
         }
 
       }

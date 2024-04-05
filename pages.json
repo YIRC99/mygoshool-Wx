@@ -90,7 +90,7 @@
           "path" : "updateCarOrder",
           "style" : 
           {
-            "navigationBarTitleText" : "",
+            "navigationBarTitleText" : "修改信息",
             "enablePullDownRefresh" : false
           }
         },

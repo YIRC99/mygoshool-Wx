@@ -1,6 +1,6 @@
 <template>
   <view class="page">
-    
+
     <myAffiche></myAffiche>
     <view class="mytable">
       <u-tabs :list="list" style="background-color: #F6F5F6;" :height="160" :font-size="40" :is-scroll="false"
@@ -8,9 +8,9 @@
       </u-tabs>
       <view class="mytable-rili" @click="openCalendars">
         <image class="mytable-rili-img" src="../../static/rili.png" mode=""></image>
-        <view class="mytable-rili-text" v-show="list[currentIndex].time != ''" >{{list[currentIndex].time}}
+        <view class="mytable-rili-text" v-show="list[currentIndex].time != ''">{{list[currentIndex].time}}
         </view>
-        
+
       </view>
     </view>
     <uv-calendars title="选择日期" ref="calendars" @close="cancelCalendars" @confirm="chooseDateConfirm" />
@@ -19,7 +19,7 @@
       @refresherrefresh="scrollPullDown" refresher-enabled>
 
       <view class="" v-show="currentIndex == 0">
-         <myEmppty :isShow="newSchoolList.length == 0" Text="暂时没有拼车订单 快快发布一个吧"></myEmppty>
+        <myEmppty :isShow="newSchoolList.length == 0" Text="暂时没有拼车订单 快快发布一个吧"></myEmppty>
         <uni-card v-for="(item,index) in newSchoolList" :key="index" :title="subYear(item.startdatetime) + ' 出发'"
           :thumbnail='avahttp + item.createUserInfo.avatar' @click="clickCard(item)">
           <view class="my-car-box">
@@ -49,7 +49,9 @@
 
           <text class="u-line-1 myremark" style="color: #a9a9a9;">备注: {{item.remark}}</text>
         </uni-card>
-
+        <uv-load-more v-if="list[currentIndex].isShowListloading" :status="list[currentIndex].status" :marginTop="10"
+          :marginBottom="20" dashed line />
+        <view class="" style=" height: 60rpx;"></view>
       </view>
 
       <view class="" v-show="currentIndex == 1">
@@ -83,6 +85,10 @@
 
           <text class="u-line-1 myremark" style="color: #a9a9a9;">备注: {{item.remark}}</text>
         </uni-card>
+
+        <uv-load-more v-if="list[currentIndex].isShowListloading" :status="list[currentIndex].status" :marginTop="10"
+          :marginBottom="20" dashed line />
+        <view class="" style=" height: 60rpx;"></view>
       </view>
 
       <view class="" v-show="currentIndex == 2">
@@ -116,12 +122,15 @@
 
           <text class="u-line-1 myremark" style="color: #a9a9a9;">备注: {{item.remark}}</text>
         </uni-card>
+        <uv-load-more v-if="list[currentIndex].isShowListloading" :status="list[currentIndex].status" :marginTop="10"
+          :marginBottom="20" dashed line />
+        <view class="" style=" height: 60rpx;"></view>
       </view>
 
     </scroll-view>
 
     <uv-popup ref="popup" mode="bottom" round="50rpx" @maskClick="closePopup">
-      <view class="popup-box" >
+      <view class="popup-box">
         <scroll-view scroll-y="true" style="height: 62vh; background-color: #ffffff;" show-scrollbar="true">
           <view class="top-box" @click="ToUserInfo">
             <view class="left">
@@ -206,11 +215,10 @@
 
     <zero-loading v-if="isLoading" type="circle" :mask="true" maskOpacity="0.1"></zero-loading>
 
-    <uv-modal ref="modal" title="添加联系方式让对方也可以联系你吧" 
-    showCancelButton :closeOnClickOverlay="false" 
-     @confirm="confirmWxImg" @cancel="clearWxImg">
-     
-     <myupload  ref="myWxUpload" @onChange="myonChange" ></myupload>
+    <uv-modal ref="modal" title="添加联系方式让对方也可以联系你吧" showCancelButton :closeOnClickOverlay="false" @confirm="confirmWxImg"
+      @cancel="clearWxImg">
+
+      <myupload ref="myWxUpload" @onChange="myonChange"></myupload>
 
     </uv-modal>
   </view>
@@ -230,17 +238,23 @@
           name: '濂溪校区',
           time: '',
           pageNum: 1,
-          pagetotal: 0
+          pagetotal: 0,
+          isShowListloading: false,
+          status: 'loading'
         }, {
           name: '鹤问湖校区',
           time: '',
           pageNum: 1,
-          pagetotal: 0
+          pagetotal: 0,
+          isShowListloading: false,
+          status: 'loading'
         }, {
           name: '其他',
           time: '',
           pageNum: 1,
-          pagetotal: 0
+          pagetotal: 0,
+          isShowListloading: false,
+          status: 'loading'
         }],
         currentIndex: 0,
         orderList: [],
@@ -268,41 +282,41 @@
     created() {
       this.info = uni.getStorageSync('user')
     },
-    mixins:[mixin],
+    mixins: [mixin],
     methods: {
-      myonChange(e){
-        console.log('子组件上传的回调',e);
+      myonChange(e) {
+        console.log('子组件上传的回调', e);
         this.fileList1 = e
       },
-      ToUserInfo(){
+      ToUserInfo() {
         console.log('点击了 个人信息');
         uni.navigateTo({
           url: '/subpkg/userinfo?userid=' + this.currentOrder.createUserInfo.userid
         })
       },
-      confirmWxImg(){
-        if (this.fileList1.length == 0){
+      confirmWxImg() {
+        if (this.fileList1.length == 0) {
           this.$refs.message.show({
             type: 'error',
             msg: '请上传图片后确定',
           })
           return
         }
-        if("success" != this.fileList1[0].status){
+        if ("success" != this.fileList1[0].status) {
           this.$refs.message.show({
             type: 'error',
             msg: '请图片上传成功后确定',
           })
           return
         }
-        
+
         this.receiveOrder()
       },
-      clearWxImg(){
+      clearWxImg() {
         this.fileList1 = []
         this.$refs.myWxUpload.fileList1Empty()
       },
-    
+
 
       viewWxImg() {
         let img = this.QRttp + this.currentOrder.wechatImg
@@ -337,7 +351,7 @@
       chooseDateConfirm(e) {
         console.log(e.fulldate);
         this.list[this.currentIndex].time = e.fulldate
-        console.log('this.list[this.currentIndex].time',this.list[this.currentIndex].time);
+        console.log('this.list[this.currentIndex].time', this.list[this.currentIndex].time);
         console.log('点击确定 筛选日期');
         this.scrollPullDown()
       },
@@ -362,14 +376,14 @@
       closeReceivePopup() {
         this.popupShow = false
       },
-      showUploadWxImg(){
+      showUploadWxImg() {
         let key = uni.getStorageSync('user')
-        if(key == null || key == ''){
+        if (key == null || key == '') {
           this.$refs.message.show({
-            type: 'error', 
-            msg: '请登录后再接受吧', 
+            type: 'error',
+            msg: '请登录后再接受吧',
           })
-          return 
+          return
         }
         this.$refs.modal.open();
       },
@@ -472,6 +486,7 @@
 
 
           this.isRefresh = false
+          this.list[this.currentIndex].isShowListloading = false
           console.log('下拉刷新结束了');
         }).catch(err => {
           console.log('home page is', err);
@@ -494,36 +509,59 @@
       },
       scrollDown() {
         console.log('滚动条到了底部 当前的indedx为', this.currentIndex);
-        if (this.currentIndex == 0 && this.newSchoolList.length >= this.list[this.currentIndex].pagetotal) {
-          this.$refs.message.show({
-            type: 'default',
-            msg: '已经到底了, 没有更多数据啦',
-            iconSize: 16,
-          })
-          return
-        } else if (this.currentIndex == 1 && this.oldSchoolList.length >= this.list[this.currentIndex]
-          .pagetotal) {
-          this.$refs.message.show({
-            type: 'success',
-            msg: '已经到底了, 没有更多数据啦',
-            iconSize: 16,
-          })
-          return
-        } else if (this.currentIndex == 2 && this.otherAddressList.length >= this.list[this.currentIndex]
-          .pagetotal) {
-          this.$refs.message.show({
-            type: 'success',
-            msg: '已经到底了, 没有更多数据啦',
-            iconSize: 16,
-          })
+        const currentList = this.list[this.currentIndex];
+        const ArrObj = {
+          0 : 'newSchoolList',
+          1 : 'oldSchoolList',
+          2 : 'otherAddressList'
+        }
+        
+        if(this[ArrObj[this.currentIndex]].length < this.pageSize) return
+        
+        if(this[ArrObj[this.currentIndex]].length >= currentList.pagetotal){
+          currentList.isShowListloading = true
+          currentList.status = 'nomore'
+          // this.$refs.message.show({
+          //   type: 'default',
+          //   msg: '已经到底了, 没有更多数据啦',
+          // })
           return
         }
-        this.list[this.currentIndex].pageNum++
+        
+        
+        // 上面的优化没有经过数据验证 所有这个麻烦的写法先留着 
+        // if (this.currentIndex == 0 && this.newSchoolList.length >= currentList.pagetotal) {
+        //   currentList.isShowListloading = true
+        //   currentList.status = 'nomore'
+        //   this.$refs.message.show({
+        //     type: 'default',
+        //     msg: '已经到底了, 没有更多数据啦',
+        //   })
+        //   return
+        // } else if (this.currentIndex == 1 && this.oldSchoolList.length >= currentList.pagetotal) {
+        //   currentList.isShowListloading = true
+        //   currentList.status = 'nomore'
+        //   this.$refs.message.show({
+        //     type: 'success',
+        //     msg: '已经到底了, 没有更多数据啦',
+        //   })
+        //   return
+        // } else if (this.currentIndex == 2 && this.otherAddressList.length >= currentList.pagetotal) {
+        //   currentList.isShowListloading = true
+        //   currentList.status = 'nomore'
+        //   this.$refs.message.show({
+        //     type: 'success',
+        //     msg: '已经到底了, 没有更多数据啦',
+        //   })
+        //   return
+        // }
+        currentList.isShowListloading = true
+        currentList.pageNum++
         this.getOrderList(false)
       },
       clickCard(order) {
         this.currentOrder = order
-        console.log('点击了卡片当前选中改变了',this.currentOrder);
+        console.log('点击了卡片当前选中改变了', this.currentOrder);
         this.$refs.popup.open()
         this.popupShow = true
       },
@@ -568,8 +606,6 @@
 </script>
 
 <style lang="scss">
-  
-  
   .page {
     padding-bottom: 130rpx;
   }
@@ -581,9 +617,9 @@
   }
 
   .receivePopup-box-img {
-    
-    
-    image{
+
+
+    image {
       border: 1px solid #ebebeb;
       border-radius: 30rpx;
       overflow: hidden;
@@ -838,6 +874,4 @@
   /deep/ .u-tabs__wrapper__nav__item__text {
     font-size: 40rpx !important;
   }
-
-
 </style>

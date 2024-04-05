@@ -4,6 +4,7 @@ import App from './App'
 import uView from "uview-ui";
 Vue.use(uView);
 const http = 'http://192.168.192.210:33088/' //手机热点
+// const http = 'http://116.62.146.1:33088/' //服务器
 // const http = 'http://192.168.1.113:33088/' //305wifi
 // const http = 'http://172.20.10.196:33088/' //宿舍wifi
 

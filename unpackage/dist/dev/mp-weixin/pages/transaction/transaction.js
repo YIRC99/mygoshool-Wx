@@ -97,10 +97,13 @@ try {
       return Promise.all(/*! import() | uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall.vue */ 441))
     },
     uvLoadMore: function () {
-      return Promise.all(/*! import() | uni_modules/uv-load-more/components/uv-load-more/uv-load-more */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-load-more/components/uv-load-more/uv-load-more")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-load-more/components/uv-load-more/uv-load-more.vue */ 754))
+      return Promise.all(/*! import() | uni_modules/uv-load-more/components/uv-load-more/uv-load-more */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-load-more/components/uv-load-more/uv-load-more")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-load-more/components/uv-load-more/uv-load-more.vue */ 449))
     },
     myAdd: function () {
       return __webpack_require__.e(/*! import() | components/myAdd/myAdd */ "components/myAdd/myAdd").then(__webpack_require__.bind(null, /*! @/components/myAdd/myAdd.vue */ 400))
+    },
+    quickMessage: function () {
+      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 309))
     },
   }
 } catch (e) {
@@ -288,6 +291,8 @@ var _index = __webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/function/ind
 //
 //
 //
+//
+//
 var _default = {
   mixins: [_mixin.default],
   data: function data() {
@@ -316,7 +321,7 @@ var _default = {
       rightGap: 10,
       columnGap: 10,
       pageNum: 1,
-      pageSize: 5,
+      pageSize: 10,
       pagetotal: 0,
       isShowListloading: false
     };
@@ -327,7 +332,15 @@ var _default = {
     }
   },
   methods: {
-    ToShopDetail: function ToShopDetail() {
+    chooseAddArr: function chooseAddArr() {
+      var arr = [];
+      this.radios.forEach(function (item, index) {
+        if (item.checked) arr.push(index);
+      });
+      return arr;
+    },
+    ToShopDetail: function ToShopDetail(item) {
+      uni.setStorageSync('shopdetail', item);
       uni.navigateTo({
         url: '/subpkg/shopDetail'
       });
@@ -351,16 +364,28 @@ var _default = {
     },
     getShopList: function getShopList() {
       var _this2 = this;
+      if (this.chooseAddArr().length == 0) {
+        setTimeout(function () {
+          _this2.isRefresh = false;
+          _this2.$refs.message.show({
+            type: 'warning',
+            msg: '查询不到物品,请选择地区吧'
+          });
+        }, 100);
+        return;
+      }
       this.post({
         url: 'shop/page',
         data: {
           pageNum: this.pageNum,
-          pageSize: this.pageSize
+          pageSize: this.pageSize,
+          addressCodeArr: this.chooseAddArr()
         }
       }).then(function (res) {
-        console.log('商品请求参数', res.data);
+        console.log('商品请求返回值', res.data);
         if (res.code != 200) {
           _this2.isRefresh = false;
+          _this2.isShowListloading = false;
           _this2.$refs.message.show({
             type: 'error',
             msg: '网络开了点小差,请稍候重试吧'
@@ -373,11 +398,13 @@ var _default = {
         });
         _this2.list = [].concat((0, _toConsumableArray2.default)(_this2.list), (0, _toConsumableArray2.default)(res.data.records));
         _this2.isRefresh = false;
+        _this2.isShowListloading = false;
       });
     },
     scrollPullDown: function scrollPullDown() {
       if (this.isRefresh == true) return;
       this.isRefresh = true;
+      this.pageNum = 1;
       this.list = [];
       this.list1 = [];
       this.list2 = [];
@@ -385,6 +412,15 @@ var _default = {
     },
     scrollDown: function scrollDown() {
       // TODO 分页后端已经写好了 明天完善下滑分页加载的动画
+      if (this.list.length == this.pagetotal) {
+        this.isShowListloading = true;
+        this.status = 'nomore';
+      }
+      if (this.list.length < this.pagetotal) {
+        this.pageNum++;
+        this.isShowListloading = true;
+        this.getShopList();
+      }
       console.log('滑动到底部了');
     },
     myonload: function myonload() {
@@ -398,6 +434,7 @@ var _default = {
     },
     checkboxClick: function checkboxClick(index) {
       this.radios[index].checked = !this.radios[index].checked;
+      this.scrollPullDown();
     },
     toSearch: function toSearch() {
       console.log('点击搜索框');

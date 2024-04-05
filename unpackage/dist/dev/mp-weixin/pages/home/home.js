@@ -94,6 +94,9 @@ try {
     uniCard: function () {
       return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 379))
     },
+    uvLoadMore: function () {
+      return Promise.all(/*! import() | uni_modules/uv-load-more/components/uv-load-more/uv-load-more */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-load-more/components/uv-load-more/uv-load-more")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-load-more/components/uv-load-more/uv-load-more.vue */ 449))
+    },
     uvPopup: function () {
       return Promise.all(/*! import() | uni_modules/uv-popup/components/uv-popup/uv-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-popup/components/uv-popup/uv-popup")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-popup/components/uv-popup/uv-popup.vue */ 386))
     },
@@ -449,6 +452,14 @@ var _mixin = _interopRequireDefault(__webpack_require__(/*! @/mixins/mixin.js */
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
@@ -462,17 +473,23 @@ var _default = {
         name: '濂溪校区',
         time: '',
         pageNum: 1,
-        pagetotal: 0
+        pagetotal: 0,
+        isShowListloading: false,
+        status: 'loading'
       }, {
         name: '鹤问湖校区',
         time: '',
         pageNum: 1,
-        pagetotal: 0
+        pagetotal: 0,
+        isShowListloading: false,
+        status: 'loading'
       }, {
         name: '其他',
         time: '',
         pageNum: 1,
-        pagetotal: 0
+        pagetotal: 0,
+        isShowListloading: false,
+        status: 'loading'
       }],
       currentIndex: 0,
       orderList: [],
@@ -701,6 +718,7 @@ var _default = {
           }
         }
         _this3.isRefresh = false;
+        _this3.list[_this3.currentIndex].isShowListloading = false;
         console.log('下拉刷新结束了');
       }).catch(function (err) {
         console.log('home page is', err);
@@ -722,29 +740,51 @@ var _default = {
     },
     scrollDown: function scrollDown() {
       console.log('滚动条到了底部 当前的indedx为', this.currentIndex);
-      if (this.currentIndex == 0 && this.newSchoolList.length >= this.list[this.currentIndex].pagetotal) {
-        this.$refs.message.show({
-          type: 'default',
-          msg: '已经到底了, 没有更多数据啦',
-          iconSize: 16
-        });
-        return;
-      } else if (this.currentIndex == 1 && this.oldSchoolList.length >= this.list[this.currentIndex].pagetotal) {
-        this.$refs.message.show({
-          type: 'success',
-          msg: '已经到底了, 没有更多数据啦',
-          iconSize: 16
-        });
-        return;
-      } else if (this.currentIndex == 2 && this.otherAddressList.length >= this.list[this.currentIndex].pagetotal) {
-        this.$refs.message.show({
-          type: 'success',
-          msg: '已经到底了, 没有更多数据啦',
-          iconSize: 16
-        });
+      var currentList = this.list[this.currentIndex];
+      var ArrObj = {
+        0: 'newSchoolList',
+        1: 'oldSchoolList',
+        2: 'otherAddressList'
+      };
+      if (this[ArrObj[this.currentIndex]].length < this.pageSize) return;
+      if (this[ArrObj[this.currentIndex]].length >= currentList.pagetotal) {
+        currentList.isShowListloading = true;
+        currentList.status = 'nomore';
+        // this.$refs.message.show({
+        //   type: 'default',
+        //   msg: '已经到底了, 没有更多数据啦',
+        // })
         return;
       }
-      this.list[this.currentIndex].pageNum++;
+
+      // 上面的优化没有经过数据验证 所有这个麻烦的写法先留着 
+      // if (this.currentIndex == 0 && this.newSchoolList.length >= currentList.pagetotal) {
+      //   currentList.isShowListloading = true
+      //   currentList.status = 'nomore'
+      //   this.$refs.message.show({
+      //     type: 'default',
+      //     msg: '已经到底了, 没有更多数据啦',
+      //   })
+      //   return
+      // } else if (this.currentIndex == 1 && this.oldSchoolList.length >= currentList.pagetotal) {
+      //   currentList.isShowListloading = true
+      //   currentList.status = 'nomore'
+      //   this.$refs.message.show({
+      //     type: 'success',
+      //     msg: '已经到底了, 没有更多数据啦',
+      //   })
+      //   return
+      // } else if (this.currentIndex == 2 && this.otherAddressList.length >= currentList.pagetotal) {
+      //   currentList.isShowListloading = true
+      //   currentList.status = 'nomore'
+      //   this.$refs.message.show({
+      //     type: 'success',
+      //     msg: '已经到底了, 没有更多数据啦',
+      //   })
+      //   return
+      // }
+      currentList.isShowListloading = true;
+      currentList.pageNum++;
       this.getOrderList(false);
     },
     clickCard: function clickCard(order) {

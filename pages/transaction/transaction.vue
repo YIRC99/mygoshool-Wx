@@ -35,7 +35,7 @@
               <!-- 为了磨平部分平台的BUG，必须套一层view -->
               <view>
 
-                <view v-for="(item, index) in list1" :key="item.id" @click="ToShopDetail" class="waterfall-item">
+                <view v-for="(item, index) in list1" :key="item.id" @click="ToShopDetail(item)" class="waterfall-item">
                   <view class="waterfall-item__image">
                     <image lazy-load :src="shophttp + item.image" mode="widthFix" style="width: 100%;"></image>
                   </view>
@@ -57,7 +57,7 @@
               <!-- 为了磨平部分平台的BUG，必须套一层view -->
               <view>
                 
-                <view v-for="(item, index) in list2" :key="item.id" @click="ToShopDetail" class="waterfall-item">
+                <view v-for="(item, index) in list2" :key="item.id" @click="ToShopDetail(item)" class="waterfall-item">
                   <view class="waterfall-item__image">
                     <image lazy-load :src="shophttp + item.image" mode="widthFix" style="width: 100%;"></image>
                   </view>
@@ -76,7 +76,8 @@
             </template>
           </uv-waterfall>
         
-        <uv-load-more v-show="isShowListloading" :status="status" :marginTop="30" dashed line />
+       <uv-load-more v-if="isShowListloading" :status="status"
+         :marginTop="30" dashed line />
         
         </view>
       </view>
@@ -87,6 +88,7 @@
       <image src="/static/toTop.png" mode=""></image>
     </view>
     
+    <quick-message ref="message"></quick-message>
   </view>
 </template>
 
@@ -120,7 +122,7 @@
         rightGap: 10,
         columnGap: 10,
         pageNum: 1,
-        pageSize: 5,
+        pageSize: 10,
         pagetotal: 0,
         isShowListloading: false 
       };
@@ -131,7 +133,15 @@
        }
     },
     methods: {
-      ToShopDetail(){
+      chooseAddArr(){
+        let arr = []
+        this.radios.forEach((item,index) => {
+          if(item.checked) arr.push(index)
+        })
+        return arr
+      },
+      ToShopDetail(item){
+        uni.setStorageSync('shopdetail',item)
         uni.navigateTo({
           url: '/subpkg/shopDetail'
         })
@@ -151,16 +161,29 @@
         console.log('new   ',this.myScrollPosition);
       },
       getShopList(){
+        if(this.chooseAddArr().length == 0){
+          setTimeout(()=>{
+            this.isRefresh = false
+            this.$refs.message.show({
+              type: 'warning',
+              msg: '查询不到物品,请选择地区吧',
+            })
+            },100)
+          return 
+        }
+        
         this.post({
           url: 'shop/page',
           data: {
             pageNum: this.pageNum,
             pageSize: this.pageSize,
+            addressCodeArr: this.chooseAddArr()
           }
         }).then(res => {
-          console.log('商品请求参数',res.data);
+          console.log('商品请求返回值',res.data);
           if (res.code != 200) {
             this.isRefresh = false
+            this.isShowListloading = false
             this.$refs.message.show({
               type: 'error',
               msg: '网络开了点小差,请稍候重试吧',
@@ -175,11 +198,13 @@
           
           this.list = [...this.list,...res.data.records]
           this.isRefresh = false
+          this.isShowListloading = false
         })
       },
       scrollPullDown() {
         if (this.isRefresh == true) return
         this.isRefresh = true
+        this.pageNum = 1
         this.list = []
         this.list1 = []
         this.list2 = []
@@ -187,6 +212,15 @@
       },
       scrollDown() {
         // TODO 分页后端已经写好了 明天完善下滑分页加载的动画
+        if(this.list.length == this.pagetotal){
+          this.isShowListloading = true
+          this.status = 'nomore'
+        }
+        if(this.list.length < this.pagetotal){
+          this.pageNum++
+          this.isShowListloading = true
+          this.getShopList()
+        }
         console.log('滑动到底部了');
       },
       myonload() {
@@ -201,6 +235,7 @@
       },
       checkboxClick(index) {
         this.radios[index].checked = !this.radios[index].checked
+        this.scrollPullDown()
       },
       toSearch() {
         console.log('点击搜索框');

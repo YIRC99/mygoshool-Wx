@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "",
+  "navigationBarTitleText": "修改信息",
   "enablePullDownRefresh": false,
   "usingComponents": {
     "uv-loading-page": "/uni_modules/uv-loading-page/components/uv-loading-page/uv-loading-page",

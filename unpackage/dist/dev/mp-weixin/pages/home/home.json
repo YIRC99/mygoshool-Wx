@@ -7,6 +7,7 @@
     "uv-calendars": "/uni_modules/uv-calendars/components/uv-calendars/uv-calendars",
     "my-emppty": "/components/myEmppty/myEmppty",
     "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
+    "uv-load-more": "/uni_modules/uv-load-more/components/uv-load-more/uv-load-more",
     "uv-popup": "/uni_modules/uv-popup/components/uv-popup/uv-popup",
     "uni-section": "/uni_modules/uni-section/components/uni-section/uni-section",
     "my-add": "/components/myAdd/myAdd",
