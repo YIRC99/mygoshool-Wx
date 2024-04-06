@@ -159,6 +159,9 @@
             type: 'success',
             msg: '发布成功',
           })
+          setTimeout(() => {
+            uni.navigateBack()
+          },1500)
 
 
         }).catch(err => {
@@ -256,10 +259,6 @@
           this.ispost = false
           return
         }
-
-
-
-
         
         this.postShop()
       },

@@ -125,6 +125,14 @@
             "navigationBarTitleText" : "闲置详情",
             "enablePullDownRefresh" : false
           }
+        },
+        {
+          "path" : "searchShop",
+          "style" : 
+          {
+            "navigationBarTitleText" : "搜索",
+            "enablePullDownRefresh" : false
+          }
         }
       ]
     }

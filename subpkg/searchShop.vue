@@ -2,28 +2,11 @@
   <view>
 
     <scroll-view scroll-y="true" style="height: 95vh; background-color: #f7f7f7;" :refresher-triggered="isRefresh"
-      @scrolltolower="scrollDown" :scroll-top="myScrollPosition" scroll-with-animation
-      @refresherrefresh="scrollPullDown" @scroll="myScroll" refresher-enabled>
+      @scrolltolower="scrollDown" :scroll-top="myScrollPosition" scroll-with-animation @scroll="myScroll">
       <view class="">
 
-        <myAffiche></myAffiche>
 
-        <view style="position: sticky; top: 0; z-index: 9999; background-color: #fff;">
-          <view class="">
-            <view class="" @click="">
-              <uni-search-bar @confirm="toSearch" v-model="searchText" radius="30" placeholder="搜索" />
-            </view>
 
-            <view class="tag-box">
-              <view class="uv-page__tag-item" v-for="(item,index) in radios" :key="index">
-                <uv-tags :text="item.name" :plain="!item.checked" :type="item.checked == true ? 'primary' : 'info'"
-                  :name="index" class="item" :closable="item.checked" closePlace="right" @close="checkboxClick"
-                  shape="circle" @click="checkboxClick" style="margin: 0 30rpx;">
-                </uv-tags>
-              </view>
-            </view>
-          </view>
-        </view>
 
         <view class="waterfall">
           <myEmppty :isShow="list.length == 0" Text="暂时没有商品出售哦~" :img-path="require('@/static/shopCar.png')"></myEmppty>
@@ -82,7 +65,6 @@
       </view>
     </scroll-view>
 
-    <myAdd toPagePath="/subpkg/addShop"></myAdd>
     <view class="totopBut" v-show="isShowToTop" @click="toTop">
       <image src="/static/toTop.png" mode=""></image>
     </view>
@@ -100,7 +82,6 @@
     mixins: [mixin],
     data() {
       return {
-        searchText: '',
         status: 'loading',
         myScrollPosition: 0,
         myOldScrollPosition: 0,
@@ -132,23 +113,24 @@
         return this.myOldScrollPosition >= 150
       }
     },
-    watch: {
-      searchText(newValue) {
-        console.log(newValue);
-        // 使用正则表达式匹配特殊字符
-        if (/[^\u4e00-\u9fa5a-zA-Z0-9\s]/.test(newValue)) {
-          // 如果输入包含特殊字符，将搜索文本设置为不包含特殊字符的文本
-          this.searchText = newValue.replace(/[^\u4e00-\u9fa5a-zA-Z0-9\s]/g, '');
-        }
-      }
+    onLoad(e) {
+      console.log(e.searchText);
+      this.searchText(e.searchText)
     },
     methods: {
-      chooseAddArr() {
-        let arr = []
-        this.radios.forEach((item, index) => {
-          if (item.checked) arr.push(index)
+      searchText(target) {
+        let arr = target.split(' ').filter(i => i.trim() != '')
+        console.log(arr);
+        
+        this.post({
+          url: 'shop/search/' + arr
+        }).then(res => {
+          console.log(res);
+          res.data.forEach(i => {
+            i.image = i.imgs.split(",")[0]
+          })
+          this.list = res.data
         })
-        return arr
       },
       ToShopDetail(item) {
         uni.setStorageSync('shopdetail', item)
@@ -157,8 +139,6 @@
         })
       },
       myScroll(e) {
-        // console.log('old  ',this.myOldScrollPosition);
-        // console.log('new   ',this.myScrollPosition);
         this.myOldScrollPosition = e.detail.scrollTop
       },
       toTop() {
@@ -166,69 +146,8 @@
         this.$nextTick(() => {
           this.myScrollPosition = 0
         });
-        setTimeout(() => this.scrollPullDown(), 500)
-        console.log('old  ', this.myOldScrollPosition);
-        console.log('new   ', this.myScrollPosition);
-      },
-      getShopList() {
-        if (this.chooseAddArr().length == 0) {
-          setTimeout(() => {
-            this.isRefresh = false
-            this.$refs.message.show({
-              type: 'warning',
-              msg: '查询不到物品,请选择地区吧',
-            })
-          }, 100)
-          return
-        }
-
-        this.post({
-          url: 'shop/page',
-          data: {
-            pageNum: this.pageNum,
-            pageSize: this.pageSize,
-            addressCodeArr: this.chooseAddArr()
-          }
-        }).then(res => {
-          console.log('商品请求返回值', res.data);
-          if (res.code != 200) {
-            this.isRefresh = false
-            this.isShowListloading = false
-            this.$refs.message.show({
-              type: 'error',
-              msg: '网络开了点小差,请稍候重试吧',
-            })
-            return
-          }
-
-          this.pagetotal = res.data.total
-          res.data.records.forEach(i => {
-            i.image = i.imgs.split(",")[0]
-          })
-
-          this.list = [...this.list, ...res.data.records]
-          this.isRefresh = false
-          this.isShowListloading = false
-        }).catch(err => {
-          this.isRefresh = false
-          this.$refs.message.show({
-            type: 'error',
-            msg: '网络开了点小差,请稍候重试吧',
-          })
-          return
-        })
-      },
-      scrollPullDown() {
-        if (this.isRefresh == true) return
-        this.isRefresh = true
-        this.pageNum = 1
-        this.list = []
-        this.list1 = []
-        this.list2 = []
-        this.getShopList()
       },
       scrollDown() {
-        // TODO 分页后端已经写好了 明天完善下滑分页加载的动画
         if (this.list.length == this.pagetotal) {
           this.isShowListloading = true
           this.status = 'nomore'
@@ -236,12 +155,8 @@
         if (this.list.length < this.pagetotal) {
           this.pageNum++
           this.isShowListloading = true
-          this.getShopList()
         }
         console.log('滑动到底部了');
-      },
-      myonload() {
-        this.getShopList()
       },
       // 这点非常重要：e.name在这里返回是list1或list2，要手动将数据追加到相应列
       changeList(e) {
@@ -252,20 +167,6 @@
       },
       checkboxClick(index) {
         this.radios[index].checked = !this.radios[index].checked
-        this.scrollPullDown()
-      },
-      toSearch() {
-        console.log('点击搜索框');
-        if (this.searchText.tr == '') {
-          this.$refs.message.show({
-            type: 'warning',
-            msg: '请输入搜索内容吧',
-          })
-          return
-        }
-        uni.navigateTo({
-          url: '/subpkg/searchShop?searchText=' + this.searchText
-        })
       },
     }
   }

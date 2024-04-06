@@ -70,6 +70,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "闲置搜索",
+          "pathName": "subpkg/searchShop",
+          "query": "searchText=女大学生",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

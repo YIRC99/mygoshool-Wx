@@ -18,7 +18,8 @@
         "userinfo",
         "affiche",
         "addShop",
-        "shopDetail"
+        "shopDetail",
+        "searchShop"
       ]
     }
   ],
