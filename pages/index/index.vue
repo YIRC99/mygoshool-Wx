@@ -11,6 +11,8 @@
 
     <ws-wx-privacy ref="yinshi" id="privacy-popup" @agree="handleAgree" @disagree="handleDisagree"
       :enableAutoProtocol="true"></ws-wx-privacy>
+      
+    
 
     <quick-message ref="message"></quick-message>
 

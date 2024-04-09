@@ -5,7 +5,7 @@
     
     <view class="mytable">
       
-      <uv-tabs :list="list" @click="change"  ></uv-tabs>
+      <uv-tabs :list="list" @click="change" :current="currentIndex" ></uv-tabs>
       
       <view class="mytable-rili" @click="openCalendars">
         <image class="mytable-rili-img" src="../../static/rili.png" mode=""></image>
@@ -257,7 +257,7 @@
           isShowListloading: false,
           status: 'loading'
         }],
-        currentIndex: 0,
+        currentIndex: 1,
         orderList: [],
         newSchoolList: [],
         oldSchoolList: [],

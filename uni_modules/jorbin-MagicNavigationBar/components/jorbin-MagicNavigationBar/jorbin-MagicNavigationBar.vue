@@ -1,6 +1,6 @@
 <template>
 	<view class="bar-container" :style="'width:'+screenWidth+'px ;height:'+height+'px;background-color:'+backgroundColor">
-		<view class="indicator" :style="'transform: translateX('+xDiff+'px);background-color:'+indicatorBackgroundColor+';border:'+indicatorPadding+'px solid '+screenBackgroundColor+';width:'+indicatorSize+'px;height:'+indicatorSize+'px;top:'+(-(indicatorSize/2+indicatorPadding))+'px'">	
+		<view class="indicator" :style="'transform: translateX('+xDiff+'px);border:'+indicatorPadding+'px solid '+screenBackgroundColor+';width:'+indicatorSize+'px;height:'+indicatorSize+'px;top:'+(-(indicatorSize/2+indicatorPadding))+'px'">	
 				<view class="indicator-before" :style="'left:-'+digHoleAngle.width+'px;width: '+digHoleAngle.width+'px;height: '+digHoleAngle.height+'px;top:'+indicatorSize/2+'px;box-shadow: 0.2px -10px 0 0 '+screenBackgroundColor+';'">
 					
 				</view>
@@ -102,7 +102,7 @@
 		
 	}
 </script>
-<style scoped>
+<style scoped lang="scss">
 	.bar-container {
 		position: fixed;
 		bottom: 0px;		
@@ -158,7 +158,7 @@
 		position: absolute;		
 		border-radius: 50%;		
 		transition: 0.2s;
-	
+    background-color: $my-subject-color;
 	}
 	
 	.indicator-before{

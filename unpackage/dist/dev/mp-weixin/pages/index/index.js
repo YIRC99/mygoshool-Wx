@@ -1162,7 +1162,7 @@ var _default = {
         isShowListloading: false,
         status: 'loading'
       }],
-      currentIndex: 0,
+      currentIndex: 1,
       orderList: [],
       newSchoolList: [],
       oldSchoolList: [],
