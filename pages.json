@@ -1,7 +1,5 @@
 {
-  "easycom": {
-  		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
-  	},
+"svgicon": "node ./uni_modules/zui-svg-icon/tools/generate-svg-icon.js",
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
 			"path": "pages/index/index",

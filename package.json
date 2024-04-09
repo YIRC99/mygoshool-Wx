@@ -9,5 +9,11 @@
     "scroll",
     "多区域滚动",
     "自适应"
-  ]
+  ],
+  "dependencies": {
+    "svgo": "^3.2.0"
+  },
+  "scripts": {
+      "svgicon": "node ./uni_modules/zui-svg-icon/tools/generate-svg-icon.js"
+    }
 }
