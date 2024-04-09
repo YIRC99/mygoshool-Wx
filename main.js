@@ -1,8 +1,7 @@
 import App from './App'
 
 
-import uView from "uview-ui";
-Vue.use(uView);
+
 const http = 'http://192.168.192.210:33088/' //手机热点
 // const http = 'https://yirc99.cn/api/' //服务器
 // const http = 'http://116.62.146.1:33088/' //服务器
