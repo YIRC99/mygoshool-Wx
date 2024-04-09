@@ -82,13 +82,13 @@ var components
 try {
   components = {
     mylist: function () {
-      return __webpack_require__.e(/*! import() | components/mylist/mylist */ "components/mylist/mylist").then(__webpack_require__.bind(null, /*! @/components/mylist/mylist.vue */ 337))
+      return __webpack_require__.e(/*! import() | components/mylist/mylist */ "components/mylist/mylist").then(__webpack_require__.bind(null, /*! @/components/mylist/mylist.vue */ 341))
     },
     zeroLoading: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/zero-loading/components/zero-loading/zero-loading */ "uni_modules/zero-loading/components/zero-loading/zero-loading").then(__webpack_require__.bind(null, /*! @/uni_modules/zero-loading/components/zero-loading/zero-loading.vue */ 344))
+      return __webpack_require__.e(/*! import() | uni_modules/zero-loading/components/zero-loading/zero-loading */ "uni_modules/zero-loading/components/zero-loading/zero-loading").then(__webpack_require__.bind(null, /*! @/uni_modules/zero-loading/components/zero-loading/zero-loading.vue */ 348))
     },
     quickMessage: function () {
-      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 315))
+      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 319))
     },
   }
 } catch (e) {
@@ -155,7 +155,7 @@ exports.default = void 0;
 var _mixin = _interopRequireDefault(__webpack_require__(/*! @/mixins/mixin.js */ 197));
 var mylist = function mylist() {
   __webpack_require__.e(/*! require.ensure | components/mylist/mylist */ "components/mylist/mylist").then((function () {
-    return resolve(__webpack_require__(/*! @/components/mylist/mylist.vue */ 337));
+    return resolve(__webpack_require__(/*! @/components/mylist/mylist.vue */ 341));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {

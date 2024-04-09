@@ -3,7 +3,7 @@
   "enablePullDownRefresh": false,
   "usingComponents": {
     "my-affiche": "/components/myAffiche/myAffiche",
-    "u-tabs": "/node-modules/uview-ui/components/u-tabs/u-tabs",
+    "uv-tabs": "/uni_modules/uv-tabs/components/uv-tabs/uv-tabs",
     "uv-calendars": "/uni_modules/uv-calendars/components/uv-calendars/uv-calendars",
     "my-emppty": "/components/myEmppty/myEmppty",
     "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",

@@ -82,28 +82,28 @@ var components
 try {
   components = {
     myAffiche: function () {
-      return __webpack_require__.e(/*! import() | components/myAffiche/myAffiche */ "components/myAffiche/myAffiche").then(__webpack_require__.bind(null, /*! @/components/myAffiche/myAffiche.vue */ 351))
+      return __webpack_require__.e(/*! import() | components/myAffiche/myAffiche */ "components/myAffiche/myAffiche").then(__webpack_require__.bind(null, /*! @/components/myAffiche/myAffiche.vue */ 355))
     },
     uniSearchBar: function () {
-      return Promise.all(/*! import() | uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar.vue */ 436))
+      return Promise.all(/*! import() | uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar.vue */ 441))
     },
     uvTags: function () {
-      return Promise.all(/*! import() | uni_modules/uv-tags/components/uv-tags/uv-tags */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-tags/components/uv-tags/uv-tags")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-tags/components/uv-tags/uv-tags.vue */ 447))
+      return Promise.all(/*! import() | uni_modules/uv-tags/components/uv-tags/uv-tags */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-tags/components/uv-tags/uv-tags")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-tags/components/uv-tags/uv-tags.vue */ 452))
     },
     myEmppty: function () {
-      return Promise.all(/*! import() | components/myEmppty/myEmppty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myEmppty/myEmppty")]).then(__webpack_require__.bind(null, /*! @/components/myEmppty/myEmppty.vue */ 379))
+      return Promise.all(/*! import() | components/myEmppty/myEmppty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myEmppty/myEmppty")]).then(__webpack_require__.bind(null, /*! @/components/myEmppty/myEmppty.vue */ 384))
     },
     uvWaterfall: function () {
-      return Promise.all(/*! import() | uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall.vue */ 455))
+      return Promise.all(/*! import() | uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall.vue */ 460))
     },
     uvLoadMore: function () {
-      return Promise.all(/*! import() | uni_modules/uv-load-more/components/uv-load-more/uv-load-more */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-load-more/components/uv-load-more/uv-load-more")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-load-more/components/uv-load-more/uv-load-more.vue */ 392))
+      return Promise.all(/*! import() | uni_modules/uv-load-more/components/uv-load-more/uv-load-more */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-load-more/components/uv-load-more/uv-load-more")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-load-more/components/uv-load-more/uv-load-more.vue */ 397))
     },
     myAdd: function () {
-      return __webpack_require__.e(/*! import() | components/myAdd/myAdd */ "components/myAdd/myAdd").then(__webpack_require__.bind(null, /*! @/components/myAdd/myAdd.vue */ 414))
+      return __webpack_require__.e(/*! import() | components/myAdd/myAdd */ "components/myAdd/myAdd").then(__webpack_require__.bind(null, /*! @/components/myAdd/myAdd.vue */ 419))
     },
     quickMessage: function () {
-      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 315))
+      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 319))
     },
   }
 } catch (e) {

@@ -2,17 +2,18 @@
   <view class="page">
 
     <myAffiche></myAffiche>
+    
     <view class="mytable">
-      <u-tabs :list="list" style="background-color: #F6F5F6;" :height="160" :font-size="40" :is-scroll="false"
-        bar-height="60" bar-width="400" :current="currentIndex" @change="change">
-      </u-tabs>
+      
+      <uv-tabs :list="list" @click="change"  ></uv-tabs>
+      
       <view class="mytable-rili" @click="openCalendars">
         <image class="mytable-rili-img" src="../../static/rili.png" mode=""></image>
         <view class="mytable-rili-text" v-show="list[currentIndex].time != ''">{{list[currentIndex].time}}
         </view>
-
       </view>
     </view>
+    
     <uv-calendars title="选择日期" ref="calendars" @close="cancelCalendars" @confirm="chooseDateConfirm" />
 
     <scroll-view scroll-y="true" style="height: 75vh; " :refresher-triggered="isRefresh" @scrolltolower="scrollDown"
@@ -317,7 +318,6 @@
         this.$refs.myWxUpload.fileList1Empty()
       },
 
-
       viewWxImg() {
         let img = this.QRttp + this.currentOrder.wechatImg
         uni.previewImage({
@@ -569,6 +569,7 @@
         this.popupShow = false
       },
       change(e) {
+        console.log(e);
         this.currentIndex = e.index
 
         if (this.currentIndex == 0) {

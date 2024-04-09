@@ -17,22 +17,36 @@
 
     <uni-card>
       <view class="priceAndbrowse">
-        <view class="price">￥15</view>
+        <view class="price">￥{{shop.price}}</view>
         <view class="">{{shop.browse}}浏览</view>
       </view>
       <rich-text :nodes="shopDetail"></rich-text>
-      <view class="" v-for="(item,index) in shopImgList" :key="index">
-        <image :src="shophttp + item"></image>
+      <view class="" @click="viewImg(index)" v-for="(item,index) in shopImgList" :key="index">
+        <image :src="shophttp + item" style="width: 100%;" mode="widthFix"></image>
       </view>
     </uni-card>
 
-    <uni-card>
+    <uni-card isShadow @click="clickWxImg" v-show="!showWxImg">
       <view class="WxBox">
         <image src="@/static/weixin.png" class="myicon" mode=""></image>
         <view class="">感兴趣 点击添加微信聊一聊</view>
       </view>
     </uni-card>
-
+    
+     <uni-card isShadow  v-show="showWxImg">
+      <view class="" style="display: flex; justify-content: space-between; align-items: center;" >
+        <view class="" style="display: flex; align-items: center;">
+          <image src="@/static/weixin.png" class="myicon" ></image>
+          <view class="" style="margin-right: 20rpx;">长按微信二维码添加好友</view>
+        </view>
+        <view class="" @click="viewWximg">
+          <image show-menu-by-longpress :src="avahttp + shop.wechatimg" style="width: 100rpx; height: 100rpx;"></image>
+        </view>
+      </view>
+    </uni-card>
+    
+    
+<zero-loading v-if="isLoading" type="circle" :mask="true" maskOpacity="0.1"></zero-loading>
   </view>
 </template>
 
@@ -42,17 +56,40 @@
      mixins: [mixin],
     data() {
       return {
+        isLoading: false,
+        showWxImg: false,
         userinfo:{},
         shop:{
           address: '',
           browse: '',
-          id: 0
+          id: 0,
+          price: 99999,
+          wechatimg: ''
         },
         shopDetail: '',
         shopImgList:[]
       }
     },
     methods: {
+      viewWximg(){
+        uni.previewImage({
+          urls: [this.shophttp + this.shop.wechatimg]
+        })
+      },
+      clickWxImg(){
+        this.isLoading = true
+        setTimeout(() => {
+          this.showWxImg = true
+          this.isLoading = false
+        },1000)
+        
+      },
+      viewImg(index){
+        uni.previewImage({
+          urls: this.shopImgList.map(i => this.shophttp + i),
+          current: index
+        })
+      },
       browseAdd(){
         this.post({
           url: 'shop/addbrowse',
@@ -97,6 +134,15 @@
 </script>
 
 <style lang="scss">
+  .page{
+    padding-bottom: 40rpx;
+  }
+  
+  .myicon {
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 30rpx;
+  }
   
   .WxBox{
     display: flex;
@@ -142,6 +188,7 @@
       .name {
         font-size: 36rpx;
         font-weight: bold;
+        color: black;
       }
 
       .sub {

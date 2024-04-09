@@ -24,6 +24,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 _vue.default.use(_uviewUi.default);
 var http = 'http://192.168.192.210:33088/'; //手机热点
+// const http = 'https://yirc99.cn/api/' //服务器
 // const http = 'http://116.62.146.1:33088/' //服务器
 // const http = 'http://192.168.1.113:33088/' //305wifi
 // const http = 'http://172.20.10.196:33088/' //宿舍wifi
@@ -138,7 +139,7 @@ _vue.default.filter('formHtmlStr', function (value) {
 _vue.default.use(_uvUiTools.default);
 var message = function message() {
   Promise.all(/*! require.ensure | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then((function () {
-    return resolve(__webpack_require__(/*! @/components/quick-message/quick-message.vue */ 315));
+    return resolve(__webpack_require__(/*! @/components/quick-message/quick-message.vue */ 319));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 _vue.default.component('quick-message', message);

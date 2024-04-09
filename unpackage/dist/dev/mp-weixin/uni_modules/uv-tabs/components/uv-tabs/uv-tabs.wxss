@@ -63,7 +63,7 @@ view.data-v-28a80996, scroll-view.data-v-28a80996, swiper-item.data-v-28a80996 {
   cursor: not-allowed;
 }
 .uv-tabs__wrapper__nav__item__text.data-v-28a80996 {
-  font-size: 38rpx;
+  font-size: 40rpx;
   color: #606266;
 }
 .uv-tabs__wrapper__nav__item__text--disabled.data-v-28a80996 {

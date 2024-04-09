@@ -101,7 +101,10 @@ var components
 try {
   components = {
     uniCard: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 385))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 390))
+    },
+    zeroLoading: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/zero-loading/components/zero-loading/zero-loading */ "uni_modules/zero-loading/components/zero-loading/zero-loading").then(__webpack_require__.bind(null, /*! @/uni_modules/zero-loading/components/zero-loading/zero-loading.vue */ 348))
     },
   }
 } catch (e) {
@@ -204,23 +207,63 @@ var _mixin = _interopRequireDefault(__webpack_require__(/*! @/mixins/mixin.js */
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   mixins: [_mixin.default],
   data: function data() {
     return {
+      isLoading: false,
+      showWxImg: false,
       userinfo: {},
       shop: {
         address: '',
         browse: '',
-        id: 0
+        id: 0,
+        price: 99999,
+        wechatimg: ''
       },
       shopDetail: '',
       shopImgList: []
     };
   },
   methods: {
-    browseAdd: function browseAdd() {
+    viewWximg: function viewWximg() {
+      uni.previewImage({
+        urls: [this.shophttp + this.shop.wechatimg]
+      });
+    },
+    clickWxImg: function clickWxImg() {
       var _this = this;
+      this.isLoading = true;
+      setTimeout(function () {
+        _this.showWxImg = true;
+        _this.isLoading = false;
+      }, 1000);
+    },
+    viewImg: function viewImg(index) {
+      var _this2 = this;
+      uni.previewImage({
+        urls: this.shopImgList.map(function (i) {
+          return _this2.shophttp + i;
+        }),
+        current: index
+      });
+    },
+    browseAdd: function browseAdd() {
+      var _this3 = this;
       this.post({
         url: 'shop/addbrowse',
         data: {
@@ -228,7 +271,7 @@ var _default = {
         }
       }).then(function (res) {
         console.log(res);
-        _this.shop.browse = res.data;
+        _this3.shop.browse = res.data;
       });
     },
     initData: function initData() {
@@ -242,7 +285,7 @@ var _default = {
       this.shop.address = aa[this.shop.address];
     },
     getUserInfo: function getUserInfo(openid) {
-      var _this2 = this;
+      var _this4 = this;
       this.post({
         url: 'user/byopenid',
         data: {
@@ -250,7 +293,7 @@ var _default = {
         }
       }).then(function (res) {
         console.log(res);
-        _this2.userinfo = res.data;
+        _this4.userinfo = res.data;
       });
     }
   },

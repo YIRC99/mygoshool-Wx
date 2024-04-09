@@ -1,7 +1,7 @@
 <template>
   <view>
 
-    <scroll-view scroll-y="true" style="height: 95vh; background-color: #f7f7f7;" :refresher-triggered="isRefresh"
+    <scroll-view scroll-y="true" style="height: 95vh; background-color: #FFFFFF;" :refresher-triggered="isRefresh"
       @scrolltolower="scrollDown" :scroll-top="myScrollPosition" scroll-with-animation
       @refresherrefresh="scrollPullDown" @scroll="myScroll" refresher-enabled>
       <view class="">
@@ -303,7 +303,7 @@
     padding-bottom: 10rpx;
 
     .page {
-      background: #f1f1f1;
+      background: #FFFFFF;
     }
 
     .uv-page__tag-item {

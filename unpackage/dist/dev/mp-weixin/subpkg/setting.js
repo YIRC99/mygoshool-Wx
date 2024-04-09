@@ -101,16 +101,16 @@ var components
 try {
   components = {
     uniCard: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 385))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 390))
     },
     zeroLoading: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/zero-loading/components/zero-loading/zero-loading */ "uni_modules/zero-loading/components/zero-loading/zero-loading").then(__webpack_require__.bind(null, /*! @/uni_modules/zero-loading/components/zero-loading/zero-loading.vue */ 344))
+      return __webpack_require__.e(/*! import() | uni_modules/zero-loading/components/zero-loading/zero-loading */ "uni_modules/zero-loading/components/zero-loading/zero-loading").then(__webpack_require__.bind(null, /*! @/uni_modules/zero-loading/components/zero-loading/zero-loading.vue */ 348))
     },
     quickMessage: function () {
-      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 315))
+      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 319))
     },
     wsWxPrivacy: function () {
-      return Promise.all(/*! import() | uni_modules/ws-wx-privacy/components/ws-wx-privacy/ws-wx-privacy */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/ws-wx-privacy/components/ws-wx-privacy/ws-wx-privacy")]).then(__webpack_require__.bind(null, /*! @/uni_modules/ws-wx-privacy/components/ws-wx-privacy/ws-wx-privacy.vue */ 322))
+      return Promise.all(/*! import() | uni_modules/ws-wx-privacy/components/ws-wx-privacy/ws-wx-privacy */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/ws-wx-privacy/components/ws-wx-privacy/ws-wx-privacy")]).then(__webpack_require__.bind(null, /*! @/uni_modules/ws-wx-privacy/components/ws-wx-privacy/ws-wx-privacy.vue */ 326))
     },
   }
 } catch (e) {

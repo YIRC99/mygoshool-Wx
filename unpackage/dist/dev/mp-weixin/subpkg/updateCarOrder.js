@@ -101,37 +101,37 @@ var components
 try {
   components = {
     uvLoadingPage: function () {
-      return Promise.all(/*! import() | uni_modules/uv-loading-page/components/uv-loading-page/uv-loading-page */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-loading-page/components/uv-loading-page/uv-loading-page")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-loading-page/components/uv-loading-page/uv-loading-page.vue */ 517))
+      return Promise.all(/*! import() | uni_modules/uv-loading-page/components/uv-loading-page/uv-loading-page */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-loading-page/components/uv-loading-page/uv-loading-page")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-loading-page/components/uv-loading-page/uv-loading-page.vue */ 530))
     },
     uniCard: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 385))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 390))
     },
     uLine: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-line/u-line */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-line/u-line")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-line/u-line.vue */ 463))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-line/u-line */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-line/u-line")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-line/u-line.vue */ 468))
     },
     uvDatetimePicker: function () {
-      return Promise.all(/*! import() | uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker.vue */ 471))
+      return Promise.all(/*! import() | uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker.vue */ 476))
     },
     uvPicker: function () {
-      return Promise.all(/*! import() | uni_modules/uv-picker/components/uv-picker/uv-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-picker/components/uv-picker/uv-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-picker/components/uv-picker/uv-picker.vue */ 478))
+      return Promise.all(/*! import() | uni_modules/uv-picker/components/uv-picker/uv-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-picker/components/uv-picker/uv-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-picker/components/uv-picker/uv-picker.vue */ 483))
     },
     uvUpload: function () {
-      return Promise.all(/*! import() | uni_modules/uv-upload/components/uv-upload/uv-upload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-upload/components/uv-upload/uv-upload")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-upload/components/uv-upload/uv-upload.vue */ 525))
+      return Promise.all(/*! import() | uni_modules/uv-upload/components/uv-upload/uv-upload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-upload/components/uv-upload/uv-upload")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-upload/components/uv-upload/uv-upload.vue */ 538))
     },
     uvCheckboxGroup: function () {
-      return Promise.all(/*! import() | uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group.vue */ 486))
+      return Promise.all(/*! import() | uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-checkbox/components/uv-checkbox-group/uv-checkbox-group.vue */ 491))
     },
     uvCheckbox: function () {
-      return Promise.all(/*! import() | uni_modules/uv-checkbox/components/uv-checkbox/uv-checkbox */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-checkbox/components/uv-checkbox/uv-checkbox")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-checkbox/components/uv-checkbox/uv-checkbox.vue */ 494))
+      return Promise.all(/*! import() | uni_modules/uv-checkbox/components/uv-checkbox/uv-checkbox */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-checkbox/components/uv-checkbox/uv-checkbox")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-checkbox/components/uv-checkbox/uv-checkbox.vue */ 499))
     },
     uniSection: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 407))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 412))
     },
     quickMessage: function () {
-      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 315))
+      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 319))
     },
     zeroLoading: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/zero-loading/components/zero-loading/zero-loading */ "uni_modules/zero-loading/components/zero-loading/zero-loading").then(__webpack_require__.bind(null, /*! @/uni_modules/zero-loading/components/zero-loading/zero-loading.vue */ 344))
+      return __webpack_require__.e(/*! import() | uni_modules/zero-loading/components/zero-loading/zero-loading */ "uni_modules/zero-loading/components/zero-loading/zero-loading").then(__webpack_require__.bind(null, /*! @/uni_modules/zero-loading/components/zero-loading/zero-loading.vue */ 348))
     },
   }
 } catch (e) {

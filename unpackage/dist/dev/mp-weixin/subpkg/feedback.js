@@ -101,13 +101,13 @@ var components
 try {
   components = {
     uniSection: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 407))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 412))
     },
     myImgUpload: function () {
-      return Promise.all(/*! import() | components/myImgUpload/myImgUpload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myImgUpload/myImgUpload")]).then(__webpack_require__.bind(null, /*! @/components/myImgUpload/myImgUpload.vue */ 502))
+      return Promise.all(/*! import() | components/myImgUpload/myImgUpload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myImgUpload/myImgUpload")]).then(__webpack_require__.bind(null, /*! @/components/myImgUpload/myImgUpload.vue */ 507))
     },
     quickMessage: function () {
-      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 315))
+      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 319))
     },
   }
 } catch (e) {
