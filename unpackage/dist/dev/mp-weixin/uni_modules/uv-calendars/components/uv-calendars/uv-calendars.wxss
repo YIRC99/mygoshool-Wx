@@ -30,7 +30,7 @@
 .line.data-v-0d8ea832 {
   width: 750rpx;
   height: 1px;
-  border-bottom-color: #EDEDED;
+  border-bottom-color: #dadbde;
   border-bottom-style: solid;
   border-bottom-width: 1px;
 }

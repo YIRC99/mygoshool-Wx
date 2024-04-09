@@ -20,7 +20,7 @@
         <view class="price">￥{{shop.price}}</view>
         <view class="">{{shop.browse}}浏览</view>
       </view>
-      <rich-text :nodes="shopDetail"></rich-text>
+      <rich-text :nodes="shopDetail" user-select></rich-text>
       <view class="" @click="viewImg(index)" v-for="(item,index) in shopImgList" :key="index">
         <image :src="shophttp + item" style="width: 100%;" mode="widthFix"></image>
       </view>

@@ -103,8 +103,8 @@ try {
     uniCard: function () {
       return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 390))
     },
-    uLine: function () {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-line/u-line */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-line/u-line")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-line/u-line.vue */ 468))
+    uvLine: function () {
+      return Promise.all(/*! import() | uni_modules/uv-line/components/uv-line/uv-line */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-line/components/uv-line/uv-line")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-line/components/uv-line/uv-line.vue */ 468))
     },
     uvDatetimePicker: function () {
       return Promise.all(/*! import() | uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker.vue */ 476))

@@ -137,6 +137,18 @@ _vue.default.filter('formHtmlStr', function (value) {
 // main.js
 
 _vue.default.use(_uvUiTools.default);
+
+// 调用setConfig方法，方法内部会进行对象属性深度合并，可以放心嵌套配置
+// 需要在Vue.use(uvUI)之后执行
+uni.$uv.setConfig({
+  // 修改$uv.config对象的属性
+  config: {
+    // 修改默认单位为rpx，相当于执行 uni.$uv.config.unit = 'rpx'
+    unit: 'rpx'
+  }
+  // 其他组件属性配置，具体的参数名称可以去每个组件的props.js中进行查看
+  // ......
+});
 var message = function message() {
   Promise.all(/*! require.ensure | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then((function () {
     return resolve(__webpack_require__(/*! @/components/quick-message/quick-message.vue */ 319));

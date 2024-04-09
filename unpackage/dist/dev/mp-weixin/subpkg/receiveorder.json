@@ -2,7 +2,7 @@
   "navigationBarTitleText": "我接受的",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "u-tabs": "/node-modules/uview-ui/components/u-tabs/u-tabs",
+    "uv-tabs": "/uni_modules/uv-tabs/components/uv-tabs/uv-tabs",
     "my-emppty": "/components/myEmppty/myEmppty",
     "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
     "uv-tags": "/uni_modules/uv-tags/components/uv-tags/uv-tags",

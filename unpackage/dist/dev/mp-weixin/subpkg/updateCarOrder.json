@@ -4,7 +4,7 @@
   "usingComponents": {
     "uv-loading-page": "/uni_modules/uv-loading-page/components/uv-loading-page/uv-loading-page",
     "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
-    "u-line": "/node-modules/uview-ui/components/u-line/u-line",
+    "uv-line": "/uni_modules/uv-line/components/uv-line/uv-line",
     "uv-datetime-picker": "/uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker",
     "uv-picker": "/uni_modules/uv-picker/components/uv-picker/uv-picker",
     "uv-upload": "/uni_modules/uv-upload/components/uv-upload/uv-upload",

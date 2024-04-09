@@ -3,7 +3,7 @@
   "enablePullDownRefresh": false,
   "usingComponents": {
     "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
-    "u-line": "/node-modules/uview-ui/components/u-line/u-line",
+    "uv-line": "/uni_modules/uv-line/components/uv-line/uv-line",
     "uv-datetime-picker": "/uni_modules/uv-datetime-picker/components/uv-datetime-picker/uv-datetime-picker",
     "uv-picker": "/uni_modules/uv-picker/components/uv-picker/uv-picker",
     "myupload": "/components/myupload/myupload",

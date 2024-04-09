@@ -199,9 +199,6 @@
   margin-left: 10rpx;
   margin-top: 10rpx;
 }
- .u-tabs__wrapper__nav {
-  background-color: #ffffff !important;
-}
 .my-car-box {
   display: flex;
   align-items: center;
@@ -232,8 +229,5 @@
   border-radius: 50%;
   overflow: hidden;
   margin-left: 10rpx;
-}
- .u-tabs__wrapper__nav__item__text {
-  font-size: 40rpx !important;
 }
 

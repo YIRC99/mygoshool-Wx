@@ -248,10 +248,4 @@
   margin-left: 10rpx;
   margin-top: 10rpx;
 }
- .u-tabs__wrapper__nav {
-  background-color: #ffffff !important;
-}
- .u-tabs__wrapper__nav__item__text {
-  font-size: 40rpx !important;
-}
 

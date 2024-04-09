@@ -5,14 +5,14 @@
       <view class="addChose-box-line" @click="choseStartAddress">
         <view class="" style="width: 15rpx; height: 15rpx; border-radius: 50%; background-color: #99F2FF;">
         </view>
-        <view class="u-line-1">{{startAddress}}</view>
+        <view class="uv-line-1">{{startAddress}}</view>
         <image src="/static/rihgt_black.png" style="width: 30rpx; height: 30rpx;" mode=""></image>
       </view>
-      <u-line color="#f8f8f8"></u-line>
+      <uv-line color="#f8f8f8"></uv-line>
       <view class="addChose-box-line" @click="choseEndAddress">
         <view class="" style="width: 15rpx; height: 15rpx; border-radius: 50%; background-color: #FC770B;">
         </view>
-        <view class="u-line-1">{{endAddress}}</view>
+        <view class="uv-line-1">{{endAddress}}</view>
         <image src="/static/rihgt_black.png" style="width: 30rpx; height: 30rpx;" mode=""></image>
       </view>
     </uni-card>
@@ -58,7 +58,7 @@
         <view class="choseTimeDifference-item">
           <uv-checkbox-group>
             <uv-checkbox @change="tiqianChange" activeColor="#87d7e1" name="tiqian" size="40rpx" labelSize="17"
-              labelColor="#584c48" label="能否接受提前出发"></uv-checkbox>
+              labelColor="#584c48" :labelSize="32" :iconSize="26" label="能否接受提前出发"></uv-checkbox>
           </uv-checkbox-group>
           <view :class="isBefore == true ? 'truebeforeTime':'flasebeforeTime'" style=""
             @click="openBeforDatetimePicker">
@@ -70,7 +70,7 @@
         <view class="choseTimeDifference-item">
           <uv-checkbox-group>
             <uv-checkbox @change="yanhoChange" activeColor="#87d7e1" name="tiqian" size="40rpx" labelSize="17"
-              labelColor="#584c48" label="能否接受延后出发"></uv-checkbox>
+              labelColor="#584c48" :labelSize="32" :iconSize="26" label="能否接受延后出发"></uv-checkbox>
           </uv-checkbox-group>
           <view :class="isAfter == true ? 'truebeforeTime':'flasebeforeTime'" style="" @click="openAfterDatetimePicker">
             {{afterTime}}

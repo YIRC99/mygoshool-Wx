@@ -5,7 +5,7 @@
     
     <view class="mytable">
       
-      <uv-tabs :list="list" @click="change" :current="currentIndex" ></uv-tabs>
+      <uv-tabs :list="list" :lineWidth="40" :lineHeight="6" @click="change" :current="currentIndex" ></uv-tabs>
       
       <view class="mytable-rili" @click="openCalendars">
         <image class="mytable-rili-img" src="../../static/rili.png" mode=""></image>
@@ -27,11 +27,11 @@
             <view class="" style="width: 80%;">
               <view class="car-left">
                 <img class="my-icon" src="/static/upCar.png" />
-                <text class="u-line-1">{{item.startaddress}}</text>
+                <text class="uv-line-1">{{item.startaddress}}</text>
               </view>
               <view class="car-left">
                 <img class="my-icon" src="/static/downCar.png" />
-                <text class="u-line-1">{{item.endaddress}}</text>
+                <text class="uv-line-1">{{item.endaddress}}</text>
               </view>
             </view>
             <view class="">
@@ -48,7 +48,7 @@
             </view>
           </view>
 
-          <text class="u-line-1 myremark" style="color: #a9a9a9;">备注: {{item.remark}}</text>
+          <text class="uv-line-1 myremark" style="color: #a9a9a9;">备注: {{item.remark}}</text>
         </uni-card>
         <uv-load-more v-if="list[currentIndex].isShowListloading" :status="list[currentIndex].status" :marginTop="10"
           :marginBottom="20" dashed line />
@@ -63,11 +63,11 @@
             <view class="" style="width: 80%;">
               <view class="car-left">
                 <img class="my-icon" src="/static/upCar.png" />
-                <text class="u-line-1">{{item.startaddress}}</text>
+                <text class="uv-line-1">{{item.startaddress}}</text>
               </view>
               <view class="car-left">
                 <img class="my-icon" src="/static/downCar.png" />
-                <text class="u-line-1">{{item.endaddress}}</text>
+                <text class="uv-line-1">{{item.endaddress}}</text>
               </view>
             </view>
             <view class="">
@@ -84,7 +84,7 @@
             </view>
           </view>
 
-          <text class="u-line-1 myremark" style="color: #a9a9a9;">备注: {{item.remark}}</text>
+          <text class="uv-line-1 myremark" style="color: #a9a9a9;">备注: {{item.remark}}</text>
         </uni-card>
 
         <uv-load-more v-if="list[currentIndex].isShowListloading" :status="list[currentIndex].status" :marginTop="10"
@@ -100,11 +100,11 @@
             <view class="" style="width: 80%;">
               <view class="car-left">
                 <img class="my-icon" src="/static/upCar.png" />
-                <text class="u-line-1">{{item.startaddress}}</text>
+                <text class="uv-line-1">{{item.startaddress}}</text>
               </view>
               <view class="car-left">
                 <img class="my-icon" src="/static/downCar.png" />
-                <text class="u-line-1">{{item.endaddress}}</text>
+                <text class="uv-line-1">{{item.endaddress}}</text>
               </view>
             </view>
             <view class="">
@@ -121,7 +121,7 @@
             </view>
           </view>
 
-          <text class="u-line-1 myremark" style="color: #a9a9a9;">备注: {{item.remark}}</text>
+          <text class="uv-line-1 myremark" style="color: #a9a9a9;">备注: {{item.remark}}</text>
         </uni-card>
         <uv-load-more v-if="list[currentIndex].isShowListloading" :status="list[currentIndex].status" :marginTop="10"
           :marginBottom="20" dashed line />
@@ -828,11 +828,6 @@
   }
 
 
-
-  /deep/ .u-tabs__wrapper__nav {
-    background-color: #ffffff !important;
-  }
-
   .my-car-box {
     display: flex;
     align-items: center;
@@ -872,7 +867,5 @@
   }
 
 
-  /deep/ .u-tabs__wrapper__nav__item__text {
-    font-size: 40rpx !important;
-  }
+
 </style>

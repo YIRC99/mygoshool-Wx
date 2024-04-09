@@ -27,7 +27,7 @@
           </view> 
           <uv-list >
               <uv-list-item direction="column"v-for="(item,index) in appriseList" :key="index">
-                <view class="u-line-3 item-title" slot="header">
+                <view class="uv-line-3 item-title" slot="header">
                   {{item.apprisedata}}
                 </view>
                 <view class="" slot="footer" style="display: flex; justify-content: space-between; align-items: center;">

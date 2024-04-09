@@ -1,8 +1,7 @@
 <template>
   <view class="page">
 
-    <u-tabs :list="list" style="background-color: #F6F5F6;" :height="160" :font-size="40" :is-scroll="false"
-      bar-height="60" bar-width="400" :current="current" @change="change"></u-tabs>
+    <uv-tabs :list="list" @click="change" :lineWidth="40" :lineHeight="6" :current="current"></uv-tabs>
 
     <view class="" v-show="current == 0">
       <myEmppty :isShow="orderList.length == 0"></myEmppty>
@@ -16,11 +15,11 @@
           <view class="aaa">
             <view class="car-left">
               <img class="my-icon" src="/static/upCar.png" />
-              <text class="u-line-1" style="width: 350rpx;">{{item.startaddress}}</text>
+              <text class="uv-line-1" style="width: 350rpx;">{{item.startaddress}}</text>
             </view>
             <view class="car-left">
               <img class="my-icon" src="/static/downCar.png" />
-              <text class="u-line-1" style="width: 350rpx;">{{item.endaddress}}</text>
+              <text class="uv-line-1" style="width: 350rpx;">{{item.endaddress}}</text>
             </view>
           </view>
           <view class="aaa" @click.stop="openAppraise(index)">
@@ -640,11 +639,4 @@
   }
 
 
-  /deep/ .u-tabs__wrapper__nav {
-    background-color: #ffffff !important;
-  }
-
-  /deep/ .u-tabs__wrapper__nav__item__text {
-    font-size: 40rpx !important;
-  }
 </style>

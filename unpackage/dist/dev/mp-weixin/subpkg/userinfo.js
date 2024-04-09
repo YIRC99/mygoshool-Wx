@@ -106,10 +106,10 @@ try {
       return Promise.all(/*! import() | uni_modules/uv-tabs/components/uv-tabs/uv-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-tabs/components/uv-tabs/uv-tabs")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-tabs/components/uv-tabs/uv-tabs.vue */ 362))
     },
     uvList: function () {
-      return Promise.all(/*! import() | uni_modules/uv-list/components/uv-list/uv-list */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-list/components/uv-list/uv-list")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-list/components/uv-list/uv-list.vue */ 548))
+      return Promise.all(/*! import() | uni_modules/uv-list/components/uv-list/uv-list */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-list/components/uv-list/uv-list")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-list/components/uv-list/uv-list.vue */ 540))
     },
     uvListItem: function () {
-      return Promise.all(/*! import() | uni_modules/uv-list/components/uv-list-item/uv-list-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-list/components/uv-list-item/uv-list-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-list/components/uv-list-item/uv-list-item.vue */ 555))
+      return Promise.all(/*! import() | uni_modules/uv-list/components/uv-list-item/uv-list-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-list/components/uv-list-item/uv-list-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-list/components/uv-list-item/uv-list-item.vue */ 547))
     },
     uvTags: function () {
       return Promise.all(/*! import() | uni_modules/uv-tags/components/uv-tags/uv-tags */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-tags/components/uv-tags/uv-tags")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-tags/components/uv-tags/uv-tags.vue */ 452))

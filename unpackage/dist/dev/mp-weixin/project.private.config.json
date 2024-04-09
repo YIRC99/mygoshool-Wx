@@ -77,6 +77,13 @@
           "query": "searchText=女大学生",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "修改拼车",
+          "pathName": "subpkg/updateCarOrder",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

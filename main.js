@@ -125,8 +125,6 @@ Vue.filter('formHtmlStr', (value) => {
 
 
 
-
-
 // main.js
 import uvUI from '@/uni_modules/uv-ui-tools'
 // #ifndef VUE3
@@ -135,6 +133,21 @@ Vue.use(uvUI);
 // #ifdef VUE3
 app.use(uvUI);
 // #endif
+
+
+// 调用setConfig方法，方法内部会进行对象属性深度合并，可以放心嵌套配置
+// 需要在Vue.use(uvUI)之后执行
+uni.$uv.setConfig({
+	// 修改$uv.config对象的属性
+	config: {
+		// 修改默认单位为rpx，相当于执行 uni.$uv.config.unit = 'rpx'
+		unit: 'rpx'
+	}
+		// 其他组件属性配置，具体的参数名称可以去每个组件的props.js中进行查看
+		// ......
+})
+
+
 
 import message from '@/components/quick-message/quick-message.vue'
 Vue.component('quick-message',message);
