@@ -80,6 +80,21 @@
       }
     },
     methods:{
+      addImg(imgs,type){
+        let arr = imgs.split(",")
+        arr.forEach(i => {
+          this.fileList1.push({
+            message: '',
+            resWximg: i,
+            size: 0,
+            status: 'success',
+            thumb: this.http + type + i,
+            type: 'image',
+            url: 200
+          })
+        })
+        this.showBefor = false
+      },
       isAllupdate(){
         for (var i = 0; i < this.fileList1.length; i++) {
           console.log(this.fileList1[i].status);
@@ -115,10 +130,10 @@
       },
       async initWxImg(){
         let user = uni.getStorageSync('user')
-        console.log('user.userWxImg',user.userWxImg);
+
         if(user.userWxImg != null && user.userWxImg != ''){
           // 直接设置图片地址
-          console.log('true');
+          console.log('不用请求直接获取上一次的微信图片');
           this.beforeImg = user.userWxImg
           this.showBefor = true
         }else{

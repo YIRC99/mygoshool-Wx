@@ -44,14 +44,8 @@
       </view>
     </view>
     
+   
     
-    <zui-svg-icon icon="yiwen" :width="10"/>
-
-    <view class="" style="width: 300rpx; height: 300rpx; background-color: rgba(255, 255, 200, 0.3);">
-      aaaa
-      <zui-svg-icon icon="lishi" :width="10"/>
-      <zui-svg-icon icon="yiwen" :width="10"/>
-    </view>
 
     <zero-loading v-if="isLoading" type="circle" :mask="true" maskOpacity="0.1"></zero-loading>
 
@@ -73,6 +67,7 @@
         isLogin: false,
         info: {},
         isLoading: false,
+
       };
     },
     methods: {

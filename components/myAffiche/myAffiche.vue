@@ -1,7 +1,7 @@
 <template>
   <view>
     <view class="" style="background-color: #fff; padding-bottom: 5rpx; padding-top: 20rpx;" v-if="tabIndex != 2">
-      <view class="" class="u-line-2 mynative" @click="ClickAff">
+      <view class="" class="uv-line-2 mynative" @click="ClickAff">
         <text>社区公告</text>
         {{affiche.text}}
       </view>

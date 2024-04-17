@@ -14,16 +14,16 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
 __webpack_require__(/*! uni-pages */ 26);
 var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ 27));
-var _uvUiTools = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/uv-ui-tools */ 158));
+var _uvUiTools = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/uv-ui-tools */ 33));
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 25));
-__webpack_require__(/*! ./uni.promisify.adaptor */ 185);
+__webpack_require__(/*! ./uni.promisify.adaptor */ 68);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 // @ts-ignore
 wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
-var http = 'http://192.168.192.210:33088/'; //手机热点
+var http = 'http://192.168.72.210:33088/'; //手机热点
 // const http = 'https://yirc99.cn/api/' //服务器
-// const http = 'http://116.62.146.1:33088/' //服务器
+// const http = 'http://192.168.2.177:33088/' //酒店
 // const http = 'http://192.168.1.113:33088/' //305wifi
 // const http = 'http://172.20.10.196:33088/' //宿舍wifi
 
@@ -149,7 +149,7 @@ uni.$uv.setConfig({
 });
 var message = function message() {
   Promise.all(/*! require.ensure | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then((function () {
-    return resolve(__webpack_require__(/*! @/components/quick-message/quick-message.vue */ 319));
+    return resolve(__webpack_require__(/*! @/components/quick-message/quick-message.vue */ 202));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 _vue.default.component('quick-message', message);

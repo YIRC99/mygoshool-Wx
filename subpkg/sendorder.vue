@@ -5,9 +5,9 @@
     <uv-tabs :list="list" @click="change" :lineWidth="40" :lineHeight="6" :current="current"></uv-tabs>
 
     <view class="" v-show="current == 0">
-      <myEmppty :isShow="orderList.length == 0"></myEmppty>
+      <myEmppty :isShow="orderList.length == 0 && isLoading == false"></myEmppty>
 
-      <uni-card class="mycard" v-for="(item,index) in orderList" :key="index" @click="clickCard(item)">
+      <uni-card is-shadow class="mycard" v-for="(item,index) in orderList" :key="index" @click="clickCard(item)">
         <view class="my-uv-tags">
           <view class="mycard-titile">{{subYear(item.startdatetime) + ' 出发'}}</view>
           <uv-tags :text="item.statusText" plain :type="item.statusTag"></uv-tags>
@@ -34,7 +34,28 @@
     </view>
 
     <view class="" v-show="current == 1">
-      <myEmppty :isShow="true" Text="订单为空"></myEmppty>
+      <myEmppty :isShow="shopList.length == 0 && isLoading == false" Text="您还没有发布任何闲置物品哦~"></myEmppty>
+      
+      <uni-card is-shadow spacing="0" v-for="(item,index) in shopList" :key="index" @click="ToShopDetail(item)">
+        <view class="shopItem">
+          <view class="left">
+            <image :src="shophttp + item.image" lazy-load></image>
+          </view>
+          <view class="right">
+            <view class="my-targ">
+              <uv-tags :text="item.statusText" plain :type="item.statusTag"></uv-tags>
+            </view>
+            
+            <view class="title uv-line-2">{{item.detail | formHtmlStr}}</view>
+            <view class="subhead">发布时间: {{item.createAt | fromStartDateTime}}</view>
+            <view class="but-box">
+              <button class="btn-grad-update" @click.stop="updateShop(item)">编辑</button>
+              <button class="btn-grad-delete"  @click.stop="deleteShop(item)">删除</button>
+            </view>
+          </view>
+        </view>
+      </uni-card>
+      
     </view>
 
     <uv-popup ref="popup" mode="bottom" round="50rpx" @maskClick="closePopup">
@@ -122,9 +143,10 @@
         <button class="btn-grad" @click="upApprise">提交评价</button>
       </view>
     </uv-popup>
-
+    
     <quick-message ref="message"></quick-message>
-    <zero-loading v-if="isLoading" type="circle" :mask="true" maskOpacity="0.1"></zero-loading>
+    <zero-loading v-if="isLoading" type="circle" ></zero-loading>
+    
   </view>
 </template>
 
@@ -139,9 +161,10 @@
         list: [{
           name: '拼车'
         }, {
-          name: '待开发'
+          name: '闲置'
         }],
         current: 0,
+        shopList:[],
         orderList: [],
         popupShow: false,
         userinfo: {},
@@ -160,9 +183,120 @@
         clickAppriseReceiveUserId: '',
         clickCurrentListIndex: '',
         clickUpApprise: false,
+        currentShop: {
+          id: ''
+        }
       }
     },
     methods: {
+      compareTime(cancelTime){
+        let cancel = new Date(cancelTime)
+        let curr = new Date()
+        if(cancel.getTime() > curr.getTime())
+          return false
+        else return true
+      },
+      deleteShopRequest(){
+        this.isLoading = true
+        uni.showLoading({})
+        this.post({
+          url: 'shop/delete',
+          data: {
+            id: this.currentShop.id
+          }
+        }).then(res => {
+          uni.hideLoading()
+          this.isLoading = false
+          if (res.code == 200) {
+          this.$refs.message.show({
+            type: 'success',
+            msg: '删除成功',
+          })
+          setTimeout(() => {
+            this.shopList = this.shopList.filter(item => item.id != this.currentShop.id)
+          }, 500)
+          }else{
+            this.$refs.message.show({
+              type: 'error',
+              msg: '删除失败, 请稍候再试吧',
+            })
+            return
+          }
+         
+       
+        }).catch(err => {
+          uni.hideLoading()
+          this.isLoading = false
+          this.$refs.message.show({
+            type: 'error',
+            msg: '网络开了点小差,请稍候重试吧',
+          })
+        })
+        
+        
+        
+      },
+      deleteShop(item){
+        this.currentShop = item
+        let title = '提示'
+        let content = '删除之后将无法再查询到数据,确定删除嘛'
+        uni.showModal({
+         title,
+         content,
+         success: res => {
+           console.log(res);
+           if(res.confirm){
+             this.deleteShopRequest(this.currentShop.id)
+           }
+         }
+        })
+      },
+      updateShop(item){
+        console.log(item);
+        uni.setStorageSync('updateShop',item)
+        uni.navigateTo({
+          url: '/subpkg/addShop?update=true'
+        })
+      },
+      ToShopDetail(item) {
+        uni.setStorageSync('shopdetail', item)
+        uni.navigateTo({
+          url: '/subpkg/shopDetail'
+        })
+      },
+      getUserShop(){
+        this.post({
+          url: 'shop/byUserId',
+          data: {
+            openid: this.userinfo.openid
+          }
+        }).then(res => {
+          console.log('shoplist',res);
+          if(res.code == 200){
+            this.shopList = res.data
+            res.data.forEach(i => {
+              i.image = i.imgs.split(",")[0]
+              if(!this.compareTime(i.cancelTime)){
+                 i.statusText = '已发布'
+                 i.statusTag = 'primary'
+              }else{
+                i.statusText = '已过期'
+                i.statusTag = 'info'
+              }
+             
+            })
+          }
+        }).catch(err => {
+          this.isLoading = false
+          this.$refs.message.show({
+            type: 'error',
+            msg: '网络开了点小差,请稍候重试吧',
+          })
+        })
+        
+        
+        
+      },
       ToUpdateCarOrder() {
         uni.setStorageSync('updateCarOrderId', this.currentOrder.orderid)
         uni.navigateTo({
@@ -182,20 +316,21 @@
           this.isLoading = false
           console.log(res);
           if (res.code != 200) {
+           this.$refs.message.show({
+             type: 'success',
+             msg: '删除成功',
+           })
+           this.$refs.popup.close()
+           setTimeout(() => {
+             this.orderList = this.orderList.filter(item => item.orderid != this.currentOrder.orderid)
+           }, 500)
+          }else{
             this.$refs.message.show({
               type: 'error',
               msg: '删除失败, 请稍候再试吧',
             })
             return
           }
-          this.$refs.message.show({
-            type: 'success',
-            msg: '删除成功',
-          })
-          this.$refs.popup.close()
-          setTimeout(() => {
-            this.orderList = this.orderList.filter(item => item.orderid != this.currentOrder.orderid)
-          }, 500)
         }).catch(err => {
           uni.hideLoading()
           this.isLoading = false
@@ -302,13 +437,15 @@
         })
       },
       getUserOrder() {
+        this.isLoading = true
+        
         this.post({
           url: 'carshareorder/getbyuserid',
           data: {
             openid: this.userinfo.openid
           }
         }).then(res => {
-
+          this.isLoading = false
           console.log(res);
           if (res.code != 200) {
             this.$refs.message.show({
@@ -337,6 +474,7 @@
           })
 
         }).catch(err => {
+          this.isLoading = false
           this.$refs.message.show({
             type: 'error',
             msg: '网络开了点小差,请稍候重试吧',
@@ -366,6 +504,7 @@
       // #endif
       console.log(this.userinfo);
       this.getUserOrder()
+      this.getUserShop()
     }
   }
 </script>
@@ -373,6 +512,89 @@
 <style lang="scss">
   .page {
     padding-bottom: 60rpx;
+  }
+  
+  .shopItem{
+    display: flex;
+    align-items: center;
+    align-items: flex-start;
+    .left{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      image{
+        width: 150rpx;
+        height: 150rpx;
+        border-radius: 15rpx;
+      }
+    }
+    .right{
+      flex: 1;
+      margin-left: 20rpx;
+      .my-targ{
+        position: absolute;
+        right: 30rpx;
+        top: 20rpx;
+      }
+      .title{
+        width: 70%;
+        font-size: 32rpx;
+        font-weight: bold;
+        color: black;
+      }
+      .but-box{
+        margin-top: 20rpx;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .btn-grad-delete {
+        background-image: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #FF512F 100%);
+        font-size: 25rpx;
+        height: 60rpx;
+        line-height: 60rpx;
+        width: 120rpx;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;
+        box-shadow: 0 0 20rpx #eee;
+        border-radius: 15rpx;
+        display: block;
+        margin: 0;
+        margin-left: 30rpx;
+      }
+      
+      .btn-grad-delete:hover {
+        background-position: right center;
+        color: #fff;
+        text-decoration: none;
+      }
+      
+      
+      .btn-grad-update {
+        background-image: linear-gradient(to right, #F09819 0%, #EDDE5D 51%, #F09819 100%);
+        font-size: 25rpx;
+        height: 60rpx;
+        line-height: 60rpx;
+        width: 120rpx;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;
+        box-shadow: 0 0 20rpx #eee;
+        border-radius: 15rpx;
+        display: block;
+        margin: 0;
+      }
+      
+      .btn-grad-update:hover {
+        background-position: right center;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
   }
 
   .updateAndDelete {
@@ -422,7 +644,6 @@
 
       .btn-grad-update:hover {
         background-position: right center;
-        /* change the direction of the change here */
         color: #fff;
         text-decoration: none;
       }

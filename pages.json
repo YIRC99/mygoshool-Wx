@@ -1,5 +1,4 @@
 {
-"svgicon": "node ./uni_modules/zui-svg-icon/tools/generate-svg-icon.js",
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
 			"path": "pages/index/index",
@@ -112,7 +111,7 @@
           "path" : "addShop",
           "style" : 
           {
-            "navigationBarTitleText" : "发布闲置",
+            "navigationBarTitleText" : "",
             "enablePullDownRefresh" : false
           }
         },

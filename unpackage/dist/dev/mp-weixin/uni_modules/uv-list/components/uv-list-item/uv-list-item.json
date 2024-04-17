@@ -1,8 +1,8 @@
 {
+  "component": true,
   "usingComponents": {
     "uv-icon": "/uni_modules/uv-icon/components/uv-icon/uv-icon",
     "uv-badge": "/uni_modules/uv-badge/components/uv-badge/uv-badge",
     "uv-switch": "/uni_modules/uv-switch/components/uv-switch/uv-switch"
-  },
-  "component": true
+  }
 }

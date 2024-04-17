@@ -58,6 +58,39 @@ module.exports = _nonIterableRest, module.exports.__esModule = true, module.expo
 
 /***/ }),
 
+/***/ 102:
+/*!**********************************************!*\
+  !*** F:/CodeFile/pingCar/static/chushou.png ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
+
+/***/ }),
+
+/***/ 103:
+/*!***********************************************!*\
+  !*** F:/CodeFile/pingCar/static/carIcon2.png ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
+
+/***/ }),
+
+/***/ 104:
+/*!*************************************************!*\
+  !*** F:/CodeFile/pingCar/static/notice (3).png ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
+
+/***/ }),
+
 /***/ 11:
 /*!***************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/defineProperty.js ***!
@@ -171,113 +204,6 @@ module.exports = _construct, module.exports.__esModule = true, module.exports["d
 
 /***/ }),
 
-/***/ 158:
-/*!************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/index.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _luchRequest = _interopRequireDefault(__webpack_require__(/*! ./libs/luch-request */ 159));
-var _mixin = _interopRequireDefault(__webpack_require__(/*! ./libs/mixin/mixin.js */ 173));
-var _mpMixin = _interopRequireDefault(__webpack_require__(/*! ./libs/mixin/mpMixin.js */ 180));
-var _mpShare = _interopRequireDefault(__webpack_require__(/*! ./libs/mixin/mpShare.js */ 181));
-var _route = _interopRequireDefault(__webpack_require__(/*! ./libs/util/route.js */ 177));
-var index = _interopRequireWildcard(__webpack_require__(/*! ./libs/function/index.js */ 174));
-var _debounce = _interopRequireDefault(__webpack_require__(/*! ./libs/function/debounce.js */ 178));
-var _throttle = _interopRequireDefault(__webpack_require__(/*! ./libs/function/throttle.js */ 179));
-var test = _interopRequireWildcard(__webpack_require__(/*! ./libs/function/test.js */ 175));
-var colorGradient = _interopRequireWildcard(__webpack_require__(/*! ./libs/function/colorGradient.js */ 182));
-var _config = _interopRequireDefault(__webpack_require__(/*! ./libs/config/config.js */ 183));
-var _platform = _interopRequireDefault(__webpack_require__(/*! ./libs/function/platform */ 184));
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var $uv = _objectSpread(_objectSpread({
-  route: _route.default,
-  config: _config.default,
-  test: test,
-  date: index.timeFormat
-}, index), {}, {
-  colorGradient: colorGradient.colorGradient,
-  hexToRgb: colorGradient.hexToRgb,
-  rgbToHex: colorGradient.rgbToHex,
-  colorToRgba: colorGradient.colorToRgba,
-  http: new _luchRequest.default(),
-  debounce: _debounce.default,
-  throttle: _throttle.default,
-  platform: _platform.default,
-  mixin: _mixin.default,
-  mpMixin: _mpMixin.default
-});
-uni.$uv = $uv;
-var install = function install(Vue) {
-  var _cloneMixin$props, _cloneMixin$props2;
-  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  var cloneMixin = index.deepClone(_mixin.default);
-  cloneMixin === null || cloneMixin === void 0 ? true : (_cloneMixin$props = cloneMixin.props) === null || _cloneMixin$props === void 0 ? true : delete _cloneMixin$props.customClass;
-  cloneMixin === null || cloneMixin === void 0 ? true : (_cloneMixin$props2 = cloneMixin.props) === null || _cloneMixin$props2 === void 0 ? true : delete _cloneMixin$props2.customStyle;
-  Vue.mixin(cloneMixin);
-  if (options.mpShare) {
-    Vue.mixin(_mpShare.default);
-  }
-
-  // 时间格式化，同时两个名称，date和timeFormat
-  Vue.filter('timeFormat', function (timestamp, format) {
-    return uni.$uv.timeFormat(timestamp, format);
-  });
-  Vue.filter('date', function (timestamp, format) {
-    return uni.$uv.timeFormat(timestamp, format);
-  });
-  // 将多久以前的方法，注入到全局过滤器
-  Vue.filter('timeFrom', function (timestamp, format) {
-    return uni.$uv.timeFrom(timestamp, format);
-  });
-  // 同时挂载到uni和Vue.prototype中
-
-  // 只有vue，挂载到Vue.prototype才有意义，因为nvue中全局Vue.prototype和Vue.mixin是无效的
-  Vue.prototype.$uv = $uv;
-};
-var _default = {
-  install: install
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-
-/***/ 159:
-/*!******************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/index.js ***!
-  \******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _Request = _interopRequireDefault(__webpack_require__(/*! ./core/Request */ 160));
-var _default = _Request.default;
-exports.default = _default;
-
-/***/ }),
-
 /***/ 16:
 /*!***************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/setPrototypeOf.js ***!
@@ -293,751 +219,6 @@ function _setPrototypeOf(o, p) {
   return _setPrototypeOf(o, p);
 }
 module.exports = _setPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 160:
-/*!*************************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/core/Request.js ***!
-  \*************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23));
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ 24));
-var _dispatchRequest = _interopRequireDefault(__webpack_require__(/*! ./dispatchRequest */ 161));
-var _InterceptorManager = _interopRequireDefault(__webpack_require__(/*! ./InterceptorManager */ 169));
-var _mergeConfig = _interopRequireDefault(__webpack_require__(/*! ./mergeConfig */ 170));
-var _defaults = _interopRequireDefault(__webpack_require__(/*! ./defaults */ 171));
-var _utils = __webpack_require__(/*! ../utils */ 164);
-var _clone = _interopRequireDefault(__webpack_require__(/*! ../utils/clone */ 172));
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var Request = /*#__PURE__*/function () {
-  /**
-   * @param {Object} arg - 全局配置
-   * @param {String} arg.baseURL - 全局根路径
-   * @param {Object} arg.header - 全局header
-   * @param {String} arg.method = [GET|POST|PUT|DELETE|CONNECT|HEAD|OPTIONS|TRACE] - 全局默认请求方式
-   * @param {String} arg.dataType = [json] - 全局默认的dataType
-   * @param {String} arg.responseType = [text|arraybuffer] - 全局默认的responseType。支付宝小程序不支持
-   * @param {Object} arg.custom - 全局默认的自定义参数
-   * @param {Number} arg.timeout - 全局默认的超时时间，单位 ms。默认60000。H5(HBuilderX 2.9.9+)、APP(HBuilderX 2.9.9+)、微信小程序（2.10.0）、支付宝小程序
-   * @param {Boolean} arg.sslVerify - 全局默认的是否验证 ssl 证书。默认true.仅App安卓端支持（HBuilderX 2.3.3+）
-   * @param {Boolean} arg.withCredentials - 全局默认的跨域请求时是否携带凭证（cookies）。默认false。仅H5支持（HBuilderX 2.6.15+）
-   * @param {Boolean} arg.firstIpv4 - 全DNS解析时优先使用ipv4。默认false。仅 App-Android 支持 (HBuilderX 2.8.0+)
-   * @param {Function(statusCode):Boolean} arg.validateStatus - 全局默认的自定义验证器。默认statusCode >= 200 && statusCode < 300
-   */
-  function Request() {
-    var arg = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-    (0, _classCallCheck2.default)(this, Request);
-    if (!(0, _utils.isPlainObject)(arg)) {
-      arg = {};
-      console.warn('设置全局参数必须接收一个Object');
-    }
-    this.config = (0, _clone.default)(_objectSpread(_objectSpread({}, _defaults.default), arg));
-    this.interceptors = {
-      request: new _InterceptorManager.default(),
-      response: new _InterceptorManager.default()
-    };
-  }
-
-  /**
-   * @Function
-   * @param {Request~setConfigCallback} f - 设置全局默认配置
-   */
-  (0, _createClass2.default)(Request, [{
-    key: "setConfig",
-    value: function setConfig(f) {
-      this.config = f(this.config);
-    }
-  }, {
-    key: "middleware",
-    value: function middleware(config) {
-      config = (0, _mergeConfig.default)(this.config, config);
-      var chain = [_dispatchRequest.default, undefined];
-      var promise = Promise.resolve(config);
-      this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
-        chain.unshift(interceptor.fulfilled, interceptor.rejected);
-      });
-      this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
-        chain.push(interceptor.fulfilled, interceptor.rejected);
-      });
-      while (chain.length) {
-        promise = promise.then(chain.shift(), chain.shift());
-      }
-      return promise;
-    }
-
-    /**
-     * @Function
-     * @param {Object} config - 请求配置项
-     * @prop {String} options.url - 请求路径
-     * @prop {Object} options.data - 请求参数
-     * @prop {Object} [options.responseType = config.responseType] [text|arraybuffer] - 响应的数据类型
-     * @prop {Object} [options.dataType = config.dataType] - 如果设为 json，会尝试对返回的数据做一次 JSON.parse
-     * @prop {Object} [options.header = config.header] - 请求header
-     * @prop {Object} [options.method = config.method] - 请求方法
-     * @returns {Promise<unknown>}
-     */
-  }, {
-    key: "request",
-    value: function request() {
-      var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-      return this.middleware(config);
-    }
-  }, {
-    key: "get",
-    value: function get(url) {
-      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-      return this.middleware(_objectSpread({
-        url: url,
-        method: 'GET'
-      }, options));
-    }
-  }, {
-    key: "post",
-    value: function post(url, data) {
-      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      return this.middleware(_objectSpread({
-        url: url,
-        data: data,
-        method: 'POST'
-      }, options));
-    }
-  }, {
-    key: "put",
-    value: function put(url, data) {
-      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      return this.middleware(_objectSpread({
-        url: url,
-        data: data,
-        method: 'PUT'
-      }, options));
-    }
-  }, {
-    key: "delete",
-    value: function _delete(url, data) {
-      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      return this.middleware(_objectSpread({
-        url: url,
-        data: data,
-        method: 'DELETE'
-      }, options));
-    }
-  }, {
-    key: "connect",
-    value: function connect(url, data) {
-      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      return this.middleware(_objectSpread({
-        url: url,
-        data: data,
-        method: 'CONNECT'
-      }, options));
-    }
-  }, {
-    key: "head",
-    value: function head(url, data) {
-      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      return this.middleware(_objectSpread({
-        url: url,
-        data: data,
-        method: 'HEAD'
-      }, options));
-    }
-  }, {
-    key: "options",
-    value: function options(url, data) {
-      var _options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      return this.middleware(_objectSpread({
-        url: url,
-        data: data,
-        method: 'OPTIONS'
-      }, _options));
-    }
-  }, {
-    key: "trace",
-    value: function trace(url, data) {
-      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      return this.middleware(_objectSpread({
-        url: url,
-        data: data,
-        method: 'TRACE'
-      }, options));
-    }
-  }, {
-    key: "upload",
-    value: function upload(url) {
-      var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-      config.url = url;
-      config.method = 'UPLOAD';
-      return this.middleware(config);
-    }
-  }, {
-    key: "download",
-    value: function download(url) {
-      var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-      config.url = url;
-      config.method = 'DOWNLOAD';
-      return this.middleware(config);
-    }
-  }, {
-    key: "version",
-    get: function get() {
-      return '3.1.0';
-    }
-  }]);
-  return Request;
-}();
-/**
- * setConfig回调
- * @return {Object} - 返回操作后的config
- * @callback Request~setConfigCallback
- * @param {Object} config - 全局默认config
- */
-exports.default = Request;
-
-/***/ }),
-
-/***/ 161:
-/*!*********************************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/core/dispatchRequest.js ***!
-  \*********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _index = _interopRequireDefault(__webpack_require__(/*! ../adapters/index */ 162));
-var _default = function _default(config) {
-  return (0, _index.default)(config);
-};
-exports.default = _default;
-
-/***/ }),
-
-/***/ 162:
-/*!***************************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/adapters/index.js ***!
-  \***************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
-var _buildURL = _interopRequireDefault(__webpack_require__(/*! ../helpers/buildURL */ 163));
-var _buildFullPath = _interopRequireDefault(__webpack_require__(/*! ../core/buildFullPath */ 165));
-var _settle = _interopRequireDefault(__webpack_require__(/*! ../core/settle */ 168));
-var _utils = __webpack_require__(/*! ../utils */ 164);
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-/**
- * 返回可选值存在的配置
- * @param {Array} keys - 可选值数组
- * @param {Object} config2 - 配置
- * @return {{}} - 存在的配置项
- */
-var mergeKeys = function mergeKeys(keys, config2) {
-  var config = {};
-  keys.forEach(function (prop) {
-    if (!(0, _utils.isUndefined)(config2[prop])) {
-      config[prop] = config2[prop];
-    }
-  });
-  return config;
-};
-var _default = function _default(config) {
-  return new Promise(function (resolve, reject) {
-    var fullPath = (0, _buildURL.default)((0, _buildFullPath.default)(config.baseURL, config.url), config.params, config.paramsSerializer);
-    var _config = {
-      url: fullPath,
-      header: config.header,
-      complete: function complete(response) {
-        config.fullPath = fullPath;
-        response.config = config;
-        response.rawData = response.data;
-        try {
-          var jsonParseHandle = false;
-          var forcedJSONParsingType = (0, _typeof2.default)(config.forcedJSONParsing);
-          if (forcedJSONParsingType === 'boolean') {
-            jsonParseHandle = config.forcedJSONParsing;
-          } else if (forcedJSONParsingType === 'object') {
-            var includesMethod = config.forcedJSONParsing.include || [];
-            jsonParseHandle = includesMethod.includes(config.method);
-          }
-
-          // 对可能字符串不是json 的情况容错
-          if (jsonParseHandle && typeof response.data === 'string') {
-            response.data = JSON.parse(response.data);
-          }
-          // eslint-disable-next-line no-empty
-        } catch (e) {}
-        (0, _settle.default)(resolve, reject, response);
-      }
-    };
-    var requestTask;
-    if (config.method === 'UPLOAD') {
-      delete _config.header['content-type'];
-      delete _config.header['Content-Type'];
-      var otherConfig = {
-        filePath: config.filePath,
-        name: config.name
-      };
-      var optionalKeys = ['timeout', 'formData'];
-      requestTask = uni.uploadFile(_objectSpread(_objectSpread(_objectSpread({}, _config), otherConfig), mergeKeys(optionalKeys, config)));
-    } else if (config.method === 'DOWNLOAD') {
-      var _optionalKeys = ['timeout', 'filePath'];
-      requestTask = uni.downloadFile(_objectSpread(_objectSpread({}, _config), mergeKeys(_optionalKeys, config)));
-    } else {
-      var _optionalKeys2 = ['data', 'method', 'timeout', 'dataType', 'responseType', 'enableHttp2', 'enableQuic', 'enableCache', 'enableHttpDNS', 'httpDNSServiceId', 'enableChunked', 'forceCellularNetwork'];
-      requestTask = uni.request(_objectSpread(_objectSpread({}, _config), mergeKeys(_optionalKeys2, config)));
-    }
-    if (config.getTask) {
-      config.getTask(requestTask, config);
-    }
-  });
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-
-/***/ 163:
-/*!*****************************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/helpers/buildURL.js ***!
-  \*****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = buildURL;
-var utils = _interopRequireWildcard(__webpack_require__(/*! ./../utils */ 164));
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-function encode(val) {
-  return encodeURIComponent(val).replace(/%40/gi, '@').replace(/%3A/gi, ':').replace(/%24/g, '$').replace(/%2C/gi, ',').replace(/%20/g, '+').replace(/%5B/gi, '[').replace(/%5D/gi, ']');
-}
-
-/**
- * Build a URL by appending params to the end
- *
- * @param {string} url The base of the url (e.g., http://www.google.com)
- * @param {object} [params] The params to be appended
- * @returns {string} The formatted url
- */
-function buildURL(url, params, paramsSerializer) {
-  /*eslint no-param-reassign:0*/
-  if (!params) {
-    return url;
-  }
-  var serializedParams;
-  if (paramsSerializer) {
-    serializedParams = paramsSerializer(params);
-  } else if (utils.isURLSearchParams(params)) {
-    serializedParams = params.toString();
-  } else {
-    var parts = [];
-    utils.forEach(params, function serialize(val, key) {
-      if (val === null || typeof val === 'undefined') {
-        return;
-      }
-      if (utils.isArray(val)) {
-        key = key + '[]';
-      } else {
-        val = [val];
-      }
-      utils.forEach(val, function parseValue(v) {
-        if (utils.isDate(v)) {
-          v = v.toISOString();
-        } else if (utils.isObject(v)) {
-          v = JSON.stringify(v);
-        }
-        parts.push(encode(key) + '=' + encode(v));
-      });
-    });
-    serializedParams = parts.join('&');
-  }
-  if (serializedParams) {
-    var hashmarkIndex = url.indexOf('#');
-    if (hashmarkIndex !== -1) {
-      url = url.slice(0, hashmarkIndex);
-    }
-    url += (url.indexOf('?') === -1 ? '?' : '&') + serializedParams;
-  }
-  return url;
-}
-
-/***/ }),
-
-/***/ 164:
-/*!******************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/utils.js ***!
-  \******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// utils is a library of generic helper functions non-specific to axios
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.deepMerge = deepMerge;
-exports.forEach = forEach;
-exports.isArray = isArray;
-exports.isBoolean = isBoolean;
-exports.isDate = isDate;
-exports.isObject = isObject;
-exports.isPlainObject = isPlainObject;
-exports.isURLSearchParams = isURLSearchParams;
-exports.isUndefined = isUndefined;
-var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
-var toString = Object.prototype.toString;
-
-/**
- * Determine if a value is an Array
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is an Array, otherwise false
- */
-function isArray(val) {
-  return toString.call(val) === '[object Array]';
-}
-
-/**
- * Determine if a value is an Object
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is an Object, otherwise false
- */
-function isObject(val) {
-  return val !== null && (0, _typeof2.default)(val) === 'object';
-}
-
-/**
- * Determine if a value is a Date
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a Date, otherwise false
- */
-function isDate(val) {
-  return toString.call(val) === '[object Date]';
-}
-
-/**
- * Determine if a value is a URLSearchParams object
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a URLSearchParams object, otherwise false
- */
-function isURLSearchParams(val) {
-  return typeof URLSearchParams !== 'undefined' && val instanceof URLSearchParams;
-}
-
-/**
- * Iterate over an Array or an Object invoking a function for each item.
- *
- * If `obj` is an Array callback will be called passing
- * the value, index, and complete array for each item.
- *
- * If 'obj' is an Object callback will be called passing
- * the value, key, and complete object for each property.
- *
- * @param {Object|Array} obj The object to iterate
- * @param {Function} fn The callback to invoke for each item
- */
-function forEach(obj, fn) {
-  // Don't bother if no value provided
-  if (obj === null || typeof obj === 'undefined') {
-    return;
-  }
-
-  // Force an array if not already something iterable
-  if ((0, _typeof2.default)(obj) !== 'object') {
-    /*eslint no-param-reassign:0*/
-    obj = [obj];
-  }
-  if (isArray(obj)) {
-    // Iterate over array values
-    for (var i = 0, l = obj.length; i < l; i++) {
-      fn.call(null, obj[i], i, obj);
-    }
-  } else {
-    // Iterate over object keys
-    for (var key in obj) {
-      if (Object.prototype.hasOwnProperty.call(obj, key)) {
-        fn.call(null, obj[key], key, obj);
-      }
-    }
-  }
-}
-
-/**
- * 是否为boolean 值
- * @param val
- * @returns {boolean}
- */
-function isBoolean(val) {
-  return typeof val === 'boolean';
-}
-
-/**
- * 是否为真正的对象{} new Object
- * @param {any} obj - 检测的对象
- * @returns {boolean}
- */
-function isPlainObject(obj) {
-  return Object.prototype.toString.call(obj) === '[object Object]';
-}
-
-/**
- * Function equal to merge with the difference being that no reference
- * to original objects is kept.
- *
- * @see merge
- * @param {Object} obj1 Object to merge
- * @returns {Object} Result of all merge properties
- */
-function deepMerge( /* obj1, obj2, obj3, ... */
-) {
-  var result = {};
-  function assignValue(val, key) {
-    if ((0, _typeof2.default)(result[key]) === 'object' && (0, _typeof2.default)(val) === 'object') {
-      result[key] = deepMerge(result[key], val);
-    } else if ((0, _typeof2.default)(val) === 'object') {
-      result[key] = deepMerge({}, val);
-    } else {
-      result[key] = val;
-    }
-  }
-  for (var i = 0, l = arguments.length; i < l; i++) {
-    forEach(arguments[i], assignValue);
-  }
-  return result;
-}
-function isUndefined(val) {
-  return typeof val === 'undefined';
-}
-
-/***/ }),
-
-/***/ 165:
-/*!*******************************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/core/buildFullPath.js ***!
-  \*******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = buildFullPath;
-var _isAbsoluteURL = _interopRequireDefault(__webpack_require__(/*! ../helpers/isAbsoluteURL */ 166));
-var _combineURLs = _interopRequireDefault(__webpack_require__(/*! ../helpers/combineURLs */ 167));
-/**
- * Creates a new URL by combining the baseURL with the requestedURL,
- * only when the requestedURL is not already an absolute URL.
- * If the requestURL is absolute, this function returns the requestedURL untouched.
- *
- * @param {string} baseURL The base URL
- * @param {string} requestedURL Absolute or relative URL to combine
- * @returns {string} The combined full path
- */
-function buildFullPath(baseURL, requestedURL) {
-  if (baseURL && !(0, _isAbsoluteURL.default)(requestedURL)) {
-    return (0, _combineURLs.default)(baseURL, requestedURL);
-  }
-  return requestedURL;
-}
-
-/***/ }),
-
-/***/ 166:
-/*!**********************************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/helpers/isAbsoluteURL.js ***!
-  \**********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Determines whether the specified URL is absolute
- *
- * @param {string} url The URL to test
- * @returns {boolean} True if the specified URL is absolute, otherwise false
- */
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isAbsoluteURL;
-function isAbsoluteURL(url) {
-  // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
-  // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
-  // by any combination of letters, digits, plus, period, or hyphen.
-  return /^([a-z][a-z\d+\-.]*:)?\/\//i.test(url);
-}
-
-/***/ }),
-
-/***/ 167:
-/*!********************************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/helpers/combineURLs.js ***!
-  \********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Creates a new URL by combining the specified URLs
- *
- * @param {string} baseURL The base URL
- * @param {string} relativeURL The relative URL
- * @returns {string} The combined URL
- */
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = combineURLs;
-function combineURLs(baseURL, relativeURL) {
-  return relativeURL ? baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '') : baseURL;
-}
-
-/***/ }),
-
-/***/ 168:
-/*!************************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/core/settle.js ***!
-  \************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = settle;
-/**
- * Resolve or reject a Promise based on response status.
- *
- * @param {Function} resolve A function that resolves the promise.
- * @param {Function} reject A function that rejects the promise.
- * @param {object} response The response.
- */
-function settle(resolve, reject, response) {
-  var validateStatus = response.config.validateStatus;
-  var status = response.statusCode;
-  if (status && (!validateStatus || validateStatus(status))) {
-    resolve(response);
-  } else {
-    reject(response);
-  }
-}
-
-/***/ }),
-
-/***/ 169:
-/*!************************************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/core/InterceptorManager.js ***!
-  \************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-function InterceptorManager() {
-  this.handlers = [];
-}
-
-/**
- * Add a new interceptor to the stack
- *
- * @param {Function} fulfilled The function to handle `then` for a `Promise`
- * @param {Function} rejected The function to handle `reject` for a `Promise`
- *
- * @return {Number} An ID used to remove interceptor later
- */
-InterceptorManager.prototype.use = function use(fulfilled, rejected) {
-  this.handlers.push({
-    fulfilled: fulfilled,
-    rejected: rejected
-  });
-  return this.handlers.length - 1;
-};
-
-/**
- * Remove an interceptor from the stack
- *
- * @param {Number} id The ID that was returned by `use`
- */
-InterceptorManager.prototype.eject = function eject(id) {
-  if (this.handlers[id]) {
-    this.handlers[id] = null;
-  }
-};
-
-/**
- * Iterate over all the registered interceptors
- *
- * This method is particularly useful for skipping over any
- * interceptors that may have become `null` calling `eject`.
- *
- * @param {Function} fn The function to call for each interceptor
- */
-InterceptorManager.prototype.forEach = function forEach(fn) {
-  this.handlers.forEach(function (h) {
-    if (h !== null) {
-      fn(h);
-    }
-  });
-};
-var _default = InterceptorManager;
-exports.default = _default;
 
 /***/ }),
 
@@ -1063,2174 +244,6 @@ module.exports = _isNativeReflectConstruct, module.exports.__esModule = true, mo
 
 /***/ }),
 
-/***/ 170:
-/*!*****************************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/core/mergeConfig.js ***!
-  \*****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _utils = __webpack_require__(/*! ../utils */ 164);
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-/**
- * 合并局部配置优先的配置，如果局部有该配置项则用局部，如果全局有该配置项则用全局
- * @param {Array} keys - 配置项
- * @param {Object} globalsConfig - 当前的全局配置
- * @param {Object} config2 - 局部配置
- * @return {{}}
- */
-var mergeKeys = function mergeKeys(keys, globalsConfig, config2) {
-  var config = {};
-  keys.forEach(function (prop) {
-    if (!(0, _utils.isUndefined)(config2[prop])) {
-      config[prop] = config2[prop];
-    } else if (!(0, _utils.isUndefined)(globalsConfig[prop])) {
-      config[prop] = globalsConfig[prop];
-    }
-  });
-  return config;
-};
-/**
- *
- * @param globalsConfig - 当前实例的全局配置
- * @param config2 - 当前的局部配置
- * @return - 合并后的配置
- */
-var _default = function _default(globalsConfig) {
-  var config2 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  var method = config2.method || globalsConfig.method || 'GET';
-  var config = {
-    baseURL: config2.baseURL || globalsConfig.baseURL || '',
-    method: method,
-    url: config2.url || '',
-    params: config2.params || {},
-    custom: _objectSpread(_objectSpread({}, globalsConfig.custom || {}), config2.custom || {}),
-    header: (0, _utils.deepMerge)(globalsConfig.header || {}, config2.header || {})
-  };
-  var defaultToConfig2Keys = ['getTask', 'validateStatus', 'paramsSerializer', 'forcedJSONParsing'];
-  config = _objectSpread(_objectSpread({}, config), mergeKeys(defaultToConfig2Keys, globalsConfig, config2));
-
-  // eslint-disable-next-line no-empty
-  if (method === 'DOWNLOAD') {
-    var downloadKeys = ['timeout', 'filePath'];
-    config = _objectSpread(_objectSpread({}, config), mergeKeys(downloadKeys, globalsConfig, config2));
-  } else if (method === 'UPLOAD') {
-    delete config.header['content-type'];
-    delete config.header['Content-Type'];
-    var uploadKeys = ['filePath', 'name', 'timeout', 'formData'];
-    uploadKeys.forEach(function (prop) {
-      if (!(0, _utils.isUndefined)(config2[prop])) {
-        config[prop] = config2[prop];
-      }
-    });
-    if ((0, _utils.isUndefined)(config.timeout) && !(0, _utils.isUndefined)(globalsConfig.timeout)) {
-      config['timeout'] = globalsConfig['timeout'];
-    }
-  } else {
-    var defaultsKeys = ['data', 'timeout', 'dataType', 'responseType', 'enableHttp2', 'enableQuic', 'enableCache', 'enableHttpDNS', 'httpDNSServiceId', 'enableChunked', 'forceCellularNetwork'];
-    config = _objectSpread(_objectSpread({}, config), mergeKeys(defaultsKeys, globalsConfig, config2));
-  }
-  return config;
-};
-exports.default = _default;
-
-/***/ }),
-
-/***/ 171:
-/*!**************************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/core/defaults.js ***!
-  \**************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-/**
- * 默认的全局配置
- */
-var _default = {
-  baseURL: '',
-  header: {},
-  method: 'GET',
-  dataType: 'json',
-  paramsSerializer: null,
-  responseType: 'text',
-  custom: {},
-  timeout: 60000,
-  validateStatus: function validateStatus(status) {
-    return status >= 200 && status < 300;
-  },
-  // 是否尝试将响应数据json化
-  forcedJSONParsing: true
-};
-exports.default = _default;
-
-/***/ }),
-
-/***/ 172:
-/*!************************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/utils/clone.js ***!
-  \************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(Buffer) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
-/* eslint-disable */
-var clone = function () {
-  'use strict';
-
-  function _instanceof(obj, type) {
-    return type != null && obj instanceof type;
-  }
-  var nativeMap;
-  try {
-    nativeMap = Map;
-  } catch (_) {
-    // maybe a reference error because no `Map`. Give it a dummy value that no
-    // value will ever be an instanceof.
-    nativeMap = function nativeMap() {};
-  }
-  var nativeSet;
-  try {
-    nativeSet = Set;
-  } catch (_) {
-    nativeSet = function nativeSet() {};
-  }
-  var nativePromise;
-  try {
-    nativePromise = Promise;
-  } catch (_) {
-    nativePromise = function nativePromise() {};
-  }
-
-  /**
-   * Clones (copies) an Object using deep copying.
-   *
-   * This function supports circular references by default, but if you are certain
-   * there are no circular references in your object, you can save some CPU time
-   * by calling clone(obj, false).
-   *
-   * Caution: if `circular` is false and `parent` contains circular references,
-   * your program may enter an infinite loop and crash.
-   *
-   * @param `parent` - the object to be cloned
-   * @param `circular` - set to true if the object to be cloned may contain
-   *    circular references. (optional - true by default)
-   * @param `depth` - set to a number if the object is only to be cloned to
-   *    a particular depth. (optional - defaults to Infinity)
-   * @param `prototype` - sets the prototype to be used when cloning an object.
-   *    (optional - defaults to parent prototype).
-   * @param `includeNonEnumerable` - set to true if the non-enumerable properties
-   *    should be cloned as well. Non-enumerable properties on the prototype
-   *    chain will be ignored. (optional - false by default)
-   */
-  function clone(parent, circular, depth, prototype, includeNonEnumerable) {
-    if ((0, _typeof2.default)(circular) === 'object') {
-      depth = circular.depth;
-      prototype = circular.prototype;
-      includeNonEnumerable = circular.includeNonEnumerable;
-      circular = circular.circular;
-    }
-    // maintain two arrays for circular references, where corresponding parents
-    // and children have the same index
-    var allParents = [];
-    var allChildren = [];
-    var useBuffer = typeof Buffer != 'undefined';
-    if (typeof circular == 'undefined') circular = true;
-    if (typeof depth == 'undefined') depth = Infinity;
-
-    // recurse this function so we don't reset allParents and allChildren
-    function _clone(parent, depth) {
-      // cloning null always returns null
-      if (parent === null) return null;
-      if (depth === 0) return parent;
-      var child;
-      var proto;
-      if ((0, _typeof2.default)(parent) != 'object') {
-        return parent;
-      }
-      if (_instanceof(parent, nativeMap)) {
-        child = new nativeMap();
-      } else if (_instanceof(parent, nativeSet)) {
-        child = new nativeSet();
-      } else if (_instanceof(parent, nativePromise)) {
-        child = new nativePromise(function (resolve, reject) {
-          parent.then(function (value) {
-            resolve(_clone(value, depth - 1));
-          }, function (err) {
-            reject(_clone(err, depth - 1));
-          });
-        });
-      } else if (clone.__isArray(parent)) {
-        child = [];
-      } else if (clone.__isRegExp(parent)) {
-        child = new RegExp(parent.source, __getRegExpFlags(parent));
-        if (parent.lastIndex) child.lastIndex = parent.lastIndex;
-      } else if (clone.__isDate(parent)) {
-        child = new Date(parent.getTime());
-      } else if (useBuffer && Buffer.isBuffer(parent)) {
-        if (Buffer.from) {
-          // Node.js >= 5.10.0
-          child = Buffer.from(parent);
-        } else {
-          // Older Node.js versions
-          child = new Buffer(parent.length);
-          parent.copy(child);
-        }
-        return child;
-      } else if (_instanceof(parent, Error)) {
-        child = Object.create(parent);
-      } else {
-        if (typeof prototype == 'undefined') {
-          proto = Object.getPrototypeOf(parent);
-          child = Object.create(proto);
-        } else {
-          child = Object.create(prototype);
-          proto = prototype;
-        }
-      }
-      if (circular) {
-        var index = allParents.indexOf(parent);
-        if (index != -1) {
-          return allChildren[index];
-        }
-        allParents.push(parent);
-        allChildren.push(child);
-      }
-      if (_instanceof(parent, nativeMap)) {
-        parent.forEach(function (value, key) {
-          var keyChild = _clone(key, depth - 1);
-          var valueChild = _clone(value, depth - 1);
-          child.set(keyChild, valueChild);
-        });
-      }
-      if (_instanceof(parent, nativeSet)) {
-        parent.forEach(function (value) {
-          var entryChild = _clone(value, depth - 1);
-          child.add(entryChild);
-        });
-      }
-      for (var i in parent) {
-        var attrs = Object.getOwnPropertyDescriptor(parent, i);
-        if (attrs) {
-          child[i] = _clone(parent[i], depth - 1);
-        }
-        try {
-          var objProperty = Object.getOwnPropertyDescriptor(parent, i);
-          if (objProperty.set === 'undefined') {
-            // no setter defined. Skip cloning this property
-            continue;
-          }
-          child[i] = _clone(parent[i], depth - 1);
-        } catch (e) {
-          if (e instanceof TypeError) {
-            // when in strict mode, TypeError will be thrown if child[i] property only has a getter
-            // we can't do anything about this, other than inform the user that this property cannot be set.
-            continue;
-          } else if (e instanceof ReferenceError) {
-            //this may happen in non strict mode
-            continue;
-          }
-        }
-      }
-      if (Object.getOwnPropertySymbols) {
-        var symbols = Object.getOwnPropertySymbols(parent);
-        for (var i = 0; i < symbols.length; i++) {
-          // Don't need to worry about cloning a symbol because it is a primitive,
-          // like a number or string.
-          var symbol = symbols[i];
-          var descriptor = Object.getOwnPropertyDescriptor(parent, symbol);
-          if (descriptor && !descriptor.enumerable && !includeNonEnumerable) {
-            continue;
-          }
-          child[symbol] = _clone(parent[symbol], depth - 1);
-          Object.defineProperty(child, symbol, descriptor);
-        }
-      }
-      if (includeNonEnumerable) {
-        var allPropertyNames = Object.getOwnPropertyNames(parent);
-        for (var i = 0; i < allPropertyNames.length; i++) {
-          var propertyName = allPropertyNames[i];
-          var descriptor = Object.getOwnPropertyDescriptor(parent, propertyName);
-          if (descriptor && descriptor.enumerable) {
-            continue;
-          }
-          child[propertyName] = _clone(parent[propertyName], depth - 1);
-          Object.defineProperty(child, propertyName, descriptor);
-        }
-      }
-      return child;
-    }
-    return _clone(parent, depth);
-  }
-
-  /**
-   * Simple flat clone using prototype, accepts only objects, usefull for property
-   * override on FLAT configuration object (no nested props).
-   *
-   * USE WITH CAUTION! This may not behave as you wish if you do not know how this
-   * works.
-   */
-  clone.clonePrototype = function clonePrototype(parent) {
-    if (parent === null) return null;
-    var c = function c() {};
-    c.prototype = parent;
-    return new c();
-  };
-
-  // private utility functions
-
-  function __objToStr(o) {
-    return Object.prototype.toString.call(o);
-  }
-  clone.__objToStr = __objToStr;
-  function __isDate(o) {
-    return (0, _typeof2.default)(o) === 'object' && __objToStr(o) === '[object Date]';
-  }
-  clone.__isDate = __isDate;
-  function __isArray(o) {
-    return (0, _typeof2.default)(o) === 'object' && __objToStr(o) === '[object Array]';
-  }
-  clone.__isArray = __isArray;
-  function __isRegExp(o) {
-    return (0, _typeof2.default)(o) === 'object' && __objToStr(o) === '[object RegExp]';
-  }
-  clone.__isRegExp = __isRegExp;
-  function __getRegExpFlags(re) {
-    var flags = '';
-    if (re.global) flags += 'g';
-    if (re.ignoreCase) flags += 'i';
-    if (re.multiline) flags += 'm';
-    return flags;
-  }
-  clone.__getRegExpFlags = __getRegExpFlags;
-  return clone;
-}();
-var _default = clone;
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../HBuilderX/plugins/uniapp-cli/node_modules/buffer/index.js */ 50).Buffer))
-
-/***/ }),
-
-/***/ 173:
-/*!***********************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/mixin/mixin.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var index = _interopRequireWildcard(__webpack_require__(/*! ../function/index.js */ 174));
-var test = _interopRequireWildcard(__webpack_require__(/*! ../function/test.js */ 175));
-var _route = _interopRequireDefault(__webpack_require__(/*! ../util/route.js */ 177));
-var _debounce = _interopRequireDefault(__webpack_require__(/*! ../function/debounce.js */ 178));
-var _throttle = _interopRequireDefault(__webpack_require__(/*! ../function/throttle.js */ 179));
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var _default2 = {
-  // 定义每个组件都可能需要用到的外部样式以及类名
-  props: {
-    // 每个组件都有的父组件传递的样式，可以为字符串或者对象形式
-    customStyle: {
-      type: [Object, String],
-      default: function _default() {
-        return {};
-      }
-    },
-    customClass: {
-      type: String,
-      default: ''
-    },
-    // 跳转的页面路径
-    url: {
-      type: String,
-      default: ''
-    },
-    // 页面跳转的类型
-    linkType: {
-      type: String,
-      default: 'navigateTo'
-    }
-  },
-  data: function data() {
-    return {};
-  },
-  onLoad: function onLoad() {
-    // getRect挂载到$uv上，因为这方法需要使用in(this)，所以无法把它独立成一个单独的文件导出
-    this.$uv.getRect = this.$uvGetRect;
-  },
-  created: function created() {
-    // 组件当中，只有created声明周期，为了能在组件使用，故也在created中将方法挂载到$uv
-    this.$uv.getRect = this.$uvGetRect;
-  },
-  computed: {
-    $uv: function $uv() {
-      var _uni, _uni$$uv, _uni$$uv$config;
-      return _objectSpread(_objectSpread({}, index), {}, {
-        test: test,
-        route: _route.default,
-        debounce: _debounce.default,
-        throttle: _throttle.default,
-        unit: (_uni = uni) === null || _uni === void 0 ? void 0 : (_uni$$uv = _uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$config = _uni$$uv.config) === null || _uni$$uv$config === void 0 ? void 0 : _uni$$uv$config.unit
-      });
-    },
-    /**
-     * 生成bem规则类名
-     * 由于微信小程序，H5，nvue之间绑定class的差异，无法通过:class="[bem()]"的形式进行同用
-     * 故采用如下折中做法，最后返回的是数组（一般平台）或字符串（支付宝和字节跳动平台），类似['a', 'b', 'c']或'a b c'的形式
-     * @param {String} name 组件名称
-     * @param {Array} fixed 一直会存在的类名
-     * @param {Array} change 会根据变量值为true或者false而出现或者隐藏的类名
-     * @returns {Array|string}
-     */
-    bem: function bem() {
-      return function (name, fixed, change) {
-        var _this = this;
-        // 类名前缀
-        var prefix = "uv-".concat(name, "--");
-        var classes = {};
-        if (fixed) {
-          fixed.map(function (item) {
-            // 这里的类名，会一直存在
-            classes[prefix + _this[item]] = true;
-          });
-        }
-        if (change) {
-          change.map(function (item) {
-            // 这里的类名，会根据this[item]的值为true或者false，而进行添加或者移除某一个类
-            _this[item] ? classes[prefix + item] = _this[item] : delete classes[prefix + item];
-          });
-        }
-        return Object.keys(classes);
-        // 支付宝，头条小程序无法动态绑定一个数组类名，否则解析出来的结果会带有","，而导致失效
-      };
-    }
-  },
-
-  methods: {
-    // 跳转某一个页面
-    openPage: function openPage() {
-      var urlKey = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'url';
-      var url = this[urlKey];
-      if (url) {
-        // 执行类似uni.navigateTo的方法
-        uni[this.linkType]({
-          url: url
-        });
-      }
-    },
-    // 查询节点信息
-    // 目前此方法在支付宝小程序中无法获取组件跟接点的尺寸，为支付宝的bug(2020-07-21)
-    // 解决办法为在组件根部再套一个没有任何作用的view元素
-    $uvGetRect: function $uvGetRect(selector, all) {
-      var _this2 = this;
-      return new Promise(function (resolve) {
-        uni.createSelectorQuery().in(_this2)[all ? 'selectAll' : 'select'](selector).boundingClientRect(function (rect) {
-          if (all && Array.isArray(rect) && rect.length) {
-            resolve(rect);
-          }
-          if (!all && rect) {
-            resolve(rect);
-          }
-        }).exec();
-      });
-    },
-    getParentData: function getParentData() {
-      var _this3 = this;
-      var parentName = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-      // 避免在created中去定义parent变量
-      if (!this.parent) this.parent = {};
-      // 这里的本质原理是，通过获取父组件实例(也即类似uv-radio的父组件uv-radio-group的this)
-      // 将父组件this中对应的参数，赋值给本组件(uv-radio的this)的parentData对象中对应的属性
-      // 之所以需要这么做，是因为所有端中，头条小程序不支持通过this.parent.xxx去监听父组件参数的变化
-      // 此处并不会自动更新子组件的数据，而是依赖父组件uv-radio-group去监听data的变化，手动调用更新子组件的方法去重新获取
-      this.parent = this.$uv.$parent.call(this, parentName);
-      if (this.parent.children) {
-        // 如果父组件的children不存在本组件的实例，才将本实例添加到父组件的children中
-        this.parent.children.indexOf(this) === -1 && this.parent.children.push(this);
-      }
-      if (this.parent && this.parentData) {
-        // 历遍parentData中的属性，将parent中的同名属性赋值给parentData
-        Object.keys(this.parentData).map(function (key) {
-          _this3.parentData[key] = _this3.parent[key];
-        });
-      }
-    },
-    // 阻止事件冒泡
-    preventEvent: function preventEvent(e) {
-      e && typeof e.stopPropagation === 'function' && e.stopPropagation();
-    },
-    // 空操作
-    noop: function noop(e) {
-      this.preventEvent(e);
-    }
-  },
-  onReachBottom: function onReachBottom() {
-    uni.$emit('uvOnReachBottom');
-  },
-  beforeDestroy: function beforeDestroy() {
-    var _this4 = this;
-    // 判断当前页面是否存在parent和chldren，一般在checkbox和checkbox-group父子联动的场景会有此情况
-    // 组件销毁时，移除子组件在父组件children数组中的实例，释放资源，避免数据混乱
-    if (this.parent && test.array(this.parent.children)) {
-      // 组件销毁时，移除父组件中的children数组中对应的实例
-      var childrenList = this.parent.children;
-      childrenList.map(function (child, index) {
-        // 如果相等，则移除
-        if (child === _this4) {
-          childrenList.splice(index, 1);
-        }
-      });
-    }
-  },
-  // 兼容vue3
-  unmounted: function unmounted() {
-    var _this5 = this;
-    if (this.parent && test.array(this.parent.children)) {
-      // 组件销毁时，移除父组件中的children数组中对应的实例
-      var childrenList = this.parent.children;
-      childrenList.map(function (child, index) {
-        // 如果相等，则移除
-        if (child === _this5) {
-          childrenList.splice(index, 1);
-        }
-      });
-    }
-  }
-};
-exports.default = _default2;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-
-/***/ 174:
-/*!**************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/index.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.$parent = $parent;
-exports.addStyle = addStyle;
-exports.addUnit = addUnit;
-exports.deepClone = deepClone;
-exports.deepMerge = deepMerge;
-exports.error = error;
-exports.formValidate = formValidate;
-exports.getDuration = getDuration;
-exports.getHistoryPage = getHistoryPage;
-exports.getProperty = getProperty;
-exports.getPx = getPx;
-exports.guid = guid;
-exports.os = os;
-exports.padZero = padZero;
-exports.page = page;
-exports.pages = pages;
-exports.priceFormat = priceFormat;
-exports.queryParams = queryParams;
-exports.random = random;
-exports.randomArray = randomArray;
-exports.range = range;
-exports.setConfig = setConfig;
-exports.setProperty = setProperty;
-exports.sleep = sleep;
-exports.sys = sys;
-exports.timeFormat = timeFormat;
-exports.timeFrom = timeFrom;
-exports.toast = toast;
-exports.trim = trim;
-exports.type2icon = type2icon;
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
-var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
-var _test = __webpack_require__(/*! ./test.js */ 175);
-var _digit = __webpack_require__(/*! ./digit.js */ 176);
-/**
- * @description 如果value小于min，取min；如果value大于max，取max
- * @param {number} min
- * @param {number} max
- * @param {number} value
- */
-function range() {
-  var min = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-  var max = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-  var value = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
-  return Math.max(min, Math.min(max, Number(value)));
-}
-
-/**
- * @description 用于获取用户传递值的px值  如果用户传递了"xxpx"或者"xxrpx"，取出其数值部分，如果是"xxxrpx"还需要用过uni.upx2px进行转换
- * @param {number|string} value 用户传递值的px值
- * @param {boolean} unit
- * @returns {number|string}
- */
-function getPx(value) {
-  var unit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-  if ((0, _test.number)(value)) {
-    return unit ? "".concat(value, "px") : Number(value);
-  }
-  // 如果带有rpx，先取出其数值部分，再转为px值
-  if (/(rpx|upx)$/.test(value)) {
-    return unit ? "".concat(uni.upx2px(parseInt(value)), "px") : Number(uni.upx2px(parseInt(value)));
-  }
-  return unit ? "".concat(parseInt(value), "px") : parseInt(value);
-}
-
-/**
- * @description 进行延时，以达到可以简写代码的目的 比如: await uni.$uv.sleep(20)将会阻塞20ms
- * @param {number} value 堵塞时间 单位ms 毫秒
- * @returns {Promise} 返回promise
- */
-function sleep() {
-  var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 30;
-  return new Promise(function (resolve) {
-    setTimeout(function () {
-      resolve();
-    }, value);
-  });
-}
-/**
- * @description 运行期判断平台
- * @returns {string} 返回所在平台(小写)
- * @link 运行期判断平台 https://uniapp.dcloud.io/frame?id=判断平台
- */
-function os() {
-  return uni.getSystemInfoSync().platform.toLowerCase();
-}
-/**
- * @description 获取系统信息同步接口
- * @link 获取系统信息同步接口 https://uniapp.dcloud.io/api/system/info?id=getsysteminfosync
- */
-function sys() {
-  return uni.getSystemInfoSync();
-}
-
-/**
- * @description 取一个区间数
- * @param {Number} min 最小值
- * @param {Number} max 最大值
- */
-function random(min, max) {
-  if (min >= 0 && max > 0 && max >= min) {
-    var gab = max - min + 1;
-    return Math.floor(Math.random() * gab + min);
-  }
-  return 0;
-}
-
-/**
- * @param {Number} len uuid的长度
- * @param {Boolean} firstU 将返回的首字母置为"u"
- * @param {Nubmer} radix 生成uuid的基数(意味着返回的字符串都是这个基数),2-二进制,8-八进制,10-十进制,16-十六进制
- */
-function guid() {
-  var len = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 32;
-  var firstU = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-  var radix = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
-  var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
-  var uuid = [];
-  radix = radix || chars.length;
-  if (len) {
-    // 如果指定uuid长度,只是取随机的字符,0|x为位运算,能去掉x的小数位,返回整数位
-    for (var i = 0; i < len; i++) {
-      uuid[i] = chars[0 | Math.random() * radix];
-    }
-  } else {
-    var r;
-    // rfc4122标准要求返回的uuid中,某些位为固定的字符
-    uuid[8] = uuid[13] = uuid[18] = uuid[23] = '-';
-    uuid[14] = '4';
-    for (var _i = 0; _i < 36; _i++) {
-      if (!uuid[_i]) {
-        r = 0 | Math.random() * 16;
-        uuid[_i] = chars[_i == 19 ? r & 0x3 | 0x8 : r];
-      }
-    }
-  }
-  // 移除第一个字符,并用u替代,因为第一个字符为数值时,该guuid不能用作id或者class
-  if (firstU) {
-    uuid.shift();
-    return "u".concat(uuid.join(''));
-  }
-  return uuid.join('');
-}
-
-/**
-* @description 获取父组件的参数，因为支付宝小程序不支持provide/inject的写法
-   this.$parent在非H5中，可以准确获取到父组件，但是在H5中，需要多次this.$parent.$parent.xxx
-   这里默认值等于undefined有它的含义，因为最顶层元素(组件)的$parent就是undefined，意味着不传name
-   值(默认为undefined)，就是查找最顶层的$parent
-*  @param {string|undefined} name 父组件的参数名
-*/
-function $parent() {
-  var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : undefined;
-  var parent = this.$parent;
-  // 通过while历遍，这里主要是为了H5需要多层解析的问题
-  while (parent) {
-    // 父组件
-    if (parent.$options && parent.$options.name !== name) {
-      // 如果组件的name不相等，继续上一级寻找
-      parent = parent.$parent;
-    } else {
-      return parent;
-    }
-  }
-  return false;
-}
-
-/**
- * @description 样式转换
- * 对象转字符串，或者字符串转对象
- * @param {object | string} customStyle 需要转换的目标
- * @param {String} target 转换的目的，object-转为对象，string-转为字符串
- * @returns {object|string}
- */
-function addStyle(customStyle) {
-  var target = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'object';
-  // 字符串转字符串，对象转对象情形，直接返回
-  if ((0, _test.empty)(customStyle) || (0, _typeof2.default)(customStyle) === 'object' && target === 'object' || target === 'string' && typeof customStyle === 'string') {
-    return customStyle;
-  }
-  // 字符串转对象
-  if (target === 'object') {
-    // 去除字符串样式中的两端空格(中间的空格不能去掉，比如padding: 20px 0如果去掉了就错了)，空格是无用的
-    customStyle = trim(customStyle);
-    // 根据";"将字符串转为数组形式
-    var styleArray = customStyle.split(';');
-    var style = {};
-    // 历遍数组，拼接成对象
-    for (var i = 0; i < styleArray.length; i++) {
-      // 'font-size:20px;color:red;'，如此最后字符串有";"的话，会导致styleArray最后一个元素为空字符串，这里需要过滤
-      if (styleArray[i]) {
-        var item = styleArray[i].split(':');
-        style[trim(item[0])] = trim(item[1]);
-      }
-    }
-    return style;
-  }
-  // 这里为对象转字符串形式
-  var string = '';
-  for (var _i2 in customStyle) {
-    // 驼峰转为中划线的形式，否则css内联样式，无法识别驼峰样式属性名
-    var key = _i2.replace(/([A-Z])/g, '-$1').toLowerCase();
-    string += "".concat(key, ":").concat(customStyle[_i2], ";");
-  }
-  // 去除两端空格
-  return trim(string);
-}
-
-/**
- * @description 添加单位，如果有rpx，upx，%，px等单位结尾或者值为auto，直接返回，否则加上px单位结尾
- * @param {string|number} value 需要添加单位的值
- * @param {string} unit 添加的单位名 比如px
- */
-function addUnit() {
-  var _uni, _uni$$uv, _uni$$uv$config, _uni2, _uni2$$uv, _uni2$$uv$config;
-  var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'auto';
-  var unit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (_uni = uni) !== null && _uni !== void 0 && (_uni$$uv = _uni.$uv) !== null && _uni$$uv !== void 0 && (_uni$$uv$config = _uni$$uv.config) !== null && _uni$$uv$config !== void 0 && _uni$$uv$config.unit ? (_uni2 = uni) === null || _uni2 === void 0 ? void 0 : (_uni2$$uv = _uni2.$uv) === null || _uni2$$uv === void 0 ? void 0 : (_uni2$$uv$config = _uni2$$uv.config) === null || _uni2$$uv$config === void 0 ? void 0 : _uni2$$uv$config.unit : 'px';
-  value = String(value);
-  // 用uvui内置验证规则中的number判断是否为数值
-  return (0, _test.number)(value) ? "".concat(value).concat(unit) : value;
-}
-
-/**
- * @description 深度克隆
- * @param {object} obj 需要深度克隆的对象
- * @param cache 缓存
- * @returns {*} 克隆后的对象或者原值（不是对象）
- */
-function deepClone(obj) {
-  var cache = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new WeakMap();
-  if (obj === null || (0, _typeof2.default)(obj) !== 'object') return obj;
-  if (cache.has(obj)) return cache.get(obj);
-  var clone;
-  if (obj instanceof Date) {
-    clone = new Date(obj.getTime());
-  } else if (obj instanceof RegExp) {
-    clone = new RegExp(obj);
-  } else if (obj instanceof Map) {
-    clone = new Map(Array.from(obj, function (_ref) {
-      var _ref2 = (0, _slicedToArray2.default)(_ref, 2),
-        key = _ref2[0],
-        value = _ref2[1];
-      return [key, deepClone(value, cache)];
-    }));
-  } else if (obj instanceof Set) {
-    clone = new Set(Array.from(obj, function (value) {
-      return deepClone(value, cache);
-    }));
-  } else if (Array.isArray(obj)) {
-    clone = obj.map(function (value) {
-      return deepClone(value, cache);
-    });
-  } else if (Object.prototype.toString.call(obj) === '[object Object]') {
-    clone = Object.create(Object.getPrototypeOf(obj));
-    cache.set(obj, clone);
-    for (var _i3 = 0, _Object$entries = Object.entries(obj); _i3 < _Object$entries.length; _i3++) {
-      var _Object$entries$_i = (0, _slicedToArray2.default)(_Object$entries[_i3], 2),
-        key = _Object$entries$_i[0],
-        value = _Object$entries$_i[1];
-      clone[key] = deepClone(value, cache);
-    }
-  } else {
-    clone = Object.assign({}, obj);
-  }
-  cache.set(obj, clone);
-  return clone;
-}
-
-/**
- * @description JS对象深度合并
- * @param {object} target 需要拷贝的对象
- * @param {object} source 拷贝的来源对象
- * @returns {object|boolean} 深度合并后的对象或者false（入参有不是对象）
- */
-function deepMerge() {
-  var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var source = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  target = deepClone(target);
-  if ((0, _typeof2.default)(target) !== 'object' || target === null || (0, _typeof2.default)(source) !== 'object' || source === null) return target;
-  var merged = Array.isArray(target) ? target.slice() : Object.assign({}, target);
-  for (var prop in source) {
-    if (!source.hasOwnProperty(prop)) continue;
-    var sourceValue = source[prop];
-    var targetValue = merged[prop];
-    if (sourceValue instanceof Date) {
-      merged[prop] = new Date(sourceValue);
-    } else if (sourceValue instanceof RegExp) {
-      merged[prop] = new RegExp(sourceValue);
-    } else if (sourceValue instanceof Map) {
-      merged[prop] = new Map(sourceValue);
-    } else if (sourceValue instanceof Set) {
-      merged[prop] = new Set(sourceValue);
-    } else if ((0, _typeof2.default)(sourceValue) === 'object' && sourceValue !== null) {
-      merged[prop] = deepMerge(targetValue, sourceValue);
-    } else {
-      merged[prop] = sourceValue;
-    }
-  }
-  return merged;
-}
-
-/**
- * @description error提示
- * @param {*} err 错误内容
- */
-function error(err) {
-  // 开发环境才提示，生产环境不会提示
-  if (true) {
-    console.error("uvui\u63D0\u793A\uFF1A".concat(err));
-  }
-}
-
-/**
- * @description 打乱数组
- * @param {array} array 需要打乱的数组
- * @returns {array} 打乱后的数组
- */
-function randomArray() {
-  var array = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  // 原理是sort排序,Math.random()产生0<= x < 1之间的数,会导致x-0.05大于或者小于0
-  return array.sort(function () {
-    return Math.random() - 0.5;
-  });
-}
-
-// padStart 的 polyfill，因为某些机型或情况，还无法支持es7的padStart，比如电脑版的微信小程序
-// 所以这里做一个兼容polyfill的兼容处理
-if (!String.prototype.padStart) {
-  // 为了方便表示这里 fillString 用了ES6 的默认参数，不影响理解
-  String.prototype.padStart = function (maxLength) {
-    var fillString = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : ' ';
-    if (Object.prototype.toString.call(fillString) !== '[object String]') {
-      throw new TypeError('fillString must be String');
-    }
-    var str = this;
-    // 返回 String(str) 这里是为了使返回的值是字符串字面量，在控制台中更符合直觉
-    if (str.length >= maxLength) return String(str);
-    var fillLength = maxLength - str.length;
-    var times = Math.ceil(fillLength / fillString.length);
-    while (times >>= 1) {
-      fillString += fillString;
-      if (times === 1) {
-        fillString += fillString;
-      }
-    }
-    return fillString.slice(0, fillLength) + str;
-  };
-}
-
-/**
- * @description 格式化时间
- * @param {String|Number} dateTime 需要格式化的时间戳
- * @param {String} fmt 格式化规则 yyyy:mm:dd|yyyy:mm|yyyy年mm月dd日|yyyy年mm月dd日 hh时MM分等,可自定义组合 默认yyyy-mm-dd
- * @returns {string} 返回格式化后的字符串
- */
-function timeFormat() {
-  var dateTime = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-  var formatStr = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'yyyy-mm-dd';
-  var date;
-  // 若传入时间为假值，则取当前时间
-  if (!dateTime) {
-    date = new Date();
-  }
-  // 若为unix秒时间戳，则转为毫秒时间戳（逻辑有点奇怪，但不敢改，以保证历史兼容）
-  else if (/^\d{10}$/.test(dateTime === null || dateTime === void 0 ? void 0 : dateTime.toString().trim())) {
-    date = new Date(dateTime * 1000);
-  }
-  // 若用户传入字符串格式时间戳，new Date无法解析，需做兼容
-  else if (typeof dateTime === 'string' && /^\d+$/.test(dateTime.trim())) {
-    date = new Date(Number(dateTime));
-  }
-  // 处理平台性差异，在Safari/Webkit中，new Date仅支持/作为分割符的字符串时间
-  // 处理 '2022-07-10 01:02:03'，跳过 '2022-07-10T01:02:03'
-  else if (typeof dateTime === 'string' && dateTime.includes('-') && !dateTime.includes('T')) {
-    date = new Date(dateTime.replace(/-/g, '/'));
-  }
-  // 其他都认为符合 RFC 2822 规范
-  else {
-    date = new Date(dateTime);
-  }
-  var timeSource = {
-    'y': date.getFullYear().toString(),
-    // 年
-    'm': (date.getMonth() + 1).toString().padStart(2, '0'),
-    // 月
-    'd': date.getDate().toString().padStart(2, '0'),
-    // 日
-    'h': date.getHours().toString().padStart(2, '0'),
-    // 时
-    'M': date.getMinutes().toString().padStart(2, '0'),
-    // 分
-    's': date.getSeconds().toString().padStart(2, '0') // 秒
-    // 有其他格式化字符需求可以继续添加，必须转化成字符串
-  };
-
-  for (var key in timeSource) {
-    var _ref3 = new RegExp("".concat(key, "+")).exec(formatStr) || [],
-      _ref4 = (0, _slicedToArray2.default)(_ref3, 1),
-      ret = _ref4[0];
-    if (ret) {
-      // 年可能只需展示两位
-      var beginIndex = key === 'y' && ret.length === 2 ? 2 : 0;
-      formatStr = formatStr.replace(ret, timeSource[key].slice(beginIndex));
-    }
-  }
-  return formatStr;
-}
-
-/**
- * @description 时间戳转为多久之前
- * @param {String|Number} timestamp 时间戳
- * @param {String|Boolean} format
- * 格式化规则如果为时间格式字符串，超出一定时间范围，返回固定的时间格式；
- * 如果为布尔值false，无论什么时间，都返回多久以前的格式
- * @returns {string} 转化后的内容
- */
-function timeFrom() {
-  var timestamp = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-  var format = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'yyyy-mm-dd';
-  if (timestamp == null) timestamp = Number(new Date());
-  timestamp = parseInt(timestamp);
-  // 判断用户输入的时间戳是秒还是毫秒,一般前端js获取的时间戳是毫秒(13位),后端传过来的为秒(10位)
-  if (timestamp.toString().length == 10) timestamp *= 1000;
-  var timer = new Date().getTime() - timestamp;
-  timer = parseInt(timer / 1000);
-  // 如果小于5分钟,则返回"刚刚",其他以此类推
-  var tips = '';
-  switch (true) {
-    case timer < 300:
-      tips = '刚刚';
-      break;
-    case timer >= 300 && timer < 3600:
-      tips = "".concat(parseInt(timer / 60), "\u5206\u949F\u524D");
-      break;
-    case timer >= 3600 && timer < 86400:
-      tips = "".concat(parseInt(timer / 3600), "\u5C0F\u65F6\u524D");
-      break;
-    case timer >= 86400 && timer < 2592000:
-      tips = "".concat(parseInt(timer / 86400), "\u5929\u524D");
-      break;
-    default:
-      // 如果format为false，则无论什么时间戳，都显示xx之前
-      if (format === false) {
-        if (timer >= 2592000 && timer < 365 * 86400) {
-          tips = "".concat(parseInt(timer / (86400 * 30)), "\u4E2A\u6708\u524D");
-        } else {
-          tips = "".concat(parseInt(timer / (86400 * 365)), "\u5E74\u524D");
-        }
-      } else {
-        tips = timeFormat(timestamp, format);
-      }
-  }
-  return tips;
-}
-
-/**
- * @description 去除空格
- * @param String str 需要去除空格的字符串
- * @param String pos both(左右)|left|right|all 默认both
- */
-function trim(str) {
-  var pos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'both';
-  str = String(str);
-  if (pos == 'both') {
-    return str.replace(/^\s+|\s+$/g, '');
-  }
-  if (pos == 'left') {
-    return str.replace(/^\s*/, '');
-  }
-  if (pos == 'right') {
-    return str.replace(/(\s*$)/g, '');
-  }
-  if (pos == 'all') {
-    return str.replace(/\s+/g, '');
-  }
-  return str;
-}
-
-/**
- * @description 对象转url参数
- * @param {object} data,对象
- * @param {Boolean} isPrefix,是否自动加上"?"
- * @param {string} arrayFormat 规则 indices|brackets|repeat|comma
- */
-function queryParams() {
-  var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var isPrefix = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-  var arrayFormat = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'brackets';
-  var prefix = isPrefix ? '?' : '';
-  var _result = [];
-  if (['indices', 'brackets', 'repeat', 'comma'].indexOf(arrayFormat) == -1) arrayFormat = 'brackets';
-  var _loop = function _loop(key) {
-    var value = data[key];
-    // 去掉为空的参数
-    if (['', undefined, null].indexOf(value) >= 0) {
-      return "continue";
-    }
-    // 如果值为数组，另行处理
-    if (value.constructor === Array) {
-      // e.g. {ids: [1, 2, 3]}
-      switch (arrayFormat) {
-        case 'indices':
-          // 结果: ids[0]=1&ids[1]=2&ids[2]=3
-          for (var i = 0; i < value.length; i++) {
-            _result.push("".concat(key, "[").concat(i, "]=").concat(value[i]));
-          }
-          break;
-        case 'brackets':
-          // 结果: ids[]=1&ids[]=2&ids[]=3
-          value.forEach(function (_value) {
-            _result.push("".concat(key, "[]=").concat(_value));
-          });
-          break;
-        case 'repeat':
-          // 结果: ids=1&ids=2&ids=3
-          value.forEach(function (_value) {
-            _result.push("".concat(key, "=").concat(_value));
-          });
-          break;
-        case 'comma':
-          // 结果: ids=1,2,3
-          var commaStr = '';
-          value.forEach(function (_value) {
-            commaStr += (commaStr ? ',' : '') + _value;
-          });
-          _result.push("".concat(key, "=").concat(commaStr));
-          break;
-        default:
-          value.forEach(function (_value) {
-            _result.push("".concat(key, "[]=").concat(_value));
-          });
-      }
-    } else {
-      _result.push("".concat(key, "=").concat(value));
-    }
-  };
-  for (var key in data) {
-    var _ret = _loop(key);
-    if (_ret === "continue") continue;
-  }
-  return _result.length ? prefix + _result.join('&') : '';
-}
-
-/**
- * 显示消息提示框
- * @param {String} title 提示的内容，长度与 icon 取值有关。
- * @param {Number} duration 提示的延迟时间，单位毫秒，默认：2000
- */
-function toast(title) {
-  var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2000;
-  uni.showToast({
-    title: String(title),
-    icon: 'none',
-    duration: duration
-  });
-}
-
-/**
- * @description 根据主题type值,获取对应的图标
- * @param {String} type 主题名称,primary|info|error|warning|success
- * @param {boolean} fill 是否使用fill填充实体的图标
- */
-function type2icon() {
-  var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'success';
-  var fill = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-  // 如果非预置值,默认为success
-  if (['primary', 'info', 'error', 'warning', 'success'].indexOf(type) == -1) type = 'success';
-  var iconName = '';
-  // 目前(2019-12-12),info和primary使用同一个图标
-  switch (type) {
-    case 'primary':
-      iconName = 'info-circle';
-      break;
-    case 'info':
-      iconName = 'info-circle';
-      break;
-    case 'error':
-      iconName = 'close-circle';
-      break;
-    case 'warning':
-      iconName = 'error-circle';
-      break;
-    case 'success':
-      iconName = 'checkmark-circle';
-      break;
-    default:
-      iconName = 'checkmark-circle';
-  }
-  // 是否是实体类型,加上-fill,在icon组件库中,实体的类名是后面加-fill的
-  if (fill) iconName += '-fill';
-  return iconName;
-}
-
-/**
- * @description 数字格式化
- * @param {number|string} number 要格式化的数字
- * @param {number} decimals 保留几位小数
- * @param {string} decimalPoint 小数点符号
- * @param {string} thousandsSeparator 千分位符号
- * @returns {string} 格式化后的数字
- */
-function priceFormat(number) {
-  var decimals = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-  var decimalPoint = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '.';
-  var thousandsSeparator = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : ',';
-  number = "".concat(number).replace(/[^0-9+-Ee.]/g, '');
-  var n = !isFinite(+number) ? 0 : +number;
-  var prec = !isFinite(+decimals) ? 0 : Math.abs(decimals);
-  var sep = typeof thousandsSeparator === 'undefined' ? ',' : thousandsSeparator;
-  var dec = typeof decimalPoint === 'undefined' ? '.' : decimalPoint;
-  var s = '';
-  s = (prec ? (0, _digit.round)(n, prec) + '' : "".concat(Math.round(n))).split('.');
-  var re = /(-?\d+)(\d{3})/;
-  while (re.test(s[0])) {
-    s[0] = s[0].replace(re, "$1".concat(sep, "$2"));
-  }
-  if ((s[1] || '').length < prec) {
-    s[1] = s[1] || '';
-    s[1] += new Array(prec - s[1].length + 1).join('0');
-  }
-  return s.join(dec);
-}
-
-/**
- * @description 获取duration值
- * 如果带有ms或者s直接返回，如果大于一定值，认为是ms单位，小于一定值，认为是s单位
- * 比如以30位阈值，那么300大于30，可以理解为用户想要的是300ms，而不是想花300s去执行一个动画
- * @param {String|number} value 比如: "1s"|"100ms"|1|100
- * @param {boolean} unit  提示: 如果是false 默认返回number
- * @return {string|number}
- */
-function getDuration(value) {
-  var unit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-  var valueNum = parseInt(value);
-  if (unit) {
-    if (/s$/.test(value)) return value;
-    return value > 30 ? "".concat(value, "ms") : "".concat(value, "s");
-  }
-  if (/ms$/.test(value)) return valueNum;
-  if (/s$/.test(value)) return valueNum > 30 ? valueNum : valueNum * 1000;
-  return valueNum;
-}
-
-/**
- * @description 日期的月或日补零操作
- * @param {String} value 需要补零的值
- */
-function padZero(value) {
-  return "00".concat(value).slice(-2);
-}
-
-/**
- * @description 在uv-form的子组件内容发生变化，或者失去焦点时，尝试通知uv-form执行校验方法
- * @param {*} instance
- * @param {*} event
- */
-function formValidate(instance, event) {
-  var formItem = $parent.call(instance, 'uv-form-item');
-  var form = $parent.call(instance, 'uv-form');
-  // 如果发生变化的input或者textarea等，其父组件中有uv-form-item或者uv-form等，就执行form的validate方法
-  // 同时将form-item的pros传递给form，让其进行精确对象验证
-  if (formItem && form) {
-    form.validateField(formItem.prop, function () {}, event);
-  }
-}
-
-/**
- * @description 获取某个对象下的属性，用于通过类似'a.b.c'的形式去获取一个对象的的属性的形式
- * @param {object} obj 对象
- * @param {string} key 需要获取的属性字段
- * @returns {*}
- */
-function getProperty(obj, key) {
-  if (!obj) {
-    return;
-  }
-  if (typeof key !== 'string' || key === '') {
-    return '';
-  }
-  if (key.indexOf('.') !== -1) {
-    var keys = key.split('.');
-    var firstObj = obj[keys[0]] || {};
-    for (var i = 1; i < keys.length; i++) {
-      if (firstObj) {
-        firstObj = firstObj[keys[i]];
-      }
-    }
-    return firstObj;
-  }
-  return obj[key];
-}
-
-/**
- * @description 设置对象的属性值，如果'a.b.c'的形式进行设置
- * @param {object} obj 对象
- * @param {string} key 需要设置的属性
- * @param {string} value 设置的值
- */
-function setProperty(obj, key, value) {
-  if (!obj) {
-    return;
-  }
-  // 递归赋值
-  var inFn = function inFn(_obj, keys, v) {
-    // 最后一个属性key
-    if (keys.length === 1) {
-      _obj[keys[0]] = v;
-      return;
-    }
-    // 0~length-1个key
-    while (keys.length > 1) {
-      var k = keys[0];
-      if (!_obj[k] || (0, _typeof2.default)(_obj[k]) !== 'object') {
-        _obj[k] = {};
-      }
-      var _key = keys.shift();
-      // 自调用判断是否存在属性，不存在则自动创建对象
-      inFn(_obj[k], keys, v);
-    }
-  };
-  if (typeof key !== 'string' || key === '') {} else if (key.indexOf('.') !== -1) {
-    // 支持多层级赋值操作
-    var keys = key.split('.');
-    inFn(obj, keys, value);
-  } else {
-    obj[key] = value;
-  }
-}
-
-/**
- * @description 获取当前页面路径
- */
-function page() {
-  var _pages;
-  var pages = getCurrentPages();
-  var route = (_pages = pages[pages.length - 1]) === null || _pages === void 0 ? void 0 : _pages.route;
-  // 某些特殊情况下(比如页面进行redirectTo时的一些时机)，pages可能为空数组
-  return "/".concat(route ? route : '');
-}
-
-/**
- * @description 获取当前路由栈实例数组
- */
-function pages() {
-  var pages = getCurrentPages();
-  return pages;
-}
-
-/**
- * 获取页面历史栈指定层实例
- * @param back {number} [0] - 0或者负数，表示获取历史栈的哪一层，0表示获取当前页面实例，-1 表示获取上一个页面实例。默认0。
- */
-function getHistoryPage() {
-  var back = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-  var pages = getCurrentPages();
-  var len = pages.length;
-  return pages[len - 1 + back];
-}
-
-/**
- * @description 修改uvui内置属性值
- * @param {object} props 修改内置props属性
- * @param {object} config 修改内置config属性
- * @param {object} color 修改内置color属性
- * @param {object} zIndex 修改内置zIndex属性
- */
-function setConfig(_ref5) {
-  var _ref5$props = _ref5.props,
-    props = _ref5$props === void 0 ? {} : _ref5$props,
-    _ref5$config = _ref5.config,
-    config = _ref5$config === void 0 ? {} : _ref5$config,
-    _ref5$color = _ref5.color,
-    color = _ref5$color === void 0 ? {} : _ref5$color,
-    _ref5$zIndex = _ref5.zIndex,
-    zIndex = _ref5$zIndex === void 0 ? {} : _ref5$zIndex;
-  var deepMerge = uni.$uv.deepMerge;
-  uni.$uv.config = deepMerge(uni.$uv.config, config);
-  uni.$uv.props = deepMerge(uni.$uv.props, props);
-  uni.$uv.color = deepMerge(uni.$uv.color, color);
-  uni.$uv.zIndex = deepMerge(uni.$uv.zIndex, zIndex);
-}
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-
-/***/ 175:
-/*!*************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/test.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.amount = amount;
-exports.array = array;
-exports.carNo = carNo;
-exports.chinese = chinese;
-exports.code = code;
-exports.contains = contains;
-exports.date = date;
-exports.dateISO = dateISO;
-exports.digits = digits;
-exports.email = email;
-exports.empty = empty;
-exports.enOrNum = enOrNum;
-exports.func = func;
-exports.idCard = idCard;
-exports.image = image;
-exports.jsonString = jsonString;
-exports.landline = landline;
-exports.letter = letter;
-exports.mobile = mobile;
-exports.number = number;
-exports.object = object;
-exports.promise = promise;
-exports.range = range;
-exports.rangeLength = rangeLength;
-exports.regExp = regExp;
-exports.string = string;
-exports.url = url;
-exports.video = video;
-var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
-/**
- * 验证电子邮箱格式
- */
-function email(value) {
-  return /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/.test(value);
-}
-
-/**
- * 验证手机格式
- */
-function mobile(value) {
-  return /^1([3589]\d|4[5-9]|6[1-2,4-7]|7[0-8])\d{8}$/.test(value);
-}
-
-/**
- * 验证URL格式
- */
-function url(value) {
-  return /^((https|http|ftp|rtsp|mms):\/\/)(([0-9a-zA-Z_!~*'().&=+$%-]+: )?[0-9a-zA-Z_!~*'().&=+$%-]+@)?(([0-9]{1,3}.){3}[0-9]{1,3}|([0-9a-zA-Z_!~*'()-]+.)*([0-9a-zA-Z][0-9a-zA-Z-]{0,61})?[0-9a-zA-Z].[a-zA-Z]{2,6})(:[0-9]{1,4})?((\/?)|(\/[0-9a-zA-Z_!~*'().;?:@&=+$,%#-]+)+\/?)$/.test(value);
-}
-
-/**
- * 验证日期格式
- */
-function date(value) {
-  if (!value) return false;
-  // 判断是否数值或者字符串数值(意味着为时间戳)，转为数值，否则new Date无法识别字符串时间戳
-  if (number(value)) value = +value;
-  return !/Invalid|NaN/.test(new Date(value).toString());
-}
-
-/**
- * 验证ISO类型的日期格式
- */
-function dateISO(value) {
-  return /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/.test(value);
-}
-
-/**
- * 验证十进制数字
- */
-function number(value) {
-  return /^[\+-]?(\d+\.?\d*|\.\d+|\d\.\d+e\+\d+)$/.test(value);
-}
-
-/**
- * 验证字符串
- */
-function string(value) {
-  return typeof value === 'string';
-}
-
-/**
- * 验证整数
- */
-function digits(value) {
-  return /^\d+$/.test(value);
-}
-
-/**
- * 验证身份证号码
- */
-function idCard(value) {
-  return /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/.test(value);
-}
-
-/**
- * 是否车牌号
- */
-function carNo(value) {
-  // 新能源车牌
-  var xreg = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}(([0-9]{5}[DF]$)|([DF][A-HJ-NP-Z0-9][0-9]{4}$))/;
-  // 旧车牌
-  var creg = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-HJ-NP-Z0-9]{4}[A-HJ-NP-Z0-9挂学警港澳]{1}$/;
-  if (value.length === 7) {
-    return creg.test(value);
-  }
-  if (value.length === 8) {
-    return xreg.test(value);
-  }
-  return false;
-}
-
-/**
- * 金额,只允许2位小数
- */
-function amount(value) {
-  // 金额，只允许保留两位小数
-  return /^[1-9]\d*(,\d{3})*(\.\d{1,2})?$|^0\.\d{1,2}$/.test(value);
-}
-
-/**
- * 中文
- */
-function chinese(value) {
-  var reg = /^[\u4e00-\u9fa5]+$/gi;
-  return reg.test(value);
-}
-
-/**
- * 只能输入字母
- */
-function letter(value) {
-  return /^[a-zA-Z]*$/.test(value);
-}
-
-/**
- * 只能是字母或者数字
- */
-function enOrNum(value) {
-  // 英文或者数字
-  var reg = /^[0-9a-zA-Z]*$/g;
-  return reg.test(value);
-}
-
-/**
- * 验证是否包含某个值
- */
-function contains(value, param) {
-  return value.indexOf(param) >= 0;
-}
-
-/**
- * 验证一个值范围[min, max]
- */
-function range(value, param) {
-  return value >= param[0] && value <= param[1];
-}
-
-/**
- * 验证一个长度范围[min, max]
- */
-function rangeLength(value, param) {
-  return value.length >= param[0] && value.length <= param[1];
-}
-
-/**
- * 是否固定电话
- */
-function landline(value) {
-  var reg = /^\d{3,4}-\d{7,8}(-\d{3,4})?$/;
-  return reg.test(value);
-}
-
-/**
- * 判断是否为空
- */
-function empty(value) {
-  switch ((0, _typeof2.default)(value)) {
-    case 'undefined':
-      return true;
-    case 'string':
-      if (value.replace(/(^[ \t\n\r]*)|([ \t\n\r]*$)/g, '').length == 0) return true;
-      break;
-    case 'boolean':
-      if (!value) return true;
-      break;
-    case 'number':
-      if (value === 0 || isNaN(value)) return true;
-      break;
-    case 'object':
-      if (value === null || value.length === 0) return true;
-      for (var i in value) {
-        return false;
-      }
-      return true;
-  }
-  return false;
-}
-
-/**
- * 是否json字符串
- */
-function jsonString(value) {
-  if (typeof value === 'string') {
-    try {
-      var obj = JSON.parse(value);
-      if ((0, _typeof2.default)(obj) === 'object' && obj) {
-        return true;
-      }
-      return false;
-    } catch (e) {
-      return false;
-    }
-  }
-  return false;
-}
-
-/**
- * 是否数组
- */
-function array(value) {
-  if (typeof Array.isArray === 'function') {
-    return Array.isArray(value);
-  }
-  return Object.prototype.toString.call(value) === '[object Array]';
-}
-
-/**
- * 是否对象
- */
-function object(value) {
-  return Object.prototype.toString.call(value) === '[object Object]';
-}
-
-/**
- * 是否短信验证码
- */
-function code(value) {
-  var len = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
-  return new RegExp("^\\d{".concat(len, "}$")).test(value);
-}
-
-/**
- * 是否函数方法
- * @param {Object} value
- */
-function func(value) {
-  return typeof value === 'function';
-}
-
-/**
- * 是否promise对象
- * @param {Object} value
- */
-function promise(value) {
-  return object(value) && func(value.then) && func(value.catch);
-}
-
-/** 是否图片格式
- * @param {Object} value
- */
-function image(value) {
-  var newValue = value.split('?')[0];
-  var IMAGE_REGEXP = /\.(jpeg|jpg|gif|png|svg|webp|jfif|bmp|dpg)/i;
-  return IMAGE_REGEXP.test(newValue);
-}
-
-/**
- * 是否视频格式
- * @param {Object} value
- */
-function video(value) {
-  var VIDEO_REGEXP = /\.(mp4|mpg|mpeg|dat|asf|avi|rm|rmvb|mov|wmv|flv|mkv|m3u8)/i;
-  return VIDEO_REGEXP.test(value);
-}
-
-/**
- * 是否为正则对象
- * @param {Object}
- * @return {Boolean}
- */
-function regExp(o) {
-  return o && Object.prototype.toString.call(o) === '[object RegExp]';
-}
-
-/***/ }),
-
-/***/ 176:
-/*!**************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/digit.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-exports.divide = divide;
-exports.enableBoundaryChecking = enableBoundaryChecking;
-exports.minus = minus;
-exports.plus = plus;
-exports.round = round;
-exports.times = times;
-var _toArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toArray */ 64));
-var _boundaryCheckingState = true; // 是否进行越界检查的全局开关
-
-/**
- * 把错误的数据转正
- * @private
- * @example strip(0.09999999999999998)=0.1
- */
-function strip(num) {
-  var precision = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 15;
-  return +parseFloat(Number(num).toPrecision(precision));
-}
-
-/**
- * Return digits length of a number
- * @private
- * @param {*number} num Input number
- */
-function digitLength(num) {
-  // Get digit length of e
-  var eSplit = num.toString().split(/[eE]/);
-  var len = (eSplit[0].split('.')[1] || '').length - +(eSplit[1] || 0);
-  return len > 0 ? len : 0;
-}
-
-/**
- * 把小数转成整数,如果是小数则放大成整数
- * @private
- * @param {*number} num 输入数
- */
-function float2Fixed(num) {
-  if (num.toString().indexOf('e') === -1) {
-    return Number(num.toString().replace('.', ''));
-  }
-  var dLen = digitLength(num);
-  return dLen > 0 ? strip(Number(num) * Math.pow(10, dLen)) : Number(num);
-}
-
-/**
- * 检测数字是否越界，如果越界给出提示
- * @private
- * @param {*number} num 输入数
- */
-function checkBoundary(num) {
-  if (_boundaryCheckingState) {
-    if (num > Number.MAX_SAFE_INTEGER || num < Number.MIN_SAFE_INTEGER) {
-      console.warn("".concat(num, " \u8D85\u51FA\u4E86\u7CBE\u5EA6\u9650\u5236\uFF0C\u7ED3\u679C\u53EF\u80FD\u4E0D\u6B63\u786E"));
-    }
-  }
-}
-
-/**
- * 把递归操作扁平迭代化
- * @param {number[]} arr 要操作的数字数组
- * @param {function} operation 迭代操作
- * @private
- */
-function iteratorOperation(arr, operation) {
-  var _arr = (0, _toArray2.default)(arr),
-    num1 = _arr[0],
-    num2 = _arr[1],
-    others = _arr.slice(2);
-  var res = operation(num1, num2);
-  others.forEach(function (num) {
-    res = operation(res, num);
-  });
-  return res;
-}
-
-/**
- * 高精度乘法
- * @export
- */
-function times() {
-  for (var _len = arguments.length, nums = new Array(_len), _key = 0; _key < _len; _key++) {
-    nums[_key] = arguments[_key];
-  }
-  if (nums.length > 2) {
-    return iteratorOperation(nums, times);
-  }
-  var num1 = nums[0],
-    num2 = nums[1];
-  var num1Changed = float2Fixed(num1);
-  var num2Changed = float2Fixed(num2);
-  var baseNum = digitLength(num1) + digitLength(num2);
-  var leftValue = num1Changed * num2Changed;
-  checkBoundary(leftValue);
-  return leftValue / Math.pow(10, baseNum);
-}
-
-/**
- * 高精度加法
- * @export
- */
-function plus() {
-  for (var _len2 = arguments.length, nums = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-    nums[_key2] = arguments[_key2];
-  }
-  if (nums.length > 2) {
-    return iteratorOperation(nums, plus);
-  }
-  var num1 = nums[0],
-    num2 = nums[1];
-  // 取最大的小数位
-  var baseNum = Math.pow(10, Math.max(digitLength(num1), digitLength(num2)));
-  // 把小数都转为整数然后再计算
-  return (times(num1, baseNum) + times(num2, baseNum)) / baseNum;
-}
-
-/**
- * 高精度减法
- * @export
- */
-function minus() {
-  for (var _len3 = arguments.length, nums = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
-    nums[_key3] = arguments[_key3];
-  }
-  if (nums.length > 2) {
-    return iteratorOperation(nums, minus);
-  }
-  var num1 = nums[0],
-    num2 = nums[1];
-  var baseNum = Math.pow(10, Math.max(digitLength(num1), digitLength(num2)));
-  return (times(num1, baseNum) - times(num2, baseNum)) / baseNum;
-}
-
-/**
- * 高精度除法
- * @export
- */
-function divide() {
-  for (var _len4 = arguments.length, nums = new Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {
-    nums[_key4] = arguments[_key4];
-  }
-  if (nums.length > 2) {
-    return iteratorOperation(nums, divide);
-  }
-  var num1 = nums[0],
-    num2 = nums[1];
-  var num1Changed = float2Fixed(num1);
-  var num2Changed = float2Fixed(num2);
-  checkBoundary(num1Changed);
-  checkBoundary(num2Changed);
-  // 重要，这里必须用strip进行修正
-  return times(num1Changed / num2Changed, strip(Math.pow(10, digitLength(num2) - digitLength(num1))));
-}
-
-/**
- * 四舍五入
- * @export
- */
-function round(num, ratio) {
-  var base = Math.pow(10, ratio);
-  var result = divide(Math.round(Math.abs(times(num, base))), base);
-  if (num < 0 && result !== 0) {
-    result = times(result, -1);
-  }
-  // 位数不足则补0
-  return result;
-}
-
-/**
- * 是否进行边界检查，默认开启
- * @param flag 标记开关，true 为开启，false 为关闭，默认为 true
- * @export
- */
-function enableBoundaryChecking() {
-  var flag = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
-  _boundaryCheckingState = flag;
-}
-var _default = {
-  times: times,
-  plus: plus,
-  minus: minus,
-  divide: divide,
-  round: round,
-  enableBoundaryChecking: enableBoundaryChecking
-};
-exports.default = _default;
-
-/***/ }),
-
-/***/ 177:
-/*!**********************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/util/route.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 55));
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 57));
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23));
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ 24));
-var _index = __webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/function/index.js */ 174);
-/**
- * 路由跳转方法，该方法相对于直接使用uni.xxx的好处是使用更加简单快捷
- * 并且带有路由拦截功能
- */
-var Router = /*#__PURE__*/function () {
-  function Router() {
-    (0, _classCallCheck2.default)(this, Router);
-    // 原始属性定义
-    this.config = {
-      type: 'navigateTo',
-      url: '',
-      delta: 1,
-      // navigateBack页面后退时,回退的层数
-      params: {},
-      // 传递的参数
-      animationType: 'pop-in',
-      // 窗口动画,只在APP有效
-      animationDuration: 300,
-      // 窗口动画持续时间,单位毫秒,只在APP有效
-      intercept: false,
-      // 是否需要拦截
-      events: {} // 页面间通信接口，用于监听被打开页面发送到当前页面的数据。hbuilderx 2.8.9+ 开始支持。
-    };
-    // 因为route方法是需要对外赋值给另外的对象使用，同时route内部有使用this，会导致route失去上下文
-    // 这里在构造函数中进行this绑定
-    this.route = this.route.bind(this);
-  }
-
-  // 判断url前面是否有"/"，如果没有则加上，否则无法跳转
-  (0, _createClass2.default)(Router, [{
-    key: "addRootPath",
-    value: function addRootPath(url) {
-      return url[0] === '/' ? url : "/".concat(url);
-    }
-
-    // 整合路由参数
-  }, {
-    key: "mixinParam",
-    value: function mixinParam(url, params) {
-      url = url && this.addRootPath(url);
-
-      // 使用正则匹配，主要依据是判断是否有"/","?","="等，如“/page/index/index?name=mary"
-      // 如果有url中有get参数，转换后无需带上"?"
-      var query = '';
-      if (/.*\/.*\?.*=.*/.test(url)) {
-        // object对象转为get类型的参数
-        query = (0, _index.queryParams)(params, false);
-        // 因为已有get参数,所以后面拼接的参数需要带上"&"隔开
-        return url += "&".concat(query);
-      }
-      // 直接拼接参数，因为此处url中没有后面的query参数，也就没有"?/&"之类的符号
-      query = (0, _index.queryParams)(params);
-      return url += query;
-    }
-
-    // 对外的方法名称
-  }, {
-    key: "route",
-    value: function () {
-      var _route = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-        var options,
-          params,
-          mergeConfig,
-          isNext,
-          _args = arguments;
-        return _regenerator.default.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                options = _args.length > 0 && _args[0] !== undefined ? _args[0] : {};
-                params = _args.length > 1 && _args[1] !== undefined ? _args[1] : {};
-                // 合并用户的配置和内部的默认配置
-                mergeConfig = {};
-                if (typeof options === 'string') {
-                  // 如果options为字符串，则为route(url, params)的形式
-                  mergeConfig.url = this.mixinParam(options, params);
-                  mergeConfig.type = 'navigateTo';
-                } else {
-                  mergeConfig = (0, _index.deepMerge)(this.config, options);
-                  // 否则正常使用mergeConfig中的url和params进行拼接
-                  mergeConfig.url = this.mixinParam(options.url, options.params);
-                }
-                // 如果本次跳转的路径和本页面路径一致，不执行跳转，防止用户快速点击跳转按钮，造成多次跳转同一个页面的问题
-                if (!(mergeConfig.url === (0, _index.page)())) {
-                  _context.next = 6;
-                  break;
-                }
-                return _context.abrupt("return");
-              case 6:
-                if (params.intercept) {
-                  mergeConfig.intercept = params.intercept;
-                }
-                // params参数也带给拦截器
-                mergeConfig.params = params;
-                // 合并内外部参数
-                mergeConfig = (0, _index.deepMerge)(this.config, mergeConfig);
-                // 判断用户是否定义了拦截器
-                if (!(typeof mergeConfig.intercept === 'function')) {
-                  _context.next = 16;
-                  break;
-                }
-                _context.next = 12;
-                return new Promise(function (resolve, reject) {
-                  mergeConfig.intercept(mergeConfig, resolve);
-                });
-              case 12:
-                isNext = _context.sent;
-                // 如果isNext为true，则执行路由跳转
-                isNext && this.openPage(mergeConfig);
-                _context.next = 17;
-                break;
-              case 16:
-                this.openPage(mergeConfig);
-              case 17:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, this);
-      }));
-      function route() {
-        return _route.apply(this, arguments);
-      }
-      return route;
-    }() // 执行路由跳转
-  }, {
-    key: "openPage",
-    value: function openPage(config) {
-      // 解构参数
-      var url = config.url,
-        type = config.type,
-        delta = config.delta,
-        animationType = config.animationType,
-        animationDuration = config.animationDuration,
-        events = config.events;
-      if (config.type == 'navigateTo' || config.type == 'to') {
-        uni.navigateTo({
-          url: url,
-          animationType: animationType,
-          animationDuration: animationDuration,
-          events: events
-        });
-      }
-      if (config.type == 'redirectTo' || config.type == 'redirect') {
-        uni.redirectTo({
-          url: url
-        });
-      }
-      if (config.type == 'switchTab' || config.type == 'tab') {
-        uni.switchTab({
-          url: url
-        });
-      }
-      if (config.type == 'reLaunch' || config.type == 'launch') {
-        uni.reLaunch({
-          url: url
-        });
-      }
-      if (config.type == 'navigateBack' || config.type == 'back') {
-        uni.navigateBack({
-          delta: delta
-        });
-      }
-    }
-  }]);
-  return Router;
-}();
-var _default = new Router().route;
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-
-/***/ 178:
-/*!*****************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/debounce.js ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var timeout = null;
-
-/**
- * 防抖原理：一定时间内，只有最后一次操作，再过wait毫秒后才执行函数
- *
- * @param {Function} func 要执行的回调函数
- * @param {Number} wait 延时的时间
- * @param {Boolean} immediate 是否立即执行
- * @return null
- */
-function debounce(func) {
-  var wait = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;
-  var immediate = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-  // 清除定时器
-  if (timeout !== null) clearTimeout(timeout);
-  // 立即执行，此类情况一般用不到
-  if (immediate) {
-    var callNow = !timeout;
-    timeout = setTimeout(function () {
-      timeout = null;
-    }, wait);
-    if (callNow) typeof func === 'function' && func();
-  } else {
-    // 设置定时器，当最后一次操作后，timeout不会再被清除，所以在延时wait毫秒后执行func回调方法
-    timeout = setTimeout(function () {
-      typeof func === 'function' && func();
-    }, wait);
-  }
-}
-var _default = debounce;
-exports.default = _default;
-
-/***/ }),
-
-/***/ 179:
-/*!*****************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/throttle.js ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var timer;
-var flag;
-/**
- * 节流原理：在一定时间内，只能触发一次
- *
- * @param {Function} func 要执行的回调函数
- * @param {Number} wait 延时的时间
- * @param {Boolean} immediate 是否立即执行
- * @return null
- */
-function throttle(func) {
-  var wait = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;
-  var immediate = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
-  if (immediate) {
-    if (!flag) {
-      flag = true;
-      // 如果是立即执行，则在wait毫秒内开始时执行
-      typeof func === 'function' && func();
-      timer = setTimeout(function () {
-        flag = false;
-      }, wait);
-    }
-  } else if (!flag) {
-    flag = true;
-    // 如果是非立即执行，则在wait毫秒内的结束处执行
-    timer = setTimeout(function () {
-      flag = false;
-      typeof func === 'function' && func();
-    }, wait);
-  }
-}
-var _default = throttle;
-exports.default = _default;
-
-/***/ }),
-
 /***/ 18:
 /*!******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/toConsumableArray.js ***!
@@ -3249,316 +262,6 @@ module.exports = _toConsumableArray, module.exports.__esModule = true, module.ex
 
 /***/ }),
 
-/***/ 180:
-/*!*************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/mixin/mpMixin.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  // 将自定义节点设置成虚拟的（去掉自定义组件包裹层），更加接近Vue组件的表现，能更好的使用flex属性
-  options: {
-    virtualHost: true
-  }
-};
-exports.default = _default;
-
-/***/ }),
-
-/***/ 181:
-/*!*************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/mixin/mpShare.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  onLoad: function onLoad() {
-    // 设置默认的转发参数
-    uni.$uv.mpShare = {
-      title: '',
-      // 默认为小程序名称
-      path: '',
-      // 默认为当前页面路径
-      imageUrl: '' // 默认为当前页面的截图
-    };
-  },
-  onShareAppMessage: function onShareAppMessage() {
-    return uni.$uv.mpShare;
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-
-/***/ 182:
-/*!**********************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/colorGradient.js ***!
-  \**********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.colorGradient = colorGradient;
-exports.colorToRgba = colorToRgba;
-exports.hexToRgb = hexToRgb;
-exports.rgbToHex = rgbToHex;
-/**
- * 求两个颜色之间的渐变值
- * @param {string} startColor 开始的颜色
- * @param {string} endColor 结束的颜色
- * @param {number} step 颜色等分的份额
- * */
-function colorGradient() {
-  var startColor = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'rgb(0, 0, 0)';
-  var endColor = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'rgb(255, 255, 255)';
-  var step = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 10;
-  var startRGB = hexToRgb(startColor, false); // 转换为rgb数组模式
-  var startR = startRGB[0];
-  var startG = startRGB[1];
-  var startB = startRGB[2];
-  var endRGB = hexToRgb(endColor, false);
-  var endR = endRGB[0];
-  var endG = endRGB[1];
-  var endB = endRGB[2];
-  var sR = (endR - startR) / step; // 总差值
-  var sG = (endG - startG) / step;
-  var sB = (endB - startB) / step;
-  var colorArr = [];
-  for (var i = 0; i < step; i++) {
-    // 计算每一步的hex值
-    var hex = rgbToHex("rgb(".concat(Math.round(sR * i + startR), ",").concat(Math.round(sG * i + startG), ",").concat(Math.round(sB * i + startB), ")"));
-    // 确保第一个颜色值为startColor的值
-    if (i === 0) hex = rgbToHex(startColor);
-    // 确保最后一个颜色值为endColor的值
-    if (i === step - 1) hex = rgbToHex(endColor);
-    colorArr.push(hex);
-  }
-  return colorArr;
-}
-
-// 将hex表示方式转换为rgb表示方式(这里返回rgb数组模式)
-function hexToRgb(sColor) {
-  var str = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-  var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
-  sColor = String(sColor).toLowerCase();
-  if (sColor && reg.test(sColor)) {
-    if (sColor.length === 4) {
-      var sColorNew = '#';
-      for (var i = 1; i < 4; i += 1) {
-        sColorNew += sColor.slice(i, i + 1).concat(sColor.slice(i, i + 1));
-      }
-      sColor = sColorNew;
-    }
-    // 处理六位的颜色值
-    var sColorChange = [];
-    for (var _i = 1; _i < 7; _i += 2) {
-      sColorChange.push(parseInt("0x".concat(sColor.slice(_i, _i + 2))));
-    }
-    if (!str) {
-      return sColorChange;
-    }
-    return "rgb(".concat(sColorChange[0], ",").concat(sColorChange[1], ",").concat(sColorChange[2], ")");
-  }
-  if (/^(rgb|RGB)/.test(sColor)) {
-    var arr = sColor.replace(/(?:\(|\)|rgb|RGB)*/g, '').split(',');
-    return arr.map(function (val) {
-      return Number(val);
-    });
-  }
-  return sColor;
-}
-
-// 将rgb表示方式转换为hex表示方式
-function rgbToHex(rgb) {
-  var _this = rgb;
-  var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
-  if (/^(rgb|RGB)/.test(_this)) {
-    var aColor = _this.replace(/(?:\(|\)|rgb|RGB)*/g, '').split(',');
-    var strHex = '#';
-    for (var i = 0; i < aColor.length; i++) {
-      var hex = Number(aColor[i]).toString(16);
-      hex = String(hex).length == 1 ? "".concat(0, hex) : hex; // 保证每个rgb的值为2位
-      if (hex === '0') {
-        hex += hex;
-      }
-      strHex += hex;
-    }
-    if (strHex.length !== 7) {
-      strHex = _this;
-    }
-    return strHex;
-  }
-  if (reg.test(_this)) {
-    var aNum = _this.replace(/#/, '').split('');
-    if (aNum.length === 6) {
-      return _this;
-    }
-    if (aNum.length === 3) {
-      var numHex = '#';
-      for (var _i2 = 0; _i2 < aNum.length; _i2 += 1) {
-        numHex += aNum[_i2] + aNum[_i2];
-      }
-      return numHex;
-    }
-  } else {
-    return _this;
-  }
-}
-
-/**
-* JS颜色十六进制转换为rgb或rgba,返回的格式为 rgba（255，255，255，0.5）字符串
-* sHex为传入的十六进制的色值
-* alpha为rgba的透明度
-*/
-function colorToRgba(color, alpha) {
-  color = rgbToHex(color);
-  // 十六进制颜色值的正则表达式
-  var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
-  /* 16进制颜色转为RGB格式 */
-  var sColor = String(color).toLowerCase();
-  if (sColor && reg.test(sColor)) {
-    if (sColor.length === 4) {
-      var sColorNew = '#';
-      for (var i = 1; i < 4; i += 1) {
-        sColorNew += sColor.slice(i, i + 1).concat(sColor.slice(i, i + 1));
-      }
-      sColor = sColorNew;
-    }
-    // 处理六位的颜色值
-    var sColorChange = [];
-    for (var _i3 = 1; _i3 < 7; _i3 += 2) {
-      sColorChange.push(parseInt("0x".concat(sColor.slice(_i3, _i3 + 2))));
-    }
-    // return sColorChange.join(',')
-    return "rgba(".concat(sColorChange.join(','), ",").concat(alpha, ")");
-  }
-  return sColor;
-}
-
-/***/ }),
-
-/***/ 183:
-/*!*************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/config/config.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-// 此版本发布于2024-01-20
-var version = '1.1.20';
-
-// 开发环境才提示，生产环境不会提示
-if (true) {
-  console.log("\n %c uvui V".concat(version, " https://www.uvui.cn/ \n\n"), 'color: #ffffff; background: #3c9cff; padding:5px 0; border-radius: 5px;');
-}
-var _default = {
-  v: version,
-  version: version,
-  // 主题名称
-  type: ['primary', 'success', 'info', 'error', 'warning'],
-  // 颜色部分，本来可以通过scss的:export导出供js使用，但是奈何nvue不支持
-  color: {
-    'uv-primary': '#2979ff',
-    'uv-warning': '#ff9900',
-    'uv-success': '#19be6b',
-    'uv-error': '#fa3534',
-    'uv-info': '#909399',
-    'uv-main-color': '#303133',
-    'uv-content-color': '#606266',
-    'uv-tips-color': '#909399',
-    'uv-light-color': '#c0c4cc'
-  },
-  // 默认单位，可以通过配置为rpx，那么在用于传入组件大小参数为数值时，就默认为rpx
-  unit: 'px'
-};
-exports.default = _default;
-
-/***/ }),
-
-/***/ 184:
-/*!*****************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/platform.js ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-/**
- * 注意：
- * 此部分内容，在vue-cli模式下，需要在vue.config.js加入如下内容才有效：
- * module.exports = {
- *     transpileDependencies: ['uview-v2']
- * }
- */
-
-var platform = 'none';
-platform = 'vue2';
-platform = 'weixin';
-platform = 'mp';
-var _default = platform;
-exports.default = _default;
-
-/***/ }),
-
-/***/ 185:
-/*!****************************************************!*\
-  !*** F:/CodeFile/pingCar/uni.promisify.adaptor.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(uni) {var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
-uni.addInterceptor({
-  returnValue: function returnValue(res) {
-    if (!(!!res && (_typeof(res) === "object" || typeof res === "function") && typeof res.then === "function")) {
-      return res;
-    }
-    return new Promise(function (resolve, reject) {
-      res.then(function (res) {
-        return res[0] ? reject(res[0]) : resolve(res[1]);
-      });
-    });
-  }
-});
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-
 /***/ 19:
 /*!******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js ***!
@@ -3571,40 +274,6 @@ function _arrayWithoutHoles(arr) {
   if (Array.isArray(arr)) return arrayLikeToArray(arr);
 }
 module.exports = _arrayWithoutHoles, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 197:
-/*!*******************************************!*\
-  !*** F:/CodeFile/pingCar/mixins/mixin.js ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var mixin = {
-  data: function data() {
-    return {
-      avahttp: this.http + 'common/download?path=avatar&name=',
-      QRttp: this.http + 'common/download?path=QRcode&name=',
-      shophttp: this.http + 'common/download?path=shop&name='
-    };
-  },
-  methods: {
-    myminxin: function myminxin() {
-      console.log('muminxin', this.avahttp);
-      console.log('muminxin', this.QRttp);
-    }
-  }
-};
-var _default = mixin;
-exports.default = _default;
 
 /***/ }),
 
@@ -5122,7 +1791,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"pingCar","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"pingCar","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -6044,25 +2713,42 @@ module.exports = _nonIterableSpread, module.exports.__esModule = true, module.ex
 
 /***/ }),
 
-/***/ 212:
-/*!**********************************************!*\
-  !*** F:/CodeFile/pingCar/static/shopCar.png ***!
-  \**********************************************/
+/***/ 214:
+/*!**************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/ws-wx-privacy/components/ws-wx-privacy/util.js ***!
+  \**************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fY51AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAABLKADAAQAAAABAAABLAAAAADYYILnAABAAElEQVR4Aey9CZxcR3Uufte+3T2rtpFGu2zLm7xiWTYOYCsGkzgxEAMOWdmTl+RBEkjwnwR+OP8kJIGQEMhGFkheQhaH5RGWsBhkG2MsS15kW7Zs2drXGY1Go5np5a7v++p2dd++3bNImhlNz1TZmlu3bq3n3vr6nFOnTmmaCooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKzkgKPPLK783uPH7z5nnvuMWZlB1WnpoQC+pTUoipRFDiPFNi+fbt92uy5Xdei7sgwdv3o1au2nsfuqKankQLq12gaiauqnhkKnDaW3kSwYmt6GF66ZfveS2emZdXKTFNAAdZMU1y1N6UU+N6T+zfoerg2WSm4rE3ffvzA8mSais8NCijAmhvvcV6OYsvOvmVaqF2XHryua7qlh7d8Z/tLXeln6r61KaAAq7Xf37zt/bd2HGvTvNLNBKdmRECybermrbt373aaPVdprUkBBVit+d7mda/vjSLTDv1btCjKjkcI3dA7Do46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"
+"use strict";
 
-/***/ }),
 
-/***/ 219:
-/*!**********************************************!*\
-  !*** F:/CodeFile/pingCar/static/chushou.png ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getComponent = getComponent;
+exports.getContext = getContext;
+/**
+ * 获取当前页面上下文
+ * @returns 页面对象
+ */
+function getContext() {
+  // eslint-disable-next-line no-undef
+  var pages = getCurrentPages();
+  console.log('pages', pages);
+  return pages[pages.length - 1];
+}
 
-module.exports = "data:image/png;base64,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"
+/**
+ * 获取上下文中指定节点组件
+ * @param context 选择器的选择范围，可以传入自定义组件的 this 作为上下文
+ * @param selector 自定义节点选择器
+ */
+function getComponent(context, selector) {
+  var component = null;
+  component = context.selectComponent && context.selectComponent(selector) && context.selectComponent(selector).$vm;
+  return component;
+}
 
 /***/ }),
 
@@ -6600,28 +3286,6 @@ function resolveLocaleChain(locale) {
   return chain;
 }
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./../../../webpack/buildin/global.js */ 3)))
-
-/***/ }),
-
-/***/ 220:
-/*!***********************************************!*\
-  !*** F:/CodeFile/pingCar/static/carIcon2.png ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAACHFJREFUeF7tnTty5DYQhgGOgw0dOnCgvYFqqGAdSTqGI0sHcNk32N2TeHQSz2YOxCmFznYSVzlw6MCBSFjNIl3yLAcNgGg8e6oUicTj7w8NoPGgFPyrWgFZde258oIBqBwCBoABqFyByqvPHoABqFyByqvPHoABqFyByqvPHoABqFyByqvPHoABqFyByqvPHoABqFyByqvPHoABqFyByqvPHoAByEeB7XZ7J6W8DlViKeXD8/Pz8enp6Rgqz9D5ZOMB2rb9VQhxE1ogyK/v+7elQpAFAG3b/iKEuIth/CnPY9/3tyVCkDwAl5eXF5vN5nNE449ZK6XuD4fDLnY5fOefPADb7fa9lPKD74o7pLfvuu7W4b2kX0kegLZtVSoKljgWSBoApPUflVIffcMxzTLOjTd2Xdfd+84zZnpJA9C2LfT9F0sCKaU+HA4H7wBcXV3dKKVgxrH4K80LJAsANvjruo6s7DHAi+UFyERcWyHM/Xdd93ZtHufex/IuaUqYJABY66dy/zMQWDdQ0pQwSQCwqR+l+58h0HUDLxHJYqaESQKATP2OlO5/BgCDsJTBYHIAGLhfktH/6XgglXJQjXPmdJMDAIv7h3D/ht1AEYtESQGADf5eFoSCuH/TbqCEwWASAIDhm6b5QQjxtZTyZ53bk1L+Q+0WX6evlHqjye93IcSfAKZS6lPTNMfHx8d9yPKtzSsqAFM/+z7WOv9a8c68DzDsKKKUFOWNAsDc4hNZ5aPQFdI8SinvU/cIwQGY+nnY4BFldw+VtXP1BsEBiLm1K7Dx5+zGVctUN5MEBQCb4kUyUIhsg85ebCoUDACDKZ5NuXN8Nsm9BMEAMGj94+i5aZpPuVl3GIYLZCPJOCgMEcK21S4IAFhYtZTFFWz94GVzS3JeIAgA2MAvZHjXtoXYPo94uuS2l5MDgLV+6rV9WwOufd5grJOUFyAHAGn9SfaLayHAdhSlFCAiBWA6ywdBn8VfCYspSxUz8ALJbCghBQBp/cmIsLbFL72PwS+lvE0hTEwGQC4CUBgf0jQIeSfRAMgAqGVPnQ6gHBoBCQA5VJyq5Z+mm/ogmAQAZFNnUtMgahAMpsFRTx17BwCLhpWym9YGnJS9gHcAuPV/iQY2LYw5HfYKALbgU1LI18YDwLNYiDjWQpE3AFKm3NZYFM9j+sRaKPIGQMr9HIVBXdJEZkdRFoq8AICNdFOJerkYzec7kxeAuwcW7zyI4QW8AFBzyNcWEMwLhF4oWg0At347BAxCxEHjJKsB4NZvBwA8nVKjWQUAh3ztjT+/kUrD+Q+AKYIHhzXODVBOa/uVEOJbjQR/CyH+cpeo7DellG+UUt9oamlzP/H8rPUZxREAbM9e2aYotnZGZxQl5saLlaeeimnjCwxAHSCc9QYAQCp38dZhini1XDytzADEM0iMnL/oDhiAGGaIm+f/9iJqAYi5Th1Xo7xyh+gilLhpmhspJdy4op3Kv16bYQDysjVaWpPbV16fxmIAUEnzfMB0AwoDkKd90VJjG1Dm3VkMACplvg/oIrzzOIAByNe+aMl1MZ55HMAAoDLm+4AuzM8A5GtX45Ij+w7GeAB7AGM583sQGQiOdzMwAPnZ1arEmoM6YQGYo1Ulfn7VyiLIw7510p3ShqkgmQeYBiBwA/jSlbBwozasThX/dW4Mjkmnc+HbvVJqD1fnuX7FXDcVhHOaXgGY+hyojM2HnqGSD6lepYoZ0OX/jrek76WUH21vFcFiAd4A8LCvYN/3/X3pXURonXQhYQgGeQHA457CKMejXFqxyzsxdCIHADsR7CJUiXcIeDT+LKlRY0GigferPIAHd3aOD6PKucAV452YOpEBgK02LQi9mzYqwGYF9OxBKTeIWuo0zo586kQGgInrByMOw/BwOrCbRsFwgaQWhBK6AhPXf+70tA+dsAUhpy7AgGqj7+UYuMagByV9dw8GOhndFYg1Np23xBaEMADGFnwqTNM0P+k+72bTcjEI4EvdQog/fBsnRHqbzeZHIQT8Lf2s7klGPMlvfd9/v5TJtE9w8bpeAMf7rmCXvhu5VDKErYLnYXtphsHlEtZ1IAHA5SIozMVZ1yz9F6xa/1wd3zpRAOBUsQrPJzqNbXzr5B0AF/cPdBsMltJv0xYldNUJu1jCogjjo3DuQ3pO1InsCgFwuh7Ws63Gr5+P9wNgI3ELsoymNafpeczfoqhRH3VqKJ51Gsvw+oaQu+nTZ2iUTkr57txXtW2mgLMJkIp9nqJjUS1mmznoI6X87tx7Ljohg8D5S+ZYUeGo+HH+uLXTHUG6Oalt/4a5fxehMAVC/V83vbXVCXP/LrMv0MEJAGw0anOoFIkBOM0qQhkYywdz2TZwU+nkBIBJUAIgGIZhf26Dh8muGNtWghkk9P9NddLthqLWyQkAi4HjuI0J9rPBOwDD5D2uDbaNZd36LYM3u9P9kaF0cgYAKkgZws299c8AmHiBNZ7JNqR8mtcqAAgr5zRNWiMk5bvTWAA2yqIzLJty+GgkqwB41RX4rJxTLMFGuBjPYgNChzJ50Wk1AFBw040LBpX0UimDfKI84ssT+Gj5swBeAIDEDG7B1orus1JRrGuY6drGsrbP9zoGWKqzybTl5L2i+ntDDiD8DpFX9EKnOT2qBuLNA5xWHEAYhuFaSnm6CXScEsK0x/aUi6m4OT23oBPoBRqNIdulPZU+60cGgM9Cclp0CjAAdNpmkTIDkIWZ6ArJANBpm0XKDEAWZqIrJANAp20WKTMAWZiJrpAMAJ22WaTMAGRhJrpCMgB02maRMgOQhZnoCskA0GmbRcoMQBZmoiskA0CnbRYpMwBZmImukAwAnbZZpMwAZGEmukIyAHTaZpEyA5CFmegKyQDQaZtFyv8CirOzFrTXXowAAAAASUVORK5CYII="
-
-/***/ }),
-
-/***/ 221:
-/*!*************************************************!*\
-  !*** F:/CodeFile/pingCar/static/notice (3).png ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,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"
 
 /***/ }),
 
@@ -12209,7 +8873,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"pingCar","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"pingCar","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -12230,14 +8894,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"pingCar","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"pingCar","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"pingCar","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"pingCar","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -12333,7 +8997,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"pingCar","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"pingCar","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -12752,220 +9416,7 @@ internalMixin(Vue);
 
 /***/ }),
 
-/***/ 26:
-/*!**************************************!*\
-  !*** F:/CodeFile/pingCar/pages.json ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
-/***/ 3:
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-
-/***/ 32:
-/*!**********************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
-  \**********************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
-/* globals __VUE_SSR_CONTEXT__ */
-
-// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
-
-function normalizeComponent (
-  scriptExports,
-  render,
-  staticRenderFns,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier, /* server only */
-  shadowMode, /* vue-cli only */
-  components, // fixed by xxxxxx auto components
-  renderjs // fixed by xxxxxx renderjs
-) {
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // fixed by xxxxxx auto components
-  if (components) {
-    if (!options.components) {
-      options.components = {}
-    }
-    var hasOwn = Object.prototype.hasOwnProperty
-    for (var name in components) {
-      if (hasOwn.call(components, name) && !hasOwn.call(options.components, name)) {
-        options.components[name] = components[name]
-      }
-    }
-  }
-  // fixed by xxxxxx renderjs
-  if (renderjs) {
-    if(typeof renderjs.beforeCreate === 'function'){
-			renderjs.beforeCreate = [renderjs.beforeCreate]
-		}
-    (renderjs.beforeCreate || (renderjs.beforeCreate = [])).unshift(function() {
-      this[renderjs.__module] = this
-    });
-    (options.mixins || (options.mixins = [])).push(renderjs)
-  }
-
-  // render functions
-  if (render) {
-    options.render = render
-    options.staticRenderFns = staticRenderFns
-    options._compiled = true
-  }
-
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = 'data-v-' + scopeId
-  }
-
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = shadowMode
-      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
-      : injectStyles
-  }
-
-  if (hook) {
-    if (options.functional) {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functioal component in vue file
-      var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return originalRender(h, context)
-      }
-    } else {
-      // inject component registration as beforeCreate hook
-      var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    }
-  }
-
-  return {
-    exports: scriptExports,
-    options: options
-  }
-}
-
-
-/***/ }),
-
-/***/ 331:
-/*!**************************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/ws-wx-privacy/components/ws-wx-privacy/util.js ***!
-  \**************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.getComponent = getComponent;
-exports.getContext = getContext;
-/**
- * 获取当前页面上下文
- * @returns 页面对象
- */
-function getContext() {
-  // eslint-disable-next-line no-undef
-  var pages = getCurrentPages();
-  console.log('pages', pages);
-  return pages[pages.length - 1];
-}
-
-/**
- * 获取上下文中指定节点组件
- * @param context 选择器的选择范围，可以传入自定义组件的 this 作为上下文
- * @param selector 自定义节点选择器
- */
-function getComponent(context, selector) {
-  var component = null;
-  component = context.selectComponent && context.selectComponent(selector) && context.selectComponent(selector).$vm;
-  return component;
-}
-
-/***/ }),
-
-/***/ 367:
+/***/ 250:
 /*!*****************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-badge/components/uv-badge/props.js ***!
   \*****************************************************************************/
@@ -13063,7 +9514,7 @@ exports.default = _default2;
 
 /***/ }),
 
-/***/ 368:
+/***/ 251:
 /*!***************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-tabs/components/uv-tabs/props.js ***!
   \***************************************************************************/
@@ -13165,7 +9616,7 @@ exports.default = _default2;
 
 /***/ }),
 
-/***/ 376:
+/***/ 259:
 /*!************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-calendars/components/uv-calendars/util.js ***!
   \************************************************************************************/
@@ -13183,7 +9634,7 @@ exports.default = void 0;
 var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
 var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23));
 var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ 24));
-var _calendar = _interopRequireDefault(__webpack_require__(/*! ./calendar.js */ 377));
+var _calendar = _interopRequireDefault(__webpack_require__(/*! ./calendar.js */ 260));
 var Calendar = /*#__PURE__*/function () {
   function Calendar() {
     var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
@@ -13676,7 +10127,18 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 377:
+/***/ 26:
+/*!**************************************!*\
+  !*** F:/CodeFile/pingCar/pages.json ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ 260:
 /*!****************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-calendars/components/uv-calendars/calendar.js ***!
   \****************************************************************************************/
@@ -14194,7 +10656,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 378:
+/***/ 261:
 /*!******************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-calendars/components/uv-calendars/i18n/index.js ***!
   \******************************************************************************************/
@@ -14209,9 +10671,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 379));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 380));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 381));
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 262));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 263));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 264));
 var _default = {
   en: _en.default,
   'zh-Hans': _zhHans.default,
@@ -14221,7 +10683,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 379:
+/***/ 262:
 /*!*****************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-calendars/components/uv-calendars/i18n/en.json ***!
   \*****************************************************************************************/
@@ -14232,38 +10694,7 @@ module.exports = JSON.parse("{\"uv-calender.ok\":\"ok\",\"uv-calender.cancel\":\
 
 /***/ }),
 
-/***/ 38:
-/*!*******************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/zui-svg-icon/utils/utils.js ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.rpx2px = void 0;
-var _screenWidth = uni.getSystemInfoSync().screenWidth;
-/**
- * rpx 单位转换为 px
- *
- * @param {number | string} rpx 待转换的数值
- * @returns number
- */
-var rpx2px = function rpx2px(rpx) {
-  var unit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-  var px = _screenWidth * Number.parseFloat(rpx) / 750;
-  return unit ? "".concat(px, "px") : px;
-};
-exports.rpx2px = rpx2px;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-
-/***/ 380:
+/***/ 263:
 /*!**********************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-calendars/components/uv-calendars/i18n/zh-Hans.json ***!
   \**********************************************************************************************/
@@ -14274,7 +10705,7 @@ module.exports = JSON.parse("{\"uv-calender.ok\":\"确定\",\"uv-calender.cancel
 
 /***/ }),
 
-/***/ 381:
+/***/ 264:
 /*!**********************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-calendars/components/uv-calendars/i18n/zh-Hant.json ***!
   \**********************************************************************************************/
@@ -14285,7 +10716,7 @@ module.exports = JSON.parse("{\"uv-calender.ok\":\"確定\",\"uv-calender.cancel
 
 /***/ }),
 
-/***/ 389:
+/***/ 272:
 /*!*************************************************!*\
   !*** F:/CodeFile/pingCar/static/orderEmpty.png ***!
   \*************************************************/
@@ -14296,23 +10727,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5
 
 /***/ }),
 
-/***/ 4:
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    "default": obj
-  };
-}
-module.exports = _interopRequireDefault, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 402:
+/***/ 285:
 /*!*************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-load-more/components/uv-load-more/props.js ***!
   \*************************************************************************************/
@@ -14430,69 +10845,38 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 42:
-/*!***************************************************!*\
-  !*** F:/CodeFile/pingCar/static/svg-icons-lib.js ***!
-  \***************************************************/
+/***/ 3:
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
+var g;
 
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = exports.SvgIconLib = void 0;
-/**
- *
- * Icon Library for <zui-svg-icon> usage
- *
- * Auto generated by /tools/generate-svg-icon.js
- *
- * !!! DO NOT MODIFY MANUALLY !!!
- *
- * @datetime 2024/4/10 01:05:41
- *
- */
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
 
-// == collection start
-var collections = {
-  default: {
-    "icons": {
-      "lishi": ["<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"128\" height=\"128\" class=\"icon\" viewBox=\"0 0 1024 1024\"><path fill=\"#56E5BE\" d=\"M205.056 541.338a340.582 340.582 0 1 0 681.165 0 340.582 340.582 0 1 0-681.165 0\"/><path fill=\"#50DDB8\" d=\"M273.511 575.54a306.38 306.38 0 1 0 612.761 0 306.38 306.38 0 1 0-612.762 0\"/><path fill=\"#42D3AD\" d=\"M348.467 600.525a266.394 266.394 0 1 0 532.787 0 266.394 266.394 0 1 0-532.787 0\"/><path fill=\"#2E3138\" d=\"M512.717 91.085c-16.947 0-30.72 13.773-30.72 30.72s13.773 30.72 30.72 30.72c196.915 0 357.12 160.205 357.12 357.12s-160.205 357.12-357.12 357.12-357.12-160.205-357.12-357.12c0-107.008 46.848-206.029 127.334-273.408v67.533c0 16.947 13.773 30.72 30.72 30.72s30.72-13.773 30.72-30.72V157.184c0-16.947-13.773-30.72-30.72-30.72H173.363c-16.947 0-30.72 13.773-30.72 30.72s13.773 30.72 30.72 30.72h71.578c-95.283 79.002-150.784 195.635-150.784 321.74 0 230.81 187.75 418.56 418.56 418.56s418.56-187.75 418.56-418.56-187.802-418.56-418.56-418.56\"/><path fill=\"#2E3138\" d=\"M640.256 594.176H466.33c-16.948 0-30.72-13.773-30.72-30.72v-158.31c0-16.948 13.772-30.72 30.72-30.72s30.72 13.772 30.72 30.72v127.59h143.206c16.947 0 30.72 13.773 30.72 30.72s-13.773 30.72-30.72 30.72\"/></svg>", 0, 1, 2, 3],
-      "yiwen": ["<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"128\" height=\"128\" class=\"icon\" viewBox=\"0 0 1024 1024\"><path fill=\"#56E5BE\" d=\"M223.846 560.077a354.97 354.97 0 1 0 709.94 0 354.97 354.97 0 1 0-709.94 0\"/><path fill=\"#50DDB8\" d=\"M295.168 595.712a319.283 319.283 0 1 0 638.566 0 319.283 319.283 0 1 0-638.566 0\"/><path fill=\"#42D3AD\" d=\"M373.35 621.722a277.606 277.606 0 1 0 555.213 0 277.606 277.606 0 1 0-555.213 0\" data-spm-anchor-id=\"a313x.collections_detail.0.i0.41403a818Jm3Fu\"/><path fill=\"#2E3138\" d=\"M514.15 920.013c-227.379 0-412.364-184.986-412.364-412.365S286.77 95.283 514.15 95.283 926.515 280.27 926.515 507.648 741.53 920.013 514.15 920.013m0-763.239c-193.484 0-350.924 157.44-350.924 350.925s157.44 350.925 350.924 350.925 350.925-157.44 350.925-350.925-157.44-350.925-350.925-350.925\"/><path fill=\"#2E3138\" d=\"M515.174 578.867c-16.947 0-30.72-13.773-30.72-30.72V312.474c0-16.948 13.773-30.72 30.72-30.72s30.72 13.772 30.72 30.72v235.673c0 16.999-13.772 30.72-30.72 30.72m-38.451 87.501a37.325 37.325 0 1 0 74.65 0 37.325 37.325 0 1 0-74.65 0\"/></svg>", 0, 1, 2, 3]
-    },
-    "currentColor": "",
-    "$_colorPalette": ["#56E5BE", "#50DDB8", "#42D3AD", "#2E3138"]
-  }
-};
-// == collection end
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
 
-var svglib = {};
-svglib.registerCollection = function (key, lib) {
-  if (collections[key]) {
-    return;
-  }
-  if (typeof lib.registerCollection === 'function') {
-    collections[key] = lib.getCollection('default');
-  } else {
-    collections[key] = lib;
-  }
-};
-svglib.getCollection = function () {
-  var key = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'default';
-  if (!collections[key]) throw new Error("\u6CA1\u6709\u627E\u5230\u540D\u4E3A ".concat(key, " \u7684\u56FE\u6807\u5E93\u3002"));
-  return collections[key];
-};
-var SvgIconLib = svglib;
-exports.SvgIconLib = SvgIconLib;
-var _default = SvgIconLib;
-exports.default = _default;
+module.exports = g;
+
 
 /***/ }),
 
-/***/ 431:
+/***/ 314:
 /*!*****************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-modal/components/uv-modal/props.js ***!
   \*****************************************************************************/
@@ -14605,7 +10989,139 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 446:
+/***/ 32:
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode, /* vue-cli only */
+  components, // fixed by xxxxxx auto components
+  renderjs // fixed by xxxxxx renderjs
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // fixed by xxxxxx auto components
+  if (components) {
+    if (!options.components) {
+      options.components = {}
+    }
+    var hasOwn = Object.prototype.hasOwnProperty
+    for (var name in components) {
+      if (hasOwn.call(components, name) && !hasOwn.call(options.components, name)) {
+        options.components[name] = components[name]
+      }
+    }
+  }
+  // fixed by xxxxxx renderjs
+  if (renderjs) {
+    if(typeof renderjs.beforeCreate === 'function'){
+			renderjs.beforeCreate = [renderjs.beforeCreate]
+		}
+    (renderjs.beforeCreate || (renderjs.beforeCreate = [])).unshift(function() {
+      this[renderjs.__module] = this
+    });
+    (options.mixins || (options.mixins = [])).push(renderjs)
+  }
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+
+/***/ 329:
 /*!**********************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uni-search-bar/components/uni-search-bar/i18n/index.js ***!
   \**********************************************************************************************/
@@ -14620,9 +11136,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 447));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 448));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 449));
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 330));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 331));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 332));
 var _default = {
   en: _en.default,
   'zh-Hans': _zhHans.default,
@@ -14632,7 +11148,93 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 447:
+/***/ 33:
+/*!************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/index.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _luchRequest = _interopRequireDefault(__webpack_require__(/*! ./libs/luch-request */ 34));
+var _mixin = _interopRequireDefault(__webpack_require__(/*! ./libs/mixin/mixin.js */ 52));
+var _mpMixin = _interopRequireDefault(__webpack_require__(/*! ./libs/mixin/mpMixin.js */ 63));
+var _mpShare = _interopRequireDefault(__webpack_require__(/*! ./libs/mixin/mpShare.js */ 64));
+var _route = _interopRequireDefault(__webpack_require__(/*! ./libs/util/route.js */ 57));
+var index = _interopRequireWildcard(__webpack_require__(/*! ./libs/function/index.js */ 53));
+var _debounce = _interopRequireDefault(__webpack_require__(/*! ./libs/function/debounce.js */ 61));
+var _throttle = _interopRequireDefault(__webpack_require__(/*! ./libs/function/throttle.js */ 62));
+var test = _interopRequireWildcard(__webpack_require__(/*! ./libs/function/test.js */ 54));
+var colorGradient = _interopRequireWildcard(__webpack_require__(/*! ./libs/function/colorGradient.js */ 65));
+var _config = _interopRequireDefault(__webpack_require__(/*! ./libs/config/config.js */ 66));
+var _platform = _interopRequireDefault(__webpack_require__(/*! ./libs/function/platform */ 67));
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var $uv = _objectSpread(_objectSpread({
+  route: _route.default,
+  config: _config.default,
+  test: test,
+  date: index.timeFormat
+}, index), {}, {
+  colorGradient: colorGradient.colorGradient,
+  hexToRgb: colorGradient.hexToRgb,
+  rgbToHex: colorGradient.rgbToHex,
+  colorToRgba: colorGradient.colorToRgba,
+  http: new _luchRequest.default(),
+  debounce: _debounce.default,
+  throttle: _throttle.default,
+  platform: _platform.default,
+  mixin: _mixin.default,
+  mpMixin: _mpMixin.default
+});
+uni.$uv = $uv;
+var install = function install(Vue) {
+  var _cloneMixin$props, _cloneMixin$props2;
+  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  var cloneMixin = index.deepClone(_mixin.default);
+  cloneMixin === null || cloneMixin === void 0 ? true : (_cloneMixin$props = cloneMixin.props) === null || _cloneMixin$props === void 0 ? true : delete _cloneMixin$props.customClass;
+  cloneMixin === null || cloneMixin === void 0 ? true : (_cloneMixin$props2 = cloneMixin.props) === null || _cloneMixin$props2 === void 0 ? true : delete _cloneMixin$props2.customStyle;
+  Vue.mixin(cloneMixin);
+  if (options.mpShare) {
+    Vue.mixin(_mpShare.default);
+  }
+
+  // 时间格式化，同时两个名称，date和timeFormat
+  Vue.filter('timeFormat', function (timestamp, format) {
+    return uni.$uv.timeFormat(timestamp, format);
+  });
+  Vue.filter('date', function (timestamp, format) {
+    return uni.$uv.timeFormat(timestamp, format);
+  });
+  // 将多久以前的方法，注入到全局过滤器
+  Vue.filter('timeFrom', function (timestamp, format) {
+    return uni.$uv.timeFrom(timestamp, format);
+  });
+  // 同时挂载到uni和Vue.prototype中
+
+  // 只有vue，挂载到Vue.prototype才有意义，因为nvue中全局Vue.prototype和Vue.mixin是无效的
+  Vue.prototype.$uv = $uv;
+};
+var _default = {
+  install: install
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+
+/***/ 330:
 /*!*********************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uni-search-bar/components/uni-search-bar/i18n/en.json ***!
   \*********************************************************************************************/
@@ -14643,7 +11245,7 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-
 
 /***/ }),
 
-/***/ 448:
+/***/ 331:
 /*!**************************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hans.json ***!
   \**************************************************************************************************/
@@ -14654,7 +11256,7 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"取消\",\"uni-search-
 
 /***/ }),
 
-/***/ 449:
+/***/ 332:
 /*!**************************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hant.json ***!
   \**************************************************************************************************/
@@ -14665,7 +11267,28 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"取消\",\"uni-search-
 
 /***/ }),
 
-/***/ 457:
+/***/ 34:
+/*!******************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/index.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _Request = _interopRequireDefault(__webpack_require__(/*! ./core/Request */ 35));
+var _default = _Request.default;
+exports.default = _default;
+
+/***/ }),
+
+/***/ 340:
 /*!***************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-tags/components/uv-tags/props.js ***!
   \***************************************************************************/
@@ -14783,7 +11406,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 465:
+/***/ 348:
 /*!*************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-waterfall/components/uv-waterfall/props.js ***!
   \*************************************************************************************/
@@ -14870,7 +11493,219 @@ exports.default = _default2;
 
 /***/ }),
 
-/***/ 473:
+/***/ 35:
+/*!*************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/core/Request.js ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23));
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ 24));
+var _dispatchRequest = _interopRequireDefault(__webpack_require__(/*! ./dispatchRequest */ 36));
+var _InterceptorManager = _interopRequireDefault(__webpack_require__(/*! ./InterceptorManager */ 44));
+var _mergeConfig = _interopRequireDefault(__webpack_require__(/*! ./mergeConfig */ 45));
+var _defaults = _interopRequireDefault(__webpack_require__(/*! ./defaults */ 46));
+var _utils = __webpack_require__(/*! ../utils */ 39);
+var _clone = _interopRequireDefault(__webpack_require__(/*! ../utils/clone */ 47));
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var Request = /*#__PURE__*/function () {
+  /**
+   * @param {Object} arg - 全局配置
+   * @param {String} arg.baseURL - 全局根路径
+   * @param {Object} arg.header - 全局header
+   * @param {String} arg.method = [GET|POST|PUT|DELETE|CONNECT|HEAD|OPTIONS|TRACE] - 全局默认请求方式
+   * @param {String} arg.dataType = [json] - 全局默认的dataType
+   * @param {String} arg.responseType = [text|arraybuffer] - 全局默认的responseType。支付宝小程序不支持
+   * @param {Object} arg.custom - 全局默认的自定义参数
+   * @param {Number} arg.timeout - 全局默认的超时时间，单位 ms。默认60000。H5(HBuilderX 2.9.9+)、APP(HBuilderX 2.9.9+)、微信小程序（2.10.0）、支付宝小程序
+   * @param {Boolean} arg.sslVerify - 全局默认的是否验证 ssl 证书。默认true.仅App安卓端支持（HBuilderX 2.3.3+）
+   * @param {Boolean} arg.withCredentials - 全局默认的跨域请求时是否携带凭证（cookies）。默认false。仅H5支持（HBuilderX 2.6.15+）
+   * @param {Boolean} arg.firstIpv4 - 全DNS解析时优先使用ipv4。默认false。仅 App-Android 支持 (HBuilderX 2.8.0+)
+   * @param {Function(statusCode):Boolean} arg.validateStatus - 全局默认的自定义验证器。默认statusCode >= 200 && statusCode < 300
+   */
+  function Request() {
+    var arg = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    (0, _classCallCheck2.default)(this, Request);
+    if (!(0, _utils.isPlainObject)(arg)) {
+      arg = {};
+      console.warn('设置全局参数必须接收一个Object');
+    }
+    this.config = (0, _clone.default)(_objectSpread(_objectSpread({}, _defaults.default), arg));
+    this.interceptors = {
+      request: new _InterceptorManager.default(),
+      response: new _InterceptorManager.default()
+    };
+  }
+
+  /**
+   * @Function
+   * @param {Request~setConfigCallback} f - 设置全局默认配置
+   */
+  (0, _createClass2.default)(Request, [{
+    key: "setConfig",
+    value: function setConfig(f) {
+      this.config = f(this.config);
+    }
+  }, {
+    key: "middleware",
+    value: function middleware(config) {
+      config = (0, _mergeConfig.default)(this.config, config);
+      var chain = [_dispatchRequest.default, undefined];
+      var promise = Promise.resolve(config);
+      this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
+        chain.unshift(interceptor.fulfilled, interceptor.rejected);
+      });
+      this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
+        chain.push(interceptor.fulfilled, interceptor.rejected);
+      });
+      while (chain.length) {
+        promise = promise.then(chain.shift(), chain.shift());
+      }
+      return promise;
+    }
+
+    /**
+     * @Function
+     * @param {Object} config - 请求配置项
+     * @prop {String} options.url - 请求路径
+     * @prop {Object} options.data - 请求参数
+     * @prop {Object} [options.responseType = config.responseType] [text|arraybuffer] - 响应的数据类型
+     * @prop {Object} [options.dataType = config.dataType] - 如果设为 json，会尝试对返回的数据做一次 JSON.parse
+     * @prop {Object} [options.header = config.header] - 请求header
+     * @prop {Object} [options.method = config.method] - 请求方法
+     * @returns {Promise<unknown>}
+     */
+  }, {
+    key: "request",
+    value: function request() {
+      var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      return this.middleware(config);
+    }
+  }, {
+    key: "get",
+    value: function get(url) {
+      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      return this.middleware(_objectSpread({
+        url: url,
+        method: 'GET'
+      }, options));
+    }
+  }, {
+    key: "post",
+    value: function post(url, data) {
+      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+      return this.middleware(_objectSpread({
+        url: url,
+        data: data,
+        method: 'POST'
+      }, options));
+    }
+  }, {
+    key: "put",
+    value: function put(url, data) {
+      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+      return this.middleware(_objectSpread({
+        url: url,
+        data: data,
+        method: 'PUT'
+      }, options));
+    }
+  }, {
+    key: "delete",
+    value: function _delete(url, data) {
+      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+      return this.middleware(_objectSpread({
+        url: url,
+        data: data,
+        method: 'DELETE'
+      }, options));
+    }
+  }, {
+    key: "connect",
+    value: function connect(url, data) {
+      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+      return this.middleware(_objectSpread({
+        url: url,
+        data: data,
+        method: 'CONNECT'
+      }, options));
+    }
+  }, {
+    key: "head",
+    value: function head(url, data) {
+      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+      return this.middleware(_objectSpread({
+        url: url,
+        data: data,
+        method: 'HEAD'
+      }, options));
+    }
+  }, {
+    key: "options",
+    value: function options(url, data) {
+      var _options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+      return this.middleware(_objectSpread({
+        url: url,
+        data: data,
+        method: 'OPTIONS'
+      }, _options));
+    }
+  }, {
+    key: "trace",
+    value: function trace(url, data) {
+      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+      return this.middleware(_objectSpread({
+        url: url,
+        data: data,
+        method: 'TRACE'
+      }, options));
+    }
+  }, {
+    key: "upload",
+    value: function upload(url) {
+      var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      config.url = url;
+      config.method = 'UPLOAD';
+      return this.middleware(config);
+    }
+  }, {
+    key: "download",
+    value: function download(url) {
+      var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      config.url = url;
+      config.method = 'DOWNLOAD';
+      return this.middleware(config);
+    }
+  }, {
+    key: "version",
+    get: function get() {
+      return '3.1.0';
+    }
+  }]);
+  return Request;
+}();
+/**
+ * setConfig回调
+ * @return {Object} - 返回操作后的config
+ * @callback Request~setConfigCallback
+ * @param {Object} config - 全局默认config
+ */
+exports.default = Request;
+
+/***/ }),
+
+/***/ 356:
 /*!***************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-line/components/uv-line/props.js ***!
   \***************************************************************************/
@@ -14927,7 +11762,30 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 481:
+/***/ 36:
+/*!*********************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/core/dispatchRequest.js ***!
+  \*********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _index = _interopRequireDefault(__webpack_require__(/*! ../adapters/index */ 37));
+var _default = function _default(config) {
+  return (0, _index.default)(config);
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 364:
 /*!*************************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-datetime-picker/components/uv-datetime-picker/props.js ***!
   \*************************************************************************************************/
@@ -15080,7 +11938,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 482:
+/***/ 365:
 /*!**********************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/util/dayjs.js ***!
   \**********************************************************************/
@@ -15429,7 +12287,101 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 488:
+/***/ 37:
+/*!***************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/adapters/index.js ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
+var _buildURL = _interopRequireDefault(__webpack_require__(/*! ../helpers/buildURL */ 38));
+var _buildFullPath = _interopRequireDefault(__webpack_require__(/*! ../core/buildFullPath */ 40));
+var _settle = _interopRequireDefault(__webpack_require__(/*! ../core/settle */ 43));
+var _utils = __webpack_require__(/*! ../utils */ 39);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+/**
+ * 返回可选值存在的配置
+ * @param {Array} keys - 可选值数组
+ * @param {Object} config2 - 配置
+ * @return {{}} - 存在的配置项
+ */
+var mergeKeys = function mergeKeys(keys, config2) {
+  var config = {};
+  keys.forEach(function (prop) {
+    if (!(0, _utils.isUndefined)(config2[prop])) {
+      config[prop] = config2[prop];
+    }
+  });
+  return config;
+};
+var _default = function _default(config) {
+  return new Promise(function (resolve, reject) {
+    var fullPath = (0, _buildURL.default)((0, _buildFullPath.default)(config.baseURL, config.url), config.params, config.paramsSerializer);
+    var _config = {
+      url: fullPath,
+      header: config.header,
+      complete: function complete(response) {
+        config.fullPath = fullPath;
+        response.config = config;
+        response.rawData = response.data;
+        try {
+          var jsonParseHandle = false;
+          var forcedJSONParsingType = (0, _typeof2.default)(config.forcedJSONParsing);
+          if (forcedJSONParsingType === 'boolean') {
+            jsonParseHandle = config.forcedJSONParsing;
+          } else if (forcedJSONParsingType === 'object') {
+            var includesMethod = config.forcedJSONParsing.include || [];
+            jsonParseHandle = includesMethod.includes(config.method);
+          }
+
+          // 对可能字符串不是json 的情况容错
+          if (jsonParseHandle && typeof response.data === 'string') {
+            response.data = JSON.parse(response.data);
+          }
+          // eslint-disable-next-line no-empty
+        } catch (e) {}
+        (0, _settle.default)(resolve, reject, response);
+      }
+    };
+    var requestTask;
+    if (config.method === 'UPLOAD') {
+      delete _config.header['content-type'];
+      delete _config.header['Content-Type'];
+      var otherConfig = {
+        filePath: config.filePath,
+        name: config.name
+      };
+      var optionalKeys = ['timeout', 'formData'];
+      requestTask = uni.uploadFile(_objectSpread(_objectSpread(_objectSpread({}, _config), otherConfig), mergeKeys(optionalKeys, config)));
+    } else if (config.method === 'DOWNLOAD') {
+      var _optionalKeys = ['timeout', 'filePath'];
+      requestTask = uni.downloadFile(_objectSpread(_objectSpread({}, _config), mergeKeys(_optionalKeys, config)));
+    } else {
+      var _optionalKeys2 = ['data', 'method', 'timeout', 'dataType', 'responseType', 'enableHttp2', 'enableQuic', 'enableCache', 'enableHttpDNS', 'httpDNSServiceId', 'enableChunked', 'forceCellularNetwork'];
+      requestTask = uni.request(_objectSpread(_objectSpread({}, _config), mergeKeys(_optionalKeys2, config)));
+    }
+    if (config.getTask) {
+      config.getTask(requestTask, config);
+    }
+  });
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+
+/***/ 371:
 /*!*******************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-picker/components/uv-picker/props.js ***!
   \*******************************************************************************/
@@ -15551,7 +12503,7 @@ exports.default = _default2;
 
 /***/ }),
 
-/***/ 496:
+/***/ 379:
 /*!*****************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-checkbox/components/uv-checkbox-group/props.js ***!
   \*****************************************************************************************/
@@ -15662,25 +12614,1539 @@ exports.default = _default2;
 
 /***/ }),
 
-/***/ 5:
-/*!**************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/slicedToArray.js ***!
-  \**************************************************************/
+/***/ 38:
+/*!*****************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/helpers/buildURL.js ***!
+  \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayWithHoles = __webpack_require__(/*! ./arrayWithHoles.js */ 6);
-var iterableToArrayLimit = __webpack_require__(/*! ./iterableToArrayLimit.js */ 7);
-var unsupportedIterableToArray = __webpack_require__(/*! ./unsupportedIterableToArray.js */ 8);
-var nonIterableRest = __webpack_require__(/*! ./nonIterableRest.js */ 10);
-function _slicedToArray(arr, i) {
-  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || unsupportedIterableToArray(arr, i) || nonIterableRest();
+"use strict";
+
+
+var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = buildURL;
+var utils = _interopRequireWildcard(__webpack_require__(/*! ./../utils */ 39));
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function encode(val) {
+  return encodeURIComponent(val).replace(/%40/gi, '@').replace(/%3A/gi, ':').replace(/%24/g, '$').replace(/%2C/gi, ',').replace(/%20/g, '+').replace(/%5B/gi, '[').replace(/%5D/gi, ']');
 }
-module.exports = _slicedToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/**
+ * Build a URL by appending params to the end
+ *
+ * @param {string} url The base of the url (e.g., http://www.google.com)
+ * @param {object} [params] The params to be appended
+ * @returns {string} The formatted url
+ */
+function buildURL(url, params, paramsSerializer) {
+  /*eslint no-param-reassign:0*/
+  if (!params) {
+    return url;
+  }
+  var serializedParams;
+  if (paramsSerializer) {
+    serializedParams = paramsSerializer(params);
+  } else if (utils.isURLSearchParams(params)) {
+    serializedParams = params.toString();
+  } else {
+    var parts = [];
+    utils.forEach(params, function serialize(val, key) {
+      if (val === null || typeof val === 'undefined') {
+        return;
+      }
+      if (utils.isArray(val)) {
+        key = key + '[]';
+      } else {
+        val = [val];
+      }
+      utils.forEach(val, function parseValue(v) {
+        if (utils.isDate(v)) {
+          v = v.toISOString();
+        } else if (utils.isObject(v)) {
+          v = JSON.stringify(v);
+        }
+        parts.push(encode(key) + '=' + encode(v));
+      });
+    });
+    serializedParams = parts.join('&');
+  }
+  if (serializedParams) {
+    var hashmarkIndex = url.indexOf('#');
+    if (hashmarkIndex !== -1) {
+      url = url.slice(0, hashmarkIndex);
+    }
+    url += (url.indexOf('?') === -1 ? '?' : '&') + serializedParams;
+  }
+  return url;
+}
 
 /***/ }),
 
-/***/ 50:
+/***/ 387:
+/*!***********************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-checkbox/components/uv-checkbox/props.js ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _uni$$uv, _uni$$uv$props;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default = {
+  props: _objectSpread({
+    // checkbox的名称
+    name: {
+      type: [String, Number, Boolean],
+      default: ''
+    },
+    // 形状，square为方形，circle为圆型
+    shape: {
+      type: String,
+      default: ''
+    },
+    // 整体的大小
+    size: {
+      type: [String, Number],
+      default: ''
+    },
+    // 是否默认选中
+    checked: {
+      type: Boolean,
+      default: false
+    },
+    // 是否禁用
+    disabled: {
+      type: [String, Boolean],
+      default: ''
+    },
+    // 选中状态下的颜色，如设置此值，将会覆盖parent的activeColor值
+    activeColor: {
+      type: String,
+      default: ''
+    },
+    // 未选中的颜色
+    inactiveColor: {
+      type: String,
+      default: ''
+    },
+    // 图标的大小，单位px
+    iconSize: {
+      type: [String, Number],
+      default: ''
+    },
+    // 图标颜色
+    iconColor: {
+      type: String,
+      default: ''
+    },
+    // label提示文字，因为nvue下，直接slot进来的文字，由于特殊的结构，无法修改样式
+    label: {
+      type: [String, Number, Boolean],
+      default: ''
+    },
+    // label的字体大小，px单位
+    labelSize: {
+      type: [String, Number],
+      default: ''
+    },
+    // label的颜色
+    labelColor: {
+      type: String,
+      default: ''
+    },
+    // 是否禁止点击提示语选中复选框
+    labelDisabled: {
+      type: [String, Boolean],
+      default: ''
+    }
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.checkbox)
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+
+/***/ 39:
+/*!******************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/utils.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// utils is a library of generic helper functions non-specific to axios
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.deepMerge = deepMerge;
+exports.forEach = forEach;
+exports.isArray = isArray;
+exports.isBoolean = isBoolean;
+exports.isDate = isDate;
+exports.isObject = isObject;
+exports.isPlainObject = isPlainObject;
+exports.isURLSearchParams = isURLSearchParams;
+exports.isUndefined = isUndefined;
+var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
+var toString = Object.prototype.toString;
+
+/**
+ * Determine if a value is an Array
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an Array, otherwise false
+ */
+function isArray(val) {
+  return toString.call(val) === '[object Array]';
+}
+
+/**
+ * Determine if a value is an Object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an Object, otherwise false
+ */
+function isObject(val) {
+  return val !== null && (0, _typeof2.default)(val) === 'object';
+}
+
+/**
+ * Determine if a value is a Date
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Date, otherwise false
+ */
+function isDate(val) {
+  return toString.call(val) === '[object Date]';
+}
+
+/**
+ * Determine if a value is a URLSearchParams object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a URLSearchParams object, otherwise false
+ */
+function isURLSearchParams(val) {
+  return typeof URLSearchParams !== 'undefined' && val instanceof URLSearchParams;
+}
+
+/**
+ * Iterate over an Array or an Object invoking a function for each item.
+ *
+ * If `obj` is an Array callback will be called passing
+ * the value, index, and complete array for each item.
+ *
+ * If 'obj' is an Object callback will be called passing
+ * the value, key, and complete object for each property.
+ *
+ * @param {Object|Array} obj The object to iterate
+ * @param {Function} fn The callback to invoke for each item
+ */
+function forEach(obj, fn) {
+  // Don't bother if no value provided
+  if (obj === null || typeof obj === 'undefined') {
+    return;
+  }
+
+  // Force an array if not already something iterable
+  if ((0, _typeof2.default)(obj) !== 'object') {
+    /*eslint no-param-reassign:0*/
+    obj = [obj];
+  }
+  if (isArray(obj)) {
+    // Iterate over array values
+    for (var i = 0, l = obj.length; i < l; i++) {
+      fn.call(null, obj[i], i, obj);
+    }
+  } else {
+    // Iterate over object keys
+    for (var key in obj) {
+      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        fn.call(null, obj[key], key, obj);
+      }
+    }
+  }
+}
+
+/**
+ * 是否为boolean 值
+ * @param val
+ * @returns {boolean}
+ */
+function isBoolean(val) {
+  return typeof val === 'boolean';
+}
+
+/**
+ * 是否为真正的对象{} new Object
+ * @param {any} obj - 检测的对象
+ * @returns {boolean}
+ */
+function isPlainObject(obj) {
+  return Object.prototype.toString.call(obj) === '[object Object]';
+}
+
+/**
+ * Function equal to merge with the difference being that no reference
+ * to original objects is kept.
+ *
+ * @see merge
+ * @param {Object} obj1 Object to merge
+ * @returns {Object} Result of all merge properties
+ */
+function deepMerge( /* obj1, obj2, obj3, ... */
+) {
+  var result = {};
+  function assignValue(val, key) {
+    if ((0, _typeof2.default)(result[key]) === 'object' && (0, _typeof2.default)(val) === 'object') {
+      result[key] = deepMerge(result[key], val);
+    } else if ((0, _typeof2.default)(val) === 'object') {
+      result[key] = deepMerge({}, val);
+    } else {
+      result[key] = val;
+    }
+  }
+  for (var i = 0, l = arguments.length; i < l; i++) {
+    forEach(arguments[i], assignValue);
+  }
+  return result;
+}
+function isUndefined(val) {
+  return typeof val === 'undefined';
+}
+
+/***/ }),
+
+/***/ 4:
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    "default": obj
+  };
+}
+module.exports = _interopRequireDefault, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 40:
+/*!*******************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/core/buildFullPath.js ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = buildFullPath;
+var _isAbsoluteURL = _interopRequireDefault(__webpack_require__(/*! ../helpers/isAbsoluteURL */ 41));
+var _combineURLs = _interopRequireDefault(__webpack_require__(/*! ../helpers/combineURLs */ 42));
+/**
+ * Creates a new URL by combining the baseURL with the requestedURL,
+ * only when the requestedURL is not already an absolute URL.
+ * If the requestURL is absolute, this function returns the requestedURL untouched.
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} requestedURL Absolute or relative URL to combine
+ * @returns {string} The combined full path
+ */
+function buildFullPath(baseURL, requestedURL) {
+  if (baseURL && !(0, _isAbsoluteURL.default)(requestedURL)) {
+    return (0, _combineURLs.default)(baseURL, requestedURL);
+  }
+  return requestedURL;
+}
+
+/***/ }),
+
+/***/ 402:
+/*!***********************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-textarea/components/uv-textarea/props.js ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _uni$$uv, _uni$$uv$props;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default2 = {
+  props: _objectSpread({
+    value: {
+      type: [String, Number],
+      default: ''
+    },
+    modelValue: {
+      type: [String, Number],
+      default: ''
+    },
+    // 输入框为空时占位符
+    placeholder: {
+      type: [String, Number],
+      default: ''
+    },
+    // 指定placeholder的样式类，注意页面或组件的style中写了scoped时，需要在类名前写/deep/
+    placeholderClass: {
+      type: String,
+      default: 'textarea-placeholder'
+    },
+    // 指定placeholder的样式
+    placeholderStyle: {
+      type: [String, Object],
+      default: 'color: #c0c4cc'
+    },
+    // 输入框高度
+    height: {
+      type: [String, Number],
+      default: 70
+    },
+    // 设置键盘右下角按钮的文字，仅微信小程序，App-vue和H5有效
+    confirmType: {
+      type: String,
+      default: 'return'
+    },
+    // 是否禁用
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    // 是否显示统计字数
+    count: {
+      type: Boolean,
+      default: false
+    },
+    // 是否自动获取焦点，nvue不支持，H5取决于浏览器的实现
+    focus: {
+      type: Boolean,
+      default: false
+    },
+    // 是否自动增加高度
+    autoHeight: {
+      type: Boolean,
+      default: false
+    },
+    // 如果textarea是在一个position:fixed的区域，需要显示指定属性fixed为true
+    fixed: {
+      type: Boolean,
+      default: false
+    },
+    // 指定光标与键盘的距离
+    cursorSpacing: {
+      type: Number,
+      default: 0
+    },
+    // 指定focus时的光标位置
+    cursor: {
+      type: [String, Number],
+      default: ''
+    },
+    // 是否显示键盘上方带有”完成“按钮那一栏，
+    showConfirmBar: {
+      type: Boolean,
+      default: true
+    },
+    // 光标起始位置，自动聚焦时有效，需与selection-end搭配使用
+    selectionStart: {
+      type: Number,
+      default: -1
+    },
+    // 光标结束位置，自动聚焦时有效，需与selection-start搭配使用
+    selectionEnd: {
+      type: Number,
+      default: -1
+    },
+    // 键盘弹起时，是否自动上推页面
+    adjustPosition: {
+      type: Boolean,
+      default: true
+    },
+    // 是否去掉 iOS 下的默认内边距，只微信小程序有效
+    disableDefaultPadding: {
+      type: Boolean,
+      default: false
+    },
+    // focus时，点击页面的时候不收起键盘，只微信小程序有效
+    holdKeyboard: {
+      type: Boolean,
+      default: false
+    },
+    // 最大输入长度，设置为 -1 的时候不限制最大长度
+    maxlength: {
+      type: [String, Number],
+      default: 140
+    },
+    // 边框类型，surround-四周边框，bottom-底部边框
+    border: {
+      type: String,
+      default: 'surround'
+    },
+    // 用于处理或者过滤输入框内容的方法
+    formatter: {
+      type: [Function, null],
+      default: null
+    },
+    // 是否忽略组件内对文本合成系统事件的处理
+    ignoreCompositionEvent: {
+      type: Boolean,
+      default: true
+    },
+    // 是否忽略组件内对文本合成系统事件的处理
+    confirmHold: {
+      type: Boolean,
+      default: false
+    },
+    // 文本样式
+    textStyle: {
+      type: [Object, String],
+      default: function _default() {}
+    },
+    // 统计数字的样式
+    countStyle: {
+      type: [Object, String],
+      default: function _default() {}
+    }
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.textarea)
+};
+exports.default = _default2;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+
+/***/ 41:
+/*!**********************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/helpers/isAbsoluteURL.js ***!
+  \**********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Determines whether the specified URL is absolute
+ *
+ * @param {string} url The URL to test
+ * @returns {boolean} True if the specified URL is absolute, otherwise false
+ */
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = isAbsoluteURL;
+function isAbsoluteURL(url) {
+  // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
+  // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
+  // by any combination of letters, digits, plus, period, or hyphen.
+  return /^([a-z][a-z\d+\-.]*:)?\/\//i.test(url);
+}
+
+/***/ }),
+
+/***/ 410:
+/*!*******************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-loading-page/components/uv-loading-page/props.js ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _uni$$uv, _uni$$uv$props;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default = {
+  props: _objectSpread({
+    // 提示内容
+    loadingText: {
+      type: [String, Number],
+      default: ''
+    },
+    // 文字上方用于替换loading动画的图片
+    image: {
+      type: String,
+      default: ''
+    },
+    // 加载动画的模式，circle-圆形，spinner-花朵形，semicircle-半圆形
+    loadingMode: {
+      type: String,
+      default: 'circle'
+    },
+    // 是否加载中
+    loading: {
+      type: Boolean,
+      default: false
+    },
+    // 背景色
+    bgColor: {
+      type: String,
+      default: '#fff'
+    },
+    // 文字颜色
+    color: {
+      type: String,
+      default: '#C8C8C8'
+    },
+    // 文字大小
+    fontSize: {
+      type: [String, Number],
+      default: 16
+    },
+    // 图标大小
+    iconSize: {
+      type: [String, Number],
+      default: 26
+    },
+    // 加载中图标的颜色，只能rgb或者十六进制颜色值
+    loadingColor: {
+      type: String,
+      default: '#C8C8C8'
+    },
+    // 过渡时间
+    duration: {
+      type: [String, Number],
+      default: 300
+    }
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.loadingPage)
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+
+/***/ 418:
+/*!*******************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-upload/components/uv-upload/utils.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni, wx) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.chooseFile = chooseFile;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function pickExclude(obj, keys) {
+  // 某些情况下，type可能会为
+  if (!['[object Object]', '[object File]'].includes(Object.prototype.toString.call(obj))) {
+    return {};
+  }
+  return Object.keys(obj).reduce(function (prev, key) {
+    if (!keys.includes(key)) {
+      prev[key] = obj[key];
+    }
+    return prev;
+  }, {});
+}
+function formatImage(res) {
+  return res.tempFiles.map(function (item) {
+    return _objectSpread(_objectSpread({}, pickExclude(item, ['path'])), {}, {
+      type: 'image',
+      url: item.path,
+      thumb: item.path,
+      size: item.size
+    });
+  });
+}
+function formatVideo(res) {
+  return [_objectSpread(_objectSpread({}, pickExclude(res, ['tempFilePath', 'thumbTempFilePath', 'errMsg'])), {}, {
+    type: 'video',
+    url: res.tempFilePath,
+    thumb: res.thumbTempFilePath,
+    size: res.size
+  })];
+}
+function formatMedia(res) {
+  return res.tempFiles.map(function (item) {
+    return _objectSpread(_objectSpread({}, pickExclude(item, ['fileType', 'thumbTempFilePath', 'tempFilePath'])), {}, {
+      type: res.type,
+      url: item.tempFilePath,
+      thumb: res.type === 'video' ? item.thumbTempFilePath : item.tempFilePath,
+      size: item.size
+    });
+  });
+}
+function formatFile(res) {
+  return res.tempFiles.map(function (item) {
+    return _objectSpread(_objectSpread({}, pickExclude(item, ['path'])), {}, {
+      url: item.path,
+      size: item.size
+    });
+  });
+}
+function chooseFile(_ref) {
+  var accept = _ref.accept,
+    multiple = _ref.multiple,
+    capture = _ref.capture,
+    compressed = _ref.compressed,
+    maxDuration = _ref.maxDuration,
+    sizeType = _ref.sizeType,
+    camera = _ref.camera,
+    maxCount = _ref.maxCount;
+  return new Promise(function (resolve, reject) {
+    switch (accept) {
+      case 'image':
+        uni.chooseImage({
+          count: multiple ? Math.min(maxCount, 9) : 1,
+          sourceType: capture,
+          sizeType: sizeType,
+          success: function success(res) {
+            return resolve(formatImage(res));
+          },
+          fail: reject
+        });
+        break;
+
+      // 只有微信小程序才支持chooseMedia接口
+      case 'media':
+        wx.chooseMedia({
+          count: multiple ? Math.min(maxCount, 9) : 1,
+          sourceType: capture,
+          maxDuration: maxDuration,
+          sizeType: sizeType,
+          camera: camera,
+          success: function success(res) {
+            return resolve(formatMedia(res));
+          },
+          fail: reject
+        });
+        break;
+      case 'video':
+        uni.chooseVideo({
+          sourceType: capture,
+          compressed: compressed,
+          maxDuration: maxDuration,
+          camera: camera,
+          success: function success(res) {
+            return resolve(formatVideo(res));
+          },
+          fail: reject
+        });
+        break;
+
+      // 只有微信小程序才支持chooseMessageFile接口
+      case 'file':
+        wx.chooseMessageFile({
+          count: multiple ? maxCount : 1,
+          type: accept,
+          success: function success(res) {
+            return resolve(formatFile(res));
+          },
+          fail: reject
+        });
+        break;
+      default:
+        // 此为保底选项，在accept不为上面任意一项的时候选取全部文件
+
+        wx.chooseMessageFile({
+          count: multiple ? maxCount : 1,
+          type: 'all',
+          success: function success(res) {
+            return resolve(formatFile(res));
+          },
+          fail: reject
+        });
+    }
+  });
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 419:
+/*!*******************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-upload/components/uv-upload/mixin.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _index = __webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/function/index.js */ 53);
+var _default = {
+  watch: {
+    // 监听accept的变化，判断是否符合个平台要求
+    // 只有微信小程序才支持选择媒体，文件类型，所以这里做一个判断提示
+    accept: {
+      immediate: true,
+      handler: function handler(val) {}
+    }
+  }
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 42:
+/*!********************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/helpers/combineURLs.js ***!
+  \********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Creates a new URL by combining the specified URLs
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} relativeURL The relative URL
+ * @returns {string} The combined URL
+ */
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = combineURLs;
+function combineURLs(baseURL, relativeURL) {
+  return relativeURL ? baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '') : baseURL;
+}
+
+/***/ }),
+
+/***/ 420:
+/*!*******************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-upload/components/uv-upload/props.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _uni$$uv, _uni$$uv$props;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default2 = {
+  props: _objectSpread({
+    // 接受的文件类型, 可选值为all media image file video
+    accept: {
+      type: String,
+      default: 'image'
+    },
+    // 	图片或视频拾取模式，当accept为image类型时设置capture可选额外camera可以直接调起摄像头
+    capture: {
+      type: [String, Array],
+      default: function _default() {
+        return ['album', 'camera'];
+      }
+    },
+    // 当accept为video时生效，是否压缩视频，默认为true
+    compressed: {
+      type: Boolean,
+      default: true
+    },
+    // 当accept为video时生效，可选值为back或front
+    camera: {
+      type: String,
+      default: 'back'
+    },
+    // 当accept为video时生效，拍摄视频最长拍摄时间，单位秒
+    maxDuration: {
+      type: Number,
+      default: 60
+    },
+    // 上传区域的图标，只能内置图标
+    uploadIcon: {
+      type: String,
+      default: 'camera-fill'
+    },
+    // 上传区域的图标的颜色，默认
+    uploadIconColor: {
+      type: String,
+      default: '#D3D4D6'
+    },
+    // 是否开启文件读取前事件
+    useBeforeRead: {
+      type: Boolean,
+      default: false
+    },
+    // 读取后的处理函数
+    afterRead: {
+      type: Function,
+      default: null
+    },
+    // 读取前的处理函数
+    beforeRead: {
+      type: Function,
+      default: null
+    },
+    // 是否开启图片预览功能
+    previewFullImage: {
+      type: Boolean,
+      default: true
+    },
+    // 是否开启视频预览功能
+    previewFullVideo: {
+      type: Boolean,
+      default: true
+    },
+    // 最大上传数量
+    maxCount: {
+      type: [String, Number],
+      default: 52
+    },
+    // 是否禁用
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    // 预览上传的图片时的裁剪模式，和image组件mode属性一致
+    imageMode: {
+      type: String,
+      default: 'aspectFill'
+    },
+    // 标识符，可以在回调函数的第二项参数中获取
+    name: {
+      type: String,
+      default: ''
+    },
+    // 所选的图片的尺寸, 可选值为original compressed
+    sizeType: {
+      type: Array,
+      default: function _default() {
+        return ['original', 'compressed'];
+      }
+    },
+    // 是否开启图片多选，部分安卓机型不支持
+    multiple: {
+      type: Boolean,
+      default: false
+    },
+    // 是否展示删除按钮
+    deletable: {
+      type: Boolean,
+      default: true
+    },
+    // 文件大小限制，单位为byte
+    maxSize: {
+      type: [String, Number],
+      default: Number.MAX_VALUE
+    },
+    // 显示已上传的文件列表
+    fileList: {
+      type: Array,
+      default: function _default() {
+        return [];
+      }
+    },
+    // 上传区域的提示文字
+    uploadText: {
+      type: String,
+      default: ''
+    },
+    // 内部预览图片区域和选择图片按钮的区域宽度
+    width: {
+      type: [String, Number],
+      default: 80
+    },
+    // 内部预览图片区域和选择图片按钮的区域高度
+    height: {
+      type: [String, Number],
+      default: 80
+    },
+    // 是否在上传完成后展示预览图
+    previewImage: {
+      type: Boolean,
+      default: true
+    }
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.upload)
+};
+exports.default = _default2;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+
+/***/ 43:
+/*!************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/core/settle.js ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = settle;
+/**
+ * Resolve or reject a Promise based on response status.
+ *
+ * @param {Function} resolve A function that resolves the promise.
+ * @param {Function} reject A function that rejects the promise.
+ * @param {object} response The response.
+ */
+function settle(resolve, reject, response) {
+  var validateStatus = response.config.validateStatus;
+  var status = response.statusCode;
+  if (status && (!validateStatus || validateStatus(status))) {
+    resolve(response);
+  } else {
+    reject(response);
+  }
+}
+
+/***/ }),
+
+/***/ 44:
+/*!************************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/core/InterceptorManager.js ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+function InterceptorManager() {
+  this.handlers = [];
+}
+
+/**
+ * Add a new interceptor to the stack
+ *
+ * @param {Function} fulfilled The function to handle `then` for a `Promise`
+ * @param {Function} rejected The function to handle `reject` for a `Promise`
+ *
+ * @return {Number} An ID used to remove interceptor later
+ */
+InterceptorManager.prototype.use = function use(fulfilled, rejected) {
+  this.handlers.push({
+    fulfilled: fulfilled,
+    rejected: rejected
+  });
+  return this.handlers.length - 1;
+};
+
+/**
+ * Remove an interceptor from the stack
+ *
+ * @param {Number} id The ID that was returned by `use`
+ */
+InterceptorManager.prototype.eject = function eject(id) {
+  if (this.handlers[id]) {
+    this.handlers[id] = null;
+  }
+};
+
+/**
+ * Iterate over all the registered interceptors
+ *
+ * This method is particularly useful for skipping over any
+ * interceptors that may have become `null` calling `eject`.
+ *
+ * @param {Function} fn The function to call for each interceptor
+ */
+InterceptorManager.prototype.forEach = function forEach(fn) {
+  this.handlers.forEach(function (h) {
+    if (h !== null) {
+      fn(h);
+    }
+  });
+};
+var _default = InterceptorManager;
+exports.default = _default;
+
+/***/ }),
+
+/***/ 45:
+/*!*****************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/core/mergeConfig.js ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _utils = __webpack_require__(/*! ../utils */ 39);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+/**
+ * 合并局部配置优先的配置，如果局部有该配置项则用局部，如果全局有该配置项则用全局
+ * @param {Array} keys - 配置项
+ * @param {Object} globalsConfig - 当前的全局配置
+ * @param {Object} config2 - 局部配置
+ * @return {{}}
+ */
+var mergeKeys = function mergeKeys(keys, globalsConfig, config2) {
+  var config = {};
+  keys.forEach(function (prop) {
+    if (!(0, _utils.isUndefined)(config2[prop])) {
+      config[prop] = config2[prop];
+    } else if (!(0, _utils.isUndefined)(globalsConfig[prop])) {
+      config[prop] = globalsConfig[prop];
+    }
+  });
+  return config;
+};
+/**
+ *
+ * @param globalsConfig - 当前实例的全局配置
+ * @param config2 - 当前的局部配置
+ * @return - 合并后的配置
+ */
+var _default = function _default(globalsConfig) {
+  var config2 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  var method = config2.method || globalsConfig.method || 'GET';
+  var config = {
+    baseURL: config2.baseURL || globalsConfig.baseURL || '',
+    method: method,
+    url: config2.url || '',
+    params: config2.params || {},
+    custom: _objectSpread(_objectSpread({}, globalsConfig.custom || {}), config2.custom || {}),
+    header: (0, _utils.deepMerge)(globalsConfig.header || {}, config2.header || {})
+  };
+  var defaultToConfig2Keys = ['getTask', 'validateStatus', 'paramsSerializer', 'forcedJSONParsing'];
+  config = _objectSpread(_objectSpread({}, config), mergeKeys(defaultToConfig2Keys, globalsConfig, config2));
+
+  // eslint-disable-next-line no-empty
+  if (method === 'DOWNLOAD') {
+    var downloadKeys = ['timeout', 'filePath'];
+    config = _objectSpread(_objectSpread({}, config), mergeKeys(downloadKeys, globalsConfig, config2));
+  } else if (method === 'UPLOAD') {
+    delete config.header['content-type'];
+    delete config.header['Content-Type'];
+    var uploadKeys = ['filePath', 'name', 'timeout', 'formData'];
+    uploadKeys.forEach(function (prop) {
+      if (!(0, _utils.isUndefined)(config2[prop])) {
+        config[prop] = config2[prop];
+      }
+    });
+    if ((0, _utils.isUndefined)(config.timeout) && !(0, _utils.isUndefined)(globalsConfig.timeout)) {
+      config['timeout'] = globalsConfig['timeout'];
+    }
+  } else {
+    var defaultsKeys = ['data', 'timeout', 'dataType', 'responseType', 'enableHttp2', 'enableQuic', 'enableCache', 'enableHttpDNS', 'httpDNSServiceId', 'enableChunked', 'forceCellularNetwork'];
+    config = _objectSpread(_objectSpread({}, config), mergeKeys(defaultsKeys, globalsConfig, config2));
+  }
+  return config;
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 46:
+/*!**************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/core/defaults.js ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+/**
+ * 默认的全局配置
+ */
+var _default = {
+  baseURL: '',
+  header: {},
+  method: 'GET',
+  dataType: 'json',
+  paramsSerializer: null,
+  responseType: 'text',
+  custom: {},
+  timeout: 60000,
+  validateStatus: function validateStatus(status) {
+    return status >= 200 && status < 300;
+  },
+  // 是否尝试将响应数据json化
+  forcedJSONParsing: true
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 47:
+/*!************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/luch-request/utils/clone.js ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(Buffer) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
+/* eslint-disable */
+var clone = function () {
+  'use strict';
+
+  function _instanceof(obj, type) {
+    return type != null && obj instanceof type;
+  }
+  var nativeMap;
+  try {
+    nativeMap = Map;
+  } catch (_) {
+    // maybe a reference error because no `Map`. Give it a dummy value that no
+    // value will ever be an instanceof.
+    nativeMap = function nativeMap() {};
+  }
+  var nativeSet;
+  try {
+    nativeSet = Set;
+  } catch (_) {
+    nativeSet = function nativeSet() {};
+  }
+  var nativePromise;
+  try {
+    nativePromise = Promise;
+  } catch (_) {
+    nativePromise = function nativePromise() {};
+  }
+
+  /**
+   * Clones (copies) an Object using deep copying.
+   *
+   * This function supports circular references by default, but if you are certain
+   * there are no circular references in your object, you can save some CPU time
+   * by calling clone(obj, false).
+   *
+   * Caution: if `circular` is false and `parent` contains circular references,
+   * your program may enter an infinite loop and crash.
+   *
+   * @param `parent` - the object to be cloned
+   * @param `circular` - set to true if the object to be cloned may contain
+   *    circular references. (optional - true by default)
+   * @param `depth` - set to a number if the object is only to be cloned to
+   *    a particular depth. (optional - defaults to Infinity)
+   * @param `prototype` - sets the prototype to be used when cloning an object.
+   *    (optional - defaults to parent prototype).
+   * @param `includeNonEnumerable` - set to true if the non-enumerable properties
+   *    should be cloned as well. Non-enumerable properties on the prototype
+   *    chain will be ignored. (optional - false by default)
+   */
+  function clone(parent, circular, depth, prototype, includeNonEnumerable) {
+    if ((0, _typeof2.default)(circular) === 'object') {
+      depth = circular.depth;
+      prototype = circular.prototype;
+      includeNonEnumerable = circular.includeNonEnumerable;
+      circular = circular.circular;
+    }
+    // maintain two arrays for circular references, where corresponding parents
+    // and children have the same index
+    var allParents = [];
+    var allChildren = [];
+    var useBuffer = typeof Buffer != 'undefined';
+    if (typeof circular == 'undefined') circular = true;
+    if (typeof depth == 'undefined') depth = Infinity;
+
+    // recurse this function so we don't reset allParents and allChildren
+    function _clone(parent, depth) {
+      // cloning null always returns null
+      if (parent === null) return null;
+      if (depth === 0) return parent;
+      var child;
+      var proto;
+      if ((0, _typeof2.default)(parent) != 'object') {
+        return parent;
+      }
+      if (_instanceof(parent, nativeMap)) {
+        child = new nativeMap();
+      } else if (_instanceof(parent, nativeSet)) {
+        child = new nativeSet();
+      } else if (_instanceof(parent, nativePromise)) {
+        child = new nativePromise(function (resolve, reject) {
+          parent.then(function (value) {
+            resolve(_clone(value, depth - 1));
+          }, function (err) {
+            reject(_clone(err, depth - 1));
+          });
+        });
+      } else if (clone.__isArray(parent)) {
+        child = [];
+      } else if (clone.__isRegExp(parent)) {
+        child = new RegExp(parent.source, __getRegExpFlags(parent));
+        if (parent.lastIndex) child.lastIndex = parent.lastIndex;
+      } else if (clone.__isDate(parent)) {
+        child = new Date(parent.getTime());
+      } else if (useBuffer && Buffer.isBuffer(parent)) {
+        if (Buffer.from) {
+          // Node.js >= 5.10.0
+          child = Buffer.from(parent);
+        } else {
+          // Older Node.js versions
+          child = new Buffer(parent.length);
+          parent.copy(child);
+        }
+        return child;
+      } else if (_instanceof(parent, Error)) {
+        child = Object.create(parent);
+      } else {
+        if (typeof prototype == 'undefined') {
+          proto = Object.getPrototypeOf(parent);
+          child = Object.create(proto);
+        } else {
+          child = Object.create(prototype);
+          proto = prototype;
+        }
+      }
+      if (circular) {
+        var index = allParents.indexOf(parent);
+        if (index != -1) {
+          return allChildren[index];
+        }
+        allParents.push(parent);
+        allChildren.push(child);
+      }
+      if (_instanceof(parent, nativeMap)) {
+        parent.forEach(function (value, key) {
+          var keyChild = _clone(key, depth - 1);
+          var valueChild = _clone(value, depth - 1);
+          child.set(keyChild, valueChild);
+        });
+      }
+      if (_instanceof(parent, nativeSet)) {
+        parent.forEach(function (value) {
+          var entryChild = _clone(value, depth - 1);
+          child.add(entryChild);
+        });
+      }
+      for (var i in parent) {
+        var attrs = Object.getOwnPropertyDescriptor(parent, i);
+        if (attrs) {
+          child[i] = _clone(parent[i], depth - 1);
+        }
+        try {
+          var objProperty = Object.getOwnPropertyDescriptor(parent, i);
+          if (objProperty.set === 'undefined') {
+            // no setter defined. Skip cloning this property
+            continue;
+          }
+          child[i] = _clone(parent[i], depth - 1);
+        } catch (e) {
+          if (e instanceof TypeError) {
+            // when in strict mode, TypeError will be thrown if child[i] property only has a getter
+            // we can't do anything about this, other than inform the user that this property cannot be set.
+            continue;
+          } else if (e instanceof ReferenceError) {
+            //this may happen in non strict mode
+            continue;
+          }
+        }
+      }
+      if (Object.getOwnPropertySymbols) {
+        var symbols = Object.getOwnPropertySymbols(parent);
+        for (var i = 0; i < symbols.length; i++) {
+          // Don't need to worry about cloning a symbol because it is a primitive,
+          // like a number or string.
+          var symbol = symbols[i];
+          var descriptor = Object.getOwnPropertyDescriptor(parent, symbol);
+          if (descriptor && !descriptor.enumerable && !includeNonEnumerable) {
+            continue;
+          }
+          child[symbol] = _clone(parent[symbol], depth - 1);
+          Object.defineProperty(child, symbol, descriptor);
+        }
+      }
+      if (includeNonEnumerable) {
+        var allPropertyNames = Object.getOwnPropertyNames(parent);
+        for (var i = 0; i < allPropertyNames.length; i++) {
+          var propertyName = allPropertyNames[i];
+          var descriptor = Object.getOwnPropertyDescriptor(parent, propertyName);
+          if (descriptor && descriptor.enumerable) {
+            continue;
+          }
+          child[propertyName] = _clone(parent[propertyName], depth - 1);
+          Object.defineProperty(child, propertyName, descriptor);
+        }
+      }
+      return child;
+    }
+    return _clone(parent, depth);
+  }
+
+  /**
+   * Simple flat clone using prototype, accepts only objects, usefull for property
+   * override on FLAT configuration object (no nested props).
+   *
+   * USE WITH CAUTION! This may not behave as you wish if you do not know how this
+   * works.
+   */
+  clone.clonePrototype = function clonePrototype(parent) {
+    if (parent === null) return null;
+    var c = function c() {};
+    c.prototype = parent;
+    return new c();
+  };
+
+  // private utility functions
+
+  function __objToStr(o) {
+    return Object.prototype.toString.call(o);
+  }
+  clone.__objToStr = __objToStr;
+  function __isDate(o) {
+    return (0, _typeof2.default)(o) === 'object' && __objToStr(o) === '[object Date]';
+  }
+  clone.__isDate = __isDate;
+  function __isArray(o) {
+    return (0, _typeof2.default)(o) === 'object' && __objToStr(o) === '[object Array]';
+  }
+  clone.__isArray = __isArray;
+  function __isRegExp(o) {
+    return (0, _typeof2.default)(o) === 'object' && __objToStr(o) === '[object RegExp]';
+  }
+  clone.__isRegExp = __isRegExp;
+  function __getRegExpFlags(re) {
+    var flags = '';
+    if (re.global) flags += 'g';
+    if (re.ignoreCase) flags += 'i';
+    if (re.multiline) flags += 'm';
+    return flags;
+  }
+  clone.__getRegExpFlags = __getRegExpFlags;
+  return clone;
+}();
+var _default = clone;
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../HBuilderX/plugins/uniapp-cli/node_modules/buffer/index.js */ 48).Buffer))
+
+/***/ }),
+
+/***/ 470:
+/*!*********************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-toolbar/components/uv-toolbar/props.js ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _uni$$uv, _uni$$uv$props;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default = {
+  props: _objectSpread({
+    // 是否展示工具条
+    show: {
+      type: Boolean,
+      default: true
+    },
+    // 是否显示下边框
+    showBorder: {
+      type: Boolean,
+      default: false
+    },
+    // 取消按钮的文字
+    cancelText: {
+      type: String,
+      default: '取消'
+    },
+    // 确认按钮的文字
+    confirmText: {
+      type: String,
+      default: '确认'
+    },
+    // 取消按钮的颜色
+    cancelColor: {
+      type: String,
+      default: '#909193'
+    },
+    // 确认按钮的颜色
+    confirmColor: {
+      type: String,
+      default: '#3c9cff'
+    },
+    // 标题文字
+    title: {
+      type: String,
+      default: ''
+    }
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.toolbar)
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+
+/***/ 48:
 /*!**************************************!*\
   !*** ./node_modules/buffer/index.js ***!
   \**************************************/
@@ -15698,9 +14164,9 @@ module.exports = _slicedToArray, module.exports.__esModule = true, module.export
 
 
 
-var base64 = __webpack_require__(/*! base64-js */ 51)
-var ieee754 = __webpack_require__(/*! ieee754 */ 52)
-var isArray = __webpack_require__(/*! isarray */ 53)
+var base64 = __webpack_require__(/*! base64-js */ 49)
+var ieee754 = __webpack_require__(/*! ieee754 */ 50)
+var isArray = __webpack_require__(/*! isarray */ 51)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -17482,10 +15948,10 @@ function isnan (val) {
 
 /***/ }),
 
-/***/ 504:
-/*!***********************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-checkbox/components/uv-checkbox/props.js ***!
-  \***********************************************************************************/
+/***/ 485:
+/*!*******************************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-loading-icon/components/uv-loading-icon/props.js ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17501,81 +15967,78 @@ var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/run
 var _uni$$uv, _uni$$uv$props;
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var _default = {
+var _default2 = {
   props: _objectSpread({
-    // checkbox的名称
-    name: {
-      type: [String, Number, Boolean],
-      default: ''
+    // 是否显示组件
+    show: {
+      type: Boolean,
+      default: true
     },
-    // 形状，square为方形，circle为圆型
-    shape: {
+    // 颜色
+    color: {
       type: String,
-      default: ''
+      default: '#909193'
     },
-    // 整体的大小
-    size: {
-      type: [String, Number],
-      default: ''
+    // 提示文字颜色
+    textColor: {
+      type: String,
+      default: '#909193'
     },
-    // 是否默认选中
-    checked: {
+    // 文字和图标是否垂直排列
+    vertical: {
       type: Boolean,
       default: false
     },
-    // 是否禁用
-    disabled: {
-      type: [String, Boolean],
-      default: ''
-    },
-    // 选中状态下的颜色，如设置此值，将会覆盖parent的activeColor值
-    activeColor: {
+    // 模式选择，circle-圆形，spinner-花朵形，semicircle-半圆形
+    mode: {
       type: String,
+      default: 'spinner'
+    },
+    // 图标大小，单位默认px
+    size: {
+      type: [String, Number],
+      default: 24
+    },
+    // 文字大小
+    textSize: {
+      type: [String, Number],
+      default: 15
+    },
+    // 文字样式
+    textStyle: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
+    },
+    // 文字内容
+    text: {
+      type: [String, Number],
       default: ''
     },
-    // 未选中的颜色
+    // 动画模式 https://www.runoob.com/cssref/css3-pr-animation-timing-function.html
+    timingFunction: {
+      type: String,
+      default: 'linear'
+    },
+    // 动画执行周期时间
+    duration: {
+      type: [String, Number],
+      default: 1200
+    },
+    // mode=circle时的暗边颜色
     inactiveColor: {
       type: String,
       default: ''
-    },
-    // 图标的大小，单位px
-    iconSize: {
-      type: [String, Number],
-      default: ''
-    },
-    // 图标颜色
-    iconColor: {
-      type: String,
-      default: ''
-    },
-    // label提示文字，因为nvue下，直接slot进来的文字，由于特殊的结构，无法修改样式
-    label: {
-      type: [String, Number, Boolean],
-      default: ''
-    },
-    // label的字体大小，px单位
-    labelSize: {
-      type: [String, Number],
-      default: ''
-    },
-    // label的颜色
-    labelColor: {
-      type: String,
-      default: ''
-    },
-    // 是否禁止点击提示语选中复选框
-    labelDisabled: {
-      type: [String, Boolean],
-      default: ''
     }
-  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.checkbox)
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.loadingIcon)
 };
-exports.default = _default;
+exports.default = _default2;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 
-/***/ 51:
+/***/ 49:
 /*!*****************************************!*\
   !*** ./node_modules/base64-js/index.js ***!
   \*****************************************/
@@ -17737,10 +16200,10 @@ function fromByteArray (uint8) {
 
 /***/ }),
 
-/***/ 519:
-/*!***********************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-textarea/components/uv-textarea/props.js ***!
-  \***********************************************************************************/
+/***/ 493:
+/*!*********************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-overlay/components/uv-overlay/props.js ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17756,149 +16219,54 @@ var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/run
 var _uni$$uv, _uni$$uv$props;
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var _default2 = {
+var _default = {
   props: _objectSpread({
-    value: {
+    // 是否显示遮罩
+    show: {
+      type: Boolean,
+      default: false
+    },
+    // 层级z-index
+    zIndex: {
       type: [String, Number],
-      default: ''
+      default: 10070
     },
-    modelValue: {
+    // 遮罩的过渡时间，单位为ms
+    duration: {
       type: [String, Number],
-      default: ''
+      default: 300
     },
-    // 输入框为空时占位符
-    placeholder: {
+    // 不透明度值，当做rgba的第四个参数
+    opacity: {
       type: [String, Number],
-      default: ''
-    },
-    // 指定placeholder的样式类，注意页面或组件的style中写了scoped时，需要在类名前写/deep/
-    placeholderClass: {
-      type: String,
-      default: 'textarea-placeholder'
-    },
-    // 指定placeholder的样式
-    placeholderStyle: {
-      type: [String, Object],
-      default: 'color: #c0c4cc'
-    },
-    // 输入框高度
-    height: {
-      type: [String, Number],
-      default: 70
-    },
-    // 设置键盘右下角按钮的文字，仅微信小程序，App-vue和H5有效
-    confirmType: {
-      type: String,
-      default: 'return'
-    },
-    // 是否禁用
-    disabled: {
-      type: Boolean,
-      default: false
-    },
-    // 是否显示统计字数
-    count: {
-      type: Boolean,
-      default: false
-    },
-    // 是否自动获取焦点，nvue不支持，H5取决于浏览器的实现
-    focus: {
-      type: Boolean,
-      default: false
-    },
-    // 是否自动增加高度
-    autoHeight: {
-      type: Boolean,
-      default: false
-    },
-    // 如果textarea是在一个position:fixed的区域，需要显示指定属性fixed为true
-    fixed: {
-      type: Boolean,
-      default: false
-    },
-    // 指定光标与键盘的距离
-    cursorSpacing: {
-      type: Number,
-      default: 0
-    },
-    // 指定focus时的光标位置
-    cursor: {
-      type: [String, Number],
-      default: ''
-    },
-    // 是否显示键盘上方带有”完成“按钮那一栏，
-    showConfirmBar: {
-      type: Boolean,
-      default: true
-    },
-    // 光标起始位置，自动聚焦时有效，需与selection-end搭配使用
-    selectionStart: {
-      type: Number,
-      default: -1
-    },
-    // 光标结束位置，自动聚焦时有效，需与selection-start搭配使用
-    selectionEnd: {
-      type: Number,
-      default: -1
-    },
-    // 键盘弹起时，是否自动上推页面
-    adjustPosition: {
-      type: Boolean,
-      default: true
-    },
-    // 是否去掉 iOS 下的默认内边距，只微信小程序有效
-    disableDefaultPadding: {
-      type: Boolean,
-      default: false
-    },
-    // focus时，点击页面的时候不收起键盘，只微信小程序有效
-    holdKeyboard: {
-      type: Boolean,
-      default: false
-    },
-    // 最大输入长度，设置为 -1 的时候不限制最大长度
-    maxlength: {
-      type: [String, Number],
-      default: 140
-    },
-    // 边框类型，surround-四周边框，bottom-底部边框
-    border: {
-      type: String,
-      default: 'surround'
-    },
-    // 用于处理或者过滤输入框内容的方法
-    formatter: {
-      type: [Function, null],
-      default: null
-    },
-    // 是否忽略组件内对文本合成系统事件的处理
-    ignoreCompositionEvent: {
-      type: Boolean,
-      default: true
-    },
-    // 是否忽略组件内对文本合成系统事件的处理
-    confirmHold: {
-      type: Boolean,
-      default: false
-    },
-    // 文本样式
-    textStyle: {
-      type: [Object, String],
-      default: function _default() {}
-    },
-    // 统计数字的样式
-    countStyle: {
-      type: [Object, String],
-      default: function _default() {}
+      default: 0.5
     }
-  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.textarea)
+  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.overlay)
 };
-exports.default = _default2;
+exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 
-/***/ 52:
+/***/ 5:
+/*!**************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/slicedToArray.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayWithHoles = __webpack_require__(/*! ./arrayWithHoles.js */ 6);
+var iterableToArrayLimit = __webpack_require__(/*! ./iterableToArrayLimit.js */ 7);
+var unsupportedIterableToArray = __webpack_require__(/*! ./unsupportedIterableToArray.js */ 8);
+var nonIterableRest = __webpack_require__(/*! ./nonIterableRest.js */ 10);
+function _slicedToArray(arr, i) {
+  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || unsupportedIterableToArray(arr, i) || nonIterableRest();
+}
+module.exports = _slicedToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 50:
 /*!***************************************!*\
   !*** ./node_modules/ieee754/index.js ***!
   \***************************************/
@@ -17994,1026 +16362,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 /***/ }),
 
-/***/ 527:
-/*!*******************************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-loading-page/components/uv-loading-page/props.js ***!
-  \*******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _uni$$uv, _uni$$uv$props;
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var _default = {
-  props: _objectSpread({
-    // 提示内容
-    loadingText: {
-      type: [String, Number],
-      default: ''
-    },
-    // 文字上方用于替换loading动画的图片
-    image: {
-      type: String,
-      default: ''
-    },
-    // 加载动画的模式，circle-圆形，spinner-花朵形，semicircle-半圆形
-    loadingMode: {
-      type: String,
-      default: 'circle'
-    },
-    // 是否加载中
-    loading: {
-      type: Boolean,
-      default: false
-    },
-    // 背景色
-    bgColor: {
-      type: String,
-      default: '#fff'
-    },
-    // 文字颜色
-    color: {
-      type: String,
-      default: '#C8C8C8'
-    },
-    // 文字大小
-    fontSize: {
-      type: [String, Number],
-      default: 16
-    },
-    // 图标大小
-    iconSize: {
-      type: [String, Number],
-      default: 26
-    },
-    // 加载中图标的颜色，只能rgb或者十六进制颜色值
-    loadingColor: {
-      type: String,
-      default: '#C8C8C8'
-    },
-    // 过渡时间
-    duration: {
-      type: [String, Number],
-      default: 300
-    }
-  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.loadingPage)
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-
-/***/ 53:
-/*!***************************************!*\
-  !*** ./node_modules/isarray/index.js ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var toString = {}.toString;
-
-module.exports = Array.isArray || function (arr) {
-  return toString.call(arr) == '[object Array]';
-};
-
-
-/***/ }),
-
-/***/ 535:
-/*!*******************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-upload/components/uv-upload/utils.js ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni, wx) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.chooseFile = chooseFile;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function pickExclude(obj, keys) {
-  // 某些情况下，type可能会为
-  if (!['[object Object]', '[object File]'].includes(Object.prototype.toString.call(obj))) {
-    return {};
-  }
-  return Object.keys(obj).reduce(function (prev, key) {
-    if (!keys.includes(key)) {
-      prev[key] = obj[key];
-    }
-    return prev;
-  }, {});
-}
-function formatImage(res) {
-  return res.tempFiles.map(function (item) {
-    return _objectSpread(_objectSpread({}, pickExclude(item, ['path'])), {}, {
-      type: 'image',
-      url: item.path,
-      thumb: item.path,
-      size: item.size
-    });
-  });
-}
-function formatVideo(res) {
-  return [_objectSpread(_objectSpread({}, pickExclude(res, ['tempFilePath', 'thumbTempFilePath', 'errMsg'])), {}, {
-    type: 'video',
-    url: res.tempFilePath,
-    thumb: res.thumbTempFilePath,
-    size: res.size
-  })];
-}
-function formatMedia(res) {
-  return res.tempFiles.map(function (item) {
-    return _objectSpread(_objectSpread({}, pickExclude(item, ['fileType', 'thumbTempFilePath', 'tempFilePath'])), {}, {
-      type: res.type,
-      url: item.tempFilePath,
-      thumb: res.type === 'video' ? item.thumbTempFilePath : item.tempFilePath,
-      size: item.size
-    });
-  });
-}
-function formatFile(res) {
-  return res.tempFiles.map(function (item) {
-    return _objectSpread(_objectSpread({}, pickExclude(item, ['path'])), {}, {
-      url: item.path,
-      size: item.size
-    });
-  });
-}
-function chooseFile(_ref) {
-  var accept = _ref.accept,
-    multiple = _ref.multiple,
-    capture = _ref.capture,
-    compressed = _ref.compressed,
-    maxDuration = _ref.maxDuration,
-    sizeType = _ref.sizeType,
-    camera = _ref.camera,
-    maxCount = _ref.maxCount;
-  return new Promise(function (resolve, reject) {
-    switch (accept) {
-      case 'image':
-        uni.chooseImage({
-          count: multiple ? Math.min(maxCount, 9) : 1,
-          sourceType: capture,
-          sizeType: sizeType,
-          success: function success(res) {
-            return resolve(formatImage(res));
-          },
-          fail: reject
-        });
-        break;
-
-      // 只有微信小程序才支持chooseMedia接口
-      case 'media':
-        wx.chooseMedia({
-          count: multiple ? Math.min(maxCount, 9) : 1,
-          sourceType: capture,
-          maxDuration: maxDuration,
-          sizeType: sizeType,
-          camera: camera,
-          success: function success(res) {
-            return resolve(formatMedia(res));
-          },
-          fail: reject
-        });
-        break;
-      case 'video':
-        uni.chooseVideo({
-          sourceType: capture,
-          compressed: compressed,
-          maxDuration: maxDuration,
-          camera: camera,
-          success: function success(res) {
-            return resolve(formatVideo(res));
-          },
-          fail: reject
-        });
-        break;
-
-      // 只有微信小程序才支持chooseMessageFile接口
-      case 'file':
-        wx.chooseMessageFile({
-          count: multiple ? maxCount : 1,
-          type: accept,
-          success: function success(res) {
-            return resolve(formatFile(res));
-          },
-          fail: reject
-        });
-        break;
-      default:
-        // 此为保底选项，在accept不为上面任意一项的时候选取全部文件
-
-        wx.chooseMessageFile({
-          count: multiple ? maxCount : 1,
-          type: 'all',
-          success: function success(res) {
-            return resolve(formatFile(res));
-          },
-          fail: reject
-        });
-    }
-  });
-}
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"]))
-
-/***/ }),
-
-/***/ 536:
-/*!*******************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-upload/components/uv-upload/mixin.js ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _index = __webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/function/index.js */ 174);
-var _default = {
-  watch: {
-    // 监听accept的变化，判断是否符合个平台要求
-    // 只有微信小程序才支持选择媒体，文件类型，所以这里做一个判断提示
-    accept: {
-      immediate: true,
-      handler: function handler(val) {}
-    }
-  }
-};
-exports.default = _default;
-
-/***/ }),
-
-/***/ 537:
-/*!*******************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-upload/components/uv-upload/props.js ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _uni$$uv, _uni$$uv$props;
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var _default2 = {
-  props: _objectSpread({
-    // 接受的文件类型, 可选值为all media image file video
-    accept: {
-      type: String,
-      default: 'image'
-    },
-    // 	图片或视频拾取模式，当accept为image类型时设置capture可选额外camera可以直接调起摄像头
-    capture: {
-      type: [String, Array],
-      default: function _default() {
-        return ['album', 'camera'];
-      }
-    },
-    // 当accept为video时生效，是否压缩视频，默认为true
-    compressed: {
-      type: Boolean,
-      default: true
-    },
-    // 当accept为video时生效，可选值为back或front
-    camera: {
-      type: String,
-      default: 'back'
-    },
-    // 当accept为video时生效，拍摄视频最长拍摄时间，单位秒
-    maxDuration: {
-      type: Number,
-      default: 60
-    },
-    // 上传区域的图标，只能内置图标
-    uploadIcon: {
-      type: String,
-      default: 'camera-fill'
-    },
-    // 上传区域的图标的颜色，默认
-    uploadIconColor: {
-      type: String,
-      default: '#D3D4D6'
-    },
-    // 是否开启文件读取前事件
-    useBeforeRead: {
-      type: Boolean,
-      default: false
-    },
-    // 读取后的处理函数
-    afterRead: {
-      type: Function,
-      default: null
-    },
-    // 读取前的处理函数
-    beforeRead: {
-      type: Function,
-      default: null
-    },
-    // 是否开启图片预览功能
-    previewFullImage: {
-      type: Boolean,
-      default: true
-    },
-    // 是否开启视频预览功能
-    previewFullVideo: {
-      type: Boolean,
-      default: true
-    },
-    // 最大上传数量
-    maxCount: {
-      type: [String, Number],
-      default: 52
-    },
-    // 是否禁用
-    disabled: {
-      type: Boolean,
-      default: false
-    },
-    // 预览上传的图片时的裁剪模式，和image组件mode属性一致
-    imageMode: {
-      type: String,
-      default: 'aspectFill'
-    },
-    // 标识符，可以在回调函数的第二项参数中获取
-    name: {
-      type: String,
-      default: ''
-    },
-    // 所选的图片的尺寸, 可选值为original compressed
-    sizeType: {
-      type: Array,
-      default: function _default() {
-        return ['original', 'compressed'];
-      }
-    },
-    // 是否开启图片多选，部分安卓机型不支持
-    multiple: {
-      type: Boolean,
-      default: false
-    },
-    // 是否展示删除按钮
-    deletable: {
-      type: Boolean,
-      default: true
-    },
-    // 文件大小限制，单位为byte
-    maxSize: {
-      type: [String, Number],
-      default: Number.MAX_VALUE
-    },
-    // 显示已上传的文件列表
-    fileList: {
-      type: Array,
-      default: function _default() {
-        return [];
-      }
-    },
-    // 上传区域的提示文字
-    uploadText: {
-      type: String,
-      default: ''
-    },
-    // 内部预览图片区域和选择图片按钮的区域宽度
-    width: {
-      type: [String, Number],
-      default: 80
-    },
-    // 内部预览图片区域和选择图片按钮的区域高度
-    height: {
-      type: [String, Number],
-      default: 80
-    },
-    // 是否在上传完成后展示预览图
-    previewImage: {
-      type: Boolean,
-      default: true
-    }
-  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.upload)
-};
-exports.default = _default2;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-
-/***/ 55:
-/*!************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/@babel/runtime/regenerator/index.js ***!
-  \************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// TODO(Babel 8): Remove this file.
-
-var runtime = __webpack_require__(/*! @babel/runtime/helpers/regeneratorRuntime */ 56)();
-module.exports = runtime;
-
-/***/ }),
-
-/***/ 56:
-/*!*******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/regeneratorRuntime.js ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _typeof = __webpack_require__(/*! ./typeof.js */ 13)["default"];
-function _regeneratorRuntime() {
-  "use strict";
-
-  /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
-  module.exports = _regeneratorRuntime = function _regeneratorRuntime() {
-    return exports;
-  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
-  var exports = {},
-    Op = Object.prototype,
-    hasOwn = Op.hasOwnProperty,
-    defineProperty = Object.defineProperty || function (obj, key, desc) {
-      obj[key] = desc.value;
-    },
-    $Symbol = "function" == typeof Symbol ? Symbol : {},
-    iteratorSymbol = $Symbol.iterator || "@@iterator",
-    asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator",
-    toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
-  function define(obj, key, value) {
-    return Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: !0,
-      configurable: !0,
-      writable: !0
-    }), obj[key];
-  }
-  try {
-    define({}, "");
-  } catch (err) {
-    define = function define(obj, key, value) {
-      return obj[key] = value;
-    };
-  }
-  function wrap(innerFn, outerFn, self, tryLocsList) {
-    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator,
-      generator = Object.create(protoGenerator.prototype),
-      context = new Context(tryLocsList || []);
-    return defineProperty(generator, "_invoke", {
-      value: makeInvokeMethod(innerFn, self, context)
-    }), generator;
-  }
-  function tryCatch(fn, obj, arg) {
-    try {
-      return {
-        type: "normal",
-        arg: fn.call(obj, arg)
-      };
-    } catch (err) {
-      return {
-        type: "throw",
-        arg: err
-      };
-    }
-  }
-  exports.wrap = wrap;
-  var ContinueSentinel = {};
-  function Generator() {}
-  function GeneratorFunction() {}
-  function GeneratorFunctionPrototype() {}
-  var IteratorPrototype = {};
-  define(IteratorPrototype, iteratorSymbol, function () {
-    return this;
-  });
-  var getProto = Object.getPrototypeOf,
-    NativeIteratorPrototype = getProto && getProto(getProto(values([])));
-  NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype);
-  var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype);
-  function defineIteratorMethods(prototype) {
-    ["next", "throw", "return"].forEach(function (method) {
-      define(prototype, method, function (arg) {
-        return this._invoke(method, arg);
-      });
-    });
-  }
-  function AsyncIterator(generator, PromiseImpl) {
-    function invoke(method, arg, resolve, reject) {
-      var record = tryCatch(generator[method], generator, arg);
-      if ("throw" !== record.type) {
-        var result = record.arg,
-          value = result.value;
-        return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) {
-          invoke("next", value, resolve, reject);
-        }, function (err) {
-          invoke("throw", err, resolve, reject);
-        }) : PromiseImpl.resolve(value).then(function (unwrapped) {
-          result.value = unwrapped, resolve(result);
-        }, function (error) {
-          return invoke("throw", error, resolve, reject);
-        });
-      }
-      reject(record.arg);
-    }
-    var previousPromise;
-    defineProperty(this, "_invoke", {
-      value: function value(method, arg) {
-        function callInvokeWithMethodAndArg() {
-          return new PromiseImpl(function (resolve, reject) {
-            invoke(method, arg, resolve, reject);
-          });
-        }
-        return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg();
-      }
-    });
-  }
-  function makeInvokeMethod(innerFn, self, context) {
-    var state = "suspendedStart";
-    return function (method, arg) {
-      if ("executing" === state) throw new Error("Generator is already running");
-      if ("completed" === state) {
-        if ("throw" === method) throw arg;
-        return doneResult();
-      }
-      for (context.method = method, context.arg = arg;;) {
-        var delegate = context.delegate;
-        if (delegate) {
-          var delegateResult = maybeInvokeDelegate(delegate, context);
-          if (delegateResult) {
-            if (delegateResult === ContinueSentinel) continue;
-            return delegateResult;
-          }
-        }
-        if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) {
-          if ("suspendedStart" === state) throw state = "completed", context.arg;
-          context.dispatchException(context.arg);
-        } else "return" === context.method && context.abrupt("return", context.arg);
-        state = "executing";
-        var record = tryCatch(innerFn, self, context);
-        if ("normal" === record.type) {
-          if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue;
-          return {
-            value: record.arg,
-            done: context.done
-          };
-        }
-        "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg);
-      }
-    };
-  }
-  function maybeInvokeDelegate(delegate, context) {
-    var methodName = context.method,
-      method = delegate.iterator[methodName];
-    if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel;
-    var record = tryCatch(method, delegate.iterator, context.arg);
-    if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel;
-    var info = record.arg;
-    return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel);
-  }
-  function pushTryEntry(locs) {
-    var entry = {
-      tryLoc: locs[0]
-    };
-    1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry);
-  }
-  function resetTryEntry(entry) {
-    var record = entry.completion || {};
-    record.type = "normal", delete record.arg, entry.completion = record;
-  }
-  function Context(tryLocsList) {
-    this.tryEntries = [{
-      tryLoc: "root"
-    }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0);
-  }
-  function values(iterable) {
-    if (iterable) {
-      var iteratorMethod = iterable[iteratorSymbol];
-      if (iteratorMethod) return iteratorMethod.call(iterable);
-      if ("function" == typeof iterable.next) return iterable;
-      if (!isNaN(iterable.length)) {
-        var i = -1,
-          next = function next() {
-            for (; ++i < iterable.length;) {
-              if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next;
-            }
-            return next.value = undefined, next.done = !0, next;
-          };
-        return next.next = next;
-      }
-    }
-    return {
-      next: doneResult
-    };
-  }
-  function doneResult() {
-    return {
-      value: undefined,
-      done: !0
-    };
-  }
-  return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", {
-    value: GeneratorFunctionPrototype,
-    configurable: !0
-  }), defineProperty(GeneratorFunctionPrototype, "constructor", {
-    value: GeneratorFunction,
-    configurable: !0
-  }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) {
-    var ctor = "function" == typeof genFun && genFun.constructor;
-    return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name));
-  }, exports.mark = function (genFun) {
-    return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun;
-  }, exports.awrap = function (arg) {
-    return {
-      __await: arg
-    };
-  }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () {
-    return this;
-  }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) {
-    void 0 === PromiseImpl && (PromiseImpl = Promise);
-    var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl);
-    return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) {
-      return result.done ? result.value : iter.next();
-    });
-  }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () {
-    return this;
-  }), define(Gp, "toString", function () {
-    return "[object Generator]";
-  }), exports.keys = function (val) {
-    var object = Object(val),
-      keys = [];
-    for (var key in object) {
-      keys.push(key);
-    }
-    return keys.reverse(), function next() {
-      for (; keys.length;) {
-        var key = keys.pop();
-        if (key in object) return next.value = key, next.done = !1, next;
-      }
-      return next.done = !0, next;
-    };
-  }, exports.values = values, Context.prototype = {
-    constructor: Context,
-    reset: function reset(skipTempReset) {
-      if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) {
-        "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined);
-      }
-    },
-    stop: function stop() {
-      this.done = !0;
-      var rootRecord = this.tryEntries[0].completion;
-      if ("throw" === rootRecord.type) throw rootRecord.arg;
-      return this.rval;
-    },
-    dispatchException: function dispatchException(exception) {
-      if (this.done) throw exception;
-      var context = this;
-      function handle(loc, caught) {
-        return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught;
-      }
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i],
-          record = entry.completion;
-        if ("root" === entry.tryLoc) return handle("end");
-        if (entry.tryLoc <= this.prev) {
-          var hasCatch = hasOwn.call(entry, "catchLoc"),
-            hasFinally = hasOwn.call(entry, "finallyLoc");
-          if (hasCatch && hasFinally) {
-            if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
-            if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
-          } else if (hasCatch) {
-            if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
-          } else {
-            if (!hasFinally) throw new Error("try statement without catch or finally");
-            if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
-          }
-        }
-      }
-    },
-    abrupt: function abrupt(type, arg) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) {
-          var finallyEntry = entry;
-          break;
-        }
-      }
-      finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null);
-      var record = finallyEntry ? finallyEntry.completion : {};
-      return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record);
-    },
-    complete: function complete(record, afterLoc) {
-      if ("throw" === record.type) throw record.arg;
-      return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel;
-    },
-    finish: function finish(finallyLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel;
-      }
-    },
-    "catch": function _catch(tryLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc === tryLoc) {
-          var record = entry.completion;
-          if ("throw" === record.type) {
-            var thrown = record.arg;
-            resetTryEntry(entry);
-          }
-          return thrown;
-        }
-      }
-      throw new Error("illegal catch attempt");
-    },
-    delegateYield: function delegateYield(iterable, resultName, nextLoc) {
-      return this.delegate = {
-        iterator: values(iterable),
-        resultName: resultName,
-        nextLoc: nextLoc
-      }, "next" === this.method && (this.arg = undefined), ContinueSentinel;
-    }
-  }, exports;
-}
-module.exports = _regeneratorRuntime, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 57:
-/*!*****************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/asyncToGenerator.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
-  try {
-    var info = gen[key](arg);
-    var value = info.value;
-  } catch (error) {
-    reject(error);
-    return;
-  }
-  if (info.done) {
-    resolve(value);
-  } else {
-    Promise.resolve(value).then(_next, _throw);
-  }
-}
-function _asyncToGenerator(fn) {
-  return function () {
-    var self = this,
-      args = arguments;
-    return new Promise(function (resolve, reject) {
-      var gen = fn.apply(self, args);
-      function _next(value) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
-      }
-      function _throw(err) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
-      }
-      _next(undefined);
-    });
-  };
-}
-module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 587:
-/*!*********************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-toolbar/components/uv-toolbar/props.js ***!
-  \*********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _uni$$uv, _uni$$uv$props;
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var _default = {
-  props: _objectSpread({
-    // 是否展示工具条
-    show: {
-      type: Boolean,
-      default: true
-    },
-    // 是否显示下边框
-    showBorder: {
-      type: Boolean,
-      default: false
-    },
-    // 取消按钮的文字
-    cancelText: {
-      type: String,
-      default: '取消'
-    },
-    // 确认按钮的文字
-    confirmText: {
-      type: String,
-      default: '确认'
-    },
-    // 取消按钮的颜色
-    cancelColor: {
-      type: String,
-      default: '#909193'
-    },
-    // 确认按钮的颜色
-    confirmColor: {
-      type: String,
-      default: '#3c9cff'
-    },
-    // 标题文字
-    title: {
-      type: String,
-      default: ''
-    }
-  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.toolbar)
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-
-/***/ 6:
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/arrayWithHoles.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
-module.exports = _arrayWithHoles, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 602:
-/*!*******************************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-loading-icon/components/uv-loading-icon/props.js ***!
-  \*******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _uni$$uv, _uni$$uv$props;
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var _default2 = {
-  props: _objectSpread({
-    // 是否显示组件
-    show: {
-      type: Boolean,
-      default: true
-    },
-    // 颜色
-    color: {
-      type: String,
-      default: '#909193'
-    },
-    // 提示文字颜色
-    textColor: {
-      type: String,
-      default: '#909193'
-    },
-    // 文字和图标是否垂直排列
-    vertical: {
-      type: Boolean,
-      default: false
-    },
-    // 模式选择，circle-圆形，spinner-花朵形，semicircle-半圆形
-    mode: {
-      type: String,
-      default: 'spinner'
-    },
-    // 图标大小，单位默认px
-    size: {
-      type: [String, Number],
-      default: 24
-    },
-    // 文字大小
-    textSize: {
-      type: [String, Number],
-      default: 15
-    },
-    // 文字样式
-    textStyle: {
-      type: Object,
-      default: function _default() {
-        return {};
-      }
-    },
-    // 文字内容
-    text: {
-      type: [String, Number],
-      default: ''
-    },
-    // 动画模式 https://www.runoob.com/cssref/css3-pr-animation-timing-function.html
-    timingFunction: {
-      type: String,
-      default: 'linear'
-    },
-    // 动画执行周期时间
-    duration: {
-      type: [String, Number],
-      default: 1200
-    },
-    // mode=circle时的暗边颜色
-    inactiveColor: {
-      type: String,
-      default: ''
-    }
-  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.loadingIcon)
-};
-exports.default = _default2;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-
-/***/ 610:
-/*!*********************************************************************************!*\
-  !*** F:/CodeFile/pingCar/uni_modules/uv-overlay/components/uv-overlay/props.js ***!
-  \*********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _uni$$uv, _uni$$uv$props;
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var _default = {
-  props: _objectSpread({
-    // 是否显示遮罩
-    show: {
-      type: Boolean,
-      default: false
-    },
-    // 层级z-index
-    zIndex: {
-      type: [String, Number],
-      default: 10070
-    },
-    // 遮罩的过渡时间，单位为ms
-    duration: {
-      type: [String, Number],
-      default: 300
-    },
-    // 不透明度值，当做rgba的第四个参数
-    opacity: {
-      type: [String, Number],
-      default: 0.5
-    }
-  }, (_uni$$uv = uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$props = _uni$$uv.props) === null || _uni$$uv$props === void 0 ? void 0 : _uni$$uv$props.overlay)
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-
-/***/ 618:
+/***/ 501:
 /*!*************************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-transition/components/uv-transition/createAnimation.js ***!
   \*************************************************************************************************/
@@ -19148,7 +16497,7 @@ function createAnimation(option, _this) {
 
 /***/ }),
 
-/***/ 624:
+/***/ 507:
 /*!***************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-status-bar/components/uv-status-bar/props.js ***!
   \***************************************************************************************/
@@ -19174,7 +16523,225 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 639:
+/***/ 51:
+/*!***************************************!*\
+  !*** ./node_modules/isarray/index.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var toString = {}.toString;
+
+module.exports = Array.isArray || function (arr) {
+  return toString.call(arr) == '[object Array]';
+};
+
+
+/***/ }),
+
+/***/ 52:
+/*!***********************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/mixin/mixin.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var index = _interopRequireWildcard(__webpack_require__(/*! ../function/index.js */ 53));
+var test = _interopRequireWildcard(__webpack_require__(/*! ../function/test.js */ 54));
+var _route = _interopRequireDefault(__webpack_require__(/*! ../util/route.js */ 57));
+var _debounce = _interopRequireDefault(__webpack_require__(/*! ../function/debounce.js */ 61));
+var _throttle = _interopRequireDefault(__webpack_require__(/*! ../function/throttle.js */ 62));
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default2 = {
+  // 定义每个组件都可能需要用到的外部样式以及类名
+  props: {
+    // 每个组件都有的父组件传递的样式，可以为字符串或者对象形式
+    customStyle: {
+      type: [Object, String],
+      default: function _default() {
+        return {};
+      }
+    },
+    customClass: {
+      type: String,
+      default: ''
+    },
+    // 跳转的页面路径
+    url: {
+      type: String,
+      default: ''
+    },
+    // 页面跳转的类型
+    linkType: {
+      type: String,
+      default: 'navigateTo'
+    }
+  },
+  data: function data() {
+    return {};
+  },
+  onLoad: function onLoad() {
+    // getRect挂载到$uv上，因为这方法需要使用in(this)，所以无法把它独立成一个单独的文件导出
+    this.$uv.getRect = this.$uvGetRect;
+  },
+  created: function created() {
+    // 组件当中，只有created声明周期，为了能在组件使用，故也在created中将方法挂载到$uv
+    this.$uv.getRect = this.$uvGetRect;
+  },
+  computed: {
+    $uv: function $uv() {
+      var _uni, _uni$$uv, _uni$$uv$config;
+      return _objectSpread(_objectSpread({}, index), {}, {
+        test: test,
+        route: _route.default,
+        debounce: _debounce.default,
+        throttle: _throttle.default,
+        unit: (_uni = uni) === null || _uni === void 0 ? void 0 : (_uni$$uv = _uni.$uv) === null || _uni$$uv === void 0 ? void 0 : (_uni$$uv$config = _uni$$uv.config) === null || _uni$$uv$config === void 0 ? void 0 : _uni$$uv$config.unit
+      });
+    },
+    /**
+     * 生成bem规则类名
+     * 由于微信小程序，H5，nvue之间绑定class的差异，无法通过:class="[bem()]"的形式进行同用
+     * 故采用如下折中做法，最后返回的是数组（一般平台）或字符串（支付宝和字节跳动平台），类似['a', 'b', 'c']或'a b c'的形式
+     * @param {String} name 组件名称
+     * @param {Array} fixed 一直会存在的类名
+     * @param {Array} change 会根据变量值为true或者false而出现或者隐藏的类名
+     * @returns {Array|string}
+     */
+    bem: function bem() {
+      return function (name, fixed, change) {
+        var _this = this;
+        // 类名前缀
+        var prefix = "uv-".concat(name, "--");
+        var classes = {};
+        if (fixed) {
+          fixed.map(function (item) {
+            // 这里的类名，会一直存在
+            classes[prefix + _this[item]] = true;
+          });
+        }
+        if (change) {
+          change.map(function (item) {
+            // 这里的类名，会根据this[item]的值为true或者false，而进行添加或者移除某一个类
+            _this[item] ? classes[prefix + item] = _this[item] : delete classes[prefix + item];
+          });
+        }
+        return Object.keys(classes);
+        // 支付宝，头条小程序无法动态绑定一个数组类名，否则解析出来的结果会带有","，而导致失效
+      };
+    }
+  },
+
+  methods: {
+    // 跳转某一个页面
+    openPage: function openPage() {
+      var urlKey = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'url';
+      var url = this[urlKey];
+      if (url) {
+        // 执行类似uni.navigateTo的方法
+        uni[this.linkType]({
+          url: url
+        });
+      }
+    },
+    // 查询节点信息
+    // 目前此方法在支付宝小程序中无法获取组件跟接点的尺寸，为支付宝的bug(2020-07-21)
+    // 解决办法为在组件根部再套一个没有任何作用的view元素
+    $uvGetRect: function $uvGetRect(selector, all) {
+      var _this2 = this;
+      return new Promise(function (resolve) {
+        uni.createSelectorQuery().in(_this2)[all ? 'selectAll' : 'select'](selector).boundingClientRect(function (rect) {
+          if (all && Array.isArray(rect) && rect.length) {
+            resolve(rect);
+          }
+          if (!all && rect) {
+            resolve(rect);
+          }
+        }).exec();
+      });
+    },
+    getParentData: function getParentData() {
+      var _this3 = this;
+      var parentName = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+      // 避免在created中去定义parent变量
+      if (!this.parent) this.parent = {};
+      // 这里的本质原理是，通过获取父组件实例(也即类似uv-radio的父组件uv-radio-group的this)
+      // 将父组件this中对应的参数，赋值给本组件(uv-radio的this)的parentData对象中对应的属性
+      // 之所以需要这么做，是因为所有端中，头条小程序不支持通过this.parent.xxx去监听父组件参数的变化
+      // 此处并不会自动更新子组件的数据，而是依赖父组件uv-radio-group去监听data的变化，手动调用更新子组件的方法去重新获取
+      this.parent = this.$uv.$parent.call(this, parentName);
+      if (this.parent.children) {
+        // 如果父组件的children不存在本组件的实例，才将本实例添加到父组件的children中
+        this.parent.children.indexOf(this) === -1 && this.parent.children.push(this);
+      }
+      if (this.parent && this.parentData) {
+        // 历遍parentData中的属性，将parent中的同名属性赋值给parentData
+        Object.keys(this.parentData).map(function (key) {
+          _this3.parentData[key] = _this3.parent[key];
+        });
+      }
+    },
+    // 阻止事件冒泡
+    preventEvent: function preventEvent(e) {
+      e && typeof e.stopPropagation === 'function' && e.stopPropagation();
+    },
+    // 空操作
+    noop: function noop(e) {
+      this.preventEvent(e);
+    }
+  },
+  onReachBottom: function onReachBottom() {
+    uni.$emit('uvOnReachBottom');
+  },
+  beforeDestroy: function beforeDestroy() {
+    var _this4 = this;
+    // 判断当前页面是否存在parent和chldren，一般在checkbox和checkbox-group父子联动的场景会有此情况
+    // 组件销毁时，移除子组件在父组件children数组中的实例，释放资源，避免数据混乱
+    if (this.parent && test.array(this.parent.children)) {
+      // 组件销毁时，移除父组件中的children数组中对应的实例
+      var childrenList = this.parent.children;
+      childrenList.map(function (child, index) {
+        // 如果相等，则移除
+        if (child === _this4) {
+          childrenList.splice(index, 1);
+        }
+      });
+    }
+  },
+  // 兼容vue3
+  unmounted: function unmounted() {
+    var _this5 = this;
+    if (this.parent && test.array(this.parent.children)) {
+      // 组件销毁时，移除父组件中的children数组中对应的实例
+      var childrenList = this.parent.children;
+      childrenList.map(function (child, index) {
+        // 如果相等，则移除
+        if (child === _this5) {
+          childrenList.splice(index, 1);
+        }
+      });
+    }
+  }
+};
+exports.default = _default2;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+
+/***/ 522:
 /*!***************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-icon/components/uv-icon/icons.js ***!
   \***************************************************************************/
@@ -19352,25 +16919,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 64:
-/*!********************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/toArray.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayWithHoles = __webpack_require__(/*! ./arrayWithHoles.js */ 6);
-var iterableToArray = __webpack_require__(/*! ./iterableToArray.js */ 20);
-var unsupportedIterableToArray = __webpack_require__(/*! ./unsupportedIterableToArray.js */ 8);
-var nonIterableRest = __webpack_require__(/*! ./nonIterableRest.js */ 10);
-function _toArray(arr) {
-  return arrayWithHoles(arr) || iterableToArray(arr) || unsupportedIterableToArray(arr) || nonIterableRest();
-}
-module.exports = _toArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 640:
+/***/ 523:
 /*!***************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-icon/components/uv-icon/props.js ***!
   \***************************************************************************/
@@ -19483,7 +17032,806 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 648:
+/***/ 53:
+/*!**************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/index.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.$parent = $parent;
+exports.addStyle = addStyle;
+exports.addUnit = addUnit;
+exports.deepClone = deepClone;
+exports.deepMerge = deepMerge;
+exports.error = error;
+exports.formValidate = formValidate;
+exports.getDuration = getDuration;
+exports.getHistoryPage = getHistoryPage;
+exports.getProperty = getProperty;
+exports.getPx = getPx;
+exports.guid = guid;
+exports.os = os;
+exports.padZero = padZero;
+exports.page = page;
+exports.pages = pages;
+exports.priceFormat = priceFormat;
+exports.queryParams = queryParams;
+exports.random = random;
+exports.randomArray = randomArray;
+exports.range = range;
+exports.setConfig = setConfig;
+exports.setProperty = setProperty;
+exports.sleep = sleep;
+exports.sys = sys;
+exports.timeFormat = timeFormat;
+exports.timeFrom = timeFrom;
+exports.toast = toast;
+exports.trim = trim;
+exports.type2icon = type2icon;
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
+var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
+var _test = __webpack_require__(/*! ./test.js */ 54);
+var _digit = __webpack_require__(/*! ./digit.js */ 55);
+/**
+ * @description 如果value小于min，取min；如果value大于max，取max
+ * @param {number} min
+ * @param {number} max
+ * @param {number} value
+ */
+function range() {
+  var min = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+  var max = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+  var value = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+  return Math.max(min, Math.min(max, Number(value)));
+}
+
+/**
+ * @description 用于获取用户传递值的px值  如果用户传递了"xxpx"或者"xxrpx"，取出其数值部分，如果是"xxxrpx"还需要用过uni.upx2px进行转换
+ * @param {number|string} value 用户传递值的px值
+ * @param {boolean} unit
+ * @returns {number|string}
+ */
+function getPx(value) {
+  var unit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  if ((0, _test.number)(value)) {
+    return unit ? "".concat(value, "px") : Number(value);
+  }
+  // 如果带有rpx，先取出其数值部分，再转为px值
+  if (/(rpx|upx)$/.test(value)) {
+    return unit ? "".concat(uni.upx2px(parseInt(value)), "px") : Number(uni.upx2px(parseInt(value)));
+  }
+  return unit ? "".concat(parseInt(value), "px") : parseInt(value);
+}
+
+/**
+ * @description 进行延时，以达到可以简写代码的目的 比如: await uni.$uv.sleep(20)将会阻塞20ms
+ * @param {number} value 堵塞时间 单位ms 毫秒
+ * @returns {Promise} 返回promise
+ */
+function sleep() {
+  var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 30;
+  return new Promise(function (resolve) {
+    setTimeout(function () {
+      resolve();
+    }, value);
+  });
+}
+/**
+ * @description 运行期判断平台
+ * @returns {string} 返回所在平台(小写)
+ * @link 运行期判断平台 https://uniapp.dcloud.io/frame?id=判断平台
+ */
+function os() {
+  return uni.getSystemInfoSync().platform.toLowerCase();
+}
+/**
+ * @description 获取系统信息同步接口
+ * @link 获取系统信息同步接口 https://uniapp.dcloud.io/api/system/info?id=getsysteminfosync
+ */
+function sys() {
+  return uni.getSystemInfoSync();
+}
+
+/**
+ * @description 取一个区间数
+ * @param {Number} min 最小值
+ * @param {Number} max 最大值
+ */
+function random(min, max) {
+  if (min >= 0 && max > 0 && max >= min) {
+    var gab = max - min + 1;
+    return Math.floor(Math.random() * gab + min);
+  }
+  return 0;
+}
+
+/**
+ * @param {Number} len uuid的长度
+ * @param {Boolean} firstU 将返回的首字母置为"u"
+ * @param {Nubmer} radix 生成uuid的基数(意味着返回的字符串都是这个基数),2-二进制,8-八进制,10-十进制,16-十六进制
+ */
+function guid() {
+  var len = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 32;
+  var firstU = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+  var radix = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+  var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
+  var uuid = [];
+  radix = radix || chars.length;
+  if (len) {
+    // 如果指定uuid长度,只是取随机的字符,0|x为位运算,能去掉x的小数位,返回整数位
+    for (var i = 0; i < len; i++) {
+      uuid[i] = chars[0 | Math.random() * radix];
+    }
+  } else {
+    var r;
+    // rfc4122标准要求返回的uuid中,某些位为固定的字符
+    uuid[8] = uuid[13] = uuid[18] = uuid[23] = '-';
+    uuid[14] = '4';
+    for (var _i = 0; _i < 36; _i++) {
+      if (!uuid[_i]) {
+        r = 0 | Math.random() * 16;
+        uuid[_i] = chars[_i == 19 ? r & 0x3 | 0x8 : r];
+      }
+    }
+  }
+  // 移除第一个字符,并用u替代,因为第一个字符为数值时,该guuid不能用作id或者class
+  if (firstU) {
+    uuid.shift();
+    return "u".concat(uuid.join(''));
+  }
+  return uuid.join('');
+}
+
+/**
+* @description 获取父组件的参数，因为支付宝小程序不支持provide/inject的写法
+   this.$parent在非H5中，可以准确获取到父组件，但是在H5中，需要多次this.$parent.$parent.xxx
+   这里默认值等于undefined有它的含义，因为最顶层元素(组件)的$parent就是undefined，意味着不传name
+   值(默认为undefined)，就是查找最顶层的$parent
+*  @param {string|undefined} name 父组件的参数名
+*/
+function $parent() {
+  var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : undefined;
+  var parent = this.$parent;
+  // 通过while历遍，这里主要是为了H5需要多层解析的问题
+  while (parent) {
+    // 父组件
+    if (parent.$options && parent.$options.name !== name) {
+      // 如果组件的name不相等，继续上一级寻找
+      parent = parent.$parent;
+    } else {
+      return parent;
+    }
+  }
+  return false;
+}
+
+/**
+ * @description 样式转换
+ * 对象转字符串，或者字符串转对象
+ * @param {object | string} customStyle 需要转换的目标
+ * @param {String} target 转换的目的，object-转为对象，string-转为字符串
+ * @returns {object|string}
+ */
+function addStyle(customStyle) {
+  var target = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'object';
+  // 字符串转字符串，对象转对象情形，直接返回
+  if ((0, _test.empty)(customStyle) || (0, _typeof2.default)(customStyle) === 'object' && target === 'object' || target === 'string' && typeof customStyle === 'string') {
+    return customStyle;
+  }
+  // 字符串转对象
+  if (target === 'object') {
+    // 去除字符串样式中的两端空格(中间的空格不能去掉，比如padding: 20px 0如果去掉了就错了)，空格是无用的
+    customStyle = trim(customStyle);
+    // 根据";"将字符串转为数组形式
+    var styleArray = customStyle.split(';');
+    var style = {};
+    // 历遍数组，拼接成对象
+    for (var i = 0; i < styleArray.length; i++) {
+      // 'font-size:20px;color:red;'，如此最后字符串有";"的话，会导致styleArray最后一个元素为空字符串，这里需要过滤
+      if (styleArray[i]) {
+        var item = styleArray[i].split(':');
+        style[trim(item[0])] = trim(item[1]);
+      }
+    }
+    return style;
+  }
+  // 这里为对象转字符串形式
+  var string = '';
+  for (var _i2 in customStyle) {
+    // 驼峰转为中划线的形式，否则css内联样式，无法识别驼峰样式属性名
+    var key = _i2.replace(/([A-Z])/g, '-$1').toLowerCase();
+    string += "".concat(key, ":").concat(customStyle[_i2], ";");
+  }
+  // 去除两端空格
+  return trim(string);
+}
+
+/**
+ * @description 添加单位，如果有rpx，upx，%，px等单位结尾或者值为auto，直接返回，否则加上px单位结尾
+ * @param {string|number} value 需要添加单位的值
+ * @param {string} unit 添加的单位名 比如px
+ */
+function addUnit() {
+  var _uni, _uni$$uv, _uni$$uv$config, _uni2, _uni2$$uv, _uni2$$uv$config;
+  var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'auto';
+  var unit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (_uni = uni) !== null && _uni !== void 0 && (_uni$$uv = _uni.$uv) !== null && _uni$$uv !== void 0 && (_uni$$uv$config = _uni$$uv.config) !== null && _uni$$uv$config !== void 0 && _uni$$uv$config.unit ? (_uni2 = uni) === null || _uni2 === void 0 ? void 0 : (_uni2$$uv = _uni2.$uv) === null || _uni2$$uv === void 0 ? void 0 : (_uni2$$uv$config = _uni2$$uv.config) === null || _uni2$$uv$config === void 0 ? void 0 : _uni2$$uv$config.unit : 'px';
+  value = String(value);
+  // 用uvui内置验证规则中的number判断是否为数值
+  return (0, _test.number)(value) ? "".concat(value).concat(unit) : value;
+}
+
+/**
+ * @description 深度克隆
+ * @param {object} obj 需要深度克隆的对象
+ * @param cache 缓存
+ * @returns {*} 克隆后的对象或者原值（不是对象）
+ */
+function deepClone(obj) {
+  var cache = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new WeakMap();
+  if (obj === null || (0, _typeof2.default)(obj) !== 'object') return obj;
+  if (cache.has(obj)) return cache.get(obj);
+  var clone;
+  if (obj instanceof Date) {
+    clone = new Date(obj.getTime());
+  } else if (obj instanceof RegExp) {
+    clone = new RegExp(obj);
+  } else if (obj instanceof Map) {
+    clone = new Map(Array.from(obj, function (_ref) {
+      var _ref2 = (0, _slicedToArray2.default)(_ref, 2),
+        key = _ref2[0],
+        value = _ref2[1];
+      return [key, deepClone(value, cache)];
+    }));
+  } else if (obj instanceof Set) {
+    clone = new Set(Array.from(obj, function (value) {
+      return deepClone(value, cache);
+    }));
+  } else if (Array.isArray(obj)) {
+    clone = obj.map(function (value) {
+      return deepClone(value, cache);
+    });
+  } else if (Object.prototype.toString.call(obj) === '[object Object]') {
+    clone = Object.create(Object.getPrototypeOf(obj));
+    cache.set(obj, clone);
+    for (var _i3 = 0, _Object$entries = Object.entries(obj); _i3 < _Object$entries.length; _i3++) {
+      var _Object$entries$_i = (0, _slicedToArray2.default)(_Object$entries[_i3], 2),
+        key = _Object$entries$_i[0],
+        value = _Object$entries$_i[1];
+      clone[key] = deepClone(value, cache);
+    }
+  } else {
+    clone = Object.assign({}, obj);
+  }
+  cache.set(obj, clone);
+  return clone;
+}
+
+/**
+ * @description JS对象深度合并
+ * @param {object} target 需要拷贝的对象
+ * @param {object} source 拷贝的来源对象
+ * @returns {object|boolean} 深度合并后的对象或者false（入参有不是对象）
+ */
+function deepMerge() {
+  var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var source = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  target = deepClone(target);
+  if ((0, _typeof2.default)(target) !== 'object' || target === null || (0, _typeof2.default)(source) !== 'object' || source === null) return target;
+  var merged = Array.isArray(target) ? target.slice() : Object.assign({}, target);
+  for (var prop in source) {
+    if (!source.hasOwnProperty(prop)) continue;
+    var sourceValue = source[prop];
+    var targetValue = merged[prop];
+    if (sourceValue instanceof Date) {
+      merged[prop] = new Date(sourceValue);
+    } else if (sourceValue instanceof RegExp) {
+      merged[prop] = new RegExp(sourceValue);
+    } else if (sourceValue instanceof Map) {
+      merged[prop] = new Map(sourceValue);
+    } else if (sourceValue instanceof Set) {
+      merged[prop] = new Set(sourceValue);
+    } else if ((0, _typeof2.default)(sourceValue) === 'object' && sourceValue !== null) {
+      merged[prop] = deepMerge(targetValue, sourceValue);
+    } else {
+      merged[prop] = sourceValue;
+    }
+  }
+  return merged;
+}
+
+/**
+ * @description error提示
+ * @param {*} err 错误内容
+ */
+function error(err) {
+  // 开发环境才提示，生产环境不会提示
+  if (true) {
+    console.error("uvui\u63D0\u793A\uFF1A".concat(err));
+  }
+}
+
+/**
+ * @description 打乱数组
+ * @param {array} array 需要打乱的数组
+ * @returns {array} 打乱后的数组
+ */
+function randomArray() {
+  var array = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  // 原理是sort排序,Math.random()产生0<= x < 1之间的数,会导致x-0.05大于或者小于0
+  return array.sort(function () {
+    return Math.random() - 0.5;
+  });
+}
+
+// padStart 的 polyfill，因为某些机型或情况，还无法支持es7的padStart，比如电脑版的微信小程序
+// 所以这里做一个兼容polyfill的兼容处理
+if (!String.prototype.padStart) {
+  // 为了方便表示这里 fillString 用了ES6 的默认参数，不影响理解
+  String.prototype.padStart = function (maxLength) {
+    var fillString = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : ' ';
+    if (Object.prototype.toString.call(fillString) !== '[object String]') {
+      throw new TypeError('fillString must be String');
+    }
+    var str = this;
+    // 返回 String(str) 这里是为了使返回的值是字符串字面量，在控制台中更符合直觉
+    if (str.length >= maxLength) return String(str);
+    var fillLength = maxLength - str.length;
+    var times = Math.ceil(fillLength / fillString.length);
+    while (times >>= 1) {
+      fillString += fillString;
+      if (times === 1) {
+        fillString += fillString;
+      }
+    }
+    return fillString.slice(0, fillLength) + str;
+  };
+}
+
+/**
+ * @description 格式化时间
+ * @param {String|Number} dateTime 需要格式化的时间戳
+ * @param {String} fmt 格式化规则 yyyy:mm:dd|yyyy:mm|yyyy年mm月dd日|yyyy年mm月dd日 hh时MM分等,可自定义组合 默认yyyy-mm-dd
+ * @returns {string} 返回格式化后的字符串
+ */
+function timeFormat() {
+  var dateTime = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+  var formatStr = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'yyyy-mm-dd';
+  var date;
+  // 若传入时间为假值，则取当前时间
+  if (!dateTime) {
+    date = new Date();
+  }
+  // 若为unix秒时间戳，则转为毫秒时间戳（逻辑有点奇怪，但不敢改，以保证历史兼容）
+  else if (/^\d{10}$/.test(dateTime === null || dateTime === void 0 ? void 0 : dateTime.toString().trim())) {
+    date = new Date(dateTime * 1000);
+  }
+  // 若用户传入字符串格式时间戳，new Date无法解析，需做兼容
+  else if (typeof dateTime === 'string' && /^\d+$/.test(dateTime.trim())) {
+    date = new Date(Number(dateTime));
+  }
+  // 处理平台性差异，在Safari/Webkit中，new Date仅支持/作为分割符的字符串时间
+  // 处理 '2022-07-10 01:02:03'，跳过 '2022-07-10T01:02:03'
+  else if (typeof dateTime === 'string' && dateTime.includes('-') && !dateTime.includes('T')) {
+    date = new Date(dateTime.replace(/-/g, '/'));
+  }
+  // 其他都认为符合 RFC 2822 规范
+  else {
+    date = new Date(dateTime);
+  }
+  var timeSource = {
+    'y': date.getFullYear().toString(),
+    // 年
+    'm': (date.getMonth() + 1).toString().padStart(2, '0'),
+    // 月
+    'd': date.getDate().toString().padStart(2, '0'),
+    // 日
+    'h': date.getHours().toString().padStart(2, '0'),
+    // 时
+    'M': date.getMinutes().toString().padStart(2, '0'),
+    // 分
+    's': date.getSeconds().toString().padStart(2, '0') // 秒
+    // 有其他格式化字符需求可以继续添加，必须转化成字符串
+  };
+
+  for (var key in timeSource) {
+    var _ref3 = new RegExp("".concat(key, "+")).exec(formatStr) || [],
+      _ref4 = (0, _slicedToArray2.default)(_ref3, 1),
+      ret = _ref4[0];
+    if (ret) {
+      // 年可能只需展示两位
+      var beginIndex = key === 'y' && ret.length === 2 ? 2 : 0;
+      formatStr = formatStr.replace(ret, timeSource[key].slice(beginIndex));
+    }
+  }
+  return formatStr;
+}
+
+/**
+ * @description 时间戳转为多久之前
+ * @param {String|Number} timestamp 时间戳
+ * @param {String|Boolean} format
+ * 格式化规则如果为时间格式字符串，超出一定时间范围，返回固定的时间格式；
+ * 如果为布尔值false，无论什么时间，都返回多久以前的格式
+ * @returns {string} 转化后的内容
+ */
+function timeFrom() {
+  var timestamp = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+  var format = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'yyyy-mm-dd';
+  if (timestamp == null) timestamp = Number(new Date());
+  timestamp = parseInt(timestamp);
+  // 判断用户输入的时间戳是秒还是毫秒,一般前端js获取的时间戳是毫秒(13位),后端传过来的为秒(10位)
+  if (timestamp.toString().length == 10) timestamp *= 1000;
+  var timer = new Date().getTime() - timestamp;
+  timer = parseInt(timer / 1000);
+  // 如果小于5分钟,则返回"刚刚",其他以此类推
+  var tips = '';
+  switch (true) {
+    case timer < 300:
+      tips = '刚刚';
+      break;
+    case timer >= 300 && timer < 3600:
+      tips = "".concat(parseInt(timer / 60), "\u5206\u949F\u524D");
+      break;
+    case timer >= 3600 && timer < 86400:
+      tips = "".concat(parseInt(timer / 3600), "\u5C0F\u65F6\u524D");
+      break;
+    case timer >= 86400 && timer < 2592000:
+      tips = "".concat(parseInt(timer / 86400), "\u5929\u524D");
+      break;
+    default:
+      // 如果format为false，则无论什么时间戳，都显示xx之前
+      if (format === false) {
+        if (timer >= 2592000 && timer < 365 * 86400) {
+          tips = "".concat(parseInt(timer / (86400 * 30)), "\u4E2A\u6708\u524D");
+        } else {
+          tips = "".concat(parseInt(timer / (86400 * 365)), "\u5E74\u524D");
+        }
+      } else {
+        tips = timeFormat(timestamp, format);
+      }
+  }
+  return tips;
+}
+
+/**
+ * @description 去除空格
+ * @param String str 需要去除空格的字符串
+ * @param String pos both(左右)|left|right|all 默认both
+ */
+function trim(str) {
+  var pos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'both';
+  str = String(str);
+  if (pos == 'both') {
+    return str.replace(/^\s+|\s+$/g, '');
+  }
+  if (pos == 'left') {
+    return str.replace(/^\s*/, '');
+  }
+  if (pos == 'right') {
+    return str.replace(/(\s*$)/g, '');
+  }
+  if (pos == 'all') {
+    return str.replace(/\s+/g, '');
+  }
+  return str;
+}
+
+/**
+ * @description 对象转url参数
+ * @param {object} data,对象
+ * @param {Boolean} isPrefix,是否自动加上"?"
+ * @param {string} arrayFormat 规则 indices|brackets|repeat|comma
+ */
+function queryParams() {
+  var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var isPrefix = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+  var arrayFormat = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'brackets';
+  var prefix = isPrefix ? '?' : '';
+  var _result = [];
+  if (['indices', 'brackets', 'repeat', 'comma'].indexOf(arrayFormat) == -1) arrayFormat = 'brackets';
+  var _loop = function _loop(key) {
+    var value = data[key];
+    // 去掉为空的参数
+    if (['', undefined, null].indexOf(value) >= 0) {
+      return "continue";
+    }
+    // 如果值为数组，另行处理
+    if (value.constructor === Array) {
+      // e.g. {ids: [1, 2, 3]}
+      switch (arrayFormat) {
+        case 'indices':
+          // 结果: ids[0]=1&ids[1]=2&ids[2]=3
+          for (var i = 0; i < value.length; i++) {
+            _result.push("".concat(key, "[").concat(i, "]=").concat(value[i]));
+          }
+          break;
+        case 'brackets':
+          // 结果: ids[]=1&ids[]=2&ids[]=3
+          value.forEach(function (_value) {
+            _result.push("".concat(key, "[]=").concat(_value));
+          });
+          break;
+        case 'repeat':
+          // 结果: ids=1&ids=2&ids=3
+          value.forEach(function (_value) {
+            _result.push("".concat(key, "=").concat(_value));
+          });
+          break;
+        case 'comma':
+          // 结果: ids=1,2,3
+          var commaStr = '';
+          value.forEach(function (_value) {
+            commaStr += (commaStr ? ',' : '') + _value;
+          });
+          _result.push("".concat(key, "=").concat(commaStr));
+          break;
+        default:
+          value.forEach(function (_value) {
+            _result.push("".concat(key, "[]=").concat(_value));
+          });
+      }
+    } else {
+      _result.push("".concat(key, "=").concat(value));
+    }
+  };
+  for (var key in data) {
+    var _ret = _loop(key);
+    if (_ret === "continue") continue;
+  }
+  return _result.length ? prefix + _result.join('&') : '';
+}
+
+/**
+ * 显示消息提示框
+ * @param {String} title 提示的内容，长度与 icon 取值有关。
+ * @param {Number} duration 提示的延迟时间，单位毫秒，默认：2000
+ */
+function toast(title) {
+  var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2000;
+  uni.showToast({
+    title: String(title),
+    icon: 'none',
+    duration: duration
+  });
+}
+
+/**
+ * @description 根据主题type值,获取对应的图标
+ * @param {String} type 主题名称,primary|info|error|warning|success
+ * @param {boolean} fill 是否使用fill填充实体的图标
+ */
+function type2icon() {
+  var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'success';
+  var fill = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  // 如果非预置值,默认为success
+  if (['primary', 'info', 'error', 'warning', 'success'].indexOf(type) == -1) type = 'success';
+  var iconName = '';
+  // 目前(2019-12-12),info和primary使用同一个图标
+  switch (type) {
+    case 'primary':
+      iconName = 'info-circle';
+      break;
+    case 'info':
+      iconName = 'info-circle';
+      break;
+    case 'error':
+      iconName = 'close-circle';
+      break;
+    case 'warning':
+      iconName = 'error-circle';
+      break;
+    case 'success':
+      iconName = 'checkmark-circle';
+      break;
+    default:
+      iconName = 'checkmark-circle';
+  }
+  // 是否是实体类型,加上-fill,在icon组件库中,实体的类名是后面加-fill的
+  if (fill) iconName += '-fill';
+  return iconName;
+}
+
+/**
+ * @description 数字格式化
+ * @param {number|string} number 要格式化的数字
+ * @param {number} decimals 保留几位小数
+ * @param {string} decimalPoint 小数点符号
+ * @param {string} thousandsSeparator 千分位符号
+ * @returns {string} 格式化后的数字
+ */
+function priceFormat(number) {
+  var decimals = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+  var decimalPoint = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '.';
+  var thousandsSeparator = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : ',';
+  number = "".concat(number).replace(/[^0-9+-Ee.]/g, '');
+  var n = !isFinite(+number) ? 0 : +number;
+  var prec = !isFinite(+decimals) ? 0 : Math.abs(decimals);
+  var sep = typeof thousandsSeparator === 'undefined' ? ',' : thousandsSeparator;
+  var dec = typeof decimalPoint === 'undefined' ? '.' : decimalPoint;
+  var s = '';
+  s = (prec ? (0, _digit.round)(n, prec) + '' : "".concat(Math.round(n))).split('.');
+  var re = /(-?\d+)(\d{3})/;
+  while (re.test(s[0])) {
+    s[0] = s[0].replace(re, "$1".concat(sep, "$2"));
+  }
+  if ((s[1] || '').length < prec) {
+    s[1] = s[1] || '';
+    s[1] += new Array(prec - s[1].length + 1).join('0');
+  }
+  return s.join(dec);
+}
+
+/**
+ * @description 获取duration值
+ * 如果带有ms或者s直接返回，如果大于一定值，认为是ms单位，小于一定值，认为是s单位
+ * 比如以30位阈值，那么300大于30，可以理解为用户想要的是300ms，而不是想花300s去执行一个动画
+ * @param {String|number} value 比如: "1s"|"100ms"|1|100
+ * @param {boolean} unit  提示: 如果是false 默认返回number
+ * @return {string|number}
+ */
+function getDuration(value) {
+  var unit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+  var valueNum = parseInt(value);
+  if (unit) {
+    if (/s$/.test(value)) return value;
+    return value > 30 ? "".concat(value, "ms") : "".concat(value, "s");
+  }
+  if (/ms$/.test(value)) return valueNum;
+  if (/s$/.test(value)) return valueNum > 30 ? valueNum : valueNum * 1000;
+  return valueNum;
+}
+
+/**
+ * @description 日期的月或日补零操作
+ * @param {String} value 需要补零的值
+ */
+function padZero(value) {
+  return "00".concat(value).slice(-2);
+}
+
+/**
+ * @description 在uv-form的子组件内容发生变化，或者失去焦点时，尝试通知uv-form执行校验方法
+ * @param {*} instance
+ * @param {*} event
+ */
+function formValidate(instance, event) {
+  var formItem = $parent.call(instance, 'uv-form-item');
+  var form = $parent.call(instance, 'uv-form');
+  // 如果发生变化的input或者textarea等，其父组件中有uv-form-item或者uv-form等，就执行form的validate方法
+  // 同时将form-item的pros传递给form，让其进行精确对象验证
+  if (formItem && form) {
+    form.validateField(formItem.prop, function () {}, event);
+  }
+}
+
+/**
+ * @description 获取某个对象下的属性，用于通过类似'a.b.c'的形式去获取一个对象的的属性的形式
+ * @param {object} obj 对象
+ * @param {string} key 需要获取的属性字段
+ * @returns {*}
+ */
+function getProperty(obj, key) {
+  if (!obj) {
+    return;
+  }
+  if (typeof key !== 'string' || key === '') {
+    return '';
+  }
+  if (key.indexOf('.') !== -1) {
+    var keys = key.split('.');
+    var firstObj = obj[keys[0]] || {};
+    for (var i = 1; i < keys.length; i++) {
+      if (firstObj) {
+        firstObj = firstObj[keys[i]];
+      }
+    }
+    return firstObj;
+  }
+  return obj[key];
+}
+
+/**
+ * @description 设置对象的属性值，如果'a.b.c'的形式进行设置
+ * @param {object} obj 对象
+ * @param {string} key 需要设置的属性
+ * @param {string} value 设置的值
+ */
+function setProperty(obj, key, value) {
+  if (!obj) {
+    return;
+  }
+  // 递归赋值
+  var inFn = function inFn(_obj, keys, v) {
+    // 最后一个属性key
+    if (keys.length === 1) {
+      _obj[keys[0]] = v;
+      return;
+    }
+    // 0~length-1个key
+    while (keys.length > 1) {
+      var k = keys[0];
+      if (!_obj[k] || (0, _typeof2.default)(_obj[k]) !== 'object') {
+        _obj[k] = {};
+      }
+      var _key = keys.shift();
+      // 自调用判断是否存在属性，不存在则自动创建对象
+      inFn(_obj[k], keys, v);
+    }
+  };
+  if (typeof key !== 'string' || key === '') {} else if (key.indexOf('.') !== -1) {
+    // 支持多层级赋值操作
+    var keys = key.split('.');
+    inFn(obj, keys, value);
+  } else {
+    obj[key] = value;
+  }
+}
+
+/**
+ * @description 获取当前页面路径
+ */
+function page() {
+  var _pages;
+  var pages = getCurrentPages();
+  var route = (_pages = pages[pages.length - 1]) === null || _pages === void 0 ? void 0 : _pages.route;
+  // 某些特殊情况下(比如页面进行redirectTo时的一些时机)，pages可能为空数组
+  return "/".concat(route ? route : '');
+}
+
+/**
+ * @description 获取当前路由栈实例数组
+ */
+function pages() {
+  var pages = getCurrentPages();
+  return pages;
+}
+
+/**
+ * 获取页面历史栈指定层实例
+ * @param back {number} [0] - 0或者负数，表示获取历史栈的哪一层，0表示获取当前页面实例，-1 表示获取上一个页面实例。默认0。
+ */
+function getHistoryPage() {
+  var back = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+  var pages = getCurrentPages();
+  var len = pages.length;
+  return pages[len - 1 + back];
+}
+
+/**
+ * @description 修改uvui内置属性值
+ * @param {object} props 修改内置props属性
+ * @param {object} config 修改内置config属性
+ * @param {object} color 修改内置color属性
+ * @param {object} zIndex 修改内置zIndex属性
+ */
+function setConfig(_ref5) {
+  var _ref5$props = _ref5.props,
+    props = _ref5$props === void 0 ? {} : _ref5$props,
+    _ref5$config = _ref5.config,
+    config = _ref5$config === void 0 ? {} : _ref5$config,
+    _ref5$color = _ref5.color,
+    color = _ref5$color === void 0 ? {} : _ref5$color,
+    _ref5$zIndex = _ref5.zIndex,
+    zIndex = _ref5$zIndex === void 0 ? {} : _ref5$zIndex;
+  var deepMerge = uni.$uv.deepMerge;
+  uni.$uv.config = deepMerge(uni.$uv.config, config);
+  uni.$uv.props = deepMerge(uni.$uv.props, props);
+  uni.$uv.color = deepMerge(uni.$uv.color, color);
+  uni.$uv.zIndex = deepMerge(uni.$uv.zIndex, zIndex);
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+
+/***/ 531:
 /*!*******************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uni-icons/components/uni-icons/uniicons_file_vue.js ***!
   \*******************************************************************************************/
@@ -19987,7 +18335,308 @@ exports.fontData = fontData;
 
 /***/ }),
 
-/***/ 663:
+/***/ 54:
+/*!*************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/test.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.amount = amount;
+exports.array = array;
+exports.carNo = carNo;
+exports.chinese = chinese;
+exports.code = code;
+exports.contains = contains;
+exports.date = date;
+exports.dateISO = dateISO;
+exports.digits = digits;
+exports.email = email;
+exports.empty = empty;
+exports.enOrNum = enOrNum;
+exports.func = func;
+exports.idCard = idCard;
+exports.image = image;
+exports.jsonString = jsonString;
+exports.landline = landline;
+exports.letter = letter;
+exports.mobile = mobile;
+exports.number = number;
+exports.object = object;
+exports.promise = promise;
+exports.range = range;
+exports.rangeLength = rangeLength;
+exports.regExp = regExp;
+exports.string = string;
+exports.url = url;
+exports.video = video;
+var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
+/**
+ * 验证电子邮箱格式
+ */
+function email(value) {
+  return /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/.test(value);
+}
+
+/**
+ * 验证手机格式
+ */
+function mobile(value) {
+  return /^1([3589]\d|4[5-9]|6[1-2,4-7]|7[0-8])\d{8}$/.test(value);
+}
+
+/**
+ * 验证URL格式
+ */
+function url(value) {
+  return /^((https|http|ftp|rtsp|mms):\/\/)(([0-9a-zA-Z_!~*'().&=+$%-]+: )?[0-9a-zA-Z_!~*'().&=+$%-]+@)?(([0-9]{1,3}.){3}[0-9]{1,3}|([0-9a-zA-Z_!~*'()-]+.)*([0-9a-zA-Z][0-9a-zA-Z-]{0,61})?[0-9a-zA-Z].[a-zA-Z]{2,6})(:[0-9]{1,4})?((\/?)|(\/[0-9a-zA-Z_!~*'().;?:@&=+$,%#-]+)+\/?)$/.test(value);
+}
+
+/**
+ * 验证日期格式
+ */
+function date(value) {
+  if (!value) return false;
+  // 判断是否数值或者字符串数值(意味着为时间戳)，转为数值，否则new Date无法识别字符串时间戳
+  if (number(value)) value = +value;
+  return !/Invalid|NaN/.test(new Date(value).toString());
+}
+
+/**
+ * 验证ISO类型的日期格式
+ */
+function dateISO(value) {
+  return /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/.test(value);
+}
+
+/**
+ * 验证十进制数字
+ */
+function number(value) {
+  return /^[\+-]?(\d+\.?\d*|\.\d+|\d\.\d+e\+\d+)$/.test(value);
+}
+
+/**
+ * 验证字符串
+ */
+function string(value) {
+  return typeof value === 'string';
+}
+
+/**
+ * 验证整数
+ */
+function digits(value) {
+  return /^\d+$/.test(value);
+}
+
+/**
+ * 验证身份证号码
+ */
+function idCard(value) {
+  return /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/.test(value);
+}
+
+/**
+ * 是否车牌号
+ */
+function carNo(value) {
+  // 新能源车牌
+  var xreg = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}(([0-9]{5}[DF]$)|([DF][A-HJ-NP-Z0-9][0-9]{4}$))/;
+  // 旧车牌
+  var creg = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-HJ-NP-Z0-9]{4}[A-HJ-NP-Z0-9挂学警港澳]{1}$/;
+  if (value.length === 7) {
+    return creg.test(value);
+  }
+  if (value.length === 8) {
+    return xreg.test(value);
+  }
+  return false;
+}
+
+/**
+ * 金额,只允许2位小数
+ */
+function amount(value) {
+  // 金额，只允许保留两位小数
+  return /^[1-9]\d*(,\d{3})*(\.\d{1,2})?$|^0\.\d{1,2}$/.test(value);
+}
+
+/**
+ * 中文
+ */
+function chinese(value) {
+  var reg = /^[\u4e00-\u9fa5]+$/gi;
+  return reg.test(value);
+}
+
+/**
+ * 只能输入字母
+ */
+function letter(value) {
+  return /^[a-zA-Z]*$/.test(value);
+}
+
+/**
+ * 只能是字母或者数字
+ */
+function enOrNum(value) {
+  // 英文或者数字
+  var reg = /^[0-9a-zA-Z]*$/g;
+  return reg.test(value);
+}
+
+/**
+ * 验证是否包含某个值
+ */
+function contains(value, param) {
+  return value.indexOf(param) >= 0;
+}
+
+/**
+ * 验证一个值范围[min, max]
+ */
+function range(value, param) {
+  return value >= param[0] && value <= param[1];
+}
+
+/**
+ * 验证一个长度范围[min, max]
+ */
+function rangeLength(value, param) {
+  return value.length >= param[0] && value.length <= param[1];
+}
+
+/**
+ * 是否固定电话
+ */
+function landline(value) {
+  var reg = /^\d{3,4}-\d{7,8}(-\d{3,4})?$/;
+  return reg.test(value);
+}
+
+/**
+ * 判断是否为空
+ */
+function empty(value) {
+  switch ((0, _typeof2.default)(value)) {
+    case 'undefined':
+      return true;
+    case 'string':
+      if (value.replace(/(^[ \t\n\r]*)|([ \t\n\r]*$)/g, '').length == 0) return true;
+      break;
+    case 'boolean':
+      if (!value) return true;
+      break;
+    case 'number':
+      if (value === 0 || isNaN(value)) return true;
+      break;
+    case 'object':
+      if (value === null || value.length === 0) return true;
+      for (var i in value) {
+        return false;
+      }
+      return true;
+  }
+  return false;
+}
+
+/**
+ * 是否json字符串
+ */
+function jsonString(value) {
+  if (typeof value === 'string') {
+    try {
+      var obj = JSON.parse(value);
+      if ((0, _typeof2.default)(obj) === 'object' && obj) {
+        return true;
+      }
+      return false;
+    } catch (e) {
+      return false;
+    }
+  }
+  return false;
+}
+
+/**
+ * 是否数组
+ */
+function array(value) {
+  if (typeof Array.isArray === 'function') {
+    return Array.isArray(value);
+  }
+  return Object.prototype.toString.call(value) === '[object Array]';
+}
+
+/**
+ * 是否对象
+ */
+function object(value) {
+  return Object.prototype.toString.call(value) === '[object Object]';
+}
+
+/**
+ * 是否短信验证码
+ */
+function code(value) {
+  var len = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
+  return new RegExp("^\\d{".concat(len, "}$")).test(value);
+}
+
+/**
+ * 是否函数方法
+ * @param {Object} value
+ */
+function func(value) {
+  return typeof value === 'function';
+}
+
+/**
+ * 是否promise对象
+ * @param {Object} value
+ */
+function promise(value) {
+  return object(value) && func(value.then) && func(value.catch);
+}
+
+/** 是否图片格式
+ * @param {Object} value
+ */
+function image(value) {
+  var newValue = value.split('?')[0];
+  var IMAGE_REGEXP = /\.(jpeg|jpg|gif|png|svg|webp|jfif|bmp|dpg)/i;
+  return IMAGE_REGEXP.test(newValue);
+}
+
+/**
+ * 是否视频格式
+ * @param {Object} value
+ */
+function video(value) {
+  var VIDEO_REGEXP = /\.(mp4|mpg|mpeg|dat|asf|avi|rm|rmvb|mov|wmv|flv|mkv|m3u8)/i;
+  return VIDEO_REGEXP.test(value);
+}
+
+/**
+ * 是否为正则对象
+ * @param {Object}
+ * @return {Boolean}
+ */
+function regExp(o) {
+  return o && Object.prototype.toString.call(o) === '[object RegExp]';
+}
+
+/***/ }),
+
+/***/ 546:
 /*!*******************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-switch/components/uv-switch/props.js ***!
   \*******************************************************************************/
@@ -20068,7 +18717,210 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 671:
+/***/ 55:
+/*!**************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/digit.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+exports.divide = divide;
+exports.enableBoundaryChecking = enableBoundaryChecking;
+exports.minus = minus;
+exports.plus = plus;
+exports.round = round;
+exports.times = times;
+var _toArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toArray */ 56));
+var _boundaryCheckingState = true; // 是否进行越界检查的全局开关
+
+/**
+ * 把错误的数据转正
+ * @private
+ * @example strip(0.09999999999999998)=0.1
+ */
+function strip(num) {
+  var precision = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 15;
+  return +parseFloat(Number(num).toPrecision(precision));
+}
+
+/**
+ * Return digits length of a number
+ * @private
+ * @param {*number} num Input number
+ */
+function digitLength(num) {
+  // Get digit length of e
+  var eSplit = num.toString().split(/[eE]/);
+  var len = (eSplit[0].split('.')[1] || '').length - +(eSplit[1] || 0);
+  return len > 0 ? len : 0;
+}
+
+/**
+ * 把小数转成整数,如果是小数则放大成整数
+ * @private
+ * @param {*number} num 输入数
+ */
+function float2Fixed(num) {
+  if (num.toString().indexOf('e') === -1) {
+    return Number(num.toString().replace('.', ''));
+  }
+  var dLen = digitLength(num);
+  return dLen > 0 ? strip(Number(num) * Math.pow(10, dLen)) : Number(num);
+}
+
+/**
+ * 检测数字是否越界，如果越界给出提示
+ * @private
+ * @param {*number} num 输入数
+ */
+function checkBoundary(num) {
+  if (_boundaryCheckingState) {
+    if (num > Number.MAX_SAFE_INTEGER || num < Number.MIN_SAFE_INTEGER) {
+      console.warn("".concat(num, " \u8D85\u51FA\u4E86\u7CBE\u5EA6\u9650\u5236\uFF0C\u7ED3\u679C\u53EF\u80FD\u4E0D\u6B63\u786E"));
+    }
+  }
+}
+
+/**
+ * 把递归操作扁平迭代化
+ * @param {number[]} arr 要操作的数字数组
+ * @param {function} operation 迭代操作
+ * @private
+ */
+function iteratorOperation(arr, operation) {
+  var _arr = (0, _toArray2.default)(arr),
+    num1 = _arr[0],
+    num2 = _arr[1],
+    others = _arr.slice(2);
+  var res = operation(num1, num2);
+  others.forEach(function (num) {
+    res = operation(res, num);
+  });
+  return res;
+}
+
+/**
+ * 高精度乘法
+ * @export
+ */
+function times() {
+  for (var _len = arguments.length, nums = new Array(_len), _key = 0; _key < _len; _key++) {
+    nums[_key] = arguments[_key];
+  }
+  if (nums.length > 2) {
+    return iteratorOperation(nums, times);
+  }
+  var num1 = nums[0],
+    num2 = nums[1];
+  var num1Changed = float2Fixed(num1);
+  var num2Changed = float2Fixed(num2);
+  var baseNum = digitLength(num1) + digitLength(num2);
+  var leftValue = num1Changed * num2Changed;
+  checkBoundary(leftValue);
+  return leftValue / Math.pow(10, baseNum);
+}
+
+/**
+ * 高精度加法
+ * @export
+ */
+function plus() {
+  for (var _len2 = arguments.length, nums = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+    nums[_key2] = arguments[_key2];
+  }
+  if (nums.length > 2) {
+    return iteratorOperation(nums, plus);
+  }
+  var num1 = nums[0],
+    num2 = nums[1];
+  // 取最大的小数位
+  var baseNum = Math.pow(10, Math.max(digitLength(num1), digitLength(num2)));
+  // 把小数都转为整数然后再计算
+  return (times(num1, baseNum) + times(num2, baseNum)) / baseNum;
+}
+
+/**
+ * 高精度减法
+ * @export
+ */
+function minus() {
+  for (var _len3 = arguments.length, nums = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+    nums[_key3] = arguments[_key3];
+  }
+  if (nums.length > 2) {
+    return iteratorOperation(nums, minus);
+  }
+  var num1 = nums[0],
+    num2 = nums[1];
+  var baseNum = Math.pow(10, Math.max(digitLength(num1), digitLength(num2)));
+  return (times(num1, baseNum) - times(num2, baseNum)) / baseNum;
+}
+
+/**
+ * 高精度除法
+ * @export
+ */
+function divide() {
+  for (var _len4 = arguments.length, nums = new Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {
+    nums[_key4] = arguments[_key4];
+  }
+  if (nums.length > 2) {
+    return iteratorOperation(nums, divide);
+  }
+  var num1 = nums[0],
+    num2 = nums[1];
+  var num1Changed = float2Fixed(num1);
+  var num2Changed = float2Fixed(num2);
+  checkBoundary(num1Changed);
+  checkBoundary(num2Changed);
+  // 重要，这里必须用strip进行修正
+  return times(num1Changed / num2Changed, strip(Math.pow(10, digitLength(num2) - digitLength(num1))));
+}
+
+/**
+ * 四舍五入
+ * @export
+ */
+function round(num, ratio) {
+  var base = Math.pow(10, ratio);
+  var result = divide(Math.round(Math.abs(times(num, base))), base);
+  if (num < 0 && result !== 0) {
+    result = times(result, -1);
+  }
+  // 位数不足则补0
+  return result;
+}
+
+/**
+ * 是否进行边界检查，默认开启
+ * @param flag 标记开关，true 为开启，false 为关闭，默认为 true
+ * @export
+ */
+function enableBoundaryChecking() {
+  var flag = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+  _boundaryCheckingState = flag;
+}
+var _default = {
+  times: times,
+  plus: plus,
+  minus: minus,
+  divide: divide,
+  round: round,
+  enableBoundaryChecking: enableBoundaryChecking
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 554:
 /*!*************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uv-gap/components/uv-gap/props.js ***!
   \*************************************************************************/
@@ -20116,7 +18968,25 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 677:
+/***/ 56:
+/*!********************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/toArray.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayWithHoles = __webpack_require__(/*! ./arrayWithHoles.js */ 6);
+var iterableToArray = __webpack_require__(/*! ./iterableToArray.js */ 20);
+var unsupportedIterableToArray = __webpack_require__(/*! ./unsupportedIterableToArray.js */ 8);
+var nonIterableRest = __webpack_require__(/*! ./nonIterableRest.js */ 10);
+function _toArray(arr) {
+  return arrayWithHoles(arr) || iterableToArray(arr) || unsupportedIterableToArray(arr) || nonIterableRest();
+}
+module.exports = _toArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 560:
 /*!***************************************************************************************************!*\
   !*** F:/CodeFile/pingCar/uni_modules/uni-transition/components/uni-transition/createAnimation.js ***!
   \***************************************************************************************************/
@@ -20251,6 +19121,1009 @@ function createAnimation(option, _this) {
 
 /***/ }),
 
+/***/ 57:
+/*!**********************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/util/route.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 58));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 60));
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23));
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ 24));
+var _index = __webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/function/index.js */ 53);
+/**
+ * 路由跳转方法，该方法相对于直接使用uni.xxx的好处是使用更加简单快捷
+ * 并且带有路由拦截功能
+ */
+var Router = /*#__PURE__*/function () {
+  function Router() {
+    (0, _classCallCheck2.default)(this, Router);
+    // 原始属性定义
+    this.config = {
+      type: 'navigateTo',
+      url: '',
+      delta: 1,
+      // navigateBack页面后退时,回退的层数
+      params: {},
+      // 传递的参数
+      animationType: 'pop-in',
+      // 窗口动画,只在APP有效
+      animationDuration: 300,
+      // 窗口动画持续时间,单位毫秒,只在APP有效
+      intercept: false,
+      // 是否需要拦截
+      events: {} // 页面间通信接口，用于监听被打开页面发送到当前页面的数据。hbuilderx 2.8.9+ 开始支持。
+    };
+    // 因为route方法是需要对外赋值给另外的对象使用，同时route内部有使用this，会导致route失去上下文
+    // 这里在构造函数中进行this绑定
+    this.route = this.route.bind(this);
+  }
+
+  // 判断url前面是否有"/"，如果没有则加上，否则无法跳转
+  (0, _createClass2.default)(Router, [{
+    key: "addRootPath",
+    value: function addRootPath(url) {
+      return url[0] === '/' ? url : "/".concat(url);
+    }
+
+    // 整合路由参数
+  }, {
+    key: "mixinParam",
+    value: function mixinParam(url, params) {
+      url = url && this.addRootPath(url);
+
+      // 使用正则匹配，主要依据是判断是否有"/","?","="等，如“/page/index/index?name=mary"
+      // 如果有url中有get参数，转换后无需带上"?"
+      var query = '';
+      if (/.*\/.*\?.*=.*/.test(url)) {
+        // object对象转为get类型的参数
+        query = (0, _index.queryParams)(params, false);
+        // 因为已有get参数,所以后面拼接的参数需要带上"&"隔开
+        return url += "&".concat(query);
+      }
+      // 直接拼接参数，因为此处url中没有后面的query参数，也就没有"?/&"之类的符号
+      query = (0, _index.queryParams)(params);
+      return url += query;
+    }
+
+    // 对外的方法名称
+  }, {
+    key: "route",
+    value: function () {
+      var _route = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+        var options,
+          params,
+          mergeConfig,
+          isNext,
+          _args = arguments;
+        return _regenerator.default.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                options = _args.length > 0 && _args[0] !== undefined ? _args[0] : {};
+                params = _args.length > 1 && _args[1] !== undefined ? _args[1] : {};
+                // 合并用户的配置和内部的默认配置
+                mergeConfig = {};
+                if (typeof options === 'string') {
+                  // 如果options为字符串，则为route(url, params)的形式
+                  mergeConfig.url = this.mixinParam(options, params);
+                  mergeConfig.type = 'navigateTo';
+                } else {
+                  mergeConfig = (0, _index.deepMerge)(this.config, options);
+                  // 否则正常使用mergeConfig中的url和params进行拼接
+                  mergeConfig.url = this.mixinParam(options.url, options.params);
+                }
+                // 如果本次跳转的路径和本页面路径一致，不执行跳转，防止用户快速点击跳转按钮，造成多次跳转同一个页面的问题
+                if (!(mergeConfig.url === (0, _index.page)())) {
+                  _context.next = 6;
+                  break;
+                }
+                return _context.abrupt("return");
+              case 6:
+                if (params.intercept) {
+                  mergeConfig.intercept = params.intercept;
+                }
+                // params参数也带给拦截器
+                mergeConfig.params = params;
+                // 合并内外部参数
+                mergeConfig = (0, _index.deepMerge)(this.config, mergeConfig);
+                // 判断用户是否定义了拦截器
+                if (!(typeof mergeConfig.intercept === 'function')) {
+                  _context.next = 16;
+                  break;
+                }
+                _context.next = 12;
+                return new Promise(function (resolve, reject) {
+                  mergeConfig.intercept(mergeConfig, resolve);
+                });
+              case 12:
+                isNext = _context.sent;
+                // 如果isNext为true，则执行路由跳转
+                isNext && this.openPage(mergeConfig);
+                _context.next = 17;
+                break;
+              case 16:
+                this.openPage(mergeConfig);
+              case 17:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+      function route() {
+        return _route.apply(this, arguments);
+      }
+      return route;
+    }() // 执行路由跳转
+  }, {
+    key: "openPage",
+    value: function openPage(config) {
+      // 解构参数
+      var url = config.url,
+        type = config.type,
+        delta = config.delta,
+        animationType = config.animationType,
+        animationDuration = config.animationDuration,
+        events = config.events;
+      if (config.type == 'navigateTo' || config.type == 'to') {
+        uni.navigateTo({
+          url: url,
+          animationType: animationType,
+          animationDuration: animationDuration,
+          events: events
+        });
+      }
+      if (config.type == 'redirectTo' || config.type == 'redirect') {
+        uni.redirectTo({
+          url: url
+        });
+      }
+      if (config.type == 'switchTab' || config.type == 'tab') {
+        uni.switchTab({
+          url: url
+        });
+      }
+      if (config.type == 'reLaunch' || config.type == 'launch') {
+        uni.reLaunch({
+          url: url
+        });
+      }
+      if (config.type == 'navigateBack' || config.type == 'back') {
+        uni.navigateBack({
+          delta: delta
+        });
+      }
+    }
+  }]);
+  return Router;
+}();
+var _default = new Router().route;
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+
+/***/ 58:
+/*!************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/@babel/runtime/regenerator/index.js ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// TODO(Babel 8): Remove this file.
+
+var runtime = __webpack_require__(/*! @babel/runtime/helpers/regeneratorRuntime */ 59)();
+module.exports = runtime;
+
+/***/ }),
+
+/***/ 59:
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/regeneratorRuntime.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__(/*! ./typeof.js */ 13)["default"];
+function _regeneratorRuntime() {
+  "use strict";
+
+  /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
+  module.exports = _regeneratorRuntime = function _regeneratorRuntime() {
+    return exports;
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
+  var exports = {},
+    Op = Object.prototype,
+    hasOwn = Op.hasOwnProperty,
+    defineProperty = Object.defineProperty || function (obj, key, desc) {
+      obj[key] = desc.value;
+    },
+    $Symbol = "function" == typeof Symbol ? Symbol : {},
+    iteratorSymbol = $Symbol.iterator || "@@iterator",
+    asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator",
+    toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+  function define(obj, key, value) {
+    return Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: !0,
+      configurable: !0,
+      writable: !0
+    }), obj[key];
+  }
+  try {
+    define({}, "");
+  } catch (err) {
+    define = function define(obj, key, value) {
+      return obj[key] = value;
+    };
+  }
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator,
+      generator = Object.create(protoGenerator.prototype),
+      context = new Context(tryLocsList || []);
+    return defineProperty(generator, "_invoke", {
+      value: makeInvokeMethod(innerFn, self, context)
+    }), generator;
+  }
+  function tryCatch(fn, obj, arg) {
+    try {
+      return {
+        type: "normal",
+        arg: fn.call(obj, arg)
+      };
+    } catch (err) {
+      return {
+        type: "throw",
+        arg: err
+      };
+    }
+  }
+  exports.wrap = wrap;
+  var ContinueSentinel = {};
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+  var IteratorPrototype = {};
+  define(IteratorPrototype, iteratorSymbol, function () {
+    return this;
+  });
+  var getProto = Object.getPrototypeOf,
+    NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype);
+  var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype);
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function (method) {
+      define(prototype, method, function (arg) {
+        return this._invoke(method, arg);
+      });
+    });
+  }
+  function AsyncIterator(generator, PromiseImpl) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if ("throw" !== record.type) {
+        var result = record.arg,
+          value = result.value;
+        return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) {
+          invoke("next", value, resolve, reject);
+        }, function (err) {
+          invoke("throw", err, resolve, reject);
+        }) : PromiseImpl.resolve(value).then(function (unwrapped) {
+          result.value = unwrapped, resolve(result);
+        }, function (error) {
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+      reject(record.arg);
+    }
+    var previousPromise;
+    defineProperty(this, "_invoke", {
+      value: function value(method, arg) {
+        function callInvokeWithMethodAndArg() {
+          return new PromiseImpl(function (resolve, reject) {
+            invoke(method, arg, resolve, reject);
+          });
+        }
+        return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg();
+      }
+    });
+  }
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = "suspendedStart";
+    return function (method, arg) {
+      if ("executing" === state) throw new Error("Generator is already running");
+      if ("completed" === state) {
+        if ("throw" === method) throw arg;
+        return doneResult();
+      }
+      for (context.method = method, context.arg = arg;;) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+        if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) {
+          if ("suspendedStart" === state) throw state = "completed", context.arg;
+          context.dispatchException(context.arg);
+        } else "return" === context.method && context.abrupt("return", context.arg);
+        state = "executing";
+        var record = tryCatch(innerFn, self, context);
+        if ("normal" === record.type) {
+          if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue;
+          return {
+            value: record.arg,
+            done: context.done
+          };
+        }
+        "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg);
+      }
+    };
+  }
+  function maybeInvokeDelegate(delegate, context) {
+    var methodName = context.method,
+      method = delegate.iterator[methodName];
+    if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel;
+    var record = tryCatch(method, delegate.iterator, context.arg);
+    if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel;
+    var info = record.arg;
+    return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel);
+  }
+  function pushTryEntry(locs) {
+    var entry = {
+      tryLoc: locs[0]
+    };
+    1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry);
+  }
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal", delete record.arg, entry.completion = record;
+  }
+  function Context(tryLocsList) {
+    this.tryEntries = [{
+      tryLoc: "root"
+    }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0);
+  }
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) return iteratorMethod.call(iterable);
+      if ("function" == typeof iterable.next) return iterable;
+      if (!isNaN(iterable.length)) {
+        var i = -1,
+          next = function next() {
+            for (; ++i < iterable.length;) {
+              if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next;
+            }
+            return next.value = undefined, next.done = !0, next;
+          };
+        return next.next = next;
+      }
+    }
+    return {
+      next: doneResult
+    };
+  }
+  function doneResult() {
+    return {
+      value: undefined,
+      done: !0
+    };
+  }
+  return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", {
+    value: GeneratorFunctionPrototype,
+    configurable: !0
+  }), defineProperty(GeneratorFunctionPrototype, "constructor", {
+    value: GeneratorFunction,
+    configurable: !0
+  }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) {
+    var ctor = "function" == typeof genFun && genFun.constructor;
+    return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name));
+  }, exports.mark = function (genFun) {
+    return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun;
+  }, exports.awrap = function (arg) {
+    return {
+      __await: arg
+    };
+  }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () {
+    return this;
+  }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+    void 0 === PromiseImpl && (PromiseImpl = Promise);
+    var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl);
+    return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) {
+      return result.done ? result.value : iter.next();
+    });
+  }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () {
+    return this;
+  }), define(Gp, "toString", function () {
+    return "[object Generator]";
+  }), exports.keys = function (val) {
+    var object = Object(val),
+      keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    return keys.reverse(), function next() {
+      for (; keys.length;) {
+        var key = keys.pop();
+        if (key in object) return next.value = key, next.done = !1, next;
+      }
+      return next.done = !0, next;
+    };
+  }, exports.values = values, Context.prototype = {
+    constructor: Context,
+    reset: function reset(skipTempReset) {
+      if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) {
+        "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined);
+      }
+    },
+    stop: function stop() {
+      this.done = !0;
+      var rootRecord = this.tryEntries[0].completion;
+      if ("throw" === rootRecord.type) throw rootRecord.arg;
+      return this.rval;
+    },
+    dispatchException: function dispatchException(exception) {
+      if (this.done) throw exception;
+      var context = this;
+      function handle(loc, caught) {
+        return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught;
+      }
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i],
+          record = entry.completion;
+        if ("root" === entry.tryLoc) return handle("end");
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc"),
+            hasFinally = hasOwn.call(entry, "finallyLoc");
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
+            if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
+          } else {
+            if (!hasFinally) throw new Error("try statement without catch or finally");
+            if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
+          }
+        }
+      }
+    },
+    abrupt: function abrupt(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+      finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null);
+      var record = finallyEntry ? finallyEntry.completion : {};
+      return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record);
+    },
+    complete: function complete(record, afterLoc) {
+      if ("throw" === record.type) throw record.arg;
+      return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel;
+    },
+    finish: function finish(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel;
+      }
+    },
+    "catch": function _catch(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if ("throw" === record.type) {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+      throw new Error("illegal catch attempt");
+    },
+    delegateYield: function delegateYield(iterable, resultName, nextLoc) {
+      return this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      }, "next" === this.method && (this.arg = undefined), ContinueSentinel;
+    }
+  }, exports;
+}
+module.exports = _regeneratorRuntime, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 6:
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/arrayWithHoles.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+module.exports = _arrayWithHoles, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 60:
+/*!*****************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/asyncToGenerator.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+  if (info.done) {
+    resolve(value);
+  } else {
+    Promise.resolve(value).then(_next, _throw);
+  }
+}
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+      args = arguments;
+    return new Promise(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+      _next(undefined);
+    });
+  };
+}
+module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 61:
+/*!*****************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/debounce.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var timeout = null;
+
+/**
+ * 防抖原理：一定时间内，只有最后一次操作，再过wait毫秒后才执行函数
+ *
+ * @param {Function} func 要执行的回调函数
+ * @param {Number} wait 延时的时间
+ * @param {Boolean} immediate 是否立即执行
+ * @return null
+ */
+function debounce(func) {
+  var wait = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;
+  var immediate = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+  // 清除定时器
+  if (timeout !== null) clearTimeout(timeout);
+  // 立即执行，此类情况一般用不到
+  if (immediate) {
+    var callNow = !timeout;
+    timeout = setTimeout(function () {
+      timeout = null;
+    }, wait);
+    if (callNow) typeof func === 'function' && func();
+  } else {
+    // 设置定时器，当最后一次操作后，timeout不会再被清除，所以在延时wait毫秒后执行func回调方法
+    timeout = setTimeout(function () {
+      typeof func === 'function' && func();
+    }, wait);
+  }
+}
+var _default = debounce;
+exports.default = _default;
+
+/***/ }),
+
+/***/ 62:
+/*!*****************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/throttle.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var timer;
+var flag;
+/**
+ * 节流原理：在一定时间内，只能触发一次
+ *
+ * @param {Function} func 要执行的回调函数
+ * @param {Number} wait 延时的时间
+ * @param {Boolean} immediate 是否立即执行
+ * @return null
+ */
+function throttle(func) {
+  var wait = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;
+  var immediate = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+  if (immediate) {
+    if (!flag) {
+      flag = true;
+      // 如果是立即执行，则在wait毫秒内开始时执行
+      typeof func === 'function' && func();
+      timer = setTimeout(function () {
+        flag = false;
+      }, wait);
+    }
+  } else if (!flag) {
+    flag = true;
+    // 如果是非立即执行，则在wait毫秒内的结束处执行
+    timer = setTimeout(function () {
+      flag = false;
+      typeof func === 'function' && func();
+    }, wait);
+  }
+}
+var _default = throttle;
+exports.default = _default;
+
+/***/ }),
+
+/***/ 63:
+/*!*************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/mixin/mpMixin.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  // 将自定义节点设置成虚拟的（去掉自定义组件包裹层），更加接近Vue组件的表现，能更好的使用flex属性
+  options: {
+    virtualHost: true
+  }
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 634:
+/*!********************************************!*\
+  !*** F:/CodeFile/pingCar/static/upCar.png ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
+
+/***/ }),
+
+/***/ 64:
+/*!*************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/mixin/mpShare.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  onLoad: function onLoad() {
+    // 设置默认的转发参数
+    uni.$uv.mpShare = {
+      title: '',
+      // 默认为小程序名称
+      path: '',
+      // 默认为当前页面路径
+      imageUrl: '' // 默认为当前页面的截图
+    };
+  },
+  onShareAppMessage: function onShareAppMessage() {
+    return uni.$uv.mpShare;
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+
+/***/ 65:
+/*!**********************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/colorGradient.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.colorGradient = colorGradient;
+exports.colorToRgba = colorToRgba;
+exports.hexToRgb = hexToRgb;
+exports.rgbToHex = rgbToHex;
+/**
+ * 求两个颜色之间的渐变值
+ * @param {string} startColor 开始的颜色
+ * @param {string} endColor 结束的颜色
+ * @param {number} step 颜色等分的份额
+ * */
+function colorGradient() {
+  var startColor = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'rgb(0, 0, 0)';
+  var endColor = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'rgb(255, 255, 255)';
+  var step = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 10;
+  var startRGB = hexToRgb(startColor, false); // 转换为rgb数组模式
+  var startR = startRGB[0];
+  var startG = startRGB[1];
+  var startB = startRGB[2];
+  var endRGB = hexToRgb(endColor, false);
+  var endR = endRGB[0];
+  var endG = endRGB[1];
+  var endB = endRGB[2];
+  var sR = (endR - startR) / step; // 总差值
+  var sG = (endG - startG) / step;
+  var sB = (endB - startB) / step;
+  var colorArr = [];
+  for (var i = 0; i < step; i++) {
+    // 计算每一步的hex值
+    var hex = rgbToHex("rgb(".concat(Math.round(sR * i + startR), ",").concat(Math.round(sG * i + startG), ",").concat(Math.round(sB * i + startB), ")"));
+    // 确保第一个颜色值为startColor的值
+    if (i === 0) hex = rgbToHex(startColor);
+    // 确保最后一个颜色值为endColor的值
+    if (i === step - 1) hex = rgbToHex(endColor);
+    colorArr.push(hex);
+  }
+  return colorArr;
+}
+
+// 将hex表示方式转换为rgb表示方式(这里返回rgb数组模式)
+function hexToRgb(sColor) {
+  var str = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+  var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
+  sColor = String(sColor).toLowerCase();
+  if (sColor && reg.test(sColor)) {
+    if (sColor.length === 4) {
+      var sColorNew = '#';
+      for (var i = 1; i < 4; i += 1) {
+        sColorNew += sColor.slice(i, i + 1).concat(sColor.slice(i, i + 1));
+      }
+      sColor = sColorNew;
+    }
+    // 处理六位的颜色值
+    var sColorChange = [];
+    for (var _i = 1; _i < 7; _i += 2) {
+      sColorChange.push(parseInt("0x".concat(sColor.slice(_i, _i + 2))));
+    }
+    if (!str) {
+      return sColorChange;
+    }
+    return "rgb(".concat(sColorChange[0], ",").concat(sColorChange[1], ",").concat(sColorChange[2], ")");
+  }
+  if (/^(rgb|RGB)/.test(sColor)) {
+    var arr = sColor.replace(/(?:\(|\)|rgb|RGB)*/g, '').split(',');
+    return arr.map(function (val) {
+      return Number(val);
+    });
+  }
+  return sColor;
+}
+
+// 将rgb表示方式转换为hex表示方式
+function rgbToHex(rgb) {
+  var _this = rgb;
+  var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
+  if (/^(rgb|RGB)/.test(_this)) {
+    var aColor = _this.replace(/(?:\(|\)|rgb|RGB)*/g, '').split(',');
+    var strHex = '#';
+    for (var i = 0; i < aColor.length; i++) {
+      var hex = Number(aColor[i]).toString(16);
+      hex = String(hex).length == 1 ? "".concat(0, hex) : hex; // 保证每个rgb的值为2位
+      if (hex === '0') {
+        hex += hex;
+      }
+      strHex += hex;
+    }
+    if (strHex.length !== 7) {
+      strHex = _this;
+    }
+    return strHex;
+  }
+  if (reg.test(_this)) {
+    var aNum = _this.replace(/#/, '').split('');
+    if (aNum.length === 6) {
+      return _this;
+    }
+    if (aNum.length === 3) {
+      var numHex = '#';
+      for (var _i2 = 0; _i2 < aNum.length; _i2 += 1) {
+        numHex += aNum[_i2] + aNum[_i2];
+      }
+      return numHex;
+    }
+  } else {
+    return _this;
+  }
+}
+
+/**
+* JS颜色十六进制转换为rgb或rgba,返回的格式为 rgba（255，255，255，0.5）字符串
+* sHex为传入的十六进制的色值
+* alpha为rgba的透明度
+*/
+function colorToRgba(color, alpha) {
+  color = rgbToHex(color);
+  // 十六进制颜色值的正则表达式
+  var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
+  /* 16进制颜色转为RGB格式 */
+  var sColor = String(color).toLowerCase();
+  if (sColor && reg.test(sColor)) {
+    if (sColor.length === 4) {
+      var sColorNew = '#';
+      for (var i = 1; i < 4; i += 1) {
+        sColorNew += sColor.slice(i, i + 1).concat(sColor.slice(i, i + 1));
+      }
+      sColor = sColorNew;
+    }
+    // 处理六位的颜色值
+    var sColorChange = [];
+    for (var _i3 = 1; _i3 < 7; _i3 += 2) {
+      sColorChange.push(parseInt("0x".concat(sColor.slice(_i3, _i3 + 2))));
+    }
+    // return sColorChange.join(',')
+    return "rgba(".concat(sColorChange.join(','), ",").concat(alpha, ")");
+  }
+  return sColor;
+}
+
+/***/ }),
+
+/***/ 66:
+/*!*************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/config/config.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+// 此版本发布于2024-01-20
+var version = '1.1.20';
+
+// 开发环境才提示，生产环境不会提示
+if (true) {
+  console.log("\n %c uvui V".concat(version, " https://www.uvui.cn/ \n\n"), 'color: #ffffff; background: #3c9cff; padding:5px 0; border-radius: 5px;');
+}
+var _default = {
+  v: version,
+  version: version,
+  // 主题名称
+  type: ['primary', 'success', 'info', 'error', 'warning'],
+  // 颜色部分，本来可以通过scss的:export导出供js使用，但是奈何nvue不支持
+  color: {
+    'uv-primary': '#2979ff',
+    'uv-warning': '#ff9900',
+    'uv-success': '#19be6b',
+    'uv-error': '#fa3534',
+    'uv-info': '#909399',
+    'uv-main-color': '#303133',
+    'uv-content-color': '#606266',
+    'uv-tips-color': '#909399',
+    'uv-light-color': '#c0c4cc'
+  },
+  // 默认单位，可以通过配置为rpx，那么在用于传入组件大小参数为数值时，就默认为rpx
+  unit: 'px'
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 67:
+/*!*****************************************************************************!*\
+  !*** F:/CodeFile/pingCar/uni_modules/uv-ui-tools/libs/function/platform.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+/**
+ * 注意：
+ * 此部分内容，在vue-cli模式下，需要在vue.config.js加入如下内容才有效：
+ * module.exports = {
+ *     transpileDependencies: ['uview-v2']
+ * }
+ */
+
+var platform = 'none';
+platform = 'vue2';
+platform = 'weixin';
+platform = 'mp';
+var _default = platform;
+exports.default = _default;
+
+/***/ }),
+
+/***/ 68:
+/*!****************************************************!*\
+  !*** F:/CodeFile/pingCar/uni.promisify.adaptor.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(uni) {var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
+uni.addInterceptor({
+  returnValue: function returnValue(res) {
+    if (!(!!res && (_typeof(res) === "object" || typeof res === "function") && typeof res.then === "function")) {
+      return res;
+    }
+    return new Promise(function (resolve, reject) {
+      res.then(function (res) {
+        return res[0] ? reject(res[0]) : resolve(res[1]);
+      });
+    });
+  }
+});
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+
 /***/ 7:
 /*!*********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js ***!
@@ -20311,6 +20184,43 @@ module.exports = _unsupportedIterableToArray, module.exports.__esModule = true, 
 
 /***/ }),
 
+/***/ 80:
+/*!*******************************************!*\
+  !*** F:/CodeFile/pingCar/mixins/mixin.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var mixin = {
+  data: function data() {
+    return {
+      avaPath: 'common/download?path=avatar&name=',
+      avahttp: this.http + 'common/download?path=avatar&name=',
+      QRPath: 'common/download?path=QRcode&name=',
+      QRttp: this.http + 'common/download?path=QRcode&name=',
+      shopPath: 'common/download?path=shop&name=',
+      shophttp: this.http + 'common/download?path=shop&name='
+    };
+  },
+  methods: {
+    myminxin: function myminxin() {
+      console.log('muminxin', this.avahttp);
+      console.log('muminxin', this.QRttp);
+    }
+  }
+};
+var _default = mixin;
+exports.default = _default;
+
+/***/ }),
+
 /***/ 9:
 /*!*****************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/arrayLikeToArray.js ***!
@@ -20326,6 +20236,17 @@ function _arrayLikeToArray(arr, len) {
   return arr2;
 }
 module.exports = _arrayLikeToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 95:
+/*!**********************************************!*\
+  !*** F:/CodeFile/pingCar/static/shopCar.png ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fY51AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAABLKADAAQAAAABAAABLAAAAADYYILnAABAAElEQVR4Aey9CZxcR3Uufte+3T2rtpFGu2zLm7xiWTYOYCsGkzgxEAMOWdmTl+RBEkjwnwR+OP8kJIGQEMhGFkheQhaH5RGWsBhkG2MsS15kW7Zs2drXGY1Go5np5a7v++p2dd++3bNImhlNz1TZmlu3bq3n3vr6nFOnTmmaCooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKKAooCigKzkgKPPLK783uPH7z5nnvuMWZlB1WnpoQC+pTUoipRFDiPFNi+fbt92uy5Xdei7sgwdv3o1au2nsfuqKankQLq12gaiauqnhkKnDaW3kSwYmt6GF66ZfveS2emZdXKTFNAAdZMU1y1N6UU+N6T+zfoerg2WSm4rE3ffvzA8mSais8NCijAmhvvcV6OYsvOvmVaqF2XHryua7qlh7d8Z/tLXeln6r61KaAAq7Xf37zt/bd2HGvTvNLNBKdmRECybermrbt373aaPVdprUkBBVit+d7mda/vjSLTDv1btCjKjkcI3dA7Do46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"
 
 /***/ })
 

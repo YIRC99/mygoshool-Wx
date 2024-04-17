@@ -67,7 +67,7 @@
   position: absolute;
   border-radius: 50%;
   transition: 0.2s;
-  background-color: #c9eabf;
+  background-color: #99f2ff;
 }
 .indicator-before.data-v-aa03629e {
   position: absolute;

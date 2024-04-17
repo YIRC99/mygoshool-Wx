@@ -2,7 +2,7 @@
   <view class="page">
 
     <uni-card isShadow>
-      <uv-textarea v-model="shopDetailTest" height="150" count maxlength="500" border="bottom"
+      <uv-textarea v-model="shopDetailText" height="250" count maxlength="500" border="bottom"
         placeholder="请讲述一下物品吧~"></uv-textarea>
 
       <myImgUpload ref="myimgupload" @onChange="myonChange" ImgUploadText="清晰图片更容易出手哦~" ImageHeight="180rpx"
@@ -17,7 +17,7 @@
         </view>
       </view>
     </uni-card>
-
+      
 
     <uni-card isShadow>
       <view class="myitem">
@@ -45,11 +45,11 @@
         </view>
       </view>
 
-      <myupload @onChange="wxUpload" />
+      <myupload ref="myupload" @onChange="wxUpload" />
     </uni-card>
 
     <view class="down-box">
-      <button class="btn-grad" form-type="submit" @click="clickAddShop">发布闲置</button>
+      <button class="btn-grad" form-type="submit" @click="clickAddShop">{{isUpdate  ? '修改发布' : '发布闲置'}}</button>
     </view>
 
 
@@ -62,7 +62,9 @@
 </template>
 
 <script>
+  import mixin from '@/mixins/mixin.js'
   export default {
+     mixins: [mixin],
     data() {
       return {
         radios: [{
@@ -76,7 +78,7 @@
           name: '永不'
         }],
         dealAdd: '交易地点',
-        shopDetailTest: '',
+        shopDetailText: '',
         fileList1: [],
         wxFile: [],
         columns: [
@@ -88,10 +90,59 @@
         chooseTimeIndex: 0,
         isLoading: false,
         chooseAddressIndex: 0,
-        ispost: false
+        ispost: false,
+        isUpdate: false,
+        updateImgs: [],
+        updateWechatImg: '',
+        updateId: ''
       };
     },
+    onLoad(e) {
+      console.log(e);
+      // 如果是修改进入的 直接加载数据
+      if(e.update != null && e.update){
+        uni.setNavigationBarTitle({
+          title: '修改信息'
+        })
+        this.isUpdate = true
+        let data = uni.getStorageSync('updateShop')
+        this.updateId = data.id
+        this.shopDetailText = data.detail.replace(/<br\s*\/?>/gi, "\n")
+        this.shopPrice = data.price
+        this.updateImgs = data.imgs
+        this.updateWechatImg = data.wechatimg
+        
+        this.confirm({value:[this.columns[0][data.address]],indexs:[data.address]})
+        let differenceDays = this.differenceTime(data.cancelTime,data.createAt)
+        if(differenceDays <= 7) this.radioClick(0)
+        else if(differenceDays <= 30) this.radioClick(1)
+        else this.radioClick(2)
+      }else{
+        uni.setNavigationBarTitle({
+          title: '发布闲置'
+        })
+      }
+      
+      
+    },
+    mounted() {
+       if(this.isUpdate){
+         this.$refs.myimgupload.addImg(this.updateImgs,this.shopPath)
+         this.$refs.myupload.addImg(this.updateWechatImg,this.QRPath)
+       }
+    },
     methods: {
+      differenceTime(timeString1,timeString2){
+        // 将传入的时间字符串转换为 Date 对象
+        var date1 = new Date(timeString1);
+        var date2 = new Date(timeString2);
+        // 计算两个日期之间的毫秒数差值
+        var timeDifference = Math.abs(date2.getTime() - date1.getTime());
+        // 将毫秒数差值转换为天数
+        var daysDifference = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+        console.log('计算成功',daysDifference);
+        return daysDifference;
+      },
       chooseCancelTime(index) {
         let currentDate = new Date();
         // 根据index增加相应的时间
@@ -132,9 +183,9 @@
         let curUser = uni.getStorageSync('user')
         this.isLoading = true
         let imgs = this.joinImgPath(this.fileList1)
-        let resultShopDetail = this.shopDetailTest.replace(/\n/g, '<br/>');
+        let resultShopDetail = this.shopDetailText.replace(/\n/g, '<br/>');
         this.post({
-          url: 'shop/add',
+          url: this.isUpdate ? 'shop/update' : 'shop/add',
           data: {
             detail: resultShopDetail,
             price: this.shopPrice,
@@ -142,27 +193,27 @@
             imgs: imgs,
             createuserid: curUser.openid,
             wechatimg: this.wxFile[0].resWximg,
-            cancelTime :this.chooseCancelTime(this.chooseTimeIndex)
+            cancelTime : this.chooseCancelTime(this.chooseTimeIndex),
+            id: this.isUpdate ? this.updateId  : '' 
           }
         }).then(res => {
           console.log(res);
           this.isLoading = false
-          if (res.code != 200) {
+          if (res.code == 200) {
+            this.$refs.message.show({
+              type: 'success',
+              msg: this.isUpdate ? '修改成功' : '发布成功',
+            })
+            setTimeout(() => {
+              uni.navigateBack()
+            },1500)
+          }else{
             this.ispost = false
             this.$refs.message.show({
               type: 'error',
               msg: '网络开了点小差,请稍候重试吧',
             })
           }
-
-          this.$refs.message.show({
-            type: 'success',
-            msg: '发布成功',
-          })
-          setTimeout(() => {
-            uni.navigateBack()
-          },1500)
-
 
         }).catch(err => {
           this.isLoading = false
@@ -172,9 +223,6 @@
             msg: '网络开了点小差,请稍候重试吧',
           })
         })
-
-
-
       },
       wxUpload(e) {
         this.wxFile = e
@@ -193,7 +241,7 @@
         })
       },
       isWrite() {
-        if (this.shopDetailTest.trim() == '') {
+        if (this.shopDetailText.trim() == '') {
           this.$refs.message.show({
             type: 'warning',
             msg: '请描述一下物品吧~',
@@ -267,6 +315,7 @@
         console.log('子组件上传的回调', this.fileList1);
       },
       radioClick(name) {
+        console.log(name);
         this.radios.map((item, index) => {
           item.checked = index === name ? true : false
         })

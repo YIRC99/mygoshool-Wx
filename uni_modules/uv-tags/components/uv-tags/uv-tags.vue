@@ -93,12 +93,12 @@
       },
       // 文本的样式
       closeSize() {
-        const size = this.size === 'large' ? 15 : this.size === 'medium' ? 13 : 12
+        const size = this.size === 'large' ? 25 : this.size === 'medium' ? 23 : 22
         return size
       },
       // 图标大小
       iconSize() {
-        const size = this.size === 'large' ? 21 : this.size === 'medium' ? 19 : 16
+        const size = this.size === 'large' ? 41 : this.size === 'medium' ? 39 : 36
         return size
       },
       // 图标颜色

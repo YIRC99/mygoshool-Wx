@@ -12,22 +12,22 @@
 							width: $uv.addUnit(width),
 							height: $uv.addUnit(height)
 						}]">
-            <uv-icon color="#80CBF9" size="26"
+            <uv-icon color="#80CBF9" size="46"
               :name="item.isVideo || (item.type && item.type === 'video') ? 'movie' : 'folder'"></uv-icon>
             <text
               class="uv-upload__wrap__preview__other__text">{{item.isVideo || (item.type && item.type === 'video') ? '视频' : '文件'}}</text>
           </view>
           <view class="uv-upload__status" v-if="item.status === 'uploading' || item.status === 'failed'">
             <view class="uv-upload__status__icon">
-              <uv-icon v-if="item.status === 'failed'" name="close-circle" color="#ffffff" size="25" />
-              <uv-loading-icon size="22" mode="circle" v-else />
+              <uv-icon v-if="item.status === 'failed'" name="close-circle" color="#ffffff" size="55" />
+              <uv-loading-icon size="42" mode="circle" v-else />
             </view>
             <text v-if="item.message" class="uv-upload__status__message">{{ item.message }}</text>
           </view>
           <view class="uv-upload__deletable" v-if="item.status !== 'uploading' && (deletable || item.deletable)"
             @tap.stop="deleteItem(index)">
             <view class="uv-upload__deletable__icon">
-              <uv-icon name="close" color="#ffffff" size="10"></uv-icon>
+              <uv-icon name="close" color="#ffffff" size="20"></uv-icon>
             </view>
           </view>
           <view class="uv-upload__success" v-if="item.status === 'success'">
@@ -36,7 +36,7 @@
             <!-- #endif -->
             <!-- #ifndef APP-NVUE -->
             <view class="uv-upload__success__icon">
-              <uv-icon name="checkmark" color="#ffffff" size="12"></uv-icon>
+              <uv-icon name="checkmark" color="#ffffff" size="22"></uv-icon>
             </view>
             <!-- #endif -->
           </view>
@@ -50,7 +50,7 @@
 								width: $uv.addUnit(width),
 								height: $uv.addUnit(height)
 							}]">
-              <uv-icon :name="uploadIcon" size="26" :color="uploadIconColor"></uv-icon>
+              <uv-icon :name="uploadIcon" size="46" :color="uploadIconColor"></uv-icon>
               
               <text v-if="uploadText" class="uv-upload__button__text">{{ uploadText }}</text>
             </view>

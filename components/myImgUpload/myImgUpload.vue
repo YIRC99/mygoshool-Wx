@@ -4,7 +4,7 @@
     <view class="upload-box">
       <uv-upload :fileList="fileList1" name="1" @oversize="overSize" :maxSize="ImgMaxSize" multiple
         :maxCount="ImgMaxCount" @afterRead="afterRead" @delete="deletePic" :width="ImageWidth" :height="ImageHeight"
-        :uploadText="ImgUploadText" :previewFullImage="true"></uv-upload>
+        :uploadText="ImgUploadText" :previewFullImage="true" ></uv-upload>
     </view>
 
     <quick-message ref="message"></quick-message>
@@ -12,11 +12,13 @@
 </template>
 
 <script>
+  import mixin from '@/mixins/mixin.js'
   import {
     promise
   } from '../../uni_modules/uv-ui-tools/libs/function/test';
   export default {
     name: "myImgUpload",
+    mixins: [mixin],
     props: {
       ImageWidth: {
         default: '200rpx',
@@ -59,6 +61,21 @@
       }
     },
     methods: {
+      addImg(imgs,type){
+        let arr = imgs.split(",")
+        arr.forEach(i => {
+          this.fileList1.push({
+            message: '',
+            resWximg: i,
+            size: 0,
+            status: 'success',
+            thumb: this.http + type + i,
+            type: 'image',
+            url: 200
+          })
+        })
+        
+      },
       isAllupdate() {
         for (var i = 0; i < this.fileList1.length; i++) {
           // console.log(this.fileList1[i].status);
@@ -66,7 +83,6 @@
             this.$refs.message.show({
               type: 'error',
               msg: '有未上传成功的图片,请删除或重试吧',
-              iconSize: 16,
             })
             return false
           }
@@ -223,13 +239,6 @@
           }
         }));
       },
-
-
-
-
-
-
-
 
 
       // 删除图片

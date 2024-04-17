@@ -1,1 +1,0 @@
-<view class="zui-svg-icon data-v-2bbb3e0f"><view class="{{['data-v-2bbb3e0f',clazz]}}" style="{{(style)}}"><view data-event-opts="{{[['tap',[['doClick',['$event']]]],['tap',[['doTap',['$event']]]]]}}" class="click-helper data-v-2bbb3e0f" bindtap="__e"></view><image class="zui-svg-icon-image data-v-2bbb3e0f" src="{{svgDataurl}}" mode="aspectFit"></image></view></view>

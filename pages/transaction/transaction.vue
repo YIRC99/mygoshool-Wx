@@ -76,7 +76,7 @@
             </template>
           </uv-waterfall>
 
-          <uv-load-more v-if="isShowListloading" :status="status" :marginTop="30" dashed line />
+          <uv-load-more v-if="isShowListloading" :fontSize="30" :status="status" :marginTop="30" dashed line />
 
         </view>
       </view>

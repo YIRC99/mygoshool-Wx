@@ -20,110 +20,34 @@
       @refresherrefresh="scrollPullDown" refresher-enabled>
 
       <view class="" v-show="currentIndex == 0">
+        
         <myEmppty :isShow="newSchoolList.length == 0" Text="暂时没有拼车订单 快快发布一个吧"></myEmppty>
-        <uni-card v-for="(item,index) in newSchoolList" :key="index" :title="subYear(item.startdatetime) + ' 出发'"
-          :thumbnail='avahttp + item.createUserInfo.avatar' @click="clickCard(item)">
-          <view class="my-car-box">
-            <view class="" style="width: 80%;">
-              <view class="car-left">
-                <img class="my-icon" src="/static/upCar.png" />
-                <text class="uv-line-1">{{item.startaddress}}</text>
-              </view>
-              <view class="car-left">
-                <img class="my-icon" src="/static/downCar.png" />
-                <text class="uv-line-1">{{item.endaddress}}</text>
-              </view>
-            </view>
-            <view class="">
-              <view class="car-right">
-                <text>提前</text>
-                <image v-if="item.isbefore == 1" src="../../static/true.png" mode=""></image>
-                <image v-else src="../../static/false.png" mode=""></image>
-              </view>
-              <view class="car-right">
-                <text>延后</text>
-                <image v-if="item.isafter == 1" src="../../static/true.png" mode=""></image>
-                <image v-else src="../../static/false.png" mode=""></image>
-              </view>
-            </view>
-          </view>
-
-          <text class="uv-line-1 myremark" style="color: #a9a9a9;">备注: {{item.remark}}</text>
-        </uni-card>
-        <uv-load-more v-if="list[currentIndex].isShowListloading" :status="list[currentIndex].status" :marginTop="10"
+        
+        <myCarOrder :orderList="newSchoolList" @clickOrderItem="clickCard" ></myCarOrder>
+ 
+        
+        <uv-load-more v-if="list[currentIndex].isShowListloading" :fontSize="30" :status="list[currentIndex].status" :marginTop="10"
           :marginBottom="20" dashed line />
         <view class="" style=" height: 60rpx;"></view>
       </view>
 
       <view class="" v-show="currentIndex == 1">
         <myEmppty :isShow="oldSchoolList.length == 0" Text="暂时没有拼车订单 快快发布一个吧"></myEmppty>
-        <uni-card v-for="(item,index) in oldSchoolList" :key="index" :title="subYear(item.startdatetime) + ' 出发'"
-          :thumbnail='avahttp + item.createUserInfo.avatar' @click="clickCard(item)">
-          <view class="my-car-box">
-            <view class="" style="width: 80%;">
-              <view class="car-left">
-                <img class="my-icon" src="/static/upCar.png" />
-                <text class="uv-line-1">{{item.startaddress}}</text>
-              </view>
-              <view class="car-left">
-                <img class="my-icon" src="/static/downCar.png" />
-                <text class="uv-line-1">{{item.endaddress}}</text>
-              </view>
-            </view>
-            <view class="">
-              <view class="car-right">
-                <text>提前</text>
-                <image v-if="item.isbefore == 1" src="../../static/true.png" mode=""></image>
-                <image v-else src="../../static/false.png" mode=""></image>
-              </view>
-              <view class="car-right">
-                <text>延后</text>
-                <image v-if="item.isafter == 1" src="../../static/true.png" mode=""></image>
-                <image v-else src="../../static/false.png" mode=""></image>
-              </view>
-            </view>
-          </view>
-
-          <text class="uv-line-1 myremark" style="color: #a9a9a9;">备注: {{item.remark}}</text>
-        </uni-card>
-
-        <uv-load-more v-if="list[currentIndex].isShowListloading" :status="list[currentIndex].status" :marginTop="10"
+        
+        <myCarOrder :orderList="oldSchoolList" @clickOrderItem="clickCard" ></myCarOrder>
+        
+        <uv-load-more v-if="list[currentIndex].isShowListloading" :fontSize="30" :status="list[currentIndex].status" :marginTop="10"
           :marginBottom="20" dashed line />
         <view class="" style=" height: 60rpx;"></view>
       </view>
 
       <view class="" v-show="currentIndex == 2">
         <myEmppty :isShow="otherAddressList.length == 0" Text="暂时没有拼车订单 快快发布一个吧"></myEmppty>
-        <uni-card v-for="(item,index) in otherAddressList" :key="index" :title="subYear(item.startdatetime) + ' 出发'"
-          :thumbnail='avahttp + item.createUserInfo.avatar' @click="clickCard(item)">
-          <view class="my-car-box">
-            <view class="" style="width: 80%;">
-              <view class="car-left">
-                <img class="my-icon" src="/static/upCar.png" />
-                <text class="uv-line-1">{{item.startaddress}}</text>
-              </view>
-              <view class="car-left">
-                <img class="my-icon" src="/static/downCar.png" />
-                <text class="uv-line-1">{{item.endaddress}}</text>
-              </view>
-            </view>
-            <view class="">
-              <view class="car-right">
-                <text>提前</text>
-                <image v-if="item.isbefore == 1" src="../../static/true.png" mode=""></image>
-                <image v-else src="../../static/false.png" mode=""></image>
-              </view>
-              <view class="car-right">
-                <text>延后</text>
-                <image v-if="item.isafter == 1" src="../../static/true.png" mode=""></image>
-                <image v-else src="../../static/false.png" mode=""></image>
-              </view>
-            </view>
-          </view>
-
-          <text class="uv-line-1 myremark" style="color: #a9a9a9;">备注: {{item.remark}}</text>
-        </uni-card>
-        <uv-load-more v-if="list[currentIndex].isShowListloading" :status="list[currentIndex].status" :marginTop="10"
+        
+        <myCarOrder :orderList="otherAddressList" @clickOrderItem="clickCard" ></myCarOrder>
+        
+        
+        <uv-load-more v-if="list[currentIndex].isShowListloading" :fontSize="30" :status="list[currentIndex].status" :marginTop="10"
           :marginBottom="20" dashed line />
         <view class="" style=" height: 60rpx;"></view>
       </view>

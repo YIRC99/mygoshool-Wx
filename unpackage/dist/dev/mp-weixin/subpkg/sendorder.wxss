@@ -26,6 +26,84 @@
 .page {
   padding-bottom: 60rpx;
 }
+.shopItem {
+  display: flex;
+  align-items: center;
+  align-items: flex-start;
+}
+.shopItem .left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shopItem .left image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 15rpx;
+}
+.shopItem .right {
+  flex: 1;
+  margin-left: 20rpx;
+}
+.shopItem .right .my-targ {
+  position: absolute;
+  right: 30rpx;
+  top: 20rpx;
+}
+.shopItem .right .title {
+  width: 70%;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: black;
+}
+.shopItem .right .but-box {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+.shopItem .right .btn-grad-delete {
+  background-image: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #FF512F 100%);
+  font-size: 25rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 120rpx;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20rpx #eee;
+  border-radius: 15rpx;
+  display: block;
+  margin: 0;
+  margin-left: 30rpx;
+}
+.shopItem .right .btn-grad-delete:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+.shopItem .right .btn-grad-update {
+  background-image: linear-gradient(to right, #F09819 0%, #EDDE5D 51%, #F09819 100%);
+  font-size: 25rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 120rpx;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20rpx #eee;
+  border-radius: 15rpx;
+  display: block;
+  margin: 0;
+}
+.shopItem .right .btn-grad-update:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
 .updateAndDelete {
   display: flex;
   align-items: center;
@@ -69,7 +147,6 @@
 }
 .updateAndDelete .updateAndDelete-item .btn-grad-update:hover {
   background-position: right center;
-  /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
 }
