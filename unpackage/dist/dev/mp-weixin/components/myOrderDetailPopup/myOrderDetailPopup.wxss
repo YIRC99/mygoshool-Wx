@@ -23,67 +23,43 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.page {
-  padding-bottom: 130rpx;
+.popup-box {
+  height: 62vh;
+  width: 100%;
+  padding-top: 50rpx;
+  display: flex;
+  flex-direction: column;
 }
-.myicon {
-  width: 40rpx;
-  height: 40rpx;
+.popup-box .my-middle-box {
+  width: 100%;
+  border-radius: 0;
+}
+.popup-box .my-middle-box .my-text-box {
+  background-color: #ffffff;
+  font-size: 30rpx;
+  padding: 20rpx 30rpx;
+  line-height: 42rpx;
+  color: #3d3d3d;
+}
+.popup-box .my-middle-box .my-text-box2 {
+  display: flex;
+  align-items: center;
+  margin-left: 30rpx;
+  justify-content: space-between;
+  margin-top: 20rpx;
+  line-height: 50rpx;
+}
+.popup-box .my-middle-box .my-text-box2 .my-text-box2-t {
+  font-weight: bold;
+  margin: 0 10rpx;
+}
+.popup-box .my-middle-box .my-text-box2 .right {
   margin-right: 30rpx;
 }
-.receivePopup-box-img image {
-  border: 1px solid #ebebeb;
-  border-radius: 30rpx;
-  overflow: hidden;
+.popup-box .down-box {
+  height: 130rpx;
 }
-.mytable {
-  position: relative;
-  height: 90rpx;
-}
-.mytable .mytable-rili {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  right: 50rpx;
-  top: 20rpx;
-  height: 100rpx;
-  width: 100rpx;
-}
-.mytable .mytable-rili .mytable-rili-text {
-  background-color: #CCCCCC;
-  height: 30rpx;
-  width: 120rpx;
-  font-size: 22rpx;
-  padding: 5rpx;
-  border-radius: 10rpx;
-  margin-top: 5rpx;
-}
-.mytable .mytable-rili .mytable-rili-img {
-  width: 40rpx;
-  height: 40rpx;
-}
-.receivePopup-box {
-  width: 100%;
-  height: 100%;
-  border-radius: 30rpx;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-.receivePopup-box .down-box {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: 20rpx;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-}
-.receivePopup-box .down-box .btn-grad {
+.popup-box .down-box .btn-grad {
   background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
   margin: 10px;
   text-align: center;
@@ -94,48 +70,48 @@
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
   display: block;
-  width: 450rpx;
+  width: 350rpx;
   height: 80rpx;
   line-height: 80rpx;
+  position: absolute;
+  right: 30rpx;
+  margin-bottom: 50rpx;
 }
-.receivePopup-box .down-box .btn-grad:hover {
+.popup-box .down-box .btn-grad:hover {
   background-position: right center;
   /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
 }
-.receivePopup-box .titleImg {
-  width: 300rpx;
-}
-.my-car-box {
+.popup-box .top-box {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  width: 100%;
+  height: 100rpx;
+  padding: 30rpx;
+  padding-bottom: 40rpx;
+  color: black;
 }
-.my-car-box .car-left {
-  display: flex;
-  align-items: center;
-  margin: 15rpx 0;
-  font-size: 32rpx;
+.popup-box .top-box .left image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
 }
-.my-car-box .car-left text {
-  width: 75%;
+.popup-box .top-box .middle {
+  font-size: 36rpx;
+  margin-left: 40rpx;
 }
-.my-car-box .car-left .my-icon {
-  width: 50rpx;
-  height: 50rpx;
+.popup-box .top-box .right {
+  position: absolute;
+  right: 40rpx;
 }
-.my-car-box .car-right {
-  margin-right: 20rpx;
-  margin: 15rpx 0;
-  display: flex;
-  align-items: center;
-}
-.my-car-box .car-right image {
+.popup-box .top-box .right image {
   width: 30rpx;
   height: 30rpx;
   border-radius: 50%;
   overflow: hidden;
   margin-left: 10rpx;
+  margin-top: 10rpx;
 }
 

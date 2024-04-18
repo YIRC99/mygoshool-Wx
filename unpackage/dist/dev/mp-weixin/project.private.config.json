@@ -91,6 +91,13 @@
           "query": "update=true",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "开发userinfo页面",
+          "pathName": "subpkg/userinfo",
+          "query": "userid=2&openid=oB5Zy63yEWI1Y5yMdYTjEbNoMUJE",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

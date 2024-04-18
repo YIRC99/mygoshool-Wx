@@ -194,8 +194,9 @@ var _default = {
   methods: {
     toUserinfo: function toUserinfo() {
       if (!this.isLogin) return;
+      console.log(this.info);
       uni.navigateTo({
-        url: '/subpkg/userinfo?userid=' + this.info.userid
+        url: '/subpkg/userinfo?userid=' + this.info.userid + '&openid=' + this.info.openid
       });
     },
     toReceiveOrder: function toReceiveOrder() {

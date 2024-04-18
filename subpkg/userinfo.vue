@@ -18,29 +18,32 @@
       </view>
 
       <view class="middle-box">
-        <uv-tabs :list="list" :scrollable="false" @click="change"></uv-tabs>
+        <uv-tabs :list="list" :lineWidth="40" :lineHeight="6" :scrollable="false" @click="change"></uv-tabs>
         <view class="middle-list" v-show="currentIndex == 0">
           <view class="" v-if="appriseList.length == 0" style="display: flex;flex-direction: column;
           justify-content: center; width: 100vw; align-items: center;">
             <image src="../static/appriseEmpty.png" mode="heightFix"></image>
             <view class="" style="font-size: 40rpx; color: #A9a9a9;">暂时没有拼车订单 快快发布一个吧</view>
-          </view> 
-          <uv-list >
-              <uv-list-item direction="column"v-for="(item,index) in appriseList" :key="index">
-                <view class="uv-line-3 item-title" slot="header">
-                  {{item.apprisedata}}
-                </view>
-                <view class="" slot="footer" style="display: flex; justify-content: space-between; align-items: center;">
-                  <view class="item-subhead">{{item.createat}}</view>
-                  <uv-tags :text="'来自的' + item.typeText + '评价'" plain size="mini" shape="circle"></uv-tags>
-                </view>
-              </uv-list-item>
+          </view>
+          <uv-list>
+            <uv-list-item direction="column" v-for="(item,index) in appriseList" :key="index">
+              <view class="uv-line-3 item-title" slot="header">
+                {{item.apprisedata}}
+              </view>
+              <view class="" slot="footer" style="display: flex; justify-content: space-between; align-items: center;">
+                <view class="item-subhead">{{item.createat}}</view>
+                <uv-tags :text="'来自的' + item.typeText + '评价'" plain size="mini" shape="circle"></uv-tags>
+              </view>
+            </uv-list-item>
           </uv-list>
-          
-          
+
+
         </view>
         <view class="middle-list" v-show="currentIndex == 1">
-          <myEmppty :isShow="true" Text="订单为空"></myEmppty>
+          <myEmppty :isShow="orderList.length == 0" Text="订单为空"></myEmppty>
+          <myCarOrder :orderList="orderList" @clickOrderItem="clickCard" :avaImgPath="info.avatar"></myCarOrder>
+          
+          
         </view>
         <view class="middle-list" v-show="currentIndex == 2">
           <myEmppty :isShow="true" Text="订单为空"></myEmppty>
@@ -54,7 +57,38 @@
     <zero-loading v-if="isLoading" type="circle" :mask="true" maskOpacity="0.1"></zero-loading>
 
     <quick-message ref="message"></quick-message>
-
+    
+    <myOrderDetailPopup ref="myorderdetailpopup" :currentOrder="currentOrder" :isToUserInfo="false" @myShowUploadWxImg="showUploadWxImg" ></myOrderDetailPopup>
+    
+    <uv-popup ref="receivePopup" mode="center" 
+      custom-style="height: 200rpx;border-radius: 30rpx; width: 80vw; height: 40vh;" :close-on-click-overlay="false">
+      <view class="receivePopup-box">
+        <view class="" style="display: flex;justify-content: center;align-items: center;">
+          <image class="titleImg" src="@/static/succes1.png" mode="widthFix"></image>
+        </view>
+        <view>长按识别二维码快速加好友</view>
+        <view class="receivePopup-box-img" @click="viewWxImg">
+          <image v-if="currentOrder.wechatImg != ''" :src="QRttp+ currentOrder.wechatImg" :show-menu-by-longpress="true"
+            style="width: 200rpx; height: 200rpx;" mode=""></image>
+        </view>
+        <view v-if="currentOrder.wechataccount != ''">对方微信: {{currentOrder.wechataccount}}</view>
+        <view v-if="currentOrder.phonenumber != ''">对方手机号: {{currentOrder.phonenumber}}</view>
+        <view>关闭后可在历史拼车中继续查看</view>
+        <view class="down-box">
+          <button class="btn-grad" @click="copyWx">确定</button>
+        </view>
+      </view>
+    </uv-popup>
+    
+    
+    <uv-modal ref="modal" title="添加联系方式让对方也可以联系你吧" showCancelButton :closeOnClickOverlay="false" @confirm="confirmWxImg"
+      @cancel="clearWxImg">
+    
+      <myupload ref="myWxUpload" @onChange="myonChange"></myupload>
+    
+    </uv-modal>
+      
+    
   </view>
 </template>
 
@@ -68,6 +102,8 @@
     mixins: [mixin],
     data() {
       return {
+        fileList1: [],
+        parameter: {},
         isLogin: false,
         info: {},
         isLoading: false,
@@ -86,42 +122,160 @@
           badge: {
             value: 0
           }
-        },{
+        }, {
           name: '帖子',
           badge: {
             value: 0
           }
         }],
         currentIndex: 0,
-        appriseList:[]
+        appriseList: [],
+        orderList: [],
+        currentOrder: {}
       };
     },
     methods: {
+      showUploadWxImg() {
+        let key = this.info
+        if (key == null || key == '') {
+          this.$refs.message.show({
+            type: 'error',
+            msg: '请登录后再接受吧',
+          })
+          return
+        }
+        this.$refs.modal.open();
+      },
+      myonChange(e) {
+        console.log('子组件上传的回调', e);
+        this.fileList1 = e
+      },
+      clearWxImg() {
+        this.fileList1 = []
+        this.$refs.myWxUpload.fileList1Empty()
+      },
+      receiveOrder() {
+        let user = this.info
+        this.isLoading = true
+        console.log(this.fileList1);
+        this.post({
+          url: 'carshareorder/receive',
+          data: {
+            orderid: this.currentOrder.orderid,
+            receiveuserid: user.openid,
+            createuserid: this.currentOrder.createuserid,
+            receiveUserWechatImg: this.fileList1[0].resWximg
+          }
+        }).then(res => {
+          console.log(res);
+          this.clearWxImg()
+          if (res.code != 200) {
+            this.$refs.message.show({
+              type: 'error',
+              msg: '订单已被接受或失效',
+              iconSize: 16,
+            })
+            this.isLoading = false
+            this.$refs.myorderdetailpopup.closePopup()
+            return
+          }
+      
+          this.isLoading = false
+          this.$refs.myorderdetailpopup.closePopup()
+          
+          this.$refs.receivePopup.open()
+        }).catch(err => {
+          console.log('home page is', err);
+          this.isRefresh = false
+          this.$refs.message.show({
+            type: 'error',
+            msg: '网络开了点小差,请稍候重试吧',
+            iconSize: 16,
+          })
+          return
+        })
+      
+      },
+      confirmWxImg() {
+        if (this.fileList1.length == 0) {
+          this.$refs.message.show({
+            type: 'error',
+            msg: '请上传图片后确定',
+          })
+          return
+        }
+        if ("success" != this.fileList1[0].status) {
+          this.$refs.message.show({
+            type: 'error',
+            msg: '请图片上传成功后确定',
+          })
+          return
+        }
+      
+        this.receiveOrder()
+      },
+      copyWx() {
+        console.log('不复制了 直接关闭');
+        this.$refs.receivePopup.close()
+      },
+      viewWxImg() {
+        let img = this.QRttp + this.currentOrder.wechatImg
+        uni.previewImage({
+          urls: [img]
+        })
+      },
+      clickCard(e){
+        console.log(e);
+        this.currentOrder = e
+        this.currentOrder.createUserInfo = this.info
+        this.$refs.myorderdetailpopup.clickCard(this.currentOrder)
+      },
+      getShowOrder(){
+        this.post({
+          url: 'carshareorder/getbyuserid/up',
+          data: {
+            openid: this.parameter.openid
+          }
+        }).then(res =>{
+          console.log('拼车数据',res);
+          this.orderList = res.data
+        }).catch(err => {
+          console.log('home page is', err);
+          this.isRefresh = false
+          this.$refs.message.show({
+            type: 'error',
+            msg: '网络开了点小差,请稍候重试吧',
+          })
+          return
+        })
+        
+        
+      },
       change(e) {
         console.log(e);
         this.currentIndex = e.index
       },
-      getAppriseByUserid(){
+      getAppriseByUserid() {
         this.post({
           url: 'apprise/byuserid',
           data: {
             openid: this.info.openid
           }
         }).then(res => {
-          console.log('评价返回的数据',res);
+          console.log('评价返回的数据', res);
           this.appriseList = res.data
           this.list[0].badge.value = res.data.length
           this.appriseList.forEach(item => {
             item.createat = item.createat.split('T')[0] + ' ' + item.createat.split('T')[1]
-            if(item.type = 1)
+            if (item.type = 1)
               item.typeText = '拼车'
-            else if(item.type == 2)
+            else if (item.type == 2)
               item.typeText = '二手'
-            
-            
+
+
           })
         })
-        
+
       },
       getUserInfoByUserId(userid) {
         this.post({
@@ -131,15 +285,16 @@
           }
         }).then(res => {
           console.log(res);
-          if (res.code != 200) {
+          if (res.code == 200) {
+           this.info = res.data
+           this.getAppriseByUserid()
+          }else{
             this.$refs.message.show({
               type: 'error',
               msg: '获取用户信息失败',
             })
           }
-          this.info = res.data
-          this.getAppriseByUserid()
-
+         
         }).catch(err => {
           console.log('home page is', err);
           this.isRefresh = false
@@ -152,16 +307,14 @@
       },
     },
     onLoad(e) {
-      console.log('userinfo, onload', e.userid);
-      this.getUserInfoByUserId(e.userid)
-      
-
-
-
-
-    },
-    created() {
-
+      this.info = uni.getStorageSync('user')
+      this.getAppriseByUserid()
+      if(!this.info){
+        this.getUserInfoByUserId(e.userid)
+      }
+      console.log('userinfo, onload', e);
+      this.parameter = e
+      this.getShowOrder()
     }
   }
 </script>
@@ -171,11 +324,71 @@
     padding-bottom: 80rpx;
   }
   
-  .middle-list{
-    .item-title{
+  .receivePopup-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 30rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: center;
+  
+    .down-box {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 20rpx;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+  
+      .btn-grad {
+        background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
+        margin: 10px;
+        // padding: 15px 45px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        display: block;
+        width: 450rpx;
+        height: 80rpx;
+        line-height: 80rpx;
+      }
+  
+      .btn-grad:hover {
+        background-position: right center;
+        /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  
+    .titleImg {
+  
+      width: 300rpx;
+    }
+  }
+  
+  
+  .receivePopup-box-img {
+    image {
+      border: 1px solid #ebebeb;
+      border-radius: 30rpx;
+      overflow: hidden;
+    }
+  }
+
+  .middle-list {
+    .item-title {
       font-size: 32rpx;
     }
-    .item-subhead{
+
+    .item-subhead {
       color: #a9a9a9;
       font-size: 26rpx;
     }

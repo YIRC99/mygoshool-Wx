@@ -117,11 +117,26 @@ try {
     myEmppty: function () {
       return Promise.all(/*! import() | components/myEmppty/myEmppty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myEmppty/myEmppty")]).then(__webpack_require__.bind(null, /*! @/components/myEmppty/myEmppty.vue */ 267))
     },
+    myCarOrder: function () {
+      return Promise.all(/*! import() | components/myCarOrder/myCarOrder */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myCarOrder/myCarOrder")]).then(__webpack_require__.bind(null, /*! @/components/myCarOrder/myCarOrder.vue */ 631))
+    },
     zeroLoading: function () {
       return __webpack_require__.e(/*! import() | uni_modules/zero-loading/components/zero-loading/zero-loading */ "uni_modules/zero-loading/components/zero-loading/zero-loading").then(__webpack_require__.bind(null, /*! @/uni_modules/zero-loading/components/zero-loading/zero-loading.vue */ 231))
     },
     quickMessage: function () {
       return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 202))
+    },
+    myOrderDetailPopup: function () {
+      return __webpack_require__.e(/*! import() | components/myOrderDetailPopup/myOrderDetailPopup */ "components/myOrderDetailPopup/myOrderDetailPopup").then(__webpack_require__.bind(null, /*! @/components/myOrderDetailPopup/myOrderDetailPopup.vue */ 640))
+    },
+    uvPopup: function () {
+      return Promise.all(/*! import() | uni_modules/uv-popup/components/uv-popup/uv-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-popup/components/uv-popup/uv-popup")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-popup/components/uv-popup/uv-popup.vue */ 288))
+    },
+    uvModal: function () {
+      return Promise.all(/*! import() | uni_modules/uv-modal/components/uv-modal/uv-modal */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-modal/components/uv-modal/uv-modal")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-modal/components/uv-modal/uv-modal.vue */ 309))
+    },
+    myupload: function () {
+      return Promise.all(/*! import() | components/myupload/myupload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myupload/myupload")]).then(__webpack_require__.bind(null, /*! @/components/myupload/myupload.vue */ 317))
     },
   }
 } catch (e) {
@@ -146,11 +161,13 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   var g0 = _vm.appriseList.length
+  var g1 = _vm.orderList.length
   _vm.$mp.data = Object.assign(
     {},
     {
       $root: {
         g0: g0,
+        g1: g1,
       },
     }
   )
@@ -187,7 +204,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(uni) {
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
@@ -207,6 +224,8 @@ var _default = {
   mixins: [_mixin.default],
   data: function data() {
     return {
+      fileList1: [],
+      parameter: {},
       isLogin: false,
       info: {},
       isLoading: false,
@@ -232,48 +251,114 @@ var _default = {
         }
       }],
       currentIndex: 0,
-      appriseList: []
+      appriseList: [],
+      orderList: [],
+      currentOrder: {}
     };
   },
   methods: {
-    change: function change(e) {
-      console.log(e);
-      this.currentIndex = e.index;
-    },
-    getAppriseByUserid: function getAppriseByUserid() {
-      var _this = this;
-      this.post({
-        url: 'apprise/byuserid',
-        data: {
-          openid: this.info.openid
-        }
-      }).then(function (res) {
-        console.log('评价返回的数据', res);
-        _this.appriseList = res.data;
-        _this.list[0].badge.value = res.data.length;
-        _this.appriseList.forEach(function (item) {
-          item.createat = item.createat.split('T')[0] + ' ' + item.createat.split('T')[1];
-          if (item.type = 1) item.typeText = '拼车';else if (item.type == 2) item.typeText = '二手';
+    showUploadWxImg: function showUploadWxImg() {
+      var key = this.info;
+      if (key == null || key == '') {
+        this.$refs.message.show({
+          type: 'error',
+          msg: '请登录后再接受吧'
         });
-      });
+        return;
+      }
+      this.$refs.modal.open();
     },
-    getUserInfoByUserId: function getUserInfoByUserId(userid) {
-      var _this2 = this;
+    myonChange: function myonChange(e) {
+      console.log('子组件上传的回调', e);
+      this.fileList1 = e;
+    },
+    clearWxImg: function clearWxImg() {
+      this.fileList1 = [];
+      this.$refs.myWxUpload.fileList1Empty();
+    },
+    receiveOrder: function receiveOrder() {
+      var _this = this;
+      var user = this.info;
+      this.isLoading = true;
+      console.log(this.fileList1);
       this.post({
-        url: 'user/byuserid',
+        url: 'carshareorder/receive',
         data: {
-          userid: userid
+          orderid: this.currentOrder.orderid,
+          receiveuserid: user.openid,
+          createuserid: this.currentOrder.createuserid,
+          receiveUserWechatImg: this.fileList1[0].resWximg
         }
       }).then(function (res) {
         console.log(res);
+        _this.clearWxImg();
         if (res.code != 200) {
-          _this2.$refs.message.show({
+          _this.$refs.message.show({
             type: 'error',
-            msg: '获取用户信息失败'
+            msg: '订单已被接受或失效',
+            iconSize: 16
           });
+          _this.isLoading = false;
+          _this.$refs.myorderdetailpopup.closePopup();
+          return;
         }
-        _this2.info = res.data;
-        _this2.getAppriseByUserid();
+        _this.isLoading = false;
+        _this.$refs.myorderdetailpopup.closePopup();
+        _this.$refs.receivePopup.open();
+      }).catch(function (err) {
+        console.log('home page is', err);
+        _this.isRefresh = false;
+        _this.$refs.message.show({
+          type: 'error',
+          msg: '网络开了点小差,请稍候重试吧',
+          iconSize: 16
+        });
+        return;
+      });
+    },
+    confirmWxImg: function confirmWxImg() {
+      if (this.fileList1.length == 0) {
+        this.$refs.message.show({
+          type: 'error',
+          msg: '请上传图片后确定'
+        });
+        return;
+      }
+      if ("success" != this.fileList1[0].status) {
+        this.$refs.message.show({
+          type: 'error',
+          msg: '请图片上传成功后确定'
+        });
+        return;
+      }
+      this.receiveOrder();
+    },
+    copyWx: function copyWx() {
+      console.log('不复制了 直接关闭');
+      this.$refs.receivePopup.close();
+    },
+    viewWxImg: function viewWxImg() {
+      var img = this.QRttp + this.currentOrder.wechatImg;
+      uni.previewImage({
+        urls: [img]
+      });
+    },
+    clickCard: function clickCard(e) {
+      console.log(e);
+      this.currentOrder = e;
+      this.currentOrder.createUserInfo = this.info;
+      this.$refs.myorderdetailpopup.clickCard(this.currentOrder);
+    },
+    getShowOrder: function getShowOrder() {
+      var _this2 = this;
+      this.post({
+        url: 'carshareorder/getbyuserid/up',
+        data: {
+          openid: this.parameter.openid
+        }
+      }).then(function (res) {
+        console.log('拼车数据', res);
+        _this2.orderList = res.data;
       }).catch(function (err) {
         console.log('home page is', err);
         _this2.isRefresh = false;
@@ -283,15 +368,70 @@ var _default = {
         });
         return;
       });
+    },
+    change: function change(e) {
+      console.log(e);
+      this.currentIndex = e.index;
+    },
+    getAppriseByUserid: function getAppriseByUserid() {
+      var _this3 = this;
+      this.post({
+        url: 'apprise/byuserid',
+        data: {
+          openid: this.info.openid
+        }
+      }).then(function (res) {
+        console.log('评价返回的数据', res);
+        _this3.appriseList = res.data;
+        _this3.list[0].badge.value = res.data.length;
+        _this3.appriseList.forEach(function (item) {
+          item.createat = item.createat.split('T')[0] + ' ' + item.createat.split('T')[1];
+          if (item.type = 1) item.typeText = '拼车';else if (item.type == 2) item.typeText = '二手';
+        });
+      });
+    },
+    getUserInfoByUserId: function getUserInfoByUserId(userid) {
+      var _this4 = this;
+      this.post({
+        url: 'user/byuserid',
+        data: {
+          userid: userid
+        }
+      }).then(function (res) {
+        console.log(res);
+        if (res.code == 200) {
+          _this4.info = res.data;
+          _this4.getAppriseByUserid();
+        } else {
+          _this4.$refs.message.show({
+            type: 'error',
+            msg: '获取用户信息失败'
+          });
+        }
+      }).catch(function (err) {
+        console.log('home page is', err);
+        _this4.isRefresh = false;
+        _this4.$refs.message.show({
+          type: 'error',
+          msg: '网络开了点小差,请稍候重试吧'
+        });
+        return;
+      });
     }
   },
   onLoad: function onLoad(e) {
-    console.log('userinfo, onload', e.userid);
-    this.getUserInfoByUserId(e.userid);
-  },
-  created: function created() {}
+    this.info = uni.getStorageSync('user');
+    this.getAppriseByUserid();
+    if (!this.info) {
+      this.getUserInfoByUserId(e.userid);
+    }
+    console.log('userinfo, onload', e);
+    this.parameter = e;
+    this.getShowOrder();
+  }
 };
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

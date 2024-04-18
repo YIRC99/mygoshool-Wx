@@ -713,8 +713,8 @@ var _default = {
     },
     startConfirm: function startConfirm(e) {
       console.log('开始出发时间', e);
-      console.log('开始出发时间', this.$u.timeFormat(e.value, 'yyyy-mm-dd hh:MM'));
-      this.startDateTime = this.$u.timeFormat(e.value, 'yyyy-mm-dd hh:MM');
+      console.log('开始出发时间', this.$uv.timeFormat(e.value, 'yyyy-mm-dd hh:MM'));
+      this.startDateTime = this.$uv.timeFormat(e.value, 'yyyy-mm-dd hh:MM');
     },
     choseStartDateTime: function choseStartDateTime() {
       this.$refs.startDatetimePicker.open();

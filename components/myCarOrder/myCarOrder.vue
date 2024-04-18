@@ -2,7 +2,7 @@
   <view>
     
     <uni-card v-for="(item,index) in orderList" :key="index" :title="subYear(item.startdatetime) + ' 出发'"
-      :thumbnail='avahttp + item.createUserInfo.avatar' @click="clickCard(item)">
+      :thumbnail='isAvaPath(item)' @click="clickCard(item)">
       <view class="my-car-box">
         <view class="" style="width: 80%;">
           <view class="car-left">
@@ -46,6 +46,10 @@
       orderList:{
         default: [],
         type: Array
+      },
+      avaImgPath:{
+        default: '',
+        type: String
       }
     },
     data() {
@@ -55,14 +59,17 @@
       };
     },
     methods:{
+      isAvaPath(item){
+        if(item.createUserInfo != null){
+           return this.avahttp + item.createUserInfo.avatar
+        }else{
+           return this.avahttp + this.avaImgPath
+        }
+      
+      },
       clickCard(order) {
         console.log('click sun function');
         this.$emit('clickOrderItem',order)
-        return 
-        this.currentOrder = order
-        console.log('点击了卡片当前选中改变了', this.currentOrder);
-        this.$refs.popup.open()
-        this.popupShow = true
       },
     }
   }

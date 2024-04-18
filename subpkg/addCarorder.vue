@@ -25,7 +25,7 @@
         <view class="">{{startDateTime}}</view>
         <image src="/static/rihgt_black.png" style="width: 30rpx; height: 30rpx; position: absolute; right: 40rpx;"
           mode=""></image>
-        <uv-datetime-picker :maxDate="endDate" ref="startDatetimePicker" :minDate="MinStartTimeValue" :formatter="formatter"
+        <uv-datetime-picker :itemHeight="88" :maxDate="endDate" ref="startDatetimePicker" :minDate="MinStartTimeValue" :formatter="formatter"
           v-model="StartTimeValue" mode="datetime" @confirm="startConfirm">
         </uv-datetime-picker>
       </view>
@@ -506,8 +506,8 @@ import { callWithErrorHandling } from "vue";
       },
       startConfirm(e) {
         console.log('开始出发时间', e);
-        console.log('开始出发时间', this.$u.timeFormat(e.value, 'yyyy-mm-dd hh:MM'));
-        this.startDateTime = this.$u.timeFormat(e.value, 'yyyy-mm-dd hh:MM')
+        console.log('开始出发时间', this.$uv.timeFormat(e.value, 'yyyy-mm-dd hh:MM'));
+        this.startDateTime = this.$uv.timeFormat(e.value, 'yyyy-mm-dd hh:MM')
       },
       choseStartDateTime() {
         this.$refs.startDatetimePicker.open()

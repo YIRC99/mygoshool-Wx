@@ -472,8 +472,9 @@ var _default = {
   methods: {
     toUserinfo: function toUserinfo() {
       if (!this.isLogin) return;
+      console.log(this.info);
       uni.navigateTo({
-        url: '/subpkg/userinfo?userid=' + this.info.userid
+        url: '/subpkg/userinfo?userid=' + this.info.userid + '&openid=' + this.info.openid
       });
     },
     toReceiveOrder: function toReceiveOrder() {
@@ -750,11 +751,11 @@ try {
     uvLoadMore: function () {
       return Promise.all(/*! import() | uni_modules/uv-load-more/components/uv-load-more/uv-load-more */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-load-more/components/uv-load-more/uv-load-more")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-load-more/components/uv-load-more/uv-load-more.vue */ 280))
     },
+    myOrderDetailPopup: function () {
+      return __webpack_require__.e(/*! import() | components/myOrderDetailPopup/myOrderDetailPopup */ "components/myOrderDetailPopup/myOrderDetailPopup").then(__webpack_require__.bind(null, /*! @/components/myOrderDetailPopup/myOrderDetailPopup.vue */ 640))
+    },
     uvPopup: function () {
       return Promise.all(/*! import() | uni_modules/uv-popup/components/uv-popup/uv-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-popup/components/uv-popup/uv-popup")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-popup/components/uv-popup/uv-popup.vue */ 288))
-    },
-    uniSection: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 295))
     },
     myAdd: function () {
       return __webpack_require__.e(/*! import() | components/myAdd/myAdd */ "components/myAdd/myAdd").then(__webpack_require__.bind(null, /*! @/components/myAdd/myAdd.vue */ 302))
@@ -796,15 +797,6 @@ var render = function () {
   var g0 = _vm.newSchoolList.length
   var g1 = _vm.oldSchoolList.length
   var g2 = _vm.otherAddressList.length
-  var f0 = _vm._f("fromStartDateTime")(_vm.currentOrder.startdatetime)
-  var m0 =
-    _vm.currentOrder.isbefore == 1
-      ? _vm.hoursTominute(_vm.currentOrder.beforetime)
-      : null
-  var m1 =
-    _vm.currentOrder.isafter == 1
-      ? _vm.hoursTominute(_vm.currentOrder.aftertime)
-      : null
   _vm.$mp.data = Object.assign(
     {},
     {
@@ -812,9 +804,6 @@ var render = function () {
         g0: g0,
         g1: g1,
         g2: g2,
-        f0: f0,
-        m0: m0,
-        m1: m1,
       },
     }
   )
@@ -858,61 +847,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ 18));
 var _mixin = _interopRequireDefault(__webpack_require__(/*! @/mixins/mixin.js */ 80));
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -1068,14 +1002,16 @@ var _default = {
   },
   mixins: [_mixin.default],
   methods: {
+    myPopupShow: function myPopupShow(e) {
+      this.popupShow = e;
+    },
     myonChange: function myonChange(e) {
       console.log('子组件上传的回调', e);
       this.fileList1 = e;
     },
     ToUserInfo: function ToUserInfo() {
-      console.log('点击了 个人信息');
       uni.navigateTo({
-        url: '/subpkg/userinfo?userid=' + this.currentOrder.createUserInfo.userid
+        url: '/subpkg/userinfo?userid=' + this.currentOrder.createUserInfo.userid + '&openid=' + this.currentOrder.createUserInfo.openid
       });
     },
     confirmWxImg: function confirmWxImg() {
@@ -1145,15 +1081,9 @@ var _default = {
       this.$refs.calendars.open();
     },
     copyWx: function copyWx() {
-      var _this = this;
-      uni.setClipboardData({
-        data: this.currentOrder.wechataccount || this.currentOrder.phonenumber,
-        complete: function complete(res) {
-          console.log('点击复制的结果', res);
-          _this.$refs.receivePopup.close();
-          _this.closeReceivePopup();
-        }
-      });
+      console.log('不复制了 直接关闭');
+      this.$refs.receivePopup.close();
+      this.closeReceivePopup();
     },
     closeReceivePopup: function closeReceivePopup() {
       this.popupShow = false;
@@ -1170,7 +1100,7 @@ var _default = {
       this.$refs.modal.open();
     },
     receiveOrder: function receiveOrder() {
-      var _this2 = this;
+      var _this = this;
       var user = uni.getStorageSync('user');
       this.isLoading = true;
       console.log(this.fileList1);
@@ -1184,27 +1114,27 @@ var _default = {
         }
       }).then(function (res) {
         console.log(res);
-        _this2.clearWxImg();
+        _this.clearWxImg();
         if (res.code != 200) {
-          _this2.$refs.message.show({
+          _this.$refs.message.show({
             type: 'error',
             msg: '订单已被接受或失效',
             iconSize: 16
           });
-          _this2.popupShow = false;
-          _this2.isLoading = false;
-          _this2.$refs.popup.close();
-          _this2.scrollPullDown();
+          _this.popupShow = false;
+          _this.isLoading = false;
+          _this.$refs.myorderdetailpopup.closePopup();
+          _this.scrollPullDown();
           return;
         }
-        _this2.isLoading = false;
-        _this2.scrollPullDown();
-        _this2.$refs.popup.close();
-        _this2.$refs.receivePopup.open();
+        _this.isLoading = false;
+        _this.scrollPullDown();
+        _this.$refs.myorderdetailpopup.closePopup();
+        _this.$refs.receivePopup.open();
       }).catch(function (err) {
         console.log('home page is', err);
-        _this2.isRefresh = false;
-        _this2.$refs.message.show({
+        _this.isRefresh = false;
+        _this.$refs.message.show({
           type: 'error',
           msg: '网络开了点小差,请稍候重试吧',
           iconSize: 16
@@ -1213,7 +1143,7 @@ var _default = {
       });
     },
     getOrderList: function getOrderList() {
-      var _this3 = this;
+      var _this2 = this;
       var isPullDown = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
       if (isPullDown) this.list[this.currentIndex].pageNum = 1;
       this.post({
@@ -1227,8 +1157,8 @@ var _default = {
       }).then(function (res) {
         console.log(res.data);
         if (res.code != 200) {
-          _this3.isRefresh = false;
-          _this3.$refs.message.show({
+          _this2.isRefresh = false;
+          _this2.$refs.message.show({
             type: 'error',
             //String 默认default
             msg: '网络开了点小差,请稍候重试吧' //String 显示内容 *
@@ -1236,7 +1166,7 @@ var _default = {
 
           return;
         }
-        _this3.list[_this3.currentIndex].pagetotal = res.data.total;
+        _this2.list[_this2.currentIndex].pagetotal = res.data.total;
         res.data.records.forEach(function (item) {
           if (item.startaddressall.indexOf('濂溪校区') != -1) {
             item.startaddress = '九职大' + item.startaddress.slice(6, 9999);
@@ -1246,33 +1176,33 @@ var _default = {
         });
         // 下拉刷新 跟 触底分页加载时不同的
         if (isPullDown) {
-          if (_this3.currentIndex == 0) {
-            _this3.newSchoolList = [];
-            _this3.newSchoolList = res.data.records;
-          } else if (_this3.currentIndex == 1) {
-            _this3.oldSchoolList = [];
-            _this3.oldSchoolList = res.data.records;
-          } else if (_this3.currentIndex == 2) {
-            _this3.otherAddressList = [];
-            _this3.otherAddressList = res.data.records;
+          if (_this2.currentIndex == 0) {
+            _this2.newSchoolList = [];
+            _this2.newSchoolList = res.data.records;
+          } else if (_this2.currentIndex == 1) {
+            _this2.oldSchoolList = [];
+            _this2.oldSchoolList = res.data.records;
+          } else if (_this2.currentIndex == 2) {
+            _this2.otherAddressList = [];
+            _this2.otherAddressList = res.data.records;
           }
         } else {
           console.log('获取信息是的方式是触底分页加载');
-          if (_this3.currentIndex == 0) {
-            _this3.newSchoolList = [].concat((0, _toConsumableArray2.default)(_this3.newSchoolList), (0, _toConsumableArray2.default)(res.data.records));
-          } else if (_this3.currentIndex == 1) {
-            _this3.oldSchoolList = [].concat((0, _toConsumableArray2.default)(_this3.oldSchoolList), (0, _toConsumableArray2.default)(res.data.records));
-          } else if (_this3.currentIndex == 2) {
-            _this3.otherAddressList = [].concat((0, _toConsumableArray2.default)(_this3.otherAddressList), (0, _toConsumableArray2.default)(res.data.records));
+          if (_this2.currentIndex == 0) {
+            _this2.newSchoolList = [].concat((0, _toConsumableArray2.default)(_this2.newSchoolList), (0, _toConsumableArray2.default)(res.data.records));
+          } else if (_this2.currentIndex == 1) {
+            _this2.oldSchoolList = [].concat((0, _toConsumableArray2.default)(_this2.oldSchoolList), (0, _toConsumableArray2.default)(res.data.records));
+          } else if (_this2.currentIndex == 2) {
+            _this2.otherAddressList = [].concat((0, _toConsumableArray2.default)(_this2.otherAddressList), (0, _toConsumableArray2.default)(res.data.records));
           }
         }
-        _this3.isRefresh = false;
-        _this3.list[_this3.currentIndex].isShowListloading = false;
+        _this2.isRefresh = false;
+        _this2.list[_this2.currentIndex].isShowListloading = false;
         console.log('下拉刷新结束了');
       }).catch(function (err) {
         console.log('home page is', err);
-        _this3.isRefresh = false;
-        _this3.$refs.message.show({
+        _this2.isRefresh = false;
+        _this2.$refs.message.show({
           type: 'error',
           msg: '网络开了点小差,请稍候重试吧',
           iconSize: 16
@@ -1339,11 +1269,9 @@ var _default = {
     clickCard: function clickCard(order) {
       this.currentOrder = order;
       console.log('点击了卡片当前选中改变了', this.currentOrder);
-      this.$refs.popup.open();
+      // this.$refs.popup.open() // -----------------
+      this.$refs.myorderdetailpopup.clickCard();
       this.popupShow = true;
-    },
-    closePopup: function closePopup() {
-      this.popupShow = false;
     },
     change: function change(e) {
       console.log(e);
@@ -1360,10 +1288,10 @@ var _default = {
       }
     },
     myonshow: function myonshow() {
-      var _this4 = this;
+      var _this3 = this;
       uni.$once('addUpdate', function () {
         // console.log('监听到了 添加之后 返回页面');
-        _this4.scrollPullDown();
+        _this3.scrollPullDown();
       });
       // console.log('拼车页面的myonshow方法触发了');
       this.simulateSwipeDown();

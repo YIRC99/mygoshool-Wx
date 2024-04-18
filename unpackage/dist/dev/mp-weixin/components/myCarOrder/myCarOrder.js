@@ -104,20 +104,22 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  var m1 = __webpack_require__(/*! @/static/upCar.png */ 634)
+  var m2 = __webpack_require__(/*! @/static/upCar.png */ 634)
   var l0 = _vm.__map(_vm.orderList, function (item, index) {
     var $orig = _vm.__get_orig(item)
     var m0 = _vm.subYear(item.startdatetime)
+    var m1 = _vm.isAvaPath(item)
     return {
       $orig: $orig,
       m0: m0,
+      m1: m1,
     }
   })
   _vm.$mp.data = Object.assign(
     {},
     {
       $root: {
-        m1: m1,
+        m2: m2,
         l0: l0,
       },
     }
@@ -208,6 +210,10 @@ var _default = {
     orderList: {
       default: [],
       type: Array
+    },
+    avaImgPath: {
+      default: '',
+      type: String
     }
   },
   data: function data() {
@@ -217,14 +223,16 @@ var _default = {
     };
   },
   methods: {
+    isAvaPath: function isAvaPath(item) {
+      if (item.createUserInfo != null) {
+        return this.avahttp + item.createUserInfo.avatar;
+      } else {
+        return this.avahttp + this.avaImgPath;
+      }
+    },
     clickCard: function clickCard(order) {
       console.log('click sun function');
       this.$emit('clickOrderItem', order);
-      return;
-      this.currentOrder = order;
-      console.log('点击了卡片当前选中改变了', this.currentOrder);
-      this.$refs.popup.open();
-      this.popupShow = true;
     }
   }
 };
