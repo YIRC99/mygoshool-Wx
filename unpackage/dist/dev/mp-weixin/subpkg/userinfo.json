@@ -8,6 +8,7 @@
     "uv-tags": "/uni_modules/uv-tags/components/uv-tags/uv-tags",
     "my-emppty": "/components/myEmppty/myEmppty",
     "my-car-order": "/components/myCarOrder/myCarOrder",
+    "my-shop-waterfall": "/components/myShopWaterfall/myShopWaterfall",
     "zero-loading": "/uni_modules/zero-loading/components/zero-loading/zero-loading",
     "quick-message": "/components/quick-message/quick-message",
     "my-order-detail-popup": "/components/myOrderDetailPopup/myOrderDetailPopup",

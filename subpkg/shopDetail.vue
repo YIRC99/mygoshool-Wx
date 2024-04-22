@@ -3,7 +3,7 @@
     
     <view class="" style="background-color: #ffffff; width: 100vw; height: 1rpx;"></view>
 
-    <uni-card isShadow >
+    <uni-card isShadow @click="toUserInfo" >
       <view class="myheaderbox">
         <view class="left">
           <image class="myavatar" :src="avahttp + userinfo.avatar" mode=""></image>
@@ -52,6 +52,7 @@
 
 <script>
    import mixin from '@/mixins/mixin.js'
+import { date } from '../uni_modules/uv-ui-tools/libs/function/test'
   export default {
      mixins: [mixin],
     data() {
@@ -67,10 +68,17 @@
           wechatimg: ''
         },
         shopDetail: '',
-        shopImgList:[]
+        shopImgList:[],
+        isToUserInfo: true
       }
     },
     methods: {
+      toUserInfo(){
+        if(this.isToUserInfo)
+          uni.redirectTo({
+            url: '/subpkg/userinfo?userid=' + this.userinfo.userid + '&openid=' + this.userinfo.openid
+          })
+      },
       viewWximg(){
         uni.previewImage({
           urls: [this.shophttp + this.shop.wechatimg]
@@ -78,11 +86,41 @@
       },
       clickWxImg(){
         this.isLoading = true
-        setTimeout(() => {
-          this.showWxImg = true
+        let timer = new Date().getTime()
+        this.post({
+          url: 'shop/receive',
+          data: {
+            id: this.shop.id
+          }
+        }).then(res =>{
+          if(timer - new Date().getTime() < 500){
+            setTimeout(() => {
+              this.isLoading = false
+              if(res.code ==200){
+                this.showWxImg = true
+              }else{
+                this.$refs.message.show({
+                  type: 'error',
+                  msg: '商品不存在或已删除',
+                })
+              }
+            },500)
+          }else{
+            this.isLoading = false
+            if(res.code ==200){
+              this.showWxImg = true
+            }
+          }
+          
+          
+        }).catch(err => {
+          uni.hideLoading()
           this.isLoading = false
-        },1000)
-        
+          this.$refs.message.show({
+            type: 'error',
+            msg: '网络开了点小差,请稍候重试吧',
+          })
+        })
       },
       viewImg(index){
         uni.previewImage({
@@ -125,6 +163,7 @@
     },
     onLoad() {
       this.shop = uni.getStorageSync('shopdetail')
+      this.isToUserInfo = uni.getStorageSync('isToUserInfo') == '' ? false : true
       console.log(this.shop);
       this.getUserInfo(this.shop.createuserid)
       this.initData()

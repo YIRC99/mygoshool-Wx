@@ -42,11 +42,12 @@
         <view class="middle-list" v-show="currentIndex == 1">
           <myEmppty :isShow="orderList.length == 0" Text="订单为空"></myEmppty>
           <myCarOrder :orderList="orderList" @clickOrderItem="clickCard" :avaImgPath="info.avatar"></myCarOrder>
-          
-          
+
+
         </view>
         <view class="middle-list" v-show="currentIndex == 2">
-          <myEmppty :isShow="true" Text="订单为空"></myEmppty>
+          <myEmppty :isShow="shopList.length == 0" Text="订单为空"></myEmppty>
+          <myShopWaterfall :list="shopList" :isToUserInfo="false"></myShopWaterfall>
         </view>
         <view class="middle-list" v-show="currentIndex == 3">
           <myEmppty :isShow="true" Text="订单为空"></myEmppty>
@@ -57,10 +58,11 @@
     <zero-loading v-if="isLoading" type="circle" :mask="true" maskOpacity="0.1"></zero-loading>
 
     <quick-message ref="message"></quick-message>
-    
-    <myOrderDetailPopup ref="myorderdetailpopup" :currentOrder="currentOrder" :isToUserInfo="false" @myShowUploadWxImg="showUploadWxImg" ></myOrderDetailPopup>
-    
-    <uv-popup ref="receivePopup" mode="center" 
+
+    <myOrderDetailPopup ref="myorderdetailpopup" :currentOrder="currentOrder" :isToUserInfo="false"
+      @myShowUploadWxImg="showUploadWxImg"></myOrderDetailPopup>
+
+    <uv-popup ref="receivePopup" mode="center"
       custom-style="height: 200rpx;border-radius: 30rpx; width: 80vw; height: 40vh;" :close-on-click-overlay="false">
       <view class="receivePopup-box">
         <view class="" style="display: flex;justify-content: center;align-items: center;">
@@ -79,16 +81,16 @@
         </view>
       </view>
     </uv-popup>
-    
-    
+
+
     <uv-modal ref="modal" title="添加联系方式让对方也可以联系你吧" showCancelButton :closeOnClickOverlay="false" @confirm="confirmWxImg"
       @cancel="clearWxImg">
-    
+
       <myupload ref="myWxUpload" @onChange="myonChange"></myupload>
-    
+
     </uv-modal>
-      
-    
+
+
   </view>
 </template>
 
@@ -118,7 +120,7 @@
             value: 0
           }
         }, {
-          name: '二手',
+          name: '闲置',
           badge: {
             value: 0
           }
@@ -131,7 +133,8 @@
         currentIndex: 0,
         appriseList: [],
         orderList: [],
-        currentOrder: {}
+        currentOrder: {},
+        shopList: []
       };
     },
     methods: {
@@ -179,10 +182,10 @@
             this.$refs.myorderdetailpopup.closePopup()
             return
           }
-      
+
           this.isLoading = false
           this.$refs.myorderdetailpopup.closePopup()
-          
+
           this.$refs.receivePopup.open()
         }).catch(err => {
           console.log('home page is', err);
@@ -194,7 +197,7 @@
           })
           return
         })
-      
+
       },
       confirmWxImg() {
         if (this.fileList1.length == 0) {
@@ -211,7 +214,7 @@
           })
           return
         }
-      
+
         this.receiveOrder()
       },
       copyWx() {
@@ -224,21 +227,22 @@
           urls: [img]
         })
       },
-      clickCard(e){
+      clickCard(e) {
         console.log(e);
         this.currentOrder = e
         this.currentOrder.createUserInfo = this.info
         this.$refs.myorderdetailpopup.clickCard(this.currentOrder)
       },
-      getShowOrder(){
+      getShowOrder() {
         this.post({
           url: 'carshareorder/getbyuserid/up',
           data: {
             openid: this.parameter.openid
           }
-        }).then(res =>{
-          console.log('拼车数据',res);
+        }).then(res => {
+          console.log('拼车数据', res);
           this.orderList = res.data
+          this.list[1].badge.value = res.data.length
         }).catch(err => {
           console.log('home page is', err);
           this.isRefresh = false
@@ -248,8 +252,33 @@
           })
           return
         })
-        
-        
+
+      },
+      getShowShopList() {
+        this.post({
+          url: 'shop/getbyuserid/up',
+          data: {
+            openid: this.parameter.openid
+          }
+        }).then(res => {
+          console.log('闲置物品的响应', res);
+          if (res.code == 200) {
+            res.data.forEach(i => {
+              i.image = i.imgs.split(",")[0]
+            })
+            this.shopList = res.data
+            this.list[2].badge.value = this.shopList.length
+          }
+        }).catch(err => {
+          console.log('home page is', err);
+          this.isRefresh = false
+          this.$refs.message.show({
+            type: 'error',
+            msg: '网络开了点小差,请稍候重试吧',
+          })
+          return
+        })
+
       },
       change(e) {
         console.log(e);
@@ -286,15 +315,15 @@
         }).then(res => {
           console.log(res);
           if (res.code == 200) {
-           this.info = res.data
-           this.getAppriseByUserid()
-          }else{
+            this.info = res.data
+            this.getAppriseByUserid()
+          } else {
             this.$refs.message.show({
               type: 'error',
               msg: '获取用户信息失败',
             })
           }
-         
+
         }).catch(err => {
           console.log('home page is', err);
           this.isRefresh = false
@@ -307,14 +336,16 @@
       },
     },
     onLoad(e) {
-      this.info = uni.getStorageSync('user')
-      this.getAppriseByUserid()
-      if(!this.info){
-        this.getUserInfoByUserId(e.userid)
-      }
       console.log('userinfo, onload', e);
       this.parameter = e
+      this.info = uni.getStorageSync('user')
+      if (!this.info) {
+        this.getUserInfoByUserId(e.userid)
+      }
+
+      this.getAppriseByUserid()
       this.getShowOrder()
+      this.getShowShopList()
     }
   }
 </script>
@@ -323,7 +354,7 @@
   .page {
     padding-bottom: 80rpx;
   }
-  
+
   .receivePopup-box {
     width: 100%;
     height: 100%;
@@ -333,7 +364,7 @@
     justify-content: flex-start;
     flex-wrap: nowrap;
     align-items: center;
-  
+
     .down-box {
       display: flex;
       justify-content: center;
@@ -342,7 +373,7 @@
       left: 0;
       right: 0;
       margin: 0 auto;
-  
+
       .btn-grad {
         background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
         margin: 10px;
@@ -359,7 +390,7 @@
         height: 80rpx;
         line-height: 80rpx;
       }
-  
+
       .btn-grad:hover {
         background-position: right center;
         /* change the direction of the change here */
@@ -367,14 +398,14 @@
         text-decoration: none;
       }
     }
-  
+
     .titleImg {
-  
+
       width: 300rpx;
     }
   }
-  
-  
+
+
   .receivePopup-box-img {
     image {
       border: 1px solid #ebebeb;

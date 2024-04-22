@@ -8,7 +8,7 @@
     ImageHeight="215rpx" ImageWidth="215rpx"
     />
     
-    <uni-section title="意见填写" type="line" titleFontSize="36rpx">
+    <uni-section :title="isReport ? '信息填写': '意见填写'" type="line" titleFontSize="36rpx">
     </uni-section>
     <view class="feed-box">
       <textarea class="feed-box-text" v-model="mt" maxlength="150" :placeholder="placeholderText" />
@@ -19,13 +19,12 @@
       <view class="tips-box-line">-----开发者将在七个工作日内为您处理并通知您</view>
       <view class="tips-box-line">1. 遇到程序Bug、反人类设计、好点子都欢迎您来提建议哦</view>
       <view class="tips-box-line">2. 遇到虚假微信或者骚扰请把的信息截图提交，核实会拉黑保护您的权益</view>
-      <!-- <view class="tips-box-line">2. 若是有价值建议，可获0.66/6.66/18.8现金奖励</view> -->
     </view>
 
 
     <view class="" style="margin-top: 30rpx;">
       <view class="down-box">
-        <button class="btn-grad" @click="lgin">提交</button>
+        <button class="btn-grad" @click="postFeedback">提交</button>
       </view>
     </view>
 
@@ -42,7 +41,10 @@
         imgString: '',
         mt: '',
         placeholderText: '请填写您遇到的问题或建议,配合图片我们可以更快处理~',
-        ispost: false
+        ispost: false,
+        isReport: false,
+        feedSuccess: '反馈成功,感谢您的意见',
+        feedFail: '反馈失败,请稍候重试吧'
       }
     },
     methods: {
@@ -51,7 +53,7 @@
         this.fileList1 = e
       },
 
-      lgin() {
+      postFeedback() {
         if(this.ispost)return 
         this.ispost = true
         
@@ -79,14 +81,15 @@
           data: {
             userid: openid,
             remark: this.mt,
-            imglist: this.imgString
+            imglist: this.imgString,
+            reportId: this.isReport ? this.reportId : 0
           }
         }).then(res => {
           console.log(res);
           if (res.code != 200) {
             this.$refs.message.show({
               type: 'error',
-              msg: '反馈失败,请稍候重试吧',
+              msg: this.feedFail,
               iconSize: 16,
             })
             this.ispost = false
@@ -94,7 +97,7 @@
           }
           this.$refs.message.show({
             type: 'success',
-            msg: '反馈成功,感谢您的意见',
+            msg: this.feedSuccess,
             iconSize: 16,
           })
           setTimeout(() => {
@@ -114,6 +117,20 @@
 
 
       }
+    },
+    onLoad(e) {
+      console.log(e.reportId);
+      if(e.reportId != undefined){
+        this.isReport = true
+        this.reportId = e.reportId
+        this.feedFail = '举报失败 请稍重试吧~'
+        this.feedSuccess = '提交成功 感谢您的反馈'
+        this.placeholderText = '请描述举报的具体原因,可上传微信二维码信息,处理后可及时联系您'
+        uni.setNavigationBarTitle({
+          title: '举报中心'
+        })
+      }
+      
     }
   }
 </script>

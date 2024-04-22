@@ -9,7 +9,7 @@
 
 
         <view class="waterfall">
-          <myEmppty :isShow="list.length == 0" Text="暂时没有商品出售哦~" :img-path="require('@/static/shopCar.png')"></myEmppty>
+          <myEmppty :isShow="list.length == 0" Text="没有找到你想找的商品哦~" :img-path="require('@/static/shopCar.png')"></myEmppty>
 
           <uv-waterfall ref="waterfall" v-model="list" :add-time="10" :left-gap="leftGap" :right-gap="rightGap"
             :column-gap="columnGap" @changeList="changeList">

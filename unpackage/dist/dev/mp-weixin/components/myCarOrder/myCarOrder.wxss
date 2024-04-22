@@ -23,6 +23,20 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.mymore {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+          user-select: none;
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 25rpx;
+  right: 40rpx;
+}
+.mymore image {
+  width: 100%;
+  height: 100%;
+}
 .my-car-box {
   display: flex;
   align-items: center;

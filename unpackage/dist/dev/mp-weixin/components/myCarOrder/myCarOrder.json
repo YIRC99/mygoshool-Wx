@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card"
+    "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
+    "rudon-row-menu-dot-dot-dot": "/uni_modules/rudon-rowMenuDotDotDot/components/rudon-rowMenuDotDotDot/rudon-rowMenuDotDotDot"
   }
 }

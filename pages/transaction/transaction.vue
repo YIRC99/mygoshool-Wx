@@ -11,7 +11,7 @@
         <view style="position: sticky; top: 0; z-index: 9999; background-color: #fff;">
           <view class="">
             <view class="" @click="">
-              <uni-search-bar @confirm="toSearch" v-model="searchText" radius="30" placeholder="搜索" />
+              <uni-search-bar ref="mysearch" @focus="updatePlaceholder" @cancel="recoverPlaceholder" @confirm="toSearch" v-model="searchText" radius="30" :placeholder="myplaceholder" />
             </view>
 
             <view class="tag-box">
@@ -27,54 +27,8 @@
 
         <view class="waterfall">
           <myEmppty :isShow="list.length == 0" Text="暂时没有商品出售哦~" :img-path="require('@/static/shopCar.png')"></myEmppty>
-
-          <uv-waterfall ref="waterfall" v-model="list" :add-time="10" :left-gap="leftGap" :right-gap="rightGap"
-            :column-gap="columnGap" @changeList="changeList">
-            <!-- 第一列数据 -->
-            <template v-slot:list1>
-              <!-- 为了磨平部分平台的BUG，必须套一层view -->
-              <view>
-
-                <view v-for="(item, index) in list1" :key="item.id" @click="ToShopDetail(item)" class="waterfall-item">
-                  <view class="waterfall-item__image">
-                    <image lazy-load :src="shophttp + item.image" mode="widthFix" style="width: 100%;"></image>
-                  </view>
-                  <view class="waterfall-item__ft">
-                    <view class="waterfall-item__ft__title">
-                      <text class="value uv-line-2">{{item.detail | formHtmlStr}}</text>
-                    </view>
-                    <view class="waterfall-item__ft__desc uv-line-2">
-                      <text class="value">￥{{item.price}}</text>
-                    </view>
-                  </view>
-                </view>
-
-
-              </view>
-            </template>
-            <!-- 第二列数据 -->
-            <template v-slot:list2>
-              <!-- 为了磨平部分平台的BUG，必须套一层view -->
-              <view>
-
-                <view v-for="(item, index) in list2" :key="item.id" @click="ToShopDetail(item)" class="waterfall-item">
-                  <view class="waterfall-item__image">
-                    <image lazy-load :src="shophttp + item.image" mode="widthFix" style="width: 100%;"></image>
-                  </view>
-                  <view class="waterfall-item__ft">
-                    <view class="waterfall-item__ft__title">
-                      <text class="value uv-line-2">{{item.detail | formHtmlStr}}</text>
-                    </view>
-                    <view class="waterfall-item__ft__desc uv-line-2">
-                      <text class="value">￥{{item.price}}</text>
-                    </view>
-                  </view>
-                </view>
-
-
-              </view>
-            </template>
-          </uv-waterfall>
+          
+          <myShopWaterfall :list="list"></myShopWaterfall>
 
           <uv-load-more v-if="isShowListloading" :fontSize="30" :status="status" :marginTop="30" dashed line />
 
@@ -100,6 +54,7 @@
     mixins: [mixin],
     data() {
       return {
+        myplaceholder: '搜索',
         searchText: '',
         status: 'loading',
         myScrollPosition: 0,
@@ -134,7 +89,6 @@
     },
     watch: {
       searchText(newValue) {
-        console.log(newValue);
         // 使用正则表达式匹配特殊字符
         if (/[^\u4e00-\u9fa5a-zA-Z0-9\s]/.test(newValue)) {
           // 如果输入包含特殊字符，将搜索文本设置为不包含特殊字符的文本
@@ -143,6 +97,12 @@
       }
     },
     methods: {
+      recoverPlaceholder(){
+        this.myplaceholder = '搜索'
+      },
+      updatePlaceholder(){
+        this.myplaceholder = '多个关键词可空格分开搜索'
+      },
       chooseAddArr() {
         let arr = []
         this.radios.forEach((item, index) => {
@@ -256,16 +216,21 @@
       },
       toSearch() {
         console.log('点击搜索框');
-        if (this.searchText.tr == '') {
+        if (this.searchText.trim() == '') {
           this.$refs.message.show({
             type: 'warning',
             msg: '请输入搜索内容吧',
           })
           return
         }
+        let result = this.searchText
+        this.searchText = ''
+        this.$refs.mysearch.cancel()
         uni.navigateTo({
-          url: '/subpkg/searchShop?searchText=' + this.searchText
+          url: '/subpkg/searchShop?searchText=' + result
         })
+        
+        
       },
     }
   }
@@ -330,52 +295,3 @@
   }
 </style>
 
-
-<style scoped lang="scss">
-  $show-lines: 1;
-  @import '@/uni_modules/uv-ui-tools/libs/css/variable.scss';
-
-  .waterfall-item {
-    overflow: hidden;
-    margin-top: 20rpx;
-    border-radius: 20rpx;
-    background-color: white;
-    background: #ebe6e6;
-    box-shadow: 5rpx 5rpx 10rpx #bab6b6,
-      -5rpx -5rpx 10rpx #ffffff;
-    // display: flex;
-    // flex-direction: column;
-
-    .waterfall-item__image {
-      padding-bottom: 10rpx;
-      background-color: #fff;
-    }
-  }
-
-  .waterfall-item__ft {
-    padding: 20rpx;
-    padding-top: 0;
-    background: #fff;
-
-    &__title {
-      margin-bottom: 10rpx;
-      line-height: 48rpx;
-      font-weight: 700;
-
-      .value {
-        font-size: 32rpx;
-        color: #303133;
-      }
-    }
-
-    &__desc .value {
-      font-size: 32rpx;
-      font-weight: bold;
-      color: #F26666;
-    }
-
-    &__btn {
-      padding: 10px 0;
-    }
-  }
-</style>

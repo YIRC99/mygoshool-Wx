@@ -21,7 +21,7 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 // @ts-ignore
 wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
-var http = 'http://192.168.72.210:33088/'; //手机热点
+var http = 'http://192.168.73.210:33088/'; //手机热点
 // const http = 'https://yirc99.cn/api/' //服务器
 // const http = 'http://192.168.2.177:33088/' //酒店
 // const http = 'http://192.168.1.113:33088/' //305wifi
@@ -149,7 +149,7 @@ uni.$uv.setConfig({
 });
 var message = function message() {
   Promise.all(/*! require.ensure | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then((function () {
-    return resolve(__webpack_require__(/*! @/components/quick-message/quick-message.vue */ 202));
+    return resolve(__webpack_require__(/*! @/components/quick-message/quick-message.vue */ 200));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 _vue.default.component('quick-message', message);
