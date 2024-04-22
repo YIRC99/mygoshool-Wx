@@ -109,11 +109,8 @@ try {
     uvTags: function () {
       return Promise.all(/*! import() | uni_modules/uv-tags/components/uv-tags/uv-tags */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-tags/components/uv-tags/uv-tags")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-tags/components/uv-tags/uv-tags.vue */ 334))
     },
-    myEmppty: function () {
-      return Promise.all(/*! import() | components/myEmppty/myEmppty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myEmppty/myEmppty")]).then(__webpack_require__.bind(null, /*! @/components/myEmppty/myEmppty.vue */ 265))
-    },
     myShopWaterfall: function () {
-      return __webpack_require__.e(/*! import() | components/myShopWaterfall/myShopWaterfall */ "components/myShopWaterfall/myShopWaterfall").then(__webpack_require__.bind(null, /*! @/components/myShopWaterfall/myShopWaterfall.vue */ 342))
+      return Promise.all(/*! import() | components/myShopWaterfall/myShopWaterfall */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myShopWaterfall/myShopWaterfall")]).then(__webpack_require__.bind(null, /*! @/components/myShopWaterfall/myShopWaterfall.vue */ 342))
     },
     uvLoadMore: function () {
       return Promise.all(/*! import() | uni_modules/uv-load-more/components/uv-load-more/uv-load-more */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-load-more/components/uv-load-more/uv-load-more")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-load-more/components/uv-load-more/uv-load-more.vue */ 279))
@@ -146,17 +143,6 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  var g0 = _vm.list.length
-  var m0 = __webpack_require__(/*! @/static/shopCar.png */ 95)
-  _vm.$mp.data = Object.assign(
-    {},
-    {
-      $root: {
-        g0: g0,
-        m0: m0,
-      },
-    }
-  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -200,7 +186,6 @@ exports.default = void 0;
 var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ 18));
 var _mixin = _interopRequireDefault(__webpack_require__(/*! @/mixins/mixin.js */ 80));
 var _index = __webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/function/index.js */ 53);
-//
 //
 //
 //

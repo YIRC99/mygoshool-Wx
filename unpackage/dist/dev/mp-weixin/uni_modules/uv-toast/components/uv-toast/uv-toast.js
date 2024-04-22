@@ -80,16 +80,16 @@ var components
 try {
   components = {
     uvOverlay: function () {
-      return Promise.all(/*! import() | uni_modules/uv-overlay/components/uv-overlay/uv-overlay */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-overlay/components/uv-overlay/uv-overlay")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-overlay/components/uv-overlay/uv-overlay.vue */ 524))
+      return Promise.all(/*! import() | uni_modules/uv-overlay/components/uv-overlay/uv-overlay */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-overlay/components/uv-overlay/uv-overlay")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-overlay/components/uv-overlay/uv-overlay.vue */ 516))
     },
     uvTransition: function () {
-      return Promise.all(/*! import() | uni_modules/uv-transition/components/uv-transition/uv-transition */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-transition/components/uv-transition/uv-transition")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-transition/components/uv-transition/uv-transition.vue */ 532))
+      return Promise.all(/*! import() | uni_modules/uv-transition/components/uv-transition/uv-transition */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-transition/components/uv-transition/uv-transition")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-transition/components/uv-transition/uv-transition.vue */ 524))
     },
     uvLoadingIcon: function () {
-      return Promise.all(/*! import() | uni_modules/uv-loading-icon/components/uv-loading-icon/uv-loading-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-loading-icon/components/uv-loading-icon/uv-loading-icon")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-loading-icon/components/uv-loading-icon/uv-loading-icon.vue */ 516))
+      return Promise.all(/*! import() | uni_modules/uv-loading-icon/components/uv-loading-icon/uv-loading-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-loading-icon/components/uv-loading-icon/uv-loading-icon")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-loading-icon/components/uv-loading-icon/uv-loading-icon.vue */ 508))
     },
     uvIcon: function () {
-      return Promise.all(/*! import() | uni_modules/uv-icon/components/uv-icon/uv-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-icon/components/uv-icon/uv-icon")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-icon/components/uv-icon/uv-icon.vue */ 553))
+      return Promise.all(/*! import() | uni_modules/uv-icon/components/uv-icon/uv-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-icon/components/uv-icon/uv-icon")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-icon/components/uv-icon/uv-icon.vue */ 545))
     },
     uvGap: function () {
       return Promise.all(/*! import() | uni_modules/uv-gap/components/uv-gap/uv-gap */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-gap/components/uv-gap/uv-gap")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-gap/components/uv-gap/uv-gap.vue */ 585))

@@ -1,6 +1,6 @@
 <template>
   <view>
-
+    <myEmppty :isShow="list.length == 0" :Text="emptyTest" :img-path="require('@/static/shopCar.png')"></myEmppty>
     <uv-waterfall ref="waterfall" v-model="list" :add-time="10" :left-gap="leftGap" :right-gap="rightGap"
       :column-gap="columnGap" @changeList="changeList">
       <!-- 第一列数据 -->
@@ -81,6 +81,10 @@
       isToUserInfo: {
         default: true,
         type: Boolean
+      },
+      emptyTest:{
+        default: '暂时没有商品出售哦',
+        type: String
       }
     },
     data() {

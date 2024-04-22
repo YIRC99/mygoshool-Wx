@@ -102,14 +102,8 @@ __webpack_require__.r(__webpack_exports__);
 var components
 try {
   components = {
-    myEmppty: function () {
-      return Promise.all(/*! import() | components/myEmppty/myEmppty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myEmppty/myEmppty")]).then(__webpack_require__.bind(null, /*! @/components/myEmppty/myEmppty.vue */ 265))
-    },
-    uvWaterfall: function () {
-      return Promise.all(/*! import() | uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall.vue */ 456))
-    },
-    uvLoadMore: function () {
-      return Promise.all(/*! import() | uni_modules/uv-load-more/components/uv-load-more/uv-load-more */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-load-more/components/uv-load-more/uv-load-more")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-load-more/components/uv-load-more/uv-load-more.vue */ 279))
+    myShopWaterfall: function () {
+      return Promise.all(/*! import() | components/myShopWaterfall/myShopWaterfall */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myShopWaterfall/myShopWaterfall")]).then(__webpack_require__.bind(null, /*! @/components/myShopWaterfall/myShopWaterfall.vue */ 342))
     },
     quickMessage: function () {
       return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 200))
@@ -136,35 +130,6 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  var g0 = _vm.list.length
-  var m0 = __webpack_require__(/*! @/static/shopCar.png */ 95)
-  var l0 = _vm.__map(_vm.list1, function (item, index) {
-    var $orig = _vm.__get_orig(item)
-    var f0 = _vm._f("formHtmlStr")(item.detail)
-    return {
-      $orig: $orig,
-      f0: f0,
-    }
-  })
-  var l1 = _vm.__map(_vm.list2, function (item, index) {
-    var $orig = _vm.__get_orig(item)
-    var f1 = _vm._f("formHtmlStr")(item.detail)
-    return {
-      $orig: $orig,
-      f1: f1,
-    }
-  })
-  _vm.$mp.data = Object.assign(
-    {},
-    {
-      $root: {
-        g0: g0,
-        m0: m0,
-        l0: l0,
-        l1: l1,
-      },
-    }
-  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -206,61 +171,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _mixin = _interopRequireDefault(__webpack_require__(/*! @/mixins/mixin.js */ 80));
-var _index = __webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/function/index.js */ 53);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -290,28 +200,8 @@ var _default = {
       myScrollPosition: 0,
       myOldScrollPosition: 0,
       isRefresh: false,
-      radios: [{
-        checked: true,
-        name: '濂溪校区'
-      }, {
-        checked: true,
-        name: '十里校区'
-      }, {
-        checked: true,
-        name: '其他'
-      }],
       list: [],
       // 瀑布流全部数据
-      list1: [],
-      // 瀑布流第一列数据
-      list2: [],
-      // 瀑布流第二列数据
-      leftGap: 10,
-      rightGap: 10,
-      columnGap: 10,
-      pageNum: 1,
-      pageSize: 10,
-      pagetotal: 0,
       isShowListloading: false
     };
   },
@@ -356,26 +246,6 @@ var _default = {
       this.$nextTick(function () {
         _this2.myScrollPosition = 0;
       });
-    },
-    scrollDown: function scrollDown() {
-      if (this.list.length == this.pagetotal) {
-        this.isShowListloading = true;
-        this.status = 'nomore';
-      }
-      if (this.list.length < this.pagetotal) {
-        this.pageNum++;
-        this.isShowListloading = true;
-      }
-      console.log('滑动到底部了');
-    },
-    // 这点非常重要：e.name在这里返回是list1或list2，要手动将数据追加到相应列
-    changeList: function changeList(e) {
-      console.log(e);
-      // console.log('这点非常重要：e.name在这里返回是list1或list2，要手动将数据追加到相应列', e);
-      this[e.name].push(e.value);
-    },
-    checkboxClick: function checkboxClick(index) {
-      this.radios[index].checked = !this.radios[index].checked;
     }
   }
 };

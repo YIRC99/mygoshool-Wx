@@ -3,7 +3,7 @@
     <view class="" v-if="isShow" style="display: flex;flex-direction: column;
     justify-content: center; width: 100vw; align-items: center;">
       <image :src="imgPath" mode="heightFix"></image>
-      <view class="" style="font-size: 40rpx; color: #A9a9a9;">{{Text}}</view>
+      <rich-text :nodes="Text" style="font-size: 40rpx; color: #A9a9a9; text-align: center;"></rich-text>
     </view> 
   </view>
 </template>

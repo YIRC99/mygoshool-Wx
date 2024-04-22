@@ -5,7 +5,6 @@
     "my-affiche": "/components/myAffiche/myAffiche",
     "uni-search-bar": "/uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar",
     "uv-tags": "/uni_modules/uv-tags/components/uv-tags/uv-tags",
-    "my-emppty": "/components/myEmppty/myEmppty",
     "my-shop-waterfall": "/components/myShopWaterfall/myShopWaterfall",
     "uv-load-more": "/uni_modules/uv-load-more/components/uv-load-more/uv-load-more",
     "my-add": "/components/myAdd/myAdd",

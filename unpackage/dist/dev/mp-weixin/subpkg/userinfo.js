@@ -121,7 +121,7 @@ try {
       return Promise.all(/*! import() | components/myCarOrder/myCarOrder */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myCarOrder/myCarOrder")]).then(__webpack_require__.bind(null, /*! @/components/myCarOrder/myCarOrder.vue */ 271))
     },
     myShopWaterfall: function () {
-      return __webpack_require__.e(/*! import() | components/myShopWaterfall/myShopWaterfall */ "components/myShopWaterfall/myShopWaterfall").then(__webpack_require__.bind(null, /*! @/components/myShopWaterfall/myShopWaterfall.vue */ 342))
+      return Promise.all(/*! import() | components/myShopWaterfall/myShopWaterfall */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myShopWaterfall/myShopWaterfall")]).then(__webpack_require__.bind(null, /*! @/components/myShopWaterfall/myShopWaterfall.vue */ 342))
     },
     zeroLoading: function () {
       return __webpack_require__.e(/*! import() | uni_modules/zero-loading/components/zero-loading/zero-loading */ "uni_modules/zero-loading/components/zero-loading/zero-loading").then(__webpack_require__.bind(null, /*! @/uni_modules/zero-loading/components/zero-loading/zero-loading.vue */ 229))

@@ -79,11 +79,14 @@ __webpack_require__.r(__webpack_exports__);
 var components
 try {
   components = {
+    myEmppty: function () {
+      return Promise.all(/*! import() | components/myEmppty/myEmppty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myEmppty/myEmppty")]).then(__webpack_require__.bind(null, /*! @/components/myEmppty/myEmppty.vue */ 265))
+    },
     uvWaterfall: function () {
-      return Promise.all(/*! import() | uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall.vue */ 456))
+      return Promise.all(/*! import() | uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall.vue */ 562))
     },
     rudonRowMenuDotDotDot: function () {
-      return Promise.all(/*! import() | uni_modules/rudon-rowMenuDotDotDot/components/rudon-rowMenuDotDotDot/rudon-rowMenuDotDotDot */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/rudon-rowMenuDotDotDot/components/rudon-rowMenuDotDotDot/rudon-rowMenuDotDotDot")]).then(__webpack_require__.bind(null, /*! @/uni_modules/rudon-rowMenuDotDotDot/components/rudon-rowMenuDotDotDot/rudon-rowMenuDotDotDot.vue */ 500))
+      return Promise.all(/*! import() | uni_modules/rudon-rowMenuDotDotDot/components/rudon-rowMenuDotDotDot/rudon-rowMenuDotDotDot */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/rudon-rowMenuDotDotDot/components/rudon-rowMenuDotDotDot/rudon-rowMenuDotDotDot")]).then(__webpack_require__.bind(null, /*! @/uni_modules/rudon-rowMenuDotDotDot/components/rudon-rowMenuDotDotDot/rudon-rowMenuDotDotDot.vue */ 492))
     },
   }
 } catch (e) {
@@ -107,6 +110,8 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var g0 = _vm.list.length
+  var m0 = __webpack_require__(/*! @/static/shopCar.png */ 95)
   var l0 = _vm.__map(_vm.list1, function (item, index) {
     var $orig = _vm.__get_orig(item)
     var f0 = _vm._f("formHtmlStr")(item.detail)
@@ -127,6 +132,8 @@ var render = function () {
     {},
     {
       $root: {
+        g0: g0,
+        m0: m0,
         l0: l0,
         l1: l1,
       },
@@ -254,6 +261,10 @@ var _default = {
     isToUserInfo: {
       default: true,
       type: Boolean
+    },
+    emptyTest: {
+      default: '暂时没有商品出售哦',
+      type: String
     }
   },
   data: function data() {
