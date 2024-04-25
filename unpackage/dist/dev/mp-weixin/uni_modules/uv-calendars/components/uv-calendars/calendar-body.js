@@ -147,7 +147,7 @@ exports.default = void 0;
 var _mpMixin = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/mixin/mpMixin.js */ 63));
 var _mixin = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/mixin/mixin.js */ 52));
 var _uniI18n = __webpack_require__(/*! @dcloudio/uni-i18n */ 22);
-var _index = _interopRequireDefault(__webpack_require__(/*! ./i18n/index.js */ 259));
+var _index = _interopRequireDefault(__webpack_require__(/*! ./i18n/index.js */ 258));
 //
 //
 //

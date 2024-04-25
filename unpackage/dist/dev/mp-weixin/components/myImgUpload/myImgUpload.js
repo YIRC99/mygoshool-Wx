@@ -83,7 +83,7 @@ try {
       return Promise.all(/*! import() | uni_modules/uv-upload/components/uv-upload/uv-upload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-upload/components/uv-upload/uv-upload")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-upload/components/uv-upload/uv-upload.vue */ 425))
     },
     quickMessage: function () {
-      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 200))
+      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 199))
     },
   }
 } catch (e) {
@@ -246,6 +246,7 @@ var _default = {
     },
     uploadFilePromise: function uploadFilePromise(url) {
       var _this2 = this;
+      console.log(url);
       return new Promise(function (resolve, reject) {
         var a = uni.uploadFile({
           url: _this2.http + 'common/upload?path=' + _this2.ImgRequestPath,
@@ -315,7 +316,7 @@ var _default = {
                 if (result == 400) {
                   _this3["fileList".concat(event.name)].splice(fileListLen, 1, Object.assign(item, {
                     status: 'failed',
-                    message: '请重新上传',
+                    message: '请重试',
                     url: result
                   }));
                 } else {

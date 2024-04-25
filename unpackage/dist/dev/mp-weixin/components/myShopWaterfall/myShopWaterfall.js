@@ -1,6 +1,6 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["components/myShopWaterfall/myShopWaterfall"],{
 
-/***/ 342:
+/***/ 341:
 /*!**************************************************************************!*\
   !*** F:/CodeFile/pingCar/components/myShopWaterfall/myShopWaterfall.vue ***!
   \**************************************************************************/
@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _myShopWaterfall_vue_vue_type_template_id_67d1ade6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./myShopWaterfall.vue?vue&type=template&id=67d1ade6& */ 343);
+/* harmony import */ var _myShopWaterfall_vue_vue_type_template_id_67d1ade6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./myShopWaterfall.vue?vue&type=template&id=67d1ade6& */ 342);
 /* harmony import */ var _myShopWaterfall_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./myShopWaterfall.vue?vue&type=script&lang=js& */ 345);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _myShopWaterfall_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _myShopWaterfall_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 /* harmony import */ var _myShopWaterfall_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./myShopWaterfall.vue?vue&type=style&index=0&lang=scss& */ 347);
@@ -41,7 +41,7 @@ component.options.__file = "components/myShopWaterfall/myShopWaterfall.vue"
 
 /***/ }),
 
-/***/ 343:
+/***/ 342:
 /*!*********************************************************************************************************!*\
   !*** F:/CodeFile/pingCar/components/myShopWaterfall/myShopWaterfall.vue?vue&type=template&id=67d1ade6& ***!
   \*********************************************************************************************************/
@@ -50,7 +50,7 @@ component.options.__file = "components/myShopWaterfall/myShopWaterfall.vue"
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_myShopWaterfall_vue_vue_type_template_id_67d1ade6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./myShopWaterfall.vue?vue&type=template&id=67d1ade6& */ 344);
+/* harmony import */ var _HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_myShopWaterfall_vue_vue_type_template_id_67d1ade6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./myShopWaterfall.vue?vue&type=template&id=67d1ade6& */ 343);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_myShopWaterfall_vue_vue_type_template_id_67d1ade6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_myShopWaterfall_vue_vue_type_template_id_67d1ade6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
@@ -63,7 +63,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 344:
+/***/ 343:
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!F:/CodeFile/pingCar/components/myShopWaterfall/myShopWaterfall.vue?vue&type=template&id=67d1ade6& ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -80,7 +80,7 @@ var components
 try {
   components = {
     myEmppty: function () {
-      return Promise.all(/*! import() | components/myEmppty/myEmppty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myEmppty/myEmppty")]).then(__webpack_require__.bind(null, /*! @/components/myEmppty/myEmppty.vue */ 265))
+      return Promise.all(/*! import() | components/myEmppty/myEmppty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myEmppty/myEmppty")]).then(__webpack_require__.bind(null, /*! @/components/myEmppty/myEmppty.vue */ 264))
     },
     uvWaterfall: function () {
       return Promise.all(/*! import() | uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-waterfall/components/uv-waterfall/uv-waterfall.vue */ 562))
@@ -111,7 +111,7 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   var g0 = _vm.list.length
-  var m0 = __webpack_require__(/*! @/static/shopCar.png */ 95)
+  var m0 = __webpack_require__(/*! @/static/shopCar.png */ 344)
   var l0 = _vm.__map(_vm.list1, function (item, index) {
     var $orig = _vm.__get_orig(item)
     var f0 = _vm._f("formHtmlStr")(item.detail)
@@ -283,6 +283,10 @@ var _default = {
     };
   },
   methods: {
+    clearList: function clearList() {
+      this.list1 = [];
+      this.list2 = [];
+    },
     menuAction: function menuAction(action, item) {
       if (action === '') {
         return;
@@ -300,7 +304,7 @@ var _default = {
       });
     },
     changeList: function changeList(e) {
-      console.log(e);
+      // console.log(e);
       // console.log('这点非常重要：e.name在这里返回是list1或list2，要手动将数据追加到相应列', e);
       this[e.name].push(e.value);
     }
@@ -346,7 +350,7 @@ __webpack_require__.r(__webpack_exports__);
     'components/myShopWaterfall/myShopWaterfall-create-component',
     {
         'components/myShopWaterfall/myShopWaterfall-create-component':(function(module, exports, __webpack_require__){
-            __webpack_require__('2')['createComponent'](__webpack_require__(342))
+            __webpack_require__('2')['createComponent'](__webpack_require__(341))
         })
     },
     [['components/myShopWaterfall/myShopWaterfall-create-component']]

@@ -108,6 +108,7 @@
       },
 
       uploadFilePromise(url) {
+        console.log(url);
         return new Promise((resolve, reject) => {
           let a = uni.uploadFile({
             url: this.http + 'common/upload?path=' + this.ImgRequestPath,
@@ -160,7 +161,7 @@
           if (result == 400) {
             this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
               status: 'failed',
-              message: '请重新上传',
+              message: '请重试',
               url: result
             }))
           } else {
@@ -189,7 +190,7 @@
               if (result == 400) {
                 this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
                   status: 'failed',
-                  message: '请重新上传',
+                  message: '请重试',
                   url: result
                 }))
               } else {

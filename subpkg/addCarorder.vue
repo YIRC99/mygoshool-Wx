@@ -57,7 +57,7 @@
       <view class="choseTimeDifference">
         <view class="choseTimeDifference-item">
           <uv-checkbox-group>
-            <uv-checkbox @change="tiqianChange" activeColor="#87d7e1" name="tiqian" size="40rpx" labelSize="17"
+            <uv-checkbox ref="tiqianref" @change="tiqianChange" activeColor="#87d7e1" name="tiqian" size="40rpx" labelSize="17"
               labelColor="#584c48" :labelSize="32" :iconSize="26" label="能否接受提前出发"></uv-checkbox>
           </uv-checkbox-group>
           <view :class="isBefore == true ? 'truebeforeTime':'flasebeforeTime'" style=""
@@ -69,7 +69,7 @@
         </view>
         <view class="choseTimeDifference-item">
           <uv-checkbox-group>
-            <uv-checkbox @change="yanhoChange" activeColor="#87d7e1" name="tiqian" size="40rpx" labelSize="17"
+            <uv-checkbox ref="yanhoref" @change="yanhoChange" activeColor="#87d7e1" name="tiqian" size="40rpx" labelSize="17"
               labelColor="#584c48" :labelSize="32" :iconSize="26" label="能否接受延后出发"></uv-checkbox>
           </uv-checkbox-group>
           <view :class="isAfter == true ? 'truebeforeTime':'flasebeforeTime'" style="" @click="openAfterDatetimePicker">
@@ -101,27 +101,20 @@
 </template>
 
 <script>
-import { callWithErrorHandling } from "vue";
-  function getYearLastMillisecondTimestamp() {
-    var now = new Date();
-    var year = now.getFullYear();
-    var lastSecond = new Date(year, 11, 31, 23, 59, 59, 999); // 设置时间为年末最后1秒
-    // 获取该时刻对应的毫秒级时间戳
-    return lastSecond.getTime();
-  }
-  
+  import mixin from '@/mixins/mixin.js'
   export default {
+     mixins: [mixin],
     data() {
       return {
-        endDate: getYearLastMillisecondTimestamp(),
+        endDate: this.getYearLastMillisecondTimestamp(),
         resWximg: '',
         isUploadWximg: false,
         fileList1: [],
         isLoading: false,
-        beforeTime: '00:00',
-        isBefore: false,
-        afterTime: '00:00',
-        isAfter: false,
+        beforeTime: '00:15',
+        isBefore: true,
+        afterTime: '00:15',
+        isAfter: true,
         ideaText: '',
         columns: [
           ['1', '2', '3']
@@ -149,12 +142,15 @@ import { callWithErrorHandling } from "vue";
         return this.wechatAccount !== '' || this.isValidPhoneNumber
       },
       isTips() {
-        // return this.wechatAccount.trim() == '' && this.phoneNumber.trim() == '';
         return this.wechatAccount.trim() == '' && !this.isUploadWximg;
       }
     },
     onLoad() {
       
+    },
+    mounted(){
+      this.$refs.tiqianref.setRadioCheckedStatus()
+      this.$refs.yanhoref.setRadioCheckedStatus()
     },
     watch: {
       phoneNumber(newval, oldval) {
@@ -189,7 +185,7 @@ import { callWithErrorHandling } from "vue";
         if (this.fileList1.length >= 1) return
         this.$refs.uploadWxImgRef.chooseFile()
       },
-
+      
       postOrderData() {
         let curUser = uni.getStorageSync('user')
         this.isLoading = true
@@ -203,9 +199,7 @@ import { callWithErrorHandling } from "vue";
             startaddress: this.startAddress,
             endaddressall: this.endAddressAll,
             endaddress: this.endAddress,
-            startdatetime: this.startDateTime.split(' ')[0] + 'T' + this
-              .startDateTime.split(' ')[
-                1],
+            startdatetime: this.startDateTime.split(' ')[0] + 'T' + this.startDateTime.split(' ')[1],
             currentperson: this.currentPerson,
             lackperson: this.lackPerson,
             phonenumber: this.phoneNumber,
@@ -219,24 +213,26 @@ import { callWithErrorHandling } from "vue";
           }
         }).then(res => {
           this.isLoading = false
-          if (res.code !== 200) {
+          if (res.code == 200) {
+            this.$refs.message.show({
+              type: 'success',
+              msg: '发布成功!',
+            })
+            this.refreshLocalWxImg(this.fileList1[0].resWximg)
+            setTimeout(() => {
+              uni.$emit('addUpdate')
+              uni.navigateBack()
+            }, 500)
+          }else{
             this.afterAdd = true
             this.$refs.message.show({
               type: 'error',
-              msg: '发布拼车失败 请稍候重试吧',
+              msg: '发布拼车失败 请稍候重试吧~',
             })
             return
           }
-          this.$refs.message.show({
-            type: 'success',
-            msg: '发布成功!',
-          })
-
-          setTimeout(() => {
-            uni.$emit('addUpdate')
-            uni.navigateBack()
-          }, 500)
         }).catch(err => {
+          console.error('捕获到了错误',err);
           this.afterAdd = true
           this.isLoading = false
           this.$refs.message.show({

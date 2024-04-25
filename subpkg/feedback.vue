@@ -52,6 +52,19 @@
         console.log('子组件上传的回调',e);
         this.fileList1 = e
       },
+      joinImgPath(arr) {
+        let resultPath = ''
+        console.log('for 循环之前', arr);
+        arr.forEach(i => {
+          console.log(i.resWximg);
+          if (resultPath != '') {
+            resultPath = resultPath + ',' + i.resWximg
+          } else {
+            resultPath = i.resWximg
+          }
+        })
+        return resultPath
+      },
 
       postFeedback() {
         if(this.ispost)return 
@@ -81,7 +94,7 @@
           data: {
             userid: openid,
             remark: this.mt,
-            imglist: this.imgString,
+            imglist: this.joinImgPath(this.fileList1),
             reportId: this.isReport ? this.reportId : 0
           }
         }).then(res => {

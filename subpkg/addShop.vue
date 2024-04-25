@@ -204,6 +204,8 @@
               type: 'success',
               msg: this.isUpdate ? '修改成功' : '发布成功',
             })
+            this.refreshLocalWxImg(this.wxFile[0].resWximg)
+            
             setTimeout(() => {
               uni.navigateBack()
             },1500)
@@ -211,11 +213,12 @@
             this.ispost = false
             this.$refs.message.show({
               type: 'error',
-              msg: '网络开了点小差,请稍候重试吧',
+              msg: '发布商品失败了 请稍后重试吧~',
             })
           }
 
         }).catch(err => {
+          console.error('捕获到了错误',err);
           this.isLoading = false
           this.ispost = false
           this.$refs.message.show({

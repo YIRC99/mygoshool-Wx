@@ -217,7 +217,7 @@
               if (result == 400) {
                 this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
                   status: 'failed',
-                  message: '请重新上传',
+                  message: '请重试',
                   url: result
                 }))
               } else {

@@ -137,7 +137,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _mpMixin = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/mixin/mpMixin.js */ 63));
 var _mixin = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/mixin/mixin.js */ 52));
-var _props = _interopRequireDefault(__webpack_require__(/*! ./props.js */ 248));
+var _props = _interopRequireDefault(__webpack_require__(/*! ./props.js */ 247));
 //
 //
 //

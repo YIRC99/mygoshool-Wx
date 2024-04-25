@@ -12,14 +12,14 @@
 							width: $uv.addUnit(width),
 							height: $uv.addUnit(height)
 						}]">
-            <uv-icon color="#80CBF9" size="46"
+            <uv-icon color="#80CBF9" size="42"
               :name="item.isVideo || (item.type && item.type === 'video') ? 'movie' : 'folder'"></uv-icon>
             <text
               class="uv-upload__wrap__preview__other__text">{{item.isVideo || (item.type && item.type === 'video') ? '视频' : '文件'}}</text>
           </view>
           <view class="uv-upload__status" v-if="item.status === 'uploading' || item.status === 'failed'">
             <view class="uv-upload__status__icon">
-              <uv-icon v-if="item.status === 'failed'" name="close-circle" color="#ffffff" size="55" />
+              <uv-icon v-if="item.status === 'failed'" name="close-circle" color="#ffffff" size="42" />
               <uv-loading-icon size="42" mode="circle" v-else />
             </view>
             <text v-if="item.message" class="uv-upload__status__message">{{ item.message }}</text>
@@ -100,7 +100,7 @@
    * @property {Boolean}			deletable			是否展示删除按钮（默认 true ）
    * @property {String | Number}	maxSize				文件大小限制，单位为byte （默认 Number.MAX_VALUE ）
    * @property {Array}			fileList			显示已上传的文件列表
-   * @property {String}			uploadText			上传区域的提示文字
+   * @property {String}			uploadTextuploadText			上传区域的提示文字
    * @property {String | Number}	width				内部预览图片区域和选择图片按钮的区域宽度（默认 80 ）
    * @property {String | Number}	height				内部预览图片区域和选择图片按钮的区域高度（默认 80 ）
    * @property {Object}			customStyle			组件的样式，对象形式

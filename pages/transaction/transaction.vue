@@ -27,7 +27,7 @@
 
         <view class="waterfall">
           
-          <myShopWaterfall :list="list"></myShopWaterfall>
+          <myShopWaterfall ref="myshopwaterfall" :list="list"></myShopWaterfall>
 
           <uv-load-more v-if="isShowListloading" :fontSize="30" :status="status" :marginTop="30" dashed line />
 
@@ -181,9 +181,11 @@
         if (this.isRefresh == true) return
         this.isRefresh = true
         this.pageNum = 1
+        //清空数据
+        console.log('清空数据');
         this.list = []
-        this.list1 = []
-        this.list2 = []
+        this.$refs.myshopwaterfall.clearList()
+        // debugger
         this.getShopList()
       },
       scrollDown() {
@@ -191,8 +193,7 @@
         if (this.list.length == this.pagetotal) {
           this.isShowListloading = true
           this.status = 'nomore'
-        }
-        if (this.list.length < this.pagetotal) {
+        }else{
           this.pageNum++
           this.isShowListloading = true
           this.getShopList()
@@ -200,14 +201,7 @@
         console.log('滑动到底部了');
       },
       myonload() {
-        this.getShopList()
-      },
-      // 这点非常重要：e.name在这里返回是list1或list2，要手动将数据追加到相应列
-      changeList(e) {
-        console.log(e);
-        // console.log('这点非常重要：e.name在这里返回是list1或list2，要手动将数据追加到相应列', e);
-        this[e.name].push(e.value);
-
+        this.scrollPullDown()
       },
       checkboxClick(index) {
         this.radios[index].checked = !this.radios[index].checked

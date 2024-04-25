@@ -245,6 +245,7 @@
 			// 将本组件外的其他uv-checkbox的checked都设置为false(都被取消选中状态)，因而只剩下一个为选中状态
 			setRadioCheckedStatus() {
 				// 将本组件标记为与原来相反的状态
+        console.log('消息转换了');
 				this.isChecked = !this.isChecked
 				this.emitEvent()
 				typeof this.parent.unCheckedOther === 'function' && this.parent.unCheckedOther(this)

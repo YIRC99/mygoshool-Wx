@@ -103,6 +103,10 @@
       };
     },
     methods: {
+      clearList(){
+        this.list1 = []
+        this.list2 = []
+      },
       menuAction(action, item){
         if (action === '') {
         	return
@@ -120,7 +124,7 @@
         })
       },
       changeList(e) {
-        console.log(e);
+        // console.log(e);
         // console.log('这点非常重要：e.name在这里返回是list1或list2，要手动将数据追加到相应列', e);
         this[e.name].push(e.value);
       },

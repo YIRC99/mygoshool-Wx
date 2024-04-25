@@ -315,7 +315,7 @@
           uni.hideLoading()
           this.isLoading = false
           console.log(res);
-          if (res.code != 200) {
+          if (res.code == 200) {
            this.$refs.message.show({
              type: 'success',
              msg: '删除成功',
@@ -346,7 +346,6 @@
         let content
         if(this.currentOrder.statusText == '已接受') content = '删除之后,发布者和接受者方都无法查看到数据了,确定删除嘛'
         else content = '确定删除嘛'
-        
         uni.showModal({
          title,
          content,
@@ -357,7 +356,6 @@
            }
          }
         })
-        
       },
       upApprise() {
 

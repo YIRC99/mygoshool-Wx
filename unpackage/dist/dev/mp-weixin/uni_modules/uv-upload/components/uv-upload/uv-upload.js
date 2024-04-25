@@ -283,7 +283,7 @@ var _props = _interopRequireDefault(__webpack_require__(/*! ./props.js */ 432));
  * @property {Boolean}			deletable			是否展示删除按钮（默认 true ）
  * @property {String | Number}	maxSize				文件大小限制，单位为byte （默认 Number.MAX_VALUE ）
  * @property {Array}			fileList			显示已上传的文件列表
- * @property {String}			uploadText			上传区域的提示文字
+ * @property {String}			uploadTextuploadText			上传区域的提示文字
  * @property {String | Number}	width				内部预览图片区域和选择图片按钮的区域宽度（默认 80 ）
  * @property {String | Number}	height				内部预览图片区域和选择图片按钮的区域高度（默认 80 ）
  * @property {Object}			customStyle			组件的样式，对象形式

@@ -1,6 +1,6 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages/home/home"],{
 
-/***/ 106:
+/***/ 105:
 /*!******************************************************************!*\
   !*** F:/CodeFile/pingCar/main.js?{"page":"pages%2Fhome%2Fhome"} ***!
   \******************************************************************/
@@ -101,43 +101,43 @@ var components
 try {
   components = {
     myAffiche: function () {
-      return __webpack_require__.e(/*! import() | components/myAffiche/myAffiche */ "components/myAffiche/myAffiche").then(__webpack_require__.bind(null, /*! @/components/myAffiche/myAffiche.vue */ 236))
+      return __webpack_require__.e(/*! import() | components/myAffiche/myAffiche */ "components/myAffiche/myAffiche").then(__webpack_require__.bind(null, /*! @/components/myAffiche/myAffiche.vue */ 235))
     },
     uvTabs: function () {
-      return Promise.all(/*! import() | uni_modules/uv-tabs/components/uv-tabs/uv-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-tabs/components/uv-tabs/uv-tabs")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-tabs/components/uv-tabs/uv-tabs.vue */ 243))
+      return Promise.all(/*! import() | uni_modules/uv-tabs/components/uv-tabs/uv-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-tabs/components/uv-tabs/uv-tabs")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-tabs/components/uv-tabs/uv-tabs.vue */ 242))
     },
     uvCalendars: function () {
-      return Promise.all(/*! import() | uni_modules/uv-calendars/components/uv-calendars/uv-calendars */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-calendars/components/uv-calendars/uv-calendars")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-calendars/components/uv-calendars/uv-calendars.vue */ 252))
+      return Promise.all(/*! import() | uni_modules/uv-calendars/components/uv-calendars/uv-calendars */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-calendars/components/uv-calendars/uv-calendars")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-calendars/components/uv-calendars/uv-calendars.vue */ 251))
     },
     myEmppty: function () {
-      return Promise.all(/*! import() | components/myEmppty/myEmppty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myEmppty/myEmppty")]).then(__webpack_require__.bind(null, /*! @/components/myEmppty/myEmppty.vue */ 265))
+      return Promise.all(/*! import() | components/myEmppty/myEmppty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myEmppty/myEmppty")]).then(__webpack_require__.bind(null, /*! @/components/myEmppty/myEmppty.vue */ 264))
     },
     myCarOrder: function () {
-      return Promise.all(/*! import() | components/myCarOrder/myCarOrder */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myCarOrder/myCarOrder")]).then(__webpack_require__.bind(null, /*! @/components/myCarOrder/myCarOrder.vue */ 271))
+      return Promise.all(/*! import() | components/myCarOrder/myCarOrder */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myCarOrder/myCarOrder")]).then(__webpack_require__.bind(null, /*! @/components/myCarOrder/myCarOrder.vue */ 270))
     },
     uvLoadMore: function () {
-      return Promise.all(/*! import() | uni_modules/uv-load-more/components/uv-load-more/uv-load-more */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-load-more/components/uv-load-more/uv-load-more")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-load-more/components/uv-load-more/uv-load-more.vue */ 279))
+      return Promise.all(/*! import() | uni_modules/uv-load-more/components/uv-load-more/uv-load-more */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-load-more/components/uv-load-more/uv-load-more")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-load-more/components/uv-load-more/uv-load-more.vue */ 278))
     },
     myOrderDetailPopup: function () {
-      return __webpack_require__.e(/*! import() | components/myOrderDetailPopup/myOrderDetailPopup */ "components/myOrderDetailPopup/myOrderDetailPopup").then(__webpack_require__.bind(null, /*! @/components/myOrderDetailPopup/myOrderDetailPopup.vue */ 287))
+      return __webpack_require__.e(/*! import() | components/myOrderDetailPopup/myOrderDetailPopup */ "components/myOrderDetailPopup/myOrderDetailPopup").then(__webpack_require__.bind(null, /*! @/components/myOrderDetailPopup/myOrderDetailPopup.vue */ 286))
     },
     uvPopup: function () {
-      return Promise.all(/*! import() | uni_modules/uv-popup/components/uv-popup/uv-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-popup/components/uv-popup/uv-popup")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-popup/components/uv-popup/uv-popup.vue */ 294))
+      return Promise.all(/*! import() | uni_modules/uv-popup/components/uv-popup/uv-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-popup/components/uv-popup/uv-popup")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-popup/components/uv-popup/uv-popup.vue */ 293))
     },
     myAdd: function () {
-      return __webpack_require__.e(/*! import() | components/myAdd/myAdd */ "components/myAdd/myAdd").then(__webpack_require__.bind(null, /*! @/components/myAdd/myAdd.vue */ 301))
+      return __webpack_require__.e(/*! import() | components/myAdd/myAdd */ "components/myAdd/myAdd").then(__webpack_require__.bind(null, /*! @/components/myAdd/myAdd.vue */ 300))
     },
     quickMessage: function () {
-      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 200))
+      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 199))
     },
     zeroLoading: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/zero-loading/components/zero-loading/zero-loading */ "uni_modules/zero-loading/components/zero-loading/zero-loading").then(__webpack_require__.bind(null, /*! @/uni_modules/zero-loading/components/zero-loading/zero-loading.vue */ 229))
+      return __webpack_require__.e(/*! import() | uni_modules/zero-loading/components/zero-loading/zero-loading */ "uni_modules/zero-loading/components/zero-loading/zero-loading").then(__webpack_require__.bind(null, /*! @/uni_modules/zero-loading/components/zero-loading/zero-loading.vue */ 228))
     },
     uvModal: function () {
-      return Promise.all(/*! import() | uni_modules/uv-modal/components/uv-modal/uv-modal */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-modal/components/uv-modal/uv-modal")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-modal/components/uv-modal/uv-modal.vue */ 308))
+      return Promise.all(/*! import() | uni_modules/uv-modal/components/uv-modal/uv-modal */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-modal/components/uv-modal/uv-modal")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-modal/components/uv-modal/uv-modal.vue */ 307))
     },
     myupload: function () {
-      return Promise.all(/*! import() | components/myupload/myupload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myupload/myupload")]).then(__webpack_require__.bind(null, /*! @/components/myupload/myupload.vue */ 316))
+      return Promise.all(/*! import() | components/myupload/myupload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myupload/myupload")]).then(__webpack_require__.bind(null, /*! @/components/myupload/myupload.vue */ 315))
     },
   }
 } catch (e) {
@@ -711,5 +711,5 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ })
 
-},[[106,"common/runtime","common/vendor"]]]);
+},[[105,"common/runtime","common/vendor"]]]);
 //# sourceMappingURL=../../../.sourcemap/mp-weixin/pages/home/home.js.map

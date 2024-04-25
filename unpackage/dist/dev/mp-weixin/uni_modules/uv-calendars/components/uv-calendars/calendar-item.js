@@ -154,7 +154,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _colorGradient = __webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/function/colorGradient.js */ 65);
 var _uniI18n = __webpack_require__(/*! @dcloudio/uni-i18n */ 22);
-var _index = _interopRequireDefault(__webpack_require__(/*! ./i18n/index.js */ 259));
+var _index = _interopRequireDefault(__webpack_require__(/*! ./i18n/index.js */ 258));
 //
 //
 //
