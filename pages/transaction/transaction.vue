@@ -149,6 +149,7 @@
             addressCodeArr: this.chooseAddArr()
           }
         }).then(res => {
+          console.log('商品请求返回值',res);
           console.log('商品请求返回值', res.data);
           if (res.code != 200) {
             this.isRefresh = false

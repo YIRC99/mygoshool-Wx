@@ -119,6 +119,7 @@
             },
             header: {
               'Authorization': uni.getStorageSync("token"),
+              'UserId': uni.getStorageSync("user").openid,
             },
             timeout: this.TimeOut,
             success: (res) => {
@@ -132,7 +133,7 @@
             },
             fail: (err) => {
               console.log('上传失败', err);
-              reject(400)
+              resolve(400)
             }
           });
         })
@@ -157,7 +158,6 @@
           lists[i].url = res.tempFilePath
           const result = await this.uploadFilePromise(lists[i].url)
           let item = this[`fileList${event.name}`][fileListLen]
-
           if (result == 400) {
             this[`fileList${event.name}`].splice(fileListLen, 1, Object.assign(item, {
               status: 'failed',

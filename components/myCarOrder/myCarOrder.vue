@@ -78,7 +78,7 @@
         }
         console.log(item);
         uni.navigateTo({
-          url: '/subpkg/feedback?reportId=' + item.orderid
+          url: '/subpkg/feedback?reportId=' + item.orderid + '&reportType=' + 1
         })
       },
       isAvaPath(item){

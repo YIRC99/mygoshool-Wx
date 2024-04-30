@@ -171,7 +171,8 @@
               user: 'test'
             },
             header:{
-              'Authorization' : 'uni.uploadFile122123123',
+              'Authorization' : 'test-token',
+               'UserId': uni.getStorageSync("user").openid,
             },
             timeout: this.TimeOut,
             success: (res) => {

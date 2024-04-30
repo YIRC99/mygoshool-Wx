@@ -113,7 +113,7 @@
         }
         console.log(item);
         uni.navigateTo({
-          url: '/subpkg/feedback?reportId=' + item.id
+          url: '/subpkg/feedback?reportId=' + item.id + '&reportType=' + 2
         })
       },
       ToShopDetail(item) {

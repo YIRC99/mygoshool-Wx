@@ -29,7 +29,7 @@
         <view class="" v-if="currentOrder.startdatetime != ''">{{currentOrder.startdatetime | fromStartDateTime}}</view>
         <image src="/static/rihgt_black.png" style="width: 30rpx; height: 30rpx; position: absolute; right: 40rpx;"
           mode=""></image>
-        <uv-datetime-picker :maxDate="endDate" ref="startDatetimePicker" :minDate="MinStartTimeValue" :formatter="formatter"
+        <uv-datetime-picker :itemHeight="88" :maxDate="endDate" ref="startDatetimePicker" :minDate="MinStartTimeValue" :formatter="formatter"
           v-model="StartTimeValue" mode="datetime" @confirm="startConfirm">
         </uv-datetime-picker>
       </view>
@@ -86,7 +86,7 @@
             @click="openBeforDatetimePicker">
             {{currentOrder.beforetime}}
           </view>
-          <uv-datetime-picker ref="beforDatetimePicker" v-model="currentOrder.beforetime" mode="time"
+          <uv-datetime-picker :itemHeight="88" ref="beforDatetimePicker" v-model="currentOrder.beforetime" mode="time"
             @confirm="beforConfirm">
           </uv-datetime-picker>
         </view>
@@ -99,7 +99,7 @@
             @click="openAfterDatetimePicker">
             {{currentOrder.aftertime}}
           </view>
-          <uv-datetime-picker ref="afterDatetimePicker" v-model="currentOrder.aftertime" mode="time"
+          <uv-datetime-picker :itemHeight="88" ref="afterDatetimePicker" v-model="currentOrder.aftertime" mode="time"
             @confirm="afterConfirm">
           </uv-datetime-picker>
         </view>
@@ -128,18 +128,11 @@
 
 <script>
    import mixin from '@/mixins/mixin.js'
-  function getYearLastMillisecondTimestamp() {
-    var now = new Date();
-    var year = now.getFullYear();
-    var lastSecond = new Date(year, 11, 31, 23, 59, 59, 999); // 设置时间为年末最后1秒
-    // 获取该时刻对应的毫秒级时间戳
-    return lastSecond.getTime();
-  }
   export default {
      mixins:[mixin],
     data() {
       return {
-        endDate: getYearLastMillisecondTimestamp(),
+        endDate: this.getYearLastMillisecondTimestamp(),
         isUploadWximg: true,
         isLoading: false,
         isPageLoding: true,
@@ -545,8 +538,8 @@
         });
       },
       startConfirm(e) {
-        console.log('开始出发时间', this.$u.timeFormat(e.value, 'yyyy-mm-dd hh:MM'));
-        this.currentOrder.startdatetime = this.$u.timeFormat(e.value, 'yyyy-mm-ddThh:MM:ss')
+        console.log('开始出发时间', this.$uv.timeFormat(e.value, 'yyyy-mm-dd hh:MM'));
+        this.currentOrder.startdatetime = this.$uv.timeFormat(e.value, 'yyyy-mm-ddThh:MM:ss')
         console.log('this.currentOrder.startdatetime',this.currentOrder.startdatetime);
       },
       choseStartDateTime() {

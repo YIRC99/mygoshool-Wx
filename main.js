@@ -1,17 +1,19 @@
 import App from './App'
-
+import MyAES from '@/aes/aes'
+import CryptoJS from 'crypto-js';
 
 
 // const http = 'http://192.168.73.210:33088/' //手机热点
 // const http = 'https://yirc99.cn/api/' //服务器
 // const http = 'http://192.168.2.177:33088/' //酒店
-// const http = 'http://10.16.60.11:33088/' //305wifi
-const http = 'http://172.20.10.196:33088/' //宿舍wifi
+const http = 'http://10.16.60.53:33088/' //305wifi
+// const http = 'http://192.168.2.196:33088/' //宿舍wifi
 
 const myOutTime = 5000
 Vue.prototype.avahttp = http + 'common/download?path=avatar&name='
 Vue.prototype.QRttp = http + 'common/download?path=QRcode&name='
 Vue.prototype.http = http
+Vue.prototype.MyAES = MyAES
 Vue.prototype.hoursTominute = (str) =>{
   const hour = str.split(':')[0]
   const minute = str.split(':')[1]
@@ -49,6 +51,7 @@ Vue.prototype.get =(opt) =>{
       timeout:myOutTime,
 			data: opt.data,
 			success: res => {
+        res.data.data =  MyAES.decrypt(res.data.data)
 				a(res.data)
 			},
 			fail: (err) => {
@@ -67,11 +70,11 @@ Vue.prototype.put =(opt) =>{
 			header:{
 				// authorization: uni.getStorageSync("token")
 				authorization : 'mytoken'
-        
 			},
       timeout:myOutTime,
 			data: opt.data,
 			success: res => {
+        res.data.data =  MyAES.decrypt(res.data.data)
 				a(res.data)
 			},
 			fail: (err) => {
@@ -95,6 +98,7 @@ Vue.prototype.post =(opt) =>{
       timeout: myOutTime,
 			data: opt.data,
 			success: res => {
+        res.data.data =  MyAES.decrypt(res.data.data)
 				a(res.data)
 			},
 			fail: (err) => {

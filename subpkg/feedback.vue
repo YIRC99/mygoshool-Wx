@@ -44,7 +44,8 @@
         ispost: false,
         isReport: false,
         feedSuccess: '反馈成功,感谢您的意见',
-        feedFail: '反馈失败,请稍候重试吧'
+        feedFail: '反馈失败,请稍候重试吧',
+        isReportType: 0
       }
     },
     methods: {
@@ -95,7 +96,8 @@
             userid: openid,
             remark: this.mt,
             imglist: this.joinImgPath(this.fileList1),
-            reportId: this.isReport ? this.reportId : 0
+            reportId: this.isReport ? this.reportId : 0,
+            reportType: this.isReportType
           }
         }).then(res => {
           console.log(res);
@@ -132,9 +134,10 @@
       }
     },
     onLoad(e) {
-      console.log(e.reportId);
+      console.log(e);
       if(e.reportId != undefined){
         this.isReport = true
+        this.isReportType = e.reportType
         this.reportId = e.reportId
         this.feedFail = '举报失败 请稍重试吧~'
         this.feedSuccess = '提交成功 感谢您的反馈'

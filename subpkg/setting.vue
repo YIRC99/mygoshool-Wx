@@ -113,7 +113,8 @@
           filePath: e.detail.avatarUrl,
           name: 'file',
           header: {
-            authorization: uni.getStorageSync("token")
+            authorization: uni.getStorageSync("token"),
+            'UserId': uni.getStorageSync("user").openid,
           },
           timeout: 10000,
           success: (res) => {
