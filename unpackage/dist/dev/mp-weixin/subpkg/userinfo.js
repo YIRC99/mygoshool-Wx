@@ -362,6 +362,7 @@ var _default = {
         }
       }).then(function (res) {
         console.log('拼车数据', res);
+        if (!_this2.returnCodeHandle(res.code, '请求错误 请稍候重试吧')) return;
         _this2.orderList = res.data;
         _this2.list[1].badge.value = res.data.length;
       }).catch(function (err) {
@@ -383,6 +384,7 @@ var _default = {
         }
       }).then(function (res) {
         console.log('闲置物品的响应', res);
+        if (!_this3.returnCodeHandle(res.code, '请求错误 请稍候重试吧')) return;
         if (res.code == 200) {
           res.data.forEach(function (i) {
             i.image = i.imgs.split(",")[0];
@@ -413,6 +415,7 @@ var _default = {
         }
       }).then(function (res) {
         console.log('评价返回的数据', res);
+        if (!_this4.returnCodeHandle(res.code, '请求错误 请稍候重试吧')) return;
         _this4.appriseList = res.data;
         _this4.list[0].badge.value = res.data.length;
         _this4.appriseList.forEach(function (item) {
@@ -430,15 +433,8 @@ var _default = {
         }
       }).then(function (res) {
         console.log(res);
-        if (res.code == 200) {
-          _this5.info = res.data;
-          _this5.getAppriseByUserid();
-        } else {
-          _this5.$refs.message.show({
-            type: 'error',
-            msg: '获取用户信息失败'
-          });
-        }
+        if (!_this5.returnCodeHandle(res.code, '获取用户信息失败')) return;
+        _this5.getAppriseByUserid();
       }).catch(function (err) {
         console.log('home page is', err);
         _this5.isRefresh = false;

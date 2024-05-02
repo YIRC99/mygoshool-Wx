@@ -96,12 +96,6 @@
       }
     },
     methods: {
-      notlogin(){
-        this.$refs.message.show({
-          type: 'error',
-          msg: '请登录重试吧',
-        })
-      },
       recoverPlaceholder(){
         this.myplaceholder = '搜索'
       },

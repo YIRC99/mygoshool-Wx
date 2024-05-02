@@ -46,7 +46,8 @@ Vue.prototype.get =(opt) =>{
       timeout:myOutTime,
 			data: opt.data,
 			success: res => {
-        res.data.data =  MyAES.decrypt(res.data.data)
+        if(res.data.code == 200)
+          res.data.data =  MyAES.decrypt(res.data.data)
 				a(res.data)
 			},
 			fail: (err) => {
@@ -68,7 +69,8 @@ Vue.prototype.put =(opt) =>{
       timeout:myOutTime,
 			data: opt.data,
 			success: res => {
-        res.data.data =  MyAES.decrypt(res.data.data)
+        if(res.data.code == 200)
+          res.data.data =  MyAES.decrypt(res.data.data)
 				a(res.data)
 			},
 			fail: (err) => {
@@ -79,7 +81,6 @@ Vue.prototype.put =(opt) =>{
 		});
 	})
 }
-
 Vue.prototype.post =(opt) =>{
 	 return new Promise((a,b)=>{
 		uni.request({
@@ -91,7 +92,8 @@ Vue.prototype.post =(opt) =>{
       timeout: myOutTime,
 			data: opt.data,
 			success: res => {
-        res.data.data =  MyAES.decrypt(res.data.data)
+        if(res.data.code == 200)
+          res.data.data =  MyAES.decrypt(res.data.data)
 				a(res.data)
 			},
 			fail: (err) => {

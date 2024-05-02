@@ -245,6 +245,11 @@ var _default = {
       if (action === '') {
         return;
       }
+      var token = uni.getStorageSync('token');
+      if (token == null || token == '' || token == undefined) {
+        this.$emit('notLoign');
+        return;
+      }
       console.log(item);
       uni.navigateTo({
         url: '/subpkg/feedback?reportId=' + item.orderid + '&reportType=' + 1

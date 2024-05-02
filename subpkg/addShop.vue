@@ -17,7 +17,7 @@
         </view>
       </view>
     </uni-card>
-      
+
 
     <uni-card isShadow>
       <view class="myitem">
@@ -49,7 +49,7 @@
     </uni-card>
 
     <view class="down-box">
-      <button class="btn-grad" form-type="submit" @click="clickAddShop">{{isUpdate  ? '修改发布' : '发布闲置'}}</button>
+      <button class="btn-grad" form-type="submit" @click="clickAddShop">{{isUpdate ? '修改发布' : '发布闲置'}}</button>
     </view>
 
 
@@ -64,7 +64,7 @@
 <script>
   import mixin from '@/mixins/mixin.js'
   export default {
-     mixins: [mixin],
+    mixins: [mixin],
     data() {
       return {
         radios: [{
@@ -100,7 +100,7 @@
     onLoad(e) {
       console.log(e);
       // 如果是修改进入的 直接加载数据
-      if(e.update != null && e.update){
+      if (e.update != null && e.update) {
         uni.setNavigationBarTitle({
           title: '修改信息'
         })
@@ -111,28 +111,31 @@
         this.shopPrice = data.price
         this.updateImgs = data.imgs
         this.updateWechatImg = data.wechatimg
-        
-        this.confirm({value:[this.columns[0][data.address]],indexs:[data.address]})
-        let differenceDays = this.differenceTime(data.cancelTime,data.createAt)
-        if(differenceDays <= 7) this.radioClick(0)
-        else if(differenceDays <= 30) this.radioClick(1)
+
+        this.confirm({
+          value: [this.columns[0][data.address]],
+          indexs: [data.address]
+        })
+        let differenceDays = this.differenceTime(data.cancelTime, data.createAt)
+        if (differenceDays <= 7) this.radioClick(0)
+        else if (differenceDays <= 30) this.radioClick(1)
         else this.radioClick(2)
-      }else{
+      } else {
         uni.setNavigationBarTitle({
           title: '发布闲置'
         })
       }
-      
-      
+
+
     },
     mounted() {
-       if(this.isUpdate){
-         this.$refs.myimgupload.addImg(this.updateImgs,this.shopPath)
-         this.$refs.myupload.addImg(this.updateWechatImg,this.QRPath)
-       }
+      if (this.isUpdate) {
+        this.$refs.myimgupload.addImg(this.updateImgs, this.shopPath)
+        this.$refs.myupload.addImg(this.updateWechatImg, this.QRPath)
+      }
     },
     methods: {
-      differenceTime(timeString1,timeString2){
+      differenceTime(timeString1, timeString2) {
         // 将传入的时间字符串转换为 Date 对象
         var date1 = new Date(timeString1);
         var date2 = new Date(timeString2);
@@ -140,7 +143,7 @@
         var timeDifference = Math.abs(date2.getTime() - date1.getTime());
         // 将毫秒数差值转换为天数
         var daysDifference = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
-        console.log('计算成功',daysDifference);
+        console.log('计算成功', daysDifference);
         return daysDifference;
       },
       chooseCancelTime(index) {
@@ -163,7 +166,8 @@
             currentDate.setDate(currentDate.getDate() + 7); // 增加一天（即明天）
             currentDate.setHours(0, 0, 0, 0); // 设置时间为0点（即凌晨）
         }
-        currentDate = currentDate.toISOString().slice(0, 10).replace(/-/g, '-') + 'T' + currentDate.toTimeString().split(' ')[0];
+        currentDate = currentDate.toISOString().slice(0, 10).replace(/-/g, '-') + 'T' + currentDate.toTimeString()
+          .split(' ')[0];
         return currentDate
       },
       joinImgPath(arr) {
@@ -193,32 +197,31 @@
             imgs: imgs,
             createuserid: curUser.openid,
             wechatimg: this.wxFile[0].resWximg,
-            cancelTime : this.chooseCancelTime(this.chooseTimeIndex),
-            id: this.isUpdate ? this.updateId  : '' 
+            cancelTime: this.chooseCancelTime(this.chooseTimeIndex),
+            id: this.isUpdate ? this.updateId : ''
           }
         }).then(res => {
           console.log(res);
           this.isLoading = false
-          if (res.code == 200) {
-            this.$refs.message.show({
-              type: 'success',
-              msg: this.isUpdate ? '修改成功' : '发布成功',
-            })
-            this.refreshLocalWxImg(this.wxFile[0].resWximg)
-            
-            setTimeout(() => {
-              uni.navigateBack()
-            },1500)
-          }else{
+
+          if (!this.returnCodeHandle(res.code, '发布商品失败了 请稍后重试吧~')) {
             this.ispost = false
-            this.$refs.message.show({
-              type: 'error',
-              msg: '发布商品失败了 请稍后重试吧~',
-            })
+            return
           }
 
+          this.$refs.message.show({
+            type: 'success',
+            msg: this.isUpdate ? '修改成功' : '发布成功',
+          })
+          this.refreshLocalWxImg(this.wxFile[0].resWximg)
+
+          setTimeout(() => {
+            uni.navigateBack()
+          }, 1500)
+
+
         }).catch(err => {
-          console.error('捕获到了错误',err);
+          console.error('捕获到了错误', err);
           this.isLoading = false
           this.ispost = false
           this.$refs.message.show({
@@ -310,7 +313,7 @@
           this.ispost = false
           return
         }
-        
+
         this.postShop()
       },
       myonChange(e) {
@@ -323,8 +326,8 @@
           item.checked = index === name ? true : false
         })
         this.chooseTimeIndex = name
-        
-        
+
+
       },
       showAPicker() {
         this.$refs.AddressPicker.open();

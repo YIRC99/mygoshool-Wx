@@ -66,7 +66,7 @@ _vue.default.prototype.get = function (opt) {
       timeout: myOutTime,
       data: opt.data,
       success: function success(res) {
-        res.data.data = _aes.default.decrypt(res.data.data);
+        if (res.data.code == 200) res.data.data = _aes.default.decrypt(res.data.data);
         a(res.data);
       },
       fail: function fail(err) {
@@ -88,7 +88,7 @@ _vue.default.prototype.put = function (opt) {
       timeout: myOutTime,
       data: opt.data,
       success: function success(res) {
-        res.data.data = _aes.default.decrypt(res.data.data);
+        if (res.data.code == 200) res.data.data = _aes.default.decrypt(res.data.data);
         a(res.data);
       },
       fail: function fail(err) {
@@ -110,7 +110,7 @@ _vue.default.prototype.post = function (opt) {
       timeout: myOutTime,
       data: opt.data,
       success: function success(res) {
-        res.data.data = _aes.default.decrypt(res.data.data);
+        if (res.data.code == 200) res.data.data = _aes.default.decrypt(res.data.data);
         a(res.data);
       },
       fail: function fail(err) {

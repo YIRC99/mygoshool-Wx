@@ -10,7 +10,9 @@
 </template>
 
 <script>
+   import mixin from '@/mixins/mixin.js'
   export default {
+    mixins:[mixin],
     name:"myAffiche",
     data() {
       return {
@@ -37,8 +39,10 @@
           url: 'affiche'
         }).then(res => {
           console.log('公告获取', res);
+          if(!this.returnCodeHandle(res.code,'公告失败'))return
           if (res.code == 200) {
             this.affiche = res.data
+            this.affiche.createat = this.formatDateTime(this.affiche.createat)
           }
         })
       },

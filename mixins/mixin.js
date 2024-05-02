@@ -10,8 +10,18 @@ const mixin = {
     };
   },
   methods:{
+    // 将时间转变格式 以符合ISO 8601格式
+    fromDataTime2ISO8601(time){
+      return time.split(' ')[0]+'T'+time.split(' ')[1]
+    },
+    notlogin(){
+      this.$refs.message.show({
+        type: 'error',
+        msg: '请登录重试吧',
+      })
+    },
     // 请求返回code值统一处理方法  值处理错误请求 正确不处理
-    returnCodeHandle(code){
+    returnCodeHandle(code,message){
       if(code == 200) return true
       if(code == 403){
         this.$refs.message.show({
@@ -20,7 +30,21 @@ const mixin = {
         })
         return false
       }
+      if(code == 409){
+        this.$refs.message.show({
+          type: 'error', 
+          msg: '账号异常请联系开发者: YIRC99', 
+        })
+        return false
+      }
       
+      if(code != 200){
+        this.$refs.message.show({
+          type: 'error', 
+          msg: message, 
+        })
+        return false
+      }
     },
     compareTime(cancelTime,curr){
       let cancel = new Date(cancelTime)

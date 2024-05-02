@@ -24,8 +24,8 @@
           :width="ImageWidth" :height="ImageHeight" :previewFullImage="true"></uv-upload>
       </view>
     </view>
+    <quick-message ref="message"></quick-message>
   </view>
-
 </template>
 
 <script>
@@ -130,7 +130,7 @@
       },
       async initWxImg(){
         let user = uni.getStorageSync('user')
-
+        if(user == '' || user == null)return  
         if(user.userWxImg != null && user.userWxImg != ''){
           // 直接设置图片地址
           console.log('不用请求直接获取上一次的微信图片');
@@ -176,10 +176,16 @@
             },
             timeout: this.TimeOut,
             success: (res) => {
-              console.log('上传成功1111', res.statusCode);
-              let img = JSON.parse(res.data).data
+              res = JSON.parse(res.data)
+              console.log('上传成功222', res.statusCode);
               
-              this.fileList1[0].resWximg = this.MyAES.decrypt(img)
+              if(!this.returnCodeHandle(res.code)){
+                console.log('代码执行到了这里');
+                resolve(400)
+                return 
+              }
+              
+              this.fileList1[0].resWximg = this.MyAES.decrypt(res.data)
               this.showBefor = false
               resolve(200)
             },

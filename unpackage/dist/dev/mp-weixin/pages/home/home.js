@@ -463,12 +463,7 @@ var _default = {
       }).then(function (res) {
         console.log(res);
         _this.clearWxImg();
-        if (res.code != 200) {
-          _this.$refs.message.show({
-            type: 'error',
-            msg: '订单已被接受或失效',
-            iconSize: 16
-          });
+        if (!_this.returnCodeHandle(res.code, '订单已被接受或失效')) {
           _this.popupShow = false;
           _this.isLoading = false;
           _this.$refs.myorderdetailpopup.closePopup();

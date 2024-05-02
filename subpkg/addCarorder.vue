@@ -213,24 +213,22 @@
           }
         }).then(res => {
           this.isLoading = false
-          if (res.code == 200) {
-            this.$refs.message.show({
-              type: 'success',
-              msg: '发布成功!',
-            })
-            this.refreshLocalWxImg(this.fileList1[0].resWximg)
-            setTimeout(() => {
-              uni.$emit('addUpdate')
-              uni.navigateBack()
-            }, 500)
-          }else{
+          
+          if(!this.returnCodeHandle(res.code,'发布拼车失败 请稍候重试吧~')){
             this.afterAdd = true
-            this.$refs.message.show({
-              type: 'error',
-              msg: '发布拼车失败 请稍候重试吧~',
-            })
             return
           }
+          
+          this.$refs.message.show({
+            type: 'success',
+            msg: '发布成功!',
+          })
+          this.refreshLocalWxImg(this.fileList1[0].resWximg)
+          setTimeout(() => {
+            uni.$emit('addUpdate')
+            uni.navigateBack()
+          }, 500)
+        
         }).catch(err => {
           console.error('捕获到了错误',err);
           this.afterAdd = true

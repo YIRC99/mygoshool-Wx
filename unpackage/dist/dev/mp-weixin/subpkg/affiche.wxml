@@ -1,1 +1,1 @@
-<view class="page"><view class="title">{{''+affiche.title+''}}</view><view class="text">{{''+$root.f0+''}}</view><rich-text class="text" nodes="{{affiche.text}}"></rich-text></view>
+<view class="page"><view class="title">{{''+affiche.title+''}}</view><view class="text">{{''+affiche.createat+''}}</view><rich-text class="text" nodes="{{affiche.text}}"></rich-text></view>

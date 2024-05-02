@@ -23,7 +23,7 @@
         
         <myEmppty :isShow="newSchoolList.length == 0" Text="暂时没有拼车订单 快快发布一个吧"></myEmppty>
         
-        <myCarOrder :orderList="newSchoolList" @clickOrderItem="clickCard" ></myCarOrder>
+        <myCarOrder :orderList="newSchoolList" @clickOrderItem="clickCard" @notLoign="notlogin"></myCarOrder>
  
         
         <uv-load-more v-if="list[currentIndex].isShowListloading" :fontSize="30" :status="list[currentIndex].status" :marginTop="10"
@@ -34,7 +34,7 @@
       <view class="" v-show="currentIndex == 1">
         <myEmppty :isShow="oldSchoolList.length == 0" Text="暂时没有拼车订单 快快发布一个吧"></myEmppty>
         
-        <myCarOrder :orderList="oldSchoolList" @clickOrderItem="clickCard" ></myCarOrder>
+        <myCarOrder :orderList="oldSchoolList" @clickOrderItem="clickCard" @notLoign="notlogin"></myCarOrder>
         
         <uv-load-more v-if="list[currentIndex].isShowListloading" :fontSize="30" :status="list[currentIndex].status" :marginTop="10"
           :marginBottom="20" dashed line />
@@ -44,7 +44,7 @@
       <view class="" v-show="currentIndex == 2">
         <myEmppty :isShow="otherAddressList.length == 0" Text="暂时没有拼车订单 快快发布一个吧"></myEmppty>
         
-        <myCarOrder :orderList="otherAddressList" @clickOrderItem="clickCard" ></myCarOrder>
+        <myCarOrder :orderList="otherAddressList" @clickOrderItem="clickCard" @notLoign="notlogin"></myCarOrder>
         
         
         <uv-load-more v-if="list[currentIndex].isShowListloading" :fontSize="30" :status="list[currentIndex].status" :marginTop="10"
@@ -154,6 +154,7 @@
     },
     mixins: [mixin],
     methods: {
+
       myPopupShow(e){
         this.popupShow = e
       },
@@ -188,7 +189,6 @@
         this.fileList1 = []
         this.$refs.myWxUpload.fileList1Empty()
       },
-
       viewWxImg() {
         let img = this.QRttp + this.currentOrder.wechatImg
         uni.previewImage({
@@ -268,23 +268,19 @@
         }).then(res => {
           console.log(res);
           this.clearWxImg()
-          if (res.code != 200) {
-            this.$refs.message.show({
-              type: 'error',
-              msg: '订单已被接受或失效',
-              iconSize: 16,
-            })
+          
+          if(!this.returnCodeHandle(res.code,'订单已被接受或失效')){
             this.popupShow = false
             this.isLoading = false
             this.$refs.myorderdetailpopup.closePopup()
             this.scrollPullDown()
             return
           }
-
+       
+       
           this.isLoading = false
           this.scrollPullDown()
           this.$refs.myorderdetailpopup.closePopup()
-          
           this.$refs.receivePopup.open()
         }).catch(err => {
           console.log('home page is', err);

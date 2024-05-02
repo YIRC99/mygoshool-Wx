@@ -258,16 +258,13 @@ var _default = {
       }).then(function (res) {
         console.log('修改信息返回值', res);
         console.log('保存的信息为', _this3.info);
+        _this3.isloading = false;
+        if (!_this3.returnCodeHandle(res.code, _this3.feedFail)) return;
         uni.setStorageSync('user', _this3.info);
         _this3.$refs.message.show({
           type: 'success',
-          //String 默认default
-          msg: '修改成功',
-          //String 显示内容 *
-          iconSize: 16 //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
+          msg: '修改成功'
         });
-
-        _this3.isloading = false;
         setTimeout(function () {
           uni.navigateBack();
         }, 1000);
@@ -275,8 +272,7 @@ var _default = {
         console.log('信息修改错误', err);
         _this3.$refs.message.show({
           type: 'error',
-          msg: '网络开了点小差,请稍候重试吧',
-          iconSize: 16
+          msg: '网络开了点小差,请稍候重试吧'
         });
         _this3.isloading = false;
       });
@@ -295,9 +291,9 @@ var _default = {
         },
         timeout: 10000,
         success: function success(res) {
-          var obj = JSON.parse(res.data);
-          console.log(obj);
-          _this4.info.avatar = obj.data;
+          res = JSON.parse(res.data);
+          if (!_this4.returnCodeHandle(res.code, _this4.feedFail)) return;
+          _this4.info.avatar = _this4.MyAES.decrypt(res.data);
         },
         fail: function fail(err) {
           console.log(err);

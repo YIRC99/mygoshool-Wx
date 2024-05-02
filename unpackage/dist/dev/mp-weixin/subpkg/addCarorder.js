@@ -417,24 +417,19 @@ var _default = {
         }
       }).then(function (res) {
         _this.isLoading = false;
-        if (res.code == 200) {
-          _this.$refs.message.show({
-            type: 'success',
-            msg: '发布成功!'
-          });
-          _this.refreshLocalWxImg(_this.fileList1[0].resWximg);
-          setTimeout(function () {
-            uni.$emit('addUpdate');
-            uni.navigateBack();
-          }, 500);
-        } else {
+        if (!_this.returnCodeHandle(res.code, '发布拼车失败 请稍候重试吧~')) {
           _this.afterAdd = true;
-          _this.$refs.message.show({
-            type: 'error',
-            msg: '发布拼车失败 请稍候重试吧~'
-          });
           return;
         }
+        _this.$refs.message.show({
+          type: 'success',
+          msg: '发布成功!'
+        });
+        _this.refreshLocalWxImg(_this.fileList1[0].resWximg);
+        setTimeout(function () {
+          uni.$emit('addUpdate');
+          uni.navigateBack();
+        }, 500);
       }).catch(function (err) {
         console.error('捕获到了错误', err);
         _this.afterAdd = true;

@@ -261,12 +261,6 @@ var _default = {
     }
   },
   methods: {
-    notlogin: function notlogin() {
-      this.$refs.message.show({
-        type: 'error',
-        msg: '请登录重试吧'
-      });
-    },
     recoverPlaceholder: function recoverPlaceholder() {
       this.myplaceholder = '搜索';
     },

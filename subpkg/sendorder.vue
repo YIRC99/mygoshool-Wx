@@ -440,13 +440,9 @@
         }).then(res => {
           this.isLoading = false
           console.log('获取用户 拼车订单',res);
-          if (res.code != 200) {
-            this.$refs.message.show({
-              type: 'error',
-              msg: '请求错误 请稍候重试吧',
-            })
-            return
-          }
+          
+          if(!this.returnCodeHandle(res.code,'请求错误 请稍候重试吧'))return
+         
           this.orderList = res.data
           let currTime = new Date().getTime()
           this.orderList.forEach(item => {

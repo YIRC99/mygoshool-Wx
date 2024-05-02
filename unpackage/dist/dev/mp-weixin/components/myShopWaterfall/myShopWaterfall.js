@@ -253,6 +253,8 @@ var _mixin = _interopRequireDefault(__webpack_require__(/*! @/mixins/mixin.js */
 //
 //
 //
+//
+//
 var _default = {
   mixins: [_mixin.default],
   name: "myShopWaterfall",
@@ -294,7 +296,11 @@ var _default = {
       if (action === '') {
         return;
       }
-      console.log(item);
+      var token = uni.getStorageSync('token');
+      if (token == null || token == '' || token == undefined) {
+        this.$emit('notLoign');
+        return;
+      }
       uni.navigateTo({
         url: '/subpkg/feedback?reportId=' + item.id + '&reportType=' + 2
       });

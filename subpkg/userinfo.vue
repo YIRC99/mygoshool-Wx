@@ -238,6 +238,7 @@
           }
         }).then(res => {
           console.log('拼车数据', res);
+          if(!this.returnCodeHandle(res.code,'请求错误 请稍候重试吧'))return
           this.orderList = res.data
           this.list[1].badge.value = res.data.length
         }).catch(err => {
@@ -259,6 +260,8 @@
           }
         }).then(res => {
           console.log('闲置物品的响应', res);
+          if(!this.returnCodeHandle(res.code,'请求错误 请稍候重试吧'))return
+          
           if (res.code == 200) {
             res.data.forEach(i => {
               i.image = i.imgs.split(",")[0]
@@ -289,6 +292,8 @@
           }
         }).then(res => {
           console.log('评价返回的数据', res);
+          if(!this.returnCodeHandle(res.code,'请求错误 请稍候重试吧'))return
+          
           this.appriseList = res.data
           this.list[0].badge.value = res.data.length
           this.appriseList.forEach(item => {
@@ -311,16 +316,9 @@
           }
         }).then(res => {
           console.log(res);
-          if (res.code == 200) {
-            this.info = res.data
-            this.getAppriseByUserid()
-          } else {
-            this.$refs.message.show({
-              type: 'error',
-              msg: '获取用户信息失败',
-            })
-          }
-
+          if(!this.returnCodeHandle(res.code,'获取用户信息失败'))return
+     
+          this.getAppriseByUserid()
         }).catch(err => {
           console.log('home page is', err);
           this.isRefresh = false

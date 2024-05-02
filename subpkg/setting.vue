@@ -83,13 +83,15 @@
         }).then(res => {
           console.log('修改信息返回值', res);
           console.log('保存的信息为', this.info);
+          this.isloading = false
+          if(!this.returnCodeHandle(res.code,this.feedFail))return
+          
           uni.setStorageSync('user', this.info)
           this.$refs.message.show({
-            type: 'success', //String 默认default
-            msg: '修改成功', //String 显示内容 *
-            iconSize: 16, //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
+            type: 'success', 
+            msg: '修改成功', 
           })
-          this.isloading = false
+          
           setTimeout(() => {
             uni.navigateBack()
           }, 1000)
@@ -98,7 +100,6 @@
           this.$refs.message.show({
             type: 'error',
             msg: '网络开了点小差,请稍候重试吧',
-            iconSize: 16,
           })
           this.isloading = false
         })
@@ -118,9 +119,9 @@
           },
           timeout: 10000,
           success: (res) => {
-            let obj = JSON.parse(res.data)
-            console.log(obj);
-            this.info.avatar = obj.data
+            res = JSON.parse(res.data)
+            if(!this.returnCodeHandle(res.code,this.feedFail))return
+            this.info.avatar = this.MyAES.decrypt(res.data)
 
           },
           fail: (err) => {

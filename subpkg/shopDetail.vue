@@ -137,6 +137,10 @@ import { date } from '../uni_modules/uv-ui-tools/libs/function/test'
           }
         }).then(res => {
           console.log(res);
+           if(!this.returnCodeHandle(res.code,'请稍候重试吧~')){
+             this.shop.browse = 999999999999
+             return
+           }
           this.shop.browse = res.data
         })
       },
@@ -158,6 +162,7 @@ import { date } from '../uni_modules/uv-ui-tools/libs/function/test'
           }
         }).then(res => {
           console.log(res);
+          if(!this.returnCodeHandle(res.code,'请稍候重试吧~'))return 
           this.userinfo =  res.data
         })
       }

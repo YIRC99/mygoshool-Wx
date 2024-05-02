@@ -105,6 +105,9 @@ try {
     myShopWaterfall: function () {
       return Promise.all(/*! import() | components/myShopWaterfall/myShopWaterfall */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myShopWaterfall/myShopWaterfall")]).then(__webpack_require__.bind(null, /*! @/components/myShopWaterfall/myShopWaterfall.vue */ 379))
     },
+    uvLoadMore: function () {
+      return Promise.all(/*! import() | uni_modules/uv-load-more/components/uv-load-more/uv-load-more */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-load-more/components/uv-load-more/uv-load-more")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-load-more/components/uv-load-more/uv-load-more.vue */ 316))
+    },
     quickMessage: function () {
       return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 237))
     },
@@ -163,13 +166,14 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
+
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ 18));
 var _mixin = _interopRequireDefault(__webpack_require__(/*! @/mixins/mixin.js */ 118));
 //
 //
@@ -203,7 +207,11 @@ var _default = {
       isRefresh: false,
       list: [],
       // 瀑布流全部数据
-      isShowListloading: false
+      isShowListloading: false,
+      pageNum: 1,
+      pageSize: 10,
+      pagetotal: 0,
+      searchTextArr: []
     };
   },
   computed: {
@@ -212,30 +220,50 @@ var _default = {
     }
   },
   onLoad: function onLoad(e) {
-    console.log(e.searchText);
-    this.searchText(e.searchText);
+    var searchText = e.searchText;
+    this.searchTextArr = searchText.split(' ').filter(function (i) {
+      return i.trim() != '';
+    });
+    this.searchText();
   },
   methods: {
-    searchText: function searchText(target) {
+    scrollDown: function scrollDown() {
+      // TODO 分页后端已经写好了 明天完善下滑分页加载的动画
+      if (this.list.length == this.pagetotal) {
+        this.isShowListloading = true;
+        this.status = 'nomore';
+      } else {
+        this.pageNum++;
+        this.isShowListloading = true;
+        this.searchText();
+      }
+      console.log('滑动到底部了');
+    },
+    searchText: function searchText() {
       var _this = this;
-      var arr = target.split(' ').filter(function (i) {
-        return i.trim() != '';
-      });
-      console.log(arr);
       this.post({
-        url: 'shop/search/' + arr
+        url: 'shop/search',
+        data: {
+          pageNum: this.pageNum,
+          pageSize: this.pageSize,
+          target: this.searchTextArr
+        }
       }).then(function (res) {
         console.log(res);
-        res.data.forEach(function (i) {
+        _this.pagetotal = res.data.total;
+        res.data.records.forEach(function (i) {
           i.image = i.imgs.split(",")[0];
         });
-        _this.list = res.data;
-      });
-    },
-    ToShopDetail: function ToShopDetail(item) {
-      uni.setStorageSync('shopdetail', item);
-      uni.navigateTo({
-        url: '/subpkg/shopDetail'
+        _this.list = [].concat((0, _toConsumableArray2.default)(_this.list), (0, _toConsumableArray2.default)(res.data.records));
+        _this.isRefresh = false;
+        _this.isShowListloading = false;
+      }).catch(function (err) {
+        _this.isRefresh = false;
+        _this.$refs.message.show({
+          type: 'error',
+          msg: '网络开了点小差,请稍候重试吧'
+        });
+        return;
       });
     },
     myScroll: function myScroll(e) {
@@ -251,7 +279,6 @@ var _default = {
   }
 };
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

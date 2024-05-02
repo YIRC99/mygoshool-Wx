@@ -175,10 +175,12 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {
 
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var _mixin = _interopRequireDefault(__webpack_require__(/*! @/mixins/mixin.js */ 118));
 //
 //
 //
@@ -214,6 +216,7 @@ exports.default = void 0;
 //
 //
 var _default = {
+  mixins: [_mixin.default],
   data: function data() {
     return {
       action: '',
@@ -277,16 +280,8 @@ var _default = {
           reportType: this.isReportType
         }
       }).then(function (res) {
-        console.log(res);
-        if (res.code != 200) {
-          _this.$refs.message.show({
-            type: 'error',
-            msg: _this.feedFail,
-            iconSize: 16
-          });
-          _this.ispost = false;
-          return;
-        }
+        console.log('添加意见反馈的返回', res);
+        if (!_this.returnCodeHandle(res.code, _this.feedFail)) return;
         _this.$refs.message.show({
           type: 'success',
           msg: _this.feedSuccess,

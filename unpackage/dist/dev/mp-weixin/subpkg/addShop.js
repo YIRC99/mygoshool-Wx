@@ -394,22 +394,18 @@ var _default = {
       }).then(function (res) {
         console.log(res);
         _this.isLoading = false;
-        if (res.code == 200) {
-          _this.$refs.message.show({
-            type: 'success',
-            msg: _this.isUpdate ? '修改成功' : '发布成功'
-          });
-          _this.refreshLocalWxImg(_this.wxFile[0].resWximg);
-          setTimeout(function () {
-            uni.navigateBack();
-          }, 1500);
-        } else {
+        if (!_this.returnCodeHandle(res.code, '发布商品失败了 请稍后重试吧~')) {
           _this.ispost = false;
-          _this.$refs.message.show({
-            type: 'error',
-            msg: '发布商品失败了 请稍后重试吧~'
-          });
+          return;
         }
+        _this.$refs.message.show({
+          type: 'success',
+          msg: _this.isUpdate ? '修改成功' : '发布成功'
+        });
+        _this.refreshLocalWxImg(_this.wxFile[0].resWximg);
+        setTimeout(function () {
+          uni.navigateBack();
+        }, 1500);
       }).catch(function (err) {
         console.error('捕获到了错误', err);
         _this.isLoading = false;

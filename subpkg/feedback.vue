@@ -33,7 +33,9 @@
 </template>
 
 <script>
+  import mixin from '@/mixins/mixin.js'
   export default {
+    mixins: [mixin],
     data() {
       return {
         action: '',
@@ -100,16 +102,9 @@
             reportType: this.isReportType
           }
         }).then(res => {
-          console.log(res);
-          if (res.code != 200) {
-            this.$refs.message.show({
-              type: 'error',
-              msg: this.feedFail,
-              iconSize: 16,
-            })
-            this.ispost = false
-            return
-          }
+          console.log('添加意见反馈的返回',res);
+          if(!this.returnCodeHandle(res.code,this.feedFail))return
+          
           this.$refs.message.show({
             type: 'success',
             msg: this.feedSuccess,

@@ -310,6 +310,10 @@ var _default = {
         }
       }).then(function (res) {
         console.log(res);
+        if (!_this3.returnCodeHandle(res.code, '请稍候重试吧~')) {
+          _this3.shop.browse = 999999999999;
+          return;
+        }
         _this3.shop.browse = res.data;
       });
     },
@@ -332,6 +336,7 @@ var _default = {
         }
       }).then(function (res) {
         console.log(res);
+        if (!_this4.returnCodeHandle(res.code, '请稍候重试吧~')) return;
         _this4.userinfo = res.data;
       });
     }

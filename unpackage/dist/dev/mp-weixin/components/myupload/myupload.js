@@ -82,6 +82,9 @@ try {
     uvUpload: function () {
       return Promise.all(/*! import() | uni_modules/uv-upload/components/uv-upload/uv-upload */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-upload/components/uv-upload/uv-upload")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-upload/components/uv-upload/uv-upload.vue */ 463))
     },
+    quickMessage: function () {
+      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 237))
+    },
   }
 } catch (e) {
   if (
@@ -258,29 +261,35 @@ var _default = {
             switch (_context.prev = _context.next) {
               case 0:
                 user = uni.getStorageSync('user');
+                if (!(user == '' || user == null)) {
+                  _context.next = 3;
+                  break;
+                }
+                return _context.abrupt("return");
+              case 3:
                 if (!(user.userWxImg != null && user.userWxImg != '')) {
-                  _context.next = 7;
+                  _context.next = 9;
                   break;
                 }
                 // 直接设置图片地址
                 console.log('不用请求直接获取上一次的微信图片');
                 _this2.beforeImg = user.userWxImg;
                 _this2.showBefor = true;
-                _context.next = 12;
+                _context.next = 14;
                 break;
-              case 7:
-                _context.next = 9;
+              case 9:
+                _context.next = 11;
                 return _this2.get({
                   url: 'user/wxImg?userid=' + user.userid
                 });
-              case 9:
+              case 11:
                 res = _context.sent;
                 if (res.code == 200 && res.data != null) {
                   _this2.beforeImg = res.data;
                   _this2.showBefor = true;
                 }
                 console.log(res);
-              case 12:
+              case 14:
               case "end":
                 return _context.stop();
             }
@@ -319,9 +328,14 @@ var _default = {
           },
           timeout: _this3.TimeOut,
           success: function success(res) {
-            console.log('上传成功1111', res.statusCode);
-            var img = JSON.parse(res.data).data;
-            _this3.fileList1[0].resWximg = _this3.MyAES.decrypt(img);
+            res = JSON.parse(res.data);
+            console.log('上传成功222', res.statusCode);
+            if (!_this3.returnCodeHandle(res.code)) {
+              console.log('代码执行到了这里');
+              resolve(400);
+              return;
+            }
+            _this3.fileList1[0].resWximg = _this3.MyAES.decrypt(res.data);
             _this3.showBefor = false;
             resolve(200);
           },

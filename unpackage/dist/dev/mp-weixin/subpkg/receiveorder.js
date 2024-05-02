@@ -391,13 +391,7 @@ var _default = {
         }
       }).then(function (res) {
         console.log(res);
-        if (res.code != 200) {
-          _this.$refs.message.show({
-            type: 'error',
-            msg: '请求错误 请稍候重试吧'
-          });
-          return;
-        }
+        if (!_this.returnCodeHandle(res.code, '请求错误 请稍候重试吧')) return;
         _this.orderList = res.data;
         _this.orderList.forEach(function (item) {
           item.createat = _this.formatDateTime(item.createat);

@@ -63,6 +63,8 @@
         </view>
       </template>
     </uv-waterfall>
+   
+    
     <view class="" style="height: 50rpx;width: 100%; "></view>
  <quick-message ref="message"></quick-message>
   </view>
@@ -111,7 +113,11 @@
         if (action === '') {
         	return
         }
-        console.log(item);
+        let token = uni.getStorageSync('token')
+        if(token == null || token == '' || token == undefined){
+          this.$emit('notLoign')
+          return
+        }
         uni.navigateTo({
           url: '/subpkg/feedback?reportId=' + item.id + '&reportType=' + 2
         })

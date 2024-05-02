@@ -102,15 +102,6 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  var f0 = _vm._f("fromStartDateTime")(_vm.affiche.createat)
-  _vm.$mp.data = Object.assign(
-    {},
-    {
-      $root: {
-        f0: f0,
-      },
-    }
-  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -146,12 +137,12 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {
 
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-//
-//
+var _mixin = _interopRequireDefault(__webpack_require__(/*! @/mixins/mixin.js */ 118));
 //
 //
 //
@@ -168,6 +159,7 @@ exports.default = void 0;
 //
 //
 var _default = {
+  mixins: [_mixin.default],
   data: function data() {
     return {
       affiche: {
@@ -177,7 +169,7 @@ var _default = {
       },
       title: '我是公告我是公告我是公告我是公告我是公告我是公告',
       dateTime: '',
-      text: '尊敬的腾讯云用户：您好，2024年春节假期临近，提前祝您春节快乐！同时附上腾讯云在春节期间（2月10日至2月17日）的服务安排！请您了解并提前做好相关安排，详细如下：腾讯云春节期间如下渠道继续为您提供7*24小时服务：自助服务：您可通过（https://cloud.tencent.com/document/custom-service)办理；售后支持：获取专业工程师的帮助，快速解决您的问题，点击进入(https://cloud.tencent.com/act/event/Online_service)，服务热线请拨打4009100100或95716；【温馨提示】1、余额和续费：愉快过节的同时请您提前做好财务预算和注意保持账户余额充足（订阅语音提醒（https://console.cloud.tencent.com/message/subscription)，避免假期期间因为账户欠费或未续费影响业务正常使用；2、数据备份：假期期间请务必对重要业务做好数据备份工作，如CVM请开启“自动续费”／“定期快照”，CDB做好备份策略；3、运营变更：请提前做好假期期间活动上线的准备，并预估用户增长量，检查机器负载和容量，并提前做好节前各种运营变更（包括现网改造，变更，升级，发布等）；4、备案审核：春节期间腾讯云备案继续提供审核服务，您可正常提交备案订单；但受法定假日影响，省通信管理局2月10日至2月17日期间暂停审核。您在此期间提交至省通信管理局的备案订单，省通信管理局将于春节'
+      text: '我是内容我是内容我是内容我是内容我是内容我是内容'
     };
   },
   onLoad: function onLoad() {

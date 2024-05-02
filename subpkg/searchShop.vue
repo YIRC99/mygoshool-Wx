@@ -2,15 +2,15 @@
   <view >
 
     <scroll-view scroll-y="true" style="height: 100vh; background-color: #f7f7f7; " :refresher-triggered="isRefresh"
-      @scrolltolower="" :scroll-top="myScrollPosition" scroll-with-animation @scroll="myScroll">
+      @scrolltolower="scrollDown" :scroll-top="myScrollPosition" scroll-with-animation @scroll="myScroll">
       <view class="">
 
-        <myShopWaterfall :list="list" emptyTest="没有查询到相关的物品哦~ <br>换一个关键词试试吧"></myShopWaterfall>
-
+        <myShopWaterfall :list="list" emptyTest="没有查询到相关的物品哦~ <br>换一个关键词试试吧" @notLoign="notlogin"></myShopWaterfall>
+        
+         <uv-load-more v-if="isShowListloading" :fontSize="30" :status="status" :marginTop="30" dashed line />
+         <view class="" style="height: 100rpx;width: 100%;"></view>
       </view>
     </scroll-view>
-    
-    
 
     <view class="totopBut" v-show="isShowToTop" @click="toTop">
       <image src="/static/toTop.png" mode=""></image>
@@ -31,7 +31,11 @@
         myOldScrollPosition: 0,
         isRefresh: false,
         list: [], // 瀑布流全部数据
-        isShowListloading: false
+        isShowListloading: false,
+        pageNum: 1,
+        pageSize: 10,
+        pagetotal: 0,
+        searchTextArr: []
       };
     },
     computed: {
@@ -40,29 +44,51 @@
       }
     },
     onLoad(e) {
-      console.log(e.searchText);
-      this.searchText(e.searchText)
+      let searchText = e.searchText
+      this.searchTextArr = searchText.split(' ').filter(i => i.trim() != '')
+      this.searchText()
     },
     methods: {
-      searchText(target) {
-        let arr = target.split(' ').filter(i => i.trim() != '')
-        console.log(arr);
-
+      scrollDown() {
+        // TODO 分页后端已经写好了 明天完善下滑分页加载的动画
+        if (this.list.length == this.pagetotal) {
+          this.isShowListloading = true
+          this.status = 'nomore'
+        }else{
+          this.pageNum++
+          this.isShowListloading = true
+          this.searchText()
+        }
+        console.log('滑动到底部了');
+      },
+      searchText() {
         this.post({
-          url: 'shop/search/' + arr
+          url: 'shop/search',
+          data:{
+            pageNum: this.pageNum,
+            pageSize: this.pageSize,
+            target: this.searchTextArr
+          }
         }).then(res => {
           console.log(res);
-          res.data.forEach(i => {
+          
+          this.pagetotal = res.data.total
+          res.data.records.forEach(i => {
             i.image = i.imgs.split(",")[0]
           })
-          this.list = res.data
+          this.list = [...this.list, ...res.data.records]
+          this.isRefresh = false
+          this.isShowListloading = false
+        }).catch(err => {
+          this.isRefresh = false
+          this.$refs.message.show({
+            type: 'error',
+            msg: '网络开了点小差,请稍候重试吧',
+          })
+          return
         })
-      },
-      ToShopDetail(item) {
-        uni.setStorageSync('shopdetail', item)
-        uni.navigateTo({
-          url: '/subpkg/shopDetail'
-        })
+        
+        
       },
       myScroll(e) {
         this.myOldScrollPosition = e.detail.scrollTop

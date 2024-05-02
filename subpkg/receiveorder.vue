@@ -170,13 +170,9 @@
           }
         }).then(res => {
           console.log(res);
-          if (res.code != 200) {
-            this.$refs.message.show({
-              type: 'error',
-              msg: '请求错误 请稍候重试吧',
-            })
-            return
-          }
+          
+          if(!this.returnCodeHandle(res.code,'请求错误 请稍候重试吧'))return
+          
           this.orderList = res.data
           this.orderList.forEach(item => {
             item.createat = this.formatDateTime(item.createat)

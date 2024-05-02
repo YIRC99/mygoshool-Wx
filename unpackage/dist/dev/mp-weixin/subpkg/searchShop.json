@@ -3,6 +3,7 @@
   "enablePullDownRefresh": false,
   "usingComponents": {
     "my-shop-waterfall": "/components/myShopWaterfall/myShopWaterfall",
+    "uv-load-more": "/uni_modules/uv-load-more/components/uv-load-more/uv-load-more",
     "quick-message": "/components/quick-message/quick-message"
   }
 }

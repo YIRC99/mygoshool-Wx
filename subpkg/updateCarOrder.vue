@@ -230,6 +230,10 @@
         if(!this.afterAdd) return
         this.afterAdd = false
         console.log(this.currentOrder);
+        
+        this.currentOrder.startdatetime = this.fromDataTime2ISO8601(this.currentOrder.startdatetime)
+        this.currentOrder.createat = this.fromDataTime2ISO8601(this.currentOrder.createat)
+        
         this.isLoading = true
         this.post({
           url: 'carshareorder/update',

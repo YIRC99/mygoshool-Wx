@@ -116,10 +116,12 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {
 
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var _mixin = _interopRequireDefault(__webpack_require__(/*! @/mixins/mixin.js */ 118));
 //
 //
 //
@@ -132,6 +134,7 @@ exports.default = void 0;
 //
 //
 var _default = {
+  mixins: [_mixin.default],
   name: "myAffiche",
   data: function data() {
     return {
@@ -159,8 +162,10 @@ var _default = {
         url: 'affiche'
       }).then(function (res) {
         console.log('公告获取', res);
+        if (!_this.returnCodeHandle(res.code, '公告失败')) return;
         if (res.code == 200) {
           _this.affiche = res.data;
+          _this.affiche.createat = _this.formatDateTime(_this.affiche.createat);
         }
       });
     }

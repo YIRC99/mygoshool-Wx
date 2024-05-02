@@ -667,13 +667,7 @@ var _default = {
       }).then(function (res) {
         _this7.isLoading = false;
         console.log('获取用户 拼车订单', res);
-        if (res.code != 200) {
-          _this7.$refs.message.show({
-            type: 'error',
-            msg: '请求错误 请稍候重试吧'
-          });
-          return;
-        }
+        if (!_this7.returnCodeHandle(res.code, '请求错误 请稍候重试吧')) return;
         _this7.orderList = res.data;
         var currTime = new Date().getTime();
         _this7.orderList.forEach(function (item) {

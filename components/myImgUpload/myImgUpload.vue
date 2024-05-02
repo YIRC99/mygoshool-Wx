@@ -78,7 +78,6 @@
       },
       isAllupdate() {
         for (var i = 0; i < this.fileList1.length; i++) {
-          // console.log(this.fileList1[i].status);
           if (this.fileList1[i].status != 'success') {
             this.$refs.message.show({
               type: 'error',
@@ -123,8 +122,16 @@
             },
             timeout: this.TimeOut,
             success: (res) => {
-              console.log('上传成功', JSON.parse(res.data));
-              let img = JSON.parse(res.data).data
+              res = JSON.parse(res.data)
+              console.log('上传成功', res);
+              
+              if(!this.returnCodeHandle(res.code)){
+                console.log('代码执行到了这里');
+                resolve(400)
+                return 
+              }
+              
+              let img = res.data
               img = this.MyAES.decrypt(img)
               
               if (this.imgString == '') this.imgString = img
