@@ -16,7 +16,7 @@
 
     <quick-message ref="message"></quick-message>
 
-    <MagicNavigationBar :items="items" :height="60" :indicatorSize="50" @onTabSelect="onTab"
+    <MagicNavigationBar :items="items" :height="70" :indicatorSize="50" @onTabSelect="onTab"
       indicatorBackgroundColor="#99f2ff">
       <template v-slot:text="{text}">
         {{text}}
@@ -96,6 +96,7 @@
         this.isLoading = true
         console.log('调用了微信登录');
         wx.login({
+          timeout: 5000,
           success: (res) => {
             this.post({
               url: `user/login?code=${res.code}`

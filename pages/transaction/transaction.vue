@@ -27,7 +27,7 @@
 
         <view class="waterfall">
           
-          <myShopWaterfall ref="myshopwaterfall" :list="list"></myShopWaterfall>
+          <myShopWaterfall ref="myshopwaterfall" :list="list" @notLoign="notlogin"></myShopWaterfall>
 
           <uv-load-more v-if="isShowListloading" :fontSize="30" :status="status" :marginTop="30" dashed line />
 
@@ -96,6 +96,12 @@
       }
     },
     methods: {
+      notlogin(){
+        this.$refs.message.show({
+          type: 'error',
+          msg: '请登录重试吧',
+        })
+      },
       recoverPlaceholder(){
         this.myplaceholder = '搜索'
       },
@@ -109,15 +115,7 @@
         })
         return arr
       },
-      ToShopDetail(item) {
-        uni.setStorageSync('shopdetail', item)
-        uni.navigateTo({
-          url: '/subpkg/shopDetail'
-        })
-      },
       myScroll(e) {
-        // console.log('old  ',this.myOldScrollPosition);
-        // console.log('new   ',this.myScrollPosition);
         this.myOldScrollPosition = e.detail.scrollTop
       },
       toTop() {
@@ -149,15 +147,11 @@
             addressCodeArr: this.chooseAddArr()
           }
         }).then(res => {
-          console.log('商品请求返回值',res);
+          console.log('商品请求返回',res);
           console.log('商品请求返回值', res.data);
-          if (res.code != 200) {
+           if (!this.returnCodeHandle(res.code)) {
             this.isRefresh = false
             this.isShowListloading = false
-            this.$refs.message.show({
-              type: 'error',
-              msg: '网络开了点小差,请稍候重试吧',
-            })
             return
           }
 

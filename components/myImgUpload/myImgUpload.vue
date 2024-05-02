@@ -125,9 +125,10 @@
             success: (res) => {
               console.log('上传成功', JSON.parse(res.data));
               let img = JSON.parse(res.data).data
+              img = this.MyAES.decrypt(img)
+              
               if (this.imgString == '') this.imgString = img
               else this.imgString = this.imgString + ',' + img
-              
               this.fileList1[this.fileIndex++].resWximg = img
               resolve(200)
             },

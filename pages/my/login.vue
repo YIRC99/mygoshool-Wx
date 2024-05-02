@@ -148,11 +148,11 @@
       WxLoginSuccess() {
         this.isLoading = false
         this.isLogin = true
-        uni.setStorageSync('token', this.info.openid)
+        uni.setStorageSync('token', this.info.token)
         uni.setStorageSync('user', this.info)
         this.$refs.message.show({
-            type: 'success', //String 默认default
-            msg: '登录成功', //String 显示内容 *
+            type: 'success', 
+            msg: '登录成功', 
         })
       },
       WxLoginFail() {
@@ -175,6 +175,7 @@
         this.isLoading = true
         console.log('调用了微信登录');
         wx.login({
+          timeout: 5000,
           success: (res) => {
             this.post({
               url: `user/login?code=${res.code}`

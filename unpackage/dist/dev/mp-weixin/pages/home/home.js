@@ -322,7 +322,7 @@ var _default = {
         isShowListloading: false,
         status: 'loading'
       }],
-      currentIndex: 1,
+      currentIndex: 0,
       orderList: [],
       newSchoolList: [],
       oldSchoolList: [],
@@ -504,23 +504,25 @@ var _default = {
         }
       }).then(function (res) {
         console.log(res.data);
-        if (res.code != 200) {
+        if (!_this2.returnCodeHandle(res.code)) {
           _this2.isRefresh = false;
-          _this2.$refs.message.show({
-            type: 'error',
-            //String 默认default
-            msg: '网络开了点小差,请稍候重试吧' //String 显示内容 *
-          });
-
           return;
         }
         _this2.list[_this2.currentIndex].pagetotal = res.data.total;
         res.data.records.forEach(function (item) {
-          if (item.startaddressall.indexOf('濂溪校区') != -1) {
-            item.startaddress = '九职大' + item.startaddress.slice(6, 9999);
-          } else if (item.startaddressall.indexOf('鹤问湖校区') != -1) {
-            item.startaddress = '九职大' + item.startaddress.slice(6, 9999);
+          item.createat = _this2.formatDateTime(item.createat);
+          item.startdatetime = _this2.formatDateTime(item.startdatetime);
+          // 如果目的地是我们的当前的选择地址tab 
+          if (item.endaddressall.indexOf(_this2.list[_this2.currentIndex].name) != -1) {
+            item.isReturn = true;
+          } else {
+            item.isReturn = false;
           }
+          // if (item.startaddressall.indexOf('濂溪校区') != -1) {
+          //   item.startaddress = '九职大' + item.startaddress.slice(6, 9999)
+          // } else if (item.startaddressall.indexOf('鹤问湖校区') != -1) {
+          //   item.startaddress = '九职大' + item.startaddress.slice(6, 9999)
+          // }
         });
         // 下拉刷新 跟 触底分页加载时不同的
         if (isPullDown) {
@@ -583,33 +585,6 @@ var _default = {
         // })
         return;
       }
-
-      // 上面的优化没有经过数据验证 所有这个麻烦的写法先留着 
-      // if (this.currentIndex == 0 && this.newSchoolList.length >= currentList.pagetotal) {
-      //   currentList.isShowListloading = true
-      //   currentList.status = 'nomore'
-      //   this.$refs.message.show({
-      //     type: 'default',
-      //     msg: '已经到底了, 没有更多数据啦',
-      //   })
-      //   return
-      // } else if (this.currentIndex == 1 && this.oldSchoolList.length >= currentList.pagetotal) {
-      //   currentList.isShowListloading = true
-      //   currentList.status = 'nomore'
-      //   this.$refs.message.show({
-      //     type: 'success',
-      //     msg: '已经到底了, 没有更多数据啦',
-      //   })
-      //   return
-      // } else if (this.currentIndex == 2 && this.otherAddressList.length >= currentList.pagetotal) {
-      //   currentList.isShowListloading = true
-      //   currentList.status = 'nomore'
-      //   this.$refs.message.show({
-      //     type: 'success',
-      //     msg: '已经到底了, 没有更多数据啦',
-      //   })
-      //   return
-      // }
       currentList.isShowListloading = true;
       currentList.pageNum++;
       this.getOrderList(false);
@@ -647,7 +622,7 @@ var _default = {
     simulateSwipeDown: function simulateSwipeDown() {
       if (!this.oneRefresh) {
         this.oneRefresh = true;
-        console.log('首次进入页面 index 0 页面 自动下拉刷新');
+        console.log('首次进入页面 index 0 页面 自动下拉刷新', this.currentIndex);
         this.change({
           index: 0,
           name: '濂溪校区'

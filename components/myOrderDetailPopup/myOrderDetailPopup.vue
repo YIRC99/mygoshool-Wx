@@ -19,7 +19,7 @@
           <view class="my-middle-box">
             <uni-section title="出发地点" type="line" titleFontSize="36rpx">
               <template v-slot:right v-if="currentOrder.startdatetime != ''">
-                出发时间 {{currentOrder.startdatetime | fromStartDateTime}}
+                出发时间 {{currentOrder.startdatetime}}
               </template>
             </uni-section>
             <view class="my-text-box">

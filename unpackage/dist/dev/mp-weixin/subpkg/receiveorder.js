@@ -158,7 +158,7 @@ var render = function () {
       m0: m0,
     }
   })
-  var f0 = _vm._f("fromStartDateTime")(_vm.currentOrder.startdatetime)
+  var f0 = _vm._f("fromLocalDateTime")(_vm.currentOrder.startdatetime)
   var m1 =
     _vm.currentOrder.isbefore == 1
       ? _vm.hoursTominute(_vm.currentOrder.beforetime)
@@ -400,6 +400,8 @@ var _default = {
         }
         _this.orderList = res.data;
         _this.orderList.forEach(function (item) {
+          item.createat = _this.formatDateTime(item.createat);
+          item.startdatetime = _this.formatDateTime(item.startdatetime);
           //订单状态 0已发布  1已接收  2已完成 3已过期
           if (item.receiveUserAppriseId == null) {
             item.statusText = '已接收';

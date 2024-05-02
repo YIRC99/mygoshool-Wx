@@ -10,6 +10,10 @@
         </rudon-rowMenuDotDotDot>
       </view>
       
+      <view class="myfanxiao" v-if="item.isReturn">
+        <image src="../../static/fanxiao.png"  mode=""></image>
+      </view>
+      
       <view class="my-car-box">
         <view class="" style="width: 80%;">
           <view class="car-left">
@@ -98,6 +102,17 @@
 </script>
 
 <style lang="scss">
+  
+  .myfanxiao{
+    -webkit-tap-highlight-color: transparent;
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    top: 25rpx;
+    right: 90rpx;
+    image{width: 100%;height: 100%;}
+  }
+  
  
   .mymore {
     -webkit-tap-highlight-color: transparent;

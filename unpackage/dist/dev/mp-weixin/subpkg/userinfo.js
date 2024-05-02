@@ -105,6 +105,9 @@ try {
     uvTabs: function () {
       return Promise.all(/*! import() | uni_modules/uv-tabs/components/uv-tabs/uv-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-tabs/components/uv-tabs/uv-tabs")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-tabs/components/uv-tabs/uv-tabs.vue */ 280))
     },
+    myEmppty: function () {
+      return Promise.all(/*! import() | components/myEmppty/myEmppty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myEmppty/myEmppty")]).then(__webpack_require__.bind(null, /*! @/components/myEmppty/myEmppty.vue */ 302))
+    },
     uvList: function () {
       return Promise.all(/*! import() | uni_modules/uv-list/components/uv-list/uv-list */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-list/components/uv-list/uv-list")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-list/components/uv-list/uv-list.vue */ 473))
     },
@@ -113,9 +116,6 @@ try {
     },
     uvTags: function () {
       return Promise.all(/*! import() | uni_modules/uv-tags/components/uv-tags/uv-tags */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-tags/components/uv-tags/uv-tags")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-tags/components/uv-tags/uv-tags.vue */ 371))
-    },
-    myEmppty: function () {
-      return Promise.all(/*! import() | components/myEmppty/myEmppty */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myEmppty/myEmppty")]).then(__webpack_require__.bind(null, /*! @/components/myEmppty/myEmppty.vue */ 302))
     },
     myCarOrder: function () {
       return Promise.all(/*! import() | components/myCarOrder/myCarOrder */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/myCarOrder/myCarOrder")]).then(__webpack_require__.bind(null, /*! @/components/myCarOrder/myCarOrder.vue */ 308))
@@ -165,14 +165,12 @@ var render = function () {
   var _c = _vm._self._c || _h
   var g0 = _vm.appriseList.length
   var g1 = _vm.orderList.length
-  var g2 = _vm.shopList.length
   _vm.$mp.data = Object.assign(
     {},
     {
       $root: {
         g0: g0,
         g1: g1,
-        g2: g2,
       },
     }
   )
@@ -418,7 +416,7 @@ var _default = {
         _this4.appriseList = res.data;
         _this4.list[0].badge.value = res.data.length;
         _this4.appriseList.forEach(function (item) {
-          item.createat = item.createat.split('T')[0] + ' ' + item.createat.split('T')[1];
+          item.createat = _this4.formatDateTime(item.createat);
           if (item.type = 1) item.typeText = '拼车';else if (item.type == 2) item.typeText = '二手';
         });
       });

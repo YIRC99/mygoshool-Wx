@@ -263,6 +263,7 @@ var _default = {
           success: function success(res) {
             console.log('上传成功', JSON.parse(res.data));
             var img = JSON.parse(res.data).data;
+            img = _this2.MyAES.decrypt(img);
             if (_this2.imgString == '') _this2.imgString = img;else _this2.imgString = _this2.imgString + ',' + img;
             _this2.fileList1[_this2.fileIndex++].resWximg = img;
             resolve(200);

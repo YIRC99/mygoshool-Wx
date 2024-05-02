@@ -244,12 +244,11 @@ var _default = {
     WxLoginSuccess: function WxLoginSuccess() {
       this.isLoading = false;
       this.isLogin = true;
-      uni.setStorageSync('token', this.info.openid);
+      uni.setStorageSync('token', this.info.token);
       uni.setStorageSync('user', this.info);
       this.$refs.message.show({
         type: 'success',
-        //String 默认default
-        msg: '登录成功' //String 显示内容 *
+        msg: '登录成功'
       });
     },
     WxLoginFail: function WxLoginFail() {
@@ -266,6 +265,7 @@ var _default = {
       this.isLoading = true;
       console.log('调用了微信登录');
       wx.login({
+        timeout: 5000,
         success: function success(res) {
           _this.post({
             url: "user/login?code=".concat(res.code)

@@ -180,7 +180,7 @@ var _default = {
       } else {
         this.$refs.message.show({
           type: 'error',
-          msg: '请登录后再发布拼车吧',
+          msg: '请登录后再发布吧',
           iconSize: 16
         });
       }

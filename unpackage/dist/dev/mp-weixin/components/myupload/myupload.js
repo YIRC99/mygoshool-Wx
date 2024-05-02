@@ -314,15 +314,14 @@ var _default = {
             user: 'test'
           },
           header: {
-            'Authorization': 'test-token',
+            'Authorization': uni.getStorageSync("token"),
             'UserId': uni.getStorageSync("user").openid
           },
           timeout: _this3.TimeOut,
           success: function success(res) {
-            console.log('测试 header ');
             console.log('上传成功1111', res.statusCode);
             var img = JSON.parse(res.data).data;
-            _this3.fileList1[0].resWximg = img;
+            _this3.fileList1[0].resWximg = _this3.MyAES.decrypt(img);
             _this3.showBefor = false;
             resolve(200);
           },

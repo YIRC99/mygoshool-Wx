@@ -172,16 +172,7 @@
         return this.currentOrder.wechataccount.trim() == '' && !this.isUploadWximg;
       }
     },
-    filters:{
-      // fromStartDateTime(value){
-      //   const startDateTime = value;
-      //   const indexT = startDateTime.indexOf('T');
-      //   const indexColon = startDateTime.lastIndexOf(':');
-      //   const newDateTime = startDateTime.slice(0, indexT) + ' ' + startDateTime.slice(indexT + 1, indexColon);
-      //   console.log('filter ',newDateTime);
-      //   return newDateTime
-      // }
-    },
+
     watch: {
       'currentOrder.wechataccount': {
         handler(newval, oldval) {
@@ -213,7 +204,12 @@
           })
           return
         }
+        
         this.currentOrder = res.data
+        this.currentOrder.createat = this.formatDateTime(this.currentOrder.createat)
+        this.currentOrder.startdatetime = this.formatDateTime(this.currentOrder.startdatetime)
+        
+        
         this.fileList1.push({
           message: '',
           size: '',

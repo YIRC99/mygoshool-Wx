@@ -47,7 +47,7 @@
             </view>
             
             <view class="title uv-line-2">{{item.detail | formHtmlStr}}</view>
-            <view class="subhead">发布时间: {{item.createAt | fromStartDateTime}}</view>
+            <view class="subhead">发布时间: {{item.createAt | fromLocalDateTime}}</view>
             <view class="but-box">
               <button class="btn-grad-update" @click.stop="updateShop(item)">编辑</button>
               <button class="btn-grad-delete"  @click.stop="deleteShop(item)">删除</button>
@@ -86,7 +86,7 @@
           <view class="my-middle-box" v-if="currentOrder != null">
             <uni-section title="出发地点" type="line" titleFontSize="36rpx">
               <template v-slot:right v-if="currentOrder.startdatetime != ''">
-                出发时间 {{currentOrder.startdatetime | fromStartDateTime}}
+                出发时间 {{currentOrder.startdatetime }}
               </template>
             </uni-section>
             <view class="my-text-box">
@@ -189,13 +189,6 @@
       }
     },
     methods: {
-      compareTime(cancelTime){
-        let cancel = new Date(cancelTime)
-        let curr = new Date()
-        if(cancel.getTime() > curr.getTime())
-          return false
-        else return true
-      },
       deleteShopRequest(){
         this.isLoading = true
         uni.showLoading({})
@@ -274,9 +267,11 @@
           console.log('shoplist',res);
           if(res.code == 200){
             this.shopList = res.data
+            let currTime = new Date()
             res.data.forEach(i => {
               i.image = i.imgs.split(",")[0]
-              if(!this.compareTime(i.cancelTime)){
+              i.cancelTime = this.formatDateTime(i.cancelTime)
+              if(!this.compareTime(i.cancelTime,currTime)){
                  i.statusText = '已发布'
                  i.statusTag = 'primary'
               }else{
@@ -444,7 +439,7 @@
           }
         }).then(res => {
           this.isLoading = false
-          console.log(res);
+          console.log('获取用户 拼车订单',res);
           if (res.code != 200) {
             this.$refs.message.show({
               type: 'error',
@@ -453,7 +448,11 @@
             return
           }
           this.orderList = res.data
+          let currTime = new Date().getTime()
           this.orderList.forEach(item => {
+            item.createat = this.formatDateTime(item.createat)
+            item.startdatetime = this.formatDateTime(item.startdatetime)
+            this.updateCarOrderStatus(currTime,item)
             if (item.status == 3) {
               item.statusText = '已过期'
               item.statusTag = 'info'
@@ -529,6 +528,9 @@
     .right{
       flex: 1;
       margin-left: 20rpx;
+      .subhead{
+        margin-top: 15rpx ;
+      }
       .my-targ{
         position: absolute;
         right: 30rpx;

@@ -23,6 +23,18 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.myfanxiao {
+  -webkit-tap-highlight-color: transparent;
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 25rpx;
+  right: 90rpx;
+}
+.myfanxiao image {
+  width: 100%;
+  height: 100%;
+}
 .mymore {
   -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none;

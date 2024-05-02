@@ -5,57 +5,6 @@ import {
 
 
 class aes {
-  testImport() {
-    console.log('aes对象导入成功');
-  }
-
- // decrypt(encryptedData) {
- //     // 分离 IV 和加密数据
- //     const parts = encryptedData.split('|');
- //     const iv = CryptoJS.enc.Utf8.parse(parts[0]);
- 
- //     const keyBytes = CryptoJS.enc.Utf8.parse('sZi8knPmD0BmXth3Ds48zSwBRs6Ow993');
- 
- //     // 解密数据
- //     const decryptedData = CryptoJS.AES.decrypt({
- //         ciphertext: CryptoJS.enc.Base64.parse(parts[1]) // 修正此处，使用实际的密文
- //       },
- //       keyBytes, {
- //         iv: iv,
- //         mode: CryptoJS.mode.CBC,
- //         padding: CryptoJS.pad.Pkcs7
- //       }
- //     );
- 
- //     // 将解密后的数据转换为明文
- //     const decryptedText = decryptedData.toString(CryptoJS.enc.Utf8);
- //     console.log('AES解密结果', decryptedText);
- // }
- 
- // encrypt(data) {
- //     // 将数据转成json
- //     let temp = JSON.stringify(data);
- //     const dataString = CryptoJS.enc.Utf8.parse(temp);
- 
- //     // 随机向量iv
- //     const iv = CryptoJS.lib.WordArray.random(16); // 使用随机生成的 IV
- 
- //     // 密钥
- //     const keyBytes = CryptoJS.enc.Utf8.parse('sZi8knPmD0BmXth3Ds48zSwBRs6Ow993');
- 
- //     // 加密
- //     const encryptDate = CryptoJS.AES.encrypt(dataString, keyBytes, {
- //       iv: iv,
- //       mode: CryptoJS.mode.CBC,
- //       padding: CryptoJS.pad.Pkcs7
- //     });
- 
- //     // 拼接 IV 和密文
- //     const encryptedString = CryptoJS.enc.Base64.stringify(iv) + '|' + encryptDate.toString();
- //     return encryptedString;
- // }
-
-  
   decrypt(encryptedData) {
       // 分离 IV 和加密数据
       const parts = encryptedData.split('|');
@@ -76,7 +25,8 @@ class aes {
   
       // 将解密后的数据转换为明文
       const decryptedText = decryptedData.toString(CryptoJS.enc.Utf8);
-      return JSON.parse(decryptedText)
+      let result = JSON.parse(decryptedText)
+      return result
   }
   
   // 这个加密方法不可用  
@@ -112,12 +62,6 @@ class aes {
       // 拼接 IV 和密文
       const encryptedString = CryptoJS.enc.Base64.stringify(iv) + '|' + encryptDate.toString();
       return encryptedString;
-  }
-
-
-  generateRandomHex() {
-    // 生成一个随机的十六进制数，然后将其转换为字符串并返回
-    return Math.floor(Math.random() * 0xFFFFFFFFFFFFF).toString(16).padStart(16, '0');
   }
 
 }

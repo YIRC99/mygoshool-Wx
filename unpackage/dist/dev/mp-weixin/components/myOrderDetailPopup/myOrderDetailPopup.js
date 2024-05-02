@@ -107,7 +107,6 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  var f0 = _vm._f("fromStartDateTime")(_vm.currentOrder.startdatetime)
   var m0 =
     _vm.currentOrder.isbefore == 1
       ? _vm.hoursTominute(_vm.currentOrder.beforetime)
@@ -120,7 +119,6 @@ var render = function () {
     {},
     {
       $root: {
-        f0: f0,
         m0: m0,
         m1: m1,
       },

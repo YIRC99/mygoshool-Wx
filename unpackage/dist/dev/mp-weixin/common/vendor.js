@@ -9646,57 +9646,6 @@ var aes = /*#__PURE__*/function () {
     (0, _classCallCheck2.default)(this, aes);
   }
   (0, _createClass2.default)(aes, [{
-    key: "testImport",
-    value: function testImport() {
-      console.log('aes对象导入成功');
-    }
-
-    // decrypt(encryptedData) {
-    //     // 分离 IV 和加密数据
-    //     const parts = encryptedData.split('|');
-    //     const iv = CryptoJS.enc.Utf8.parse(parts[0]);
-
-    //     const keyBytes = CryptoJS.enc.Utf8.parse('sZi8knPmD0BmXth3Ds48zSwBRs6Ow993');
-
-    //     // 解密数据
-    //     const decryptedData = CryptoJS.AES.decrypt({
-    //         ciphertext: CryptoJS.enc.Base64.parse(parts[1]) // 修正此处，使用实际的密文
-    //       },
-    //       keyBytes, {
-    //         iv: iv,
-    //         mode: CryptoJS.mode.CBC,
-    //         padding: CryptoJS.pad.Pkcs7
-    //       }
-    //     );
-
-    //     // 将解密后的数据转换为明文
-    //     const decryptedText = decryptedData.toString(CryptoJS.enc.Utf8);
-    //     console.log('AES解密结果', decryptedText);
-    // }
-
-    // encrypt(data) {
-    //     // 将数据转成json
-    //     let temp = JSON.stringify(data);
-    //     const dataString = CryptoJS.enc.Utf8.parse(temp);
-
-    //     // 随机向量iv
-    //     const iv = CryptoJS.lib.WordArray.random(16); // 使用随机生成的 IV
-
-    //     // 密钥
-    //     const keyBytes = CryptoJS.enc.Utf8.parse('sZi8knPmD0BmXth3Ds48zSwBRs6Ow993');
-
-    //     // 加密
-    //     const encryptDate = CryptoJS.AES.encrypt(dataString, keyBytes, {
-    //       iv: iv,
-    //       mode: CryptoJS.mode.CBC,
-    //       padding: CryptoJS.pad.Pkcs7
-    //     });
-
-    //     // 拼接 IV 和密文
-    //     const encryptedString = CryptoJS.enc.Base64.stringify(iv) + '|' + encryptDate.toString();
-    //     return encryptedString;
-    // }
-  }, {
     key: "decrypt",
     value: function decrypt(encryptedData) {
       // 分离 IV 和加密数据
@@ -9716,8 +9665,11 @@ var aes = /*#__PURE__*/function () {
 
       // 将解密后的数据转换为明文
       var decryptedText = decryptedData.toString(_cryptoJs.default.enc.Utf8);
-      return JSON.parse(decryptedText);
+      var result = JSON.parse(decryptedText);
+      return result;
     }
+
+    // 这个加密方法不可用  
   }, {
     key: "encrypt",
     value: function encrypt(data) {
@@ -9750,12 +9702,6 @@ var aes = /*#__PURE__*/function () {
       // 拼接 IV 和密文
       var encryptedString = _cryptoJs.default.enc.Base64.stringify(iv) + '|' + encryptDate.toString();
       return encryptedString;
-    }
-  }, {
-    key: "generateRandomHex",
-    value: function generateRandomHex() {
-      // 生成一个随机的十六进制数，然后将其转换为字符串并返回
-      return Math.floor(Math.random() * 0xFFFFFFFFFFFFF).toString(16).padStart(16, '0');
     }
   }]);
   return aes;
@@ -22271,10 +22217,12 @@ uni.addInterceptor({
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {
 
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
 var mixin = {
   data: function data() {
     return {
@@ -22287,6 +22235,56 @@ var mixin = {
     };
   },
   methods: {
+    // 请求返回code值统一处理方法  值处理错误请求 正确不处理
+    returnCodeHandle: function returnCodeHandle(code) {
+      if (code == 200) return true;
+      if (code == 403) {
+        this.$refs.message.show({
+          type: 'error',
+          msg: '请登录后重试'
+        });
+        return false;
+      }
+    },
+    compareTime: function compareTime(cancelTime, curr) {
+      var cancel = new Date(cancelTime);
+      if (cancel.getTime() > curr.getTime()) return false;else return true;
+    },
+    formatDateTime: function formatDateTime(arr) {
+      // 检查数组长度是否为 5 或 6
+      if (arr.length !== 5 && arr.length !== 6) {
+        return 'Invalid input array length.';
+      }
+      // 解构数组元素，分别对应年、月、日、时、分、秒
+      var _arr = (0, _slicedToArray2.default)(arr, 6),
+        year = _arr[0],
+        month = _arr[1],
+        day = _arr[2],
+        hour = _arr[3],
+        minute = _arr[4],
+        _arr$ = _arr[5],
+        second = _arr$ === void 0 ? '0' : _arr$;
+      // 使用三元运算符处理月、日、时、分的个位数，保证输出格式为两位数
+      var formattedMonth = month < 10 ? '0' + month : month;
+      var formattedDay = day < 10 ? '0' + day : day;
+      var formattedHour = hour < 10 ? '0' + hour : hour;
+      var formattedMinute = minute < 10 ? '0' + minute : minute;
+      var formattedSecond = second < 10 ? '0' + second : second;
+
+      // 构建时间字符串
+      var formattedDateTime = "".concat(year, "-").concat(formattedMonth, "-").concat(formattedDay, " ").concat(formattedHour, ":").concat(formattedMinute, ":").concat(formattedSecond);
+      return formattedDateTime;
+    },
+    // 处理拼车是不是过期状态
+    updateCarOrderStatus: function updateCarOrderStatus(currTime, order) {
+      // 格式化时间
+      var startTime = new Date(order.startdatetime);
+
+      // 如果当前时间大于出发时间 那么就是过期了 那么修改status为3 否则不管
+      if (currTime >= startTime.getTime()) {
+        order.status = 3;
+      }
+    },
     // 获取该时刻对应的毫秒级时间戳
     getYearLastMillisecondTimestamp: function getYearLastMillisecondTimestamp() {
       var now = new Date();
@@ -22298,6 +22296,7 @@ var mixin = {
       console.log('muminxin', this.avahttp);
       console.log('muminxin', this.QRttp);
     },
+    // 刷新本地存储的微信图片
     refreshLocalWxImg: function refreshLocalWxImg(img) {
       if (img == null || img == undefined) return;
       var user = uni.getStorageSync('user');

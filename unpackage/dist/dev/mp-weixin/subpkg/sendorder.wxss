@@ -45,6 +45,9 @@
   flex: 1;
   margin-left: 20rpx;
 }
+.shopItem .right .subhead {
+  margin-top: 15rpx;
+}
 .shopItem .right .my-targ {
   position: absolute;
   right: 30rpx;

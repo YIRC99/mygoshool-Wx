@@ -261,6 +261,12 @@ var _default = {
     }
   },
   methods: {
+    notlogin: function notlogin() {
+      this.$refs.message.show({
+        type: 'error',
+        msg: '请登录重试吧'
+      });
+    },
     recoverPlaceholder: function recoverPlaceholder() {
       this.myplaceholder = '搜索';
     },
@@ -274,15 +280,7 @@ var _default = {
       });
       return arr;
     },
-    ToShopDetail: function ToShopDetail(item) {
-      uni.setStorageSync('shopdetail', item);
-      uni.navigateTo({
-        url: '/subpkg/shopDetail'
-      });
-    },
     myScroll: function myScroll(e) {
-      // console.log('old  ',this.myOldScrollPosition);
-      // console.log('new   ',this.myScrollPosition);
       this.myOldScrollPosition = e.detail.scrollTop;
     },
     toTop: function toTop() {
@@ -317,15 +315,11 @@ var _default = {
           addressCodeArr: this.chooseAddArr()
         }
       }).then(function (res) {
-        console.log('商品请求返回值', res);
+        console.log('商品请求返回', res);
         console.log('商品请求返回值', res.data);
-        if (res.code != 200) {
+        if (!_this2.returnCodeHandle(res.code)) {
           _this2.isRefresh = false;
           _this2.isShowListloading = false;
-          _this2.$refs.message.show({
-            type: 'error',
-            msg: '网络开了点小差,请稍候重试吧'
-          });
           return;
         }
         _this2.pagetotal = res.data.total;

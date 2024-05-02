@@ -3,10 +3,10 @@ import MyAES from '@/aes/aes'
 import CryptoJS from 'crypto-js';
 
 
-// const http = 'http://192.168.73.210:33088/' //手机热点
+const http = 'http://192.168.159.210:33088/' //手机热点
 // const http = 'https://yirc99.cn/api/' //服务器
 // const http = 'http://192.168.2.177:33088/' //酒店
-const http = 'http://10.16.60.53:33088/' //305wifi
+// const http = 'http://10.16.60.53:33088/' //305wifi
 // const http = 'http://192.168.2.196:33088/' //宿舍wifi
 
 const myOutTime = 5000
@@ -23,21 +23,17 @@ Vue.prototype.subYear = (str) => {
     if (!str || typeof str !== 'string') {
         return "";
     }
-    const regex = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})$/;
+    const regex = /^(\d{4})-(\d{2})-(\d{2})\s(\d{2}):(\d{2}):(\d{2})$/;
     const match = str.match(regex);
     if (!match) {
         return "";
     }
-    const year = match[1];
-    const month = match[2].padStart(2, '0');
-    const day = match[3].padStart(2, '0');
-    const hour = match[4].padStart(2, '0');
-    const minute = match[5].padStart(2, '0');
+    const month = match[2];
+    const day = match[3];
+    const hour = match[4];
+    const minute = match[5];
     return `${month}-${day} ${hour}:${minute}`;
 };
-
-
-
 
 Vue.prototype.get =(opt) =>{
 	 return new Promise((a,b)=>{
@@ -45,8 +41,7 @@ Vue.prototype.get =(opt) =>{
 			url: http + opt.url,
 			method: 'GET',
 			header:{
-				// authorization : uni.getStorageSync("token")
-				authorization : 'mytoken'
+				authorization : uni.getStorageSync("token")
 			},
       timeout:myOutTime,
 			data: opt.data,
@@ -68,8 +63,7 @@ Vue.prototype.put =(opt) =>{
 			url: http + opt.url,
 			method: 'PUT',
 			header:{
-				// authorization: uni.getStorageSync("token")
-				authorization : 'mytoken'
+				authorization: uni.getStorageSync("token")
 			},
       timeout:myOutTime,
 			data: opt.data,
@@ -92,8 +86,7 @@ Vue.prototype.post =(opt) =>{
 			url: http + opt.url,
 			method: 'POST',
 			header:{
-				// authorization :uni.getStorageSync("token")
-				authorization : 'mytoken'
+				authorization :uni.getStorageSync("token")
 			},
       timeout: myOutTime,
 			data: opt.data,
@@ -110,8 +103,30 @@ Vue.prototype.post =(opt) =>{
 	})
 }
 
+Vue.filter('fromLocalDateTime',(arr) =>{
+  if(arr == undefined) return ''
+  
+  // 解构数组元素，分别对应年、月、日、时、分、秒
+  const [year, month, day, hour, minute, second = '0'] = arr;
+  // 使用三元运算符处理月、日、时、分的个位数，保证输出格式为两位数
+  const formattedMonth = month < 10 ? '0' + month : month;
+  const formattedDay = day < 10 ? '0' + day : day;
+  const formattedHour = hour < 10 ? '0' + hour : hour;
+  const formattedMinute = minute < 10 ? '0' + minute : minute;
+  const formattedSecond = second < 10 ? '0' + second : second;
+  // 构建时间字符串
+  const formattedDateTime = `${year}-${formattedMonth}-${formattedDay} ${formattedHour}:${formattedMinute}:${formattedSecond}`;
+   return formattedDateTime;
+   
+  // if(arr.length <= 5)return arr[0]+'-'+arr[1]+'-'+arr[2]+' '+arr[3]+':'+arr[4]
+  // else return arr[0]+'-'+arr[1]+'-'+arr[2]+' '+arr[3]+':'+arr[4]+':'+arr[5]
+  
+})
+// 格式化组件中选着的时间格式
 Vue.filter('fromStartDateTime', (value) => {
   if(value == undefined) return ''
+  //2024-04-30 22:40:01
+  if(value.indexOf('T') == -1) return value
   const startDateTime = value;
   const indexT = startDateTime.indexOf('T');
   const indexColon = startDateTime.lastIndexOf(':');

@@ -1,15 +1,16 @@
 <template>
-  <view>
+  <view >
 
-    <scroll-view scroll-y="true" style="height: 95vh; background-color: #f7f7f7;" :refresher-triggered="isRefresh"
-      @scrolltolower="scrollDown" :scroll-top="myScrollPosition" scroll-with-animation @scroll="myScroll">
+    <scroll-view scroll-y="true" style="height: 100vh; background-color: #f7f7f7; " :refresher-triggered="isRefresh"
+      @scrolltolower="" :scroll-top="myScrollPosition" scroll-with-animation @scroll="myScroll">
       <view class="">
-
 
         <myShopWaterfall :list="list" emptyTest="没有查询到相关的物品哦~ <br>换一个关键词试试吧"></myShopWaterfall>
 
       </view>
     </scroll-view>
+    
+    
 
     <view class="totopBut" v-show="isShowToTop" @click="toTop">
       <image src="/static/toTop.png" mode=""></image>

@@ -20,11 +20,8 @@
       <view class="middle-box">
         <uv-tabs :list="list" :lineWidth="40" :lineHeight="6" :scrollable="false" @click="change"></uv-tabs>
         <view class="middle-list" v-show="currentIndex == 0">
-          <view class="" v-if="appriseList.length == 0" style="display: flex;flex-direction: column;
-          justify-content: center; width: 100vw; align-items: center;">
-            <image src="../static/appriseEmpty.png" mode="heightFix"></image>
-            <view class="" style="font-size: 40rpx; color: #A9a9a9;">暂时没有拼车订单 快快发布一个吧</view>
-          </view>
+          <myEmppty :isShow="appriseList.length == 0" Text="暂时没有评价"></myEmppty>
+          
           <uv-list>
             <uv-list-item direction="column" v-for="(item,index) in appriseList" :key="index">
               <view class="uv-line-3 item-title" slot="header">
@@ -36,22 +33,22 @@
               </view>
             </uv-list-item>
           </uv-list>
-
-
         </view>
+        
         <view class="middle-list" v-show="currentIndex == 1">
-          <myEmppty :isShow="orderList.length == 0" Text="订单为空"></myEmppty>
+          
+          <myEmppty :isShow="orderList.length == 0" Text="拼车为空"></myEmppty>
           <myCarOrder :orderList="orderList" @clickOrderItem="clickCard" :avaImgPath="info.avatar"></myCarOrder>
-
-
         </view>
+        
         <view class="middle-list" v-show="currentIndex == 2">
-          <myEmppty :isShow="shopList.length == 0" Text="订单为空"></myEmppty>
           <myShopWaterfall :list="shopList" :isToUserInfo="false"></myShopWaterfall>
         </view>
+        
         <view class="middle-list" v-show="currentIndex == 3">
-          <myEmppty :isShow="true" Text="订单为空"></myEmppty>
+          <myEmppty :isShow="true" Text="帖子为空"></myEmppty>
         </view>
+        
       </view>
     </view>
 
@@ -295,7 +292,7 @@
           this.appriseList = res.data
           this.list[0].badge.value = res.data.length
           this.appriseList.forEach(item => {
-            item.createat = item.createat.split('T')[0] + ' ' + item.createat.split('T')[1]
+            item.createat = this.formatDateTime(item.createat)
             if (item.type = 1)
               item.typeText = '拼车'
             else if (item.type == 2)

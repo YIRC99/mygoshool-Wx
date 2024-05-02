@@ -12,6 +12,7 @@
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
 __webpack_require__(/*! uni-pages */ 26);
 var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ 27));
 var _aes = _interopRequireDefault(__webpack_require__(/*! @/aes/aes */ 33));
@@ -23,10 +24,10 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 // @ts-ignore
 wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
-// const http = 'http://192.168.73.210:33088/' //手机热点
+var http = 'http://192.168.159.210:33088/'; //手机热点
 // const http = 'https://yirc99.cn/api/' //服务器
 // const http = 'http://192.168.2.177:33088/' //酒店
-var http = 'http://10.16.60.53:33088/'; //305wifi
+// const http = 'http://10.16.60.53:33088/' //305wifi
 // const http = 'http://192.168.2.196:33088/' //宿舍wifi
 
 var myOutTime = 5000;
@@ -43,16 +44,15 @@ _vue.default.prototype.subYear = function (str) {
   if (!str || typeof str !== 'string') {
     return "";
   }
-  var regex = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})$/;
+  var regex = /^(\d{4})-(\d{2})-(\d{2})\s(\d{2}):(\d{2}):(\d{2})$/;
   var match = str.match(regex);
   if (!match) {
     return "";
   }
-  var year = match[1];
-  var month = match[2].padStart(2, '0');
-  var day = match[3].padStart(2, '0');
-  var hour = match[4].padStart(2, '0');
-  var minute = match[5].padStart(2, '0');
+  var month = match[2];
+  var day = match[3];
+  var hour = match[4];
+  var minute = match[5];
   return "".concat(month, "-").concat(day, " ").concat(hour, ":").concat(minute);
 };
 _vue.default.prototype.get = function (opt) {
@@ -61,8 +61,7 @@ _vue.default.prototype.get = function (opt) {
       url: http + opt.url,
       method: 'GET',
       header: {
-        // authorization : uni.getStorageSync("token")
-        authorization: 'mytoken'
+        authorization: uni.getStorageSync("token")
       },
       timeout: myOutTime,
       data: opt.data,
@@ -84,8 +83,7 @@ _vue.default.prototype.put = function (opt) {
       url: http + opt.url,
       method: 'PUT',
       header: {
-        // authorization: uni.getStorageSync("token")
-        authorization: 'mytoken'
+        authorization: uni.getStorageSync("token")
       },
       timeout: myOutTime,
       data: opt.data,
@@ -107,8 +105,7 @@ _vue.default.prototype.post = function (opt) {
       url: http + opt.url,
       method: 'POST',
       header: {
-        // authorization :uni.getStorageSync("token")
-        authorization: 'mytoken'
+        authorization: uni.getStorageSync("token")
       },
       timeout: myOutTime,
       data: opt.data,
@@ -124,8 +121,36 @@ _vue.default.prototype.post = function (opt) {
     });
   });
 };
+_vue.default.filter('fromLocalDateTime', function (arr) {
+  if (arr == undefined) return '';
+
+  // 解构数组元素，分别对应年、月、日、时、分、秒
+  var _arr = (0, _slicedToArray2.default)(arr, 6),
+    year = _arr[0],
+    month = _arr[1],
+    day = _arr[2],
+    hour = _arr[3],
+    minute = _arr[4],
+    _arr$ = _arr[5],
+    second = _arr$ === void 0 ? '0' : _arr$;
+  // 使用三元运算符处理月、日、时、分的个位数，保证输出格式为两位数
+  var formattedMonth = month < 10 ? '0' + month : month;
+  var formattedDay = day < 10 ? '0' + day : day;
+  var formattedHour = hour < 10 ? '0' + hour : hour;
+  var formattedMinute = minute < 10 ? '0' + minute : minute;
+  var formattedSecond = second < 10 ? '0' + second : second;
+  // 构建时间字符串
+  var formattedDateTime = "".concat(year, "-").concat(formattedMonth, "-").concat(formattedDay, " ").concat(formattedHour, ":").concat(formattedMinute, ":").concat(formattedSecond);
+  return formattedDateTime;
+
+  // if(arr.length <= 5)return arr[0]+'-'+arr[1]+'-'+arr[2]+' '+arr[3]+':'+arr[4]
+  // else return arr[0]+'-'+arr[1]+'-'+arr[2]+' '+arr[3]+':'+arr[4]+':'+arr[5]
+});
+// 格式化组件中选着的时间格式
 _vue.default.filter('fromStartDateTime', function (value) {
   if (value == undefined) return '';
+  //2024-04-30 22:40:01
+  if (value.indexOf('T') == -1) return value;
   var startDateTime = value;
   var indexT = startDateTime.indexOf('T');
   var indexColon = startDateTime.lastIndexOf(':');

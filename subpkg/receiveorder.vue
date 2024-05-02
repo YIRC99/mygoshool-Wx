@@ -64,7 +64,7 @@
           <view class="my-middle-box">
             <uni-section title="出发地点" type="line" titleFontSize="36rpx">
               <template v-slot:right v-if="currentOrder.startdatetime != ''">
-                出发时间 {{currentOrder.startdatetime | fromStartDateTime}}
+                出发时间 {{currentOrder.startdatetime | fromLocalDateTime}}
               </template>
             </uni-section>
             <view class="my-text-box">
@@ -179,6 +179,8 @@
           }
           this.orderList = res.data
           this.orderList.forEach(item => {
+            item.createat = this.formatDateTime(item.createat)
+            item.startdatetime = this.formatDateTime(item.startdatetime)
             //订单状态 0已发布  1已接收  2已完成 3已过期
             if (item.receiveUserAppriseId == null) {
               item.statusText = '已接收'

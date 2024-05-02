@@ -103,6 +103,9 @@ try {
     uniCard: function () {
       return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 387))
     },
+    quickMessage: function () {
+      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 237))
+    },
     zeroLoading: function () {
       return __webpack_require__.e(/*! import() | uni_modules/zero-loading/components/zero-loading/zero-loading */ "uni_modules/zero-loading/components/zero-loading/zero-loading").then(__webpack_require__.bind(null, /*! @/uni_modules/zero-loading/components/zero-loading/zero-loading.vue */ 266))
     },
@@ -265,13 +268,13 @@ var _default = {
         if (timer - new Date().getTime() < 500) {
           setTimeout(function () {
             _this.isLoading = false;
-            if (res.code == 200) {
-              _this.showWxImg = true;
+            console.log(res);
+            if (!_this.returnCodeHandle(res.code)) {
+              _this.isRefresh = false;
+              _this.isShowListloading = false;
+              return;
             } else {
-              _this.$refs.message.show({
-                type: 'error',
-                msg: '商品不存在或已删除'
-              });
+              _this.showWxImg = true;
             }
           }, 500);
         } else {

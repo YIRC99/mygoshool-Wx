@@ -45,7 +45,7 @@
       </view>
     </uni-card>
     
-    
+     <quick-message ref="message"></quick-message>
 <zero-loading v-if="isLoading" type="circle" :mask="true" maskOpacity="0.1"></zero-loading>
   </view>
 </template>
@@ -96,14 +96,15 @@ import { date } from '../uni_modules/uv-ui-tools/libs/function/test'
           if(timer - new Date().getTime() < 500){
             setTimeout(() => {
               this.isLoading = false
-              if(res.code ==200){
-                this.showWxImg = true
+              console.log(res);
+              if (!this.returnCodeHandle(res.code)) {
+                this.isRefresh = false
+                this.isShowListloading = false
+                return
               }else{
-                this.$refs.message.show({
-                  type: 'error',
-                  msg: '商品不存在或已删除',
-                })
+                this.showWxImg = true
               }
+            
             },500)
           }else{
             this.isLoading = false

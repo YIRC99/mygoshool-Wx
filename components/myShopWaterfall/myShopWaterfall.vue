@@ -63,8 +63,8 @@
         </view>
       </template>
     </uv-waterfall>
-
-
+    <view class="" style="height: 50rpx;width: 100%; "></view>
+ <quick-message ref="message"></quick-message>
   </view>
 </template>
 
@@ -117,6 +117,11 @@
         })
       },
       ToShopDetail(item) {
+        let token = uni.getStorageSync('token')
+        if(token == null || token == '' || token == undefined){
+          this.$emit('notLoign')
+          return
+        }
         uni.setStorageSync('isToUserInfo',this.isToUserInfo)
         uni.setStorageSync('shopdetail', item)
         uni.navigateTo({

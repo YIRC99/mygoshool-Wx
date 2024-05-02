@@ -171,15 +171,15 @@
               user: 'test'
             },
             header:{
-              'Authorization' : 'test-token',
+              'Authorization': uni.getStorageSync("token"),
                'UserId': uni.getStorageSync("user").openid,
             },
             timeout: this.TimeOut,
             success: (res) => {
-              console.log('测试 header ');
               console.log('上传成功1111', res.statusCode);
               let img = JSON.parse(res.data).data
-              this.fileList1[0].resWximg = img
+              
+              this.fileList1[0].resWximg = this.MyAES.decrypt(img)
               this.showBefor = false
               resolve(200)
             },

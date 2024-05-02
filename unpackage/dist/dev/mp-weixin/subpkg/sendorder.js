@@ -162,14 +162,13 @@ var render = function () {
   var l1 = _vm.__map(_vm.shopList, function (item, index) {
     var $orig = _vm.__get_orig(item)
     var f0 = _vm._f("formHtmlStr")(item.detail)
-    var f1 = _vm._f("fromStartDateTime")(item.createAt)
+    var f1 = _vm._f("fromLocalDateTime")(item.createAt)
     return {
       $orig: $orig,
       f0: f0,
       f1: f1,
     }
   })
-  var f2 = _vm._f("fromStartDateTime")(_vm.currentOrder.startdatetime)
   var m1 =
     _vm.currentOrder != null && _vm.currentOrder.isbefore == 1
       ? _vm.hoursTominute(_vm.currentOrder.beforetime)
@@ -186,7 +185,6 @@ var render = function () {
         l0: l0,
         g1: g1,
         l1: l1,
-        f2: f2,
         m1: m1,
         m2: m2,
       },
@@ -422,11 +420,6 @@ var _default = {
     };
   },
   methods: {
-    compareTime: function compareTime(cancelTime) {
-      var cancel = new Date(cancelTime);
-      var curr = new Date();
-      if (cancel.getTime() > curr.getTime()) return false;else return true;
-    },
     deleteShopRequest: function deleteShopRequest() {
       var _this = this;
       this.isLoading = true;
@@ -505,9 +498,11 @@ var _default = {
         console.log('shoplist', res);
         if (res.code == 200) {
           _this3.shopList = res.data;
+          var currTime = new Date();
           res.data.forEach(function (i) {
             i.image = i.imgs.split(",")[0];
-            if (!_this3.compareTime(i.cancelTime)) {
+            i.cancelTime = _this3.formatDateTime(i.cancelTime);
+            if (!_this3.compareTime(i.cancelTime, currTime)) {
               i.statusText = '已发布';
               i.statusTag = 'primary';
             } else {
@@ -671,7 +666,7 @@ var _default = {
         }
       }).then(function (res) {
         _this7.isLoading = false;
-        console.log(res);
+        console.log('获取用户 拼车订单', res);
         if (res.code != 200) {
           _this7.$refs.message.show({
             type: 'error',
@@ -680,7 +675,11 @@ var _default = {
           return;
         }
         _this7.orderList = res.data;
+        var currTime = new Date().getTime();
         _this7.orderList.forEach(function (item) {
+          item.createat = _this7.formatDateTime(item.createat);
+          item.startdatetime = _this7.formatDateTime(item.startdatetime);
+          _this7.updateCarOrderStatus(currTime, item);
           if (item.status == 3) {
             item.statusText = '已过期';
             item.statusTag = 'info';

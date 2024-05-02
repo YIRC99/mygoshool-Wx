@@ -88,6 +88,9 @@ try {
     rudonRowMenuDotDotDot: function () {
       return Promise.all(/*! import() | uni_modules/rudon-rowMenuDotDotDot/components/rudon-rowMenuDotDotDot/rudon-rowMenuDotDotDot */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/rudon-rowMenuDotDotDot/components/rudon-rowMenuDotDotDot/rudon-rowMenuDotDotDot")]).then(__webpack_require__.bind(null, /*! @/uni_modules/rudon-rowMenuDotDotDot/components/rudon-rowMenuDotDotDot/rudon-rowMenuDotDotDot.vue */ 530))
     },
+    quickMessage: function () {
+      return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 237))
+    },
   }
 } catch (e) {
   if (
@@ -297,6 +300,11 @@ var _default = {
       });
     },
     ToShopDetail: function ToShopDetail(item) {
+      var token = uni.getStorageSync('token');
+      if (token == null || token == '' || token == undefined) {
+        this.$emit('notLoign');
+        return;
+      }
       uni.setStorageSync('isToUserInfo', this.isToUserInfo);
       uni.setStorageSync('shopdetail', item);
       uni.navigateTo({
