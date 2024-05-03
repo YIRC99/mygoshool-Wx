@@ -58,10 +58,10 @@
       
     </view>
 
-    <uv-popup ref="popup" mode="bottom" round="50rpx" @maskClick="closePopup">
-      <view class="popup-box"
+    <uv-popup ref="popup" mode="bottom" round="50rpx"  @maskClick="closePopup">
+      <view class="popup-box" 
         :style="(currentOrder.status == 0 || currentOrder.status == 3) == true ? 'height: 50vh' : ''">
-        <scroll-view scroll-y="true" style="height: 62vh; background-color: #ffffff;" show-scrollbar="true">
+        <scroll-view scroll-y="true" style="height: 62vh; background-color: #ffffff; "  show-scrollbar="true">
           <uni-card isShadow v-if="currentOrder.status != 0 && currentOrder.status != 3" @click="clickReceiveCard">
             <view class="my-tag">
               <text>对方信息</text>
@@ -479,7 +479,6 @@
       },
       clickCard(order) {
         this.currentOrder = order
-        console.log('点击了卡片', this.currentOrder);
         this.$refs.popup.open()
         this.popupShow = true
       },
@@ -498,6 +497,18 @@
       console.log(this.userinfo);
       this.getUserOrder()
       this.getUserShop()
+    },
+    onShow() {
+      console.log('发布页面 onshow ');
+      uni.$once('refreshSendPage',() => {
+        console.log('成功 监听到页面刷新');
+        this.getUserOrder()
+        this.getUserShop()
+      })
+    },
+    destroyed() {
+      console.log('监听页面销毁');
+      this.$off('refreshSendPage')
     }
   }
 </script>
@@ -730,11 +741,11 @@
     padding: 50rpx 0;
     display: flex;
     flex-direction: column;
+   
 
     .my-middle-box {
       width: 100%;
       border-radius: 0;
-
       .my-text-box {
         background-color: #ffffff;
         font-size: 30rpx;

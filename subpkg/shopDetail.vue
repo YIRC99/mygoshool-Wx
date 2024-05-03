@@ -40,7 +40,7 @@
           <view class="" style="margin-right: 20rpx;">长按微信二维码添加好友</view>
         </view>
         <view class="" @click="viewWximg">
-          <image show-menu-by-longpress :src="avahttp + shop.wechatimg" style="width: 100rpx; height: 100rpx;"></image>
+          <image show-menu-by-longpress :src="QRttp + shop.wechatimg" style="width: 100rpx; height: 100rpx;"></image>
         </view>
       </view>
     </uni-card>
@@ -81,7 +81,7 @@ import { date } from '../uni_modules/uv-ui-tools/libs/function/test'
       },
       viewWximg(){
         uni.previewImage({
-          urls: [this.shophttp + this.shop.wechatimg]
+          urls: [this.QRttp + this.shop.wechatimg]
         })
       },
       clickWxImg(){

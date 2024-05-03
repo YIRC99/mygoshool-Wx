@@ -96,6 +96,14 @@
       }
     },
     methods: {
+      myonhide(){
+       uni.$off('refreshTransactionPage')
+      },
+      myonshow(){
+        uni.$once('refreshTransactionPage',() =>{
+          this.scrollPullDown()
+        })
+      },
       recoverPlaceholder(){
         this.myplaceholder = '搜索'
       },

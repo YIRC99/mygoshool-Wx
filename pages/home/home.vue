@@ -154,7 +154,9 @@
     },
     mixins: [mixin],
     methods: {
-
+      myonhide(){
+        uni.$off('refreshHomePage')
+      },
       myPopupShow(e){
         this.popupShow = e
       },
@@ -422,11 +424,9 @@
         }
       },
       myonshow() {
-        uni.$once('addUpdate', () => {
-          // console.log('监听到了 添加之后 返回页面');
+        uni.$once('refreshHomePage', () => {
           this.scrollPullDown()
         })
-        // console.log('拼车页面的myonshow方法触发了');
         this.simulateSwipeDown()
       },
       simulateSwipeDown() {

@@ -225,7 +225,7 @@
           })
           this.refreshLocalWxImg(this.fileList1[0].resWximg)
           setTimeout(() => {
-            uni.$emit('addUpdate')
+            uni.$emit('refreshHomePage')
             uni.navigateBack()
           }, 500)
         
@@ -537,11 +537,11 @@
           this.$refs.afterDatetimePicker.open();
       },
       tiqianChange(e) {
-        console.log("能否接受提前出发：", e);
+        // console.log("能否接受提前出发：", e);
         this.isBefore = e
       },
       yanhoChange(e) {
-        console.log("能否接受延后出发：", e);
+        // console.log("能否接受延后出发：", e);
         this.isAfter = e
       }
     }

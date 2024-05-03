@@ -106,6 +106,7 @@
         })
         this.isUpdate = true
         let data = uni.getStorageSync('updateShop')
+        data.createAt = this.formatDateTime(data.createAt)
         this.updateId = data.id
         this.shopDetailText = data.detail.replace(/<br\s*\/?>/gi, "\n")
         this.shopPrice = data.price
@@ -136,6 +137,8 @@
     },
     methods: {
       differenceTime(timeString1, timeString2) {
+        console.log('将传入的时间字符串转换为 Date 对象11',timeString1);
+        console.log('将传入的时间字符串转换为 Date 对象22',timeString2);
         // 将传入的时间字符串转换为 Date 对象
         var date1 = new Date(timeString1);
         var date2 = new Date(timeString2);
@@ -216,6 +219,11 @@
           this.refreshLocalWxImg(this.wxFile[0].resWximg)
 
           setTimeout(() => {
+            if(this.isUpdate){
+              uni.$emit('refreshSendPage')
+            }else{
+              uni.$emit('refreshTransactionPage')
+            }
             uni.navigateBack()
           }, 1500)
 
@@ -232,7 +240,6 @@
       },
       wxUpload(e) {
         this.wxFile = e
-        console.log('微信上传组件的回调this.wxFile', this.wxFile);
       },
       modalConfirm() {
         this.isFree = true

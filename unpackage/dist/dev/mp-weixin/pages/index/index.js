@@ -34,7 +34,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&lang=js& */ 111);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 /* harmony import */ var _index_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.vue?vue&type=style&index=0&lang=scss& */ 140);
-/* harmony import */ var _HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 32);
+/* harmony import */ var _HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 35);
 
 var renderjs
 
@@ -267,6 +267,7 @@ var _default = {
       console.log('处理用户同意隐私协议的逻辑');
     },
     onTab: function onTab(index, item) {
+      this.myHide(this.tabIndex, index);
       this.tabIndex = index;
       if (index == 2) {
         uni.setNavigationBarTitle({
@@ -282,12 +283,20 @@ var _default = {
         uni.setNavigationBarTitle({
           title: '闲置交易'
         });
+        this.$refs.transactionpage.myonshow();
       }
+    },
+    myHide: function myHide(tabIndex, index) {
+      // 页面上的hide方法就在这里定义
+      if (tabIndex == 0 && index != 0) {
+        this.$refs.transactionpage.myonhide();
+      } else if (tabIndex == 1 && index != 1) {
+        this.$refs.homepage.myonhide();
+      } else if (tabIndex == 2 && index != 2) {}
     }
   },
   mounted: function mounted() {
     if (this.tabIndex == 0) {
-      console.log('调用了index页面的onload');
       this.$refs.transactionpage.myonload();
     }
   },
@@ -325,7 +334,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 /* harmony import */ var _login_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./login.vue?vue&type=style&index=0&lang=scss& */ 119);
 /* harmony import */ var _login_vue_vue_type_style_index_1_lang_scss___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./login.vue?vue&type=style&index=1&lang=scss& */ 121);
-/* harmony import */ var _HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 32);
+/* harmony import */ var _HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 35);
 
 var renderjs
 
@@ -685,7 +694,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home.vue?vue&type=script&lang=js& */ 126);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 /* harmony import */ var _home_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home.vue?vue&type=style&index=0&lang=scss& */ 128);
-/* harmony import */ var _HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 32);
+/* harmony import */ var _HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 35);
 
 var renderjs
 
@@ -1022,6 +1031,9 @@ var _default = {
   },
   mixins: [_mixin.default],
   methods: {
+    myonhide: function myonhide() {
+      uni.$off('refreshHomePage');
+    },
     myPopupShow: function myPopupShow(e) {
       this.popupShow = e;
     },
@@ -1279,11 +1291,9 @@ var _default = {
     },
     myonshow: function myonshow() {
       var _this3 = this;
-      uni.$once('addUpdate', function () {
-        // console.log('监听到了 添加之后 返回页面');
+      uni.$once('refreshHomePage', function () {
         _this3.scrollPullDown();
       });
-      // console.log('拼车页面的myonshow方法触发了');
       this.simulateSwipeDown();
     },
     simulateSwipeDown: function simulateSwipeDown() {
@@ -1345,7 +1355,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _transaction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./transaction.vue?vue&type=script&lang=js& */ 133);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _transaction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _transaction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 /* harmony import */ var _transaction_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./transaction.vue?vue&type=style&index=0&lang=scss& */ 135);
-/* harmony import */ var _HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 32);
+/* harmony import */ var _HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 35);
 
 var renderjs
 
@@ -1496,7 +1506,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ 18));
 var _mixin = _interopRequireDefault(__webpack_require__(/*! @/mixins/mixin.js */ 118));
-var _index = __webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/function/index.js */ 92);
+var _index = __webpack_require__(/*! @/uni_modules/uv-ui-tools/libs/function/index.js */ 94);
 //
 //
 //
@@ -1593,6 +1603,15 @@ var _default = {
     }
   },
   methods: {
+    myonhide: function myonhide() {
+      uni.$off('refreshTransactionPage');
+    },
+    myonshow: function myonshow() {
+      var _this = this;
+      uni.$once('refreshTransactionPage', function () {
+        _this.scrollPullDown();
+      });
+    },
     recoverPlaceholder: function recoverPlaceholder() {
       this.myplaceholder = '搜索';
     },
@@ -1610,23 +1629,23 @@ var _default = {
       this.myOldScrollPosition = e.detail.scrollTop;
     },
     toTop: function toTop() {
-      var _this = this;
+      var _this2 = this;
       this.myScrollPosition = this.myOldScrollPosition;
       this.$nextTick(function () {
-        _this.myScrollPosition = 0;
+        _this2.myScrollPosition = 0;
       });
       setTimeout(function () {
-        return _this.scrollPullDown();
+        return _this2.scrollPullDown();
       }, 500);
       console.log('old  ', this.myOldScrollPosition);
       console.log('new   ', this.myScrollPosition);
     },
     getShopList: function getShopList() {
-      var _this2 = this;
+      var _this3 = this;
       if (this.chooseAddArr().length == 0) {
         setTimeout(function () {
-          _this2.isRefresh = false;
-          _this2.$refs.message.show({
+          _this3.isRefresh = false;
+          _this3.$refs.message.show({
             type: 'warning',
             msg: '查询不到物品,请选择地区吧'
           });
@@ -1643,21 +1662,21 @@ var _default = {
       }).then(function (res) {
         console.log('商品请求返回', res);
         console.log('商品请求返回值', res.data);
-        if (!_this2.returnCodeHandle(res.code)) {
-          _this2.isRefresh = false;
-          _this2.isShowListloading = false;
+        if (!_this3.returnCodeHandle(res.code)) {
+          _this3.isRefresh = false;
+          _this3.isShowListloading = false;
           return;
         }
-        _this2.pagetotal = res.data.total;
+        _this3.pagetotal = res.data.total;
         res.data.records.forEach(function (i) {
           i.image = i.imgs.split(",")[0];
         });
-        _this2.list = [].concat((0, _toConsumableArray2.default)(_this2.list), (0, _toConsumableArray2.default)(res.data.records));
-        _this2.isRefresh = false;
-        _this2.isShowListloading = false;
+        _this3.list = [].concat((0, _toConsumableArray2.default)(_this3.list), (0, _toConsumableArray2.default)(res.data.records));
+        _this3.isRefresh = false;
+        _this3.isShowListloading = false;
       }).catch(function (err) {
-        _this2.isRefresh = false;
-        _this2.$refs.message.show({
+        _this3.isRefresh = false;
+        _this3.$refs.message.show({
           type: 'error',
           msg: '网络开了点小差,请稍候重试吧'
         });

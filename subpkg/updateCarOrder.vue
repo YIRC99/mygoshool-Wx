@@ -253,6 +253,7 @@
             msg: '修改成功',
           })
           setTimeout(()=>{
+            uni.$emit('refreshSendPage')
             uni.navigateBack()
           },1000)
         }).catch(err => {

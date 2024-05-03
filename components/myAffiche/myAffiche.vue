@@ -10,40 +10,42 @@
 </template>
 
 <script>
-   import mixin from '@/mixins/mixin.js'
+  import mixin from '@/mixins/mixin.js'
   export default {
-    mixins:[mixin],
-    name:"myAffiche",
+    mixins: [mixin],
+    name: "myAffiche",
     data() {
       return {
         affiche: {
-          text: 'my为共建尊重,互助的拼车社区氛围,请在发布拼车和接受时输入正确的个人信息,拼车过程中守时守约,行程有变及时告知↵'
+          text: '为共建尊重,互助的拼车社区氛围,请在发布拼车和接受时输入正确的个人信息,拼车过程中守时守约,行程有变及时告知↵'
         },
       };
     },
-    mounted(){
+    mounted() {
       this.getAffiche()
     },
-    methods:{
+    methods: {
       ClickAff() {
         console.log('click aff');
         uni.setStorageSync('affiche', this.affiche)
-        console.log(        this.affiche);
+        console.log(this.affiche);
         if (this.affiche.id == null || this.affiche.id == '') return
         uni.navigateTo({
           url: '/subpkg/affiche'
         })
       },
-      getAffiche(){
+      getAffiche() {
         this.get({
           url: 'affiche'
         }).then(res => {
           console.log('公告获取', res);
-          if(!this.returnCodeHandle(res.code,'公告失败'))return
-          if (res.code == 200) {
-            this.affiche = res.data
-            this.affiche.createat = this.formatDateTime(this.affiche.createat)
-          }
+          if (!this.returnCodeHandle(res.code, '公告失败')) return
+          if(res.data == null || res.data.text == null){
+             this.affiche.title = this.affiche.text
+          } 
+          
+          this.affiche = res.data
+          this.affiche.createat = this.formatDateTime(this.affiche.createat)
         })
       },
     }
@@ -51,14 +53,14 @@
 </script>
 
 <style lang="scss">
- .mynative {
+  .mynative {
     background-color: #FFF6D7;
     border-radius: 10rpx;
     margin: 20rpx;
     padding: 5rpx 10rpx;
     margin-top: 0;
     font-size: 30rpx;
-  
+
     text {
       font-weight: bold;
       color: #B07F29;

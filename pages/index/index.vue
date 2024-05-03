@@ -124,6 +124,7 @@
         console.log('处理用户同意隐私协议的逻辑');
       },
       onTab(index, item) {
+        this.myHide(this.tabIndex,index)
         this.tabIndex = index
         if (index == 2) {
           uni.setNavigationBarTitle({
@@ -139,14 +140,23 @@
           uni.setNavigationBarTitle({
             title: '闲置交易'
           })
-          
+          this.$refs.transactionpage.myonshow()
         }
 
+      },
+      myHide(tabIndex,index){
+        // 页面上的hide方法就在这里定义
+        if(tabIndex == 0 && index != 0){
+          this.$refs.transactionpage.myonhide()
+        }else if(tabIndex == 1 && index != 1){
+          this.$refs.homepage.myonhide()
+        }else if(tabIndex == 2 && index != 2){
+          
+        }
       }
     },
     mounted() {
       if (this.tabIndex == 0) {
-        console.log('调用了index页面的onload');
         this.$refs.transactionpage.myonload()
       }
     },
@@ -161,8 +171,6 @@
       })
     },
     onShow() {
-      
-      
       
       this.onTab(this.tabIndex, {})
     }

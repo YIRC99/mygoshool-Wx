@@ -13,7 +13,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _myAffiche_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./myAffiche.vue?vue&type=script&lang=js& */ 276);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _myAffiche_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _myAffiche_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 /* harmony import */ var _myAffiche_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./myAffiche.vue?vue&type=style&index=0&lang=scss& */ 278);
-/* harmony import */ var _HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 32);
+/* harmony import */ var _HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 35);
 
 var renderjs
 
@@ -139,7 +139,7 @@ var _default = {
   data: function data() {
     return {
       affiche: {
-        text: 'my为共建尊重,互助的拼车社区氛围,请在发布拼车和接受时输入正确的个人信息,拼车过程中守时守约,行程有变及时告知↵'
+        text: '为共建尊重,互助的拼车社区氛围,请在发布拼车和接受时输入正确的个人信息,拼车过程中守时守约,行程有变及时告知↵'
       }
     };
   },
@@ -163,10 +163,11 @@ var _default = {
       }).then(function (res) {
         console.log('公告获取', res);
         if (!_this.returnCodeHandle(res.code, '公告失败')) return;
-        if (res.code == 200) {
-          _this.affiche = res.data;
-          _this.affiche.createat = _this.formatDateTime(_this.affiche.createat);
+        if (res.data == null || res.data.text == null) {
+          _this.affiche.title = _this.affiche.text;
         }
+        _this.affiche = res.data;
+        _this.affiche.createat = _this.formatDateTime(_this.affiche.createat);
       });
     }
   }

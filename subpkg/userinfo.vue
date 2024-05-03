@@ -46,7 +46,7 @@
         </view>
         
         <view class="middle-list" v-show="currentIndex == 3">
-          <myEmppty :isShow="true" Text="帖子为空"></myEmppty>
+          <myEmppty :isShow="true" Text="待开发"></myEmppty>
         </view>
         
       </view>
