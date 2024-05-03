@@ -3,62 +3,68 @@
 
       
     <uv-tabs :list="list" @click="change" :lineWidth="40" :lineHeight="6" :current="current"></uv-tabs>
-
-    <view class="" v-show="current == 0">
-      <myEmppty :isShow="orderList.length == 0 && isLoading == false"></myEmppty>
-
-      <uni-card is-shadow class="mycard" v-for="(item,index) in orderList" :key="index" @click="clickCard(item)">
-        <view class="my-uv-tags">
-          <view class="mycard-titile">{{subYear(item.startdatetime) + ' 出发'}}</view>
-          <uv-tags :text="item.statusText" plain :type="item.statusTag"></uv-tags>
-        </view>
-        <view class="my-car-box">
-          <view class="aaa">
-            <view class="car-left">
-              <img class="my-icon" src="/static/upCar.png" />
-              <text class="uv-line-1" style="width: 350rpx;">{{item.startaddress}}</text>
-            </view>
-            <view class="car-left">
-              <img class="my-icon" src="/static/downCar.png" />
-              <text class="uv-line-1" style="width: 350rpx;">{{item.endaddress}}</text>
-            </view>
-          </view>
-          <view class="aaa" @click.stop="openAppraise(index)">
-            <button class="btn-grad" v-if="item.createUserAppriseId == null && item.receiveuserid != null">用户评价</button>
-          </view>
-        </view>
-
-
-      </uni-card>
-
-    </view>
-
-    <view class="" v-show="current == 1">
-      <myEmppty :isShow="shopList.length == 0 && isLoading == false" Text="您还没有发布任何闲置物品哦~"></myEmppty>
+    
+    <scroll-view scroll-y="true" style="height: 90vh; ">
+     
+     <view class="" v-show="current == 0">
+       <myEmppty :isShow="orderList.length == 0 && isLoading == false"></myEmppty>
+     
+       <uni-card is-shadow class="mycard" v-for="(item,index) in orderList" :key="index" @click="clickCard(item)">
+         <view class="my-uv-tags">
+           <view class="mycard-titile">{{subYear(item.startdatetime) + ' 出发'}}</view>
+           <uv-tags :text="item.statusText" plain :type="item.statusTag"></uv-tags>
+         </view>
+         <view class="my-car-box">
+           <view class="aaa">
+             <view class="car-left">
+               <img class="my-icon" src="/static/upCar.png" />
+               <text class="uv-line-1" style="width: 350rpx;">{{item.startaddress}}</text>
+             </view>
+             <view class="car-left">
+               <img class="my-icon" src="/static/downCar.png" />
+               <text class="uv-line-1" style="width: 350rpx;">{{item.endaddress}}</text>
+             </view>
+           </view>
+           <view class="aaa" @click.stop="openAppraise(index)">
+             <button class="btn-grad" v-if="item.createUserAppriseId == null && item.receiveuserid != null">用户评价</button>
+           </view>
+         </view>
+     
+     
+       </uni-card>
+        <view class="" style="height: 30rpx; width: 100%;"></view>
+     </view>
+     
+     <view class="" v-show="current == 1">
+       <myEmppty :isShow="shopList.length == 0 && isLoading == false" Text="您还没有发布任何闲置物品哦~"></myEmppty>
+       
+       <uni-card is-shadow spacing="0" v-for="(item,index) in shopList" :key="index" @click="ToShopDetail(item)">
+         <view class="shopItem">
+           <view class="left">
+             <image :src="shophttp + item.image" lazy-load></image>
+           </view>
+           <view class="right">
+             <view class="my-targ">
+               <uv-tags :text="item.statusText" plain :type="item.statusTag"></uv-tags>
+             </view>
+             
+             <view class="title uv-line-2">{{item.detail | formHtmlStr}}</view>
+             <view class="subhead">发布时间: {{item.createAt | fromLocalDateTime}}</view>
+             <view class="but-box">
+               <button class="btn-grad-update" @click.stop="updateShop(item)">编辑</button>
+               <button class="btn-grad-delete"  @click.stop="deleteShop(item)">删除</button>
+             </view>
+           </view>
+         </view>
+       </uni-card>
+       <view class="" style="height: 30rpx; width: 100%;"></view>
+     </view>
       
-      <uni-card is-shadow spacing="0" v-for="(item,index) in shopList" :key="index" @click="ToShopDetail(item)">
-        <view class="shopItem">
-          <view class="left">
-            <image :src="shophttp + item.image" lazy-load></image>
-          </view>
-          <view class="right">
-            <view class="my-targ">
-              <uv-tags :text="item.statusText" plain :type="item.statusTag"></uv-tags>
-            </view>
-            
-            <view class="title uv-line-2">{{item.detail | formHtmlStr}}</view>
-            <view class="subhead">发布时间: {{item.createAt | fromLocalDateTime}}</view>
-            <view class="but-box">
-              <button class="btn-grad-update" @click.stop="updateShop(item)">编辑</button>
-              <button class="btn-grad-delete"  @click.stop="deleteShop(item)">删除</button>
-            </view>
-          </view>
-        </view>
-      </uni-card>
-      
-    </view>
-
-    <uv-popup ref="popup" mode="bottom" round="50rpx"  @maskClick="closePopup">
+    </scroll-view>
+    
+   
+    
+    <uv-popup ref="popup" mode="bottom" round="50rpx" @maskClick="closePopup">
       <view class="popup-box" 
         :style="(currentOrder.status == 0 || currentOrder.status == 3) == true ? 'height: 50vh' : ''">
         <scroll-view scroll-y="true" style="height: 62vh; background-color: #ffffff; "  show-scrollbar="true">
