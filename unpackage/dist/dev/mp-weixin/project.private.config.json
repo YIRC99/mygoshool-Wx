@@ -98,6 +98,13 @@
           "query": "userid=2&openid=oB5Zy63yEWI1Y5yMdYTjEbNoMUJE",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "关于栀子花墙",
+          "pathName": "subpkg/notice",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

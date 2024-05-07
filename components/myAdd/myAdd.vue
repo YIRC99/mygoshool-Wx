@@ -52,7 +52,7 @@
 <style lang="scss">
   .addicon {
     position: fixed;
-    top: 1000rpx;
+    top: 900rpx;
     right: 50rpx;
     z-index: 999;
     background-color: #CCCCCC;

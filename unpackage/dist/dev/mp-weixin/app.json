@@ -19,7 +19,8 @@
         "affiche",
         "addShop",
         "shopDetail",
-        "searchShop"
+        "searchShop",
+        "notice"
       ]
     }
   ],

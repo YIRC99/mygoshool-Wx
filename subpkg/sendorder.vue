@@ -62,7 +62,6 @@
       
     </scroll-view>
     
-   
     
     <uv-popup ref="popup" mode="bottom" round="50rpx" @maskClick="closePopup">
       <view class="popup-box" 

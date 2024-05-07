@@ -38,7 +38,11 @@
 
 
         <view class="" @click="toFeedback">
-          <mylist iconImg="/static/yijian2.png" text="意见反馈"></mylist>
+          <mylist iconImg="/static/yijian6.png" text="意见反馈"></mylist>
+        </view>
+        
+        <view class="" @click="toNotice">
+          <mylist iconImg="/static/guanyu3.png" text="关于栀子花墙"></mylist>
         </view>
 
       </view>
@@ -71,6 +75,18 @@
       };
     },
     methods: {
+      toNotice(){
+        if(!this.isLogin){
+          this.$refs.message.show({
+              type: 'error', 
+              msg: '请登录后重试吧',
+          })
+          return
+        }
+        uni.navigateTo({
+          url: '/subpkg/notice'
+        })
+      },
       toUserinfo(){
          if(!this.isLogin) return 
          console.log(this.info);

@@ -1,6 +1,6 @@
 <template>
 	<view class="uv-collapse-item">
-		<uv-cell
+		<uv-cell 
 			:title="title"
 			:value="value"
 			:label="label"

@@ -7,6 +7,7 @@ const mixin = {
       QRttp: this.http + 'common/download?path=QRcode&name=',
       shopPath: 'common/download?path=shop&name=',
       shophttp: this.http + 'common/download?path=shop&name=',
+      defaulthhttp: this.http + 'common/download?path=default&name='
     };
   },
   methods:{

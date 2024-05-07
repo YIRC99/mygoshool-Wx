@@ -39,7 +39,7 @@
         </view>
       </view>
     
-      <text class="uv-line-1 myremark" style="color: #a9a9a9;">备注: {{item.remark}}</text>
+      <text class="uv-line-1 myremark" style="color: #a9a9a9;" v-if="item.remark != ''">备注: {{item.remark}}</text>
     </uni-card>
    
     

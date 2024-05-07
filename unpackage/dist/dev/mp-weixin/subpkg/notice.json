@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "关于栀子花墙",
+  "enablePullDownRefresh": false,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "uv-collapse": "/uni_modules/uv-collapse/components/uv-collapse/uv-collapse",
+    "uv-collapse-item": "/uni_modules/uv-collapse/components/uv-collapse-item/uv-collapse-item",
+    "quick-message": "/components/quick-message/quick-message"
+  }
+}

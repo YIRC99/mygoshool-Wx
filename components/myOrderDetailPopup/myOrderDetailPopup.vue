@@ -53,7 +53,7 @@
               {{currentOrder.remark}}
             </view>
           </view>
-          <view class="down-box">
+          <view class="down-box" v-if="user.openid != currentOrder.createUserInfo.openid">
             <button class="btn-grad" @click="showUploadWxImg">接受拼车</button>
           </view>
         </scroll-view>
@@ -81,8 +81,12 @@
     },
     data() {
       return {
-        popupShow: false
+        popupShow: false,
+        user: {}
       };
+    },
+    created() {
+      this.user = uni.getStorageSync('user')
     },
     methods:{
       // 弹出popup
