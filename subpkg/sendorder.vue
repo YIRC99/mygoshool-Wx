@@ -200,7 +200,8 @@
         this.post({
           url: 'shop/delete',
           data: {
-            id: this.currentShop.id
+            id: this.currentShop.id,
+            imgs: this.currentShop.imgs
           }
         }).then(res => {
           uni.hideLoading()
@@ -309,7 +310,9 @@
         this.post({
           url: 'carshareorder/delete',
           data: {
-            orderid: this.currentOrder.orderid
+            orderid: this.currentOrder.orderid,
+            receiveUserWechatImg: this.currentOrder.receiveUserWechatImg,
+            wechatImg: this.currentOrder.wechatImg
           }
         }).then(res => {
           uni.hideLoading()
