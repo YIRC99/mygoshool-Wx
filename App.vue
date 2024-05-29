@@ -13,14 +13,12 @@
 
     },
     async beforeCreate() {
-      console.log('我是最早的我是最早的我是最早的我是最早的我是最早的');
       let res = await uni.request({
         url: this.http + 'common/AESKey',
         method: 'POST'
       })
       console.log('项目启动时 获取密钥 要求必须先于所有请求',res);
       this.MyAES.aesKey = res.data.data
-      console.log(this.MyAES.aesKey);
     }
 	}
 </script>

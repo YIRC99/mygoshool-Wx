@@ -164,7 +164,6 @@ var _default = {
     };
   },
   created: function created() {
-    console.log('我是组件生命周期');
     this.initWxImg();
   },
   props: {

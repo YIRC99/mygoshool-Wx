@@ -98,6 +98,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components
+try {
+  components = {
+    uvParse: function () {
+      return Promise.all(/*! import() | uni_modules/uv-parse/components/uv-parse/uv-parse */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-parse/components/uv-parse/uv-parse")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-parse/components/uv-parse/uv-parse.vue */ 495))
+    },
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
+  }
+}
 var render = function () {
   var _vm = this
   var _h = _vm.$createElement
@@ -158,6 +181,8 @@ var _mixin = _interopRequireDefault(__webpack_require__(/*! @/mixins/mixin.js */
 //
 //
 //
+//
+//
 var _default = {
   mixins: [_mixin.default],
   data: function data() {
@@ -169,12 +194,15 @@ var _default = {
       },
       title: '我是公告我是公告我是公告我是公告我是公告我是公告',
       dateTime: '',
-      text: '我是内容我是内容我是内容我是内容我是内容我是内容'
+      text: '我是内容我是内容我是内容我是内容我是内容我是内容',
+      myStyle: ''
     };
   },
+  computed: {},
   onLoad: function onLoad() {
     this.affiche = uni.getStorageSync('affiche');
-  }
+  },
+  methods: {}
 };
 exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))

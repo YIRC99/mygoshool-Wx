@@ -171,7 +171,6 @@
       })
     },
     onShow() {
-      
       this.onTab(this.tabIndex, {})
     }
   }

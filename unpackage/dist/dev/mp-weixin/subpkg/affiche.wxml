@@ -1,1 +1,1 @@
-<view class="page"><view class="title">{{''+affiche.title+''}}</view><view class="text">{{''+affiche.createat+''}}</view><rich-text class="text" nodes="{{affiche.text}}"></rich-text></view>
+<view class="page"><view class="title">{{''+affiche.title+''}}</view><view class="text">{{''+affiche.createat+''}}</view><uv-parse vue-id="c9e9c33a-1" content="{{affiche.text}}" selectable="{{true}}" tagStyle="{{myStyle}}" lazyLoad="{{true}}" bind:__l="__l"></uv-parse></view>

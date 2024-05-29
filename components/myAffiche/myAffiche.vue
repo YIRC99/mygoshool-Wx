@@ -3,7 +3,7 @@
     <view class="" style="background-color: #fff; padding-bottom: 5rpx; padding-top: 20rpx;" v-if="tabIndex != 2">
       <view class="" class="uv-line-2 mynative" @click="ClickAff">
         <text>社区公告</text>
-        {{affiche.text}}
+        {{affiche.title}}
       </view>
     </view>
   </view>
@@ -17,7 +17,8 @@
     data() {
       return {
         affiche: {
-          text: '为共建尊重,互助的拼车社区氛围,请在发布拼车和接受时输入正确的个人信息,拼车过程中守时守约,行程有变及时告知↵'
+          text: '为共建尊重,互助的拼车社区氛围,请在发布拼车和接受时输入正确的个人信息,拼车过程中守时守约,行程有变及时告知↵',
+          title: '欢迎使用栀子花墙软件,高效,简洁,免费,开源,无广告,！祝您使用愉快！'
         },
       };
     },
@@ -26,9 +27,7 @@
     },
     methods: {
       ClickAff() {
-        console.log('click aff');
         uni.setStorageSync('affiche', this.affiche)
-        console.log(this.affiche);
         if (this.affiche.id == null || this.affiche.id == '') return
         uni.navigateTo({
           url: '/subpkg/affiche'
@@ -41,9 +40,9 @@
           console.log('公告获取', res);
           if (!this.returnCodeHandle(res.code, '公告失败')) return
           if(res.data == null || res.data.text == null){
+            return
              this.affiche.title = this.affiche.text
           } 
-          
           this.affiche = res.data
           this.affiche.createat = this.formatDateTime(this.affiche.createat)
         })

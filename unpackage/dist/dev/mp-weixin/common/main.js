@@ -24,7 +24,7 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 // @ts-ignore
 wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
-var http = 'http://192.168.159.210:33088/'; //手机热点
+var http = 'http://192.168.58.210:33088/'; //手机热点
 // const http = 'https://yirc99.cn/api/' //服务器
 // const http = 'http://192.168.2.177:33088/' //酒店
 // const http = 'http://10.16.60.53:33088/' //305wifi
@@ -282,18 +282,16 @@ var _default = {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              console.log('我是最早的我是最早的我是最早的我是最早的我是最早的');
-              _context.next = 3;
+              _context.next = 2;
               return uni.request({
                 url: _this.http + 'common/AESKey',
                 method: 'POST'
               });
-            case 3:
+            case 2:
               res = _context.sent;
               console.log('项目启动时 获取密钥 要求必须先于所有请求', res);
               _this.MyAES.aesKey = res.data.data;
-              console.log(_this.MyAES.aesKey);
-            case 7:
+            case 5:
             case "end":
               return _context.stop();
           }

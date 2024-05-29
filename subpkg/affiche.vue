@@ -7,7 +7,9 @@
     <view class="text">
       {{affiche.createat}}
     </view>
-    <rich-text :nodes="affiche.text" class="text"></rich-text>
+    
+    
+    <uv-parse :content="affiche.text" :selectable="true" :tagStyle="myStyle" :lazyLoad="true"></uv-parse>
 
 
   </view>
@@ -16,7 +18,7 @@
 <script>
   import mixin from '@/mixins/mixin.js'
   export default {
-    mixins:[mixin],
+    mixins: [mixin],
     data() {
       return {
         affiche: {
@@ -26,11 +28,18 @@
         },
         title: '我是公告我是公告我是公告我是公告我是公告我是公告',
         dateTime: '',
-        text: '我是内容我是内容我是内容我是内容我是内容我是内容'
+        text: '我是内容我是内容我是内容我是内容我是内容我是内容',
+        myStyle: ''
       };
+    },
+    computed: {
+   
     },
     onLoad() {
       this.affiche = uni.getStorageSync('affiche')
+    },
+    methods:{
+      
     }
   }
 </script>
@@ -39,9 +48,15 @@
   .page {
     padding: 30rpx;
   }
-  .text{
+
+  .text {
     color: #9E9E9E;
     margin: 20rpx 0;
+
+    image {
+      width: 100%;
+
+    }
   }
 
   .title {

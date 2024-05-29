@@ -139,7 +139,8 @@ var _default = {
   data: function data() {
     return {
       affiche: {
-        text: '为共建尊重,互助的拼车社区氛围,请在发布拼车和接受时输入正确的个人信息,拼车过程中守时守约,行程有变及时告知↵'
+        text: '为共建尊重,互助的拼车社区氛围,请在发布拼车和接受时输入正确的个人信息,拼车过程中守时守约,行程有变及时告知↵',
+        title: '欢迎使用栀子花墙软件,高效,简洁,免费,开源,无广告,！祝您使用愉快！'
       }
     };
   },
@@ -148,9 +149,7 @@ var _default = {
   },
   methods: {
     ClickAff: function ClickAff() {
-      console.log('click aff');
       uni.setStorageSync('affiche', this.affiche);
-      console.log(this.affiche);
       if (this.affiche.id == null || this.affiche.id == '') return;
       uni.navigateTo({
         url: '/subpkg/affiche'
@@ -164,6 +163,7 @@ var _default = {
         console.log('公告获取', res);
         if (!_this.returnCodeHandle(res.code, '公告失败')) return;
         if (res.data == null || res.data.text == null) {
+          return;
           _this.affiche.title = _this.affiche.text;
         }
         _this.affiche = res.data;

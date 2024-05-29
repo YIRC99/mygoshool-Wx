@@ -3,7 +3,7 @@ import MyAES from '@/aes/aes'
 import CryptoJS from 'crypto-js';
 
 
-const http = 'http://192.168.159.210:33088/' //手机热点
+const http = 'http://192.168.58.210:33088/' //手机热点
 // const http = 'https://yirc99.cn/api/' //服务器
 // const http = 'http://192.168.2.177:33088/' //酒店
 // const http = 'http://10.16.60.53:33088/' //305wifi
