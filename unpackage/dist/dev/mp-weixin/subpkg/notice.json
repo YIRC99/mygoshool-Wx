@@ -5,6 +5,7 @@
   "usingComponents": {
     "uv-collapse": "/uni_modules/uv-collapse/components/uv-collapse/uv-collapse",
     "uv-collapse-item": "/uni_modules/uv-collapse/components/uv-collapse-item/uv-collapse-item",
+    "uv-parse": "/uni_modules/uv-parse/components/uv-parse/uv-parse",
     "quick-message": "/components/quick-message/quick-message"
   }
 }

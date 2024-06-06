@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "uni-app",
+  "navigationBarTitleText": "首页",
   "usingComponents": {
     "index-magic-navigation-bar-text": "/pages/index/index-magic-navigation-bar-text",
     "ws-wx-privacy": "/uni_modules/ws-wx-privacy/components/ws-wx-privacy/ws-wx-privacy",

@@ -13,7 +13,7 @@
 
     <uv-collapse accordion :border="false">
       <uv-collapse-item class="mycollapse" :title="item.title" v-for="(item,index) in notiveList" :key="index">
-        <rich-text :nodes="item.text" style="font-size: 28rpx; color: #A9a9a9;"></rich-text>
+        <uv-parse :content="item.text" :selectable="true"  :lazyLoad="true"></uv-parse>
       </uv-collapse-item>
     </uv-collapse>
     

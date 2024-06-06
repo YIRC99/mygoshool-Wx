@@ -35301,7 +35301,7 @@ var _default = {
   "pages": [{
     "path": "pages/index/index",
     "style": {
-      "navigationBarTitleText": "uni-app"
+      "navigationBarTitleText": "首页"
     }
   }, {
     "path": "pages/my/login",

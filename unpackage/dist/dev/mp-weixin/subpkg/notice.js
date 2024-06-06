@@ -106,6 +106,9 @@ try {
     uvCollapseItem: function () {
       return Promise.all(/*! import() | uni_modules/uv-collapse/components/uv-collapse-item/uv-collapse-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-collapse/components/uv-collapse-item/uv-collapse-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-collapse/components/uv-collapse-item/uv-collapse-item.vue */ 516))
     },
+    uvParse: function () {
+      return Promise.all(/*! import() | uni_modules/uv-parse/components/uv-parse/uv-parse */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uv-parse/components/uv-parse/uv-parse")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uv-parse/components/uv-parse/uv-parse.vue */ 495))
+    },
     quickMessage: function () {
       return Promise.all(/*! import() | components/quick-message/quick-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/quick-message/quick-message")]).then(__webpack_require__.bind(null, /*! @/components/quick-message/quick-message.vue */ 245))
     },

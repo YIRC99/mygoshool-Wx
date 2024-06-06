@@ -24,8 +24,8 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 // @ts-ignore
 wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
-var http = 'http://192.168.58.210:33088/'; //手机热点
-// const http = 'https://yirc99.cn/api/' //服务器
+// const http = 'http://192.168.58.210:33088/' //手机热点
+var http = 'https://yirc99.cn/api/'; //服务器
 // const http = 'http://192.168.2.177:33088/' //酒店
 // const http = 'http://10.16.60.53:33088/' //305wifi
 // const http = 'http://192.168.2.196:33088/' //宿舍wifi
