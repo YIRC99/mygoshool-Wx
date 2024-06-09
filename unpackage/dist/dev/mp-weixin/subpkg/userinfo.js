@@ -358,7 +358,7 @@ var _default = {
       this.post({
         url: 'carshareorder/getbyuserid/up',
         data: {
-          openid: this.parameter.openid
+          openid: this.info.openid
         }
       }).then(function (res) {
         console.log('拼车数据', res);
@@ -380,7 +380,7 @@ var _default = {
       this.post({
         url: 'shop/getbyuserid/up',
         data: {
-          openid: this.parameter.openid
+          openid: this.info.openid
         }
       }).then(function (res) {
         console.log('闲置物品的响应', res);
@@ -434,7 +434,12 @@ var _default = {
       }).then(function (res) {
         console.log(res);
         if (!_this5.returnCodeHandle(res.code, '获取用户信息失败')) return;
+        _this5.info = res.data;
+        console.log('查询我当前点击进入的用户信息为: ', res);
+        // 查询接下来用户的信息
         _this5.getAppriseByUserid();
+        _this5.getShowOrder();
+        _this5.getShowShopList();
       }).catch(function (err) {
         console.log('home page is', err);
         _this5.isRefresh = false;
@@ -449,13 +454,17 @@ var _default = {
   onLoad: function onLoad(e) {
     console.log('userinfo, onload', e);
     this.parameter = e;
-    this.info = uni.getStorageSync('user');
-    if (!this.info) {
+    if (e == null || e.openid == null) {
+      this.$refs.message.show({
+        type: 'error',
+        msg: '当前页参数有误 请重试'
+      });
+      setTimeout(function () {
+        uni.navigateBack();
+      }, 1000);
+    } else {
       this.getUserInfoByUserId(e.userid);
     }
-    this.getAppriseByUserid();
-    this.getShowOrder();
-    this.getShowShopList();
   }
 };
 exports.default = _default;

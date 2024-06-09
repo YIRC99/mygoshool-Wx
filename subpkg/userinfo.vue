@@ -234,7 +234,7 @@
         this.post({
           url: 'carshareorder/getbyuserid/up',
           data: {
-            openid: this.parameter.openid
+            openid: this.info.openid
           }
         }).then(res => {
           console.log('拼车数据', res);
@@ -256,7 +256,7 @@
         this.post({
           url: 'shop/getbyuserid/up',
           data: {
-            openid: this.parameter.openid
+            openid: this.info.openid
           }
         }).then(res => {
           console.log('闲置物品的响应', res);
@@ -284,6 +284,7 @@
         console.log(e);
         this.currentIndex = e.index
       },
+      
       getAppriseByUserid() {
         this.post({
           url: 'apprise/byuserid',
@@ -317,8 +318,12 @@
         }).then(res => {
           console.log(res);
           if(!this.returnCodeHandle(res.code,'获取用户信息失败'))return
-     
+          this.info = res.data
+          console.log('查询我当前点击进入的用户信息为: ',res);
+          // 查询接下来用户的信息
           this.getAppriseByUserid()
+          this.getShowOrder()
+          this.getShowShopList()
         }).catch(err => {
           console.log('home page is', err);
           this.isRefresh = false
@@ -333,14 +338,20 @@
     onLoad(e) {
       console.log('userinfo, onload', e);
       this.parameter = e
-      this.info = uni.getStorageSync('user')
-      if (!this.info) {
+      if(e == null || e.openid == null){
+        this.$refs.message.show({
+          type: 'error', 
+          msg: '当前页参数有误 请重试', 
+        })
+        setTimeout(() => {
+          uni.navigateBack()
+        },1000)
+      }else{
         this.getUserInfoByUserId(e.userid)
       }
 
-      this.getAppriseByUserid()
-      this.getShowOrder()
-      this.getShowShopList()
+      
+      
     }
   }
 </script>

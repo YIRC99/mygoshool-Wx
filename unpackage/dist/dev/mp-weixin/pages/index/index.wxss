@@ -408,10 +408,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  box-shadow: 5px 5px 11px #c3bfbf, -5px -5px 11px #ffffff;
+  font-size: 24rpx;
 }
 .totopBut image {
-  width: 100rpx;
-  height: 100rpx;
+  width: 60rpx;
+  height: 60rpx;
 }
 .waterfall {
   margin: 30rpx 0;

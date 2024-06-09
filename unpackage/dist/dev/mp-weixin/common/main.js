@@ -25,10 +25,10 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 // @ts-ignore
 wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 // const http = 'http://192.168.58.210:33088/' //手机热点
-var http = 'https://yirc99.cn/api/'; //服务器
+// const http = 'https://yirc99.cn/api/' //服务器
 // const http = 'http://192.168.2.177:33088/' //酒店
 // const http = 'http://10.16.60.53:33088/' //305wifi
-// const http = 'http://192.168.2.196:33088/' //宿舍wifi
+var http = 'http://192.168.1.14:33088/'; //wifi
 
 var myOutTime = 5000;
 _vue.default.prototype.avahttp = http + 'common/download?path=avatar&name=';

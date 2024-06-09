@@ -74,6 +74,8 @@ import { date } from '../uni_modules/uv-ui-tools/libs/function/test'
     },
     methods: {
       toUserInfo(){
+        console.log('userid',this.userinfo.userid);
+        console.log('openid',this.userinfo.openid);
         if(this.isToUserInfo)
           uni.redirectTo({
             url: '/subpkg/userinfo?userid=' + this.userinfo.userid + '&openid=' + this.userinfo.openid

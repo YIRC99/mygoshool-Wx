@@ -36,8 +36,9 @@
     </scroll-view>
 
     <myAdd toPagePath="/subpkg/addShop"></myAdd>
+    
     <view class="totopBut" v-show="isShowToTop" @click="toTop">
-      <image src="/static/toTop.png" mode=""></image>
+      <image src="/static/up2.png" mode=""></image>
     </view>
 
     <quick-message ref="message"></quick-message>
@@ -239,10 +240,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    flex-direction: column;
+   box-shadow:  5px 5px 11px #c3bfbf,
+                -5px -5px 11px #ffffff;
+    font-size: 24rpx;
     image {
-      width: 100rpx;
-      height: 100rpx;
+      width: 60rpx;
+      height: 60rpx;
     }
   }
 
