@@ -202,7 +202,22 @@ var _default = {
   onLoad: function onLoad() {
     this.affiche = uni.getStorageSync('affiche');
   },
-  methods: {}
+  methods: {
+    onShareTimeline: function onShareTimeline() {
+      var result = {};
+      return result;
+    },
+    onShareAppMessage: function onShareAppMessage(e) {
+      var result = {
+        title: '栀子花墙小程序',
+        // 分享标题，默认当前页面标题
+        path: '/pages/index/index',
+        // 分享路径，默认当前页面路径，需要带上参数，如：/pages/index/index?id=123&name=abc，其中id和name                                        是当前页面参数，123和abc是参数值，需要根据实际情况进行替换。
+        imageUrl: this.defaulthhttp + 'logo.jpg'
+      };
+      return result;
+    }
+  }
 };
 exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))

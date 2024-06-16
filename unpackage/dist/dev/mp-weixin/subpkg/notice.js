@@ -167,7 +167,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
+/* WEBPACK VAR INJECTION */(function(wx, uni) {
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
@@ -175,6 +175,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _mixin = _interopRequireDefault(__webpack_require__(/*! @/mixins/mixin.js */ 118));
+//
+//
+//
+//
 //
 //
 //
@@ -211,6 +215,33 @@ var _default = {
     };
   },
   methods: {
+    onShareTimeline: function onShareTimeline() {
+      var result = {};
+      return result;
+    },
+    onShareAppMessage: function onShareAppMessage(e) {
+      var result = {
+        title: '栀子花墙小程序',
+        // 分享标题，默认当前页面标题
+        path: '/pages/index/index',
+        // 分享路径，默认当前页面路径，需要带上参数，如：/pages/index/index?id=123&name=abc，其中id和name                                        是当前页面参数，123和abc是参数值，需要根据实际情况进行替换。
+        imageUrl: this.defaulthhttp + 'logo.jpg'
+      };
+      return result;
+    },
+    openPrivacyContract: function openPrivacyContract() {
+      wx.openPrivacyContract({
+        success: function success(res) {
+          console.log('成功打开隐私协议', res);
+        },
+        // 打开成功
+        fail: function fail(err) {
+          console.log('打开用户隐私协议失败', err);
+        },
+        // 打开失败
+        complete: function complete() {}
+      });
+    },
     myback: function myback() {
       uni.navigateBack({
         fail: function fail() {
@@ -236,7 +267,7 @@ var _default = {
   }
 };
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

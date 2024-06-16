@@ -381,8 +381,22 @@ var _default = {
     }
   },
   methods: {
+    onShareTimeline: function onShareTimeline() {
+      var result = {};
+      return result;
+    },
+    onShareAppMessage: function onShareAppMessage(e) {
+      var result = {
+        title: '栀子花墙小程序',
+        // 分享标题，默认当前页面标题
+        path: '/pages/index/index',
+        // 分享路径，默认当前页面路径，需要带上参数，如：/pages/index/index?id=123&name=abc，其中id和name                                        是当前页面参数，123和abc是参数值，需要根据实际情况进行替换。
+        imageUrl: this.defaulthhttp + 'logo.jpg'
+      };
+      return result;
+    },
     myonChange: function myonChange(e) {
-      console.log('子组件上传的回调', e);
+      // console.log('子组件上传的回调',e);
       this.fileList1 = e;
     },
     clickUploadImgM: function clickUploadImgM() {
@@ -393,8 +407,8 @@ var _default = {
       var _this = this;
       var curUser = uni.getStorageSync('user');
       this.isLoading = true;
-      console.log(this.fileList1);
-      console.log('this.fileList1[0].resWximg', this.fileList1[0].resWximg);
+      // console.log(this.fileList1);
+      // console.log('this.fileList1[0].resWximg',this.fileList1[0].resWximg);
       this.post({
         url: 'carshareorder/add',
         data: {
@@ -707,19 +721,19 @@ var _default = {
       });
     },
     startConfirm: function startConfirm(e) {
-      console.log('开始出发时间', e);
-      console.log('开始出发时间', this.$uv.timeFormat(e.value, 'yyyy-mm-dd hh:MM'));
+      // console.log('开始出发时间', e);
+      // console.log('开始出发时间', this.$uv.timeFormat(e.value, 'yyyy-mm-dd hh:MM'));
       this.startDateTime = this.$uv.timeFormat(e.value, 'yyyy-mm-dd hh:MM');
     },
     choseStartDateTime: function choseStartDateTime() {
       this.$refs.startDatetimePicker.open();
     },
     lackConfirm: function lackConfirm(e) {
-      console.log('缺少人数', e.value[0]);
+      // console.log('缺少人数', e.value[0]);
       this.lackPerson = e.value[0];
     },
     CurrentConfirm: function CurrentConfirm(e) {
-      console.log('当前人数', e.value[0]);
+      // console.log('当前人数', e.value[0]);
       this.currentPerson = e.value[0];
     },
     choseCurrentPerson: function choseCurrentPerson() {

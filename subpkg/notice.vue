@@ -18,8 +18,12 @@
     </uv-collapse>
     
     <view class="my-bottom-box">
-      <view>特别鸣谢xxxxx帮助我开发了后台管理端 并且开源出来</view>
-      <view>特别鸣谢P站作者 QuAn_ 免费分享图片</view>
+      <view>特别鸣谢GitHub开发者 imjustanoo 帮助我开发了后台管理端</view>
+      <view style="margin: 10rpx 0;">特别鸣谢P站作者 QuAn_ 免费分享图片</view>
+      <view class="">
+        <text>阅读并同意</text><text @tap="openPrivacyContract" style="color: #1064fe;">《用户协议》</text><text>及</text><text
+          @tap="openPrivacyContract" style="color: #1064fe;">《隐私保护规范》</text>
+      </view>
     </view>
 
     <quick-message ref="message"></quick-message>
@@ -36,6 +40,31 @@
       };
     },
     methods: {
+      onShareTimeline(){
+        let result = {
+          
+        }
+        return result
+      },
+      onShareAppMessage(e){
+        let result = {
+          title: '栀子花墙小程序', // 分享标题，默认当前页面标题
+          path: '/pages/index/index', // 分享路径，默认当前页面路径，需要带上参数，如：/pages/index/index?id=123&name=abc，其中id和name                                        是当前页面参数，123和abc是参数值，需要根据实际情况进行替换。
+          imageUrl: this.defaulthhttp + 'logo.jpg'
+        }
+        return result
+      },
+      openPrivacyContract(){
+        wx.openPrivacyContract({
+          success: (res) => {
+            console.log('成功打开隐私协议',res);
+          }, // 打开成功
+          fail: (err) => {
+            console.log('打开用户隐私协议失败',err);
+          }, // 打开失败
+          complete: () => {}
+        })
+      },
       myback(){
         uni.navigateBack({
           fail: () => {
@@ -75,6 +104,7 @@
     text-align: center;
     color: #666;
     font-size: 24rpx;
+    
   }
   
   .mybackicon{

@@ -296,8 +296,8 @@ var _default = {
       setTimeout(function () {
         return _this2.scrollPullDown();
       }, 500);
-      console.log('old  ', this.myOldScrollPosition);
-      console.log('new   ', this.myScrollPosition);
+      // console.log('old  ', this.myOldScrollPosition);
+      // console.log('new   ', this.myScrollPosition);
     },
     getShopList: function getShopList() {
       var _this3 = this;
@@ -319,8 +319,8 @@ var _default = {
           addressCodeArr: this.chooseAddArr()
         }
       }).then(function (res) {
-        console.log('商品请求返回', res);
-        console.log('商品请求返回值', res.data);
+        // console.log('商品请求返回',res);
+        // console.log('商品请求返回值', res.data);
         if (!_this3.returnCodeHandle(res.code)) {
           _this3.isRefresh = false;
           _this3.isShowListloading = false;
@@ -347,7 +347,7 @@ var _default = {
       this.isRefresh = true;
       this.pageNum = 1;
       //清空数据
-      console.log('清空数据');
+      // console.log('清空数据');
       this.list = [];
       this.$refs.myshopwaterfall.clearList();
       // debugger
@@ -363,7 +363,7 @@ var _default = {
         this.isShowListloading = true;
         this.getShopList();
       }
-      console.log('滑动到底部了');
+      // console.log('滑动到底部了');
     },
     myonload: function myonload() {
       this.scrollPullDown();
@@ -373,7 +373,7 @@ var _default = {
       this.scrollPullDown();
     },
     toSearch: function toSearch() {
-      console.log('点击搜索框');
+      // console.log('点击搜索框');
       if (this.searchText.trim() == '') {
         this.$refs.message.show({
           type: 'warning',

@@ -425,6 +425,20 @@ var _default = {
     };
   },
   methods: {
+    onShareTimeline: function onShareTimeline() {
+      var result = {};
+      return result;
+    },
+    onShareAppMessage: function onShareAppMessage(e) {
+      var result = {
+        title: '栀子花墙小程序',
+        // 分享标题，默认当前页面标题
+        path: '/pages/index/index',
+        // 分享路径，默认当前页面路径，需要带上参数，如：/pages/index/index?id=123&name=abc，其中id和name                                        是当前页面参数，123和abc是参数值，需要根据实际情况进行替换。
+        imageUrl: this.defaulthhttp + 'logo.jpg'
+      };
+      return result;
+    },
     deleteShopRequest: function deleteShopRequest() {
       var _this = this;
       this.isLoading = true;
@@ -473,7 +487,7 @@ var _default = {
         title: title,
         content: content,
         success: function success(res) {
-          console.log(res);
+          // console.log(res);
           if (res.confirm) {
             _this2.deleteShopRequest(_this2.currentShop.id);
           }
@@ -481,7 +495,7 @@ var _default = {
       });
     },
     updateShop: function updateShop(item) {
-      console.log(item);
+      // console.log(item);
       uni.setStorageSync('updateShop', item);
       uni.navigateTo({
         url: '/subpkg/addShop?update=true'
@@ -501,7 +515,7 @@ var _default = {
           openid: this.userinfo.openid
         }
       }).then(function (res) {
-        console.log('shoplist', res);
+        // console.log('shoplist',res);
         if (res.code == 200) {
           _this3.shopList = res.data;
           var currTime = new Date();
@@ -545,7 +559,7 @@ var _default = {
       }).then(function (res) {
         uni.hideLoading();
         _this4.isLoading = false;
-        console.log(res);
+        // console.log(res);
         if (res.code == 200) {
           _this4.$refs.message.show({
             type: 'success',
@@ -613,7 +627,7 @@ var _default = {
           OrderCreateUserId: this.orderList[this.clickCurrentListIndex].createuserid
         }
       }).then(function (res) {
-        console.log(res);
+        // console.log(res);
         _this6.isLoading = false;
         if (res.code != 200) {
           _this6.clickUpApprise = false;
@@ -636,7 +650,7 @@ var _default = {
           _this6.$refs.appraisePopup.close();
         }, 500);
       }).catch(function (err) {
-        console.log('home page is', err);
+        // console.log('home page is', err);
         _this6.clickUpApprise = false;
         _this6.isRefresh = false;
         _this6.$refs.message.show({
@@ -720,7 +734,8 @@ var _default = {
   },
   onLoad: function onLoad() {
     this.userinfo = uni.getStorageSync('user');
-    console.log(this.userinfo);
+
+    // console.log(this.userinfo);
     this.getUserOrder();
     this.getUserShop();
   },
@@ -734,7 +749,7 @@ var _default = {
     });
   },
   destroyed: function destroyed() {
-    console.log('监听页面销毁');
+    // console.log('监听页面销毁');
     this.$off('refreshSendPage');
   }
 };

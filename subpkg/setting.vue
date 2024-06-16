@@ -19,8 +19,8 @@
           用户昵称
         </view>
         <view class="">
-          <input type="nickname" id="nickname-input" maxlength="20"  @blur="myblur"
-            v-model="info.username" style="text-align: right;" placeholder="输入用户昵称" />
+          <input type="nickname" id="nickname-input" maxlength="20" @blur="myblur" v-model="info.username"
+            style="text-align: right;" placeholder="输入用户昵称" />
         </view>
       </view>
 
@@ -48,7 +48,7 @@
 </template>
 
 <script>
-   import mixin from '@/mixins/mixin.js'
+  import mixin from '@/mixins/mixin.js'
   export default {
     data() {
       return {
@@ -59,8 +59,22 @@
         isloding: false,
       };
     },
-    mixins:[mixin],
+    mixins: [mixin],
     methods: {
+      onShareTimeline(){
+        let result = {
+          
+        }
+        return result
+      },
+      onShareAppMessage(e) {
+        let result = {
+          title: '栀子花墙小程序', // 分享标题，默认当前页面标题
+          path: '/pages/index/index', // 分享路径，默认当前页面路径，需要带上参数，如：/pages/index/index?id=123&name=abc，其中id和name                                        是当前页面参数，123和abc是参数值，需要根据实际情况进行替换。
+          imageUrl: this.defaulthhttp + 'logo.jpg'
+        }
+        return result
+      },
       myblur(e) {
         let _this = this
         uni.createSelectorQuery().in(this) // 注意这里要加上 in(this)  
@@ -84,14 +98,14 @@
           console.log('修改信息返回值', res);
           console.log('保存的信息为', this.info);
           this.isloading = false
-          if(!this.returnCodeHandle(res.code,this.feedFail))return
-          
+          if (!this.returnCodeHandle(res.code, this.feedFail)) return
+
           uni.setStorageSync('user', this.info)
           this.$refs.message.show({
-            type: 'success', 
-            msg: '修改成功', 
+            type: 'success',
+            msg: '修改成功',
           })
-          
+
           setTimeout(() => {
             uni.navigateBack()
           }, 1000)
@@ -120,7 +134,7 @@
           timeout: 10000,
           success: (res) => {
             res = JSON.parse(res.data)
-            if(!this.returnCodeHandle(res.code,this.feedFail))return
+            if (!this.returnCodeHandle(res.code, this.feedFail)) return
             this.info.avatar = this.MyAES.decrypt(res.data)
 
           },

@@ -11,6 +11,13 @@ const mixin = {
     };
   },
   methods:{
+   onShareTimeline(){
+     let result = {
+       
+     }
+     return result
+   },
+    // 方法1：将时间从"yyyy-MM-dd HH:mm:ss"格式转换为"yyyy-MM-ddTHH:mm:ss"格式。
     // 将时间转变格式 以符合ISO 8601格式
     fromDataTime2ISO8601(time){
       return time.split(' ')[0]+'T'+time.split(' ')[1]

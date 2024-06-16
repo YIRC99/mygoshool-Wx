@@ -227,6 +227,20 @@ var _default = {
     this.searchText();
   },
   methods: {
+    onShareTimeline: function onShareTimeline() {
+      var result = {};
+      return result;
+    },
+    onShareAppMessage: function onShareAppMessage(e) {
+      var result = {
+        title: '栀子花墙小程序',
+        // 分享标题，默认当前页面标题
+        path: '/pages/index/index',
+        // 分享路径，默认当前页面路径，需要带上参数，如：/pages/index/index?id=123&name=abc，其中id和name                                        是当前页面参数，123和abc是参数值，需要根据实际情况进行替换。
+        imageUrl: this.defaulthhttp + 'logo.jpg'
+      };
+      return result;
+    },
     scrollDown: function scrollDown() {
       // TODO 分页后端已经写好了 明天完善下滑分页加载的动画
       if (this.list.length == this.pagetotal) {
@@ -237,7 +251,7 @@ var _default = {
         this.isShowListloading = true;
         this.searchText();
       }
-      console.log('滑动到底部了');
+      // console.log('滑动到底部了');
     },
     searchText: function searchText() {
       var _this = this;
@@ -249,7 +263,8 @@ var _default = {
           target: this.searchTextArr
         }
       }).then(function (res) {
-        console.log(res);
+        // console.log(res);
+
         _this.pagetotal = res.data.total;
         res.data.records.forEach(function (i) {
           i.image = i.imgs.split(",")[0];

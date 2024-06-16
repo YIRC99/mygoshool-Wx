@@ -194,6 +194,20 @@
       }
     },
     methods: {
+      onShareTimeline(){
+        let result = {
+          
+        }
+        return result
+      },
+      onShareAppMessage(e){
+        let result = {
+          title: '栀子花墙小程序', // 分享标题，默认当前页面标题
+          path: '/pages/index/index', // 分享路径，默认当前页面路径，需要带上参数，如：/pages/index/index?id=123&name=abc，其中id和name                                        是当前页面参数，123和abc是参数值，需要根据实际情况进行替换。
+          imageUrl: this.defaulthhttp + 'logo.jpg'
+        }
+        return result
+      },
       deleteShopRequest(){
         this.isLoading = true
         uni.showLoading({})
@@ -243,7 +257,7 @@
          title,
          content,
          success: res => {
-           console.log(res);
+           // console.log(res);
            if(res.confirm){
              this.deleteShopRequest(this.currentShop.id)
            }
@@ -251,7 +265,7 @@
         })
       },
       updateShop(item){
-        console.log(item);
+        // console.log(item);
         uni.setStorageSync('updateShop',item)
         uni.navigateTo({
           url: '/subpkg/addShop?update=true'
@@ -270,7 +284,7 @@
             openid: this.userinfo.openid
           }
         }).then(res => {
-          console.log('shoplist',res);
+          // console.log('shoplist',res);
           if(res.code == 200){
             this.shopList = res.data
             let currTime = new Date()
@@ -317,7 +331,7 @@
         }).then(res => {
           uni.hideLoading()
           this.isLoading = false
-          console.log(res);
+          // console.log(res);
           if (res.code == 200) {
            this.$refs.message.show({
              type: 'success',
@@ -384,7 +398,7 @@
             OrderCreateUserId: this.orderList[this.clickCurrentListIndex].createuserid,
           }
         }).then(res => {
-          console.log(res);
+          // console.log(res);
           this.isLoading = false
           if (res.code != 200) {
             this.clickUpApprise = false
@@ -408,7 +422,7 @@
             this.$refs.appraisePopup.close()
           }, 500)
         }).catch(err => {
-          console.log('home page is', err);
+          // console.log('home page is', err);
           this.clickUpApprise = false
           this.isRefresh = false
           this.$refs.message.show({
@@ -502,7 +516,7 @@
       // #ifdef H5
       this.userinfo = JSON.parse(this.userinfo)
       // #endif
-      console.log(this.userinfo);
+      // console.log(this.userinfo);
       this.getUserOrder()
       this.getUserShop()
     },
@@ -515,7 +529,7 @@
       })
     },
     destroyed() {
-      console.log('监听页面销毁');
+      // console.log('监听页面销毁');
       this.$off('refreshSendPage')
     }
   }

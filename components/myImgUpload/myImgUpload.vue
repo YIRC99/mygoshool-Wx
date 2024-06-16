@@ -107,7 +107,7 @@
       },
 
       uploadFilePromise(url) {
-        console.log(url);
+        // console.log(url);
         return new Promise((resolve, reject) => {
           let a = uni.uploadFile({
             url: this.http + 'common/upload?path=' + this.ImgRequestPath,
@@ -123,7 +123,7 @@
             timeout: this.TimeOut,
             success: (res) => {
               res = JSON.parse(res.data)
-              console.log('上传成功', res);
+              // console.log('上传成功', res);
               
               if(!this.returnCodeHandle(res.code)){
                 console.log('代码执行到了这里');
@@ -189,8 +189,8 @@
             src: lists[i].url,
             quality: 70,
             success: async res => {
-              console.log(res.tempFilePath)
-              console.log('压缩完成了');
+              // console.log(res.tempFilePath)
+              // console.log('压缩完成了');
               lists[i].url = res.tempFilePath
               const result = await this.uploadFilePromise(lists[i].url)
               let item = this[`fileList${event.name}`][fileListLen]

@@ -160,7 +160,7 @@ var _default = {
       this.get({
         url: 'affiche'
       }).then(function (res) {
-        console.log('公告获取', res);
+        // console.log('公告获取', res);
         if (!_this.returnCodeHandle(res.code, '公告失败')) return;
         if (res.data == null || res.data.text == null) {
           return;

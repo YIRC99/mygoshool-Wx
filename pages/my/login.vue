@@ -89,7 +89,7 @@
       },
       toUserinfo(){
          if(!this.isLogin) return 
-         console.log(this.info);
+         // console.log(this.info);
          uni.navigateTo({
            url: '/subpkg/userinfo?userid=' + this.info.userid + '&openid=' + this.info.openid
          })
@@ -119,10 +119,10 @@
         })
       },
       mychooseavatar(e) {
-        console.log(e);
+        // console.log(e);
       },
       getuserphone(e) {
-        console.log(e);
+        // console.log(e);
       },
       toFeedback() {
         if(!this.isLogin){
@@ -152,7 +152,7 @@
         });
       },
       myonshow() {
-        console.log('my login 页面的show 触发了');
+        // console.log('my login 页面的show 触发了');
         let key = uni.getStorageSync('token')
         if (key == undefined || key == null || key == '')
           this.isLogin = false
@@ -189,7 +189,7 @@
         // #endif
         
         this.isLoading = true
-        console.log('调用了微信登录');
+        // console.log('调用了微信登录');
         wx.login({
           timeout: 5000,
           success: (res) => {
@@ -206,7 +206,7 @@
             })
           },
           fail(err) {
-            console.log('调用微信登录失败', err);
+            // console.log('调用微信登录失败', err);
           }
         })
       },
@@ -214,10 +214,10 @@
     created() {
       uni.checkSession({
         success: (res) => {
-          console.log('验证session success', res);
+          // console.log('验证session success', res);
         },
         fail: (err) => {
-          console.log('验证session fail 自动登录微信', err);
+          // console.log('验证session fail 自动登录微信', err);
           this.wxLogin()
         }
       })

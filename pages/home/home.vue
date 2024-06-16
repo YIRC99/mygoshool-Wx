@@ -222,14 +222,14 @@
         }
       },
       chooseDateConfirm(e) {
-        console.log(e.fulldate);
+        // console.log(e.fulldate);
         this.list[this.currentIndex].time = e.fulldate
-        console.log('this.list[this.currentIndex].time', this.list[this.currentIndex].time);
-        console.log('点击确定 筛选日期');
+        // console.log('this.list[this.currentIndex].time', this.list[this.currentIndex].time);
+        // console.log('点击确定 筛选日期');
         this.scrollPullDown()
       },
       cancelCalendars() {
-        console.log('点击取消 清空日期');
+        // console.log('点击取消 清空日期');
         this.list[this.currentIndex].time = ''
         this.scrollPullDown()
       },
@@ -237,7 +237,7 @@
         this.$refs.calendars.open();
       },
       copyWx() {
-        console.log('不复制了 直接关闭');
+        // console.log('不复制了 直接关闭');
         this.$refs.receivePopup.close()
         this.closeReceivePopup()
       },
@@ -258,7 +258,7 @@
       receiveOrder() {
         let user = uni.getStorageSync('user')
         this.isLoading = true
-        console.log(this.fileList1);
+        // console.log(this.fileList1);
         this.post({
           url: 'carshareorder/receive',
           data: {
@@ -268,7 +268,7 @@
             receiveUserWechatImg: this.fileList1[0].resWximg
           }
         }).then(res => {
-          console.log(res);
+          // console.log(res);
           this.clearWxImg()
           
           if(!this.returnCodeHandle(res.code,'订单已被接受或失效')){
@@ -285,7 +285,7 @@
           this.$refs.myorderdetailpopup.closePopup()
           this.$refs.receivePopup.open()
         }).catch(err => {
-          console.log('home page is', err);
+          // console.log('home page is', err);
           this.isRefresh = false
           this.$refs.message.show({
             type: 'error',
@@ -343,7 +343,7 @@
               this.otherAddressList = res.data.records
             }
           } else {
-            console.log('获取信息是的方式是触底分页加载');
+            // console.log('获取信息是的方式是触底分页加载');
             if (this.currentIndex == 0) {
               this.newSchoolList = [...this.newSchoolList, ...res.data.records]
             } else if (this.currentIndex == 1) {
@@ -356,9 +356,9 @@
 
           this.isRefresh = false
           this.list[this.currentIndex].isShowListloading = false
-          console.log('下拉刷新结束了');
+          // console.log('下拉刷新结束了');
         }).catch(err => {
-          console.log('home page is', err);
+          // console.log('home page is', err);
           this.isRefresh = false
           this.$refs.message.show({
             type: 'error',
@@ -377,7 +377,7 @@
         this.getOrderList()
       },
       scrollDown() {
-        console.log('滚动条到了底部 当前的indedx为', this.currentIndex);
+        // console.log('滚动条到了底部 当前的indedx为', this.currentIndex);
         const currentList = this.list[this.currentIndex];
         const ArrObj = {
           0 : 'newSchoolList',
@@ -403,7 +403,7 @@
       },
       clickCard(order) {
         this.currentOrder = order
-        console.log('点击了卡片当前选中改变了', this.currentOrder);
+        // console.log('点击了卡片当前选中改变了', this.currentOrder);
         // this.$refs.popup.open() // -----------------
         this.$refs.myorderdetailpopup.clickCard()
         this.popupShow = true
@@ -427,13 +427,13 @@
         uni.$once('refreshHomePage', () => {
           this.scrollPullDown()
         })
+        // this.change({index: 0,name: '濂溪校区'})
         this.simulateSwipeDown()
       },
       simulateSwipeDown() {
-
         if (!this.oneRefresh) {
           this.oneRefresh = true
-          console.log('首次进入页面 index 0 页面 自动下拉刷新',this.currentIndex);
+          // console.log('首次进入页面 index 0 页面 自动下拉刷新',this.currentIndex);
           this.change({
             index: 0,
             name: '濂溪校区'

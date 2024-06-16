@@ -213,6 +213,21 @@ var _default = {
     };
   },
   methods: {
+    onShareTimeline: function onShareTimeline() {
+      var result = {};
+      return result;
+    },
+    onShareAppMessage: function onShareAppMessage(e) {
+      console.log('调用了分享', e);
+      var result = {
+        title: '栀子花墙小程序',
+        // 分享标题，默认当前页面标题
+        path: '/pages/index/index',
+        // 分享路径，默认当前页面路径，需要带上参数，如：/pages/index/index?id=123&name=abc，其中id和name                                        是当前页面参数，123和abc是参数值，需要根据实际情况进行替换。
+        imageUrl: this.defaulthhttp + 'logo.jpg'
+      };
+      return result;
+    },
     WxLoginSuccess: function WxLoginSuccess() {
       this.isLoading = false;
       this.isLogin = true;
@@ -237,14 +252,14 @@ var _default = {
     wxLogin: function wxLogin() {
       var _this = this;
       this.isLoading = true;
-      console.log('调用了微信登录');
+      // console.log('调用了微信登录');
       wx.login({
         timeout: 5000,
         success: function success(res) {
           _this.post({
             url: "user/login?code=".concat(res.code)
           }).then(function (res2) {
-            console.log(res2);
+            // console.log(res2);
             if (res2.code == 200) {
               _this.info = res2.data;
               _this.WxLoginSuccess();
@@ -254,7 +269,7 @@ var _default = {
           });
         },
         fail: function fail(err) {
-          console.log('调用微信登录失败', err);
+          // console.log('调用微信登录失败', err);
         }
       });
     },
@@ -264,6 +279,7 @@ var _default = {
     },
     handleAgree: function handleAgree() {
       // 处理用户同意隐私协议的逻辑
+
       console.log('处理用户同意隐私协议的逻辑');
     },
     onTab: function onTab(index, item) {
@@ -505,7 +521,7 @@ var _default = {
     },
     toUserinfo: function toUserinfo() {
       if (!this.isLogin) return;
-      console.log(this.info);
+      // console.log(this.info);
       uni.navigateTo({
         url: '/subpkg/userinfo?userid=' + this.info.userid + '&openid=' + this.info.openid
       });
@@ -535,10 +551,10 @@ var _default = {
       });
     },
     mychooseavatar: function mychooseavatar(e) {
-      console.log(e);
+      // console.log(e);
     },
     getuserphone: function getuserphone(e) {
-      console.log(e);
+      // console.log(e);
     },
     toFeedback: function toFeedback() {
       if (!this.isLogin) {
@@ -568,7 +584,7 @@ var _default = {
       });
     },
     myonshow: function myonshow() {
-      console.log('my login 页面的show 触发了');
+      // console.log('my login 页面的show 触发了');
       var key = uni.getStorageSync('token');
       if (key == undefined || key == null || key == '') this.isLogin = false;else this.isLogin = true;
       this.info = uni.getStorageSync('user');
@@ -595,7 +611,7 @@ var _default = {
     wxLogin: function wxLogin() {
       var _this = this;
       this.isLoading = true;
-      console.log('调用了微信登录');
+      // console.log('调用了微信登录');
       wx.login({
         timeout: 5000,
         success: function success(res) {
@@ -612,7 +628,7 @@ var _default = {
           });
         },
         fail: function fail(err) {
-          console.log('调用微信登录失败', err);
+          // console.log('调用微信登录失败', err);
         }
       });
     }
@@ -621,10 +637,10 @@ var _default = {
     var _this2 = this;
     uni.checkSession({
       success: function success(res) {
-        console.log('验证session success', res);
+        // console.log('验证session success', res);
       },
       fail: function fail(err) {
-        console.log('验证session fail 自动登录微信', err);
+        // console.log('验证session fail 自动登录微信', err);
         _this2.wxLogin();
       }
     });
@@ -1110,14 +1126,14 @@ var _default = {
       }
     },
     chooseDateConfirm: function chooseDateConfirm(e) {
-      console.log(e.fulldate);
+      // console.log(e.fulldate);
       this.list[this.currentIndex].time = e.fulldate;
-      console.log('this.list[this.currentIndex].time', this.list[this.currentIndex].time);
-      console.log('点击确定 筛选日期');
+      // console.log('this.list[this.currentIndex].time', this.list[this.currentIndex].time);
+      // console.log('点击确定 筛选日期');
       this.scrollPullDown();
     },
     cancelCalendars: function cancelCalendars() {
-      console.log('点击取消 清空日期');
+      // console.log('点击取消 清空日期');
       this.list[this.currentIndex].time = '';
       this.scrollPullDown();
     },
@@ -1125,7 +1141,7 @@ var _default = {
       this.$refs.calendars.open();
     },
     copyWx: function copyWx() {
-      console.log('不复制了 直接关闭');
+      // console.log('不复制了 直接关闭');
       this.$refs.receivePopup.close();
       this.closeReceivePopup();
     },
@@ -1147,7 +1163,7 @@ var _default = {
       var _this = this;
       var user = uni.getStorageSync('user');
       this.isLoading = true;
-      console.log(this.fileList1);
+      // console.log(this.fileList1);
       this.post({
         url: 'carshareorder/receive',
         data: {
@@ -1157,7 +1173,7 @@ var _default = {
           receiveUserWechatImg: this.fileList1[0].resWximg
         }
       }).then(function (res) {
-        console.log(res);
+        // console.log(res);
         _this.clearWxImg();
         if (!_this.returnCodeHandle(res.code, '订单已被接受或失效')) {
           _this.popupShow = false;
@@ -1171,7 +1187,7 @@ var _default = {
         _this.$refs.myorderdetailpopup.closePopup();
         _this.$refs.receivePopup.open();
       }).catch(function (err) {
-        console.log('home page is', err);
+        // console.log('home page is', err);
         _this.isRefresh = false;
         _this.$refs.message.show({
           type: 'error',
@@ -1228,7 +1244,7 @@ var _default = {
             _this2.otherAddressList = res.data.records;
           }
         } else {
-          console.log('获取信息是的方式是触底分页加载');
+          // console.log('获取信息是的方式是触底分页加载');
           if (_this2.currentIndex == 0) {
             _this2.newSchoolList = [].concat((0, _toConsumableArray2.default)(_this2.newSchoolList), (0, _toConsumableArray2.default)(res.data.records));
           } else if (_this2.currentIndex == 1) {
@@ -1239,9 +1255,9 @@ var _default = {
         }
         _this2.isRefresh = false;
         _this2.list[_this2.currentIndex].isShowListloading = false;
-        console.log('下拉刷新结束了');
+        // console.log('下拉刷新结束了');
       }).catch(function (err) {
-        console.log('home page is', err);
+        // console.log('home page is', err);
         _this2.isRefresh = false;
         _this2.$refs.message.show({
           type: 'error',
@@ -1259,7 +1275,7 @@ var _default = {
       this.getOrderList();
     },
     scrollDown: function scrollDown() {
-      console.log('滚动条到了底部 当前的indedx为', this.currentIndex);
+      // console.log('滚动条到了底部 当前的indedx为', this.currentIndex);
       var currentList = this.list[this.currentIndex];
       var ArrObj = {
         0: 'newSchoolList',
@@ -1282,7 +1298,7 @@ var _default = {
     },
     clickCard: function clickCard(order) {
       this.currentOrder = order;
-      console.log('点击了卡片当前选中改变了', this.currentOrder);
+      // console.log('点击了卡片当前选中改变了', this.currentOrder);
       // this.$refs.popup.open() // -----------------
       this.$refs.myorderdetailpopup.clickCard();
       this.popupShow = true;
@@ -1306,12 +1322,13 @@ var _default = {
       uni.$once('refreshHomePage', function () {
         _this3.scrollPullDown();
       });
+      // this.change({index: 0,name: '濂溪校区'})
       this.simulateSwipeDown();
     },
     simulateSwipeDown: function simulateSwipeDown() {
       if (!this.oneRefresh) {
         this.oneRefresh = true;
-        console.log('首次进入页面 index 0 页面 自动下拉刷新', this.currentIndex);
+        // console.log('首次进入页面 index 0 页面 自动下拉刷新',this.currentIndex);
         this.change({
           index: 0,
           name: '濂溪校区'
@@ -1650,8 +1667,8 @@ var _default = {
       setTimeout(function () {
         return _this2.scrollPullDown();
       }, 500);
-      console.log('old  ', this.myOldScrollPosition);
-      console.log('new   ', this.myScrollPosition);
+      // console.log('old  ', this.myOldScrollPosition);
+      // console.log('new   ', this.myScrollPosition);
     },
     getShopList: function getShopList() {
       var _this3 = this;
@@ -1673,8 +1690,8 @@ var _default = {
           addressCodeArr: this.chooseAddArr()
         }
       }).then(function (res) {
-        console.log('商品请求返回', res);
-        console.log('商品请求返回值', res.data);
+        // console.log('商品请求返回',res);
+        // console.log('商品请求返回值', res.data);
         if (!_this3.returnCodeHandle(res.code)) {
           _this3.isRefresh = false;
           _this3.isShowListloading = false;
@@ -1701,7 +1718,7 @@ var _default = {
       this.isRefresh = true;
       this.pageNum = 1;
       //清空数据
-      console.log('清空数据');
+      // console.log('清空数据');
       this.list = [];
       this.$refs.myshopwaterfall.clearList();
       // debugger
@@ -1717,7 +1734,7 @@ var _default = {
         this.isShowListloading = true;
         this.getShopList();
       }
-      console.log('滑动到底部了');
+      // console.log('滑动到底部了');
     },
     myonload: function myonload() {
       this.scrollPullDown();
@@ -1727,7 +1744,7 @@ var _default = {
       this.scrollPullDown();
     },
     toSearch: function toSearch() {
-      console.log('点击搜索框');
+      // console.log('点击搜索框');
       if (this.searchText.trim() == '') {
         this.$refs.message.show({
           type: 'warning',

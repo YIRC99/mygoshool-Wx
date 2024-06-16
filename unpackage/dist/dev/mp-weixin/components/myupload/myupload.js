@@ -267,28 +267,28 @@ var _default = {
                 return _context.abrupt("return");
               case 3:
                 if (!(user.userWxImg != null && user.userWxImg != '')) {
-                  _context.next = 9;
+                  _context.next = 8;
                   break;
                 }
                 // 直接设置图片地址
-                console.log('不用请求直接获取上一次的微信图片');
+                // console.log('不用请求直接获取上一次的微信图片');
                 _this2.beforeImg = user.userWxImg;
                 _this2.showBefor = true;
-                _context.next = 14;
+                _context.next = 12;
                 break;
-              case 9:
-                _context.next = 11;
+              case 8:
+                _context.next = 10;
                 return _this2.get({
                   url: 'user/wxImg?userid=' + user.userid
                 });
-              case 11:
+              case 10:
                 res = _context.sent;
                 if (res.code == 200 && res.data != null) {
                   _this2.beforeImg = res.data;
                   _this2.showBefor = true;
                 }
-                console.log(res);
-              case 14:
+                // console.log(res);
+              case 12:
               case "end":
                 return _context.stop();
             }
@@ -328,9 +328,10 @@ var _default = {
           timeout: _this3.TimeOut,
           success: function success(res) {
             res = JSON.parse(res.data);
-            console.log('上传成功222', res.statusCode);
+            // console.log('上传成功222', res.statusCode);
+
             if (!_this3.returnCodeHandle(res.code)) {
-              console.log('代码执行到了这里');
+              // console.log('代码执行到了这里');
               resolve(400);
               return;
             }
@@ -365,7 +366,7 @@ var _default = {
                 });
                 console.log(_this4.fileList1);
                 _loop = function _loop(i) {
-                  console.log('还没有调用上传方法', lists);
+                  // console.log('还没有调用上传方法',lists);
                   uni.compressImage({
                     src: lists[i].url,
                     quality: 70,
@@ -376,12 +377,12 @@ var _default = {
                           while (1) {
                             switch (_context2.prev = _context2.next) {
                               case 0:
-                                console.log(res.tempFilePath);
-                                console.log('压缩完成了');
+                                // console.log(res.tempFilePath)
+                                // console.log('压缩完成了');
                                 lists[i].url = res.tempFilePath;
-                                _context2.next = 5;
+                                _context2.next = 3;
                                 return _this4.uploadFilePromise(lists[i].url);
-                              case 5:
+                              case 3:
                                 result = _context2.sent;
                                 item = _this4["fileList".concat(event.name)][fileListLen];
                                 if (result == 400) {
@@ -398,7 +399,7 @@ var _default = {
                                   }));
                                 }
                                 fileListLen++;
-                              case 9:
+                              case 7:
                               case "end":
                                 return _context2.stop();
                             }

@@ -72,7 +72,21 @@
     },
 
     methods: {
-      
+      onShareTimeline(){
+        let result = {
+          
+        }
+        return result
+      },
+      onShareAppMessage(e){
+        console.log('调用了分享',e);
+        let result = {
+          title: '栀子花墙小程序', // 分享标题，默认当前页面标题
+          path: '/pages/index/index', // 分享路径，默认当前页面路径，需要带上参数，如：/pages/index/index?id=123&name=abc，其中id和name                                        是当前页面参数，123和abc是参数值，需要根据实际情况进行替换。
+          imageUrl: this.defaulthhttp + 'logo.jpg'
+        }
+        return result
+      },
       WxLoginSuccess() {
         this.isLoading = false
         this.isLogin = true
@@ -94,14 +108,14 @@
       },
       wxLogin() {
         this.isLoading = true
-        console.log('调用了微信登录');
+        // console.log('调用了微信登录');
         wx.login({
           timeout: 5000,
           success: (res) => {
             this.post({
               url: `user/login?code=${res.code}`
             }).then(res2 => {
-              console.log(res2);
+              // console.log(res2);
               if (res2.code == 200) {
                 this.info = res2.data
                 this.WxLoginSuccess()
@@ -111,7 +125,7 @@
             })
           },
           fail(err) {
-            console.log('调用微信登录失败', err);
+            // console.log('调用微信登录失败', err);
           }
         })
       },
@@ -121,6 +135,7 @@
       },
       handleAgree() {
         // 处理用户同意隐私协议的逻辑
+        
         console.log('处理用户同意隐私协议的逻辑');
       },
       onTab(index, item) {

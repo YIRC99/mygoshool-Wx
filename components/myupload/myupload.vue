@@ -132,7 +132,7 @@
         if(user == '' || user == null)return  
         if(user.userWxImg != null && user.userWxImg != ''){
           // 直接设置图片地址
-          console.log('不用请求直接获取上一次的微信图片');
+          // console.log('不用请求直接获取上一次的微信图片');
           this.beforeImg = user.userWxImg
           this.showBefor = true
         }else{
@@ -142,7 +142,7 @@
             this.beforeImg = res.data
             this.showBefor = true
           }
-          console.log(res);
+          // console.log(res);
         }
       },
       fileList1Empty(){
@@ -176,10 +176,10 @@
             timeout: this.TimeOut,
             success: (res) => {
               res = JSON.parse(res.data)
-              console.log('上传成功222', res.statusCode);
+              // console.log('上传成功222', res.statusCode);
               
               if(!this.returnCodeHandle(res.code)){
-                console.log('代码执行到了这里');
+                // console.log('代码执行到了这里');
                 resolve(400)
                 return 
               }
@@ -209,13 +209,13 @@
         })
         console.log(this.fileList1);
         for (let i = 0; i < lists.length; i++) {
-          console.log('还没有调用上传方法',lists);
+          // console.log('还没有调用上传方法',lists);
           uni.compressImage({
             src: lists[i].url,
             quality: 70,
            success: async res => {
-              console.log(res.tempFilePath)
-              console.log('压缩完成了');
+              // console.log(res.tempFilePath)
+              // console.log('压缩完成了');
               lists[i].url = res.tempFilePath
               const result = await this.uploadFilePromise(lists[i].url)
               let item = this[`fileList${event.name}`][fileListLen]

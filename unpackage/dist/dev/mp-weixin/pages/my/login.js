@@ -185,7 +185,7 @@ var _default = {
     },
     toUserinfo: function toUserinfo() {
       if (!this.isLogin) return;
-      console.log(this.info);
+      // console.log(this.info);
       uni.navigateTo({
         url: '/subpkg/userinfo?userid=' + this.info.userid + '&openid=' + this.info.openid
       });
@@ -215,10 +215,10 @@ var _default = {
       });
     },
     mychooseavatar: function mychooseavatar(e) {
-      console.log(e);
+      // console.log(e);
     },
     getuserphone: function getuserphone(e) {
-      console.log(e);
+      // console.log(e);
     },
     toFeedback: function toFeedback() {
       if (!this.isLogin) {
@@ -248,7 +248,7 @@ var _default = {
       });
     },
     myonshow: function myonshow() {
-      console.log('my login 页面的show 触发了');
+      // console.log('my login 页面的show 触发了');
       var key = uni.getStorageSync('token');
       if (key == undefined || key == null || key == '') this.isLogin = false;else this.isLogin = true;
       this.info = uni.getStorageSync('user');
@@ -275,7 +275,7 @@ var _default = {
     wxLogin: function wxLogin() {
       var _this = this;
       this.isLoading = true;
-      console.log('调用了微信登录');
+      // console.log('调用了微信登录');
       wx.login({
         timeout: 5000,
         success: function success(res) {
@@ -292,7 +292,7 @@ var _default = {
           });
         },
         fail: function fail(err) {
-          console.log('调用微信登录失败', err);
+          // console.log('调用微信登录失败', err);
         }
       });
     }
@@ -301,10 +301,10 @@ var _default = {
     var _this2 = this;
     uni.checkSession({
       success: function success(res) {
-        console.log('验证session success', res);
+        // console.log('验证session success', res);
       },
       fail: function fail(err) {
-        console.log('验证session fail 自动登录微信', err);
+        // console.log('验证session fail 自动登录微信', err);
         _this2.wxLogin();
       }
     });

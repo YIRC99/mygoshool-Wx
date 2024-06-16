@@ -417,14 +417,14 @@ var _default = {
       }
     },
     chooseDateConfirm: function chooseDateConfirm(e) {
-      console.log(e.fulldate);
+      // console.log(e.fulldate);
       this.list[this.currentIndex].time = e.fulldate;
-      console.log('this.list[this.currentIndex].time', this.list[this.currentIndex].time);
-      console.log('点击确定 筛选日期');
+      // console.log('this.list[this.currentIndex].time', this.list[this.currentIndex].time);
+      // console.log('点击确定 筛选日期');
       this.scrollPullDown();
     },
     cancelCalendars: function cancelCalendars() {
-      console.log('点击取消 清空日期');
+      // console.log('点击取消 清空日期');
       this.list[this.currentIndex].time = '';
       this.scrollPullDown();
     },
@@ -432,7 +432,7 @@ var _default = {
       this.$refs.calendars.open();
     },
     copyWx: function copyWx() {
-      console.log('不复制了 直接关闭');
+      // console.log('不复制了 直接关闭');
       this.$refs.receivePopup.close();
       this.closeReceivePopup();
     },
@@ -454,7 +454,7 @@ var _default = {
       var _this = this;
       var user = uni.getStorageSync('user');
       this.isLoading = true;
-      console.log(this.fileList1);
+      // console.log(this.fileList1);
       this.post({
         url: 'carshareorder/receive',
         data: {
@@ -464,7 +464,7 @@ var _default = {
           receiveUserWechatImg: this.fileList1[0].resWximg
         }
       }).then(function (res) {
-        console.log(res);
+        // console.log(res);
         _this.clearWxImg();
         if (!_this.returnCodeHandle(res.code, '订单已被接受或失效')) {
           _this.popupShow = false;
@@ -478,7 +478,7 @@ var _default = {
         _this.$refs.myorderdetailpopup.closePopup();
         _this.$refs.receivePopup.open();
       }).catch(function (err) {
-        console.log('home page is', err);
+        // console.log('home page is', err);
         _this.isRefresh = false;
         _this.$refs.message.show({
           type: 'error',
@@ -535,7 +535,7 @@ var _default = {
             _this2.otherAddressList = res.data.records;
           }
         } else {
-          console.log('获取信息是的方式是触底分页加载');
+          // console.log('获取信息是的方式是触底分页加载');
           if (_this2.currentIndex == 0) {
             _this2.newSchoolList = [].concat((0, _toConsumableArray2.default)(_this2.newSchoolList), (0, _toConsumableArray2.default)(res.data.records));
           } else if (_this2.currentIndex == 1) {
@@ -546,9 +546,9 @@ var _default = {
         }
         _this2.isRefresh = false;
         _this2.list[_this2.currentIndex].isShowListloading = false;
-        console.log('下拉刷新结束了');
+        // console.log('下拉刷新结束了');
       }).catch(function (err) {
-        console.log('home page is', err);
+        // console.log('home page is', err);
         _this2.isRefresh = false;
         _this2.$refs.message.show({
           type: 'error',
@@ -566,7 +566,7 @@ var _default = {
       this.getOrderList();
     },
     scrollDown: function scrollDown() {
-      console.log('滚动条到了底部 当前的indedx为', this.currentIndex);
+      // console.log('滚动条到了底部 当前的indedx为', this.currentIndex);
       var currentList = this.list[this.currentIndex];
       var ArrObj = {
         0: 'newSchoolList',
@@ -589,7 +589,7 @@ var _default = {
     },
     clickCard: function clickCard(order) {
       this.currentOrder = order;
-      console.log('点击了卡片当前选中改变了', this.currentOrder);
+      // console.log('点击了卡片当前选中改变了', this.currentOrder);
       // this.$refs.popup.open() // -----------------
       this.$refs.myorderdetailpopup.clickCard();
       this.popupShow = true;
@@ -613,12 +613,13 @@ var _default = {
       uni.$once('refreshHomePage', function () {
         _this3.scrollPullDown();
       });
+      // this.change({index: 0,name: '濂溪校区'})
       this.simulateSwipeDown();
     },
     simulateSwipeDown: function simulateSwipeDown() {
       if (!this.oneRefresh) {
         this.oneRefresh = true;
-        console.log('首次进入页面 index 0 页面 自动下拉刷新', this.currentIndex);
+        // console.log('首次进入页面 index 0 页面 自动下拉刷新',this.currentIndex);
         this.change({
           index: 0,
           name: '濂溪校区'

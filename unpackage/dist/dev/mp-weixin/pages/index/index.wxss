@@ -409,7 +409,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  box-shadow: 5px 5px 11px #c3bfbf, -5px -5px 11px #ffffff;
+  box-shadow: 5px 5px 11px #c3bfbf, -5px -5px 110px #ffffff;
   font-size: 24rpx;
 }
 .totopBut image {

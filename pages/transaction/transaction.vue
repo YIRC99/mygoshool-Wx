@@ -127,8 +127,8 @@
           this.myScrollPosition = 0
         });
         setTimeout(() => this.scrollPullDown(), 500)
-        console.log('old  ', this.myOldScrollPosition);
-        console.log('new   ', this.myScrollPosition);
+        // console.log('old  ', this.myOldScrollPosition);
+        // console.log('new   ', this.myScrollPosition);
       },
       getShopList() {
         if (this.chooseAddArr().length == 0) {
@@ -150,8 +150,8 @@
             addressCodeArr: this.chooseAddArr()
           }
         }).then(res => {
-          console.log('商品请求返回',res);
-          console.log('商品请求返回值', res.data);
+          // console.log('商品请求返回',res);
+          // console.log('商品请求返回值', res.data);
            if (!this.returnCodeHandle(res.code)) {
             this.isRefresh = false
             this.isShowListloading = false
@@ -180,7 +180,7 @@
         this.isRefresh = true
         this.pageNum = 1
         //清空数据
-        console.log('清空数据');
+        // console.log('清空数据');
         this.list = []
         this.$refs.myshopwaterfall.clearList()
         // debugger
@@ -196,7 +196,7 @@
           this.isShowListloading = true
           this.getShopList()
         }
-        console.log('滑动到底部了');
+        // console.log('滑动到底部了');
       },
       myonload() {
         this.scrollPullDown()
@@ -206,7 +206,7 @@
         this.scrollPullDown()
       },
       toSearch() {
-        console.log('点击搜索框');
+        // console.log('点击搜索框');
         if (this.searchText.trim() == '') {
           this.$refs.message.show({
             type: 'warning',
@@ -242,7 +242,7 @@
     align-items: center;
     flex-direction: column;
    box-shadow:  5px 5px 11px #c3bfbf,
-                -5px -5px 11px #ffffff;
+                -5px -5px 110px #ffffff;
     font-size: 24rpx;
     image {
       width: 60rpx;

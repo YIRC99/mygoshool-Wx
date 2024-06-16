@@ -245,7 +245,7 @@ var _default = {
     },
     uploadFilePromise: function uploadFilePromise(url) {
       var _this2 = this;
-      console.log(url);
+      // console.log(url);
       return new Promise(function (resolve, reject) {
         var a = uni.uploadFile({
           url: _this2.http + 'common/upload?path=' + _this2.ImgRequestPath,
@@ -261,7 +261,8 @@ var _default = {
           timeout: _this2.TimeOut,
           success: function success(res) {
             res = JSON.parse(res.data);
-            console.log('上传成功', res);
+            // console.log('上传成功', res);
+
             if (!_this2.returnCodeHandle(res.code)) {
               console.log('代码执行到了这里');
               resolve(400);

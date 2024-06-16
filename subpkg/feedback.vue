@@ -51,6 +51,20 @@
       }
     },
     methods: {
+      onShareTimeline(){
+        let result = {
+          
+        }
+        return result
+      },
+      onShareAppMessage(e){
+        let result = {
+          title: '栀子花墙小程序', // 分享标题，默认当前页面标题
+          path: '/pages/index/index', // 分享路径，默认当前页面路径，需要带上参数，如：/pages/index/index?id=123&name=abc，其中id和name                                        是当前页面参数，123和abc是参数值，需要根据实际情况进行替换。
+          imageUrl: this.defaulthhttp + 'logo.jpg'
+        }
+        return result
+      },
       myonChange(e){
         console.log('子组件上传的回调',e);
         this.fileList1 = e
@@ -85,7 +99,7 @@
         
         // 调用组件内部的判断方法 检查是不是全部上传成功了
         let isupdate  = this.$refs.myimgupload.isAllupdate()
-        console.log('this.$refs.myimgupload',isupdate);
+        // console.log('this.$refs.myimgupload',isupdate);
         if(!isupdate){
           this.ispost = false
           return 
@@ -102,7 +116,7 @@
             reportType: this.isReportType
           }
         }).then(res => {
-          console.log('添加意见反馈的返回',res);
+          // console.log('添加意见反馈的返回',res);
           if(!this.returnCodeHandle(res.code,this.feedFail))return
           
           this.$refs.message.show({
@@ -115,7 +129,7 @@
           }, 1000)
 
         }).catch(err => {
-          console.log('信息修改错误', err);
+          // console.log('信息修改错误', err);
           this.$refs.message.show({
             type: 'error',
             msg: '网络开了点小差,请稍候重试吧',

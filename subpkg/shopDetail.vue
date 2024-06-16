@@ -1,9 +1,9 @@
 <template>
   <view class="page" style="padding-bottom: 30rpx;">
-    
+
     <view class="" style="background-color: #ffffff; width: 100vw; height: 1rpx;"></view>
 
-    <uni-card isShadow @click="toUserInfo" >
+    <uni-card isShadow @click="toUserInfo">
       <view class="myheaderbox">
         <view class="left">
           <image class="myavatar" :src="avahttp + userinfo.avatar" mode=""></image>
@@ -32,11 +32,11 @@
         <view class="">感兴趣 点击添加微信聊一聊</view>
       </view>
     </uni-card>
-    
-     <uni-card isShadow  v-show="showWxImg">
-      <view class="" style="display: flex; justify-content: space-between; align-items: center;" >
+
+    <uni-card isShadow v-show="showWxImg">
+      <view class="" style="display: flex; justify-content: space-between; align-items: center;">
         <view class="" style="display: flex; align-items: center;">
-          <image src="@/static/weixin.png" class="myicon" ></image>
+          <image src="@/static/weixin.png" class="myicon"></image>
           <view class="" style="margin-right: 20rpx;">长按微信二维码添加好友</view>
         </view>
         <view class="" @click="viewWximg">
@@ -44,23 +44,25 @@
         </view>
       </view>
     </uni-card>
-    
-     <quick-message ref="message"></quick-message>
-<zero-loading v-if="isLoading" type="circle" :mask="true" maskOpacity="0.1"></zero-loading>
+
+    <quick-message ref="message"></quick-message>
+    <zero-loading v-if="isLoading" type="circle" :mask="true" maskOpacity="0.1"></zero-loading>
   </view>
 </template>
 
 <script>
-   import mixin from '@/mixins/mixin.js'
-import { date } from '../uni_modules/uv-ui-tools/libs/function/test'
+  import mixin from '@/mixins/mixin.js'
+  import {
+    date
+  } from '../uni_modules/uv-ui-tools/libs/function/test'
   export default {
-     mixins: [mixin],
+    mixins: [mixin],
     data() {
       return {
         isLoading: false,
         showWxImg: false,
-        userinfo:{},
-        shop:{
+        userinfo: {},
+        shop: {
           address: '',
           browse: '',
           id: 0,
@@ -68,25 +70,39 @@ import { date } from '../uni_modules/uv-ui-tools/libs/function/test'
           wechatimg: ''
         },
         shopDetail: '',
-        shopImgList:[],
+        shopImgList: [],
         isToUserInfo: true
       }
     },
     methods: {
-      toUserInfo(){
-        console.log('userid',this.userinfo.userid);
-        console.log('openid',this.userinfo.openid);
-        if(this.isToUserInfo)
+      onShareTimeline(){
+        let result = {
+          
+        }
+        return result
+      },
+      onShareAppMessage(e) {
+        let result = {
+          title: '栀子花墙小程序', // 分享标题，默认当前页面标题
+          path: '/pages/index/index', // 分享路径，默认当前页面路径，需要带上参数，如：/pages/index/index?id=123&name=abc，其中id和name                                        是当前页面参数，123和abc是参数值，需要根据实际情况进行替换。
+          imageUrl: this.defaulthhttp + 'logo.jpg'
+        }
+        return result
+      },
+      toUserInfo() {
+        console.log('userid', this.userinfo.userid);
+        console.log('openid', this.userinfo.openid);
+        if (this.isToUserInfo)
           uni.redirectTo({
             url: '/subpkg/userinfo?userid=' + this.userinfo.userid + '&openid=' + this.userinfo.openid
           })
       },
-      viewWximg(){
+      viewWximg() {
         uni.previewImage({
           urls: [this.QRttp + this.shop.wechatimg]
         })
       },
-      clickWxImg(){
+      clickWxImg() {
         this.isLoading = true
         let timer = new Date().getTime()
         this.post({
@@ -94,8 +110,8 @@ import { date } from '../uni_modules/uv-ui-tools/libs/function/test'
           data: {
             id: this.shop.id
           }
-        }).then(res =>{
-          if(timer - new Date().getTime() < 500){
+        }).then(res => {
+          if (timer - new Date().getTime() < 500) {
             setTimeout(() => {
               this.isLoading = false
               console.log(res);
@@ -103,19 +119,19 @@ import { date } from '../uni_modules/uv-ui-tools/libs/function/test'
                 this.isRefresh = false
                 this.isShowListloading = false
                 return
-              }else{
+              } else {
                 this.showWxImg = true
               }
-            
-            },500)
-          }else{
+
+            }, 500)
+          } else {
             this.isLoading = false
-            if(res.code ==200){
+            if (res.code == 200) {
               this.showWxImg = true
             }
           }
-          
-          
+
+
         }).catch(err => {
           uni.hideLoading()
           this.isLoading = false
@@ -125,28 +141,28 @@ import { date } from '../uni_modules/uv-ui-tools/libs/function/test'
           })
         })
       },
-      viewImg(index){
+      viewImg(index) {
         uni.previewImage({
           urls: this.shopImgList.map(i => this.shophttp + i),
           current: index
         })
       },
-      browseAdd(){
+      browseAdd() {
         this.post({
           url: 'shop/addbrowse',
-          data:{
+          data: {
             id: this.shop.id
           }
         }).then(res => {
           console.log(res);
-           if(!this.returnCodeHandle(res.code,'请稍候重试吧~')){
-             this.shop.browse = 999999999999
-             return
-           }
+          if (!this.returnCodeHandle(res.code, '请稍候重试吧~')) {
+            this.shop.browse = 999999999999
+            return
+          }
           this.shop.browse = res.data
         })
       },
-      initData(){
+      initData() {
         this.shopImgList = this.shop.imgs.split(",")
         this.shopDetail = this.shop.detail
         let aa = {
@@ -156,7 +172,7 @@ import { date } from '../uni_modules/uv-ui-tools/libs/function/test'
         }
         this.shop.address = aa[this.shop.address]
       },
-      getUserInfo(openid){
+      getUserInfo(openid) {
         this.post({
           url: 'user/byopenid',
           data: {
@@ -164,8 +180,8 @@ import { date } from '../uni_modules/uv-ui-tools/libs/function/test'
           }
         }).then(res => {
           console.log(res);
-          if(!this.returnCodeHandle(res.code,'请稍候重试吧~'))return 
-          this.userinfo =  res.data
+          if (!this.returnCodeHandle(res.code, '请稍候重试吧~')) return
+          this.userinfo = res.data
         })
       }
     },
@@ -181,41 +197,43 @@ import { date } from '../uni_modules/uv-ui-tools/libs/function/test'
 </script>
 
 <style lang="scss">
-  .page{
+  .page {
     padding-bottom: 40rpx;
   }
-  
+
   .myicon {
     width: 40rpx;
     height: 40rpx;
     margin-right: 30rpx;
   }
-  
-  .WxBox{
+
+  .WxBox {
     display: flex;
     align-items: center;
     font-size: 36rpx;
+
     .myicon {
       width: 60rpx;
       height: 60rpx;
       margin-right: 30rpx;
     }
   }
-  
-  
-  
-  .priceAndbrowse{
+
+
+
+  .priceAndbrowse {
     display: flex;
     justify-content: space-between;
     padding-bottom: 20rpx;
-    .price{
+
+    .price {
       font-size: 40rpx;
       font-weight: bold;
       color: #F26666;
     }
   }
 
- 
+
 
   .myheaderbox {
     display: flex;

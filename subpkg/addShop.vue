@@ -136,9 +136,23 @@
       }
     },
     methods: {
+      onShareTimeline(){
+        let result = {
+          
+        }
+        return result
+      },
+      onShareAppMessage(e){
+        let result = {
+          title: '栀子花墙小程序', // 分享标题，默认当前页面标题
+          path: '/pages/index/index', // 分享路径，默认当前页面路径，需要带上参数，如：/pages/index/index?id=123&name=abc，其中id和name                                        是当前页面参数，123和abc是参数值，需要根据实际情况进行替换。
+          imageUrl: this.defaulthhttp + 'logo.jpg'
+        }
+        return result
+      },
       differenceTime(timeString1, timeString2) {
-        console.log('将传入的时间字符串转换为 Date 对象11',timeString1);
-        console.log('将传入的时间字符串转换为 Date 对象22',timeString2);
+        // console.log('将传入的时间字符串转换为 Date 对象11',timeString1);
+        // console.log('将传入的时间字符串转换为 Date 对象22',timeString2);
         // 将传入的时间字符串转换为 Date 对象
         var date1 = new Date(timeString1);
         var date2 = new Date(timeString2);
@@ -146,7 +160,7 @@
         var timeDifference = Math.abs(date2.getTime() - date1.getTime());
         // 将毫秒数差值转换为天数
         var daysDifference = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
-        console.log('计算成功', daysDifference);
+        // console.log('计算成功', daysDifference);
         return daysDifference;
       },
       chooseCancelTime(index) {
@@ -175,7 +189,7 @@
       },
       joinImgPath(arr) {
         let resultPath = ''
-        console.log('for 循环之前', arr);
+        // console.log('for 循环之前', arr);
         arr.forEach(i => {
           console.log(i.resWximg);
           if (resultPath != '') {
@@ -229,7 +243,7 @@
 
 
         }).catch(err => {
-          console.error('捕获到了错误', err);
+          // console.error('捕获到了错误', err);
           this.isLoading = false
           this.ispost = false
           this.$refs.message.show({
@@ -263,13 +277,13 @@
         }
         //调用子组件判空方法
         let isenpty = this.$refs.myimgupload.isEnpty()
-        console.log('调用子组件判空方法', isenpty);
+        // console.log('调用子组件判空方法', isenpty);
         if (!isenpty) {
           return false
         }
         // 调用组件内部的判断方法 检查是不是全部上传成功了
         let isupdate = this.$refs.myimgupload.isAllupdate()
-        console.log('调用子组件判断上传状态', isupdate);
+        // console.log('调用子组件判断上传状态', isupdate);
         if (!isupdate) {
           return false
         }
@@ -325,7 +339,7 @@
       },
       myonChange(e) {
         this.fileList1 = e
-        console.log('子组件上传的回调', this.fileList1);
+        // console.log('子组件上传的回调', this.fileList1);
       },
       radioClick(name) {
         console.log(name);
@@ -340,10 +354,10 @@
         this.$refs.AddressPicker.open();
       },
       confirm(e) {
-        console.log(e);
+        // console.log(e);
         this.dealAdd = e.value[0]
         this.chooseAddressIndex = e.indexs[0]
-        console.log('this.chooseAddressIndex', this.chooseAddressIndex);
+        // console.log('this.chooseAddressIndex', this.chooseAddressIndex);
       },
     }
   }
