@@ -4,7 +4,7 @@
 
 简洁的干净的UI设计, 完善的功能, 以及自动的内容审核,完善的前后和管理端, 微信模板通知,在便利的同时也可以用来学习
 
-![输入图片说明](src/main/resources/static/default/logo.jpg)
+![输入图片说明](https://yirc99.cn/api/common/download?path=default&name=logo.jpg)
 
 
 ## 小程序端介绍
@@ -52,5 +52,5 @@ git clone https://gitee.com/yirc99/mygoschool-server.git
 
 ## 项目图片
 
-![输入图片说明](src/main/resources/static/default/11.png)![输入图片说明](src/main/resources/static/22.png)
+![输入图片说明](https://yirc99.cn/api/common/download?path=default&name=jiesao1.png)![输入图片说明](https://yirc99.cn/api/common/download?path=default&name=jiesao2.png)
 
