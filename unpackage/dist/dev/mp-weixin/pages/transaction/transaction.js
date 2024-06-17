@@ -270,6 +270,9 @@ var _default = {
       uni.$once('refreshTransactionPage', function () {
         _this.scrollPullDown();
       });
+      if (this.list.length == 0) {
+        this.scrollPullDown();
+      }
     },
     recoverPlaceholder: function recoverPlaceholder() {
       this.myplaceholder = '搜索';

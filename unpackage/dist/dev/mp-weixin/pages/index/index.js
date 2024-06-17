@@ -190,18 +190,18 @@ var _default = {
       tabIndex: 0,
       items: [{
         icon: {
-          src: __webpack_require__(/*! @/static/chushou.png */ 137),
-          width: 30,
-          height: 30
-        },
-        text: '闲置交易'
-      }, {
-        icon: {
           src: __webpack_require__(/*! @/static/carIcon2.png */ 138),
           width: 30,
           height: 30
         },
         text: '拼车广场'
+      }, {
+        icon: {
+          src: __webpack_require__(/*! @/static/chushou.png */ 137),
+          width: 30,
+          height: 30
+        },
+        text: '闲置交易'
       }, {
         icon: {
           src: __webpack_require__(/*! @/static/notice (3).png */ 139),
@@ -279,7 +279,7 @@ var _default = {
     },
     handleAgree: function handleAgree() {
       // 处理用户同意隐私协议的逻辑
-
+      this.wxLogin();
       console.log('处理用户同意隐私协议的逻辑');
     },
     onTab: function onTab(index, item) {
@@ -290,29 +290,31 @@ var _default = {
           title: '我的'
         });
         this.$refs.mypage.myonshow();
-      } else if (index == 1) {
+      } else if (index == 0) {
         uni.setNavigationBarTitle({
           title: '拼车广场'
         });
         this.$refs.homepage.myonshow();
-      } else if (index == 0) {
+        console.log('调用 onshow', index);
+      } else if (index == 1) {
         uni.setNavigationBarTitle({
           title: '闲置交易'
         });
         this.$refs.transactionpage.myonshow();
+        console.log('调用 onshow', index);
       }
     },
     myHide: function myHide(tabIndex, index) {
       // 页面上的hide方法就在这里定义
       if (tabIndex == 0 && index != 0) {
-        this.$refs.transactionpage.myonhide();
-      } else if (tabIndex == 1 && index != 1) {
         this.$refs.homepage.myonhide();
+      } else if (tabIndex == 1 && index != 1) {
+        this.$refs.transactionpage.myonhide();
       } else if (tabIndex == 2 && index != 2) {}
     }
   },
   mounted: function mounted() {
-    if (this.tabIndex == 0) {
+    if (this.tabIndex == 1) {
       this.$refs.transactionpage.myonload();
     }
   },
@@ -1641,6 +1643,9 @@ var _default = {
       uni.$once('refreshTransactionPage', function () {
         _this.scrollPullDown();
       });
+      if (this.list.length == 0) {
+        this.scrollPullDown();
+      }
     },
     recoverPlaceholder: function recoverPlaceholder() {
       this.myplaceholder = '搜索';

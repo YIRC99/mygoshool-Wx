@@ -84,7 +84,7 @@
         columns: [
           ['濂溪校区', '鹤问湖校区', '其他']
         ],
-        shopPrice: '',
+        shopPrice: '0.00',
         modalText: '',
         isFree: false,
         chooseTimeIndex: 0,

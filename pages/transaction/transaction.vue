@@ -104,6 +104,9 @@
         uni.$once('refreshTransactionPage',() =>{
           this.scrollPullDown()
         })
+        if(this.list.length == 0){
+          this.scrollPullDown()
+        }
       },
       recoverPlaceholder(){
         this.myplaceholder = '搜索'

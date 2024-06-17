@@ -329,7 +329,7 @@ var _default = {
           success: function success(res) {
             res = JSON.parse(res.data);
             // console.log('上传成功222', res.statusCode);
-
+            // console.log('文件上传的返回值',res);
             if (!_this3.returnCodeHandle(res.code)) {
               // console.log('代码执行到了这里');
               resolve(400);
