@@ -298,7 +298,6 @@
         console.log(e);
         this.currentIndex = e.index
       },
-      
       getAppriseByUserid() {
         this.post({
           url: 'apprise/byuserid',

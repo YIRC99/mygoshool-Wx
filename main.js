@@ -4,7 +4,8 @@ import CryptoJS from 'crypto-js';
 
 let account = uni.getAccountInfoSync()
 console.log('获取小程序版本', account.miniProgram.envVersion);
-let devHttp = 'http://192.168.243.211:33088/' // 开发环境
+// let devHttp = 'http://192.168.243.211:33088/' // 开发环境
+let devHttp = 'https://yirc99.cn/api/' // 开发环境
 let trialHttp = 'https://yirc99.cn/api/' // 体验环境
 let releaseHttp = 'https://yirc99.cn/api/' // 正式环境
 let http;

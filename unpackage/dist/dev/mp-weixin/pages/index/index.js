@@ -190,14 +190,14 @@ var _default = {
       tabIndex: 0,
       items: [{
         icon: {
-          src: __webpack_require__(/*! @/static/carIcon2.png */ 138),
+          src: __webpack_require__(/*! @/static/carIcon2.png */ 137),
           width: 30,
           height: 30
         },
         text: '拼车广场'
       }, {
         icon: {
-          src: __webpack_require__(/*! @/static/chushou.png */ 137),
+          src: __webpack_require__(/*! @/static/chushou.png */ 138),
           width: 30,
           height: 30
         },
@@ -231,14 +231,11 @@ var _default = {
     WxLoginSuccess: function WxLoginSuccess() {
       this.isLoading = false;
       this.isLogin = true;
-      uni.setStorageSync('token', this.info.openid);
+      uni.setStorageSync('token', this.info.token);
       uni.setStorageSync('user', this.info);
       this.$refs.message.show({
         type: 'success',
-        //String 默认default
-        msg: '登录成功',
-        //String 显示内容 *
-        iconSize: 16 //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
+        msg: '登录成功'
       });
     },
     WxLoginFail: function WxLoginFail() {

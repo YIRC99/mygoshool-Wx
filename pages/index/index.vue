@@ -88,25 +88,24 @@
         }
         return result
       },
-      WxLoginSuccess() {
-        this.isLoading = false
-        this.isLogin = true
-        uni.setStorageSync('token', this.info.openid)
-        uni.setStorageSync('user', this.info)
-        this.$refs.message.show({
-          type: 'success', //String 默认default
-          msg: '登录成功', //String 显示内容 *
-          iconSize: 16, //Number 自定义icon大小(单位px 默认16 设置后会覆盖自定义样式里的设置优先级最高)
-        })
-      },
-      WxLoginFail() {
-        this.isLoading = false
-        this.$refs.toast.show({
-          type: 'error',
-          message: "登录失败,请稍重试",
-          duration: 1500
-        })
-      },
+     WxLoginSuccess() {
+       this.isLoading = false
+       this.isLogin = true
+       uni.setStorageSync('token', this.info.token)
+       uni.setStorageSync('user', this.info)
+       this.$refs.message.show({
+           type: 'success', 
+           msg: '登录成功', 
+       })
+     },
+     WxLoginFail() {
+       this.isLoading = false
+       this.$refs.toast.show({
+         type: 'error',
+         message: "登录失败,请稍重试",
+         duration: 1500
+       })
+     },
       wxLogin() {
         this.isLoading = true
         // console.log('调用了微信登录');

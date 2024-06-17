@@ -31,6 +31,7 @@ npm install
 图片自动检测使用雅虎开源的NSFW模型`opennsfw2`配合python一起调用  数据加密采用AES加密CBC模式 还有`mybatis plus`
 
 python版本为` 3.10.11`  
+### 其中python的代码我放在java的resource中了 就叫testWhile.py 使用的时候去yml文件中改一下路径即可
 
 附上服务端开源地址
 

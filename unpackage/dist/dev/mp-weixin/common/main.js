@@ -26,7 +26,8 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 var account = uni.getAccountInfoSync();
 console.log('获取小程序版本', account.miniProgram.envVersion);
-var devHttp = 'http://192.168.243.211:33088/'; // 开发环境
+// let devHttp = 'http://192.168.243.211:33088/' // 开发环境
+var devHttp = 'https://yirc99.cn/api/'; // 开发环境
 var trialHttp = 'https://yirc99.cn/api/'; // 体验环境
 var releaseHttp = 'https://yirc99.cn/api/'; // 正式环境
 var http;
