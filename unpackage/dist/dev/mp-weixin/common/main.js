@@ -24,16 +24,31 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 // @ts-ignore
 wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
-var http = 'http://192.168.243.211:33088/'; //手机热点
-// const http = 'https://yirc99.cn/api/' //服务器
-// const http = 'http://192.168.2.177:33088/' //酒店
-// const http = 'http://10.16.60.53:33088/' //305wifi
-// const http = 'http://192.168.1.14:33088/' //wifi
+var account = uni.getAccountInfoSync();
+console.log('获取小程序版本', account.miniProgram.envVersion);
+var devHttp = 'http://192.168.243.211:33088/'; // 开发环境
+var trialHttp = 'https://yirc99.cn/api/'; // 体验环境
+var releaseHttp = 'https://yirc99.cn/api/'; // 正式环境
+var http;
+// 生产环境与测试环境接口地址不同，请根据实际情况修改。
+if (account.miniProgram.envVersion == 'develop') {
+  http = devHttp;
+} else if (account.miniProgram.envVersion == 'release') {
+  http = releaseHttp;
+} else {
+  http = trialHttp;
+}
+
+// let http = 'http://192.168.243.211:33088/' //手机热点
+// let http = 'https://yirc99.cn/api/' //服务器
+// let http = 'http://192.168.2.177:33088/' //酒店
+// let http = 'http://10.16.60.53:33088/' //305wifi
+// let http = 'http://192.168.1.14:33088/' //wifi
 
 var myOutTime = 5000;
+_vue.default.prototype.http = http;
 _vue.default.prototype.avahttp = http + 'common/download?path=avatar&name=';
 _vue.default.prototype.QRttp = http + 'common/download?path=QRcode&name=';
-_vue.default.prototype.http = http;
 _vue.default.prototype.MyAES = _aes.default;
 _vue.default.prototype.hoursTominute = function (str) {
   var hour = str.split(':')[0];

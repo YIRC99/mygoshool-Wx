@@ -211,7 +211,8 @@ var _default = {
   mixins: [_mixin.default],
   data: function data() {
     return {
-      notiveList: []
+      notiveList: [],
+      version: '1.0.0'
     };
   },
   methods: {
@@ -264,6 +265,8 @@ var _default = {
   },
   onLoad: function onLoad() {
     this.getNotice();
+    var account = uni.getAccountInfoSync();
+    this.version = account.miniProgram.version == '' ? '1.0.0' : account.miniProgram.version;
   }
 };
 exports.default = _default;

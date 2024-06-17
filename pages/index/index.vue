@@ -152,13 +152,11 @@
             title: '拼车广场'
           })
           this.$refs.homepage.myonshow()
-          console.log('调用 onshow',index);
         }else if (index == 1) {
           uni.setNavigationBarTitle({
             title: '闲置交易'
           })
           this.$refs.transactionpage.myonshow()
-          console.log('调用 onshow',index);
         }
 
       },

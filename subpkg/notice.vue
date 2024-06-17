@@ -8,7 +8,7 @@
     <view class="my-top-box">
       <image :src="defaulthhttp + 'logo.jpg'"></image>
       <view class="mytext">栀子花墙</view>
-      <view class="myversion">Version: 1.0.0</view>
+      <view class="myversion">Version: {{version}}</view>
     </view>
 
     <uv-collapse accordion :border="false">
@@ -36,7 +36,8 @@
     mixins: [mixin],
     data() {
       return {
-        notiveList: []
+        notiveList: [],
+        version: '1.0.0'
       };
     },
     methods: {
@@ -86,6 +87,8 @@
     },
     onLoad() {
       this.getNotice()
+      let account = uni.getAccountInfoSync()
+      this.version = account.miniProgram.version == '' ? '1.0.0' : account.miniProgram.version
     }
   }
 </script>
