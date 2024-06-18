@@ -302,10 +302,7 @@ var _default = {
       }).catch(function (err) {
         uni.hideLoading();
         _this.isLoading = false;
-        _this.$refs.message.show({
-          type: 'error',
-          msg: '网络开了点小差,请稍候重试吧'
-        });
+        _this.returnCodeHandle(err.code);
       });
     },
     viewImg: function viewImg(index) {
@@ -325,8 +322,8 @@ var _default = {
           id: this.shop.id
         }
       }).then(function (res) {
-        console.log(res);
-        if (!_this3.returnCodeHandle(res.code, '请稍候重试吧~')) {
+        console.log('--------------------------', res);
+        if (!_this3.returnCodeHandle(res.code)) {
           _this3.shop.browse = 999999999999;
           return;
         }

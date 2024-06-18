@@ -1,22 +1,25 @@
 import App from './App'
 import MyAES from '@/aes/aes'
+import MyIp from '@/common/myIp.js'
 import CryptoJS from 'crypto-js';
 
-let account = uni.getAccountInfoSync()
-console.log('获取小程序版本', account.miniProgram.envVersion);
+// let account = uni.getAccountInfoSync()
+// console.log('获取小程序版本', account.miniProgram.envVersion);
 // let devHttp = 'http://192.168.243.211:33088/' // 开发环境
-let devHttp = 'https://yirc99.cn/api/' // 开发环境
-let trialHttp = 'https://yirc99.cn/api/' // 体验环境
-let releaseHttp = 'https://yirc99.cn/api/' // 正式环境
-let http;
-// 生产环境与测试环境接口地址不同，请根据实际情况修改。
-if (account.miniProgram.envVersion == 'develop') {
-   http = devHttp
-} else if (account.miniProgram.envVersion == 'release') {
-   http = releaseHttp
-} else {
-   http = trialHttp
-}
+// // let devHttp = 'https://yirc99.cn/api/' // 开发环境
+// let trialHttp = 'https://yirc99.cn/api/' // 体验环境
+// let releaseHttp = 'https://yirc99.cn/api/' // 正式环境
+// let http;
+// // 生产环境与测试环境接口地址不同，请根据实际情况修改。
+// if (account.miniProgram.envVersion == 'develop') {
+//   http = devHttp
+// } else if (account.miniProgram.envVersion == 'release') {
+//   http = releaseHttp
+// } else {
+//   http = trialHttp
+// }
+
+let http = MyIp.getIp()
 
 
 
@@ -52,6 +55,8 @@ Vue.prototype.subYear = (str) => {
   return `${month}-${day} ${hour}:${minute}`;
 };
 
+
+
 Vue.prototype.get = (opt) => {
   return new Promise((a, b) => {
     uni.request({
@@ -62,11 +67,18 @@ Vue.prototype.get = (opt) => {
       },
       timeout: myOutTime,
       data: opt.data,
-      success: res => {
-        if (res.data.code == 200)
-          res.data.data = MyAES.decrypt(res.data.data)
-        a(res.data)
-      },
+     success: async res => {
+       if (res.data.code == 200)
+         res.data.data = await MyAES.decrypt(res.data.data)
+         
+       if (res.data.data == null) {
+         res.data.code = 504
+         // console.log('---------------------------- AES',{code: res.data.code,msg: 'AES解密错误'}  );
+         b({code: 504,msg: 'AES解密错误'})
+         return
+       }
+       a(res.data)
+     },
       fail: (err) => {
         b(err.errMsg)
         console.log('get 请求失败了', err);
@@ -85,9 +97,16 @@ Vue.prototype.put = (opt) => {
       },
       timeout: myOutTime,
       data: opt.data,
-      success: res => {
+      success: async res => {
         if (res.data.code == 200)
-          res.data.data = MyAES.decrypt(res.data.data)
+          res.data.data = await MyAES.decrypt(res.data.data)
+          
+        if (res.data.data == null) {
+          res.data.code = 504
+          // console.log('---------------------------- AES',{code: res.data.code,msg: 'AES解密错误'}  );
+          b({code: 504,msg: 'AES解密错误'})
+          return
+        }
         a(res.data)
       },
       fail: (err) => {
@@ -108,9 +127,15 @@ Vue.prototype.post = (opt) => {
       },
       timeout: myOutTime,
       data: opt.data,
-      success: res => {
+      success: async res => {
         if (res.data.code == 200)
-          res.data.data = MyAES.decrypt(res.data.data)
+          res.data.data = await MyAES.decrypt(res.data.data)
+          
+        if (res.data.data == null) {
+          // console.log('---------------------------- AES',{code: res.data.code,msg: 'AES解密错误'}  );
+          b({code: 504,msg: 'AES解密错误'})
+          return
+        }
         a(res.data)
       },
       fail: (err) => {
@@ -121,6 +146,10 @@ Vue.prototype.post = (opt) => {
     });
   })
 }
+
+
+
+
 
 Vue.filter('fromLocalDateTime', (arr) => {
   if (arr == undefined) return ''

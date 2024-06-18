@@ -306,13 +306,9 @@ var _default = {
         }, 1000);
       }).catch(function (err) {
         // console.log('信息修改错误', err);
-        _this.$refs.message.show({
-          type: 'error',
-          msg: '网络开了点小差,请稍候重试吧',
-          iconSize: 16
-        });
         _this.ispost = false;
         _this.isloading = false;
+        _this.returnCodeHandle(err.code);
       });
     }
   },

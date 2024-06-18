@@ -11,11 +11,14 @@
 /* WEBPACK VAR INJECTION */(function(wx, uni, createApp) {
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 30));
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
 var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 32));
 __webpack_require__(/*! uni-pages */ 26);
 var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ 27));
 var _aes = _interopRequireDefault(__webpack_require__(/*! @/aes/aes */ 36));
+var _myIp = _interopRequireDefault(__webpack_require__(/*! @/common/myIp.js */ 760));
 var _cryptoJs = _interopRequireDefault(__webpack_require__(/*! crypto-js */ 37));
 var _uvUiTools = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/uv-ui-tools */ 74));
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 25));
@@ -24,21 +27,23 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 // @ts-ignore
 wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
-var account = uni.getAccountInfoSync();
-console.log('获取小程序版本', account.miniProgram.envVersion);
+// let account = uni.getAccountInfoSync()
+// console.log('获取小程序版本', account.miniProgram.envVersion);
 // let devHttp = 'http://192.168.243.211:33088/' // 开发环境
-var devHttp = 'https://yirc99.cn/api/'; // 开发环境
-var trialHttp = 'https://yirc99.cn/api/'; // 体验环境
-var releaseHttp = 'https://yirc99.cn/api/'; // 正式环境
-var http;
-// 生产环境与测试环境接口地址不同，请根据实际情况修改。
-if (account.miniProgram.envVersion == 'develop') {
-  http = devHttp;
-} else if (account.miniProgram.envVersion == 'release') {
-  http = releaseHttp;
-} else {
-  http = trialHttp;
-}
+// // let devHttp = 'https://yirc99.cn/api/' // 开发环境
+// let trialHttp = 'https://yirc99.cn/api/' // 体验环境
+// let releaseHttp = 'https://yirc99.cn/api/' // 正式环境
+// let http;
+// // 生产环境与测试环境接口地址不同，请根据实际情况修改。
+// if (account.miniProgram.envVersion == 'develop') {
+//   http = devHttp
+// } else if (account.miniProgram.envVersion == 'release') {
+//   http = releaseHttp
+// } else {
+//   http = trialHttp
+// }
+
+var http = _myIp.default.getIp();
 
 // let http = 'http://192.168.243.211:33088/' //手机热点
 // let http = 'https://yirc99.cn/api/' //服务器
@@ -81,10 +86,46 @@ _vue.default.prototype.get = function (opt) {
       },
       timeout: myOutTime,
       data: opt.data,
-      success: function success(res) {
-        if (res.data.code == 200) res.data.data = _aes.default.decrypt(res.data.data);
-        a(res.data);
-      },
+      success: function () {
+        var _success = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(res) {
+          return _regenerator.default.wrap(function _callee$(_context) {
+            while (1) {
+              switch (_context.prev = _context.next) {
+                case 0:
+                  if (!(res.data.code == 200)) {
+                    _context.next = 4;
+                    break;
+                  }
+                  _context.next = 3;
+                  return _aes.default.decrypt(res.data.data);
+                case 3:
+                  res.data.data = _context.sent;
+                case 4:
+                  if (!(res.data.data == null)) {
+                    _context.next = 8;
+                    break;
+                  }
+                  res.data.code = 504;
+                  // console.log('---------------------------- AES',{code: res.data.code,msg: 'AES解密错误'}  );
+                  b({
+                    code: 504,
+                    msg: 'AES解密错误'
+                  });
+                  return _context.abrupt("return");
+                case 8:
+                  a(res.data);
+                case 9:
+                case "end":
+                  return _context.stop();
+              }
+            }
+          }, _callee);
+        }));
+        function success(_x) {
+          return _success.apply(this, arguments);
+        }
+        return success;
+      }(),
       fail: function fail(err) {
         b(err.errMsg);
         console.log('get 请求失败了', err);
@@ -103,10 +144,46 @@ _vue.default.prototype.put = function (opt) {
       },
       timeout: myOutTime,
       data: opt.data,
-      success: function success(res) {
-        if (res.data.code == 200) res.data.data = _aes.default.decrypt(res.data.data);
-        a(res.data);
-      },
+      success: function () {
+        var _success2 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2(res) {
+          return _regenerator.default.wrap(function _callee2$(_context2) {
+            while (1) {
+              switch (_context2.prev = _context2.next) {
+                case 0:
+                  if (!(res.data.code == 200)) {
+                    _context2.next = 4;
+                    break;
+                  }
+                  _context2.next = 3;
+                  return _aes.default.decrypt(res.data.data);
+                case 3:
+                  res.data.data = _context2.sent;
+                case 4:
+                  if (!(res.data.data == null)) {
+                    _context2.next = 8;
+                    break;
+                  }
+                  res.data.code = 504;
+                  // console.log('---------------------------- AES',{code: res.data.code,msg: 'AES解密错误'}  );
+                  b({
+                    code: 504,
+                    msg: 'AES解密错误'
+                  });
+                  return _context2.abrupt("return");
+                case 8:
+                  a(res.data);
+                case 9:
+                case "end":
+                  return _context2.stop();
+              }
+            }
+          }, _callee2);
+        }));
+        function success(_x2) {
+          return _success2.apply(this, arguments);
+        }
+        return success;
+      }(),
       fail: function fail(err) {
         b(err.errMsg);
         console.log('put 请求失败了', err);
@@ -125,10 +202,45 @@ _vue.default.prototype.post = function (opt) {
       },
       timeout: myOutTime,
       data: opt.data,
-      success: function success(res) {
-        if (res.data.code == 200) res.data.data = _aes.default.decrypt(res.data.data);
-        a(res.data);
-      },
+      success: function () {
+        var _success3 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee3(res) {
+          return _regenerator.default.wrap(function _callee3$(_context3) {
+            while (1) {
+              switch (_context3.prev = _context3.next) {
+                case 0:
+                  if (!(res.data.code == 200)) {
+                    _context3.next = 4;
+                    break;
+                  }
+                  _context3.next = 3;
+                  return _aes.default.decrypt(res.data.data);
+                case 3:
+                  res.data.data = _context3.sent;
+                case 4:
+                  if (!(res.data.data == null)) {
+                    _context3.next = 7;
+                    break;
+                  }
+                  // console.log('---------------------------- AES',{code: res.data.code,msg: 'AES解密错误'}  );
+                  b({
+                    code: 504,
+                    msg: 'AES解密错误'
+                  });
+                  return _context3.abrupt("return");
+                case 7:
+                  a(res.data);
+                case 8:
+                case "end":
+                  return _context3.stop();
+              }
+            }
+          }, _callee3);
+        }));
+        function success(_x3) {
+          return _success3.apply(this, arguments);
+        }
+        return success;
+      }(),
       fail: function fail(err) {
         b(err.errMsg);
         console.log('post 请求失败了', err);

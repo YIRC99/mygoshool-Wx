@@ -13,13 +13,6 @@
 
     },
     async beforeCreate() {
-      // let account = uni.getAccountInfoSync()
-      // console.log('获取小程序版本',account.miniProgram.envVersion);
-      // //设置开发环境地址
-      // let devHttp = 'http://192.168.243.211:33088/'
-      // // 生产环境与测试环境接口地址不同，请根据实际情况修改。
-      // this.http = account.miniProgram.envVersion == 'release' ? 'https://yirc99.cn/api/' : devHttp
-      
       let res = await uni.request({
         url: this.http + 'common/AESKey',
         method: 'POST'

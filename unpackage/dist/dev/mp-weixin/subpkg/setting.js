@@ -284,10 +284,7 @@ var _default = {
         }, 1000);
       }).catch(function (err) {
         console.log('信息修改错误', err);
-        _this3.$refs.message.show({
-          type: 'error',
-          msg: '网络开了点小差,请稍候重试吧'
-        });
+        _this3.returnCodeHandle(err.code);
         _this3.isloading = false;
       });
     },

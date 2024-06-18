@@ -472,10 +472,7 @@ var _default = {
       }).catch(function (err) {
         uni.hideLoading();
         _this.isLoading = false;
-        _this.$refs.message.show({
-          type: 'error',
-          msg: '网络开了点小差,请稍候重试吧'
-        });
+        _this.returnCodeHandle(err.code);
       });
     },
     deleteShop: function deleteShop(item) {
@@ -533,10 +530,7 @@ var _default = {
         }
       }).catch(function (err) {
         _this3.isLoading = false;
-        _this3.$refs.message.show({
-          type: 'error',
-          msg: '网络开了点小差,请稍候重试吧'
-        });
+        _this3.returnCodeHandle(err.code);
       });
     },
     ToUpdateCarOrder: function ToUpdateCarOrder() {
@@ -581,10 +575,7 @@ var _default = {
       }).catch(function (err) {
         uni.hideLoading();
         _this4.isLoading = false;
-        _this4.$refs.message.show({
-          type: 'error',
-          msg: '网络开了点小差,请稍候重试吧'
-        });
+        _this4.returnCodeHandle(err.code);
       });
     },
     deleteOrder: function deleteOrder() {
@@ -653,10 +644,7 @@ var _default = {
         // console.log('home page is', err);
         _this6.clickUpApprise = false;
         _this6.isRefresh = false;
-        _this6.$refs.message.show({
-          type: 'error',
-          msg: '网络开了点小差,请稍候重试吧'
-        });
+        _this6.returnCodeHandle(err.code);
       });
     },
     emptyApprise: function emptyApprise() {
@@ -714,10 +702,7 @@ var _default = {
         });
       }).catch(function (err) {
         _this7.isLoading = false;
-        _this7.$refs.message.show({
-          type: 'error',
-          msg: '网络开了点小差,请稍候重试吧'
-        });
+        _this7.returnCodeHandle(err.code);
       });
     },
     clickCard: function clickCard(order) {

@@ -354,10 +354,7 @@ var _default = {
       }).catch(function (err) {
         _this2.afterAdd = true;
         _this2.isLoading = false;
-        _this2.$refs.message.show({
-          type: 'error',
-          msg: '网络开了点小差,请稍候重试吧'
-        });
+        _this2.returnCodeHandle(err.code);
       });
     },
     clickUploadImgM: function clickUploadImgM() {

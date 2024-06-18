@@ -111,10 +111,7 @@
           }, 1000)
         }).catch(err => {
           console.log('信息修改错误', err);
-          this.$refs.message.show({
-            type: 'error',
-            msg: '网络开了点小差,请稍候重试吧',
-          })
+          this.returnCodeHandle(err.code)
           this.isloading = false
         })
 

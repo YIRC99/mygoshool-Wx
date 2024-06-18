@@ -339,10 +339,7 @@ var _default = {
         _this3.isShowListloading = false;
       }).catch(function (err) {
         _this3.isRefresh = false;
-        _this3.$refs.message.show({
-          type: 'error',
-          msg: '网络开了点小差,请稍候重试吧'
-        });
+        _this3.returnCodeHandle(err.code);
         return;
       });
     },

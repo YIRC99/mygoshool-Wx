@@ -423,10 +423,7 @@ var _default = {
           }
         });
       }).catch(function (err) {
-        _this.$refs.message.show({
-          type: 'error',
-          msg: '网络开了点小差,请稍候重试吧'
-        });
+        _this.returnCodeHandle(err.code);
       });
     },
     ToUpdateCarOrder: function ToUpdateCarOrder() {
@@ -468,10 +465,7 @@ var _default = {
       }).catch(function (err) {
         uni.hideLoading();
         _this2.isLoading = false;
-        _this2.$refs.message.show({
-          type: 'error',
-          msg: '网络开了点小差,请稍候重试吧'
-        });
+        _this2.returnCodeHandle(err.code);
       });
     },
     deleteOrder: function deleteOrder() {
@@ -539,10 +533,7 @@ var _default = {
         console.log('home page is', err);
         _this4.clickUpApprise = false;
         _this4.isRefresh = false;
-        _this4.$refs.message.show({
-          type: 'error',
-          msg: '网络开了点小差,请稍候重试吧'
-        });
+        _this4.returnCodeHandle(err.code);
         return;
       });
     },

@@ -1198,11 +1198,7 @@ var _default = {
       }).catch(function (err) {
         // console.log('home page is', err);
         _this.isRefresh = false;
-        _this.$refs.message.show({
-          type: 'error',
-          msg: '网络开了点小差,请稍候重试吧',
-          iconSize: 16
-        });
+        _this.returnCodeHandle(err.code);
         return;
       });
     },
@@ -1266,13 +1262,8 @@ var _default = {
         _this2.list[_this2.currentIndex].isShowListloading = false;
         // console.log('下拉刷新结束了');
       }).catch(function (err) {
-        // console.log('home page is', err);
         _this2.isRefresh = false;
-        _this2.$refs.message.show({
-          type: 'error',
-          msg: '网络开了点小差,请稍候重试吧',
-          iconSize: 16
-        });
+        _this2.returnCodeHandle(err.code);
         return;
       });
     },
@@ -1719,10 +1710,7 @@ var _default = {
         _this3.isShowListloading = false;
       }).catch(function (err) {
         _this3.isRefresh = false;
-        _this3.$refs.message.show({
-          type: 'error',
-          msg: '网络开了点小差,请稍候重试吧'
-        });
+        _this3.returnCodeHandle(err.code);
         return;
       });
     },

@@ -17,7 +17,7 @@
             <view class="tag-box">
               <view class="uv-page__tag-item" v-for="(item,index) in radios" :key="index">
                 <uv-tags :text="item.name" :plain="!item.checked" :type="item.checked == true ? 'primary' : 'info'"
-                  :name="index" class="item" :closable="item.checked" closePlace="right" @close="checkboxClick"
+                  :name="index" class="item" :closable="item.checked" closePlace="right" @close="checkboxClick" size="mini"
                   shape="circle" @click="checkboxClick" style="margin: 0 30rpx;">
                 </uv-tags>
               </view>
@@ -172,10 +172,7 @@
           this.isShowListloading = false
         }).catch(err => {
           this.isRefresh = false
-          this.$refs.message.show({
-            type: 'error',
-            msg: '网络开了点小差,请稍候重试吧',
-          })
+          this.returnCodeHandle(err.code)
           return
         })
       },
@@ -257,6 +254,7 @@
 
   .waterfall {
     margin: 30rpx 0;
+    margin-top: 0rpx;
     padding-bottom: 120rpx;
   }
 
@@ -265,7 +263,7 @@
     display: flex;
     align-items: center;
     padding-bottom: 10rpx;
-
+    
     .page {
       background: #FFFFFF;
     }

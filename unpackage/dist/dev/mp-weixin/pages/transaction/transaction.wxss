@@ -45,6 +45,7 @@
 }
 .waterfall {
   margin: 30rpx 0;
+  margin-top: 0rpx;
   padding-bottom: 120rpx;
 }
 .tag-box {

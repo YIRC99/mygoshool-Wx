@@ -326,11 +326,7 @@ var _default = {
       }).catch(function (err) {
         console.log('home page is', err);
         _this.isRefresh = false;
-        _this.$refs.message.show({
-          type: 'error',
-          msg: '网络开了点小差,请稍候重试吧',
-          iconSize: 16
-        });
+        _this.returnCodeHandle(err.code);
         return;
       });
     },
@@ -382,10 +378,7 @@ var _default = {
       }).catch(function (err) {
         console.log('home page is', err);
         _this2.isRefresh = false;
-        _this2.$refs.message.show({
-          type: 'error',
-          msg: '网络开了点小差,请稍候重试吧'
-        });
+        _this2.returnCodeHandle(err.code);
         return;
       });
     },
@@ -409,10 +402,7 @@ var _default = {
       }).catch(function (err) {
         console.log('home page is', err);
         _this3.isRefresh = false;
-        _this3.$refs.message.show({
-          type: 'error',
-          msg: '网络开了点小差,请稍候重试吧'
-        });
+        _this3.returnCodeHandle(err.code);
         return;
       });
     },
@@ -457,10 +447,7 @@ var _default = {
       }).catch(function (err) {
         console.log('home page is', err);
         _this5.isRefresh = false;
-        _this5.$refs.message.show({
-          type: 'error',
-          msg: '网络开了点小差,请稍候重试吧'
-        });
+        _this5.returnCodeHandle(err.code);
         return;
       });
     }

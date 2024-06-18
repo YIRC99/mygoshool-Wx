@@ -29,7 +29,7 @@ const mixin = {
       })
     },
     // 请求返回code值统一处理方法  值处理错误请求 正确不处理
-    returnCodeHandle(code,message){
+    returnCodeHandle(code,message="网络开了点小差,请稍候重试吧"){
       if(code == 200) return true
       if(code == 403){
         this.$refs.message.show({
@@ -42,6 +42,13 @@ const mixin = {
         this.$refs.message.show({
           type: 'error', 
           msg: '账号异常请联系开发者: YIRC99', 
+        })
+        return false
+      }
+      if(code == 504){
+        this.$refs.message.show({
+          type: 'warning', 
+          msg: '请刷新重试吧~ ', 
         })
         return false
       }

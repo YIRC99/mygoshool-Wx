@@ -448,10 +448,7 @@ var _default = {
         console.error('捕获到了错误', err);
         _this.afterAdd = true;
         _this.isLoading = false;
-        _this.$refs.message.show({
-          type: 'error',
-          msg: '网络开了点小差,请稍候重试吧'
-        });
+        _this.returnCodeHandle(err.code);
       });
     },
     clickAddOrder: function clickAddOrder() {

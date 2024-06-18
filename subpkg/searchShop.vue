@@ -95,10 +95,7 @@
           this.isShowListloading = false
         }).catch(err => {
           this.isRefresh = false
-          this.$refs.message.show({
-            type: 'error',
-            msg: '网络开了点小差,请稍候重试吧',
-          })
+          this.returnCodeHandle(err.code)
           return
         })
         

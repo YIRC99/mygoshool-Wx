@@ -204,10 +204,7 @@
             }
           })
         }).catch(err => {
-          this.$refs.message.show({
-            type: 'error',
-            msg: '网络开了点小差,请稍候重试吧',
-          })
+          this.returnCodeHandle(err.code)
         })
       },
       ToUpdateCarOrder() {
@@ -246,10 +243,7 @@
         }).catch(err => {
           uni.hideLoading()
           this.isLoading = false
-          this.$refs.message.show({
-            type: 'error',
-            msg: '网络开了点小差,请稍候重试吧',
-          })
+          this.returnCodeHandle(err.code)
         })
 
       },
@@ -321,10 +315,7 @@
           console.log('home page is', err);
           this.clickUpApprise = false
           this.isRefresh = false
-          this.$refs.message.show({
-            type: 'error',
-            msg: '网络开了点小差,请稍候重试吧',
-          })
+          this.returnCodeHandle(err.code)
           return
         })
 

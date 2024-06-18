@@ -135,10 +135,7 @@
         }).catch(err => {
           uni.hideLoading()
           this.isLoading = false
-          this.$refs.message.show({
-            type: 'error',
-            msg: '网络开了点小差,请稍候重试吧',
-          })
+          this.returnCodeHandle(err.code)
         })
       },
       viewImg(index) {
@@ -154,8 +151,8 @@
             id: this.shop.id
           }
         }).then(res => {
-          console.log(res);
-          if (!this.returnCodeHandle(res.code, '请稍候重试吧~')) {
+          console.log('--------------------------',res);
+          if (!this.returnCodeHandle(res.code)) {
             this.shop.browse = 999999999999
             return
           }

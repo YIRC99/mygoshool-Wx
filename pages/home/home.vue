@@ -287,11 +287,7 @@
         }).catch(err => {
           // console.log('home page is', err);
           this.isRefresh = false
-          this.$refs.message.show({
-            type: 'error',
-            msg: '网络开了点小差,请稍候重试吧',
-            iconSize: 16,
-          })
+          this.returnCodeHandle(err.code)
           return
         })
 
@@ -358,13 +354,8 @@
           this.list[this.currentIndex].isShowListloading = false
           // console.log('下拉刷新结束了');
         }).catch(err => {
-          // console.log('home page is', err);
           this.isRefresh = false
-          this.$refs.message.show({
-            type: 'error',
-            msg: '网络开了点小差,请稍候重试吧',
-            iconSize: 16,
-          })
+          this.returnCodeHandle(err.code)
           return
         })
 
