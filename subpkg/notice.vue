@@ -11,9 +11,9 @@
       <view class="myversion">Version: {{version}}</view>
     </view>
 
-    <uv-collapse accordion :border="false">
+    <uv-collapse accordion :border="false" @change="onCollapseChange">
       <uv-collapse-item class="mycollapse" :title="item.title" v-for="(item,index) in notiveList" :key="index">
-        <uv-parse :content="item.text" :selectable="true"  :lazyLoad="true"></uv-parse>
+        <uv-parse :content="item.text" :selectable="true"  ></uv-parse>
       </uv-collapse-item>
     </uv-collapse>
     
@@ -41,6 +41,17 @@
       };
     },
     methods: {
+      onCollapseChange(activeKey) {
+            this.$nextTick(() => {
+              const images = document.querySelectorAll('.mycollapse img');
+              images.forEach((img) => {
+                if (img.dataset.src) {
+                  img.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                }
+              });
+            });
+          },
       onShareTimeline(){
         let result = {
           
@@ -94,6 +105,15 @@
 </script>
 
 <style lang="scss">
+  
+  .mycollapse img {
+    transition: opacity 0.3s;
+    opacity: 0;
+  }
+  
+  .mycollapse img[src] {
+    opacity: 1;
+  }
   .page {
     padding: 20rpx;
     padding-top: 150rpx;

@@ -210,7 +210,7 @@ var _default2 = {
   },
   data: function data() {
     return {
-      current: 0,
+      current: 1,
       screenWidth: 0
     };
   },

@@ -267,6 +267,7 @@ var _default = {
     },
     myonshow: function myonshow() {
       var _this = this;
+      console.log('on shop onshow');
       uni.$once('refreshTransactionPage', function () {
         _this.scrollPullDown();
       });
@@ -346,6 +347,7 @@ var _default = {
       });
     },
     scrollPullDown: function scrollPullDown() {
+      console.log('scrollPullDown');
       if (this.isRefresh == true) return;
       this.isRefresh = true;
       this.pageNum = 1;
@@ -369,7 +371,7 @@ var _default = {
       // console.log('滑动到底部了');
     },
     myonload: function myonload() {
-      this.scrollPullDown();
+      // this.scrollPullDown()
     },
     checkboxClick: function checkboxClick(index) {
       this.radios[index].checked = !this.radios[index].checked;

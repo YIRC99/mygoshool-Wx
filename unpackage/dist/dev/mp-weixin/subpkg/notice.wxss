@@ -23,6 +23,13 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.mycollapse ._img {
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+.mycollapse ._img[src] {
+  opacity: 1;
+}
 .page {
   padding: 20rpx;
   padding-top: 150rpx;

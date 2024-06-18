@@ -101,6 +101,7 @@
        uni.$off('refreshTransactionPage')
       },
       myonshow(){
+        console.log('on shop onshow');
         uni.$once('refreshTransactionPage',() =>{
           this.scrollPullDown()
         })
@@ -179,6 +180,7 @@
         })
       },
       scrollPullDown() {
+        console.log('scrollPullDown');
         if (this.isRefresh == true) return
         this.isRefresh = true
         this.pageNum = 1
@@ -202,7 +204,7 @@
         // console.log('滑动到底部了');
       },
       myonload() {
-        this.scrollPullDown()
+        // this.scrollPullDown()
       },
       checkboxClick(index) {
         this.radios[index].checked = !this.radios[index].checked

@@ -68,13 +68,13 @@
     data() {
       return {
         radios: [{
-          checked: true,
+          checked: false,
           name: '7天'
         }, {
           checked: false,
           name: '30天'
         }, {
-          checked: false,
+          checked: true,
           name: '永不'
         }],
         dealAdd: '交易地点',

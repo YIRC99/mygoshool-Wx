@@ -42,7 +42,7 @@
     mixins: [mixin],
     data() {
       return {
-        tabIndex: 0,
+        tabIndex: 1,
         items: [
           {
             icon: {
@@ -73,6 +73,17 @@
     },
 
     methods: {
+    // 为了处理之前埋下的坑 token保存错误 进入的时候检查一下token长度是不是错误 如果是重新登录 清空缓存
+    isClearStory() {
+      let token = uni.getStorageSync('token')
+      let arr = []
+      arr.length
+      if(token != null  && token.length < 30){
+        // 说明将id保存为token了 
+        uni.clearStorageSync()
+        this.wxLogin() // 尝试重新调用登录功能
+      }
+    },
       onShareTimeline(){
         let result = {
           
@@ -176,6 +187,7 @@
       }
     },
     onLoad() {
+      this.isClearStory() 
       uni.getPrivacySetting({
         success: res => {
           // console.log('查询隐私授权情况',res);

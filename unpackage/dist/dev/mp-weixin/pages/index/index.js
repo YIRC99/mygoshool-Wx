@@ -187,7 +187,7 @@ var _default = {
   mixins: [_mixin.default],
   data: function data() {
     return {
-      tabIndex: 0,
+      tabIndex: 1,
       items: [{
         icon: {
           src: __webpack_require__(/*! @/static/carIcon2.png */ 137),
@@ -213,6 +213,17 @@ var _default = {
     };
   },
   methods: {
+    // 为了处理之前埋下的坑 token保存错误 进入的时候检查一下token长度是不是错误 如果是重新登录 清空缓存
+    isClearStory: function isClearStory() {
+      var token = uni.getStorageSync('token');
+      var arr = [];
+      arr.length;
+      if (token != null && token.length < 30) {
+        // 说明将id保存为token了 
+        uni.clearStorageSync();
+        this.wxLogin(); // 尝试重新调用登录功能
+      }
+    },
     onShareTimeline: function onShareTimeline() {
       var result = {};
       return result;
@@ -315,6 +326,7 @@ var _default = {
   },
   onLoad: function onLoad() {
     var _this2 = this;
+    this.isClearStory();
     uni.getPrivacySetting({
       success: function success(res) {
         // console.log('查询隐私授权情况',res);
@@ -1635,6 +1647,7 @@ var _default = {
     },
     myonshow: function myonshow() {
       var _this = this;
+      console.log('on shop onshow');
       uni.$once('refreshTransactionPage', function () {
         _this.scrollPullDown();
       });
@@ -1714,6 +1727,7 @@ var _default = {
       });
     },
     scrollPullDown: function scrollPullDown() {
+      console.log('scrollPullDown');
       if (this.isRefresh == true) return;
       this.isRefresh = true;
       this.pageNum = 1;
@@ -1737,7 +1751,7 @@ var _default = {
       // console.log('滑动到底部了');
     },
     myonload: function myonload() {
-      this.scrollPullDown();
+      // this.scrollPullDown()
     },
     checkboxClick: function checkboxClick(index) {
       this.radios[index].checked = !this.radios[index].checked;

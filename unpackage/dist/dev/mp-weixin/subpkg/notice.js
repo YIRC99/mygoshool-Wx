@@ -216,6 +216,17 @@ var _default = {
     };
   },
   methods: {
+    onCollapseChange: function onCollapseChange(activeKey) {
+      this.$nextTick(function () {
+        var images = document.querySelectorAll('.mycollapse img');
+        images.forEach(function (img) {
+          if (img.dataset.src) {
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+          }
+        });
+      });
+    },
     onShareTimeline: function onShareTimeline() {
       var result = {};
       return result;
