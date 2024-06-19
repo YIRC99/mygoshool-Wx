@@ -124,6 +124,7 @@
 
     <quick-message ref="message"></quick-message>
     <zero-loading v-if="isLoading" type="circle" :mask="true" maskOpacity="0.1"></zero-loading>
+    <ws-wx-privacy id="privacy-popup" :enableAutoProtocol="true"></ws-wx-privacy>
   </view>
 </template>
 

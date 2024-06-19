@@ -90,7 +90,7 @@
 
     </uv-modal>
   
-  
+  <ws-wx-privacy id="privacy-popup" :enableAutoProtocol="true"></ws-wx-privacy>
   </view>
 </template>
 
@@ -146,7 +146,8 @@
         pageNum: 1,
         pageSize: 5,
         pagetotal: 0,
-        info: {}
+        info: {},
+        AesKeyErrorReplay: false
       };
     },
     created() {
@@ -257,6 +258,14 @@
       },
       receiveOrder() {
         let user = uni.getStorageSync('user')
+        if(user.openid == this.currentOrder.createUserInfo.openid){
+          this.$refs.message.show({
+            type: 'warning',
+            msg: '请勿自己接受自己哦~',
+          })  
+          return
+        }
+        
         this.isLoading = true
         // console.log(this.fileList1);
         this.post({
@@ -355,7 +364,17 @@
           // console.log('下拉刷新结束了');
         }).catch(err => {
           this.isRefresh = false
-          this.returnCodeHandle(err.code)
+          
+          if(err.code == 504){
+            // 如果自动重新加载都无法获取AES 那就手动重新加载吧
+            if(this.AesKeyErrorReplay)
+              this.returnCodeHandle(err.code)
+            // 504 AES解密错误 有可能是因为 AESKey获取不及时导致的解密失败 直接重传就好
+            if(!this.AesKeyErrorReplay)
+              this.getOrderList()
+            this.AesKeyErrorReplay = true
+          
+          }
           return
         })
 

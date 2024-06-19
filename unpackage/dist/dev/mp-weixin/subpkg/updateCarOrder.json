@@ -12,6 +12,7 @@
     "uv-checkbox": "/uni_modules/uv-checkbox/components/uv-checkbox/uv-checkbox",
     "uni-section": "/uni_modules/uni-section/components/uni-section/uni-section",
     "quick-message": "/components/quick-message/quick-message",
-    "zero-loading": "/uni_modules/zero-loading/components/zero-loading/zero-loading"
+    "zero-loading": "/uni_modules/zero-loading/components/zero-loading/zero-loading",
+    "ws-wx-privacy": "/uni_modules/ws-wx-privacy/components/ws-wx-privacy/ws-wx-privacy"
   }
 }

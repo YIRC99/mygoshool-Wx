@@ -190,7 +190,7 @@
       font-weight: 700;
 
       .value {
-        font-size: 32rpx;
+        font-size: 28rpx;
         color: #303133;
       }
     }

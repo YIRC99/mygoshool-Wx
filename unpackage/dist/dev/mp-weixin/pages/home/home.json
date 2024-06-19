@@ -14,6 +14,7 @@
     "quick-message": "/components/quick-message/quick-message",
     "zero-loading": "/uni_modules/zero-loading/components/zero-loading/zero-loading",
     "uv-modal": "/uni_modules/uv-modal/components/uv-modal/uv-modal",
-    "myupload": "/components/myupload/myupload"
+    "myupload": "/components/myupload/myupload",
+    "ws-wx-privacy": "/uni_modules/ws-wx-privacy/components/ws-wx-privacy/ws-wx-privacy"
   }
 }

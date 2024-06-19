@@ -68,7 +68,7 @@
   font-weight: 700;
 }
 .waterfall-item__ft__title .value {
-  font-size: 32rpx;
+  font-size: 28rpx;
   color: #303133;
 }
 .waterfall-item__ft__desc .value {

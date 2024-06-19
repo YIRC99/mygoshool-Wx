@@ -25,7 +25,7 @@
           <text>价格</text>
         </view>
         <view class="right">
-          <input type="digit" v-model="shopPrice" maxlength="6" placeholder-class="myinputCss" placeholder="价格"
+          <input type="digit" @focus="clickPriceInput"  v-model="shopPrice" maxlength="6" placeholder-class="myinputCss" placeholder="0"
             style="text-align: right; " />
           <p>￥</p>
         </view>
@@ -54,10 +54,11 @@
 
 
     <uv-modal ref="modal" width="500rpx" showCancelButton :content='modalText' @confirm="modalConfirm"></uv-modal>
-    <uv-picker ref="AddressPicker" :columns="columns" @confirm="confirm"></uv-picker>
+    <uv-picker ref="AddressPicker" :columns="columns" itemHeight="88" @confirm="confirm"></uv-picker>
     <uv-toast ref="toast"></uv-toast>
     <quick-message ref="message"></quick-message>
     <zero-loading v-if="isLoading" type="circle" :mask="true" maskOpacity="0.1"></zero-loading>
+    <ws-wx-privacy id="privacy-popup" :enableAutoProtocol="true"></ws-wx-privacy>
   </view>
 </template>
 
@@ -136,6 +137,10 @@
       }
     },
     methods: {
+      clickPriceInput(){
+        if(this.shopPrice == '0.00')
+          this.shopPrice = ''
+      },
       onShareTimeline(){
         let result = {
           
@@ -301,6 +306,12 @@
           })
           return false
         }
+        
+        if ((this.shopPrice == 0  || this.shopPrice == '0.00' || this.shopPrice == '') && this.isFree == false) {
+          this.modalText = '请问确定以0元的价格免费送吗'
+          this.$refs.modal.open()
+          return this.isFree
+        }
 
         const priceRegex = /^(0|[1-9]\d*)(\.\d{1,2})?$/;
         if (!priceRegex.test(this.shopPrice)) {
@@ -311,11 +322,7 @@
           return false
         }
 
-        if (this.shopPrice == 0 && this.isFree == false) {
-          this.modalText = '请问确定以0元的价格免费送吗'
-          this.$refs.modal.open()
-          return this.isFree
-        }
+       
 
 
 

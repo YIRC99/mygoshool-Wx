@@ -4,6 +4,7 @@
   "usingComponents": {
     "uni-section": "/uni_modules/uni-section/components/uni-section/uni-section",
     "my-img-upload": "/components/myImgUpload/myImgUpload",
-    "quick-message": "/components/quick-message/quick-message"
+    "quick-message": "/components/quick-message/quick-message",
+    "ws-wx-privacy": "/uni_modules/ws-wx-privacy/components/ws-wx-privacy/ws-wx-privacy"
   }
 }

@@ -5,6 +5,12 @@ class aes {
   
   
    async reloadAESKey(){
+     let AESKey = uni.getStorageSync('AESKey') || ''
+     if(AESKey != ''){
+       this.aesKey = AESKey
+       return
+     }
+     
     //AES 如果解密失败 那就重新获取AES的key
     let res = await uni.request({
       url: this.http + 'common/AESKey',
@@ -13,8 +19,10 @@ class aes {
     if(res.data.code == 200){
       console.log('---------------------------',res.data.data);
       this.aesKey = res.data.data
+       uni.setStorageSync('AESKey', res.data.data)
     }
-    console.log('重新获取AESkey',res.data);
+    // console.log('重新获取AESkey',res.data);
+   
   }
 
   constructor() {

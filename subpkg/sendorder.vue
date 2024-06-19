@@ -430,7 +430,7 @@
       },
       clickReceiveCard() {
         uni.navigateTo({
-          url: '/subpkg/userinfo?userid=' + this.currentOrder.receiveUserInfo.userid
+          url: '/subpkg/userinfo?userid=' + this.currentOrder.receiveUserInfo.userid+ '&openid=' + this.currentOrder.receiveUserInfo.openid
         })
       },
       clickReceiveImg() {

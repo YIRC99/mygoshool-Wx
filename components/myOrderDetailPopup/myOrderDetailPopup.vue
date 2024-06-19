@@ -50,7 +50,7 @@
             <uni-section title="备注" type="line" titleFontSize="36rpx">
             </uni-section>
             <view class="my-text-box">
-              {{currentOrder.remark}}
+              {{currentOrder.remark || '无'}}
             </view>
           </view>
           <view class="down-box" v-if="user.openid != currentOrder.createUserInfo.openid">

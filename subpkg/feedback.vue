@@ -29,6 +29,7 @@
     </view>
 
     <quick-message ref="message"></quick-message>
+    <ws-wx-privacy id="privacy-popup" :enableAutoProtocol="true"></ws-wx-privacy>
   </view>
 </template>
 

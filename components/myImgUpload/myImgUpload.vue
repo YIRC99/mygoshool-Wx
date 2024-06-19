@@ -121,9 +121,8 @@
               'UserId': uni.getStorageSync("user").openid,
             },
             timeout: this.TimeOut,
-            success: (res) => {
+            success: async (res) => {
               res = JSON.parse(res.data)
-              // console.log('上传成功', res);
               
               if(!this.returnCodeHandle(res.code)){
                 console.log('代码执行到了这里');
@@ -132,8 +131,7 @@
               }
               
               let img = res.data
-              img = this.MyAES.decrypt(img)
-              
+              img = await this.MyAES.decrypt(img)
               if (this.imgString == '') this.imgString = img
               else this.imgString = this.imgString + ',' + img
               this.fileList1[this.fileIndex++].resWximg = img

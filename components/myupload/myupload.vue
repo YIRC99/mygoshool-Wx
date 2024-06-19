@@ -174,7 +174,7 @@
                'UserId': uni.getStorageSync("user").openid,
             },
             timeout: this.TimeOut,
-            success: (res) => {
+            success: async (res) => {
               res = JSON.parse(res.data)
               // console.log('上传成功222', res.statusCode);
               // console.log('文件上传的返回值',res);
@@ -183,8 +183,9 @@
                 resolve(400)
                 return 
               }
+              console.log('上传返回的值',res);
+              this.fileList1[0].resWximg = await this.MyAES.decrypt(res.data)
               
-              this.fileList1[0].resWximg = this.MyAES.decrypt(res.data)
               this.showBefor = false
               resolve(200)
             },

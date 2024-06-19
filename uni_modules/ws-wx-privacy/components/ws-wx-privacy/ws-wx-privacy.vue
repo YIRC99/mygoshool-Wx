@@ -34,8 +34,6 @@
 	// 注册监听
 	if (uni.onNeedPrivacyAuthorization) {
 		uni.onNeedPrivacyAuthorization((resolve) => {
-      console.log('privacyHandler',privacyHandler);
-      console.log('resolve',resolve);
 			if (typeof privacyHandler === 'function') {
 				privacyHandler(resolve)
 			}

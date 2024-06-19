@@ -104,10 +104,10 @@
        this.isLogin = true
        uni.setStorageSync('token', this.info.token)
        uni.setStorageSync('user', this.info)
-       this.$refs.message.show({
-           type: 'success', 
-           msg: '登录成功', 
-       })
+       // this.$refs.message.show({
+       //     type: 'success', 
+       //     msg: '登录成功', 
+       // })
      },
      WxLoginFail() {
        this.isLoading = false

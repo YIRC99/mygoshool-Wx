@@ -79,7 +79,7 @@
   overflow: hidden;
 }
 .uni-card .uni-card__header .uni-card__header-content .uni-card__header-content-title {
-  font-size: 38rpx;
+  font-size: 36rpx;
   color: #3a3a3a;
   font-weight: 600;
 }

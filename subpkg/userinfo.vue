@@ -59,6 +59,7 @@
     <myOrderDetailPopup ref="myorderdetailpopup" :currentOrder="currentOrder" :isToUserInfo="false"
       @myShowUploadWxImg="showUploadWxImg"></myOrderDetailPopup>
 
+    
     <uv-popup ref="receivePopup" mode="center"
       custom-style="height: 200rpx;border-radius: 30rpx; width: 80vw; height: 40vh;" :close-on-click-overlay="false">
       <view class="receivePopup-box">
@@ -249,6 +250,11 @@
         }).then(res => {
           console.log('拼车数据', res);
           if(!this.returnCodeHandle(res.code,'请求错误 请稍候重试吧'))return
+          console.log(res.data);
+          res.data.forEach(item => {
+            item.createat = this.formatDateTime(item.createat)
+            item.startdatetime = this.formatDateTime(item.startdatetime)
+          })
           this.orderList = res.data
           this.list[1].badge.value = res.data.length
         }).catch(err => {

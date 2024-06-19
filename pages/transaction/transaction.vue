@@ -79,7 +79,8 @@
         pageNum: 1,
         pageSize: 10,
         pagetotal: 0,
-        isShowListloading: false
+        isShowListloading: false,
+        AesKeyErrorReplay: false
       };
     },
     computed: {
@@ -172,7 +173,16 @@
           this.isShowListloading = false
         }).catch(err => {
           this.isRefresh = false
-          this.returnCodeHandle(err.code)
+          if(err.code == 504){
+            // 如果自动重新加载都无法获取AES 那就手动重新加载吧
+            if(this.AesKeyErrorReplay)
+              this.returnCodeHandle(err.code)
+            // 504 AES解密错误 有可能是因为 AESKey获取不及时导致的解密失败 直接重传就好
+            if(!this.AesKeyErrorReplay)
+              this.getShopList()
+            this.AesKeyErrorReplay = true
+    
+          }
           return
         })
       },
