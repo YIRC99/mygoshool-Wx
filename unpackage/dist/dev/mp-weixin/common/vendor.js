@@ -16870,8 +16870,8 @@ var myIp = /*#__PURE__*/function () {
     value: function getIp() {
       var account = uni.getAccountInfoSync();
       console.log('获取小程序版本', account.miniProgram.envVersion);
-      // let devHttp = 'http://192.168.243.211:33088/' // 开发环境
-      var devHttp = 'https://yirc99.cn/api/'; // 开发环境
+      var devHttp = 'http://192.168.1.123:33088/'; // 开发环境
+      // let devHttp = 'https://yirc99.cn/api/' // 开发环境
       var trialHttp = 'https://yirc99.cn/api/'; // 体验环境
       var releaseHttp = 'https://yirc99.cn/api/'; // 正式环境
       var http;
